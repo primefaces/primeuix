@@ -1,0 +1,48 @@
+{
+    "name": "@primeuix/monorepo",
+    "version": "1.0.0",
+    "author": "PrimeTek Informatics",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/primefaces/primeuix.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/primefaces/primeuix/issues"
+    },
+    "scripts": {
+        "setup": "rm -rf **/node_modules **/dist ./pnpm-lock.yaml && pnpm install",
+        "release": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks",
+        "release:beta": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --tag beta",
+        "release:rc": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --tag rc",
+        "build": "NODE_ENV=production pnpm run build:check && pnpm run build:packages",
+        "build:check": "pnpm run format:check && pnpm run security:check",
+        "build:packages": "pnpm run build:styled",
+        "build:styled": "pnpm --filter styled build",
+        "build:utils": "pnpm --filter utils build",
+        "security:check": "pnpm audit --production --audit-level high",
+        "format": "prettier --write \"**/*.{js,mjs,ts,mts,d.ts}\"",
+        "format:check": "prettier --check \"**/*.{js,mjs,ts,mts,d.ts}\" ",
+        "lint": "eslint --ext \".js,.mjs,.ts\" --ignore-path .gitignore . --cache",
+        "lint:fix": "eslint --fix --ext \".js,.mjs,.ts\" --ignore-path .gitignore ."
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.21.5",
+        "@rollup/plugin-babel": "^6.0.3",
+        "@rollup/plugin-alias": "^5.1.0",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "rollup-plugin-postcss": "^4.0.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup": "^4.18.0",
+        "fs-extra": "^11.2.0",
+        "eslint": "^9.2.0",
+        "prettier": "^3.2.5",
+        "pnpm": "9.1.4"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "engines": {
+        "node": ">=12.11.0"
+    }
+}

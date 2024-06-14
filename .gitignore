@@ -1,0 +1,11 @@
+node_modules
+coverage
+*.log*
+.cache
+.output
+.env
+dist
+.DS_Store
+.idea
+.eslintcache
+**/.DS_Store
