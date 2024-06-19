@@ -29,7 +29,7 @@ fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
                 fs.readdirSync(subFolderPath).forEach((file) => {
                     let fileName = file.split(/(.js)$/)[0];
 
-                    exports.push(`export { default as ${fileName}} from './${subFolderName}/${file}';`);
+                    exports.push(`export { default as ${fileName} } from './${subFolderName}/${file}';`);
                 });
             });
 
