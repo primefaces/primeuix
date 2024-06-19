@@ -19,7 +19,7 @@ fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
         const folderPath = path.resolve(__root, INPUT_DIR + folderName);
         let exports = [];
 
-        folderExports.push(`export * from '@primeuix/utils/${folderName}';`);
+        folderExports.push(`export * from '@primeuix/utils/${folderName}';\n`);
 
         fs.readdirSync(folderPath, { withFileTypes: true })
             .filter((dir) => dir.isDirectory())
@@ -29,12 +29,12 @@ fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
                 fs.readdirSync(subFolderPath).forEach((file) => {
                     let fileName = file.split(/(.js)$/)[0];
 
-                    exports.push(`export { default as ${fileName} } from './${subFolderName}/${file}';`);
+                    exports.push(`export { default as ${fileName} } from './${subFolderName}/${file}';\n`);
                 });
             });
 
-        exports.length && fs.writeFileSync(path.resolve(folderPath, 'index.js'), exports.join('\n'));
+        exports.length && fs.writeFileSync(path.resolve(folderPath, 'index.js'), exports.join(''));
     });
 
 // src > index.js
-folderExports.length && fs.writeFileSync(path.resolve(__root, INPUT_DIR + 'index.js'), folderExports.join('\n'));
+folderExports.length && fs.writeFileSync(path.resolve(__root, INPUT_DIR + 'index.js'), folderExports.join(''));
