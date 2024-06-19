@@ -19,6 +19,6 @@
             "@primeuix/utils/*": ["./src/*"]
         }
     },
-    "include": ["**/*.ts", "src/*", "src/dom/index.js", "src/dom/methods/width.js", "src/dom/methods/getInnerWidth.js", "src/dom/methods/getWindowScrollTop.js", "src/dom/helpers"],
+    "include": ["**/*.ts", "src/*"],
     "exclude": ["node_modules", "dist"]
 }
