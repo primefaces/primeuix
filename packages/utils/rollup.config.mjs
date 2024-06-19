@@ -4,6 +4,13 @@ import resolve from '@rollup/plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 
+import fs from 'fs-extra';
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+// @todo - Remove
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 // globals
 const GLOBALS = {};
 
@@ -72,6 +79,8 @@ const ENTRY = {
                 ]
             });
 
+            ENTRY.update.packageJson({ input, output, options: { main: `${output}.cjs` } });
+
             return ENTRY.format;
         },
         es({ input, output, minify }) {
@@ -90,6 +99,8 @@ const ENTRY = {
                     }
                 ]
             });
+
+            ENTRY.update.packageJson({ input, output, options: { main: `${output}.mjs`, module: `${output}.mjs` } });
 
             return ENTRY.format;
         },
@@ -113,6 +124,25 @@ const ENTRY = {
 
             return ENTRY.format;
         }
+    },
+    update: {
+        packageJson({ input, output, options }) {
+            try {
+                const inputDir = path.resolve(__dirname, path.dirname(input));
+                const outputDir = path.resolve(__dirname, path.dirname(output));
+                const packageJson = path.resolve(outputDir, 'package.json');
+
+                !fs.existsSync(packageJson) && fs.copySync(path.resolve(inputDir, './package.json'), packageJson);
+
+                const pkg = JSON.parse(fs.readFileSync(packageJson, { encoding: 'utf8', flag: 'r' }));
+
+                !pkg?.main?.includes('.cjs') && (pkg.main = path.basename(options?.main) ? `./${path.basename(options.main)}` : pkg.main);
+                pkg.module = path.basename(options?.module) ? `./${path.basename(options.module)}` : packageJson.module;
+                pkg.types && (pkg.types = './index.d.ts');
+
+                fs.writeFileSync(packageJson, JSON.stringify(pkg, null, 4));
+            } catch {}
+        }
     }
 };
 
@@ -120,6 +150,20 @@ function addCore() {
     ENTRY.format.es({ input: process.env.INPUT_DIR + 'index.js', output: process.env.OUTPUT_DIR + 'index' });
 }
 
+function addFile() {
+    fs.readdirSync(path.resolve(__dirname, process.env.INPUT_DIR), { withFileTypes: true })
+        .filter((dir) => dir.isDirectory())
+        .forEach(({ name: folderName }) => {
+            fs.readdirSync(path.resolve(__dirname, process.env.INPUT_DIR + folderName)).forEach((file) => {
+                const input = process.env.INPUT_DIR + folderName + '/index.js';
+                const output = process.env.OUTPUT_DIR + folderName + '/index';
+
+                ENTRY.format.es({ input, output });
+            });
+        });
+}
+
 addCore();
+addFile();
 
 export default ENTRY.entries;

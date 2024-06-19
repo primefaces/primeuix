@@ -1,9 +1,10 @@
 import fs from 'fs-extra';
 import path from 'path';
-import { clearPackageJson, renameDTSFile, resolvePath } from '../../../scripts/build-helper.mjs';
+import { clearPackageJson, copyDependencies, renameDTSFile, resolvePath } from '../../../scripts/build-helper.mjs';
 
-const { __dirname, __workspace, OUTPUT_DIR } = resolvePath(import.meta.url);
+const { __dirname, __workspace, INPUT_DIR, OUTPUT_DIR } = resolvePath(import.meta.url);
 
+copyDependencies(INPUT_DIR, OUTPUT_DIR);
 renameDTSFile(OUTPUT_DIR, 'index');
 
 fs.copySync(path.resolve(__dirname, '../src/index.d.ts'), `${OUTPUT_DIR}/index.d.ts`);

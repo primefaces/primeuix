@@ -16,4 +16,4 @@ export default function findLastIndex(arr, callback) {
     }
 
     return index;
-},
+}
