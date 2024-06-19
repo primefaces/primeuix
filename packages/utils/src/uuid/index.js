@@ -1,6 +1,6 @@
 const lastIds = {};
 
-export default function uuid(prefix = 'pui_id_') {
+export default function UUID(prefix = 'pui_id_') {
     if (!lastIds.hasOwnProperty(prefix)) {
         lastIds[prefix] = 0;
     }

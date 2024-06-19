@@ -3,5 +3,5 @@ export default function getSelection() {
     else if (document.getSelection) return document.getSelection().toString();
     else if (document['selection']) return document['selection'].createRange().text;
 
-    return null;
+    return undefined;
 }

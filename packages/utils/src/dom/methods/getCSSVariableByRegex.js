@@ -10,5 +10,5 @@ export default function getCSSVariableByRegex(variableRegex) {
             }
         } catch {}
     }
-    return null;
+    return undefined;
 }
