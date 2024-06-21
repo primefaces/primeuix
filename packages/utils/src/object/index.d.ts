@@ -12,6 +12,7 @@ export declare function isDate(value: any): boolean;
 export declare function isEmpty(value: any): boolean;
 export declare function isFunction(value: any): boolean;
 export declare function isNotEmpty(value: any): boolean;
+export declare function isNumber(value: any): boolean;
 export declare function isObject(value: any, empty?: boolean): boolean;
 export declare function isPrintableCharacter(char: string): boolean;
 export declare function isString(value: any, empty?: boolean): boolean;
@@ -27,3 +28,4 @@ export declare function stringify(value: any, indent?: number, currentIndent?: n
 export declare function toCapitalCase(str: string): string;
 export declare function toFlatCase(str: string): string;
 export declare function toKebabCase(str: string): string;
+export declare function toTokenKey(str: string): string;

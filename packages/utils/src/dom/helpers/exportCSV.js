@@ -1,3 +1,5 @@
+import saveAs from './saveAs';
+
 export default function exportCSV(csv, filename) {
     let blob = new Blob([csv], {
         type: 'application/csv;charset=utf-8;'
@@ -6,16 +8,9 @@ export default function exportCSV(csv, filename) {
     if (window.navigator.msSaveOrOpenBlob) {
         navigator.msSaveOrOpenBlob(blob, filename + '.csv');
     } else {
-        let link = document.createElement('a');
+        const isDownloaded = saveAs({ name: filename + '.csv', src: URL.createObjectURL(blob) });
 
-        if (link.download !== undefined) {
-            link.setAttribute('href', URL.createObjectURL(blob));
-            link.setAttribute('download', filename + '.csv');
-            link.style.display = 'none';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } else {
+        if (!isDownloaded) {
             csv = 'data:text/csv;charset=utf-8,' + csv;
             window.open(encodeURI(csv));
         }

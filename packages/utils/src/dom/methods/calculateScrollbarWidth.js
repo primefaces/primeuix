@@ -2,25 +2,30 @@ import addStyle from './addStyle';
 
 let calculatedScrollbarWidth = undefined;
 
-export default function calculateScrollbarWidth() {
-    if (calculatedScrollbarWidth != null) return calculatedScrollbarWidth;
+export default function calculateScrollbarWidth(element) {
+    if (element) {
+        let style = getComputedStyle(el);
+        return el.offsetWidth - el.clientWidth - parseFloat(style.borderLeftWidth) - parseFloat(style.borderRightWidth);
+    } else {
+        if (calculatedScrollbarWidth != null) return calculatedScrollbarWidth;
 
-    let scrollDiv = document.createElement('div');
+        let scrollDiv = document.createElement('div');
 
-    addStyle(scrollDiv, {
-        width: '100px',
-        height: '100px',
-        overflow: 'scroll',
-        position: 'absolute',
-        top: '-9999px'
-    });
-    document.body.appendChild(scrollDiv);
+        addStyle(scrollDiv, {
+            width: '100px',
+            height: '100px',
+            overflow: 'scroll',
+            position: 'absolute',
+            top: '-9999px'
+        });
+        document.body.appendChild(scrollDiv);
 
-    let scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+        let scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
 
-    document.body.removeChild(scrollDiv);
+        document.body.removeChild(scrollDiv);
 
-    calculatedScrollbarWidth = scrollbarWidth;
+        calculatedScrollbarWidth = scrollbarWidth;
 
-    return scrollbarWidth;
+        return scrollbarWidth;
+    }
 }
