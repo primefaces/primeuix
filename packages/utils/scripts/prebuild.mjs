@@ -12,7 +12,7 @@ updatePackageJson(pkg);
 
 let folderExports = [];
 
-// Fill * > index.js in subfolders
+// Fill * > index.ts in subfolders
 fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
     .filter((dir) => dir.isDirectory())
     .forEach(({ name: folderName }) => {
@@ -27,14 +27,14 @@ fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
                 const subFolderPath = path.resolve(folderPath, `./${subFolderName}`);
 
                 fs.readdirSync(subFolderPath).forEach((file) => {
-                    let fileName = file.split(/(.js)$/)[0];
+                    let fileName = file.split(/(.ts)$/)[0];
 
-                    exports.push(`export { default as ${fileName} } from './${subFolderName}/${file}';\n`);
+                    exports.push(`export { default as ${fileName} } from './${subFolderName}/${fileName}';\n`);
                 });
             });
 
-        exports.length && fs.writeFileSync(path.resolve(folderPath, 'index.js'), exports.join(''));
+        exports.length && fs.writeFileSync(path.resolve(folderPath, 'index.ts'), exports.join(''));
     });
 
-// src > index.js
-folderExports.length && fs.writeFileSync(path.resolve(__root, INPUT_DIR + 'index.js'), folderExports.join(''));
+// src > index.ts
+folderExports.length && fs.writeFileSync(path.resolve(__root, INPUT_DIR + 'index.ts'), folderExports.join(''));

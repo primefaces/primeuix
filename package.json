@@ -12,6 +12,7 @@
     },
     "scripts": {
         "setup": "rm -rf **/node_modules **/dist ./pnpm-lock.yaml && pnpm install",
+        "link": "pnpm --filter './packages/*' dev:link",
         "release": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary",
         "release:beta": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary --tag beta",
         "release:rc": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary --tag rc",
@@ -34,10 +35,12 @@
         "@rollup/plugin-terser": "^0.4.4",
         "rollup-plugin-postcss": "^4.0.0",
         "rollup": "^4.18.0",
+        "typescript": "^4.9.4",
         "fs-extra": "^11.2.0",
+        "glob": "^10.4.2",
         "eslint": "^9.2.0",
-        "prettier": "^3.2.5",
-        "pnpm": "9.1.4"
+        "prettier": "^3.3.2",
+        "pnpm": "^9.1.4"
     },
     "publishConfig": {
         "access": "public"
