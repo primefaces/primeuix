@@ -1,29 +1,29 @@
-import Theme from '../config/index.js';
-import { SharedUtils } from '../utils/index.js';
+import { mergeKeys } from '@primeuix/utils/object';
+import Theme from '../config/index';
 
-export const $t = (theme = {}) => {
+export const $t = (theme: any = {}) => {
     let { preset: _preset, options: _options } = theme;
 
     return {
-        preset(value) {
-            _preset = _preset ? SharedUtils.object.mergeKeys(_preset, value) : value;
+        preset(value: any) {
+            _preset = _preset ? mergeKeys(_preset, value) : value;
 
             return this;
         },
-        options(value) {
+        options(value: any) {
             _options = _options ? { ..._options, ...value } : value;
 
             return this;
         },
         // features
-        primaryPalette(primary) {
+        primaryPalette(primary: any) {
             const { semantic } = _preset || {};
 
             _preset = { ..._preset, semantic: { ...semantic, primary } };
 
             return this;
         },
-        surfacePalette(surface) {
+        surfacePalette(surface: any) {
             const { semantic } = _preset || {};
             const lightSurface = surface?.hasOwnProperty('light') ? surface?.light : surface;
             const darkSurface = surface?.hasOwnProperty('dark') ? surface?.dark : surface;
@@ -47,7 +47,7 @@ export const $t = (theme = {}) => {
         },
         update({ mergePresets = true, mergeOptions = true } = {}) {
             const newTheme = {
-                preset: mergePresets ? SharedUtils.object.mergeKeys(Theme.getPreset(), _preset) : _preset,
+                preset: mergePresets ? mergeKeys(Theme.getPreset(), _preset) : _preset,
                 options: mergeOptions ? { ...Theme.getOptions(), ..._options } : _options
             };
 
@@ -55,7 +55,7 @@ export const $t = (theme = {}) => {
 
             return newTheme;
         },
-        use(options) {
+        use(options: any) {
             const newTheme = this.define(options);
 
             Theme.setTheme(newTheme);

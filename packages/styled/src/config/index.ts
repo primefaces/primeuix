@@ -1,5 +1,5 @@
-import ThemeService from '../service/index.js';
-import { ThemeUtils } from '../utils/index.js';
+import ThemeService from '../service/index';
+import { ThemeUtils } from '../utils/index';
 
 export default {
     defaults: {
@@ -19,7 +19,7 @@ export default {
     _loadedStyleNames: new Set(),
     _loadingStyles: new Set(),
     _tokens: {},
-    update(newValues = {}) {
+    update(newValues: any = {}) {
         const { theme } = newValues;
 
         if (theme) {
@@ -34,7 +34,7 @@ export default {
             this.clearLoadedStyleNames();
         }
     },
-    get theme() {
+    get theme(): any {
         return this._theme;
     },
     get preset() {
@@ -49,14 +49,14 @@ export default {
     getTheme() {
         return this.theme;
     },
-    setTheme(newValue) {
+    setTheme(newValue: any) {
         this.update({ theme: newValue });
         ThemeService.emit('theme:change', newValue);
     },
     getPreset() {
         return this.preset;
     },
-    setPreset(newValue) {
+    setPreset(newValue: any) {
         this._theme = { ...this.theme, preset: newValue };
         this._tokens = ThemeUtils.createTokens(newValue, this.defaults);
 
@@ -67,7 +67,7 @@ export default {
     getOptions() {
         return this.options;
     },
-    setOptions(newValue) {
+    setOptions(newValue: any) {
         this._theme = { ...this.theme, options: newValue };
 
         this.clearLoadedStyleNames();
@@ -77,41 +77,41 @@ export default {
     getLayerNames() {
         return [...this._layerNames];
     },
-    setLayerNames(layerName) {
+    setLayerNames(layerName: any) {
         this._layerNames.add(layerName);
     },
     getLoadedStyleNames() {
         return this._loadedStyleNames;
     },
-    isStyleNameLoaded(name) {
+    isStyleNameLoaded(name: string) {
         return this._loadedStyleNames.has(name);
     },
-    setLoadedStyleName(name) {
+    setLoadedStyleName(name: string) {
         this._loadedStyleNames.add(name);
     },
-    deleteLoadedStyleName(name) {
+    deleteLoadedStyleName(name: string) {
         this._loadedStyleNames.delete(name);
     },
     clearLoadedStyleNames() {
         this._loadedStyleNames.clear();
     },
-    getTokenValue(tokenPath) {
+    getTokenValue(tokenPath: string) {
         return ThemeUtils.getTokenValue(this.tokens, tokenPath, this.defaults);
     },
-    getCommon(name = '', params) {
+    getCommon(name = '', params: any) {
         return ThemeUtils.getCommon({ name, theme: this.theme, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
     },
-    getComponent(name = '', params) {
+    getComponent(name = '', params: any) {
         const options = { name, theme: this.theme, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
 
         return ThemeUtils.getPresetC(options);
     },
-    getDirective(name = '', params) {
+    getDirective(name = '', params: any) {
         const options = { name, theme: this.theme, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
 
         return ThemeUtils.getPresetD(options);
     },
-    getCustomPreset(name = '', preset, selector, params) {
+    getCustomPreset(name = '', preset: any, selector: string, params: any) {
         const options = { name, preset, options: this.options, selector, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
 
         return ThemeUtils.getPreset(options);
@@ -119,22 +119,22 @@ export default {
     getLayerOrderCSS(name = '') {
         return ThemeUtils.getLayerOrder(name, this.options, { names: this.getLayerNames() }, this.defaults);
     },
-    transformCSS(name = '', css, type = 'style', mode) {
+    transformCSS(name = '', css: string, type = 'style', mode: string) {
         return ThemeUtils.transformCSS(name, css, mode, type, this.options, { layerNames: this.setLayerNames.bind(this) }, this.defaults);
     },
-    getCommonStyleSheet(name = '', params, props = {}) {
+    getCommonStyleSheet(name = '', params: any, props = {}) {
         return ThemeUtils.getCommonStyleSheet({ name, theme: this.theme, params, props, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
     },
-    getStyleSheet(name, params, props = {}) {
+    getStyleSheet(name: string, params: any, props = {}) {
         return ThemeUtils.getStyleSheet({ name, theme: this.theme, params, props, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
     },
-    onStyleMounted(name) {
+    onStyleMounted(name: string) {
         this._loadingStyles.add(name);
     },
-    onStyleUpdated(name) {
+    onStyleUpdated(name: string) {
         this._loadingStyles.add(name);
     },
-    onStyleLoaded(event, { name }) {
+    onStyleLoaded(event: any, { name }: { name: any }) {
         if (this._loadingStyles.size) {
             this._loadingStyles.delete(name);
 

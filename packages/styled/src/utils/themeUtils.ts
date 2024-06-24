@@ -1,62 +1,63 @@
-import { toVariables } from '../helpers/index.js';
-import SharedUtils from './sharedUtils';
+import { isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve, toTokenKey } from '@primeuix/utils/object';
+import { toVariables } from '../helpers/index';
+import { getRule } from './sharedUtils';
 
 export default {
     regex: {
         rules: {
             class: {
                 pattern: /^\.([a-zA-Z][\w-]*)$/,
-                resolve(value) {
+                resolve(value: string) {
                     return { type: 'class', selector: value, matched: this.pattern.test(value.trim()) };
                 }
             },
             attr: {
                 pattern: /^\[(.*)\]$/,
-                resolve(value) {
+                resolve(value: string) {
                     return { type: 'attr', selector: `:root${value}`, matched: this.pattern.test(value.trim()) };
                 }
             },
             media: {
                 pattern: /^@media (.*)$/,
-                resolve(value) {
+                resolve(value: string) {
                     return { type: 'media', selector: `${value}{:root{[CSS]}}`, matched: this.pattern.test(value.trim()) };
                 }
             },
             system: {
                 pattern: /^system$/,
-                resolve(value) {
+                resolve(value: string) {
                     return { type: 'system', selector: '@media (prefers-color-scheme: dark){:root{[CSS]}}', matched: this.pattern.test(value.trim()) };
                 }
             },
             custom: {
-                resolve(value) {
+                resolve(value: string) {
                     return { type: 'custom', selector: value, matched: true };
                 }
             }
         },
-        resolve(value) {
+        resolve(value: any) {
             const rules = Object.keys(this.rules)
                 .filter((k) => k !== 'custom')
-                .map((r) => this.rules[r]);
+                .map((r) => (this.rules as any)[r]);
 
             return [value].flat().map((v) => rules.map((r) => r.resolve(v)).find((rr) => rr.matched) ?? this.rules.custom.resolve(v));
         }
     },
-    _toVariables(theme, options) {
+    _toVariables(theme: any, options: any) {
         return toVariables(theme, { prefix: options?.prefix });
     },
-    getCommon({ name = '', theme = {}, params, set, defaults }) {
+    getCommon({ name = '', theme = {}, params, set, defaults }: any) {
         const { preset, options } = theme;
         let primitive_css, primitive_tokens, semantic_css, semantic_tokens;
 
-        if (SharedUtils.object.isNotEmpty(preset)) {
+        if (isNotEmpty(preset)) {
             const { primitive, semantic } = preset;
             const { colorScheme, ...sRest } = semantic || {};
             const { dark, ...csRest } = colorScheme || {};
-            const prim_var = SharedUtils.object.isNotEmpty(primitive) ? this._toVariables({ primitive }, options) : {};
-            const sRest_var = SharedUtils.object.isNotEmpty(sRest) ? this._toVariables({ semantic: sRest }, options) : {};
-            const csRest_var = SharedUtils.object.isNotEmpty(csRest) ? this._toVariables({ light: csRest }, options) : {};
-            const dark_var = SharedUtils.object.isNotEmpty(dark) ? this._toVariables({ dark }, options) : {};
+            const prim_var: any = isNotEmpty(primitive) ? this._toVariables({ primitive }, options) : {};
+            const sRest_var: any = isNotEmpty(sRest) ? this._toVariables({ semantic: sRest }, options) : {};
+            const csRest_var: any = isNotEmpty(csRest) ? this._toVariables({ light: csRest }, options) : {};
+            const dark_var: any = isNotEmpty(dark) ? this._toVariables({ dark }, options) : {};
 
             const [prim_css, prim_tokens] = [prim_var.declarations ?? '', prim_var.tokens];
             const [sRest_css, sRest_tokens] = [sRest_var.declarations ?? '', sRest_var.tokens || []];
@@ -84,13 +85,13 @@ export default {
             }
         };
     },
-    getPreset({ name = '', preset = {}, options, params, set, defaults, selector }) {
+    getPreset({ name = '', preset = {}, options, params, set, defaults, selector }: any) {
         const _name = name.replace('-directive', '');
         const { colorScheme, ...vRest } = preset;
         const { dark, ...csRest } = colorScheme || {};
-        const vRest_var = SharedUtils.object.isNotEmpty(vRest) ? this._toVariables({ [_name]: vRest }, options) : {};
-        const csRest_var = SharedUtils.object.isNotEmpty(csRest) ? this._toVariables({ [_name]: csRest }, options) : {};
-        const dark_var = SharedUtils.object.isNotEmpty(dark) ? this._toVariables({ [_name]: dark }, options) : {};
+        const vRest_var: any = isNotEmpty(vRest) ? this._toVariables({ [_name]: vRest }, options) : {};
+        const csRest_var: any = isNotEmpty(csRest) ? this._toVariables({ [_name]: csRest }, options) : {};
+        const dark_var: any = isNotEmpty(dark) ? this._toVariables({ [_name]: dark }, options) : {};
 
         const [vRest_css, vRest_tokens] = [vRest_var.declarations ?? '', vRest_var.tokens || []];
         const [csRest_css, csRest_tokens] = [csRest_var.declarations ?? '', csRest_var.tokens || []];
@@ -105,43 +106,43 @@ export default {
             tokens
         };
     },
-    getPresetC({ name = '', theme = {}, params, set, defaults }) {
+    getPresetC({ name = '', theme = {}, params, set, defaults }: any) {
         const { preset, options } = theme;
         const cPreset = preset?.components?.[name];
 
         return this.getPreset({ name, preset: cPreset, options, params, set, defaults });
     },
-    getPresetD({ name = '', theme = {}, params, set, defaults }) {
+    getPresetD({ name = '', theme = {}, params, set, defaults }: any) {
         const dName = name.replace('-directive', '');
         const { preset, options } = theme;
         const dPreset = preset?.directives?.[dName];
 
         return this.getPreset({ name: dName, preset: dPreset, options, params, set, defaults });
     },
-    getColorSchemeOption(options, defaults) {
+    getColorSchemeOption(options: any, defaults: any) {
         return this.regex.resolve(options.darkModeSelector ?? defaults.options.darkModeSelector);
     },
-    getLayerOrder(name, options = {}, params, defaults) {
+    getLayerOrder(name: string, options: any = {}, params: any, defaults: any) {
         const { cssLayer } = options;
 
         if (cssLayer) {
-            const order = SharedUtils.object.getItemValue(cssLayer.order || 'primeui', params);
+            const order = resolve(cssLayer.order || 'primeui', params);
 
             return `@layer ${order}`;
         }
 
         return '';
     },
-    getCommonStyleSheet({ name = '', theme = {}, params, props = {}, set, defaults }) {
+    getCommonStyleSheet({ name = '', theme = {}, params, props = {}, set, defaults }: any) {
         const common = this.getCommon({ name, theme, params, set, defaults });
         const _props = Object.entries(props)
-            .reduce((acc, [k, v]) => acc.push(`${k}="${v}"`) && acc, [])
+            .reduce((acc: any, [k, v]) => acc.push(`${k}="${v}"`) && acc, [])
             .join(' ');
 
         return Object.entries(common || {})
-            .reduce((acc, [key, value]) => {
+            .reduce((acc: any, [key, value]) => {
                 if (value?.css) {
-                    const _css = SharedUtils.object.minifyCSS(value?.css);
+                    const _css = minifyCSS(value?.css);
                     const id = `${key}-variables`;
 
                     acc.push(`<style type="text/css" data-primevue-style-id="${id}" ${_props}>${_css}</style>`); // @todo data-primevue -> data-primeui check in primevue usestyle
@@ -151,48 +152,48 @@ export default {
             }, [])
             .join('');
     },
-    getStyleSheet({ name = '', theme = {}, params, props = {}, set, defaults }) {
+    getStyleSheet({ name = '', theme = {}, params, props = {}, set, defaults }: any) {
         const options = { name, theme, params, set, defaults };
         const preset_css = (name.includes('-directive') ? this.getPresetD(options) : this.getPresetC(options))?.css;
         const _props = Object.entries(props)
-            .reduce((acc, [k, v]) => acc.push(`${k}="${v}"`) && acc, [])
+            .reduce((acc: any, [k, v]) => acc.push(`${k}="${v}"`) && acc, [])
             .join(' ');
 
-        return preset_css ? `<style type="text/css" data-primevue-style-id="${name}-variables" ${_props}>${SharedUtils.object.minifyCSS(preset_css)}</style>` : ''; // @todo check
+        return preset_css ? `<style type="text/css" data-primevue-style-id="${name}-variables" ${_props}>${minifyCSS(preset_css)}</style>` : ''; // @todo check
     },
-    createTokens(obj = {}, defaults, parentKey = '', parentPath = '', tokens = {}) {
+    createTokens(obj: any = {}, defaults: any, parentKey: string = '', parentPath: string = '', tokens: any = {}) {
         Object.entries(obj).forEach(([key, value]) => {
-            const currentKey = SharedUtils.object.test(defaults.variable.excludedKeyRegex, key) ? parentKey : parentKey ? `${parentKey}.${SharedUtils.object.toTokenKey(key)}` : SharedUtils.object.toTokenKey(key);
+            const currentKey = matchRegex(key, defaults.variable.excludedKeyRegex) ? parentKey : parentKey ? `${parentKey}.${toTokenKey(key)}` : toTokenKey(key);
             const currentPath = parentPath ? `${parentPath}.${key}` : key;
 
-            if (SharedUtils.object.isObject(value)) {
+            if (isObject(value)) {
                 this.createTokens(value, defaults, currentKey, currentPath, tokens);
             } else {
                 tokens[currentKey] ||= {
                     paths: [],
-                    computed(colorScheme, tokenPathMap = {}) {
+                    computed(colorScheme: string, tokenPathMap: any = {}) {
                         if (colorScheme) {
-                            const path = this.paths.find((p) => p.scheme === colorScheme) || this.paths.find((p) => p.scheme === 'none');
+                            const path = this.paths.find((p: any) => p.scheme === colorScheme) || this.paths.find((p: any) => p.scheme === 'none');
 
                             return path?.computed(colorScheme, tokenPathMap['binding']);
                         }
 
-                        return this.paths.map((p) => p.computed(p.scheme, tokenPathMap[p.scheme]));
+                        return this.paths.map((p: any) => p.computed(p.scheme, tokenPathMap[p.scheme]));
                     }
                 };
                 tokens[currentKey].paths.push({
                     path: currentPath,
                     value,
                     scheme: currentPath.includes('colorScheme.light') ? 'light' : currentPath.includes('colorScheme.dark') ? 'dark' : 'none',
-                    computed(colorScheme, tokenPathMap = {}) {
+                    computed(colorScheme: string, tokenPathMap: any = {}) {
                         const regex = /{([^}]*)}/g;
-                        let computedValue = value;
+                        let computedValue: any = value;
 
                         tokenPathMap['name'] = this.path;
                         tokenPathMap['binding'] ||= {};
 
-                        if (SharedUtils.object.test(regex, value)) {
-                            const val = value.trim();
+                        if (matchRegex(value as string, regex)) {
+                            const val = (value as string).trim();
                             const _val = val.replaceAll(regex, (v) => {
                                 const path = v.replace(/{|}/g, '');
 
@@ -202,10 +203,10 @@ export default {
                             const calculationRegex = /(\d+\w*\s+[\+\-\*\/]\s+\d+\w*)/g;
                             const cleanedVarRegex = /var\([^)]+\)/g;
 
-                            computedValue = SharedUtils.object.test(calculationRegex, _val.replace(cleanedVarRegex, '0')) ? `calc(${_val})` : _val;
+                            computedValue = matchRegex(_val.replace(cleanedVarRegex, '0'), calculationRegex) ? `calc(${_val})` : _val;
                         }
 
-                        SharedUtils.object.isEmpty(tokenPathMap['binding']) && delete tokenPathMap['binding'];
+                        isEmpty(tokenPathMap['binding']) && delete tokenPathMap['binding'];
 
                         return {
                             colorScheme,
@@ -220,16 +221,16 @@ export default {
 
         return tokens;
     },
-    getTokenValue(tokens, path, defaults) {
-        const normalizePath = (str) => {
+    getTokenValue(tokens: any, path: string, defaults: any) {
+        const normalizePath = (str: string) => {
             const strArr = str.split('.');
 
-            return strArr.filter((s) => !SharedUtils.object.test(defaults.variable.excludedKeyRegex, s.toLowerCase())).join('.');
+            return strArr.filter((s) => !matchRegex(s.toLowerCase(), defaults.variable.excludedKeyRegex)).join('.');
         };
 
         const token = normalizePath(path);
         const colorScheme = path.includes('colorScheme.light') ? 'light' : path.includes('colorScheme.dark') ? 'dark' : undefined;
-        const computedValues = [tokens[token]?.computed(colorScheme)].flat().filter((computed) => computed);
+        const computedValues = [tokens[token as any]?.computed(colorScheme)].flat().filter((computed) => computed);
 
         return computedValues.length === 1
             ? computedValues[0].value
@@ -241,24 +242,24 @@ export default {
                   return acc;
               }, undefined);
     },
-    transformCSS(name, css, mode, type, options = {}, set, defaults, selector) {
-        if (SharedUtils.object.isNotEmpty(css)) {
+    transformCSS(name: string, css: string, mode: string, type: string, options: any = {}, set: any, defaults: any, selector?: string) {
+        if (isNotEmpty(css)) {
             const { cssLayer } = options;
 
             if (type !== 'style') {
                 const colorSchemeOption = this.getColorSchemeOption(options, defaults);
-                const _css = selector ? SharedUtils.object.getRule(selector, css) : css;
+                const _css = selector ? getRule(selector, css) : css;
 
                 css =
                     mode === 'dark'
                         ? colorSchemeOption.reduce((acc, { selector: _selector }) => {
-                              if (SharedUtils.object.isNotEmpty(_selector)) {
-                                  acc += _selector.includes('[CSS]') ? _selector.replace('[CSS]', _css) : SharedUtils.object.getRule(_selector, _css);
+                              if (isNotEmpty(_selector)) {
+                                  acc += _selector.includes('[CSS]') ? _selector.replace('[CSS]', _css) : getRule(_selector, _css);
                               }
 
                               return acc;
                           }, '')
-                        : SharedUtils.object.getRule(selector ?? ':root', css);
+                        : getRule(selector ?? ':root', css);
             }
 
             if (cssLayer) {
@@ -267,10 +268,10 @@ export default {
                     order: 'primeui'
                 };
 
-                SharedUtils.object.isObject(cssLayer) && (layerOptions.name = SharedUtils.object.getItemValue(cssLayer.name, { name, type }));
+                isObject(cssLayer) && (layerOptions.name = resolve(cssLayer.name, { name, type }));
 
-                if (SharedUtils.object.isNotEmpty(layerOptions.name)) {
-                    css = SharedUtils.object.getRule(`@layer ${layerOptions.name}`, css);
+                if (isNotEmpty(layerOptions.name)) {
+                    css = getRule(`@layer ${layerOptions.name}`, css);
                     set?.layerNames(layerOptions.name);
                 }
             }
