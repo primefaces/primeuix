@@ -44,9 +44,6 @@
         "build:postbuild": "node ./scripts/postbuild.mjs",
         "dev:link": "pnpm link --global && npm link"
     },
-    "devDependencies": {
-        "tsup": "^8.1.0"
-    },
     "engines": {
         "node": ">=12.11.0"
     }
