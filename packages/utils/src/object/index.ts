@@ -19,6 +19,7 @@ export { default as isPrintableCharacter } from './methods/isPrintableCharacter'
 export { default as isString } from './methods/isString';
 export { default as localeComparator } from './methods/localeComparator';
 export { default as matchRegex } from './methods/matchRegex';
+export { default as mergeKeys } from './methods/mergeKeys';
 export { default as minifyCSS } from './methods/minifyCSS';
 export { default as nestedKeys } from './methods/nestedKeys';
 export { default as removeAccents } from './methods/removeAccents';

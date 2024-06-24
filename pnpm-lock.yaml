@@ -52,6 +52,10 @@ importers:
         version: 4.9.5
 
   packages/styled:
+    dependencies:
+      '@primeuix/utils':
+        specifier: workspace:*
+        version: link:../utils
     publishDirectory: dist
 
   packages/utils:

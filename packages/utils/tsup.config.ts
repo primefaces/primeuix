@@ -15,5 +15,6 @@ export default defineConfig({
     outDir: 'dist',
     dts: true,
     external: [/^@primeuix\/(.*)$/],
-    sourcemap: true
+    sourcemap: true,
+    splitting: false
 });
