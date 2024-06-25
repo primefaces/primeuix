@@ -5,6 +5,7 @@ export { default as unblockBodyScroll } from './helpers/unblockBodyScroll';
 export { default as absolutePosition } from './methods/absolutePosition';
 export { default as addClass } from './methods/addClass';
 export { default as addStyle } from './methods/addStyle';
+export { default as alignOverlay } from './methods/alignOverlay';
 export { default as appendChild } from './methods/appendChild';
 export { default as calculateBodyScrollbarWidth } from './methods/calculateBodyScrollbarWidth';
 export { default as calculateScrollbarHeight } from './methods/calculateScrollbarHeight';

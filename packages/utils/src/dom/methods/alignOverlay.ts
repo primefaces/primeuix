@@ -2,7 +2,7 @@ import absolutePosition from './absolutePosition';
 import getOuterWidth from './getOuterWidth';
 import relativePosition from './relativePosition';
 
-export function alignOverlay(overlay: HTMLElement, target: HTMLElement, appendTo: string, calculateMinWidth: boolean = true) {
+export default function alignOverlay(overlay: HTMLElement, target: HTMLElement, appendTo: string, calculateMinWidth: boolean = true) {
     if (overlay && target) {
         if (appendTo === 'self') {
             relativePosition(overlay, target);
