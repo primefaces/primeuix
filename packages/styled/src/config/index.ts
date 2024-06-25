@@ -119,7 +119,7 @@ export default {
     getLayerOrderCSS(name = '') {
         return ThemeUtils.getLayerOrder(name, this.options, { names: this.getLayerNames() }, this.defaults);
     },
-    transformCSS(name = '', css: string, type = 'style', mode: string) {
+    transformCSS(name = '', css: string, type: string = 'style', mode?: string) {
         return ThemeUtils.transformCSS(name, css, mode, type, this.options, { layerNames: this.setLayerNames.bind(this) }, this.defaults);
     },
     getCommonStyleSheet(name = '', params: any, props = {}) {

@@ -242,7 +242,7 @@ export default {
                   return acc;
               }, undefined);
     },
-    transformCSS(name: string, css: string, mode: string, type: string, options: any = {}, set: any, defaults: any, selector?: string) {
+    transformCSS(name: string, css: string, mode?: string, type?: string, options: any = {}, set?: any, defaults?: any, selector?: string) {
         if (isNotEmpty(css)) {
             const { cssLayer } = options;
 
