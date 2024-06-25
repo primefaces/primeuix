@@ -1,4 +1,4 @@
-import { matchRegex } from '@primeuix/utils/src/object';
+import { matchRegex } from '@primeuix/utils/object';
 import Theme from '../config/index';
 import { getVariableValue } from '../utils/index';
 

@@ -1,4 +1,4 @@
-import { isObject, matchRegex, toKebabCase } from '@primeuix/utils/src/object';
+import { isObject, matchRegex, toKebabCase } from '@primeuix/utils/object';
 import Theme from '../config/index';
 import { getRule, getVariableName, getVariableValue, merge, setProperty, toNormalizeVariable, toValue } from '../utils/index';
 

@@ -1,4 +1,4 @@
-import { resolve } from '@primeuix/utils/src/object';
+import { resolve } from '@primeuix/utils/object';
 import { dt } from './dt';
 
 export function css(style: any): any {
