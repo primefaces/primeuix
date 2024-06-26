@@ -1,7 +1,7 @@
 {
 	"publishedPackages": [
 		{
-			"name": "@primeuix/styled",
+			"name": "@primeuix/utils",
 			"version": "0.0.3"
 		}
 	]
