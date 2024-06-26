@@ -40,7 +40,7 @@
         "dev:link": "pnpm link --global && npm link"
     },
     "dependencies": {
-        "@primeuix/utils": "workspace:*"
+        "@primeuix/utils": "workspace:^"
     },
     "engines": {
         "node": ">=12.11.0"
