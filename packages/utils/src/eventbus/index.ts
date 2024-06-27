@@ -2,6 +2,7 @@ export interface EventBusOptions {
     on(type: string, handler: Function): void;
     off(type: string, handler: Function): void;
     emit(type: string, evt?: any): void;
+    clear(): void;
 }
 
 export function EventBus(): EventBusOptions {
@@ -35,6 +36,9 @@ export function EventBus(): EventBusOptions {
                     handler(evt);
                 });
             }
+        },
+        clear() {
+            allHandlers.clear();
         }
     };
 }
