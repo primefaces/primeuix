@@ -251,13 +251,12 @@ export default {
 
             if (type !== 'style') {
                 const colorSchemeOption = this.getColorSchemeOption(options, defaults);
-                const _css = selector ? getRule(selector, css) : css;
 
                 css =
                     mode === 'dark'
                         ? colorSchemeOption.reduce((acc, { selector: _selector }) => {
                               if (isNotEmpty(_selector)) {
-                                  acc += _selector.includes('[CSS]') ? _selector.replace('[CSS]', _css) : getRule(_selector, _css);
+                                  acc += _selector.includes('[CSS]') ? _selector.replace('[CSS]', css) : getRule(`${_selector}${selector},${_selector} ${selector}`, css);
                               }
 
                               return acc;
