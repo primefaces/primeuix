@@ -119,8 +119,11 @@ export default {
 
         return this.getPreset({ name: dName, preset: dPreset, options, params, set, defaults });
     },
+    applyDarkColorScheme(options: any) {
+        return !(options.darkModeSelector === 'none' || options.darkModeSelector === false);
+    },
     getColorSchemeOption(options: any, defaults: any) {
-        return this.regex.resolve(options.darkModeSelector ?? defaults.options.darkModeSelector);
+        return this.applyDarkColorScheme(options) ? this.regex.resolve(options.darkModeSelector === true ? defaults.options.darkModeSelector : options.darkModeSelector ?? defaults.options.darkModeSelector) : [];
     },
     getLayerOrder(name: string, options: any = {}, params: any, defaults: any) {
         const { cssLayer } = options;
