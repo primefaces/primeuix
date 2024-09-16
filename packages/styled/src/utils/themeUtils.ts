@@ -245,6 +245,9 @@ export default {
                   return acc;
               }, undefined);
     },
+    getSelectorRule(selector1: any, selector2: any, type: string, css: string) {
+        return type === 'class' || type === 'attr' ? getRule(isNotEmpty(selector2) ? `${selector1}${selector2},${selector1} ${selector2}` : selector1, css) : getRule(selector1, isNotEmpty(selector2) ? getRule(selector2, css) : css);
+    },
     transformCSS(name: string, css: string, mode?: string, type?: string, options: any = {}, set?: any, defaults?: any, selector?: string) {
         if (isNotEmpty(css)) {
             const { cssLayer } = options;
@@ -254,9 +257,9 @@ export default {
 
                 css =
                     mode === 'dark'
-                        ? colorSchemeOption.reduce((acc, { selector: _selector }) => {
+                        ? colorSchemeOption.reduce((acc, { type, selector: _selector }) => {
                               if (isNotEmpty(_selector)) {
-                                  acc += _selector.includes('[CSS]') ? _selector.replace('[CSS]', css) : getRule(selector ? `${_selector}${selector},${_selector} ${selector}` : _selector, css);
+                                  acc += _selector.includes('[CSS]') ? _selector.replace('[CSS]', css) : this.getSelectorRule(_selector, selector, type, css);
                               }
 
                               return acc;
