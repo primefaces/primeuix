@@ -256,7 +256,7 @@ export default {
                     mode === 'dark'
                         ? colorSchemeOption.reduce((acc, { selector: _selector }) => {
                               if (isNotEmpty(_selector)) {
-                                  acc += _selector.includes('[CSS]') ? _selector.replace('[CSS]', css) : getRule(`${_selector}${selector},${_selector} ${selector}`, css);
+                                  acc += _selector.includes('[CSS]') ? _selector.replace('[CSS]', css) : getRule(selector ? `${_selector}${selector},${_selector} ${selector}` : _selector, css);
                               }
 
                               return acc;
