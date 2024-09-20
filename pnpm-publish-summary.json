@@ -2,11 +2,11 @@
 	"publishedPackages": [
 		{
 			"name": "@primeuix/utils",
-			"version": "0.1.1"
+			"version": "0.1.2"
 		},
 		{
 			"name": "@primeuix/styled",
-			"version": "0.1.1"
+			"version": "0.1.2"
 		}
 	]
 }
