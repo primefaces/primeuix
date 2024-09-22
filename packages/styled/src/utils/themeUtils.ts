@@ -1,5 +1,5 @@
 import { isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve, toTokenKey } from '@primeuix/utils/object';
-import { toVariables } from '../helpers/index';
+import { dt, toVariables } from '../helpers/index';
 import { getRule } from './sharedUtils';
 
 export default {
@@ -48,7 +48,7 @@ export default {
     },
     getCommon({ name = '', theme = {}, params, set, defaults }: any) {
         const { preset, options } = theme;
-        let primitive_css, primitive_tokens, semantic_css, semantic_tokens;
+        let primitive_css, primitive_tokens, semantic_css, semantic_tokens, style;
 
         if (isNotEmpty(preset)) {
             const { primitive, semantic } = preset;
@@ -72,6 +72,8 @@ export default {
 
             semantic_css = `${semantic_light_css}${semantic_dark_css}`;
             semantic_tokens = [...new Set([...sRest_tokens, ...csRest_tokens, ...dark_tokens])];
+
+            style = resolve(preset.style, { dt });
         }
 
         return {
@@ -82,12 +84,13 @@ export default {
             semantic: {
                 css: semantic_css,
                 tokens: semantic_tokens
-            }
+            },
+            style
         };
     },
     getPreset({ name = '', preset = {}, options, params, set, defaults, selector }: any) {
         const _name = name.replace('-directive', '');
-        const { colorScheme, ...vRest } = preset;
+        const { colorScheme, style, ...vRest } = preset;
         const { dark, ...csRest } = colorScheme || {};
         const vRest_var: any = isNotEmpty(vRest) ? this._toVariables({ [_name]: vRest }, options) : {};
         const csRest_var: any = isNotEmpty(csRest) ? this._toVariables({ [_name]: csRest }, options) : {};
@@ -103,7 +106,8 @@ export default {
 
         return {
             css: `${light_variable_css}${dark_variable_css}`,
-            tokens
+            tokens,
+            style: resolve(style, { dt })
         };
     },
     getPresetC({ name = '', theme = {}, params, set, defaults }: any) {
