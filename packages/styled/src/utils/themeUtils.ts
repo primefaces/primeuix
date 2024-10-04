@@ -1,4 +1,4 @@
-import { isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve, toTokenKey } from '@primeuix/utils/object';
+import { isArray, isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve, toTokenKey } from '@primeuix/utils/object';
 import { dt, toVariables } from '../helpers/index';
 import { getRule } from './sharedUtils';
 
@@ -179,10 +179,10 @@ export default {
                 tokens[currentKey] ||= {
                     paths: [],
                     computed(colorScheme: string, tokenPathMap: any = {}) {
-                        if (colorScheme) {
-                            const path = this.paths.find((p: any) => p.scheme === colorScheme) || this.paths.find((p: any) => p.scheme === 'none');
-
-                            return path?.computed(colorScheme, tokenPathMap['binding']);
+                        if (this.paths.length === 1) {
+                            return this.paths[0]?.computed(this.paths[0].scheme, tokenPathMap['binding']);
+                        } else if (colorScheme && colorScheme !== 'none') {
+                            return this.paths.find((p: any) => p.scheme === colorScheme)?.computed(colorScheme, tokenPathMap['binding']);
                         }
 
                         return this.paths.map((p: any) => p.computed(p.scheme, tokenPathMap[p.scheme]));
@@ -203,8 +203,9 @@ export default {
                             const val = (value as string).trim();
                             const _val = val.replaceAll(regex, (v) => {
                                 const path = v.replace(/{|}/g, '');
+                                const computed = tokens[path]?.computed(colorScheme, tokenPathMap);
 
-                                return tokens[path]?.computed(colorScheme, tokenPathMap)?.value;
+                                return isArray(computed) && computed.length === 2 ? `light-dark(${computed[0].value},${computed[1].value})` : computed?.value;
                             });
 
                             const calculationRegex = /(\d+\w*\s+[\+\-\*\/]\s+\d+\w*)/g;
