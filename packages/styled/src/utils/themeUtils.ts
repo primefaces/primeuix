@@ -73,7 +73,7 @@ export default {
             semantic_css = `${semantic_light_css}${semantic_dark_css}`;
             semantic_tokens = [...new Set([...sRest_tokens, ...csRest_tokens, ...dark_tokens])];
 
-            style = resolve(preset.style, { dt });
+            style = resolve(preset.css, { dt });
         }
 
         return {
@@ -90,7 +90,7 @@ export default {
     },
     getPreset({ name = '', preset = {}, options, params, set, defaults, selector }: any) {
         const _name = name.replace('-directive', '');
-        const { colorScheme, style, ...vRest } = preset;
+        const { colorScheme, css, ...vRest } = preset;
         const { dark, ...csRest } = colorScheme || {};
         const vRest_var: any = isNotEmpty(vRest) ? this._toVariables({ [_name]: vRest }, options) : {};
         const csRest_var: any = isNotEmpty(csRest) ? this._toVariables({ [_name]: csRest }, options) : {};
@@ -107,7 +107,7 @@ export default {
         return {
             css: `${light_variable_css}${dark_variable_css}`,
             tokens,
-            style: resolve(style, { dt })
+            style: resolve(css, { dt })
         };
     },
     getPresetC({ name = '', theme = {}, params, set, defaults }: any) {
