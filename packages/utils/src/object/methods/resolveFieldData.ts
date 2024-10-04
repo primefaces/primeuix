@@ -1,7 +1,7 @@
 import isFunction from './isFunction';
 import isNotEmpty from './isNotEmpty';
 
-export default function resolveFieldData(data: any, field: string): any {
+export default function resolveFieldData(data: any, field: any): any {
     if (!data || !field) {
         // short circuit if there is nothing to resolve
         return null;
