@@ -6,7 +6,7 @@ export default {
         variable: {
             prefix: 'p',
             selector: ':root',
-            excludedKeyRegex: /^(primitive|semantic|components|directives|variables|colorscheme|light|dark|common|root|states|css)$/gi
+            excludedKeyRegex: /^(primitive|semantic|components|directives|variables|colorscheme|light|dark|common|root|states|extend|css)$/gi
         },
         options: {
             prefix: 'p',
