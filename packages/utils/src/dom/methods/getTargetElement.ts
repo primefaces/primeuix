@@ -9,6 +9,8 @@ export default function getTargetElement(target: any, currentElement: Element): 
             return document;
         case 'window':
             return window;
+        case 'body':
+            return document.body;
         case '@next':
             return currentElement?.nextElementSibling;
         case '@prev':
