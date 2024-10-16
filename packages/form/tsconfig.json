@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@primeuix/form/*": ["./src/*"],
+            "@primeuix/utils/*": ["../../packages/utils/src/*"]
+        }
+    },
+    "include": ["src/**/*", "dist/**/*"],
+    "exclude": ["node_modules"]
+}
