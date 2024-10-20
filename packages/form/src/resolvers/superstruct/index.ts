@@ -1,6 +1,9 @@
+import { Struct } from 'superstruct';
+import { ResolverOptions, ResolverResult } from '..';
+
 export const superStructResolver =
-    (schema: any, schemaOptions: any, resolverOptions: any) =>
-    async ({ values }: any) => {
+    <T>(schema: Struct<T>, schemaOptions?: any, resolverOptions?: ResolverOptions) =>
+    async ({ values }: any): Promise<ResolverResult<T>> => {
         const { raw = false } = resolverOptions || {};
 
         try {
@@ -8,11 +11,13 @@ export const superStructResolver =
 
             if (errors) {
                 return {
-                    values: {},
-                    states: errors.failures().reduce((acc: any, error: any) => {
-                        if (error.path) {
-                            acc[error.path[0]] ||= { errors: [] };
-                            acc[error.path[0]]['errors'].push(error);
+                    values: {} as T,
+                    errors: errors.failures().reduce((acc: Record<string, any[]>, error: any) => {
+                        if (error.path && error.path.length > 0) {
+                            const pathKey = error.path[0];
+
+                            acc[pathKey] ||= [];
+                            acc[pathKey].push(error);
                         }
 
                         return acc;
@@ -22,9 +27,9 @@ export const superStructResolver =
 
             return {
                 values: raw ? values : data,
-                states: {}
+                errors: {}
             };
         } catch (e: any) {
-            // NOOP
+            throw e;
         }
     };

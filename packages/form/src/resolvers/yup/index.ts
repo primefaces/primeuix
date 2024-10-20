@@ -1,6 +1,9 @@
+import { AnyObjectSchema, ValidateOptions, ValidationError } from 'yup';
+import { ResolverOptions, ResolverResult } from '..';
+
 export const yupResolver =
-    (schema: any, schemaOptions: any, resolverOptions: any) =>
-    async ({ values }: any) => {
+    <T>(schema: AnyObjectSchema, schemaOptions?: ValidateOptions<any>, resolverOptions?: ResolverOptions) =>
+    async ({ values }: any): Promise<ResolverResult<T>> => {
         const { sync = false, raw = false } = resolverOptions || {};
 
         try {
@@ -8,21 +11,25 @@ export const yupResolver =
 
             return {
                 values: raw ? values : result,
-                states: {}
+                errors: {}
             };
         } catch (e: any) {
-            if (e.inner) {
+            if (e instanceof ValidationError && e.inner) {
                 return {
                     values: raw ? values : {},
-                    states: e.inner.reduce((acc: any, error: any) => {
+                    errors: e.inner.reduce((acc: Record<string, any[]>, error: ValidationError) => {
                         if (error.path) {
-                            acc[error.path.split('.')[0]] ||= { errors: [] };
-                            acc[error.path.split('.')[0]]['errors'].push(error);
+                            const pathKey = error.path.split('.')[0];
+
+                            acc[pathKey] ||= [];
+                            acc[pathKey].push(error);
                         }
 
                         return acc;
                     }, {})
                 };
             }
+
+            throw e;
         }
     };

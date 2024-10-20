@@ -1,26 +1,29 @@
-import { getDotPath, safeParse, safeParseAsync } from 'valibot';
+import { getDotPath, InferOutput, safeParse, safeParseAsync } from 'valibot';
+import { ResolverOptions, ResolverResult } from '..';
 
 export const valibotResolver =
-    (schema: any, schemaOptions: any, resolverOptions: any) =>
-    async ({ values }: any) => {
+    <T>(schema: any, schemaOptions?: any, resolverOptions?: ResolverOptions) =>
+    async ({ values }: any): Promise<ResolverResult<T>> => {
         const { sync = false, raw = false } = resolverOptions || {};
 
         try {
-            const result: any = sync ? safeParse(schema, values, { abortPipeEarly: false, ...schemaOptions }) : await safeParseAsync(schema, values, { abortPipeEarly: false, ...schemaOptions });
+            const result: InferOutput<any> | Promise<InferOutput<any>> = sync ? safeParse(schema, values, { abortPipeEarly: false, ...schemaOptions }) : await safeParseAsync(schema, values, { abortPipeEarly: false, ...schemaOptions });
 
             if (result.success) {
                 return {
                     values: raw ? values : result.output,
-                    states: {}
+                    errors: {}
                 };
             } else {
                 return {
                     values: raw ? values : {},
-                    states: result.issues?.reduce((acc: any, error: any) => {
+                    errors: result.issues?.reduce((acc: Record<string, any[]>, error: any) => {
                         const path = getDotPath(error);
                         if (path) {
-                            acc[path.split('.')[0]] ||= { errors: [] };
-                            acc[path.split('.')[0]]['errors'].push(error);
+                            const pathKey = path.split('.')[0];
+
+                            acc[pathKey] ||= [];
+                            acc[pathKey].push(error);
                         }
 
                         return acc;
@@ -28,6 +31,6 @@ export const valibotResolver =
                 };
             }
         } catch (e: any) {
-            // NOOP
+            throw e;
         }
     };

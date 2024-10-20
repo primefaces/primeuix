@@ -1,28 +1,34 @@
+import { ResolverOptions, ResolverResult } from '..';
+
 export const joiResolver =
-    (schema: any, schemaOptions: any, resolverOptions: any) =>
-    async ({ values }: any) => {
+    <T>(schema: any, schemaOptions?: any, resolverOptions?: ResolverOptions) =>
+    async ({ values }: any): Promise<ResolverResult<T>> => {
         const { sync = false, raw = false } = resolverOptions || {};
 
         try {
-            const result = await schema[sync ? 'validateSync' : 'validate'](values, { abortEarly: false, ...schemaOptions });
+            const result = await schema[sync ? 'validate' : 'validateAsync'](values, { abortEarly: false, ...schemaOptions });
 
             return {
                 values: raw ? values : result,
-                states: {}
+                errors: {}
             };
         } catch (e: any) {
             if (e.details) {
                 return {
                     values: raw ? values : {},
-                    states: e.details.reduce((acc: any, error: any) => {
+                    errors: e.details.reduce((acc: Record<string, any[]>, error: any) => {
                         if (error.path) {
-                            acc[error.path[0]] ||= { errors: [] };
-                            acc[error.path[0]]['errors'].push(error);
+                            const pathKey = error.path[0];
+
+                            acc[pathKey] ||= [];
+                            acc[pathKey].push(error);
                         }
 
                         return acc;
                     }, {})
                 };
             }
+
+            throw e;
         }
     };

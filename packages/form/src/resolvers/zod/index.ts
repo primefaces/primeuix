@@ -1,28 +1,35 @@
+import { ParseParams, Schema, ZodError } from 'zod';
+import { ResolverOptions, ResolverResult } from '..';
+
 export const zodResolver =
-    (schema: any, schemaOptions: any, resolverOptions: any) =>
-    async ({ values }: any) => {
+    <T extends Schema<any, any>>(schema: T, schemaOptions?: ParseParams, resolverOptions?: ResolverOptions) =>
+    async ({ values }: any): Promise<ResolverResult<T>> => {
         const { sync = false, raw = false } = resolverOptions || {};
 
         try {
-            const result = await schema[sync ? 'parseSync' : 'parse'](values, schemaOptions);
+            const result = await schema[sync ? 'parse' : 'parseAsync'](values, schemaOptions);
 
             return {
                 values: raw ? values : result,
-                states: {}
+                errors: {}
             };
         } catch (e: any) {
-            if (Array.isArray(e?.errors)) {
+            if (e instanceof ZodError && Array.isArray(e?.errors)) {
                 return {
                     values: raw ? values : {},
-                    states: e.errors.reduce((acc: any, error: any) => {
+                    errors: e.errors.reduce((acc: Record<string, any[]>, error: any) => {
                         if (error.path) {
-                            acc[error.path[0]] ||= { errors: [] };
-                            acc[error.path[0]]['errors'].push(error);
+                            const pathKey = error.path[0];
+
+                            acc[pathKey] ||= [];
+                            acc[pathKey].push(error);
                         }
 
                         return acc;
                     }, {})
                 };
             }
+
+            throw e;
         }
     };
