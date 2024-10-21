@@ -14,7 +14,7 @@ export const yupResolver =
                 errors: {}
             };
         } catch (e: any) {
-            if (e instanceof ValidationError && e.inner) {
+            if (e?.inner) {
                 return {
                     values: raw ? values : {},
                     errors: e.inner.reduce((acc: Record<string, any[]>, error: ValidationError) => {

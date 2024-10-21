@@ -14,7 +14,7 @@ export default defineConfig({
     format: ['esm'],
     outDir: 'dist',
     dts: true,
-    external: [/^@primeuix\/(.*)$/, 'valibot'],
+    external: [/^@primeuix\/(.*)$/, 'joi', 'superstruct', 'valibot', 'yup', 'zod'],
     sourcemap: true,
     splitting: false,
     target: 'esnext'

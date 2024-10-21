@@ -1,4 +1,4 @@
-import { ParseParams, Schema, ZodError } from 'zod';
+import { ParseParams, Schema } from 'zod';
 import { ResolverOptions, ResolverResult } from '..';
 
 export const zodResolver =
@@ -14,7 +14,7 @@ export const zodResolver =
                 errors: {}
             };
         } catch (e: any) {
-            if (e instanceof ZodError && Array.isArray(e?.errors)) {
+            if (Array.isArray(e?.errors)) {
                 return {
                     values: raw ? values : {},
                     errors: e.errors.reduce((acc: Record<string, any[]>, error: any) => {

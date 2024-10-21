@@ -13,7 +13,7 @@ export const joiResolver =
                 errors: {}
             };
         } catch (e: any) {
-            if (e.details) {
+            if (e?.details) {
                 return {
                     values: raw ? values : {},
                     errors: e.details.reduce((acc: Record<string, any[]>, error: any) => {
