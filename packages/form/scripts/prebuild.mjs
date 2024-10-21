@@ -15,7 +15,19 @@ fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
     .filter((dir) => dir.isDirectory())
     .forEach(({ name: folderName }) => {
         const folderPath = path.resolve(__root, INPUT_DIR + folderName);
-        let exports = [];
+        let exports = [
+            `export interface ResolverOptions {
+    sync?: boolean;
+    raw?: boolean;
+}
+
+export interface ResolverResult<T> {
+    values: T;
+    errors: Record<string, any>;
+}
+
+`
+        ];
 
         fs.readdirSync(folderPath, { withFileTypes: true })
             .filter((dir) => dir.isDirectory())
