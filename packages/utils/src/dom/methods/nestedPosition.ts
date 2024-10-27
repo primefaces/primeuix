@@ -1,6 +1,8 @@
 import calculateScrollbarWidth from './calculateScrollbarWidth';
+import getHiddenElementOuterHeight from './getHiddenElementOuterHeight';
 import getHiddenElementOuterWidth from './getHiddenElementOuterWidth';
 import getOffset from './getOffset';
+import getOuterHeight from './getOuterHeight';
 import getOuterWidth from './getOuterWidth';
 import getViewport from './getViewport';
 
@@ -11,7 +13,14 @@ export default function nestedPosition(element: HTMLElement, level: number): voi
         const viewport = getViewport();
         const sublistWidth = element.offsetParent ? element.offsetWidth : getHiddenElementOuterWidth(element);
         const itemOuterWidth = getOuterWidth(parentItem?.children?.[0]);
+
+        const sublistHeight = element.offsetParent
+            ? element.offsetHeight
+            : getHiddenElementOuterHeight(element);
+        const itemOuterHeight = getOuterHeight(parentItem?.children?.[0] as HTMLElement);
+
         let left: string = '';
+        let top: string = '';
 
         if ((elementOffset.left as number) + itemOuterWidth + sublistWidth > viewport.width - calculateScrollbarWidth()) {
             if ((elementOffset.left as number) < sublistWidth) {
@@ -28,7 +37,14 @@ export default function nestedPosition(element: HTMLElement, level: number): voi
             left = '100%';
         }
 
-        element.style.top = '0px';
+        // getBoundingClientRect returns a top position from the current visible viewport area
+        if (element.getBoundingClientRect().top + itemOuterHeight + sublistHeight > viewport.height) {
+            top = `-${sublistHeight - itemOuterHeight}px`;
+        } else {
+            top = "0px";
+        }
+
+        element.style.top = top;
         element.style.left = left;
     }
 }
