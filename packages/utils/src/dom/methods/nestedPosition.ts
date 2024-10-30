@@ -12,11 +12,8 @@ export default function nestedPosition(element: HTMLElement, level: number): voi
         const elementOffset = getOffset(parentItem);
         const viewport = getViewport();
         const sublistWidth = element.offsetParent ? element.offsetWidth : getHiddenElementOuterWidth(element);
+        const sublistHeight = element.offsetParent ? element.offsetHeight : getHiddenElementOuterHeight(element);
         const itemOuterWidth = getOuterWidth(parentItem?.children?.[0]);
-
-        const sublistHeight = element.offsetParent
-            ? element.offsetHeight
-            : getHiddenElementOuterHeight(element);
         const itemOuterHeight = getOuterHeight(parentItem?.children?.[0] as HTMLElement);
 
         let left: string = '';
@@ -41,7 +38,7 @@ export default function nestedPosition(element: HTMLElement, level: number): voi
         if (element.getBoundingClientRect().top + itemOuterHeight + sublistHeight > viewport.height) {
             top = `-${sublistHeight - itemOuterHeight}px`;
         } else {
-            top = "0px";
+            top = '0px';
         }
 
         element.style.top = top;
