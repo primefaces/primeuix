@@ -1,6 +1,7 @@
 import Locale from '../config/index';
+import type { LocaleOptions } from '../types';
 
-export const $l = (options?: any) => {
+export const $l = (options?: LocaleOptions) => {
     options && Locale.init(options);
 
     return {
@@ -14,10 +15,10 @@ export const $l = (options?: any) => {
             return Array.from(Locale._locales.values());
         },
         // actions
-        define(lang: string, locale: any = {}) {
+        define(lang: string, locale: Record<string, any> = {}) {
             return Locale.add(lang, locale);
         },
-        update(lang: string, locale: any = {}) {
+        update(lang: string, locale: Record<string, any> = {}) {
             return Locale.update(lang, locale);
         },
         use(lang: string) {
