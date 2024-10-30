@@ -4,9 +4,7 @@ export default defineConfig({
     entry: ['src/index.ts'],
     format: ['esm'],
     outDir: 'dist',
-    dts: {
-        entry: ['src/index.ts', 'src/types.ts']
-    },
+    dts: true,
     external: [/^@primeuix\/(.*)$/],
     sourcemap: true,
     splitting: false

@@ -10,7 +10,7 @@ export interface LocaleOptions {
     /**
      * The translation locales of all languages that added to the "Locale" instance
      */
-    locales?: Record<string, any>[] | undefined;
+    locales?: Record<string, any> | undefined;
 }
 
 export interface LocaleInstance {
