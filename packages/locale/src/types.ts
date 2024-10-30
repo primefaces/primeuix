@@ -2,23 +2,23 @@ export interface LocaleOptions {
     /**
      * The current language
      */
-    lang?: string | undefined;
+    lang?: string;
     /**
      * The fallback language if language not found
      */
-    fallbackLang?: string | undefined;
+    fallbackLang?: string;
     /**
      * The translation locales of all languages that added to the "Locale" instance
      */
-    locales?: Record<string, any> | undefined;
+    locales?: Record<string, Record<string, any>>;
 }
 
 export interface LocaleInstance {
-    init(options: LocaleOptions): any;
-    use(lang?: string): any;
-    add(lang: string, locale?: Record<string, any>): any;
-    update(lang: string, locale?: Record<string, any>): any;
-    get(lang?: string): any;
-    lang: string;
-    locale: any;
+    init(options: LocaleOptions): LocaleInstance;
+    use(lang?: string): void;
+    add(lang: string, locale: Record<string, any>): LocaleInstance;
+    update(lang: string, locale: Record<string, any>): LocaleInstance;
+    get(lang?: string): Record<string, any> | undefined;
+    readonly lang: string;
+    readonly locale: Record<string, any> | undefined;
 }
