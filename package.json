@@ -22,6 +22,7 @@
         "build:form": "pnpm --filter form build",
         "build:styled": "pnpm --filter styled build",
         "build:utils": "pnpm --filter utils build",
+        "test": "pnpm run test:locale",
         "test:locale": "pnpm --filter locale test",
         "security:check": "pnpm audit --production --audit-level high",
         "format": "prettier --write \"**/*.{js,mjs,ts,mts,d.ts}\"",
