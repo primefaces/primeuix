@@ -61,9 +61,9 @@ export function getVariableValue(value: any, variable: string = '', prefix: stri
             return matchRegex(_val.replace(cleanedVarRegex, '0'), calculationRegex) ? `calc(${_val})` : _val;
         }
 
-        return toUnit(val, variable);
+        return val; //toUnit(val, variable);
     } else if (isNumber(value)) {
-        return toUnit(value, variable);
+        return value; //toUnit(value, variable);
     }
 
     return undefined;
