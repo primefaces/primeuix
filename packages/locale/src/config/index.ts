@@ -7,14 +7,14 @@ export default {
     _fallbackLang: undefined,
     _locales: new Map(),
     init({ lang, fallbackLang, locales }: LocaleOptions) {
-        this._lang = lang ?? 'en';
+        this._lang = lang || 'en';
         this._fallbackLang = fallbackLang || this._lang;
         this._locales = new Map(Object.entries(locales || {}));
 
         return this;
     },
-    use(lang: string) {
-        this._lang = lang;
+    use(lang?: string) {
+        this._lang = lang || this.lang;
 
         LocaleService.emit('locale:change', {
             lang,
@@ -31,8 +31,8 @@ export default {
 
         return this;
     },
-    get(lang: string) {
-        return this._locales.get(lang);
+    get(lang?: string) {
+        return this._locales.get(lang || this.lang);
     },
     get lang() {
         return this._lang;

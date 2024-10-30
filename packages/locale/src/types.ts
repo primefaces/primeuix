@@ -15,10 +15,10 @@ export interface LocaleOptions {
 
 export interface LocaleInstance {
     init(options: LocaleOptions): any;
-    use(lang: string): any;
+    use(lang?: string): any;
     add(lang: string, locale?: Record<string, any>): any;
     update(lang: string, locale?: Record<string, any>): any;
-    get(lang: string): any;
+    get(lang?: string): any;
     lang: string;
     locale: any;
 }

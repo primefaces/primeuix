@@ -42,7 +42,7 @@ describe('en', () => {
 });
 
 describe('helpers', () => {
-    $l().define('en', locales.en).use('en');
+    $l().define('en', locales.en).use();
 
     test('define', () => {
         const newLocale = {

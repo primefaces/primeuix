@@ -1,12 +1,12 @@
 import Locale from '../config/index';
-import type { LocaleOptions } from '../types';
+import type { LocaleInstance, LocaleOptions } from '../types';
 
 export const $l = (options?: LocaleOptions) => {
     options && Locale.init(options);
 
     return {
-        get(lang: string) {
-            return Locale.get(lang || Locale.lang);
+        get(lang?: string) {
+            return Locale.get(lang);
         },
         get langs() {
             return Array.from(Locale._locales.keys());
@@ -15,13 +15,13 @@ export const $l = (options?: LocaleOptions) => {
             return Array.from(Locale._locales.values());
         },
         // actions
-        define(lang: string, locale: Record<string, any> = {}) {
+        define(lang: string, locale: Record<string, any> = {}): LocaleInstance {
             return Locale.add(lang, locale);
         },
-        update(lang: string, locale: Record<string, any> = {}) {
+        update(lang: string, locale: Record<string, any> = {}): LocaleInstance {
             return Locale.update(lang, locale);
         },
-        use(lang: string) {
+        use(lang?: string) {
             return Locale.use(lang);
         }
     };
