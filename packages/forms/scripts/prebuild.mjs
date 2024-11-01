@@ -28,7 +28,7 @@ export interface ResolverResult<T> {
 fs.readdirSync(path.resolve(__root, INPUT_DIR + '/resolvers'), { withFileTypes: true })
     .filter((dir) => dir.isDirectory())
     .forEach(({ name: folderName }) => {
-        exports.push(`export * from '@primeuix/form/resolvers/${folderName}';\n`);
+        exports.push(`export * from '@primeuix/forms/resolvers/${folderName}';\n`);
 
         exports.length && fs.writeFileSync(path.resolve(INPUT_DIR + '/resolvers', 'index.ts'), exports.join(''));
     });

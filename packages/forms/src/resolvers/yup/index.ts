@@ -1,26 +1,26 @@
-import { toValues } from '@primeuix/form/utils';
+import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils/object';
-import { ParseParams, Schema } from 'zod';
+import { AnyObjectSchema, ValidateOptions, ValidationError } from 'yup';
 import { ResolverOptions, ResolverResult } from '..';
 
-export const zodResolver =
-    <T extends Schema<any, any>>(schema: T, schemaOptions?: ParseParams, resolverOptions?: ResolverOptions) =>
+export const yupResolver =
+    <T>(schema: AnyObjectSchema, schemaOptions?: ValidateOptions<any>, resolverOptions?: ResolverOptions) =>
     async ({ values, name }: any): Promise<ResolverResult<T>> => {
         const { sync = false, raw = false } = resolverOptions || {};
 
         try {
-            const result = await schema[sync ? 'parse' : 'parseAsync'](values, schemaOptions);
+            const result = await schema[sync ? 'validateSync' : 'validate'](values, { abortEarly: false, ...schemaOptions });
 
             return {
                 values: toValues(raw ? values : result, name),
                 errors: {}
             };
         } catch (e: any) {
-            if (Array.isArray(e?.errors)) {
+            if (e?.inner) {
                 return {
                     values: toValues(raw ? values : undefined, name),
-                    errors: e.errors.reduce((acc: Record<string, any[]>, error: any) => {
-                        const pathKey = isNotEmpty(error.path) ? error.path[0] : name;
+                    errors: e.inner.reduce((acc: Record<string, any[]>, error: ValidationError) => {
+                        const pathKey = isNotEmpty(error.path) ? error.path!.split('.')[0] : name;
 
                         if (pathKey) {
                             acc[pathKey] ||= [];

@@ -63,7 +63,7 @@ importers:
         specifier: ^5.6.3
         version: 5.6.3
 
-  packages/form:
+  packages/forms:
     dependencies:
       '@primeuix/utils':
         specifier: workspace:^

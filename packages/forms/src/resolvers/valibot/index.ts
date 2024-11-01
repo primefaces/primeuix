@@ -1,4 +1,4 @@
-import { toValues } from '@primeuix/form/utils';
+import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils/object';
 import { getDotPath, InferOutput, safeParse, safeParseAsync } from 'valibot';
 import { ResolverOptions, ResolverResult } from '..';

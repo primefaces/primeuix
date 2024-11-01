@@ -1,13 +1,13 @@
 {
-    "name": "@primeuix/form",
-    "version": "0.0.2",
+    "name": "@primeuix/forms",
+    "version": "0.0.1",
     "author": "PrimeTek Informatics",
     "description": "",
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/primefaces/primeuix.git",
-        "directory": "packages/form"
+        "directory": "packages/forms"
     },
     "bugs": {
         "url": "https://github.com/primefaces/primeuix/issues"
