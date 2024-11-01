@@ -1,7 +1,7 @@
 import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils/object';
 import { getDotPath, InferOutput, safeParse, safeParseAsync } from 'valibot';
-import { ResolverOptions, ResolverResult } from '..';
+import type { ResolverOptions, ResolverResult } from '..';
 
 export const valibotResolver =
     <T>(schema: any, schemaOptions?: any, resolverOptions?: ResolverOptions) =>

@@ -1,7 +1,7 @@
 import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils/object';
-import { Struct } from 'superstruct';
-import { ResolverOptions, ResolverResult } from '..';
+import type { Struct } from 'superstruct';
+import type { ResolverOptions, ResolverResult } from '..';
 
 export const superStructResolver =
     <T>(schema: Struct<T>, schemaOptions?: any, resolverOptions?: ResolverOptions) =>

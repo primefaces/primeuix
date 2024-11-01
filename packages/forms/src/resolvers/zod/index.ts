@@ -1,7 +1,7 @@
 import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils/object';
-import { ParseParams, Schema } from 'zod';
-import { ResolverOptions, ResolverResult } from '..';
+import type { ParseParams, Schema } from 'zod';
+import type { ResolverOptions, ResolverResult } from '..';
 
 export const zodResolver =
     <T extends Schema<any, any>>(schema: T, schemaOptions?: ParseParams, resolverOptions?: ResolverOptions) =>

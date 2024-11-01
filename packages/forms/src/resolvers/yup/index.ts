@@ -1,7 +1,7 @@
 import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils/object';
-import { AnyObjectSchema, ValidateOptions, ValidationError } from 'yup';
-import { ResolverOptions, ResolverResult } from '..';
+import type { AnyObjectSchema, ValidateOptions, ValidationError } from 'yup';
+import type { ResolverOptions, ResolverResult } from '..';
 
 export const yupResolver =
     <T>(schema: AnyObjectSchema, schemaOptions?: ValidateOptions<any>, resolverOptions?: ResolverOptions) =>

@@ -1,6 +1,6 @@
 import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils/object';
-import { ResolverOptions, ResolverResult } from '..';
+import type { ResolverOptions, ResolverResult } from '..';
 
 export const joiResolver =
     <T>(schema: any, schemaOptions?: any, resolverOptions?: ResolverOptions) =>
