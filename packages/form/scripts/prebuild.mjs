@@ -11,12 +11,8 @@ const pkg = path.resolve(__root, './package.json');
 updatePackageJson(pkg);
 
 // Fill * > index.ts in subfolders
-fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
-    .filter((dir) => dir.isDirectory())
-    .forEach(({ name: folderName }) => {
-        const folderPath = path.resolve(__root, INPUT_DIR + folderName);
-        let exports = [
-            `export interface ResolverOptions {
+let exports = [
+    `export interface ResolverOptions {
     sync?: boolean;
     raw?: boolean;
 }
@@ -27,13 +23,12 @@ export interface ResolverResult<T> {
 }
 
 `
-        ];
+];
 
-        fs.readdirSync(folderPath, { withFileTypes: true })
-            .filter((dir) => dir.isDirectory())
-            .forEach(({ name: subFolderName }) => {
-                exports.push(`export * from '@primeuix/form/${folderName}/${subFolderName}';\n`);
-            });
+fs.readdirSync(path.resolve(__root, INPUT_DIR + '/resolvers'), { withFileTypes: true })
+    .filter((dir) => dir.isDirectory())
+    .forEach(({ name: folderName }) => {
+        exports.push(`export * from '@primeuix/form/resolvers/${folderName}';\n`);
 
-        exports.length && fs.writeFileSync(path.resolve(folderPath, 'index.ts'), exports.join(''));
+        exports.length && fs.writeFileSync(path.resolve(INPUT_DIR + '/resolvers', 'index.ts'), exports.join(''));
     });

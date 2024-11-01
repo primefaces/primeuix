@@ -1,25 +1,27 @@
+import { toValues } from '@primeuix/form/utils';
+import { isNotEmpty } from '@primeuix/utils/object';
 import { ResolverOptions, ResolverResult } from '..';
 
 export const joiResolver =
     <T>(schema: any, schemaOptions?: any, resolverOptions?: ResolverOptions) =>
-    async ({ values }: any): Promise<ResolverResult<T>> => {
+    async ({ values, name }: any): Promise<ResolverResult<T>> => {
         const { sync = false, raw = false } = resolverOptions || {};
 
         try {
             const result = await schema[sync ? 'validate' : 'validateAsync'](values, { abortEarly: false, ...schemaOptions });
 
             return {
-                values: raw ? values : result,
+                values: toValues(raw ? values : result, name),
                 errors: {}
             };
         } catch (e: any) {
             if (e?.details) {
                 return {
-                    values: raw ? values : {},
+                    values: toValues(raw ? values : undefined, name),
                     errors: e.details.reduce((acc: Record<string, any[]>, error: any) => {
-                        if (error.path) {
-                            const pathKey = error.path[0];
+                        const pathKey = isNotEmpty(error.path) ? error.path[0] : name;
 
+                        if (pathKey) {
                             acc[pathKey] ||= [];
                             acc[pathKey].push(error);
                         }

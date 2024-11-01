@@ -1,9 +1,11 @@
+import { toValues } from '@primeuix/form/utils';
+import { isNotEmpty } from '@primeuix/utils/object';
 import { Struct } from 'superstruct';
 import { ResolverOptions, ResolverResult } from '..';
 
 export const superStructResolver =
     <T>(schema: Struct<T>, schemaOptions?: any, resolverOptions?: ResolverOptions) =>
-    async ({ values }: any): Promise<ResolverResult<T>> => {
+    async ({ values, name }: any): Promise<ResolverResult<T>> => {
         const { raw = false } = resolverOptions || {};
 
         try {
@@ -11,11 +13,11 @@ export const superStructResolver =
 
             if (errors) {
                 return {
-                    values: {} as T,
+                    values: toValues(undefined, name),
                     errors: errors.failures().reduce((acc: Record<string, any[]>, error: any) => {
-                        if (error.path && error.path.length > 0) {
-                            const pathKey = error.path[0];
+                        const pathKey = isNotEmpty(error.path) ? error.path[0] : name;
 
+                        if (pathKey) {
                             acc[pathKey] ||= [];
                             acc[pathKey].push(error);
                         }
@@ -26,7 +28,7 @@ export const superStructResolver =
             }
 
             return {
-                values: raw ? values : data,
+                values: toValues(raw ? values : data, name),
                 errors: {}
             };
         } catch (e: any) {
