@@ -42,12 +42,21 @@ export function getVariableName(prefix: string = '', variable: string = ''): str
     return `--${toNormalizeVariable(prefix, variable)}`;
 }
 
+export function hasOddBraces(str: string = ''): boolean {
+    const openBraces = (str.match(/{/g) || []).length;
+    const closeBraces = (str.match(/}/g) || []).length;
+
+    return (openBraces + closeBraces) % 2 !== 0;
+}
+
 export function getVariableValue(value: any, variable: string = '', prefix: string = '', excludedKeyRegexes: RegExp[] = [], fallback?: string): string | undefined {
     if (isString(value)) {
-        const regex = /{([^}]*)}/g;
+        const regex = /{([^}]*)}/g; // Exp: '{a}', '{a.b}', '{a.b.c}' etc.
         const val = value.trim();
 
-        if (matchRegex(val, regex)) {
+        if (hasOddBraces(val)) {
+            return undefined;
+        } else if (matchRegex(val, regex)) {
             const _val = val.replaceAll(regex, (v: string) => {
                 const path = v.replace(/{|}/g, '');
                 const keys = path.split('.').filter((_v: string) => !excludedKeyRegexes.some((_r) => matchRegex(_v, _r)));
