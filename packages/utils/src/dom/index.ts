@@ -63,6 +63,7 @@ export { default as isExist } from './methods/isExist';
 export { default as isFocusableElement } from './methods/isFocusableElement';
 export { default as isHidden } from './methods/isHidden';
 export { default as isIOS } from './methods/isIOS';
+export { default as isRTL } from './methods/isRTL';
 export { default as isServer } from './methods/isServer';
 export { default as isTouchDevice } from './methods/isTouchDevice';
 export { default as isVisible } from './methods/isVisible';
