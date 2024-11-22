@@ -42,6 +42,7 @@ export { default as getOuterWidth } from './methods/getOuterWidth';
 export { default as getParentNode } from './methods/getParentNode';
 export { default as getParents } from './methods/getParents';
 export { default as getPreviousElementSibling } from './methods/getPreviousElementSibling';
+export { default as getScrollLeft } from './methods/getScrollLeft';
 export { default as getScrollableParents } from './methods/getScrollableParents';
 export { default as getSelection } from './methods/getSelection';
 export { default as getTargetElement } from './methods/getTargetElement';
