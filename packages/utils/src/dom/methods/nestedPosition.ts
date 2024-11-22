@@ -42,6 +42,6 @@ export default function nestedPosition(element: HTMLElement, level: number): voi
         }
 
         element.style.top = top;
-        element.style.left = left;
+        element.style.insetInlineStart = left;
     }
 }

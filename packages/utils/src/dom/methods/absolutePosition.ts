@@ -34,7 +34,7 @@ export default function absolutePosition(element: HTMLElement, target: HTMLEleme
         else left = targetOffset.left + windowScrollLeft;
 
         element.style.top = top + 'px';
-        element.style.left = left + 'px';
+        element.style.insetInlineStart = left + 'px';
         element.style.transformOrigin = origin;
         gutter && (element.style.marginTop = origin === 'bottom' ? `calc(${getCSSVariableByRegex(/-anchor-gutter$/)?.value ?? '2px'} * -1)` : (getCSSVariableByRegex(/-anchor-gutter$/)?.value ?? ''));
     }
