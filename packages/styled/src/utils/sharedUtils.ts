@@ -13,8 +13,8 @@ export function merge(value1: any, value2: any): void {
 }
 
 export function toValue(value: any): any {
-    // Check for Figma (value-type)
-    return isObject(value) && value.hasOwnProperty('value') && value.hasOwnProperty('type') ? value.value : value;
+    // Check for Figma ($value-$type)
+    return isObject(value) && value.hasOwnProperty('$value') && value.hasOwnProperty('$type') ? value.$value : value;
 }
 
 export function toUnit(value: string, variable: string = ''): string {
