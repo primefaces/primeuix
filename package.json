@@ -11,7 +11,8 @@
         "url": "https://github.com/primefaces/primeuix/issues"
     },
     "scripts": {
-        "setup": "rm -rf **/node_modules **/dist ./pnpm-lock.yaml && pnpm install",
+        "setup": "npx rimraf **/node_modules **/dist ./pnpm-lock.yaml && pnpm run init",
+        "init": "pnpm install && husky",
         "link": "pnpm --filter './packages/*' dev:link",
         "release": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary",
         "release:beta": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary --tag beta",
@@ -42,8 +43,10 @@
         "eslint": "^9.2.0",
         "fs-extra": "^11.2.0",
         "glob": "^10.4.2",
+        "husky": "^9.1.6",
         "jest": "^27.4.7",
-        "pnpm": "^9.1.4",
+        "lint-staged": "^12.0.0",
+        "pnpm": "^9.6.0",
         "prettier": "^3.3.2",
         "rollup": "^4.18.0",
         "rollup-plugin-postcss": "^4.0.0",
@@ -57,5 +60,11 @@
     },
     "engines": {
         "node": ">=12.11.0"
+    },
+    "packageManager": "pnpm@9.6.0",
+    "lint-staged": {
+        "**/*.{js,mjs,ts,mts,d.ts}": [
+            "prettier --write"
+        ]
     }
 }
