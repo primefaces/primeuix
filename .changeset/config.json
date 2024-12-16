@@ -1,0 +1,11 @@
+{
+    "$schema": "https://unpkg.com/@changesets/config@3.0.4/schema.json",
+    "changelog": ["@changesets/changelog-github", { "repo": "primefaces/primeuix" }],
+    "commit": false,
+    "fixed": [["@primeuix/*"]],
+    "linked": [],
+    "access": "public",
+    "baseBranch": "main",
+    "updateInternalDependencies": "patch",
+    "ignore": []
+}
