@@ -144,10 +144,11 @@ export default {
 
         return this.getPreset({ name, preset: cPreset, options, params, set, defaults });
     },
+    // @deprecated - use getPresetC instead
     getPresetD({ name = '', theme = {}, params, set, defaults }: any) {
         const dName = name.replace('-directive', '');
         const { preset, options } = theme;
-        const dPreset = preset?.directives?.[dName];
+        const dPreset = preset?.components?.[dName] || preset?.directives?.[dName];
 
         return this.getPreset({ name: dName, preset: dPreset, options, params, set, defaults });
     },

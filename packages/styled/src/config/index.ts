@@ -106,6 +106,7 @@ export default {
 
         return ThemeUtils.getPresetC(options);
     },
+    // @deprecated - use getComponent instead
     getDirective(name = '', params: any) {
         const options = { name, theme: this.theme, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
 
