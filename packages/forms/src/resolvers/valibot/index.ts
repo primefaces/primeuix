@@ -21,7 +21,7 @@ export const valibotResolver =
                     values: toValues(raw ? values : undefined, name),
                     errors: result.issues?.reduce((acc: Record<string, any[]>, error: any) => {
                         const path = getDotPath(error);
-                        const pathKey = isNotEmpty(path) ? path!.split('.')[0] : name;
+                        const pathKey = isNotEmpty(path) ? path : name;
 
                         if (pathKey) {
                             acc[pathKey] ||= [];

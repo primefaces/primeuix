@@ -19,7 +19,7 @@ export const joiResolver =
                 return {
                     values: toValues(raw ? values : undefined, name),
                     errors: e.details.reduce((acc: Record<string, any[]>, error: any) => {
-                        const pathKey = isNotEmpty(error.path) ? error.path[0] : name;
+                        const pathKey = isNotEmpty(error.path) ? error.path.join('.') : name;
 
                         if (pathKey) {
                             acc[pathKey] ||= [];

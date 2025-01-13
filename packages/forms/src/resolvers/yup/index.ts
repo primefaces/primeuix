@@ -20,7 +20,7 @@ export const yupResolver =
                 return {
                     values: toValues(raw ? values : undefined, name),
                     errors: e.inner.reduce((acc: Record<string, any[]>, error: ValidationError) => {
-                        const pathKey = isNotEmpty(error.path) ? error.path!.split('.')[0] : name;
+                        const pathKey = isNotEmpty(error.path) ? error.path : name;
 
                         if (pathKey) {
                             acc[pathKey] ||= [];
