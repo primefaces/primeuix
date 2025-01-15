@@ -32,7 +32,7 @@ export function EventBus(): EventBusOptions {
             let handlers = allHandlers.get(type);
 
             if (handlers) {
-                handlers.slice().map((handler) => {
+                handlers.forEach((handler) => {
                     handler(evt);
                 });
             }
