@@ -1,6 +1,3 @@
 [submodule "apps/primeng"]
 	path = apps/primeng
 	url = https://github.com/primefaces/primeng.git
-[submodule "apps/primevue"]
-	path = apps/primevue
-	url = https://github.com/primefaces/primevue.git
