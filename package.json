@@ -11,7 +11,7 @@
         "url": "https://github.com/primefaces/primeuix/issues"
     },
     "scripts": {
-        "setup": "npx rimraf **/node_modules **/dist ./pnpm-lock.yaml && pnpm run init",
+        "setup": "npx rimraf --glob **/node_modules **/dist ./pnpm-lock.yaml && pnpm run init",
         "init": "pnpm install && husky",
         "link": "pnpm --filter './packages/*' dev:link",
         "release": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary",
@@ -57,9 +57,6 @@
     },
     "publishConfig": {
         "access": "public"
-    },
-    "engines": {
-        "node": ">=12.11.0"
     },
     "packageManager": "pnpm@9.6.0",
     "lint-staged": {
