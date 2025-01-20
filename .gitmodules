@@ -1,0 +1,6 @@
+[submodule "submodules/primevue"]
+	path = submodules/primevue
+	url = https://github.com/primefaces/primevue.git
+[submodule "submodules/primeng"]
+	path = submodules/primeng
+	url = https://github.com/primefaces/primeng.git
