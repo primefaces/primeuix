@@ -1,1 +1,1 @@
-# PrimeNG Themes
+# PrimeUIX Themes
