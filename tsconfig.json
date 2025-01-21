@@ -34,7 +34,7 @@
         "@primeuix/locale/*": ["./packages/locale/src/*"],
         "@primeuix/styled/*": ["./packages/styled/src/*"],
         "@primeuix/utils/*": ["./packages/utils/src/*"],
-        "@primeuix/themes/*": ["./packages/themes/src/*"]
+        "@primeuix/themes/*": ["./packages/themes/src/*", "./packages/themes/src/presets/*"],
     },
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
