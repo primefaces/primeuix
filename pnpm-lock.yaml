@@ -113,6 +113,10 @@ importers:
     publishDirectory: dist
 
   packages/themes:
+    dependencies:
+      '@primeuix/styled':
+        specifier: workspace:^
+        version: link:../styled
     publishDirectory: dist
 
   packages/utils:
