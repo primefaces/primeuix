@@ -1,3 +1,5 @@
+import { AvatarDesignTokens } from '@primeuix/themes/types/avatar';
+
 export default {
     root: {
         width: '2rem',
@@ -36,4 +38,4 @@ export default {
             offset: '-1.5rem'
         }
     }
-};
+} satisfies AvatarDesignTokens;

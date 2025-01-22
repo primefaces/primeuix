@@ -1,3 +1,5 @@
+import { ProgressSpinnerDesignTokens } from '@primeuix/themes/types/progressspinner';
+
 export default {
     colorScheme: {
         light: {
@@ -17,4 +19,4 @@ export default {
             }
         }
     }
-};
+} satisfies ProgressSpinnerDesignTokens;

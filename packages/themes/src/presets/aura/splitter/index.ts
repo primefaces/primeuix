@@ -1,3 +1,5 @@
+import { SplitterDesignTokens } from '@primeuix/themes/types/splitter';
+
 export default {
     root: {
         background: '{content.background}',
@@ -20,4 +22,4 @@ export default {
             shadow: '{focus.ring.shadow}'
         }
     }
-};
+} satisfies SplitterDesignTokens;

@@ -1,3 +1,5 @@
+import { ToggleButtonDesignTokens } from '@primeuix/themes/types/togglebutton';
+
 export default {
     root: {
         padding: '0.625rem 1rem',
@@ -62,4 +64,4 @@ export default {
             }
         }
     }
-};
+} satisfies ToggleButtonDesignTokens;

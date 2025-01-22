@@ -1,3 +1,5 @@
+import { MenubarDesignTokens } from '@primeuix/themes/types/menubar';
+
 export default {
     root: {
         background: '{content.background}',
@@ -59,4 +61,4 @@ export default {
             shadow: '{focus.ring.shadow}'
         }
     }
-};
+} satisfies MenubarDesignTokens;

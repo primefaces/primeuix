@@ -1,3 +1,5 @@
+import { CheckboxDesignTokens } from '@primeuix/themes/types/checkbox';
+
 export default {
     root: {
         borderRadius: '{border.radius.xs}',
@@ -47,4 +49,4 @@ export default {
             size: '1rem'
         }
     }
-};
+} satisfies CheckboxDesignTokens;

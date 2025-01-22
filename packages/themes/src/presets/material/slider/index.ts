@@ -1,3 +1,5 @@
+import { SliderDesignTokens } from '@primeuix/themes/types/slider';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -46,4 +48,4 @@ export default {
     box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('slider.handle.background')}, transparent 84%);
 }
 `
-};
+} satisfies SliderDesignTokens;

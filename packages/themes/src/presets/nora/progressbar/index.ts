@@ -1,3 +1,5 @@
+import { ProgressBarDesignTokens } from '@primeuix/themes/types/progressbar';
+
 export default {
     root: {
         borderRadius: '{content.border.radius}',
@@ -23,4 +25,4 @@ export default {
             }
         }
     }
-};
+} satisfies ProgressBarDesignTokens;

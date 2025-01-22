@@ -1,3 +1,5 @@
+import { RadioButtonDesignTokens } from '@primeuix/themes/types/radiobutton';
+
 export default {
     root: {
         width: '20px',
@@ -71,4 +73,4 @@ export default {
     box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('radiobutton.checked.border.color')}, transparent 84%);
 }
 `
-};
+} satisfies RadioButtonDesignTokens;

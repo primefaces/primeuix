@@ -1,3 +1,5 @@
+import { InputNumberDesignTokens } from '@primeuix/themes/types/inputnumber';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -35,4 +37,4 @@ export default {
             }
         }
     }
-};
+} satisfies InputNumberDesignTokens;

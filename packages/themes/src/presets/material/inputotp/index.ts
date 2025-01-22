@@ -1,3 +1,5 @@
+import { InputOtpDesignTokens } from '@primeuix/themes/types/inputotp';
+
 export default {
     root: {
         gap: '0.5rem'
@@ -11,4 +13,4 @@ export default {
             width: '3.5rem'
         }
     }
-};
+} satisfies InputOtpDesignTokens;

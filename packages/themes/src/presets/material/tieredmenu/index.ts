@@ -1,3 +1,5 @@
+import { TieredMenuDesignTokens } from '@primeuix/themes/types/tieredmenu';
+
 export default {
     root: {
         background: '{content.background}',
@@ -43,4 +45,4 @@ export default {
     border-color: transparent;
 }
 `
-};
+} satisfies TieredMenuDesignTokens;

@@ -1,3 +1,5 @@
+import { AutoCompleteDesignTokens } from '@primeuix/themes/types/autocomplete';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -35,4 +37,4 @@ export default {
             paddingY: '{form.field.lg.padding.y}'
         }
     }
-};
+} satisfies AutoCompleteDesignTokens;

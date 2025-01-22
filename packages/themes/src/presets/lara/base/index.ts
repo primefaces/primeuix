@@ -1,3 +1,5 @@
+import { LaraBaseDesignTokens } from '@primeuix/themes/types/base/lara';
+
 export default {
     primitive: {
         borderRadius: {
@@ -395,4 +397,4 @@ export default {
             }
         }
     }
-};
+} satisfies LaraBaseDesignTokens;

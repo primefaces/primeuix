@@ -1,3 +1,5 @@
+import { FileUploadDesignTokens } from '@primeuix/themes/types/fileupload';
+
 export default {
     root: {
         background: '{content.background}',
@@ -37,4 +39,4 @@ export default {
     basic: {
         gap: '0.5rem'
     }
-};
+} satisfies FileUploadDesignTokens;

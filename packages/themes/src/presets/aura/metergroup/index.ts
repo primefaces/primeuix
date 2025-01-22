@@ -1,3 +1,5 @@
+import { MeterGroupDesignTokens } from '@primeuix/themes/types/metergroup';
+
 export default {
     root: {
         borderRadius: '{content.border.radius}',
@@ -20,4 +22,4 @@ export default {
         verticalGap: '0.5rem',
         horizontalGap: '1rem'
     }
-};
+} satisfies MeterGroupDesignTokens;

@@ -1,3 +1,5 @@
+import { PasswordDesignTokens } from '@primeuix/themes/types/password';
+
 export default {
     meter: {
         background: '{content.border.color}',
@@ -34,4 +36,4 @@ export default {
             }
         }
     }
-};
+} satisfies PasswordDesignTokens;

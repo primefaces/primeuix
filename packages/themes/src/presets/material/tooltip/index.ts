@@ -1,3 +1,5 @@
+import { TooltipDesignTokens } from '@primeuix/themes/types/tooltip';
+
 export default {
     root: {
         background: '{surface.600}',
@@ -8,4 +10,4 @@ export default {
         padding: '0.5rem 0.75rem',
         borderRadius: '{overlay.popover.border.radius}'
     }
-};
+} satisfies TooltipDesignTokens;

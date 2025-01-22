@@ -1,3 +1,5 @@
+import { TextareaDesignTokens } from '@primeuix/themes/types/textarea';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -80,4 +82,4 @@ export default {
     background-image: linear-gradient(to bottom, ${dt('textarea.invalid.border.color')}, ${dt('textarea.invalid.border.color')}), linear-gradient(to bottom, ${dt('textarea.invalid.border.color')}, ${dt('textarea.invalid.border.color')});
 }
 `
-};
+} satisfies TextareaDesignTokens;

@@ -1,3 +1,5 @@
+import { TreeSelectDesignTokens } from '@primeuix/themes/types/treeselect';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -59,4 +61,4 @@ export default {
     chip: {
         borderRadius: '{border.radius.sm}'
     }
-};
+} satisfies TreeSelectDesignTokens;

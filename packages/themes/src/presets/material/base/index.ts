@@ -1,3 +1,5 @@
+import { MaterialBaseDesignTokens } from '@primeuix/themes/types/base/material';
+
 export default {
     primitive: {
         borderRadius: {
@@ -395,4 +397,4 @@ export default {
             }
         }
     }
-};
+} satisfies MaterialBaseDesignTokens;

@@ -1,3 +1,5 @@
+import { RippleDesignTokens } from '@primeuix/themes/types/ripple';
+
 export default {
     colorScheme: {
         light: {
@@ -11,4 +13,4 @@ export default {
             }
         }
     }
-};
+} satisfies RippleDesignTokens;

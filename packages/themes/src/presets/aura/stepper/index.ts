@@ -1,3 +1,5 @@
+import { StepperDesignTokens } from '@primeuix/themes/types/stepper';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -51,4 +53,4 @@ export default {
         padding: '0',
         indent: '1rem'
     }
-};
+} satisfies StepperDesignTokens;

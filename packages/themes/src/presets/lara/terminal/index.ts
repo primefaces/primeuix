@@ -1,3 +1,5 @@
+import { TerminalDesignTokens } from '@primeuix/themes/types/terminal';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -13,4 +15,4 @@ export default {
     commandResponse: {
         margin: '2px 0'
     }
-};
+} satisfies TerminalDesignTokens;

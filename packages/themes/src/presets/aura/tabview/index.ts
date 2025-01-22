@@ -1,3 +1,5 @@
+import { TabViewDesignTokens } from '@primeuix/themes/types/tabview';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -34,4 +36,4 @@ export default {
             }
         }
     }
-};
+} satisfies TabViewDesignTokens;

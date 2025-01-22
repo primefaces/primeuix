@@ -1,3 +1,5 @@
+import { RatingDesignTokens } from '@primeuix/themes/types/rating';
+
 export default {
     root: {
         gap: '0.25rem',
@@ -16,4 +18,4 @@ export default {
         hoverColor: '{primary.color}',
         activeColor: '{primary.color}'
     }
-};
+} satisfies RatingDesignTokens;

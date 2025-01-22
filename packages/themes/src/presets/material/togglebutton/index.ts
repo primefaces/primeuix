@@ -1,3 +1,5 @@
+import { ToggleButtonDesignTokens } from '@primeuix/themes/types/togglebutton';
+
 export default {
     root: {
         padding: '0.75rem 1rem',
@@ -68,4 +70,4 @@ export default {
     background: ${dt('togglebutton.hover.background')};
 }
 `
-};
+} satisfies ToggleButtonDesignTokens;

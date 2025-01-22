@@ -1,3 +1,5 @@
+import { InputGroupDesignTokens } from '@primeuix/themes/types/inputgroup';
+
 export default {
     addon: {
         background: '{form.field.background}',
@@ -16,4 +18,4 @@ export default {
     border-bottom-right-radius: 0;
 }
 `
-};
+} satisfies InputGroupDesignTokens;

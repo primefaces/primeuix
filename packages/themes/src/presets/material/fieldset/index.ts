@@ -1,3 +1,5 @@
+import { FieldsetDesignTokens } from '@primeuix/themes/types/fieldset';
+
 export default {
     root: {
         background: '{content.background}',
@@ -39,4 +41,4 @@ export default {
 
 }
 `
-};
+} satisfies FieldsetDesignTokens;

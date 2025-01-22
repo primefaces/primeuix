@@ -1,3 +1,5 @@
+import { ChipDesignTokens } from '@primeuix/themes/types/chip';
+
 export default {
     root: {
         borderRadius: '2rem',
@@ -54,4 +56,4 @@ export default {
             }
         }
     }
-};
+} satisfies ChipDesignTokens;

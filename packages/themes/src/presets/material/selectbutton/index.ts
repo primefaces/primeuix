@@ -1,3 +1,5 @@
+import { SelectButtonDesignTokens } from '@primeuix/themes/types/selectbutton';
+
 export default {
     root: {
         borderRadius: '{form.field.border.radius}'
@@ -14,4 +16,4 @@ export default {
             }
         }
     }
-};
+} satisfies SelectButtonDesignTokens;

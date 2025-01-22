@@ -1,3 +1,5 @@
+import { PanelDesignTokens } from '@primeuix/themes/types/panel';
+
 export default {
     root: {
         borderColor: '{content.border.color}',
@@ -35,4 +37,4 @@ export default {
             }
         }
     }
-};
+} satisfies PanelDesignTokens;

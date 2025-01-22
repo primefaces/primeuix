@@ -1,3 +1,5 @@
+import { MenubarDesignTokens } from '@primeuix/themes/types/menubar';
+
 export default {
     root: {
         background: '{content.background}',
@@ -64,4 +66,4 @@ export default {
     background: ${dt('navigation.item.active.background')};
 }
 `
-};
+} satisfies MenubarDesignTokens;

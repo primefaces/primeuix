@@ -1,3 +1,5 @@
+import { AuraBaseDesignTokens } from '@primeuix/themes/types/base/aura';
+
 export default {
     primitive: {
         borderRadius: {
@@ -390,4 +392,4 @@ export default {
             }
         }
     }
-};
+} satisfies AuraBaseDesignTokens;

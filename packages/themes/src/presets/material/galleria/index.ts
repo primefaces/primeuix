@@ -1,3 +1,5 @@
+import { GalleriaDesignTokens } from '@primeuix/themes/types/galleria';
+
 export default {
     root: {
         borderWidth: '1px',
@@ -121,4 +123,4 @@ export default {
             }
         }
     }
-};
+} satisfies GalleriaDesignTokens;

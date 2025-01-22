@@ -1,3 +1,5 @@
+import { RadioButtonDesignTokens } from '@primeuix/themes/types/radiobutton';
+
 export default {
     root: {
         width: '1.5rem',
@@ -45,4 +47,4 @@ export default {
             size: '1.25rem'
         }
     }
-};
+} satisfies RadioButtonDesignTokens;

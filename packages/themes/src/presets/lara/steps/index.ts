@@ -1,3 +1,5 @@
+import { StepsDesignTokens } from '@primeuix/themes/types/steps';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -34,4 +36,4 @@ export default {
         borderRadius: '50%',
         shadow: 'none'
     }
-};
+} satisfies StepsDesignTokens;

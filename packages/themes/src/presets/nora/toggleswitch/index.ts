@@ -1,3 +1,5 @@
+import { ToggleSwitchDesignTokens } from '@primeuix/themes/types/toggleswitch';
+
 export default {
     root: {
         width: '2.5rem',
@@ -39,4 +41,4 @@ export default {
         checkedColor: '{primary.color}',
         checkedHoverColor: '{primary.color}'
     }
-};
+} satisfies ToggleSwitchDesignTokens;

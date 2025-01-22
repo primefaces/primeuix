@@ -1,3 +1,5 @@
+import { AutoCompleteDesignTokens } from '@primeuix/themes/types/autocomplete';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -167,4 +169,4 @@ export default {
     transition: none;
 }
 `
-};
+} satisfies AutoCompleteDesignTokens;

@@ -1,3 +1,5 @@
+import { NoraBaseDesignTokens } from '@primeuix/themes/types/base/nora';
+
 export default {
     primitive: {
         borderRadius: {
@@ -390,4 +392,4 @@ export default {
             }
         }
     }
-};
+} satisfies NoraBaseDesignTokens;

@@ -1,3 +1,5 @@
+import { PanelMenuDesignTokens } from '@primeuix/themes/types/panelmenu';
+
 export default {
     root: {
         gap: '0',
@@ -64,4 +66,4 @@ export default {
     background: ${dt('navigation.item.active.background')};
 }
 `
-};
+} satisfies PanelMenuDesignTokens;

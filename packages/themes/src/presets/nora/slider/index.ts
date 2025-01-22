@@ -1,3 +1,5 @@
+import { SliderDesignTokens } from '@primeuix/themes/types/slider';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -43,4 +45,4 @@ export default {
             }
         }
     }
-};
+} satisfies SliderDesignTokens;

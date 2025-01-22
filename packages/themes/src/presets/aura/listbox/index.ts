@@ -1,3 +1,5 @@
+import { ListboxDesignTokens } from '@primeuix/themes/types/listbox';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -54,4 +56,4 @@ export default {
             }
         }
     }
-};
+} satisfies ListboxDesignTokens;

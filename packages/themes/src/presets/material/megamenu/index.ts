@@ -1,3 +1,5 @@
+import { MegaMenuDesignTokens } from '@primeuix/themes/types/megamenu';
+
 export default {
     root: {
         background: '{content.background}',
@@ -81,4 +83,4 @@ export default {
     background: ${dt('navigation.item.active.background')};
 }
 `
-};
+} satisfies MegaMenuDesignTokens;

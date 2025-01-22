@@ -1,3 +1,5 @@
+import { MultiSelectDesignTokens } from '@primeuix/themes/types/multiselect';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -129,4 +131,4 @@ export default {
     transition: none;
 }
 `
-};
+} satisfies MultiSelectDesignTokens;

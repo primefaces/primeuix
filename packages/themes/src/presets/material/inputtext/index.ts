@@ -1,3 +1,5 @@
+import { InputTextDesignTokens } from '@primeuix/themes/types/inputtext';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -80,4 +82,4 @@ export default {
     background-image: linear-gradient(to bottom, ${dt('inputtext.invalid.border.color')}, ${dt('inputtext.invalid.border.color')}), linear-gradient(to bottom, ${dt('inputtext.invalid.border.color')}, ${dt('inputtext.invalid.border.color')});
 }
 `
-};
+} satisfies InputTextDesignTokens;

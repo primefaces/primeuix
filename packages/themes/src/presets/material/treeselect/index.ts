@@ -1,3 +1,5 @@
+import { TreeSelectDesignTokens } from '@primeuix/themes/types/treeselect';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -103,4 +105,4 @@ export default {
     background-image: linear-gradient(to bottom, ${dt('treeselect.invalid.border.color')}, ${dt('treeselect.invalid.border.color')}), linear-gradient(to bottom, ${dt('treeselect.invalid.border.color')}, ${dt('treeselect.invalid.border.color')});
 }
 `
-};
+} satisfies TreeSelectDesignTokens;

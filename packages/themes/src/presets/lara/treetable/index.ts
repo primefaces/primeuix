@@ -1,3 +1,5 @@
+import { TreeTableDesignTokens } from '@primeuix/themes/types/treetable';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -148,4 +150,4 @@ export default {
             }
         }
     }
-};
+} satisfies TreeTableDesignTokens;

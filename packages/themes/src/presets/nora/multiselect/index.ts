@@ -1,3 +1,5 @@
+import { MultiSelectDesignTokens } from '@primeuix/themes/types/multiselect';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -81,4 +83,4 @@ export default {
     emptyMessage: {
         padding: '{list.option.padding}'
     }
-};
+} satisfies MultiSelectDesignTokens;

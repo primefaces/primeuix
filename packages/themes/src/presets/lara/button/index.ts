@@ -1,3 +1,5 @@
+import { ButtonDesignTokens } from '@primeuix/themes/types/button';
+
 export default {
     root: {
         borderRadius: '{form.field.border.radius}',
@@ -496,4 +498,4 @@ export default {
             }
         }
     }
-};
+} satisfies ButtonDesignTokens;

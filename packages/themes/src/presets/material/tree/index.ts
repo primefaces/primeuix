@@ -1,3 +1,5 @@
+import { TreeDesignTokens } from '@primeuix/themes/types/tree';
+
 export default {
     root: {
         background: '{content.background}',
@@ -56,4 +58,4 @@ export default {
     transition: none;
 }
 `
-};
+} satisfies TreeDesignTokens;

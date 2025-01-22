@@ -1,3 +1,5 @@
+import { MenuDesignTokens } from '@primeuix/themes/types/menu';
+
 export default {
     root: {
         background: '{content.background}',
@@ -37,4 +39,4 @@ export default {
     border-color: transparent;
 }
 `
-};
+} satisfies MenuDesignTokens;

@@ -1,3 +1,5 @@
+import { EditorDesignTokens } from '@primeuix/themes/types/editor';
+
 export default {
     toolbar: {
         background: '{content.background}',
@@ -35,4 +37,4 @@ export default {
     padding: 0.75rem
 }
 `
-};
+} satisfies EditorDesignTokens;

@@ -1,3 +1,5 @@
+import { PasswordDesignTokens } from '@primeuix/themes/types/password';
+
 export default {
     meter: {
         borderRadius: '{content.border.radius}',
@@ -39,4 +41,4 @@ export default {
             }
         }
     }
-};
+} satisfies PasswordDesignTokens;

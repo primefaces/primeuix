@@ -1,3 +1,5 @@
+import { MessageDesignTokens } from '@primeuix/themes/types/message';
+
 export default {
     root: {
         borderRadius: '{content.border.radius}',
@@ -308,4 +310,4 @@ export default {
             }
         }
     }
-};
+} satisfies MessageDesignTokens;

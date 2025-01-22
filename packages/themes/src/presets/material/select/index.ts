@@ -1,3 +1,5 @@
+import { SelectDesignTokens } from '@primeuix/themes/types/select';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -130,4 +132,4 @@ export default {
     transition: none;
 }
 `
-};
+} satisfies SelectDesignTokens;

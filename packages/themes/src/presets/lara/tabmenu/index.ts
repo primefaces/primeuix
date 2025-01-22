@@ -1,3 +1,5 @@
+import { TabmenuDesignTokens } from '@primeuix/themes/types/tabmenu';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -53,4 +55,4 @@ export default {
             }
         }
     }
-};
+} satisfies TabmenuDesignTokens;

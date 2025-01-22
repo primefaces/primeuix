@@ -1,3 +1,5 @@
+import { DataTableDesignTokens } from '@primeuix/themes/types/datatable';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -201,4 +203,4 @@ export default {
             }
         }
     }
-};
+} satisfies DataTableDesignTokens;

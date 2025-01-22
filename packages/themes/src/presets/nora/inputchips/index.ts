@@ -1,3 +1,5 @@
+import { InputChipsDesignTokens } from '@primeuix/themes/types/inputchips';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -41,4 +43,4 @@ export default {
             }
         }
     }
-};
+} satisfies InputChipsDesignTokens;

@@ -1,3 +1,5 @@
+import { CarouselDesignTokens } from '@primeuix/themes/types/carousel';
+
 export default {
     root: {
         transitionDuration: '{transition.duration}'
@@ -37,4 +39,4 @@ export default {
             }
         }
     }
-};
+} satisfies CarouselDesignTokens;

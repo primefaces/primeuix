@@ -1,3 +1,5 @@
+import { DialogDesignTokens } from '@primeuix/themes/types/dialog';
+
 export default {
     root: {
         background: '{overlay.modal.background}',
@@ -18,4 +20,4 @@ export default {
     footer: {
         padding: '{overlay.modal.padding}'
     }
-};
+} satisfies DialogDesignTokens;

@@ -1,3 +1,5 @@
+import { VirtualScrollerDesignTokens } from '@primeuix/themes/types/virtualscroller';
+
 export default {
     loader: {
         mask: {
@@ -8,4 +10,4 @@ export default {
             size: '2rem'
         }
     }
-};
+} satisfies VirtualScrollerDesignTokens;

@@ -1,3 +1,5 @@
+import { CascadeSelectDesignTokens } from '@primeuix/themes/types/cascadeselect';
+
 export default {
     root: {
         background: '{form.field.background}',
@@ -123,4 +125,4 @@ export default {
     transition: none;
 }
 `
-};
+} satisfies CascadeSelectDesignTokens;

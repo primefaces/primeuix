@@ -1,92 +1,95 @@
-import accordion from '@primevue/themes/aura/accordion';
-import autocomplete from '@primevue/themes/aura/autocomplete';
-import avatar from '@primevue/themes/aura/avatar';
-import badge from '@primevue/themes/aura/badge';
-import base from '@primevue/themes/aura/base';
-import blockui from '@primevue/themes/aura/blockui';
-import breadcrumb from '@primevue/themes/aura/breadcrumb';
-import button from '@primevue/themes/aura/button';
-import card from '@primevue/themes/aura/card';
-import carousel from '@primevue/themes/aura/carousel';
-import cascadeselect from '@primevue/themes/aura/cascadeselect';
-import checkbox from '@primevue/themes/aura/checkbox';
-import chip from '@primevue/themes/aura/chip';
-import colorpicker from '@primevue/themes/aura/colorpicker';
-import confirmdialog from '@primevue/themes/aura/confirmdialog';
-import confirmpopup from '@primevue/themes/aura/confirmpopup';
-import contextmenu from '@primevue/themes/aura/contextmenu';
-import datatable from '@primevue/themes/aura/datatable';
-import dataview from '@primevue/themes/aura/dataview';
-import datepicker from '@primevue/themes/aura/datepicker';
-import dialog from '@primevue/themes/aura/dialog';
-import divider from '@primevue/themes/aura/divider';
-import dock from '@primevue/themes/aura/dock';
-import drawer from '@primevue/themes/aura/drawer';
-import editor from '@primevue/themes/aura/editor';
-import fieldset from '@primevue/themes/aura/fieldset';
-import fileupload from '@primevue/themes/aura/fileupload';
-import floatlabel from '@primevue/themes/aura/floatlabel';
-import galleria from '@primevue/themes/aura/galleria';
-import iconfield from '@primevue/themes/aura/iconfield';
-import iftalabel from '@primevue/themes/aura/iftalabel';
-import image from '@primevue/themes/aura/image';
-import imagecompare from '@primevue/themes/aura/imagecompare';
-import inlinemessage from '@primevue/themes/aura/inlinemessage';
-import inplace from '@primevue/themes/aura/inplace';
-import inputchips from '@primevue/themes/aura/inputchips';
-import inputgroup from '@primevue/themes/aura/inputgroup';
-import inputnumber from '@primevue/themes/aura/inputnumber';
-import inputotp from '@primevue/themes/aura/inputotp';
-import inputtext from '@primevue/themes/aura/inputtext';
-import knob from '@primevue/themes/aura/knob';
-import listbox from '@primevue/themes/aura/listbox';
-import megamenu from '@primevue/themes/aura/megamenu';
-import menu from '@primevue/themes/aura/menu';
-import menubar from '@primevue/themes/aura/menubar';
-import message from '@primevue/themes/aura/message';
-import metergroup from '@primevue/themes/aura/metergroup';
-import multiselect from '@primevue/themes/aura/multiselect';
-import orderlist from '@primevue/themes/aura/orderlist';
-import organizationchart from '@primevue/themes/aura/organizationchart';
-import overlaybadge from '@primevue/themes/aura/overlaybadge';
-import paginator from '@primevue/themes/aura/paginator';
-import panel from '@primevue/themes/aura/panel';
-import panelmenu from '@primevue/themes/aura/panelmenu';
-import password from '@primevue/themes/aura/password';
-import picklist from '@primevue/themes/aura/picklist';
-import popover from '@primevue/themes/aura/popover';
-import progressbar from '@primevue/themes/aura/progressbar';
-import progressspinner from '@primevue/themes/aura/progressspinner';
-import radiobutton from '@primevue/themes/aura/radiobutton';
-import rating from '@primevue/themes/aura/rating';
-import ripple from '@primevue/themes/aura/ripple';
-import scrollpanel from '@primevue/themes/aura/scrollpanel';
-import select from '@primevue/themes/aura/select';
-import selectbutton from '@primevue/themes/aura/selectbutton';
-import skeleton from '@primevue/themes/aura/skeleton';
-import slider from '@primevue/themes/aura/slider';
-import speeddial from '@primevue/themes/aura/speeddial';
-import splitbutton from '@primevue/themes/aura/splitbutton';
-import splitter from '@primevue/themes/aura/splitter';
-import stepper from '@primevue/themes/aura/stepper';
-import steps from '@primevue/themes/aura/steps';
-import tabmenu from '@primevue/themes/aura/tabmenu';
-import tabs from '@primevue/themes/aura/tabs';
-import tabview from '@primevue/themes/aura/tabview';
-import tag from '@primevue/themes/aura/tag';
-import terminal from '@primevue/themes/aura/terminal';
-import textarea from '@primevue/themes/aura/textarea';
-import tieredmenu from '@primevue/themes/aura/tieredmenu';
-import timeline from '@primevue/themes/aura/timeline';
-import toast from '@primevue/themes/aura/toast';
-import togglebutton from '@primevue/themes/aura/togglebutton';
-import toggleswitch from '@primevue/themes/aura/toggleswitch';
-import toolbar from '@primevue/themes/aura/toolbar';
-import tooltip from '@primevue/themes/aura/tooltip';
-import tree from '@primevue/themes/aura/tree';
-import treeselect from '@primevue/themes/aura/treeselect';
-import treetable from '@primevue/themes/aura/treetable';
-import virtualscroller from '@primevue/themes/aura/virtualscroller';
+import type { Preset } from '@primeuix/themes/types';
+import type { AuraBaseDesignTokens } from '@primeuix/themes/types/base/aura';
+
+import accordion from '@primeuix/themes/aura/accordion';
+import autocomplete from '@primeuix/themes/aura/autocomplete';
+import avatar from '@primeuix/themes/aura/avatar';
+import badge from '@primeuix/themes/aura/badge';
+import base from '@primeuix/themes/aura/base';
+import blockui from '@primeuix/themes/aura/blockui';
+import breadcrumb from '@primeuix/themes/aura/breadcrumb';
+import button from '@primeuix/themes/aura/button';
+import card from '@primeuix/themes/aura/card';
+import carousel from '@primeuix/themes/aura/carousel';
+import cascadeselect from '@primeuix/themes/aura/cascadeselect';
+import checkbox from '@primeuix/themes/aura/checkbox';
+import chip from '@primeuix/themes/aura/chip';
+import colorpicker from '@primeuix/themes/aura/colorpicker';
+import confirmdialog from '@primeuix/themes/aura/confirmdialog';
+import confirmpopup from '@primeuix/themes/aura/confirmpopup';
+import contextmenu from '@primeuix/themes/aura/contextmenu';
+import datatable from '@primeuix/themes/aura/datatable';
+import dataview from '@primeuix/themes/aura/dataview';
+import datepicker from '@primeuix/themes/aura/datepicker';
+import dialog from '@primeuix/themes/aura/dialog';
+import divider from '@primeuix/themes/aura/divider';
+import dock from '@primeuix/themes/aura/dock';
+import drawer from '@primeuix/themes/aura/drawer';
+import editor from '@primeuix/themes/aura/editor';
+import fieldset from '@primeuix/themes/aura/fieldset';
+import fileupload from '@primeuix/themes/aura/fileupload';
+import floatlabel from '@primeuix/themes/aura/floatlabel';
+import galleria from '@primeuix/themes/aura/galleria';
+import iconfield from '@primeuix/themes/aura/iconfield';
+import iftalabel from '@primeuix/themes/aura/iftalabel';
+import image from '@primeuix/themes/aura/image';
+import imagecompare from '@primeuix/themes/aura/imagecompare';
+import inlinemessage from '@primeuix/themes/aura/inlinemessage';
+import inplace from '@primeuix/themes/aura/inplace';
+import inputchips from '@primeuix/themes/aura/inputchips';
+import inputgroup from '@primeuix/themes/aura/inputgroup';
+import inputnumber from '@primeuix/themes/aura/inputnumber';
+import inputotp from '@primeuix/themes/aura/inputotp';
+import inputtext from '@primeuix/themes/aura/inputtext';
+import knob from '@primeuix/themes/aura/knob';
+import listbox from '@primeuix/themes/aura/listbox';
+import megamenu from '@primeuix/themes/aura/megamenu';
+import menu from '@primeuix/themes/aura/menu';
+import menubar from '@primeuix/themes/aura/menubar';
+import message from '@primeuix/themes/aura/message';
+import metergroup from '@primeuix/themes/aura/metergroup';
+import multiselect from '@primeuix/themes/aura/multiselect';
+import orderlist from '@primeuix/themes/aura/orderlist';
+import organizationchart from '@primeuix/themes/aura/organizationchart';
+import overlaybadge from '@primeuix/themes/aura/overlaybadge';
+import paginator from '@primeuix/themes/aura/paginator';
+import panel from '@primeuix/themes/aura/panel';
+import panelmenu from '@primeuix/themes/aura/panelmenu';
+import password from '@primeuix/themes/aura/password';
+import picklist from '@primeuix/themes/aura/picklist';
+import popover from '@primeuix/themes/aura/popover';
+import progressbar from '@primeuix/themes/aura/progressbar';
+import progressspinner from '@primeuix/themes/aura/progressspinner';
+import radiobutton from '@primeuix/themes/aura/radiobutton';
+import rating from '@primeuix/themes/aura/rating';
+import ripple from '@primeuix/themes/aura/ripple';
+import scrollpanel from '@primeuix/themes/aura/scrollpanel';
+import select from '@primeuix/themes/aura/select';
+import selectbutton from '@primeuix/themes/aura/selectbutton';
+import skeleton from '@primeuix/themes/aura/skeleton';
+import slider from '@primeuix/themes/aura/slider';
+import speeddial from '@primeuix/themes/aura/speeddial';
+import splitbutton from '@primeuix/themes/aura/splitbutton';
+import splitter from '@primeuix/themes/aura/splitter';
+import stepper from '@primeuix/themes/aura/stepper';
+import steps from '@primeuix/themes/aura/steps';
+import tabmenu from '@primeuix/themes/aura/tabmenu';
+import tabs from '@primeuix/themes/aura/tabs';
+import tabview from '@primeuix/themes/aura/tabview';
+import tag from '@primeuix/themes/aura/tag';
+import terminal from '@primeuix/themes/aura/terminal';
+import textarea from '@primeuix/themes/aura/textarea';
+import tieredmenu from '@primeuix/themes/aura/tieredmenu';
+import timeline from '@primeuix/themes/aura/timeline';
+import toast from '@primeuix/themes/aura/toast';
+import togglebutton from '@primeuix/themes/aura/togglebutton';
+import toggleswitch from '@primeuix/themes/aura/toggleswitch';
+import toolbar from '@primeuix/themes/aura/toolbar';
+import tooltip from '@primeuix/themes/aura/tooltip';
+import tree from '@primeuix/themes/aura/tree';
+import treeselect from '@primeuix/themes/aura/treeselect';
+import treetable from '@primeuix/themes/aura/treetable';
+import virtualscroller from '@primeuix/themes/aura/virtualscroller';
 
 export default {
     ...base,
@@ -98,7 +101,6 @@ export default {
         blockui,
         breadcrumb,
         button,
-        datepicker,
         card,
         carousel,
         cascadeselect,
@@ -108,8 +110,9 @@ export default {
         confirmdialog,
         confirmpopup,
         contextmenu,
-        dataview,
         datatable,
+        dataview,
+        datepicker,
         dialog,
         divider,
         dock,
@@ -117,10 +120,10 @@ export default {
         editor,
         fieldset,
         fileupload,
-        iftalabel,
         floatlabel,
         galleria,
         iconfield,
+        iftalabel,
         image,
         imagecompare,
         inlinemessage,
@@ -141,12 +144,12 @@ export default {
         orderlist,
         organizationchart,
         overlaybadge,
-        popover,
         paginator,
-        password,
         panel,
         panelmenu,
+        password,
         picklist,
+        popover,
         progressbar,
         progressspinner,
         radiobutton,
@@ -158,26 +161,26 @@ export default {
         skeleton,
         slider,
         speeddial,
-        splitter,
         splitbutton,
+        splitter,
         stepper,
         steps,
         tabmenu,
         tabs,
         tabview,
-        textarea,
-        tieredmenu,
         tag,
         terminal,
+        textarea,
+        tieredmenu,
         timeline,
+        toast,
         togglebutton,
         toggleswitch,
+        toolbar,
+        tooltip,
         tree,
         treeselect,
         treetable,
-        toast,
-        toolbar,
-        tooltip,
         virtualscroller
     }
-};
+} satisfies Preset<AuraBaseDesignTokens>;

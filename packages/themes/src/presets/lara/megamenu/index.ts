@@ -1,3 +1,5 @@
+import { MegaMenuDesignTokens } from '@primeuix/themes/types/megamenu';
+
 export default {
     root: {
         borderColor: 'transparent',
@@ -87,4 +89,4 @@ export default {
             }
         }
     }
-};
+} satisfies MegaMenuDesignTokens;
