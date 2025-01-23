@@ -65,6 +65,5 @@
     },
     "dependencies": {
         "@primeuix/styled": "workspace:^"
-    },
-    "engines": {}
+    }
 }

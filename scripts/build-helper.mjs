@@ -35,7 +35,7 @@ export function updatePackageJson(localPackageJson) {
     pkg.author = packageJson.author;
     pkg.repository = { ...pkg.repository, ...packageJson.repository };
     pkg.bugs = { ...pkg.bugs, ...packageJson.bugs };
-    pkg.engines = { ...pkg.engines, ...packageJson.engines };
+    //pkg.engines = { ...pkg.engines, ...packageJson.engines };
 
     fs.writeFileSync(localPackageJson, JSON.stringify(pkg, null, 4));
 }
