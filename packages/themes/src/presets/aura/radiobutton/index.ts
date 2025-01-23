@@ -1,4 +1,4 @@
-import { RadioButtonDesignTokens } from '@primeuix/themes/types/radiobutton';
+import type { RadioButtonDesignTokens } from '@primeuix/themes/types/radiobutton';
 
 export default {
     root: {

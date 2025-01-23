@@ -1,4 +1,4 @@
-import { CardDesignTokens } from '@primeuix/themes/types/card';
+import type { CardDesignTokens } from '@primeuix/themes/types/card';
 
 export default {
     root: {

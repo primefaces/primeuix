@@ -1,4 +1,5 @@
-import { MenuDesignTokens } from '@primeuix/themes/types/menu';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { MenuDesignTokens } from '@primeuix/themes/types/menu';
 
 export default {
     root: {
@@ -34,7 +35,7 @@ export default {
     separator: {
         borderColor: '{content.border.color}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-menu-overlay {
     border-color: transparent;
 }

@@ -1,4 +1,4 @@
-import { VirtualScrollerDesignTokens } from '@primeuix/themes/types/virtualscroller';
+import type { VirtualScrollerDesignTokens } from '@primeuix/themes/types/virtualscroller';
 
 export default {
     loader: {

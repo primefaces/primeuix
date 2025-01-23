@@ -1,4 +1,4 @@
-import { TabsDesignTokens } from '@primeuix/themes/types/tabs';
+import type { TabsDesignTokens } from '@primeuix/themes/types/tabs';
 
 export default {
     root: {

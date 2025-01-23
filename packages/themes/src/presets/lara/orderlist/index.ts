@@ -1,4 +1,4 @@
-import { OrderListDesignTokens } from '@primeuix/themes/types/orderlist';
+import type { OrderListDesignTokens } from '@primeuix/themes/types/orderlist';
 
 export default {
     root: {

@@ -1,4 +1,5 @@
-import { MenubarDesignTokens } from '@primeuix/themes/types/menubar';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { MenubarDesignTokens } from '@primeuix/themes/types/menubar';
 
 export default {
     root: {
@@ -61,7 +62,7 @@ export default {
             shadow: 'none'
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-menubar-button:focus-visible {
     background: ${dt('navigation.item.active.background')};
 }

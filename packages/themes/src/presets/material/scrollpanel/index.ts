@@ -1,4 +1,4 @@
-import { ScrollPanelDesignTokens } from '@primeuix/themes/types/scrollpanel';
+import type { ScrollPanelDesignTokens } from '@primeuix/themes/types/scrollpanel';
 
 export default {
     root: {

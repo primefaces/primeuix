@@ -240,3 +240,10 @@ export declare type Preset<T extends object> = {
  * Custom types
  */
 export declare type DeepRequired<T> = T extends object ? { [K in keyof T]-?: DeepRequired<T[K]> } : T;
+
+/**
+ * @todo: move to @primeuix/styled
+ */
+export interface ThemeStyleOptions {
+    dt: (key: string, fallback?: string | number | Pick<ThemeStyleOptions, 'dt'>) => string | number | undefined;
+}

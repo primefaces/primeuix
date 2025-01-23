@@ -1,4 +1,6 @@
-export const theme = ({ dt }: { dt: any }) => `
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+
+export const theme = ({ dt }: ThemeStyleOptions) => `
 .p-card {
     background: ${dt('card.background')};
     color: ${dt('card.color')};

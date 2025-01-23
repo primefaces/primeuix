@@ -1,4 +1,4 @@
-import { DataViewDesignTokens } from '@primeuix/themes/types/dataview';
+import type { DataViewDesignTokens } from '@primeuix/themes/types/dataview';
 
 export default {
     root: {

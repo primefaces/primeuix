@@ -1,4 +1,5 @@
-import { FieldsetDesignTokens } from '@primeuix/themes/types/fieldset';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { FieldsetDesignTokens } from '@primeuix/themes/types/fieldset';
 
 export default {
     root: {
@@ -35,7 +36,7 @@ export default {
     content: {
         padding: '0'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-fieldset-toggle-button:focus-visible {
     background: ${dt('navigation.item.active.background')};
 

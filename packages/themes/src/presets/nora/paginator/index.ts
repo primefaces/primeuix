@@ -1,4 +1,4 @@
-import { PaginatorDesignTokens } from '@primeuix/themes/types/paginator';
+import type { PaginatorDesignTokens } from '@primeuix/themes/types/paginator';
 
 export default {
     root: {

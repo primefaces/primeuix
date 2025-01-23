@@ -1,4 +1,4 @@
-import { ContextMenuDesignTokens } from '@primeuix/themes/types/contextmenu';
+import type { ContextMenuDesignTokens } from '@primeuix/themes/types/contextmenu';
 
 export default {
     root: {

@@ -1,4 +1,4 @@
-import { AutoCompleteDesignTokens } from '@primeuix/themes/types/autocomplete';
+import type { AutoCompleteDesignTokens } from '@primeuix/themes/types/autocomplete';
 
 export default {
     root: {

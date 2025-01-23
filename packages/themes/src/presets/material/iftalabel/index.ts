@@ -1,4 +1,4 @@
-import { IftaLabelDesignTokens } from '@primeuix/themes/types/iftalabel';
+import type { IftaLabelDesignTokens } from '@primeuix/themes/types/iftalabel';
 
 export default {
     root: {

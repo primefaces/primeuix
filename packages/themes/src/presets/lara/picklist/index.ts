@@ -1,4 +1,4 @@
-import { PickListDesignTokens } from '@primeuix/themes/types/picklist';
+import type { PickListDesignTokens } from '@primeuix/themes/types/picklist';
 
 export default {
     root: {

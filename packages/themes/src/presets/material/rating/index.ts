@@ -1,4 +1,5 @@
-import { RatingDesignTokens } from '@primeuix/themes/types/rating';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { RatingDesignTokens } from '@primeuix/themes/types/rating';
 
 export default {
     root: {
@@ -18,7 +19,7 @@ export default {
         hoverColor: '{primary.color}',
         activeColor: '{primary.color}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-rating:not(.p-disabled):not(.p-readonly) .p-rating-option:hover {
     background: color-mix(in srgb, ${dt('rating.icon.color')}, transparent 96%);
     box-shadow: 0 0 1px 8px color-mix(in srgb, ${dt('rating.icon.color')}, transparent 96%);

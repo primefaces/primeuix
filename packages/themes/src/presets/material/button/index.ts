@@ -1,4 +1,5 @@
-import { ButtonDesignTokens } from '@primeuix/themes/types/button';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ButtonDesignTokens } from '@primeuix/themes/types/button';
 
 export default {
     root: {
@@ -498,7 +499,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-button:focus-visible {
     background: ${dt('button.primary.active.background')};
     border-color: ${dt('button.primary.active.background')};

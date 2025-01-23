@@ -1,4 +1,4 @@
-import { ListboxDesignTokens } from '@primeuix/themes/types/listbox';
+import type { ListboxDesignTokens } from '@primeuix/themes/types/listbox';
 
 export default {
     root: {

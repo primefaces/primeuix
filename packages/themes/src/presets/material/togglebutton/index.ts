@@ -1,4 +1,5 @@
-import { ToggleButtonDesignTokens } from '@primeuix/themes/types/togglebutton';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ToggleButtonDesignTokens } from '@primeuix/themes/types/togglebutton';
 
 export default {
     root: {
@@ -65,7 +66,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-togglebutton:focus-visible {
     background: ${dt('togglebutton.hover.background')};
 }

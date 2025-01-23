@@ -1,4 +1,6 @@
-export const theme = ({ dt }: { dt: any }) => `
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+
+export const theme = ({ dt }: ThemeStyleOptions) => `
 .p-knob-range {
     fill: none;
     transition: stroke 0.1s ease-in;

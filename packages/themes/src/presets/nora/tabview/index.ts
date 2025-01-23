@@ -1,4 +1,4 @@
-import { TabViewDesignTokens } from '@primeuix/themes/types/tabview';
+import type { TabViewDesignTokens } from '@primeuix/themes/types/tabview';
 
 export default {
     root: {

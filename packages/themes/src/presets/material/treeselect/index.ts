@@ -1,4 +1,5 @@
-import { TreeSelectDesignTokens } from '@primeuix/themes/types/treeselect';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { TreeSelectDesignTokens } from '@primeuix/themes/types/treeselect';
 
 export default {
     root: {
@@ -61,7 +62,7 @@ export default {
     clearIcon: {
         color: '{form.field.icon.color}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-treeselect.p-variant-filled {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

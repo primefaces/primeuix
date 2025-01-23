@@ -1,4 +1,4 @@
-import { AvatarDesignTokens } from '@primeuix/themes/types/avatar';
+import type { AvatarDesignTokens } from '@primeuix/themes/types/avatar';
 
 export default {
     root: {

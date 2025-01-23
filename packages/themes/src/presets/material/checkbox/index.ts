@@ -1,4 +1,5 @@
-import { CheckboxDesignTokens } from '@primeuix/themes/types/checkbox';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { CheckboxDesignTokens } from '@primeuix/themes/types/checkbox';
 
 export default {
     root: {
@@ -49,7 +50,7 @@ export default {
             size: '1rem'
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-checkbox {
     border-radius: 50%;
     transition: box-shadow ${dt('checkbox.transition.duration')};

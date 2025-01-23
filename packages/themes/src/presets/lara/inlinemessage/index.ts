@@ -1,4 +1,4 @@
-import { InlineMessageDesignTokens } from '@primeuix/themes/types/inlinemessage';
+import type { InlineMessageDesignTokens } from '@primeuix/themes/types/inlinemessage';
 
 export default {
     root: {

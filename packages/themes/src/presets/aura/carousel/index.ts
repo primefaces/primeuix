@@ -1,4 +1,4 @@
-import { CarouselDesignTokens } from '@primeuix/themes/types/carousel';
+import type { CarouselDesignTokens } from '@primeuix/themes/types/carousel';
 
 export default {
     root: {

@@ -1,4 +1,4 @@
-import { SelectDesignTokens } from '@primeuix/themes/types/select';
+import type { SelectDesignTokens } from '@primeuix/themes/types/select';
 
 export default {
     root: {

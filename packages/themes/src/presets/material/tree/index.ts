@@ -1,4 +1,5 @@
-import { TreeDesignTokens } from '@primeuix/themes/types/tree';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { TreeDesignTokens } from '@primeuix/themes/types/tree';
 
 export default {
     root: {
@@ -53,7 +54,7 @@ export default {
     filter: {
         margin: '0 0 0.75rem 0'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-tree-node-content {
     transition: none;
 }

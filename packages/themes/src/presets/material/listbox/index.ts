@@ -1,4 +1,5 @@
-import { ListboxDesignTokens } from '@primeuix/themes/types/listbox';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ListboxDesignTokens } from '@primeuix/themes/types/listbox';
 
 export default {
     root: {
@@ -56,7 +57,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-listbox-option {
     transition: none;
 }

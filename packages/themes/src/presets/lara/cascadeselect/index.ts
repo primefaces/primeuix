@@ -1,4 +1,4 @@
-import { CascadeSelectDesignTokens } from '@primeuix/themes/types/cascadeselect';
+import type { CascadeSelectDesignTokens } from '@primeuix/themes/types/cascadeselect';
 
 export default {
     root: {

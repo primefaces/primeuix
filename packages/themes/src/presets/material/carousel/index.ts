@@ -1,4 +1,5 @@
-import { CarouselDesignTokens } from '@primeuix/themes/types/carousel';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { CarouselDesignTokens } from '@primeuix/themes/types/carousel';
 
 export default {
     root: {
@@ -39,7 +40,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-carousel-indicator-button:hover {
     box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('text.color')}, transparent 96%);
 }

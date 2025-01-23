@@ -1,4 +1,4 @@
-import { MessageDesignTokens } from '@primeuix/themes/types/message';
+import type { MessageDesignTokens } from '@primeuix/themes/types/message';
 
 export default {
     root: {

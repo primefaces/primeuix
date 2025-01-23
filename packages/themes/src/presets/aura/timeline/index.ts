@@ -1,4 +1,4 @@
-import { TimelineDesignTokens } from '@primeuix/themes/types/timeline';
+import type { TimelineDesignTokens } from '@primeuix/themes/types/timeline';
 
 export default {
     event: {

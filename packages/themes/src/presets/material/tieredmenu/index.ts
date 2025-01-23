@@ -1,4 +1,5 @@
-import { TieredMenuDesignTokens } from '@primeuix/themes/types/tieredmenu';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { TieredMenuDesignTokens } from '@primeuix/themes/types/tieredmenu';
 
 export default {
     root: {
@@ -40,7 +41,7 @@ export default {
     separator: {
         borderColor: '{content.border.color}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-tieredmenu-overlay {
     border-color: transparent;
 }

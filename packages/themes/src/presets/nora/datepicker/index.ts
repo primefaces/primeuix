@@ -1,4 +1,4 @@
-import { DatePickerDesignTokens } from '@primeuix/themes/types/datepicker';
+import type { DatePickerDesignTokens } from '@primeuix/themes/types/datepicker';
 
 export default {
     root: {

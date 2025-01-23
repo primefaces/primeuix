@@ -1,4 +1,4 @@
-import { DrawerDesignTokens } from '@primeuix/themes/types/drawer';
+import type { DrawerDesignTokens } from '@primeuix/themes/types/drawer';
 
 export default {
     root: {

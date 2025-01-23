@@ -1,4 +1,6 @@
-export const theme = ({ dt }: { dt: any }) => `
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+
+export const theme = ({ dt }: ThemeStyleOptions) => `
 .p-message {
     border-radius: ${dt('message.border.radius')};
     outline-width: ${dt('message.border.width')};

@@ -1,4 +1,4 @@
-import { BadgeDesignTokens } from '@primeuix/themes/types/badge';
+import type { BadgeDesignTokens } from '@primeuix/themes/types/badge';
 
 export default {
     root: {

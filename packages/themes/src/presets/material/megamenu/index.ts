@@ -1,4 +1,5 @@
-import { MegaMenuDesignTokens } from '@primeuix/themes/types/megamenu';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { MegaMenuDesignTokens } from '@primeuix/themes/types/megamenu';
 
 export default {
     root: {
@@ -78,7 +79,7 @@ export default {
             shadow: 'none'
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-megamenu-button:focus-visible {
     background: ${dt('navigation.item.active.background')};
 }

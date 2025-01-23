@@ -1,4 +1,5 @@
-import { DatePickerDesignTokens } from '@primeuix/themes/types/datepicker';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { DatePickerDesignTokens } from '@primeuix/themes/types/datepicker';
 
 export default {
     root: {
@@ -145,7 +146,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-datepicker-header {
     justify-content: start;
 }

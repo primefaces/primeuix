@@ -1,4 +1,5 @@
-import { InputTextDesignTokens } from '@primeuix/themes/types/inputtext';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { InputTextDesignTokens } from '@primeuix/themes/types/inputtext';
 
 export default {
     root: {
@@ -38,7 +39,7 @@ export default {
             paddingY: '{form.field.lg.padding.y}'
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-inputtext.p-variant-filled {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

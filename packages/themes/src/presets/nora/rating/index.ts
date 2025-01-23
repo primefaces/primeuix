@@ -1,4 +1,4 @@
-import { RatingDesignTokens } from '@primeuix/themes/types/rating';
+import type { RatingDesignTokens } from '@primeuix/themes/types/rating';
 
 export default {
     root: {

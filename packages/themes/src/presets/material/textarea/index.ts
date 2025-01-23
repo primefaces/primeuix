@@ -1,4 +1,5 @@
-import { TextareaDesignTokens } from '@primeuix/themes/types/textarea';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { TextareaDesignTokens } from '@primeuix/themes/types/textarea';
 
 export default {
     root: {
@@ -38,7 +39,7 @@ export default {
             paddingY: '{form.field.lg.padding.y}'
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-textarea.p-variant-filled {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

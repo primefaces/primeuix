@@ -1,4 +1,4 @@
-import { SliderDesignTokens } from '@primeuix/themes/types/slider';
+import type { SliderDesignTokens } from '@primeuix/themes/types/slider';
 
 export default {
     root: {

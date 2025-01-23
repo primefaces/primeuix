@@ -1,4 +1,5 @@
-import { MultiSelectDesignTokens } from '@primeuix/themes/types/multiselect';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { MultiSelectDesignTokens } from '@primeuix/themes/types/multiselect';
 
 export default {
     root: {
@@ -83,7 +84,7 @@ export default {
     emptyMessage: {
         padding: '{list.option.padding}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-multiselect.p-variant-filled {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

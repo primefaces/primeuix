@@ -1,4 +1,5 @@
-import { AccordionDesignTokens } from '@primeuix/themes/types/accordion';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { AccordionDesignTokens } from '@primeuix/themes/types/accordion';
 
 export default {
     root: {
@@ -50,7 +51,7 @@ export default {
         color: '{text.color}',
         padding: '0 1.25rem 1.25rem 1.25rem'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-accordionpanel {
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
     transition: margin ${dt('accordion.transition.duration')};

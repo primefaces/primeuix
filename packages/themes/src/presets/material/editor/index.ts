@@ -1,4 +1,5 @@
-import { EditorDesignTokens } from '@primeuix/themes/types/editor';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { EditorDesignTokens } from '@primeuix/themes/types/editor';
 
 export default {
     toolbar: {
@@ -32,7 +33,7 @@ export default {
         color: '{content.color}',
         borderRadius: '{content.border.radius}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-editor .p-editor-toolbar {
     padding: 0.75rem
 }

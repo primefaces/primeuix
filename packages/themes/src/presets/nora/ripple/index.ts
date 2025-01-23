@@ -1,4 +1,4 @@
-import { RippleDesignTokens } from '@primeuix/themes/types/ripple';
+import type { RippleDesignTokens } from '@primeuix/themes/types/ripple';
 
 export default {
     colorScheme: {

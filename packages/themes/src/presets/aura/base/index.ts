@@ -1,4 +1,4 @@
-import { AuraBaseDesignTokens } from '@primeuix/themes/types/base/aura';
+import type { AuraBaseDesignTokens } from '@primeuix/themes/types/base/aura';
 
 export default {
     primitive: {

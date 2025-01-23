@@ -1,4 +1,4 @@
-import { EditorDesignTokens } from '@primeuix/themes/types/editor';
+import type { EditorDesignTokens } from '@primeuix/themes/types/editor';
 
 export default {
     toolbar: {

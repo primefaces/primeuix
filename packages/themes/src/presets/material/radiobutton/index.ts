@@ -1,4 +1,5 @@
-import { RadioButtonDesignTokens } from '@primeuix/themes/types/radiobutton';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { RadioButtonDesignTokens } from '@primeuix/themes/types/radiobutton';
 
 export default {
     root: {
@@ -47,7 +48,7 @@ export default {
             size: '12px'
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-radiobutton {
     border-radius: 50%;
     transition: box-shadow ${dt('radiobutton.transition.duration')};

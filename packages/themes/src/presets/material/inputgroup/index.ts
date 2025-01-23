@@ -1,4 +1,5 @@
-import { InputGroupDesignTokens } from '@primeuix/themes/types/inputgroup';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { InputGroupDesignTokens } from '@primeuix/themes/types/inputgroup';
 
 export default {
     addon: {
@@ -9,7 +10,7 @@ export default {
         padding: '0.75rem',
         minWidth: '3rem'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-inputgroup:has(.p-variant-filled) .p-inputgroupaddon {
     border-block-start-color: ${dt('inputtext.filled.background')};
     border-inline-color: ${dt('inputtext.filled.background')};

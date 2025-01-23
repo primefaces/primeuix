@@ -1,4 +1,4 @@
-import { PanelMenuDesignTokens } from '@primeuix/themes/types/panelmenu';
+import type { PanelMenuDesignTokens } from '@primeuix/themes/types/panelmenu';
 
 export default {
     root: {

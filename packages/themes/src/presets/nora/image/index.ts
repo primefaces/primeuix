@@ -1,4 +1,4 @@
-import { ImageDesignTokens } from '@primeuix/themes/types/image';
+import type { ImageDesignTokens } from '@primeuix/themes/types/image';
 
 export default {
     root: {

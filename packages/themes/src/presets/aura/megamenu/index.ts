@@ -1,4 +1,4 @@
-import { MegaMenuDesignTokens } from '@primeuix/themes/types/megamenu';
+import type { MegaMenuDesignTokens } from '@primeuix/themes/types/megamenu';
 
 export default {
     root: {

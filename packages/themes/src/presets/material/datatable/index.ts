@@ -1,4 +1,5 @@
-import { DataTableDesignTokens } from '@primeuix/themes/types/datatable';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { DataTableDesignTokens } from '@primeuix/themes/types/datatable';
 
 export default {
     root: {
@@ -203,7 +204,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-datatable-header-cell,
 .p-datatable-tbody > tr {
     transition: none;

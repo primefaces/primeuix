@@ -1,4 +1,4 @@
-import { CheckboxDesignTokens } from '@primeuix/themes/types/checkbox';
+import type { CheckboxDesignTokens } from '@primeuix/themes/types/checkbox';
 
 export default {
     root: {

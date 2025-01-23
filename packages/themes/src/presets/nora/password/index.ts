@@ -1,4 +1,4 @@
-import { PasswordDesignTokens } from '@primeuix/themes/types/password';
+import type { PasswordDesignTokens } from '@primeuix/themes/types/password';
 
 export default {
     meter: {

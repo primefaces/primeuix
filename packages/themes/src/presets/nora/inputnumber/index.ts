@@ -1,4 +1,4 @@
-import { InputNumberDesignTokens } from '@primeuix/themes/types/inputnumber';
+import type { InputNumberDesignTokens } from '@primeuix/themes/types/inputnumber';
 
 export default {
     root: {

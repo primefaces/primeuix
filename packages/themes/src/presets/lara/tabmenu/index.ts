@@ -1,4 +1,4 @@
-import { TabmenuDesignTokens } from '@primeuix/themes/types/tabmenu';
+import type { TabmenuDesignTokens } from '@primeuix/themes/types/tabmenu';
 
 export default {
     root: {

@@ -1,4 +1,4 @@
-import { SkeletonDesignTokens } from '@primeuix/themes/types/skeleton';
+import type { SkeletonDesignTokens } from '@primeuix/themes/types/skeleton';
 
 export default {
     root: {

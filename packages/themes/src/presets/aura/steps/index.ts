@@ -1,4 +1,4 @@
-import { StepperDesignTokens } from '@primeuix/themes/types/stepper';
+import type { StepperDesignTokens } from '@primeuix/themes/types/stepper';
 
 export default {
     root: {

@@ -1,4 +1,4 @@
-import { SplitterDesignTokens } from '@primeuix/themes/types/splitter';
+import type { SplitterDesignTokens } from '@primeuix/themes/types/splitter';
 
 export default {
     root: {

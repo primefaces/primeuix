@@ -1,4 +1,4 @@
-import { StepsDesignTokens } from '@primeuix/themes/types/steps';
+import type { StepsDesignTokens } from '@primeuix/themes/types/steps';
 
 export default {
     root: {

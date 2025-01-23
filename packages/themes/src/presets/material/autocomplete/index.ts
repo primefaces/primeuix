@@ -1,4 +1,5 @@
-import { AutoCompleteDesignTokens } from '@primeuix/themes/types/autocomplete';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { AutoCompleteDesignTokens } from '@primeuix/themes/types/autocomplete';
 
 export default {
     root: {
@@ -111,7 +112,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-autocomplete-dropdown:focus-visible {
     background: ${dt('autocomplete.dropdown.hover.background')};
     border-color: ${dt('autocomplete.dropdown.hover.border.color')};

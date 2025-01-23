@@ -1,4 +1,4 @@
-import { ToggleSwitchDesignTokens } from '@primeuix/themes/types/toggleswitch';
+import type { ToggleSwitchDesignTokens } from '@primeuix/themes/types/toggleswitch';
 
 export default {
     root: {

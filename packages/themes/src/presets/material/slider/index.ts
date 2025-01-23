@@ -1,4 +1,5 @@
-import { SliderDesignTokens } from '@primeuix/themes/types/slider';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { SliderDesignTokens } from '@primeuix/themes/types/slider';
 
 export default {
     root: {
@@ -34,7 +35,7 @@ export default {
             shadow: 'none'
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-slider-handle {
     transition: box-shadow ${dt('slider.transition.duration')};
 }

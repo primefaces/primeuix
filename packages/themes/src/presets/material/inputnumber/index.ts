@@ -1,4 +1,5 @@
-import { InputNumberDesignTokens } from '@primeuix/themes/types/inputnumber';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { InputNumberDesignTokens } from '@primeuix/themes/types/inputnumber';
 
 export default {
     root: {
@@ -37,7 +38,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-inputnumber-stacked .p-inputnumber-button-group {
     top: 2px;
     right: 2px;

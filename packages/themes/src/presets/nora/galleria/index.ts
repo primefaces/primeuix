@@ -1,4 +1,4 @@
-import { GalleriaDesignTokens } from '@primeuix/themes/types/galleria';
+import type { GalleriaDesignTokens } from '@primeuix/themes/types/galleria';
 
 export default {
     root: {

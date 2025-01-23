@@ -1,4 +1,5 @@
-import { PanelMenuDesignTokens } from '@primeuix/themes/types/panelmenu';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { PanelMenuDesignTokens } from '@primeuix/themes/types/panelmenu';
 
 export default {
     root: {
@@ -40,7 +41,7 @@ export default {
         color: '{navigation.submenu.icon.color}',
         focusColor: '{navigation.submenu.icon.focus.color}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-panelmenu-panel {
     box-shadow: 0 0 0 1px ${dt('panelmenu.panel.border.color')};
     transition: margin ${dt('panelmenu.transition.duration')};

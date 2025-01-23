@@ -1,4 +1,5 @@
-import { SelectDesignTokens } from '@primeuix/themes/types/select';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { SelectDesignTokens } from '@primeuix/themes/types/select';
 
 export default {
     root: {
@@ -84,7 +85,7 @@ export default {
     emptyMessage: {
         padding: '{list.option.padding}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-select.p-variant-filled {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

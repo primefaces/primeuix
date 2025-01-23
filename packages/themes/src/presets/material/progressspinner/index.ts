@@ -1,4 +1,4 @@
-import { ProgressSpinnerDesignTokens } from '@primeuix/themes/types/progressspinner';
+import type { ProgressSpinnerDesignTokens } from '@primeuix/themes/types/progressspinner';
 
 export default {
     colorScheme: {

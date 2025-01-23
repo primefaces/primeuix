@@ -1,4 +1,5 @@
-import { StepperDesignTokens } from '@primeuix/themes/types/stepper';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { StepperDesignTokens } from '@primeuix/themes/types/stepper';
 
 export default {
     root: {
@@ -66,7 +67,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-step-header:focus-visible {
     background: ${dt('navigation.item.active.background')};
 }

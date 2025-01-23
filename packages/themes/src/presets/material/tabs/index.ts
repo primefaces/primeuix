@@ -1,4 +1,5 @@
-import { TabsDesignTokens } from '@primeuix/themes/types/tabs';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { TabsDesignTokens } from '@primeuix/themes/types/tabs';
 
 export default {
     root: {
@@ -63,7 +64,7 @@ export default {
         bottom: '-1px',
         background: '{primary.color}'
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 
 
 .p-tabs-scrollable .p-tab {

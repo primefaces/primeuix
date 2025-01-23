@@ -1,4 +1,5 @@
-import { TreeTableDesignTokens } from '@primeuix/themes/types/treetable';
+import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { TreeTableDesignTokens } from '@primeuix/themes/types/treetable';
 
 export default {
     root: {
@@ -125,7 +126,7 @@ export default {
             }
         }
     },
-    css: ({ dt }: { dt: any }) => `
+    css: ({ dt }: ThemeStyleOptions) => `
 .p-treetable-header-cell,
 .p-treetable-tbody > tr {
     transition: none;
