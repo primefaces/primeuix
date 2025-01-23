@@ -17,6 +17,7 @@
     "exports": {
         ".": "./src/index.ts",
         "./styles/*": "./src/styles/*/index.ts",
+        "./types": "./src/types/index.d.ts",
         "./types/*": "./src/types/*/index.d.ts",
         "./*": "./src/presets/*/index.ts"
     },
@@ -28,6 +29,22 @@
             ".": {
                 "types": "./index.d.mts",
                 "import": "./index.mjs"
+            },
+            "./aura/*": {
+                "types": "./types/*/index.d.ts",
+                "import": "./aura/*/index.mjs"
+            },
+            "./lara/*": {
+                "types": "./types/*/index.d.ts",
+                "import": "./lara/*/index.mjs"
+            },
+            "./material/*": {
+                "types": "./types/*/index.d.ts",
+                "import": "./material/*/index.mjs"
+            },
+            "./nora/*": {
+                "types": "./types/*/index.d.ts",
+                "import": "./nora/*/index.mjs"
             },
             "./*": {
                 "types": "./*/index.d.ts",
