@@ -2,10 +2,7 @@ import { globSync } from 'glob';
 import { defineConfig } from 'tsup';
 
 const entry = globSync('src/**/index.ts').reduce((acc: any, file) => {
-    const name = file
-        .replace(/^src\//, '')
-        .replace(/\.ts$/, '')
-        .replace(/^presets\//g, '');
+    const name = file.replace(/^src\//, '').replace(/\.ts$/, '');
 
     acc[name] = file;
 
@@ -20,6 +17,13 @@ export default defineConfig({
         entry: ['src/index.ts']
     },
     external: [/^@primeuix\/(.*)$/],
+    minify: 'terser',
     sourcemap: true,
-    splitting: false
+    splitting: false,
+    clean: true,
+    terserOptions: {
+        mangle: {
+            reserved: ['theme', 'css']
+        }
+    }
 });

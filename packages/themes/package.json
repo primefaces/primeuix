@@ -32,19 +32,19 @@
             },
             "./aura/*": {
                 "types": "./types/*/index.d.ts",
-                "import": "./aura/*/index.mjs"
+                "import": "./presets/aura/*/index.mjs"
             },
             "./lara/*": {
                 "types": "./types/*/index.d.ts",
-                "import": "./lara/*/index.mjs"
+                "import": "./presets/lara/*/index.mjs"
             },
             "./material/*": {
                 "types": "./types/*/index.d.ts",
-                "import": "./material/*/index.mjs"
+                "import": "./presets/material/*/index.mjs"
             },
             "./nora/*": {
                 "types": "./types/*/index.d.ts",
-                "import": "./nora/*/index.mjs"
+                "import": "./presets/nora/*/index.mjs"
             },
             "./*": {
                 "types": "./*/index.d.ts",
@@ -65,5 +65,6 @@
     },
     "dependencies": {
         "@primeuix/styled": "workspace:^"
-    }
+    },
+    "engines": {}
 }
