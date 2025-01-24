@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { StepperDesignTokens } from '@primeuix/themes/types/stepper';
 
 export default {

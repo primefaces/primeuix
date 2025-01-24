@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { TreeDesignTokens } from '@primeuix/themes/types/tree';
 
 export default {

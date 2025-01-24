@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { ToggleButtonDesignTokens } from '@primeuix/themes/types/togglebutton';
 
 export default {

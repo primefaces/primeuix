@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { TieredMenuDesignTokens } from '@primeuix/themes/types/tieredmenu';
 
 export default {

@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { CascadeSelectDesignTokens } from '@primeuix/themes/types/cascadeselect';
 
 export default {

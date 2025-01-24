@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { RadioButtonDesignTokens } from '@primeuix/themes/types/radiobutton';
 
 export default {

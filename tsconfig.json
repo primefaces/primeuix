@@ -34,6 +34,7 @@
         "@primeuix/locale/*": ["./packages/locale/src/*"],
         "@primeuix/styled/*": ["./packages/styled/src/*"],
         "@primeuix/utils/*": ["./packages/utils/src/*"],
+        "@primeuix/styles/*": ["./packages/styles/src/*"],
         "@primeuix/themes/*": ["./packages/themes/src/*", "./packages/themes/src/presets/*", "./packages/themes/src/types/*"],
     },
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
@@ -51,7 +52,7 @@
 
     /* Emit */
     // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
-    // "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
+    "declarationMap": false,                             /* (UPDATED) Create sourcemaps for d.ts files. */
     // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
     // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
@@ -106,6 +107,6 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": ["**/src/**/*", "**/dist/**/*", "packages/themes/src/types"],
+  "include": ["**/src/**/*", "**/dist/**/*"],
   "exclude": ["**/node_modules"]
 }

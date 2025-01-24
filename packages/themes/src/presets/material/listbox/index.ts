@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { ListboxDesignTokens } from '@primeuix/themes/types/listbox';
 
 export default {

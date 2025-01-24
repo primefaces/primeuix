@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { FieldsetDesignTokens } from '@primeuix/themes/types/fieldset';
 
 export default {

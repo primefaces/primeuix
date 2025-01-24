@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { AutoCompleteDesignTokens } from '@primeuix/themes/types/autocomplete';
 
 export default {

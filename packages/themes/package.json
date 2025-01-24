@@ -16,7 +16,6 @@
     "module": "./src/index.ts",
     "exports": {
         ".": "./src/index.ts",
-        "./styles/*": "./src/styles/*/index.ts",
         "./types": "./src/types/index.d.ts",
         "./types/*": "./src/types/*/index.d.ts",
         "./*": "./src/presets/*/index.ts"

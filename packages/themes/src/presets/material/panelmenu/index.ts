@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/themes/types';
+import type { ThemeStyleOptions } from '@primeuix/styled';
 import type { PanelMenuDesignTokens } from '@primeuix/themes/types/panelmenu';
 
 export default {
