@@ -5,7 +5,7 @@ const themes: string[] = [];
 
 const entry = globSync('src/**/index.ts').reduce((acc: any, file) => {
     const name = file.replace(/^src\//, '').replace(/\.ts$/, '');
-    const themeName: string | undefined = name.startsWith(`presets/`) ? name.split('/')?.[1] : undefined;
+    const themeName: string | undefined = name.startsWith('presets/') ? name.split('/')?.[1] : undefined;
 
     themeName && !themes.includes(themeName) && themes.push(themeName);
 
