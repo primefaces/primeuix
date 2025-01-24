@@ -1,4 +1,4 @@
-import type { NoraBaseDesignTokens } from '@primeuix/themes/types/base/nora';
+import type { NoraBaseDesignTokens } from './index.d';
 
 export default {
     primitive: {

@@ -1,4 +1,4 @@
-import type { MaterialBaseDesignTokens } from '@primeuix/themes/types/base/material';
+import type { MaterialBaseDesignTokens } from './index.d';
 
 export default {
     primitive: {

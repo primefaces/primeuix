@@ -1,5 +1,5 @@
 import type { Preset } from '@primeuix/themes/types';
-import type { AuraBaseDesignTokens } from '@primeuix/themes/types/base/aura';
+import type { AuraBaseDesignTokens } from './base/index.d';
 
 import accordion from '@primeuix/themes/aura/accordion';
 import autocomplete from '@primeuix/themes/aura/autocomplete';

@@ -1,5 +1,5 @@
 import type { Preset } from '@primeuix/themes/types';
-import type { MaterialBaseDesignTokens } from '@primeuix/themes/types/base/material';
+import type { MaterialBaseDesignTokens } from './base/index.d';
 
 import accordion from '@primeuix/themes/material/accordion';
 import autocomplete from '@primeuix/themes/material/autocomplete';

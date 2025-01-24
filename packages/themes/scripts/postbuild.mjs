@@ -1,8 +1,10 @@
 import fs from 'fs-extra';
 import path from 'path';
-import { clearPackageJson, resolvePath } from '../../../scripts/build-helper.mjs';
+import { clearPackageJson, copyDependencies, resolvePath } from '../../../scripts/build-helper.mjs';
 
 const { __dirname, __workspace, OUTPUT_DIR, INPUT_DIR } = resolvePath(import.meta.url);
+
+copyDependencies(path.resolve(__dirname, `../${INPUT_DIR}/presets`), path.resolve(__dirname, `../${OUTPUT_DIR}/presets`));
 
 fs.copySync(path.resolve(__dirname, `../${INPUT_DIR}/types`), `${OUTPUT_DIR}/types`);
 fs.copySync(path.resolve(__dirname, '../package.json'), `${OUTPUT_DIR}/package.json`);

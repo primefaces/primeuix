@@ -1,5 +1,5 @@
 import type { Preset } from '@primeuix/themes/types';
-import type { LaraBaseDesignTokens } from '@primeuix/themes/types/base/lara';
+import type { LaraBaseDesignTokens } from './base/index.d';
 
 import accordion from '@primeuix/themes/lara/accordion';
 import autocomplete from '@primeuix/themes/lara/autocomplete';

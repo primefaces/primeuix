@@ -1,5 +1,5 @@
 import type { Preset } from '@primeuix/themes/types';
-import type { NoraBaseDesignTokens } from '@primeuix/themes/types/base/nora';
+import type { NoraBaseDesignTokens } from './base/index.d';
 
 import accordion from '@primeuix/themes/nora/accordion';
 import autocomplete from '@primeuix/themes/nora/autocomplete';
