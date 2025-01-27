@@ -2,11 +2,10 @@
  *
  * Popover Design Tokens
  *
- * [Live Demo](https://www.primeng.org/popover/)
- *
  * @module themes/popover
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface PopoverDesignTokens extends DesignTokens<PopoverDesignTokens> {

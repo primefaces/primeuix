@@ -2,11 +2,10 @@
  *
  * Paginator Design Tokens
  *
- * [Live Demo](https://www.primeng.org/paginator/)
- *
  * @module themes/paginator
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface PaginatorDesignTokens extends DesignTokens<PaginatorDesignTokens> {

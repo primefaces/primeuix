@@ -2,11 +2,10 @@
  *
  * Ripple Design Tokens
  *
- * [Live Demo](https://www.primeng.org/ripple/)
- *
  * @module themes/ripple
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface RippleDesignTokens extends DesignTokens<RippleDesignTokens> {

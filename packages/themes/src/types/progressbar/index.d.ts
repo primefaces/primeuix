@@ -2,11 +2,10 @@
  *
  * ProgressBar Design Tokens
  *
- * [Live Demo](https://www.primeng.org/progressbar/)
- *
  * @module themes/progressbar
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ProgressBarDesignTokens extends DesignTokens<ProgressBarDesignTokens> {

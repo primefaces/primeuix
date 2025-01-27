@@ -2,11 +2,10 @@
  *
  * Listbox Design Tokens
  *
- * [Live Demo](https://www.primeng.org/listbox/)
- *
  * @module themes/listbox
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
@@ -32,18 +31,6 @@ export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
          * @designToken listbox.border.color
          */
         borderColor?: string;
-        /**
-         * Hover border color of root
-         *
-         * @designToken listbox.hover.border.color
-         */
-        hoverBorderColor?: string;
-        /**
-         * Focus border color of root
-         *
-         * @designToken listbox.focus.border.color
-         */
-        focusBorderColor?: string;
         /**
          * Invalid border color of root
          *
@@ -74,41 +61,6 @@ export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
          * @designToken listbox.border.radius
          */
         borderRadius?: string;
-        /**
-         * Focus ring of root
-         */
-        focusRing?: {
-            /**
-             * Focus ring width of root
-             *
-             * @designToken listbox.focus.ring.width
-             */
-            width?: string;
-            /**
-             * Focus ring style of root
-             *
-             * @designToken listbox.focus.ring.style
-             */
-            style?: string;
-            /**
-             * Focus ring color of root
-             *
-             * @designToken listbox.focus.ring.color
-             */
-            color?: string;
-            /**
-             * Focus ring offset of root
-             *
-             * @designToken listbox.focus.ring.offset
-             */
-            offset?: string;
-            /**
-             * Focus ring shadow of root
-             *
-             * @designToken listbox.focus.ring.shadow
-             */
-            shadow?: string;
-        };
         /**
          * Transition duration of root
          *

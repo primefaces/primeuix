@@ -2,11 +2,10 @@
  *
  * OverlayBadge Design Tokens
  *
- * [Live Demo](https://www.primeng.org/overlaybadge/)
- *
  * @module themes/overlaybadge
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface OverlayBadgeDesignTokens extends DesignTokens<OverlayBadgeDesignTokens> {

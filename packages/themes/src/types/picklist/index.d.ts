@@ -2,11 +2,10 @@
  *
  * PickList Design Tokens
  *
- * [Live Demo](https://www.primeng.org/picklist/)
- *
  * @module themes/picklist
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface PickListDesignTokens extends DesignTokens<PickListDesignTokens> {

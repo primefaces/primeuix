@@ -2,11 +2,10 @@
  *
  * Tabmenu Design Tokens
  *
- * [Live Demo](https://www.primeng.org/tabmenu/)
- *
  * @module themes/tabmenu
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TabmenuDesignTokens extends DesignTokens<TabmenuDesignTokens> {

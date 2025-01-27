@@ -2,11 +2,10 @@
  *
  * ProgressSpinner Design Tokens
  *
- * [Live Demo](https://www.primeng.org/progressspinner/)
- *
  * @module themes/progressspinner
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ProgressSpinnerDesignTokens extends DesignTokens<ProgressSpinnerDesignTokens> {
@@ -15,28 +14,28 @@ export interface ProgressSpinnerDesignTokens extends DesignTokens<ProgressSpinne
      */
     root?: {
         /**
-         * Color.1 of root
+         * Color one of root
          *
-         * @designToken progressspinner.color.1
+         * @designToken progressspinner.color.one
          */
-        'color.1'?: string;
+        colorOne?: string;
         /**
-         * Color.2 of root
+         * Color two of root
          *
-         * @designToken progressspinner.color.2
+         * @designToken progressspinner.color.two
          */
-        'color.2'?: string;
+        colorTwo?: string;
         /**
-         * Color.3 of root
+         * Color three of root
          *
-         * @designToken progressspinner.color.3
+         * @designToken progressspinner.color.three
          */
-        'color.3'?: string;
+        colorThree?: string;
         /**
-         * Color.4 of root
+         * Color four of root
          *
-         * @designToken progressspinner.color.4
+         * @designToken progressspinner.color.four
          */
-        'color.4'?: string;
+        colorFour?: string;
     };
 }

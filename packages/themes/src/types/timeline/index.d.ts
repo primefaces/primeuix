@@ -2,11 +2,10 @@
  *
  * Timeline Design Tokens
  *
- * [Live Demo](https://www.primeng.org/timeline/)
- *
  * @module themes/timeline
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TimelineDesignTokens extends DesignTokens<TimelineDesignTokens> {

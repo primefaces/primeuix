@@ -2,11 +2,10 @@
  *
  * Fieldset Design Tokens
  *
- * [Live Demo](https://www.primeng.org/fieldset/)
- *
  * @module themes/fieldset
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface FieldsetDesignTokens extends DesignTokens<FieldsetDesignTokens> {

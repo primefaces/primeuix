@@ -2,11 +2,10 @@
  *
  * Galleria Design Tokens
  *
- * [Live Demo](https://www.primeng.org/galleria/)
- *
  * @module themes/galleria
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens> {
@@ -401,23 +400,6 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
          * @designToken galleria.inset.indicator.button.active.background
          */
         activeBackground?: string;
-    };
-    /**
-     * Used to pass tokens of the mask section
-     */
-    mask?: {
-        /**
-         * Background of mask
-         *
-         * @designToken galleria.mask.background
-         */
-        background?: string;
-        /**
-         * Color of mask
-         *
-         * @designToken galleria.mask.color
-         */
-        color?: string;
     };
     /**
      * Used to pass tokens of the close button section

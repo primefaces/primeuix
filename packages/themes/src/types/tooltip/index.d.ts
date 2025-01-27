@@ -2,11 +2,10 @@
  *
  * Tooltip Design Tokens
  *
- * [Live Demo](https://www.primeng.org/tooltip/)
- *
  * @module themes/tooltip
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TooltipDesignTokens extends DesignTokens<TooltipDesignTokens> {

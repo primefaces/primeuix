@@ -2,11 +2,10 @@
  *
  * TabView Design Tokens
  *
- * [Live Demo](https://www.primeng.org/tabview/)
- *
  * @module themes/tabview
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {

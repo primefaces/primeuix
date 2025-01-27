@@ -2,11 +2,10 @@
  *
  * AutoComplete Design Tokens
  *
- * [Live Demo](https://www.primeng.org/autocomplete/)
- *
  * @module themes/autocomplete
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * Panel Design Tokens
  *
- * [Live Demo](https://www.primeng.org/panel/)
- *
  * @module themes/panel
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface PanelDesignTokens extends DesignTokens<PanelDesignTokens> {

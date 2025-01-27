@@ -2,11 +2,10 @@
  *
  * SelectButton Design Tokens
  *
- * [Live Demo](https://www.primeng.org/selectbutton/)
- *
  * @module themes/selectbutton
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface SelectButtonDesignTokens extends DesignTokens<SelectButtonDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * ImageCompare Design Tokens
  *
- * [Live Demo](https://www.primeng.org/imagecompare/)
- *
  * @module themes/imagecompare
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ImageCompareDesignTokens extends DesignTokens<ImageCompareDesignTokens> {

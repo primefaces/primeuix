@@ -2,11 +2,10 @@
  *
  * TreeSelect Design Tokens
  *
- * [Live Demo](https://www.primeng.org/treeselect/)
- *
  * @module themes/treeselect
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TreeSelectDesignTokens extends DesignTokens<TreeSelectDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * Splitter Design Tokens
  *
- * [Live Demo](https://www.primeng.org/splitter/)
- *
  * @module themes/splitter
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface SplitterDesignTokens extends DesignTokens<SplitterDesignTokens> {

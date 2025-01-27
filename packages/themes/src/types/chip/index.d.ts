@@ -2,11 +2,10 @@
  *
  * Chip Design Tokens
  *
- * [Live Demo](https://www.primeng.org/chip/)
- *
  * @module themes/chip
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {

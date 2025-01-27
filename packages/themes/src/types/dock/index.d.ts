@@ -2,11 +2,10 @@
  *
  * Dock Design Tokens
  *
- * [Live Demo](https://www.primeng.org/dock/)
- *
  * @module themes/dock
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {

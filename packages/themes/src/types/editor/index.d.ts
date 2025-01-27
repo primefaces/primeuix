@@ -2,11 +2,10 @@
  *
  * Editor Design Tokens
  *
- * [Live Demo](https://www.primeng.org/editor/)
- *
  * @module themes/editor
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface EditorDesignTokens extends DesignTokens<EditorDesignTokens> {

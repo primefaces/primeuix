@@ -2,11 +2,10 @@
  *
  * Rating Design Tokens
  *
- * [Live Demo](https://www.primeng.org/rating/)
- *
  * @module themes/rating
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface RatingDesignTokens extends DesignTokens<RatingDesignTokens> {

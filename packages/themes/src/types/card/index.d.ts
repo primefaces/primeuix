@@ -2,11 +2,10 @@
  *
  * Card Design Tokens
  *
- * [Live Demo](https://www.primeng.org/card/)
- *
  * @module themes/card
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface CardDesignTokens extends DesignTokens<CardDesignTokens> {

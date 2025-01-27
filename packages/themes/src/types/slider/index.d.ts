@@ -2,11 +2,10 @@
  *
  * Slider Design Tokens
  *
- * [Live Demo](https://www.primeng.org/slider/)
- *
  * @module themes/slider
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface SliderDesignTokens extends DesignTokens<SliderDesignTokens> {

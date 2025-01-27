@@ -2,11 +2,10 @@
  *
  * InputText Design Tokens
  *
- * [Live Demo](https://www.primeng.org/inputtext/)
- *
  * @module themes/inputtext
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface InputTextDesignTokens extends DesignTokens<InputTextDesignTokens> {

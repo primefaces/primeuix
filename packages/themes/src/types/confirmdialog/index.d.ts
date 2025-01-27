@@ -2,11 +2,10 @@
  *
  * ConfirmDialog Design Tokens
  *
- * [Live Demo](https://www.primeng.org/confirmdialog/)
- *
  * @module themes/confirmdialog
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ConfirmDialogDesignTokens extends DesignTokens<ConfirmDialogDesignTokens> {

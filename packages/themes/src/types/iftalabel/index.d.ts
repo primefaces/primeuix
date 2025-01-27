@@ -2,11 +2,10 @@
  *
  * IftaLabel Design Tokens
  *
- * [Live Demo](https://www.primeng.org/iftalabel/)
- *
  * @module themes/iftalabel
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface IftaLabelDesignTokens extends DesignTokens<IftaLabelDesignTokens> {

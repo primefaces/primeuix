@@ -2,11 +2,10 @@
  *
  * ConfirmPopup Design Tokens
  *
- * [Live Demo](https://www.primeng.org/confirmpopup/)
- *
  * @module themes/confirmpopup
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ConfirmPopupDesignTokens extends DesignTokens<ConfirmPopupDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * BlockUI Design Tokens
  *
- * [Live Demo](https://www.primeng.org/blockui/)
- *
  * @module themes/blockui
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface BlockUIDesignTokens extends DesignTokens<BlockUIDesignTokens> {

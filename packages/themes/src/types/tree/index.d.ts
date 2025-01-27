@@ -2,11 +2,10 @@
  *
  * Tree Design Tokens
  *
- * [Live Demo](https://www.primeng.org/tree/)
- *
  * @module themes/tree
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
@@ -254,5 +253,16 @@ export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
          * @designToken tree.loading.icon.size
          */
         size?: string;
+    };
+    /**
+     * Used to pass tokens of the filter section
+     */
+    filter?: {
+        /**
+         * Margin of filter
+         *
+         * @designToken tree.filter.margin
+         */
+        margin?: string;
     };
 }

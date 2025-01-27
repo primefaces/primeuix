@@ -2,11 +2,10 @@
  *
  * Toolbar Design Tokens
  *
- * [Live Demo](https://www.primeng.org/toolbar/)
- *
  * @module themes/toolbar
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ToolbarDesignTokens extends DesignTokens<ToolbarDesignTokens> {

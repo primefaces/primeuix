@@ -2,11 +2,10 @@
  *
  * Dialog Design Tokens
  *
- * [Live Demo](https://www.primeng.org/dialog/)
- *
  * @module themes/dialog
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface DialogDesignTokens extends DesignTokens<DialogDesignTokens> {

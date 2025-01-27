@@ -2,11 +2,10 @@
  *
  * ScrollPanel Design Tokens
  *
- * [Live Demo](https://www.primeng.org/scrollpanel/)
- *
  * @module themes/scrollpanel
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ScrollPanelDesignTokens extends DesignTokens<ScrollPanelDesignTokens> {

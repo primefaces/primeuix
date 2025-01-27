@@ -2,11 +2,10 @@
  *
  * InputChips Design Tokens
  *
- * [Live Demo](https://www.primeng.org/inputchips/)
- *
  * @module themes/inputchips
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTokens> {

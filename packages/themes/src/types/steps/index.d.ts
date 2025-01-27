@@ -2,11 +2,10 @@
  *
  * Steps Design Tokens
  *
- * [Live Demo](https://www.primeng.org/steps/)
- *
  * @module themes/steps
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface StepsDesignTokens extends DesignTokens<StepsDesignTokens> {

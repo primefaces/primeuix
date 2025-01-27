@@ -2,11 +2,10 @@
  *
  * PanelMenu Design Tokens
  *
- * [Live Demo](https://www.primeng.org/panelmenu/)
- *
  * @module themes/panelmenu
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface PanelMenuDesignTokens extends DesignTokens<PanelMenuDesignTokens> {

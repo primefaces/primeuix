@@ -2,11 +2,10 @@
  *
  * IconField Design Tokens
  *
- * [Live Demo](https://www.primeng.org/iconfield/)
- *
  * @module themes/iconfield
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface IconFieldDesignTokens extends DesignTokens<IconFieldDesignTokens> {

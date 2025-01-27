@@ -2,11 +2,10 @@
  *
  * Terminal Design Tokens
  *
- * [Live Demo](https://www.primeng.org/terminal/)
- *
  * @module themes/terminal
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TerminalDesignTokens extends DesignTokens<TerminalDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * CascadeSelect Design Tokens
  *
- * [Live Demo](https://www.primeng.org/cascadeselect/)
- *
  * @module themes/cascadeselect
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface CascadeSelectDesignTokens extends DesignTokens<CascadeSelectDesignTokens> {

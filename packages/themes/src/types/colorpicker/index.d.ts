@@ -2,11 +2,10 @@
  *
  * ColorPicker Design Tokens
  *
- * [Live Demo](https://www.primeng.org/colorpicker/)
- *
  * @module themes/colorpicker
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ColorPickerDesignTokens extends DesignTokens<ColorPickerDesignTokens> {

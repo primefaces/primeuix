@@ -2,11 +2,10 @@
  *
  * OrganizationChart Design Tokens
  *
- * [Live Demo](https://www.primeng.org/organizationchart/)
- *
  * @module themes/organizationchart
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface OrganizationChartDesignTokens extends DesignTokens<OrganizationChartDesignTokens> {

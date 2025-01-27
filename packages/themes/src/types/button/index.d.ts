@@ -2,11 +2,10 @@
  *
  * Button Design Tokens
  *
- * [Live Demo](https://www.primeng.org/button/)
- *
  * @module themes/button
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
@@ -72,6 +71,12 @@ export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
              * @designToken button.sm.padding.y
              */
             paddingY?: string;
+            /**
+             * Sm icon only width of root
+             *
+             * @designToken button.sm.icon.only.width
+             */
+            iconOnlyWidth?: string;
         };
         /**
          * Lg of root
@@ -95,6 +100,12 @@ export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
              * @designToken button.lg.padding.y
              */
             paddingY?: string;
+            /**
+             * Lg icon only width of root
+             *
+             * @designToken button.lg.icon.only.width
+             */
+            iconOnlyWidth?: string;
         };
         /**
          * Label of root
@@ -1185,6 +1196,29 @@ export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
              * Danger color of text
              *
              * @designToken button.text.danger.color
+             */
+            color?: string;
+        };
+        /**
+         * Contrast of text
+         */
+        contrast?: {
+            /**
+             * Contrast hover background of text
+             *
+             * @designToken button.text.contrast.hover.background
+             */
+            hoverBackground?: string;
+            /**
+             * Contrast active background of text
+             *
+             * @designToken button.text.contrast.active.background
+             */
+            activeBackground?: string;
+            /**
+             * Contrast color of text
+             *
+             * @designToken button.text.contrast.color
              */
             color?: string;
         };

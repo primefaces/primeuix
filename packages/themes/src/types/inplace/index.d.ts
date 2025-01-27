@@ -2,11 +2,10 @@
  *
  * Inplace Design Tokens
  *
- * [Live Demo](https://www.primeng.org/inplace/)
- *
  * @module themes/inplace
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * SpeedDial Design Tokens
  *
- * [Live Demo](https://www.primeng.org/speeddial/)
- *
  * @module themes/speeddial
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface SpeedDialDesignTokens extends DesignTokens<SpeedDialDesignTokens> {

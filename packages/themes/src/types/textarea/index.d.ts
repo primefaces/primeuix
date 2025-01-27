@@ -2,11 +2,10 @@
  *
  * Textarea Design Tokens
  *
- * [Live Demo](https://www.primeng.org/textarea/)
- *
  * @module themes/textarea
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TextareaDesignTokens extends DesignTokens<TextareaDesignTokens> {

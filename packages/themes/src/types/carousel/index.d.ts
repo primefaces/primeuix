@@ -2,11 +2,10 @@
  *
  * Carousel Design Tokens
  *
- * [Live Demo](https://www.primeng.org/carousel/)
- *
  * @module themes/carousel
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface CarouselDesignTokens extends DesignTokens<CarouselDesignTokens> {

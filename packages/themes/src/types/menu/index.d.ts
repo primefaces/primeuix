@@ -2,11 +2,10 @@
  *
  * Menu Design Tokens
  *
- * [Live Demo](https://www.primeng.org/menu/)
- *
  * @module themes/menu
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface MenuDesignTokens extends DesignTokens<MenuDesignTokens> {

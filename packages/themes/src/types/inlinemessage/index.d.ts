@@ -2,11 +2,10 @@
  *
  * InlineMessage Design Tokens
  *
- * [Live Demo](https://www.primeng.org/inlinemessage/)
- *
  * @module themes/inlinemessage
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDesignTokens> {

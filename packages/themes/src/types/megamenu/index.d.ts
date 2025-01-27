@@ -2,11 +2,10 @@
  *
  * MegaMenu Design Tokens
  *
- * [Live Demo](https://www.primeng.org/megamenu/)
- *
  * @module themes/megamenu
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens> {
@@ -71,6 +70,12 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
              * @designToken megamenu.horizontal.orientation.padding
              */
             padding?: string;
+            /**
+             * Horizontal orientation gap of root
+             *
+             * @designToken megamenu.horizontal.orientation.gap
+             */
+            gap?: string;
         };
         /**
          * Transition duration of root

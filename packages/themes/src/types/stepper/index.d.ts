@@ -2,11 +2,10 @@
  *
  * Stepper Design Tokens
  *
- * [Live Demo](https://www.primeng.org/stepper/)
- *
  * @module themes/stepper
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
@@ -252,5 +251,11 @@ export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
          * @designToken stepper.steppanel.padding
          */
         padding?: string;
+        /**
+         * Indent of steppanel
+         *
+         * @designToken stepper.steppanel.indent
+         */
+        indent?: string;
     };
 }

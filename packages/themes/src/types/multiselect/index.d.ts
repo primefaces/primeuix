@@ -2,11 +2,10 @@
  *
  * MultiSelect Design Tokens
  *
- * [Live Demo](https://www.primeng.org/multiselect/)
- *
  * @module themes/multiselect
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignTokens> {

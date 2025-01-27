@@ -2,8 +2,6 @@
  *
  * Accordion Design Tokens
  *
- * [Live Demo](https://www.primeng.org/accordion/)
- *
  * @module themes/accordion
  *
  */

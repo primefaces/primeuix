@@ -2,11 +2,10 @@
  *
  * Breadcrumb Design Tokens
  *
- * [Live Demo](https://www.primeng.org/breadcrumb/)
- *
  * @module themes/breadcrumb
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface BreadcrumbDesignTokens extends DesignTokens<BreadcrumbDesignTokens> {

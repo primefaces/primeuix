@@ -2,11 +2,10 @@
  *
  * Tag Design Tokens
  *
- * [Live Demo](https://www.primeng.org/tag/)
- *
  * @module themes/tag
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {

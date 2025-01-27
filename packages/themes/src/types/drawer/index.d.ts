@@ -2,11 +2,10 @@
  *
  * Drawer Design Tokens
  *
- * [Live Demo](https://www.primeng.org/drawer/)
- *
  * @module themes/drawer
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface DrawerDesignTokens extends DesignTokens<DrawerDesignTokens> {
@@ -32,12 +31,6 @@ export interface DrawerDesignTokens extends DesignTokens<DrawerDesignTokens> {
          * @designToken drawer.color
          */
         color?: string;
-        /**
-         * Border radius of root
-         *
-         * @designToken drawer.border.radius
-         */
-        borderRadius?: string;
         /**
          * Shadow of root
          *
@@ -81,6 +74,17 @@ export interface DrawerDesignTokens extends DesignTokens<DrawerDesignTokens> {
          * Padding of content
          *
          * @designToken drawer.content.padding
+         */
+        padding?: string;
+    };
+    /**
+     * Used to pass tokens of the footer section
+     */
+    footer?: {
+        /**
+         * Padding of footer
+         *
+         * @designToken drawer.footer.padding
          */
         padding?: string;
     };

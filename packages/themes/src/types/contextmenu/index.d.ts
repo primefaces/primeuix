@@ -2,11 +2,10 @@
  *
  * ContextMenu Design Tokens
  *
- * [Live Demo](https://www.primeng.org/contextmenu/)
- *
  * @module themes/contextmenu
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ContextMenuDesignTokens extends DesignTokens<ContextMenuDesignTokens> {

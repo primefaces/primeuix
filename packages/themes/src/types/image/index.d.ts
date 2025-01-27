@@ -2,11 +2,10 @@
  *
  * Image Design Tokens
  *
- * [Live Demo](https://www.primeng.org/image/)
- *
  * @module themes/image
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ImageDesignTokens extends DesignTokens<ImageDesignTokens> {

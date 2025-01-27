@@ -2,11 +2,10 @@
  *
  * SplitButton Design Tokens
  *
- * [Live Demo](https://www.primeng.org/splitbutton/)
- *
  * @module themes/splitbutton
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface SplitButtonDesignTokens extends DesignTokens<SplitButtonDesignTokens> {

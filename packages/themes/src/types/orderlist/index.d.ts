@@ -2,11 +2,10 @@
  *
  * OrderList Design Tokens
  *
- * [Live Demo](https://www.primeng.org/orderlist/)
- *
  * @module themes/orderlist
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface OrderListDesignTokens extends DesignTokens<OrderListDesignTokens> {

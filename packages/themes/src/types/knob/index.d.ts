@@ -2,11 +2,10 @@
  *
  * Knob Design Tokens
  *
- * [Live Demo](https://www.primeng.org/knob/)
- *
  * @module themes/knob
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface KnobDesignTokens extends DesignTokens<KnobDesignTokens> {

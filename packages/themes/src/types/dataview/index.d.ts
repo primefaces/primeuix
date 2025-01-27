@@ -2,11 +2,10 @@
  *
  * DataView Design Tokens
  *
- * [Live Demo](https://www.primeng.org/dataview/)
- *
  * @module themes/dataview
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface DataViewDesignTokens extends DesignTokens<DataViewDesignTokens> {

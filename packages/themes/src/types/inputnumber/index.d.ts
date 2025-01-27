@@ -2,11 +2,10 @@
  *
  * InputNumber Design Tokens
  *
- * [Live Demo](https://www.primeng.org/inputnumber/)
- *
  * @module themes/inputnumber
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface InputNumberDesignTokens extends DesignTokens<InputNumberDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * Skeleton Design Tokens
  *
- * [Live Demo](https://www.primeng.org/skeleton/)
- *
  * @module themes/skeleton
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface SkeletonDesignTokens extends DesignTokens<SkeletonDesignTokens> {

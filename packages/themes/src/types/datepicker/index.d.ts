@@ -2,11 +2,10 @@
  *
  * DatePicker Design Tokens
  *
- * [Live Demo](https://www.primeng.org/datepicker/)
- *
  * @module themes/datepicker
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTokens> {
@@ -90,18 +89,6 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.header.padding
          */
         padding?: string;
-        /**
-         * Font weight of header
-         *
-         * @designToken datepicker.header.font.weight
-         */
-        fontWeight?: string;
-        /**
-         * Gap of header
-         *
-         * @designToken datepicker.header.gap
-         */
-        gap?: string;
     };
     /**
      * Used to pass tokens of the title section
@@ -130,6 +117,28 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.dropdown.width
          */
         width?: string;
+        /**
+         * Sm of dropdown
+         */
+        sm?: {
+            /**
+             * Sm width of dropdown
+             *
+             * @designToken datepicker.dropdown.sm.width
+             */
+            width?: string;
+        };
+        /**
+         * Lg of dropdown
+         */
+        lg?: {
+            /**
+             * Lg width of dropdown
+             *
+             * @designToken datepicker.dropdown.lg.width
+             */
+            width?: string;
+        };
         /**
          * Border color of dropdown
          *
@@ -507,6 +516,12 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
      * Used to pass tokens of the year section
      */
     year?: {
+        /**
+         * Padding of year
+         *
+         * @designToken datepicker.year.padding
+         */
+        padding?: string;
         /**
          * Border radius of year
          *

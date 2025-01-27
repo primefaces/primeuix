@@ -2,11 +2,10 @@
  *
  * ToggleSwitch Design Tokens
  *
- * [Live Demo](https://www.primeng.org/toggleswitch/)
- *
  * @module themes/toggleswitch
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesignTokens> {

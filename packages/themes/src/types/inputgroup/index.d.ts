@@ -2,11 +2,10 @@
  *
  * InputGroup Design Tokens
  *
- * [Live Demo](https://www.primeng.org/inputgroup/)
- *
  * @module themes/inputgroup
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface InputGroupDesignTokens extends DesignTokens<InputGroupDesignTokens> {

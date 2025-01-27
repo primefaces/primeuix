@@ -2,11 +2,10 @@
  *
  * MeterGroup Design Tokens
  *
- * [Live Demo](https://www.primeng.org/metergroup/)
- *
  * @module themes/metergroup
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * Password Design Tokens
  *
- * [Live Demo](https://www.primeng.org/password/)
- *
  * @module themes/password
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens> {

@@ -2,11 +2,10 @@
  *
  * Tabs Design Tokens
  *
- * [Live Demo](https://www.primeng.org/tabs/)
- *
  * @module themes/tabs
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface TabsDesignTokens extends DesignTokens<TabsDesignTokens> {

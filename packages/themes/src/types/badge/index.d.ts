@@ -2,11 +2,10 @@
  *
  * Badge Design Tokens
  *
- * [Live Demo](https://www.primeng.org/badge/)
- *
  * @module themes/badge
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {

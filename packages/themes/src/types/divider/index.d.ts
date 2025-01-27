@@ -2,11 +2,10 @@
  *
  * Divider Design Tokens
  *
- * [Live Demo](https://www.primeng.org/divider/)
- *
  * @module themes/divider
  *
  */
+
 import { DesignTokens } from '..';
 
 export interface DividerDesignTokens extends DesignTokens<DividerDesignTokens> {
