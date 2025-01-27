@@ -539,7 +539,7 @@ export const theme = ({ dt }: ThemeStyleOptions) => `
 }
 
 .p-datatable.p-datatable-lg .p-datatable-tbody > tr > td {
-    padding: ${dt('datatable.body.lg.padding')};
+    padding: ${dt('datatable.body.cell.lg.padding')};
 }
 
 .p-datatable.p-datatable-lg .p-datatable-tfoot > tr > td {
