@@ -1,6 +1,6 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import { StyleOptions } from '../types';
 
-export const theme = ({ dt }: ThemeStyleOptions) => `
+export const style = ({ dt }: StyleOptions) => `
 .p-colorpicker {
     display: inline-block;
     position: relative;

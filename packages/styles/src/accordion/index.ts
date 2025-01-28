@@ -1,6 +1,6 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import { StyleOptions } from '../types';
 
-export const theme = ({ dt }: ThemeStyleOptions) => `
+export const style = ({ dt }: StyleOptions) => `
 .p-accordionpanel {
     display: flex;
     flex-direction: column;

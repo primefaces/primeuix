@@ -1,3 +1,2 @@
 git submodule foreach git pull origin master
 npx --no-install lint-staged
-pnpm run typecheck

@@ -12,6 +12,9 @@ export * as AvatarStyle from '@primeuix/styles/avatar';
 // Badge
 export * as BadgeStyle from '@primeuix/styles/badge';
 
+// Base
+export * as BaseeStyle from '@primeuix/styles/base';
+
 // BlockUI
 export * as BlockUIStyle from '@primeuix/styles/blockui';
 

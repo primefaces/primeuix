@@ -1,6 +1,6 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import { StyleOptions } from '../types';
 
-export const theme = ({ dt }: ThemeStyleOptions) => `
+export const style = ({ dt }: StyleOptions) => `
 .p-panel {
     border: 1px solid ${dt('panel.border.color')};
     border-radius: ${dt('panel.border.radius')};

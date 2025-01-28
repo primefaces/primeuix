@@ -1,6 +1,6 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import { StyleOptions } from '../types';
 
-export const theme = ({ dt }: ThemeStyleOptions) => `
+export const style = ({ dt }: StyleOptions) => `
 .p-toast {
     width: ${dt('toast.width')};
     white-space: pre-line;

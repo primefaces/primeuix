@@ -1,6 +1,6 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import { StyleOptions } from '../types';
 
-export const theme = ({ dt }: ThemeStyleOptions) => `
+export const style = ({ dt }: StyleOptions) => `
 .p-virtualscroller-loader {
     background: ${dt('virtualscroller.loader.mask.background')};
     color: ${dt('virtualscroller.loader.mask.color')};
