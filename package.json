@@ -30,6 +30,7 @@
         "ng:dev": "./scripts/dev.sh ng",
         "vue:setup": "./scripts/setup.sh vue",
         "vue:dev": "./scripts/dev.sh vue",
+        "typecheck": "pnpm --filter './packages/*' typecheck",
         "test": "pnpm run test:locale",
         "test:locale": "pnpm --filter locale test",
         "security:check": "pnpm audit --production --audit-level high",
