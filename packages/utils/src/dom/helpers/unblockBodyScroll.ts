@@ -1,8 +1,15 @@
-import getCSSVariableByRegex from '../methods/getCSSVariableByRegex';
 import removeClass from '../methods/removeClass';
 
-export default function unblockBodyScroll(className: string = 'p-overflow-hidden'): void {
-    const variableData = getCSSVariableByRegex(/-scrollbar-width$/);
-    variableData?.name && document.body.style.removeProperty(variableData.name);
-    removeClass(document.body, className);
+export interface UnblockBodyScrollOptions {
+    className?: string;
+    variableName?: string;
+}
+
+export default function unblockBodyScroll(option: string | UnblockBodyScrollOptions | undefined): void {
+    if (typeof option === 'string') {
+        removeClass(document.body, option || 'p-overflow-hidden');
+    } else {
+        option?.variableName && document.body.style.removeProperty(option.variableName);
+        removeClass(document.body, option?.className || 'p-overflow-hidden');
+    }
 }
