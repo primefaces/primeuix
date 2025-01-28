@@ -21,7 +21,7 @@ export default defineConfig({
     clean: true,
     terserOptions: {
         mangle: {
-            reserved: ['theme', 'css']
+            reserved: ['theme', 'style', 'css']
         }
     }
 });

@@ -29,7 +29,7 @@ export default defineConfig([
         clean: true,
         terserOptions: {
             mangle: {
-                reserved: ['theme', 'css']
+                reserved: ['theme', 'style', 'css']
             }
         }
     },
@@ -43,7 +43,7 @@ export default defineConfig([
         minify: 'terser',
         terserOptions: {
             mangle: {
-                reserved: ['theme', 'css']
+                reserved: ['theme', 'style', 'css']
             }
         },
         outExtension: () => ({ js: `.js` })
