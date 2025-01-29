@@ -1,4 +1,4 @@
-# primeuix
+# PRIMEUIX
 
 ### Setup
 
