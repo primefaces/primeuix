@@ -15,8 +15,8 @@
    If any issues occur, it may be necessary to manually run the following command for each package inside the `packages` folder:
 
    ```sh
-   cd packages/forms pnpm run dev:link
-   cd packages/themes pnpm run dev:link
+   cd packages/forms && pnpm run dev:link
+   cd packages/themes && pnpm run dev:link
    ...
    ```
 
