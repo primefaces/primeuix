@@ -26,9 +26,8 @@
    cd packages/themes && sudo pnpm run dev:link
    ...
    ```
-
-   > [!NOTE]
-   > This linking process only needs to be performed once._
+> [!NOTE]
+> This linking process only needs to be performed once.
 
 2. **Setup the Project**  
    Run the setup command:
