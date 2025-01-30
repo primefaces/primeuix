@@ -4,7 +4,7 @@
     "author": "PrimeTek Informatics",
     "repository": {
         "type": "git",
-        "url": "https://github.com/primefaces/primeuix.git"
+        "url": "git+https://github.com/primefaces/primeuix.git"
     },
     "license": "MIT",
     "bugs": {
@@ -36,7 +36,7 @@
         "security:check": "pnpm audit --production --audit-level high",
         "format": "prettier --write \"**/*.{js,mjs,ts,mts,d.ts}\"",
         "format:check": "prettier --check \"**/*.{js,mjs,ts,mts,d.ts}\" ",
-        "lint": "eslint --ext \".js,.mjs,.ts\" --ignore-path .gitignore . --cache",
+        "lint": "eslint",
         "lint:fix": "eslint --fix --ext \".js,.mjs,.ts\" --ignore-path .gitignore ."
     },
     "devDependencies": {
@@ -50,7 +50,8 @@
         "@rollup/plugin-terser": "^0.4.4",
         "@types/jest": "^27.4.0",
         "cross-env": "^7.0.3",
-        "eslint": "^9.2.0",
+        "eslint": "^9.19.0",
+        "eslint-config-prettier": "^9.1.0",
         "fs-extra": "^11.2.0",
         "glob": "^10.4.2",
         "husky": "^9.1.6",
@@ -64,7 +65,8 @@
         "ts-jest": "^29.2.5",
         "ts-node": "^10.4.0",
         "tsup": "^8.1.0",
-        "typescript": "^5.6.3"
+        "typescript": "^5.6.3",
+        "typescript-eslint": "^8.22.0"
     },
     "publishConfig": {
         "access": "public"
