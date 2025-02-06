@@ -4,15 +4,18 @@
  *
  * @module themes/dialog
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface DialogDesignTokens extends DesignTokens<DialogDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace DialogTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -43,11 +46,9 @@ export interface DialogDesignTokens extends DesignTokens<DialogDesignTokens> {
          * @designToken dialog.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the header section
-     */
-    header?: {
+    }
+
+    interface Header {
         /**
          * Padding of header
          *
@@ -60,11 +61,9 @@ export interface DialogDesignTokens extends DesignTokens<DialogDesignTokens> {
          * @designToken dialog.header.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the title section
-     */
-    title?: {
+    }
+
+    interface Title {
         /**
          * Font size of title
          *
@@ -77,22 +76,18 @@ export interface DialogDesignTokens extends DesignTokens<DialogDesignTokens> {
          * @designToken dialog.title.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Padding of content
          *
          * @designToken dialog.content.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the footer section
-     */
-    footer?: {
+    }
+
+    interface Footer {
         /**
          * Padding of footer
          *
@@ -105,5 +100,36 @@ export interface DialogDesignTokens extends DesignTokens<DialogDesignTokens> {
          * @designToken dialog.footer.gap
          */
         gap?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<DialogDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface DialogDesignTokens extends DesignTokens<DialogDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: DialogTokenSections.Root;
+    /**
+     * Used to pass tokens of the header section
+     */
+    header?: DialogTokenSections.Header;
+    /**
+     * Used to pass tokens of the title section
+     */
+    title?: DialogTokenSections.Title;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: DialogTokenSections.Content;
+    /**
+     * Used to pass tokens of the footer section
+     */
+    footer?: DialogTokenSections.Footer;
 }

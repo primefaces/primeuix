@@ -1,5 +1,5 @@
-export interface NoraBaseDesignTokens {
-    primitive?: {
+declare namespace NoraBaseTokenSections {
+    interface Primitive {
         borderRadius?: {
             none?: string;
             xs?: string;
@@ -294,8 +294,9 @@ export interface NoraBaseDesignTokens {
             900?: string;
             950?: string;
         };
-    };
-    semantic?: {
+    }
+
+    interface Semantic {
         transitionDuration?: string;
         focusRing?: {
             width?: string;
@@ -653,5 +654,10 @@ export interface NoraBaseDesignTokens {
                 };
             };
         };
-    };
+    }
+}
+
+export interface NoraBaseDesignTokens {
+    primitive?: NoraBaseTokenSections.Primitive;
+    semantic?: NoraBaseTokenSections.Semantic;
 }

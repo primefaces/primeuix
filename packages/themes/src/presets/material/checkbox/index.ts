@@ -1,56 +1,57 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
-import type { CheckboxDesignTokens } from '@primeuix/themes/types/checkbox';
+import type { CheckboxDesignTokens, CheckboxTokenSections } from '@primeuix/themes/types/checkbox';
 
-export default {
-    root: {
-        borderRadius: '{border.radius.xs}',
-        width: '18px',
-        height: '18px',
-        background: '{form.field.background}',
-        checkedBackground: '{primary.color}',
-        checkedHoverBackground: '{primary.color}',
-        disabledBackground: '{form.field.disabled.background}',
-        filledBackground: '{form.field.filled.background}',
-        borderColor: '{form.field.border.color}',
-        hoverBorderColor: '{form.field.hover.border.color}',
-        focusBorderColor: '{form.field.focus.border.color}',
-        checkedBorderColor: '{primary.color}',
-        checkedHoverBorderColor: '{primary.color}',
-        checkedFocusBorderColor: '{primary.color}',
-        checkedDisabledBorderColor: '{form.field.border.color}',
-        invalidBorderColor: '{form.field.invalid.border.color}',
-        shadow: '{form.field.shadow}',
-        focusRing: {
-            width: '0',
-            style: 'none',
-            color: 'unset',
-            offset: '0',
-            shadow: 'none'
-        },
-        transitionDuration: '{form.field.transition.duration}',
-        sm: {
-            width: '14px',
-            height: '14px'
-        },
-        lg: {
-            width: '22px',
-            height: '22px'
-        }
+export const root: CheckboxTokenSections.Root = {
+    borderRadius: '{border.radius.xs}',
+    width: '18px',
+    height: '18px',
+    background: '{form.field.background}',
+    checkedBackground: '{primary.color}',
+    checkedHoverBackground: '{primary.color}',
+    disabledBackground: '{form.field.disabled.background}',
+    filledBackground: '{form.field.filled.background}',
+    borderColor: '{form.field.border.color}',
+    hoverBorderColor: '{form.field.hover.border.color}',
+    focusBorderColor: '{form.field.focus.border.color}',
+    checkedBorderColor: '{primary.color}',
+    checkedHoverBorderColor: '{primary.color}',
+    checkedFocusBorderColor: '{primary.color}',
+    checkedDisabledBorderColor: '{form.field.border.color}',
+    invalidBorderColor: '{form.field.invalid.border.color}',
+    shadow: '{form.field.shadow}',
+    focusRing: {
+        width: '0',
+        style: 'none',
+        color: 'unset',
+        offset: '0',
+        shadow: 'none'
     },
-    icon: {
-        size: '0.875rem',
-        color: '{form.field.color}',
-        checkedColor: '{primary.contrast.color}',
-        checkedHoverColor: '{primary.contrast.color}',
-        disabledColor: '{form.field.disabled.color}',
-        sm: {
-            size: '0.75rem'
-        },
-        lg: {
-            size: '1rem'
-        }
+    transitionDuration: '{form.field.transition.duration}',
+    sm: {
+        width: '14px',
+        height: '14px'
     },
-    css: ({ dt }: ThemeStyleOptions) => `
+    lg: {
+        width: '22px',
+        height: '22px'
+    }
+};
+
+export const icon: CheckboxTokenSections.Icon = {
+    size: '0.875rem',
+    color: '{form.field.color}',
+    checkedColor: '{primary.contrast.color}',
+    checkedHoverColor: '{primary.contrast.color}',
+    disabledColor: '{form.field.disabled.color}',
+    sm: {
+        size: '0.75rem'
+    },
+    lg: {
+        size: '1rem'
+    }
+};
+
+// @section:css-start
+export const css: CheckboxTokenSections.CSS = ({ dt }) => `
 .p-checkbox {
     border-radius: 50%;
     transition: box-shadow ${dt('checkbox.transition.duration')};
@@ -129,5 +130,11 @@ export default {
       transform: translate3d(0,calc(-1 * var(--p-md-check-icon-h)),0) rotate(45deg);
     }
 }
-`
+`;
+// @section:css-end
+
+export default {
+    root,
+    icon,
+    css
 } satisfies CheckboxDesignTokens;

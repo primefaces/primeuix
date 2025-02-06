@@ -4,15 +4,18 @@
  *
  * @module themes/menubar
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace MenubarTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -55,11 +58,9 @@ export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
          * @designToken menubar.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the base item section
-     */
-    baseItem?: {
+    }
+
+    interface BaseItem {
         /**
          * Border radius of base item
          *
@@ -72,11 +73,9 @@ export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
          * @designToken menubar.base.item.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Focus background of item
          *
@@ -148,11 +147,9 @@ export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
              */
             activeColor?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the submenu section
-     */
-    submenu?: {
+    }
+
+    interface Submenu {
         /**
          * Padding of submenu
          *
@@ -224,22 +221,18 @@ export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
              */
             activeColor?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: {
+    }
+
+    interface Separator {
         /**
          * Border color of separator
          *
          * @designToken menubar.separator.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the mobile button section
-     */
-    mobileButton?: {
+    }
+
+    interface MobileButton {
         /**
          * Border radius of mobile button
          *
@@ -305,5 +298,40 @@ export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
              */
             shadow?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<MenubarDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: MenubarTokenSections.Root;
+    /**
+     * Used to pass tokens of the base item section
+     */
+    baseItem?: MenubarTokenSections.BaseItem;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: MenubarTokenSections.Item;
+    /**
+     * Used to pass tokens of the submenu section
+     */
+    submenu?: MenubarTokenSections.Submenu;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: MenubarTokenSections.Separator;
+    /**
+     * Used to pass tokens of the mobile button section
+     */
+    mobileButton?: MenubarTokenSections.MobileButton;
 }

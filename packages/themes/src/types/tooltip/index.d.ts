@@ -4,15 +4,18 @@
  *
  * @module themes/tooltip
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TooltipDesignTokens extends DesignTokens<TooltipDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TooltipTokenSections {
+    interface Root {
         /**
          * Max width of root
          *
@@ -55,5 +58,20 @@ export interface TooltipDesignTokens extends DesignTokens<TooltipDesignTokens> {
          * @designToken tooltip.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TooltipDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TooltipDesignTokens extends DesignTokens<TooltipDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TooltipTokenSections.Root;
 }

@@ -4,15 +4,18 @@
  *
  * @module themes/terminal
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TerminalDesignTokens extends DesignTokens<TerminalDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TerminalTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -49,27 +52,46 @@ export interface TerminalDesignTokens extends DesignTokens<TerminalDesignTokens>
          * @designToken terminal.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the prompt section
-     */
-    prompt?: {
+    }
+
+    interface Prompt {
         /**
          * Gap of prompt
          *
          * @designToken terminal.prompt.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the command response section
-     */
-    commandResponse?: {
+    }
+
+    interface CommandResponse {
         /**
          * Margin of command response
          *
          * @designToken terminal.command.response.margin
          */
         margin?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TerminalDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TerminalDesignTokens extends DesignTokens<TerminalDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TerminalTokenSections.Root;
+    /**
+     * Used to pass tokens of the prompt section
+     */
+    prompt?: TerminalTokenSections.Prompt;
+    /**
+     * Used to pass tokens of the command response section
+     */
+    commandResponse?: TerminalTokenSections.CommandResponse;
 }

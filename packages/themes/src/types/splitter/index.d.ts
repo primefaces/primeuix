@@ -4,15 +4,18 @@
  *
  * @module themes/splitter
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface SplitterDesignTokens extends DesignTokens<SplitterDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace SplitterTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -37,22 +40,18 @@ export interface SplitterDesignTokens extends DesignTokens<SplitterDesignTokens>
          * @designToken splitter.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the gutter section
-     */
-    gutter?: {
+    }
+
+    interface Gutter {
         /**
          * Background of gutter
          *
          * @designToken splitter.gutter.background
          */
         background?: string;
-    };
-    /**
-     * Used to pass tokens of the handle section
-     */
-    handle?: {
+    }
+
+    interface Handle {
         /**
          * Size of handle
          *
@@ -106,5 +105,28 @@ export interface SplitterDesignTokens extends DesignTokens<SplitterDesignTokens>
              */
             shadow?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<SplitterDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface SplitterDesignTokens extends DesignTokens<SplitterDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SplitterTokenSections.Root;
+    /**
+     * Used to pass tokens of the gutter section
+     */
+    gutter?: SplitterTokenSections.Gutter;
+    /**
+     * Used to pass tokens of the handle section
+     */
+    handle?: SplitterTokenSections.Handle;
 }

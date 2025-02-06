@@ -4,15 +4,18 @@
  *
  * @module themes/knob
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface KnobDesignTokens extends DesignTokens<KnobDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace KnobTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
@@ -54,38 +57,59 @@ export interface KnobDesignTokens extends DesignTokens<KnobDesignTokens> {
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the value section
-     */
-    value?: {
+    }
+
+    interface Value {
         /**
          * Background of value
          *
          * @designToken knob.value.background
          */
         background?: string;
-    };
-    /**
-     * Used to pass tokens of the range section
-     */
-    range?: {
+    }
+
+    interface Range {
         /**
          * Background of range
          *
          * @designToken knob.range.background
          */
         background?: string;
-    };
-    /**
-     * Used to pass tokens of the text section
-     */
-    text?: {
+    }
+
+    interface Text {
         /**
          * Color of text
          *
          * @designToken knob.text.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<KnobDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface KnobDesignTokens extends DesignTokens<KnobDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: KnobTokenSections.Root;
+    /**
+     * Used to pass tokens of the value section
+     */
+    value?: KnobTokenSections.Value;
+    /**
+     * Used to pass tokens of the range section
+     */
+    range?: KnobTokenSections.Range;
+    /**
+     * Used to pass tokens of the text section
+     */
+    text?: KnobTokenSections.Text;
 }

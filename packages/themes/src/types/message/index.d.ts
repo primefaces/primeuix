@@ -4,15 +4,18 @@
  *
  * @module themes/message
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace MessageTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -31,11 +34,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
          * @designToken message.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Padding of content
          *
@@ -70,11 +71,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the text section
-     */
-    text?: {
+    }
+
+    interface Text {
         /**
          * Font size of text
          *
@@ -109,11 +108,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             fontSize?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
@@ -142,11 +139,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             size?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the close button section
-     */
-    closeButton?: {
+    }
+
+    interface CloseButton {
         /**
          * Width of close button
          *
@@ -188,11 +183,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             offset?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the close icon section
-     */
-    closeIcon?: {
+    }
+
+    interface CloseIcon {
         /**
          * Size of close icon
          *
@@ -221,11 +214,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             size?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the outlined section
-     */
-    outlined?: {
+    }
+
+    interface Outlined {
         /**
          * Root of outlined
          */
@@ -237,11 +228,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             borderWidth?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the simple section
-     */
-    simple?: {
+    }
+
+    interface Simple {
         /**
          * Content of simple
          */
@@ -253,11 +242,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the info section
-     */
-    info?: {
+    }
+
+    interface Info {
         /**
          * Background of info
          *
@@ -338,11 +325,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             color?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the success section
-     */
-    success?: {
+    }
+
+    interface Success {
         /**
          * Background of success
          *
@@ -423,11 +408,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             color?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the warn section
-     */
-    warn?: {
+    }
+
+    interface Warn {
         /**
          * Background of warn
          *
@@ -508,11 +491,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             color?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the error section
-     */
-    error?: {
+    }
+
+    interface Error {
         /**
          * Background of error
          *
@@ -593,11 +574,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             color?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the secondary section
-     */
-    secondary?: {
+    }
+
+    interface Secondary {
         /**
          * Background of secondary
          *
@@ -678,11 +657,9 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             color?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the contrast section
-     */
-    contrast?: {
+    }
+
+    interface Contrast {
         /**
          * Background of contrast
          *
@@ -763,5 +740,72 @@ export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
              */
             color?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<MessageDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface MessageDesignTokens extends DesignTokens<MessageDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: MessageTokenSections.Root;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: MessageTokenSections.Content;
+    /**
+     * Used to pass tokens of the text section
+     */
+    text?: MessageTokenSections.Text;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: MessageTokenSections.Icon;
+    /**
+     * Used to pass tokens of the close button section
+     */
+    closeButton?: MessageTokenSections.CloseButton;
+    /**
+     * Used to pass tokens of the close icon section
+     */
+    closeIcon?: MessageTokenSections.CloseIcon;
+    /**
+     * Used to pass tokens of the outlined section
+     */
+    outlined?: MessageTokenSections.Outlined;
+    /**
+     * Used to pass tokens of the simple section
+     */
+    simple?: MessageTokenSections.Simple;
+    /**
+     * Used to pass tokens of the info section
+     */
+    info?: MessageTokenSections.Info;
+    /**
+     * Used to pass tokens of the success section
+     */
+    success?: MessageTokenSections.Success;
+    /**
+     * Used to pass tokens of the warn section
+     */
+    warn?: MessageTokenSections.Warn;
+    /**
+     * Used to pass tokens of the error section
+     */
+    error?: MessageTokenSections.Error;
+    /**
+     * Used to pass tokens of the secondary section
+     */
+    secondary?: MessageTokenSections.Secondary;
+    /**
+     * Used to pass tokens of the contrast section
+     */
+    contrast?: MessageTokenSections.Contrast;
 }

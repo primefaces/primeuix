@@ -4,26 +4,27 @@
  *
  * @module themes/tabmenu
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TabmenuDesignTokens extends DesignTokens<TabmenuDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TabmenuTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken tabmenu.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the tablist section
-     */
-    tablist?: {
+    }
+
+    interface Tablist {
         /**
          * Border width of tablist
          *
@@ -42,11 +43,9 @@ export interface TabmenuDesignTokens extends DesignTokens<TabmenuDesignTokens> {
          * @designToken tabmenu.tablist.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Background of item
          *
@@ -166,11 +165,9 @@ export interface TabmenuDesignTokens extends DesignTokens<TabmenuDesignTokens> {
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the item icon section
-     */
-    itemIcon?: {
+    }
+
+    interface ItemIcon {
         /**
          * Color of item icon
          *
@@ -189,11 +186,9 @@ export interface TabmenuDesignTokens extends DesignTokens<TabmenuDesignTokens> {
          * @designToken tabmenu.item.icon.active.color
          */
         activeColor?: string;
-    };
-    /**
-     * Used to pass tokens of the active bar section
-     */
-    activeBar?: {
+    }
+
+    interface ActiveBar {
         /**
          * Height of active bar
          *
@@ -212,5 +207,36 @@ export interface TabmenuDesignTokens extends DesignTokens<TabmenuDesignTokens> {
          * @designToken tabmenu.active.bar.background
          */
         background?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TabmenuDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TabmenuDesignTokens extends DesignTokens<TabmenuDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TabmenuTokenSections.Root;
+    /**
+     * Used to pass tokens of the tablist section
+     */
+    tablist?: TabmenuTokenSections.Tablist;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: TabmenuTokenSections.Item;
+    /**
+     * Used to pass tokens of the item icon section
+     */
+    itemIcon?: TabmenuTokenSections.ItemIcon;
+    /**
+     * Used to pass tokens of the active bar section
+     */
+    activeBar?: TabmenuTokenSections.ActiveBar;
 }

@@ -1,30 +1,36 @@
-import type { ScrollPanelDesignTokens } from '@primeuix/themes/types/scrollpanel';
+import type { ScrollPanelDesignTokens, ScrollPanelTokenSections } from '@primeuix/themes/types/scrollpanel';
 
-export default {
-    root: {
-        transitionDuration: '{transition.duration}'
-    },
-    bar: {
-        size: '9px',
-        borderRadius: '{border.radius.sm}',
-        focusRing: {
-            width: '{focus.ring.width}',
-            style: '{focus.ring.style}',
-            color: '{focus.ring.color}',
-            offset: '{focus.ring.offset}',
-            shadow: '{focus.ring.shadow}'
+export const root: ScrollPanelTokenSections.Root = {
+    transitionDuration: '{transition.duration}'
+};
+
+export const bar: ScrollPanelTokenSections.Bar = {
+    size: '9px',
+    borderRadius: '{border.radius.sm}',
+    focusRing: {
+        width: '{focus.ring.width}',
+        style: '{focus.ring.style}',
+        color: '{focus.ring.color}',
+        offset: '{focus.ring.offset}',
+        shadow: '{focus.ring.shadow}'
+    }
+};
+
+export const colorScheme: ScrollPanelTokenSections.ColorScheme = {
+    light: {
+        bar: {
+            background: '{surface.200}'
         }
     },
-    colorScheme: {
-        light: {
-            bar: {
-                background: '{surface.200}'
-            }
-        },
-        dark: {
-            bar: {
-                background: '{surface.700}'
-            }
+    dark: {
+        bar: {
+            background: '{surface.700}'
         }
     }
+};
+
+export default {
+    root,
+    bar,
+    colorScheme
 } satisfies ScrollPanelDesignTokens;

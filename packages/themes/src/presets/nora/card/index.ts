@@ -1,24 +1,34 @@
-import type { CardDesignTokens } from '@primeuix/themes/types/card';
+import type { CardDesignTokens, CardTokenSections } from '@primeuix/themes/types/card';
+
+export const root: CardTokenSections.Root = {
+    background: '{content.background}',
+    borderRadius: '{border.radius.sm}',
+    color: '{content.color}',
+    shadow: '0 1px 4px 0 rgba(0, 0, 0, 0.1)'
+};
+
+export const body: CardTokenSections.Body = {
+    padding: '1.25rem',
+    gap: '0.5rem'
+};
+
+export const caption: CardTokenSections.Caption = {
+    gap: '0.5rem'
+};
+
+export const title: CardTokenSections.Title = {
+    fontSize: '1.25rem',
+    fontWeight: '500'
+};
+
+export const subtitle: CardTokenSections.Subtitle = {
+    color: '{text.muted.color}'
+};
 
 export default {
-    root: {
-        background: '{content.background}',
-        borderRadius: '{border.radius.sm}',
-        color: '{content.color}',
-        shadow: '0 1px 4px 0 rgba(0, 0, 0, 0.1)'
-    },
-    body: {
-        padding: '1.25rem',
-        gap: '0.5rem'
-    },
-    caption: {
-        gap: '0.5rem'
-    },
-    title: {
-        fontSize: '1.25rem',
-        fontWeight: '500'
-    },
-    subtitle: {
-        color: '{text.muted.color}'
-    }
+    root,
+    body,
+    caption,
+    title,
+    subtitle
 } satisfies CardDesignTokens;

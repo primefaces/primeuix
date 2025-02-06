@@ -4,15 +4,18 @@
  *
  * @module themes/treetable
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TreeTableTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
@@ -25,11 +28,9 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the header section
-     */
-    header?: {
+    }
+
+    interface Header {
         /**
          * Background of header
          *
@@ -60,11 +61,9 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.header.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the header cell section
-     */
-    headerCell?: {
+    }
+
+    interface HeaderCell {
         /**
          * Background of header cell
          *
@@ -154,22 +153,18 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the column title section
-     */
-    columnTitle?: {
+    }
+
+    interface ColumnTitle {
         /**
          * Font weight of column title
          *
          * @designToken treetable.column.title.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the row section
-     */
-    row?: {
+    }
+
+    interface Row {
         /**
          * Background of row
          *
@@ -241,11 +236,9 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the body cell section
-     */
-    bodyCell?: {
+    }
+
+    interface BodyCell {
         /**
          * Border color of body cell
          *
@@ -270,11 +263,9 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.body.cell.selected.border.color
          */
         selectedBorderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the footer cell section
-     */
-    footerCell?: {
+    }
+
+    interface FooterCell {
         /**
          * Background of footer cell
          *
@@ -299,22 +290,18 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.footer.cell.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the column footer section
-     */
-    columnFooter?: {
+    }
+
+    interface ColumnFooter {
         /**
          * Font weight of column footer
          *
          * @designToken treetable.column.footer.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the footer section
-     */
-    footer?: {
+    }
+
+    interface Footer {
         /**
          * Background of footer
          *
@@ -345,22 +332,18 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.footer.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the column resizer section
-     */
-    columnResizer?: {
+    }
+
+    interface ColumnResizer {
         /**
          * Width of column resizer
          *
          * @designToken treetable.column.resizer.width
          */
         width?: string;
-    };
-    /**
-     * Used to pass tokens of the resize indicator section
-     */
-    resizeIndicator?: {
+    }
+
+    interface ResizeIndicator {
         /**
          * Width of resize indicator
          *
@@ -373,11 +356,9 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.resize.indicator.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the sort icon section
-     */
-    sortIcon?: {
+    }
+
+    interface SortIcon {
         /**
          * Color of sort icon
          *
@@ -396,22 +377,18 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.sort.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the loading icon section
-     */
-    loadingIcon?: {
+    }
+
+    interface LoadingIcon {
         /**
          * Size of loading icon
          *
          * @designToken treetable.loading.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the node toggle button section
-     */
-    nodeToggleButton?: {
+    }
+
+    interface NodeToggleButton {
         /**
          * Hover background of node toggle button
          *
@@ -489,11 +466,9 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the paginator top section
-     */
-    paginatorTop?: {
+    }
+
+    interface PaginatorTop {
         /**
          * Border color of paginator top
          *
@@ -506,11 +481,9 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.paginator.top.border.width
          */
         borderWidth?: string;
-    };
-    /**
-     * Used to pass tokens of the paginator bottom section
-     */
-    paginatorBottom?: {
+    }
+
+    interface PaginatorBottom {
         /**
          * Border color of paginator bottom
          *
@@ -523,5 +496,80 @@ export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignToken
          * @designToken treetable.paginator.bottom.border.width
          */
         borderWidth?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TreeTableDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TreeTableDesignTokens extends DesignTokens<TreeTableDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TreeTableTokenSections.Root;
+    /**
+     * Used to pass tokens of the header section
+     */
+    header?: TreeTableTokenSections.Header;
+    /**
+     * Used to pass tokens of the header cell section
+     */
+    headerCell?: TreeTableTokenSections.HeaderCell;
+    /**
+     * Used to pass tokens of the column title section
+     */
+    columnTitle?: TreeTableTokenSections.ColumnTitle;
+    /**
+     * Used to pass tokens of the row section
+     */
+    row?: TreeTableTokenSections.Row;
+    /**
+     * Used to pass tokens of the body cell section
+     */
+    bodyCell?: TreeTableTokenSections.BodyCell;
+    /**
+     * Used to pass tokens of the footer cell section
+     */
+    footerCell?: TreeTableTokenSections.FooterCell;
+    /**
+     * Used to pass tokens of the column footer section
+     */
+    columnFooter?: TreeTableTokenSections.ColumnFooter;
+    /**
+     * Used to pass tokens of the footer section
+     */
+    footer?: TreeTableTokenSections.Footer;
+    /**
+     * Used to pass tokens of the column resizer section
+     */
+    columnResizer?: TreeTableTokenSections.ColumnResizer;
+    /**
+     * Used to pass tokens of the resize indicator section
+     */
+    resizeIndicator?: TreeTableTokenSections.ResizeIndicator;
+    /**
+     * Used to pass tokens of the sort icon section
+     */
+    sortIcon?: TreeTableTokenSections.SortIcon;
+    /**
+     * Used to pass tokens of the loading icon section
+     */
+    loadingIcon?: TreeTableTokenSections.LoadingIcon;
+    /**
+     * Used to pass tokens of the node toggle button section
+     */
+    nodeToggleButton?: TreeTableTokenSections.NodeToggleButton;
+    /**
+     * Used to pass tokens of the paginator top section
+     */
+    paginatorTop?: TreeTableTokenSections.PaginatorTop;
+    /**
+     * Used to pass tokens of the paginator bottom section
+     */
+    paginatorBottom?: TreeTableTokenSections.PaginatorBottom;
 }

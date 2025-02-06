@@ -4,85 +4,86 @@
  *
  * @module themes/floatlabel
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface FloatLabelDesignTokens extends DesignTokens<FloatLabelDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace FloatLabelTokenSections {
+    interface Root {
         /**
          * Color of root
          *
          * @designToken floatlabel.color
          */
-        color?: string;
+        color: string;
         /**
          * Focus color of root
          *
          * @designToken floatlabel.focus.color
          */
-        focusColor?: string;
+        focusColor: string;
         /**
          * Active color of root
          *
          * @designToken floatlabel.active.color
          */
-        activeColor?: string;
+        activeColor: string;
         /**
          * Invalid color of root
          *
          * @designToken floatlabel.invalid.color
          */
-        invalidColor?: string;
+        invalidColor: string;
         /**
          * Transition duration of root
          *
          * @designToken floatlabel.transition.duration
          */
-        transitionDuration?: string;
+        transitionDuration: string;
         /**
          * Position x of root
          *
          * @designToken floatlabel.position.x
          */
-        positionX?: string;
+        positionX: string;
         /**
          * Position y of root
          *
          * @designToken floatlabel.position.y
          */
-        positionY?: string;
+        positionY: string;
         /**
          * Font weight of root
          *
          * @designToken floatlabel.font.weight
          */
-        fontWeight?: string;
+        fontWeight: string;
         /**
          * Active of root
          */
-        active?: {
+        active: {
             /**
              * Active font size of root
              *
              * @designToken floatlabel.active.font.size
              */
-            fontSize?: string;
+            fontSize: string;
             /**
              * Active font weight of root
              *
              * @designToken floatlabel.active.font.weight
              */
-            fontWeight?: string;
+            fontWeight: string;
         };
-    };
-    /**
-     * Used to pass tokens of the over section
-     */
-    over?: {
+    }
+
+    interface Over {
         /**
          * Active of over
          */
@@ -94,11 +95,9 @@ export interface FloatLabelDesignTokens extends DesignTokens<FloatLabelDesignTok
              */
             top?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the in section
-     */
-    in?: {
+    }
+
+    interface In {
         /**
          * Input of in
          */
@@ -127,11 +126,9 @@ export interface FloatLabelDesignTokens extends DesignTokens<FloatLabelDesignTok
              */
             top?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the on section
-     */
-    on?: {
+    }
+
+    interface On {
         /**
          * Border radius of on
          *
@@ -155,5 +152,32 @@ export interface FloatLabelDesignTokens extends DesignTokens<FloatLabelDesignTok
              */
             padding?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<FloatLabelDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface FloatLabelDesignTokens extends DesignTokens<FloatLabelDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: FloatLabelTokenSections.Root;
+    /**
+     * Used to pass tokens of the over section
+     */
+    over?: FloatLabelTokenSections.Over;
+    /**
+     * Used to pass tokens of the in section
+     */
+    in?: FloatLabelTokenSections.In;
+    /**
+     * Used to pass tokens of the on section
+     */
+    on?: FloatLabelTokenSections.On;
 }

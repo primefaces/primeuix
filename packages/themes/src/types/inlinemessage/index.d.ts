@@ -4,15 +4,18 @@
  *
  * @module themes/inlinemessage
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace InlineMessageTokenSections {
+    interface Root {
         /**
          * Padding of root
          *
@@ -31,33 +34,27 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
          * @designToken inlinemessage.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the text section
-     */
-    text?: {
+    }
+
+    interface Text {
         /**
          * Font weight of text
          *
          * @designToken inlinemessage.text.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
          * @designToken inlinemessage.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the info section
-     */
-    info?: {
+    }
+
+    interface Info {
         /**
          * Background of info
          *
@@ -82,11 +79,9 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
          * @designToken inlinemessage.info.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the success section
-     */
-    success?: {
+    }
+
+    interface Success {
         /**
          * Background of success
          *
@@ -111,11 +106,9 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
          * @designToken inlinemessage.success.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the warn section
-     */
-    warn?: {
+    }
+
+    interface Warn {
         /**
          * Background of warn
          *
@@ -140,11 +133,9 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
          * @designToken inlinemessage.warn.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the error section
-     */
-    error?: {
+    }
+
+    interface Error {
         /**
          * Background of error
          *
@@ -169,11 +160,9 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
          * @designToken inlinemessage.error.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the secondary section
-     */
-    secondary?: {
+    }
+
+    interface Secondary {
         /**
          * Background of secondary
          *
@@ -198,11 +187,9 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
          * @designToken inlinemessage.secondary.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the contrast section
-     */
-    contrast?: {
+    }
+
+    interface Contrast {
         /**
          * Background of contrast
          *
@@ -227,5 +214,52 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
          * @designToken inlinemessage.contrast.shadow
          */
         shadow?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<InlineMessageDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InlineMessageTokenSections.Root;
+    /**
+     * Used to pass tokens of the text section
+     */
+    text?: InlineMessageTokenSections.Text;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: InlineMessageTokenSections.Icon;
+    /**
+     * Used to pass tokens of the info section
+     */
+    info?: InlineMessageTokenSections.Info;
+    /**
+     * Used to pass tokens of the success section
+     */
+    success?: InlineMessageTokenSections.Success;
+    /**
+     * Used to pass tokens of the warn section
+     */
+    warn?: InlineMessageTokenSections.Warn;
+    /**
+     * Used to pass tokens of the error section
+     */
+    error?: InlineMessageTokenSections.Error;
+    /**
+     * Used to pass tokens of the secondary section
+     */
+    secondary?: InlineMessageTokenSections.Secondary;
+    /**
+     * Used to pass tokens of the contrast section
+     */
+    contrast?: InlineMessageTokenSections.Contrast;
 }

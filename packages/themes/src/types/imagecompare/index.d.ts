@@ -4,15 +4,18 @@
  *
  * @module themes/imagecompare
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ImageCompareDesignTokens extends DesignTokens<ImageCompareDesignTokens> {
-    /**
-     * Used to pass tokens of the handle section
-     */
-    handle?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ImageCompareTokenSections {
+    interface Handle {
         /**
          * Size of handle
          *
@@ -102,5 +105,20 @@ export interface ImageCompareDesignTokens extends DesignTokens<ImageCompareDesig
              */
             shadow?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ImageCompareDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ImageCompareDesignTokens extends DesignTokens<ImageCompareDesignTokens> {
+    /**
+     * Used to pass tokens of the handle section
+     */
+    handle?: ImageCompareTokenSections.Handle;
 }

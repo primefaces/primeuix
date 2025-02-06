@@ -4,15 +4,18 @@
  *
  * @module themes/tree
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TreeTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -49,11 +52,9 @@ export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
          * @designToken tree.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the node section
-     */
-    node?: {
+    }
+
+    interface Node {
         /**
          * Padding of node
          *
@@ -137,11 +138,9 @@ export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
          * @designToken tree.node.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the node icon section
-     */
-    nodeIcon?: {
+    }
+
+    interface NodeIcon {
         /**
          * Color of node icon
          *
@@ -160,11 +159,9 @@ export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
          * @designToken tree.node.icon.selected.color
          */
         selectedColor?: string;
-    };
-    /**
-     * Used to pass tokens of the node toggle button section
-     */
-    nodeToggleButton?: {
+    }
+
+    interface NodeToggleButton {
         /**
          * Border radius of node toggle button
          *
@@ -242,27 +239,58 @@ export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the loading icon section
-     */
-    loadingIcon?: {
+    }
+
+    interface LoadingIcon {
         /**
          * Size of loading icon
          *
          * @designToken tree.loading.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the filter section
-     */
-    filter?: {
+    }
+
+    interface Filter {
         /**
          * Margin of filter
          *
          * @designToken tree.filter.margin
          */
         margin?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TreeDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TreeTokenSections.Root;
+    /**
+     * Used to pass tokens of the node section
+     */
+    node?: TreeTokenSections.Node;
+    /**
+     * Used to pass tokens of the node icon section
+     */
+    nodeIcon?: TreeTokenSections.NodeIcon;
+    /**
+     * Used to pass tokens of the node toggle button section
+     */
+    nodeToggleButton?: TreeTokenSections.NodeToggleButton;
+    /**
+     * Used to pass tokens of the loading icon section
+     */
+    loadingIcon?: TreeTokenSections.LoadingIcon;
+    /**
+     * Used to pass tokens of the filter section
+     */
+    filter?: TreeTokenSections.Filter;
 }

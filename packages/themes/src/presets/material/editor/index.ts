@@ -1,41 +1,54 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
-import type { EditorDesignTokens } from '@primeuix/themes/types/editor';
+import type { EditorDesignTokens, EditorTokenSections } from '@primeuix/themes/types/editor';
 
-export default {
-    toolbar: {
-        background: '{content.background}',
-        borderColor: '{content.border.color}',
-        borderRadius: '{content.border.radius}'
-    },
-    toolbarItem: {
-        color: '{text.muted.color}',
-        hoverColor: '{text.color}',
-        activeColor: '{primary.color}'
-    },
-    overlay: {
-        background: '{overlay.select.background}',
-        borderColor: '{overlay.select.border.color}',
-        borderRadius: '{overlay.select.border.radius}',
-        color: '{overlay.select.color}',
-        shadow: '{overlay.select.shadow}',
-        padding: '{list.padding}'
-    },
-    overlayOption: {
-        focusBackground: '{list.option.focus.background}',
-        color: '{list.option.color}',
-        focusColor: '{list.option.focus.color}',
-        padding: '{list.option.padding}',
-        borderRadius: '{list.option.border.radius}'
-    },
-    content: {
-        background: '{content.background}',
-        borderColor: '{content.border.color}',
-        color: '{content.color}',
-        borderRadius: '{content.border.radius}'
-    },
-    css: ({ dt }: ThemeStyleOptions) => `
+export const toolbar: EditorTokenSections.Toolbar = {
+    background: '{content.background}',
+    borderColor: '{content.border.color}',
+    borderRadius: '{content.border.radius}'
+};
+
+export const toolbarItem: EditorTokenSections.ToolbarItem = {
+    color: '{text.muted.color}',
+    hoverColor: '{text.color}',
+    activeColor: '{primary.color}'
+};
+
+export const overlay: EditorTokenSections.Overlay = {
+    background: '{overlay.select.background}',
+    borderColor: '{overlay.select.border.color}',
+    borderRadius: '{overlay.select.border.radius}',
+    color: '{overlay.select.color}',
+    shadow: '{overlay.select.shadow}',
+    padding: '{list.padding}'
+};
+
+export const overlayOption: EditorTokenSections.OverlayOption = {
+    focusBackground: '{list.option.focus.background}',
+    color: '{list.option.color}',
+    focusColor: '{list.option.focus.color}',
+    padding: '{list.option.padding}',
+    borderRadius: '{list.option.border.radius}'
+};
+
+export const content: EditorTokenSections.Content = {
+    background: '{content.background}',
+    borderColor: '{content.border.color}',
+    color: '{content.color}',
+    borderRadius: '{content.border.radius}'
+};
+
+// @section:css-start
+export const css: EditorTokenSections.CSS = `
 .p-editor .p-editor-toolbar {
     padding: 0.75rem
 }
-`
+`;
+// @section:css-end
+
+export default {
+    toolbar,
+    toolbarItem,
+    overlay,
+    overlayOption,
+    content,
+    css
 } satisfies EditorDesignTokens;

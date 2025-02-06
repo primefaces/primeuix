@@ -1,5 +1,5 @@
-export interface AuraBaseDesignTokens {
-    primitive?: {
+declare namespace AuraBaseTokenSections {
+    interface Primitive {
         borderRadius?: {
             none?: string;
             xs?: string;
@@ -294,8 +294,9 @@ export interface AuraBaseDesignTokens {
             900?: string;
             950?: string;
         };
-    };
-    semantic?: {
+    }
+
+    interface Semantic {
         transitionDuration?: string;
         focusRing?: {
             width?: string;
@@ -653,5 +654,10 @@ export interface AuraBaseDesignTokens {
                 };
             };
         };
-    };
+    }
+}
+
+export interface AuraBaseDesignTokens {
+    primitive?: AuraBaseTokenSections.Primitive;
+    semantic?: AuraBaseTokenSections.Semantic;
 }

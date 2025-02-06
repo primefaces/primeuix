@@ -4,15 +4,18 @@
  *
  * @module themes/breadcrumb
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface BreadcrumbDesignTokens extends DesignTokens<BreadcrumbDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace BreadcrumbTokenSections {
+    interface Root {
         /**
          * Padding of root
          *
@@ -37,11 +40,9 @@ export interface BreadcrumbDesignTokens extends DesignTokens<BreadcrumbDesignTok
          * @designToken breadcrumb.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Color of item
          *
@@ -118,16 +119,37 @@ export interface BreadcrumbDesignTokens extends DesignTokens<BreadcrumbDesignTok
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: {
+    }
+
+    interface Separator {
         /**
          * Color of separator
          *
          * @designToken breadcrumb.separator.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<BreadcrumbDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface BreadcrumbDesignTokens extends DesignTokens<BreadcrumbDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: BreadcrumbTokenSections.Root;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: BreadcrumbTokenSections.Item;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: BreadcrumbTokenSections.Separator;
 }

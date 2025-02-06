@@ -4,15 +4,18 @@
  *
  * @module themes/tag
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TagTokenSections {
+    interface Root {
         /**
          * Font size of root
          *
@@ -49,22 +52,18 @@ export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
          * @designToken tag.rounded.border.radius
          */
         roundedBorderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
          * @designToken tag.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the primary section
-     */
-    primary?: {
+    }
+
+    interface Primary {
         /**
          * Background of primary
          *
@@ -77,11 +76,9 @@ export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
          * @designToken tag.primary.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the secondary section
-     */
-    secondary?: {
+    }
+
+    interface Secondary {
         /**
          * Background of secondary
          *
@@ -94,11 +91,9 @@ export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
          * @designToken tag.secondary.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the success section
-     */
-    success?: {
+    }
+
+    interface Success {
         /**
          * Background of success
          *
@@ -111,11 +106,9 @@ export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
          * @designToken tag.success.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the info section
-     */
-    info?: {
+    }
+
+    interface Info {
         /**
          * Background of info
          *
@@ -128,11 +121,9 @@ export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
          * @designToken tag.info.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the warn section
-     */
-    warn?: {
+    }
+
+    interface Warn {
         /**
          * Background of warn
          *
@@ -145,11 +136,9 @@ export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
          * @designToken tag.warn.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the danger section
-     */
-    danger?: {
+    }
+
+    interface Danger {
         /**
          * Background of danger
          *
@@ -162,11 +151,9 @@ export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
          * @designToken tag.danger.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the contrast section
-     */
-    contrast?: {
+    }
+
+    interface Contrast {
         /**
          * Background of contrast
          *
@@ -179,5 +166,52 @@ export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
          * @designToken tag.contrast.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TagDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TagDesignTokens extends DesignTokens<TagDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TagTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: TagTokenSections.Icon;
+    /**
+     * Used to pass tokens of the primary section
+     */
+    primary?: TagTokenSections.Primary;
+    /**
+     * Used to pass tokens of the secondary section
+     */
+    secondary?: TagTokenSections.Secondary;
+    /**
+     * Used to pass tokens of the success section
+     */
+    success?: TagTokenSections.Success;
+    /**
+     * Used to pass tokens of the info section
+     */
+    info?: TagTokenSections.Info;
+    /**
+     * Used to pass tokens of the warn section
+     */
+    warn?: TagTokenSections.Warn;
+    /**
+     * Used to pass tokens of the danger section
+     */
+    danger?: TagTokenSections.Danger;
+    /**
+     * Used to pass tokens of the contrast section
+     */
+    contrast?: TagTokenSections.Contrast;
 }

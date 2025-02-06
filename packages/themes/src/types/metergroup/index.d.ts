@@ -4,15 +4,18 @@
  *
  * @module themes/metergroup
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace MeterGroupTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -25,11 +28,9 @@ export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTok
          * @designToken metergroup.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the meters section
-     */
-    meters?: {
+    }
+
+    interface Meters {
         /**
          * Background of meters
          *
@@ -42,44 +43,36 @@ export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTok
          * @designToken metergroup.meters.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the label section
-     */
-    label?: {
+    }
+
+    interface Label {
         /**
          * Gap of label
          *
          * @designToken metergroup.label.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the label marker section
-     */
-    labelMarker?: {
+    }
+
+    interface LabelMarker {
         /**
          * Size of label marker
          *
          * @designToken metergroup.label.marker.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the label icon section
-     */
-    labelIcon?: {
+    }
+
+    interface LabelIcon {
         /**
          * Size of label icon
          *
          * @designToken metergroup.label.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the label list section
-     */
-    labelList?: {
+    }
+
+    interface LabelList {
         /**
          * Vertical gap of label list
          *
@@ -92,5 +85,40 @@ export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTok
          * @designToken metergroup.label.list.horizontal.gap
          */
         horizontalGap?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<MeterGroupDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: MeterGroupTokenSections.Root;
+    /**
+     * Used to pass tokens of the meters section
+     */
+    meters?: MeterGroupTokenSections.Meters;
+    /**
+     * Used to pass tokens of the label section
+     */
+    label?: MeterGroupTokenSections.Label;
+    /**
+     * Used to pass tokens of the label marker section
+     */
+    labelMarker?: MeterGroupTokenSections.LabelMarker;
+    /**
+     * Used to pass tokens of the label icon section
+     */
+    labelIcon?: MeterGroupTokenSections.LabelIcon;
+    /**
+     * Used to pass tokens of the label list section
+     */
+    labelList?: MeterGroupTokenSections.LabelList;
 }

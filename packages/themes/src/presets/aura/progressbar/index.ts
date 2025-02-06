@@ -1,17 +1,23 @@
-import type { ProgressBarDesignTokens } from '@primeuix/themes/types/progressbar';
+import type { ProgressBarDesignTokens, ProgressBarTokenSections } from '@primeuix/themes/types/progressbar';
+
+export const root: ProgressBarTokenSections.Root = {
+    background: '{content.border.color}',
+    borderRadius: '{content.border.radius}',
+    height: '1.25rem'
+};
+
+export const value: ProgressBarTokenSections.Value = {
+    background: '{primary.color}'
+};
+
+export const label: ProgressBarTokenSections.Label = {
+    color: '{primary.contrast.color}',
+    fontSize: '0.75rem',
+    fontWeight: '600'
+};
 
 export default {
-    root: {
-        background: '{content.border.color}',
-        borderRadius: '{content.border.radius}',
-        height: '1.25rem'
-    },
-    value: {
-        background: '{primary.color}'
-    },
-    label: {
-        color: '{primary.contrast.color}',
-        fontSize: '0.75rem',
-        fontWeight: '600'
-    }
+    root,
+    value,
+    label
 } satisfies ProgressBarDesignTokens;

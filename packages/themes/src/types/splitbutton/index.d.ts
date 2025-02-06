@@ -4,15 +4,18 @@
  *
  * @module themes/splitbutton
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface SplitButtonDesignTokens extends DesignTokens<SplitButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace SplitButtonTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -31,5 +34,20 @@ export interface SplitButtonDesignTokens extends DesignTokens<SplitButtonDesignT
          * @designToken splitbutton.raised.shadow
          */
         raisedShadow?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<SplitButtonDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface SplitButtonDesignTokens extends DesignTokens<SplitButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SplitButtonTokenSections.Root;
 }

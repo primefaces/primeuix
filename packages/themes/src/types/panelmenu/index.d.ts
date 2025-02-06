@@ -4,15 +4,18 @@
  *
  * @module themes/panelmenu
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface PanelMenuDesignTokens extends DesignTokens<PanelMenuDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace PanelMenuTokenSections {
+    interface Root {
         /**
          * Gap of root
          *
@@ -25,11 +28,9 @@ export interface PanelMenuDesignTokens extends DesignTokens<PanelMenuDesignToken
          * @designToken panelmenu.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the panel section
-     */
-    panel?: {
+    }
+
+    interface Panel {
         /**
          * Background of panel
          *
@@ -100,11 +101,9 @@ export interface PanelMenuDesignTokens extends DesignTokens<PanelMenuDesignToken
              */
             bottomBorderRadius?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Focus background of item
          *
@@ -158,22 +157,18 @@ export interface PanelMenuDesignTokens extends DesignTokens<PanelMenuDesignToken
              */
             focusColor?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the submenu section
-     */
-    submenu?: {
+    }
+
+    interface Submenu {
         /**
          * Indent of submenu
          *
          * @designToken panelmenu.submenu.indent
          */
         indent?: string;
-    };
-    /**
-     * Used to pass tokens of the submenu icon section
-     */
-    submenuIcon?: {
+    }
+
+    interface SubmenuIcon {
         /**
          * Color of submenu icon
          *
@@ -186,5 +181,36 @@ export interface PanelMenuDesignTokens extends DesignTokens<PanelMenuDesignToken
          * @designToken panelmenu.submenu.icon.focus.color
          */
         focusColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<PanelMenuDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface PanelMenuDesignTokens extends DesignTokens<PanelMenuDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: PanelMenuTokenSections.Root;
+    /**
+     * Used to pass tokens of the panel section
+     */
+    panel?: PanelMenuTokenSections.Panel;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: PanelMenuTokenSections.Item;
+    /**
+     * Used to pass tokens of the submenu section
+     */
+    submenu?: PanelMenuTokenSections.Submenu;
+    /**
+     * Used to pass tokens of the submenu icon section
+     */
+    submenuIcon?: PanelMenuTokenSections.SubmenuIcon;
 }

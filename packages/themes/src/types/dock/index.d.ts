@@ -4,15 +4,18 @@
  *
  * @module themes/dock
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace DockTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -37,11 +40,9 @@ export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {
          * @designToken dock.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Border radius of item
          *
@@ -95,5 +96,24 @@ export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {
              */
             shadow?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<DockDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: DockTokenSections.Root;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: DockTokenSections.Item;
 }

@@ -4,26 +4,27 @@
  *
  * @module themes/datepicker
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace DatePickerTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken datepicker.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the panel section
-     */
-    panel?: {
+    }
+
+    interface Panel {
         /**
          * Background of panel
          *
@@ -60,11 +61,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.panel.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the header section
-     */
-    header?: {
+    }
+
+    interface Header {
         /**
          * Background of header
          *
@@ -89,11 +88,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.header.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the title section
-     */
-    title?: {
+    }
+
+    interface Title {
         /**
          * Gap of title
          *
@@ -106,11 +103,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.title.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the dropdown section
-     */
-    dropdown?: {
+    }
+
+    interface Dropdown {
         /**
          * Width of dropdown
          *
@@ -234,22 +229,18 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.dropdown.active.color
          */
         activeColor?: string;
-    };
-    /**
-     * Used to pass tokens of the input icon section
-     */
-    inputIcon?: {
+    }
+
+    interface InputIcon {
         /**
          * Color of input icon
          *
          * @designToken datepicker.input.icon.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the select month section
-     */
-    selectMonth?: {
+    }
+
+    interface SelectMonth {
         /**
          * Hover background of select month
          *
@@ -280,11 +271,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.select.month.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the select year section
-     */
-    selectYear?: {
+    }
+
+    interface SelectYear {
         /**
          * Hover background of select year
          *
@@ -315,11 +304,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.select.year.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the group section
-     */
-    group?: {
+    }
+
+    interface Group {
         /**
          * Border color of group
          *
@@ -332,22 +319,18 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.group.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the day view section
-     */
-    dayView?: {
+    }
+
+    interface DayView {
         /**
          * Margin of day view
          *
          * @designToken datepicker.day.view.margin
          */
         margin?: string;
-    };
-    /**
-     * Used to pass tokens of the week day section
-     */
-    weekDay?: {
+    }
+
+    interface WeekDay {
         /**
          * Padding of week day
          *
@@ -366,11 +349,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.week.day.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the date section
-     */
-    date?: {
+    }
+
+    interface Date {
         /**
          * Hover background of date
          *
@@ -472,22 +453,18 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the month view section
-     */
-    monthView?: {
+    }
+
+    interface MonthView {
         /**
          * Margin of month view
          *
          * @designToken datepicker.month.view.margin
          */
         margin?: string;
-    };
-    /**
-     * Used to pass tokens of the month section
-     */
-    month?: {
+    }
+
+    interface Month {
         /**
          * Padding of month
          *
@@ -500,22 +477,18 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.month.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the year view section
-     */
-    yearView?: {
+    }
+
+    interface YearView {
         /**
          * Margin of year view
          *
          * @designToken datepicker.year.view.margin
          */
         margin?: string;
-    };
-    /**
-     * Used to pass tokens of the year section
-     */
-    year?: {
+    }
+
+    interface Year {
         /**
          * Padding of year
          *
@@ -528,11 +501,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.year.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the buttonbar section
-     */
-    buttonbar?: {
+    }
+
+    interface Buttonbar {
         /**
          * Padding of buttonbar
          *
@@ -545,11 +516,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.buttonbar.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the time picker section
-     */
-    timePicker?: {
+    }
+
+    interface TimePicker {
         /**
          * Padding of time picker
          *
@@ -574,11 +543,9 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.time.picker.button.gap
          */
         buttonGap?: string;
-    };
-    /**
-     * Used to pass tokens of the today section
-     */
-    today?: {
+    }
+
+    interface Today {
         /**
          * Background of today
          *
@@ -591,5 +558,92 @@ export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTok
          * @designToken datepicker.today.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<DatePickerDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface DatePickerDesignTokens extends DesignTokens<DatePickerDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: DatePickerTokenSections.Root;
+    /**
+     * Used to pass tokens of the panel section
+     */
+    panel?: DatePickerTokenSections.Panel;
+    /**
+     * Used to pass tokens of the header section
+     */
+    header?: DatePickerTokenSections.Header;
+    /**
+     * Used to pass tokens of the title section
+     */
+    title?: DatePickerTokenSections.Title;
+    /**
+     * Used to pass tokens of the dropdown section
+     */
+    dropdown?: DatePickerTokenSections.Dropdown;
+    /**
+     * Used to pass tokens of the input icon section
+     */
+    inputIcon?: DatePickerTokenSections.InputIcon;
+    /**
+     * Used to pass tokens of the select month section
+     */
+    selectMonth?: DatePickerTokenSections.SelectMonth;
+    /**
+     * Used to pass tokens of the select year section
+     */
+    selectYear?: DatePickerTokenSections.SelectYear;
+    /**
+     * Used to pass tokens of the group section
+     */
+    group?: DatePickerTokenSections.Group;
+    /**
+     * Used to pass tokens of the day view section
+     */
+    dayView?: DatePickerTokenSections.DayView;
+    /**
+     * Used to pass tokens of the week day section
+     */
+    weekDay?: DatePickerTokenSections.WeekDay;
+    /**
+     * Used to pass tokens of the date section
+     */
+    date?: DatePickerTokenSections.Date;
+    /**
+     * Used to pass tokens of the month view section
+     */
+    monthView?: DatePickerTokenSections.MonthView;
+    /**
+     * Used to pass tokens of the month section
+     */
+    month?: DatePickerTokenSections.Month;
+    /**
+     * Used to pass tokens of the year view section
+     */
+    yearView?: DatePickerTokenSections.YearView;
+    /**
+     * Used to pass tokens of the year section
+     */
+    year?: DatePickerTokenSections.Year;
+    /**
+     * Used to pass tokens of the buttonbar section
+     */
+    buttonbar?: DatePickerTokenSections.Buttonbar;
+    /**
+     * Used to pass tokens of the time picker section
+     */
+    timePicker?: DatePickerTokenSections.TimePicker;
+    /**
+     * Used to pass tokens of the today section
+     */
+    today?: DatePickerTokenSections.Today;
 }

@@ -4,15 +4,18 @@
  *
  * @module themes/radiobutton
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface RadioButtonDesignTokens extends DesignTokens<RadioButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace RadioButtonTokenSections {
+    interface Root {
         /**
          * Width of root
          *
@@ -184,11 +187,9 @@ export interface RadioButtonDesignTokens extends DesignTokens<RadioButtonDesignT
              */
             height?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
@@ -235,5 +236,24 @@ export interface RadioButtonDesignTokens extends DesignTokens<RadioButtonDesignT
              */
             size?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<RadioButtonDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface RadioButtonDesignTokens extends DesignTokens<RadioButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: RadioButtonTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: RadioButtonTokenSections.Icon;
 }

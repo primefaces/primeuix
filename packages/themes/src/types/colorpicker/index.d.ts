@@ -4,26 +4,27 @@
  *
  * @module themes/colorpicker
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ColorPickerDesignTokens extends DesignTokens<ColorPickerDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ColorPickerTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken colorpicker.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the preview section
-     */
-    preview?: {
+    }
+
+    interface Preview {
         /**
          * Width of preview
          *
@@ -77,11 +78,9 @@ export interface ColorPickerDesignTokens extends DesignTokens<ColorPickerDesignT
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the panel section
-     */
-    panel?: {
+    }
+
+    interface Panel {
         /**
          * Shadow of panel
          *
@@ -106,16 +105,41 @@ export interface ColorPickerDesignTokens extends DesignTokens<ColorPickerDesignT
          * @designToken colorpicker.panel.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the handle section
-     */
-    handle?: {
+    }
+
+    interface Handle {
         /**
          * Color of handle
          *
          * @designToken colorpicker.handle.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ColorPickerDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ColorPickerDesignTokens extends DesignTokens<ColorPickerDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ColorPickerTokenSections.Root;
+    /**
+     * Used to pass tokens of the preview section
+     */
+    preview?: ColorPickerTokenSections.Preview;
+    /**
+     * Used to pass tokens of the panel section
+     */
+    panel?: ColorPickerTokenSections.Panel;
+    /**
+     * Used to pass tokens of the handle section
+     */
+    handle?: ColorPickerTokenSections.Handle;
 }

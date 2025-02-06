@@ -4,15 +4,18 @@
  *
  * @module themes/inplace
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace InplaceTokenSections {
+    interface Root {
         /**
          * Padding of root
          *
@@ -66,11 +69,9 @@ export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {
          * @designToken inplace.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the display section
-     */
-    display?: {
+    }
+
+    interface Display {
         /**
          * Hover background of display
          *
@@ -83,5 +84,24 @@ export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {
          * @designToken inplace.display.hover.color
          */
         hoverColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<InplaceDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InplaceDesignTokens.Root;
+    /**
+     * Used to pass tokens of the display section
+     */
+    display?: InplaceDesignTokens.Display;
 }

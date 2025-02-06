@@ -4,15 +4,18 @@
  *
  * @module themes/menu
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface MenuDesignTokens extends DesignTokens<MenuDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace MenuTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -49,11 +52,9 @@ export interface MenuDesignTokens extends DesignTokens<MenuDesignTokens> {
          * @designToken menu.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the list section
-     */
-    list?: {
+    }
+
+    interface List {
         /**
          * Padding of list
          *
@@ -66,11 +67,9 @@ export interface MenuDesignTokens extends DesignTokens<MenuDesignTokens> {
          * @designToken menu.list.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Focus background of item
          *
@@ -124,11 +123,9 @@ export interface MenuDesignTokens extends DesignTokens<MenuDesignTokens> {
              */
             focusColor?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the submenu label section
-     */
-    submenuLabel?: {
+    }
+
+    interface SubmenuLabel {
         /**
          * Padding of submenu label
          *
@@ -153,16 +150,45 @@ export interface MenuDesignTokens extends DesignTokens<MenuDesignTokens> {
          * @designToken menu.submenu.label.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: {
+    }
+
+    interface Separator {
         /**
          * Border color of separator
          *
          * @designToken menu.separator.border.color
          */
         borderColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<MenuDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface MenuDesignTokens extends DesignTokens<MenuDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: MenuTokenSections.Root;
+    /**
+     * Used to pass tokens of the list section
+     */
+    list?: MenuTokenSections.List;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: MenuTokenSections.Item;
+    /**
+     * Used to pass tokens of the submenu label section
+     */
+    submenuLabel?: MenuTokenSections.SubmenuLabel;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: MenuTokenSections.Separator;
 }

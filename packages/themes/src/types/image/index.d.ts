@@ -4,26 +4,27 @@
  *
  * @module themes/image
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ImageDesignTokens extends DesignTokens<ImageDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ImageTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken image.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the preview section
-     */
-    preview?: {
+    }
+
+    interface Preview {
         /**
          * Icon of preview
          */
@@ -52,11 +53,9 @@ export interface ImageDesignTokens extends DesignTokens<ImageDesignTokens> {
              */
             color?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the toolbar section
-     */
-    toolbar?: {
+    }
+
+    interface Toolbar {
         /**
          * Position of toolbar
          */
@@ -128,11 +127,9 @@ export interface ImageDesignTokens extends DesignTokens<ImageDesignTokens> {
          * @designToken image.toolbar.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the action section
-     */
-    action?: {
+    }
+
+    interface Action {
         /**
          * Hover background of action
          *
@@ -204,5 +201,32 @@ export interface ImageDesignTokens extends DesignTokens<ImageDesignTokens> {
              */
             shadow?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ImageDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ImageDesignTokens extends DesignTokens<ImageDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ImageTokenSections.Root;
+    /**
+     * Used to pass tokens of the preview section
+     */
+    preview?: ImageTokenSections.Preview;
+    /**
+     * Used to pass tokens of the toolbar section
+     */
+    toolbar?: ImageTokenSections.Toolbar;
+    /**
+     * Used to pass tokens of the action section
+     */
+    action?: ImageTokenSections.Action;
 }

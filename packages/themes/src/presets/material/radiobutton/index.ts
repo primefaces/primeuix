@@ -1,54 +1,55 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
-import type { RadioButtonDesignTokens } from '@primeuix/themes/types/radiobutton';
+import type { RadioButtonDesignTokens, RadioButtonTokenSections } from '@primeuix/themes/types/radiobutton';
 
-export default {
-    root: {
-        width: '20px',
-        height: '20px',
-        background: '{form.field.background}',
-        checkedBackground: '{primary.contrast.color}',
-        checkedHoverBackground: '{primary.contrast.color}',
-        disabledBackground: '{form.field.disabled.background}',
-        filledBackground: '{form.field.filled.background}',
-        borderColor: '{form.field.border.color}',
-        hoverBorderColor: '{form.field.hover.border.color}',
-        focusBorderColor: '{form.field.focus.border.color}',
-        checkedBorderColor: '{primary.color}',
-        checkedHoverBorderColor: '{primary.color}',
-        checkedFocusBorderColor: '{primary.color}',
-        checkedDisabledBorderColor: '{form.field.border.color}',
-        invalidBorderColor: '{form.field.invalid.border.color}',
-        shadow: '{form.field.shadow}',
-        focusRing: {
-            width: '0',
-            style: 'none',
-            color: 'unset',
-            offset: '0',
-            shadow: 'none'
-        },
-        transitionDuration: '{form.field.transition.duration}',
-        sm: {
-            width: '16px',
-            height: '16px'
-        },
-        lg: {
-            width: '24px',
-            height: '24px'
-        }
+export const root: RadioButtonTokenSections.Root = {
+    width: '20px',
+    height: '20px',
+    background: '{form.field.background}',
+    checkedBackground: '{primary.contrast.color}',
+    checkedHoverBackground: '{primary.contrast.color}',
+    disabledBackground: '{form.field.disabled.background}',
+    filledBackground: '{form.field.filled.background}',
+    borderColor: '{form.field.border.color}',
+    hoverBorderColor: '{form.field.hover.border.color}',
+    focusBorderColor: '{form.field.focus.border.color}',
+    checkedBorderColor: '{primary.color}',
+    checkedHoverBorderColor: '{primary.color}',
+    checkedFocusBorderColor: '{primary.color}',
+    checkedDisabledBorderColor: '{form.field.border.color}',
+    invalidBorderColor: '{form.field.invalid.border.color}',
+    shadow: '{form.field.shadow}',
+    focusRing: {
+        width: '0',
+        style: 'none',
+        color: 'unset',
+        offset: '0',
+        shadow: 'none'
     },
-    icon: {
-        size: '10px',
-        checkedColor: '{primary.color}',
-        checkedHoverColor: '{primary.color}',
-        disabledColor: '{form.field.disabled.color}',
-        sm: {
-            size: '8px'
-        },
-        lg: {
-            size: '12px'
-        }
+    transitionDuration: '{form.field.transition.duration}',
+    sm: {
+        width: '16px',
+        height: '16px'
     },
-    css: ({ dt }: ThemeStyleOptions) => `
+    lg: {
+        width: '24px',
+        height: '24px'
+    }
+};
+
+export const icon: RadioButtonTokenSections.Icon = {
+    size: '10px',
+    checkedColor: '{primary.color}',
+    checkedHoverColor: '{primary.color}',
+    disabledColor: '{form.field.disabled.color}',
+    sm: {
+        size: '8px'
+    },
+    lg: {
+        size: '12px'
+    }
+};
+
+// @section:css-start
+export const css: RadioButtonTokenSections.CSS = ({ dt }) => `
 .p-radiobutton {
     border-radius: 50%;
     transition: box-shadow ${dt('radiobutton.transition.duration')};
@@ -73,5 +74,10 @@ export default {
 .p-radiobutton-checked:not(.p-disabled):has(.p-radiobutton-input:focus-visible) {
     box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('radiobutton.checked.border.color')}, transparent 84%);
 }
-`
+`;
+// @section:css-end
+
+export default {
+    root,
+    icon
 } satisfies RadioButtonDesignTokens;

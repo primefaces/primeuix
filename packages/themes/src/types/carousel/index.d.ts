@@ -4,37 +4,36 @@
  *
  * @module themes/carousel
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface CarouselDesignTokens extends DesignTokens<CarouselDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace CarouselTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken carousel.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Gap of content
          *
          * @designToken carousel.content.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the indicator list section
-     */
-    indicatorList?: {
+    }
+
+    interface IndicatorList {
         /**
          * Padding of indicator list
          *
@@ -47,11 +46,9 @@ export interface CarouselDesignTokens extends DesignTokens<CarouselDesignTokens>
          * @designToken carousel.indicator.list.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the indicator section
-     */
-    indicator?: {
+    }
+
+    interface Indicator {
         /**
          * Width of indicator
          *
@@ -123,5 +120,32 @@ export interface CarouselDesignTokens extends DesignTokens<CarouselDesignTokens>
          * @designToken carousel.indicator.active.background
          */
         activeBackground?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<CarouselDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface CarouselDesignTokens extends DesignTokens<CarouselDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: CarouselTokenSections.Root;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: CarouselTokenSections.Content;
+    /**
+     * Used to pass tokens of the indicator list section
+     */
+    indicatorList?: CarouselTokenSections.IndicatorList;
+    /**
+     * Used to pass tokens of the indicator section
+     */
+    indicator?: CarouselTokenSections.Indicator;
 }

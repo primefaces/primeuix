@@ -4,15 +4,18 @@
  *
  * @module themes/paginator
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface PaginatorDesignTokens extends DesignTokens<PaginatorDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace PaginatorTokenSections {
+    interface Root {
         /**
          * Padding of root
          *
@@ -49,11 +52,9 @@ export interface PaginatorDesignTokens extends DesignTokens<PaginatorDesignToken
          * @designToken paginator.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the nav button section
-     */
-    navButton?: {
+    }
+
+    interface NavButton {
         /**
          * Background of nav button
          *
@@ -143,27 +144,50 @@ export interface PaginatorDesignTokens extends DesignTokens<PaginatorDesignToken
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the current page report section
-     */
-    currentPageReport?: {
+    }
+
+    interface CurrentPageReport {
         /**
          * Color of current page report
          *
          * @designToken paginator.current.page.report.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the jump to page input section
-     */
-    jumpToPageInput?: {
+    }
+
+    interface JumpToPageInput {
         /**
          * Max width of jump to page input
          *
          * @designToken paginator.jump.to.page.input.max.width
          */
         maxWidth?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<PaginatorDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface PaginatorDesignTokens extends DesignTokens<PaginatorDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: PaginatorTokenSections.Root;
+    /**
+     * Used to pass tokens of the nav button section
+     */
+    navButton?: PaginatorTokenSections.NavButton;
+    /**
+     * Used to pass tokens of the current page report section
+     */
+    currentPageReport?: PaginatorTokenSections.CurrentPageReport;
+    /**
+     * Used to pass tokens of the jump to page input section
+     */
+    jumpToPageInput?: PaginatorTokenSections.JumpToPageInput;
 }

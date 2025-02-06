@@ -4,15 +4,18 @@
  *
  * @module themes/password
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens> {
-    /**
-     * Used to pass tokens of the meter section
-     */
-    meter?: {
+/**
+ * Design Token Sections
+ */
+declare namespace PasswordTokenSections {
+    interface Meter {
         /**
          * Background of meter
          *
@@ -31,22 +34,18 @@ export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens>
          * @designToken password.meter.height
          */
         height?: string;
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Color of icon
          *
          * @designToken password.icon.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the overlay section
-     */
-    overlay?: {
+    }
+
+    interface Overlay {
         /**
          * Background of overlay
          *
@@ -83,22 +82,18 @@ export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens>
          * @designToken password.overlay.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Gap of content
          *
          * @designToken password.content.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the strength section
-     */
-    strength?: {
+    }
+
+    interface Strength {
         /**
          * Weak background of strength
          *
@@ -117,5 +112,36 @@ export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens>
          * @designToken password.strength.strong.background
          */
         strongBackground?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<PasswordDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens> {
+    /**
+     * Used to pass tokens of the meter section
+     */
+    meter?: PasswordTokenSections.Meter;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: PasswordTokenSections.Icon;
+    /**
+     * Used to pass tokens of the overlay section
+     */
+    overlay?: PasswordTokenSections.Overlay;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: PasswordTokenSections.Content;
+    /**
+     * Used to pass tokens of the strength section
+     */
+    strength?: PasswordTokenSections.Strength;
 }

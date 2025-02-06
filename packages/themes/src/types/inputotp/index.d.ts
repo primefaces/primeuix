@@ -5,24 +5,22 @@
  * @module themes/inputotp
  *
  */
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface InputOtpDesignTokens extends DesignTokens<InputOtpDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace InputOtpTokenSections {
+    interface Root {
         /**
          * Gap of root
          *
          * @designToken inputotp.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the input section
-     */
-    input?: {
+    }
+
+    interface Input {
         /**
          * Width of input
          *
@@ -51,5 +49,24 @@ export interface InputOtpDesignTokens extends DesignTokens<InputOtpDesignTokens>
              */
             width?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<InputOtpDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface InputOtpDesignTokens extends DesignTokens<InputOtpDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InputOtpTokenSections.Root;
+    /**
+     * Used to pass tokens of the input section
+     */
+    input?: InputOtpTokenSections.Input;
 }

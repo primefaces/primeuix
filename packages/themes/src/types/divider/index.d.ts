@@ -4,26 +4,27 @@
  *
  * @module themes/divider
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface DividerDesignTokens extends DesignTokens<DividerDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace DividerTokenSections {
+    interface Root {
         /**
          * Border color of root
          *
          * @designToken divider.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Background of content
          *
@@ -36,11 +37,9 @@ export interface DividerDesignTokens extends DesignTokens<DividerDesignTokens> {
          * @designToken divider.content.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the horizontal section
-     */
-    horizontal?: {
+    }
+
+    interface Horizontal {
         /**
          * Margin of horizontal
          *
@@ -64,11 +63,9 @@ export interface DividerDesignTokens extends DesignTokens<DividerDesignTokens> {
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the vertical section
-     */
-    vertical?: {
+    }
+
+    interface Vertical {
         /**
          * Margin of vertical
          *
@@ -92,5 +89,32 @@ export interface DividerDesignTokens extends DesignTokens<DividerDesignTokens> {
              */
             padding?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<DividerDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface DividerDesignTokens extends DesignTokens<DividerDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: DividerTokenSections.Root;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: DividerTokenSections.Content;
+    /**
+     * Used to pass tokens of the horizontal section
+     */
+    horizontal?: DividerTokenSections.Horizontal;
+    /**
+     * Used to pass tokens of the vertical section
+     */
+    vertical?: DividerTokenSections.Vertical;
 }

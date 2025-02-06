@@ -4,15 +4,18 @@
  *
  * @module themes/badge
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace BadgeTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -49,22 +52,18 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.height
          */
         height?: string;
-    };
-    /**
-     * Used to pass tokens of the dot section
-     */
-    dot?: {
+    }
+
+    interface Dot {
         /**
          * Size of dot
          *
          * @designToken badge.dot.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the sm section
-     */
-    sm?: {
+    }
+
+    interface Sm {
         /**
          * Font size of sm
          *
@@ -83,11 +82,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.sm.height
          */
         height?: string;
-    };
-    /**
-     * Used to pass tokens of the lg section
-     */
-    lg?: {
+    }
+
+    interface Lg {
         /**
          * Font size of lg
          *
@@ -106,11 +103,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.lg.height
          */
         height?: string;
-    };
-    /**
-     * Used to pass tokens of the xl section
-     */
-    xl?: {
+    }
+
+    interface Xl {
         /**
          * Font size of xl
          *
@@ -129,11 +124,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.xl.height
          */
         height?: string;
-    };
-    /**
-     * Used to pass tokens of the primary section
-     */
-    primary?: {
+    }
+
+    interface Primary {
         /**
          * Background of primary
          *
@@ -146,11 +139,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.primary.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the secondary section
-     */
-    secondary?: {
+    }
+
+    interface Secondary {
         /**
          * Background of secondary
          *
@@ -163,11 +154,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.secondary.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the success section
-     */
-    success?: {
+    }
+
+    interface Success {
         /**
          * Background of success
          *
@@ -180,11 +169,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.success.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the info section
-     */
-    info?: {
+    }
+
+    interface Info {
         /**
          * Background of info
          *
@@ -197,11 +184,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.info.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the warn section
-     */
-    warn?: {
+    }
+
+    interface Warn {
         /**
          * Background of warn
          *
@@ -214,11 +199,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.warn.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the danger section
-     */
-    danger?: {
+    }
+
+    interface Danger {
         /**
          * Background of danger
          *
@@ -231,11 +214,9 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.danger.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the contrast section
-     */
-    contrast?: {
+    }
+
+    interface Contrast {
         /**
          * Background of contrast
          *
@@ -248,5 +229,64 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
          * @designToken badge.contrast.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<BadgeDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: BadgeTokenSections.Root;
+    /**
+     * Used to pass tokens of the dot section
+     */
+    dot?: BadgeTokenSections.Dot;
+    /**
+     * Used to pass tokens of the sm section
+     */
+    sm?: BadgeTokenSections.Sm;
+    /**
+     * Used to pass tokens of the lg section
+     */
+    lg?: BadgeTokenSections.Lg;
+    /**
+     * Used to pass tokens of the xl section
+     */
+    xl?: BadgeTokenSections.Xl;
+    /**
+     * Used to pass tokens of the primary section
+     */
+    primary?: BadgeTokenSections.Primary;
+    /**
+     * Used to pass tokens of the secondary section
+     */
+    secondary?: BadgeTokenSections.Secondary;
+    /**
+     * Used to pass tokens of the success section
+     */
+    success?: BadgeTokenSections.Success;
+    /**
+     * Used to pass tokens of the info section
+     */
+    info?: BadgeTokenSections.Info;
+    /**
+     * Used to pass tokens of the warn section
+     */
+    warn?: BadgeTokenSections.Warn;
+    /**
+     * Used to pass tokens of the danger section
+     */
+    danger?: BadgeTokenSections.Danger;
+    /**
+     * Used to pass tokens of the contrast section
+     */
+    contrast?: BadgeTokenSections.Contrast;
 }

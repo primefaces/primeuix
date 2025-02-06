@@ -1,23 +1,33 @@
-import type { DrawerDesignTokens } from '@primeuix/themes/types/drawer';
+import type { DrawerDesignTokens, DrawerTokenSections } from '@primeuix/themes/types/drawer';
+
+export const root: DrawerTokenSections.Root = {
+    background: '{overlay.modal.background}',
+    borderColor: '{overlay.modal.border.color}',
+    color: '{overlay.modal.color}',
+    shadow: '{overlay.modal.shadow}'
+};
+
+export const header: DrawerTokenSections.Header = {
+    padding: '{overlay.modal.padding}'
+};
+
+export const title: DrawerTokenSections.Title = {
+    fontSize: '1.5rem',
+    fontWeight: '600'
+};
+
+export const content: DrawerTokenSections.Content = {
+    padding: '0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}'
+};
+
+export const footer: DrawerTokenSections.Footer = {
+    padding: '{overlay.modal.padding}'
+};
 
 export default {
-    root: {
-        background: '{overlay.modal.background}',
-        borderColor: '{overlay.modal.border.color}',
-        color: '{overlay.modal.color}',
-        shadow: '{overlay.modal.shadow}'
-    },
-    header: {
-        padding: '{overlay.modal.padding}'
-    },
-    title: {
-        fontSize: '1.5rem',
-        fontWeight: '600'
-    },
-    content: {
-        padding: '0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}'
-    },
-    footer: {
-        padding: '{overlay.modal.padding}'
-    }
+    root,
+    header,
+    title,
+    content,
+    footer
 } satisfies DrawerDesignTokens;

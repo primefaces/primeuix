@@ -4,15 +4,18 @@
  *
  * @module themes/treeselect
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TreeSelectDesignTokens extends DesignTokens<TreeSelectDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TreeSelectTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -202,11 +205,9 @@ export interface TreeSelectDesignTokens extends DesignTokens<TreeSelectDesignTok
              */
             paddingY?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the dropdown section
-     */
-    dropdown?: {
+    }
+
+    interface Dropdown {
         /**
          * Width of dropdown
          *
@@ -219,11 +220,9 @@ export interface TreeSelectDesignTokens extends DesignTokens<TreeSelectDesignTok
          * @designToken treeselect.dropdown.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the overlay section
-     */
-    overlay?: {
+    }
+
+    interface Overlay {
         /**
          * Background of overlay
          *
@@ -254,49 +253,80 @@ export interface TreeSelectDesignTokens extends DesignTokens<TreeSelectDesignTok
          * @designToken treeselect.overlay.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the tree section
-     */
-    tree?: {
+    }
+
+    interface Tree {
         /**
          * Padding of tree
          *
          * @designToken treeselect.tree.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the clear icon section
-     */
-    clearIcon?: {
+    }
+
+    interface ClearIcon {
         /**
          * Color of clear icon
          *
          * @designToken treeselect.clear.icon.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the empty message section
-     */
-    emptyMessage?: {
+    }
+
+    interface EmptyMessage {
         /**
          * Padding of empty message
          *
          * @designToken treeselect.empty.message.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the chip section
-     */
-    chip?: {
+    }
+
+    interface Chip {
         /**
          * Border radius of chip
          *
          * @designToken treeselect.chip.border.radius
          */
         borderRadius?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TreeSelectDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TreeSelectDesignTokens extends DesignTokens<TreeSelectDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TreeSelectTokenSections.Root;
+    /**
+     * Used to pass tokens of the dropdown section
+     */
+    dropdown?: TreeSelectTokenSections.Dropdown;
+    /**
+     * Used to pass tokens of the overlay section
+     */
+    overlay?: TreeSelectTokenSections.Overlay;
+    /**
+     * Used to pass tokens of the tree section
+     */
+    tree?: TreeSelectTokenSections.Tree;
+    /**
+     * Used to pass tokens of the clear icon section
+     */
+    clearIcon?: TreeSelectTokenSections.ClearIcon;
+    /**
+     * Used to pass tokens of the empty message section
+     */
+    emptyMessage?: TreeSelectTokenSections.EmptyMessage;
+    /**
+     * Used to pass tokens of the chip section
+     */
+    chip?: TreeSelectTokenSections.Chip;
 }

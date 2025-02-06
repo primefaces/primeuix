@@ -4,15 +4,18 @@
  *
  * @module themes/inputtext
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface InputTextDesignTokens extends DesignTokens<InputTextDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace InputTextTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -202,5 +205,20 @@ export interface InputTextDesignTokens extends DesignTokens<InputTextDesignToken
              */
             paddingY?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<InputTextDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface InputTextDesignTokens extends DesignTokens<InputTextDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InputTextTokenSections.Root;
 }

@@ -4,26 +4,27 @@
  *
  * @module themes/tabs
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TabsDesignTokens extends DesignTokens<TabsDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TabsTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken tabs.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the tablist section
-     */
-    tablist?: {
+    }
+
+    interface Tablist {
         /**
          * Border width of tablist
          *
@@ -42,11 +43,9 @@ export interface TabsDesignTokens extends DesignTokens<TabsDesignTokens> {
          * @designToken tabs.tablist.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the tab section
-     */
-    tab?: {
+    }
+
+    interface Tab {
         /**
          * Background of tab
          *
@@ -166,11 +165,9 @@ export interface TabsDesignTokens extends DesignTokens<TabsDesignTokens> {
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the tabpanel section
-     */
-    tabpanel?: {
+    }
+
+    interface Tabpanel {
         /**
          * Background of tabpanel
          *
@@ -224,11 +221,9 @@ export interface TabsDesignTokens extends DesignTokens<TabsDesignTokens> {
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the nav button section
-     */
-    navButton?: {
+    }
+
+    interface NavButton {
         /**
          * Background of nav button
          *
@@ -294,11 +289,9 @@ export interface TabsDesignTokens extends DesignTokens<TabsDesignTokens> {
          * @designToken tabs.nav.button.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the active bar section
-     */
-    activeBar?: {
+    }
+
+    interface ActiveBar {
         /**
          * Height of active bar
          *
@@ -317,5 +310,40 @@ export interface TabsDesignTokens extends DesignTokens<TabsDesignTokens> {
          * @designToken tabs.active.bar.background
          */
         background?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TabsDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TabsDesignTokens extends DesignTokens<TabsDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TabsTokenSections.Root;
+    /**
+     * Used to pass tokens of the tablist section
+     */
+    tablist?: TabsTokenSections.Tablist;
+    /**
+     * Used to pass tokens of the tab section
+     */
+    tab?: TabsTokenSections.Tab;
+    /**
+     * Used to pass tokens of the tabpanel section
+     */
+    tabpanel?: TabsTokenSections.Tabpanel;
+    /**
+     * Used to pass tokens of the nav button section
+     */
+    navButton?: TabsTokenSections.NavButton;
+    /**
+     * Used to pass tokens of the active bar section
+     */
+    activeBar?: TabsTokenSections.ActiveBar;
 }

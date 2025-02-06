@@ -4,15 +4,18 @@
  *
  * @module themes/chip
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ChipTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -55,11 +58,9 @@ export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
          * @designToken chip.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the image section
-     */
-    image?: {
+    }
+
+    interface Image {
         /**
          * Width of image
          *
@@ -72,11 +73,9 @@ export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
          * @designToken chip.image.height
          */
         height?: string;
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
@@ -89,11 +88,9 @@ export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
          * @designToken chip.icon.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the remove icon section
-     */
-    removeIcon?: {
+    }
+
+    interface RemoveIcon {
         /**
          * Size of remove icon
          *
@@ -141,5 +138,32 @@ export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
          * @designToken chip.remove.icon.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ChipDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ChipTokenSections.Root;
+    /**
+     * Used to pass tokens of the image section
+     */
+    image?: ChipTokenSections.Image;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: ChipTokenSections.Icon;
+    /**
+     * Used to pass tokens of the remove icon section
+     */
+    removeIcon?: ChipTokenSections.RemoveIcon;
 }

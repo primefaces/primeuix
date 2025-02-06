@@ -4,15 +4,18 @@
  *
  * @module themes/cascadeselect
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface CascadeSelectDesignTokens extends DesignTokens<CascadeSelectDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace CascadeSelectTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -202,11 +205,9 @@ export interface CascadeSelectDesignTokens extends DesignTokens<CascadeSelectDes
              */
             paddingY?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the dropdown section
-     */
-    dropdown?: {
+    }
+
+    interface Dropdown {
         /**
          * Width of dropdown
          *
@@ -219,11 +220,9 @@ export interface CascadeSelectDesignTokens extends DesignTokens<CascadeSelectDes
          * @designToken cascadeselect.dropdown.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the overlay section
-     */
-    overlay?: {
+    }
+
+    interface Overlay {
         /**
          * Background of overlay
          *
@@ -254,11 +253,9 @@ export interface CascadeSelectDesignTokens extends DesignTokens<CascadeSelectDes
          * @designToken cascadeselect.overlay.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the list section
-     */
-    list?: {
+    }
+
+    interface List {
         /**
          * Padding of list
          *
@@ -277,11 +274,9 @@ export interface CascadeSelectDesignTokens extends DesignTokens<CascadeSelectDes
          * @designToken cascadeselect.list.mobile.indent
          */
         mobileIndent?: string;
-    };
-    /**
-     * Used to pass tokens of the option section
-     */
-    option?: {
+    }
+
+    interface Option {
         /**
          * Focus background of option
          *
@@ -359,16 +354,49 @@ export interface CascadeSelectDesignTokens extends DesignTokens<CascadeSelectDes
              */
             size?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the clear icon section
-     */
-    clearIcon?: {
+    }
+
+    interface ClearIcon {
         /**
          * Color of clear icon
          *
          * @designToken cascadeselect.clear.icon.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<CascadeSelectDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface CascadeSelectDesignTokens extends DesignTokens<CascadeSelectDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: CascadeSelectTokenSections.Root;
+    /**
+     * Used to pass tokens of the dropdown section
+     */
+    dropdown?: CascadeSelectTokenSections.Dropdown;
+    /**
+     * Used to pass tokens of the overlay section
+     */
+    overlay?: CascadeSelectTokenSections.Overlay;
+    /**
+     * Used to pass tokens of the list section
+     */
+    list?: CascadeSelectTokenSections.List;
+    /**
+     * Used to pass tokens of the option section
+     */
+    option?: CascadeSelectTokenSections.Option;
+    /**
+     * Used to pass tokens of the clear icon section
+     */
+    clearIcon?: CascadeSelectTokenSections.ClearIcon;
 }

@@ -4,15 +4,18 @@
  *
  * @module themes/select
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace SelectTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -202,11 +205,9 @@ export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
              */
             paddingY?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the dropdown section
-     */
-    dropdown?: {
+    }
+
+    interface Dropdown {
         /**
          * Width of dropdown
          *
@@ -219,11 +220,9 @@ export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
          * @designToken select.dropdown.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the overlay section
-     */
-    overlay?: {
+    }
+
+    interface Overlay {
         /**
          * Background of overlay
          *
@@ -254,11 +253,9 @@ export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
          * @designToken select.overlay.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the list section
-     */
-    list?: {
+    }
+
+    interface List {
         /**
          * Padding of list
          *
@@ -282,11 +279,9 @@ export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the option section
-     */
-    option?: {
+    }
+
+    interface Option {
         /**
          * Focus background of option
          *
@@ -341,11 +336,9 @@ export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
          * @designToken select.option.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the option group section
-     */
-    optionGroup?: {
+    }
+
+    interface OptionGroup {
         /**
          * Background of option group
          *
@@ -370,22 +363,18 @@ export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
          * @designToken select.option.group.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the clear icon section
-     */
-    clearIcon?: {
+    }
+
+    interface ClearIcon {
         /**
          * Color of clear icon
          *
          * @designToken select.clear.icon.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the checkmark section
-     */
-    checkmark?: {
+    }
+
+    interface Checkmark {
         /**
          * Color of checkmark
          *
@@ -404,16 +393,61 @@ export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
          * @designToken select.checkmark.gutter.end
          */
         gutterEnd?: string;
-    };
-    /**
-     * Used to pass tokens of the empty message section
-     */
-    emptyMessage?: {
+    }
+
+    interface EmptyMessage {
         /**
          * Padding of empty message
          *
          * @designToken select.empty.message.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<SelectDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface SelectDesignTokens extends DesignTokens<SelectDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SelectTokenSections.Root;
+    /**
+     * Used to pass tokens of the dropdown section
+     */
+    dropdown?: SelectTokenSections.Dropdown;
+    /**
+     * Used to pass tokens of the overlay section
+     */
+    overlay?: SelectTokenSections.Overlay;
+    /**
+     * Used to pass tokens of the list section
+     */
+    list?: SelectTokenSections.List;
+    /**
+     * Used to pass tokens of the option section
+     */
+    option?: SelectTokenSections.Option;
+    /**
+     * Used to pass tokens of the option group section
+     */
+    optionGroup?: SelectTokenSections.OptionGroup;
+    /**
+     * Used to pass tokens of the clear icon section
+     */
+    clearIcon?: SelectTokenSections.ClearIcon;
+    /**
+     * Used to pass tokens of the checkmark section
+     */
+    checkmark?: SelectTokenSections.Checkmark;
+    /**
+     * Used to pass tokens of the empty message section
+     */
+    emptyMessage?: SelectTokenSections.EmptyMessage;
 }

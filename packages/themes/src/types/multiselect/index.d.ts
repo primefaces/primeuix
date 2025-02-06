@@ -4,15 +4,18 @@
  *
  * @module themes/multiselect
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace MultiSelectTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -202,11 +205,9 @@ export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignT
              */
             paddingY?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the dropdown section
-     */
-    dropdown?: {
+    }
+
+    interface Dropdown {
         /**
          * Width of dropdown
          *
@@ -219,11 +220,9 @@ export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignT
          * @designToken multiselect.dropdown.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the overlay section
-     */
-    overlay?: {
+    }
+
+    interface Overlay {
         /**
          * Background of overlay
          *
@@ -254,11 +253,9 @@ export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignT
          * @designToken multiselect.overlay.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the list section
-     */
-    list?: {
+    }
+
+    interface List {
         /**
          * Padding of list
          *
@@ -282,11 +279,9 @@ export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignT
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the option section
-     */
-    option?: {
+    }
+
+    interface Option {
         /**
          * Focus background of option
          *
@@ -347,11 +342,9 @@ export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignT
          * @designToken multiselect.option.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the option group section
-     */
-    optionGroup?: {
+    }
+
+    interface OptionGroup {
         /**
          * Background of option group
          *
@@ -376,38 +369,79 @@ export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignT
          * @designToken multiselect.option.group.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the clear icon section
-     */
-    clearIcon?: {
+    }
+
+    interface ClearIcon {
         /**
          * Color of clear icon
          *
          * @designToken multiselect.clear.icon.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the chip section
-     */
-    chip?: {
+    }
+
+    interface Chip {
         /**
          * Border radius of chip
          *
          * @designToken multiselect.chip.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the empty message section
-     */
-    emptyMessage?: {
+    }
+
+    interface EmptyMessage {
         /**
          * Padding of empty message
          *
          * @designToken multiselect.empty.message.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<MultiSelectDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface MultiSelectDesignTokens extends DesignTokens<MultiSelectDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: MultiSelectTokenSections.Root;
+    /**
+     * Used to pass tokens of the dropdown section
+     */
+    dropdown?: MultiSelectTokenSections.Dropdown;
+    /**
+     * Used to pass tokens of the overlay section
+     */
+    overlay?: MultiSelectTokenSections.Overlay;
+    /**
+     * Used to pass tokens of the list section
+     */
+    list?: MultiSelectTokenSections.List;
+    /**
+     * Used to pass tokens of the option section
+     */
+    option?: MultiSelectTokenSections.Option;
+    /**
+     * Used to pass tokens of the option group section
+     */
+    optionGroup?: MultiSelectTokenSections.OptionGroup;
+    /**
+     * Used to pass tokens of the clear icon section
+     */
+    clearIcon?: MultiSelectTokenSections.ClearIcon;
+    /**
+     * Used to pass tokens of the chip section
+     */
+    chip?: MultiSelectTokenSections.Chip;
+    /**
+     * Used to pass tokens of the empty message section
+     */
+    emptyMessage?: MultiSelectTokenSections.EmptyMessage;
 }

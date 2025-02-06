@@ -1,44 +1,46 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
-import type { InputNumberDesignTokens } from '@primeuix/themes/types/inputnumber';
+import type { InputNumberDesignTokens, InputNumberTokenSections } from '@primeuix/themes/types/inputnumber';
 
-export default {
-    root: {
-        transitionDuration: '{transition.duration}'
-    },
-    button: {
-        width: '3rem',
-        borderRadius: '{form.field.border.radius}',
-        verticalPadding: '{form.field.padding.y}'
-    },
-    colorScheme: {
-        light: {
-            button: {
-                background: 'transparent',
-                hoverBackground: '{surface.100}',
-                activeBackground: '{surface.200}',
-                borderColor: '{form.field.border.color}',
-                hoverBorderColor: '{form.field.border.color}',
-                activeBorderColor: '{form.field.border.color}',
-                color: '{surface.400}',
-                hoverColor: '{surface.500}',
-                activeColor: '{surface.600}'
-            }
-        },
-        dark: {
-            button: {
-                background: 'transparent',
-                hoverBackground: '{surface.800}',
-                activeBackground: '{surface.700}',
-                borderColor: '{form.field.border.color}',
-                hoverBorderColor: '{form.field.border.color}',
-                activeBorderColor: '{form.field.border.color}',
-                color: '{surface.400}',
-                hoverColor: '{surface.300}',
-                activeColor: '{surface.200}'
-            }
+export const root: InputNumberTokenSections.Root = {
+    transitionDuration: '{transition.duration}'
+};
+
+export const button: InputNumberTokenSections.Button = {
+    width: '3rem',
+    borderRadius: '{form.field.border.radius}',
+    verticalPadding: '{form.field.padding.y}'
+};
+
+export const colorScheme: InputNumberTokenSections.ColorScheme = {
+    light: {
+        button: {
+            background: 'transparent',
+            hoverBackground: '{surface.100}',
+            activeBackground: '{surface.200}',
+            borderColor: '{form.field.border.color}',
+            hoverBorderColor: '{form.field.border.color}',
+            activeBorderColor: '{form.field.border.color}',
+            color: '{surface.400}',
+            hoverColor: '{surface.500}',
+            activeColor: '{surface.600}'
         }
     },
-    css: ({ dt }: ThemeStyleOptions) => `
+    dark: {
+        button: {
+            background: 'transparent',
+            hoverBackground: '{surface.800}',
+            activeBackground: '{surface.700}',
+            borderColor: '{form.field.border.color}',
+            hoverBorderColor: '{form.field.border.color}',
+            activeBorderColor: '{form.field.border.color}',
+            color: '{surface.400}',
+            hoverColor: '{surface.300}',
+            activeColor: '{surface.200}'
+        }
+    }
+};
+
+// @section:css-start
+export const css: InputNumberTokenSections.CSS = ({ dt }) => `
 .p-inputnumber-stacked .p-inputnumber-button-group {
     top: 2px;
     right: 2px;
@@ -62,5 +64,12 @@ export default {
 .p-inputnumber-vertical:has(.p-variant-filled) .p-inputnumber-increment-button {
     border-block-end: 1px solid ${dt('inputtext.border.color')}
 }
-`
+`;
+// @section:css-end
+
+export default {
+    root,
+    button,
+    colorScheme,
+    css
 } satisfies InputNumberDesignTokens;

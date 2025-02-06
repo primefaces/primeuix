@@ -4,15 +4,18 @@
  *
  * @module themes/progressbar
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ProgressBarDesignTokens extends DesignTokens<ProgressBarDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ProgressBarTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -31,22 +34,18 @@ export interface ProgressBarDesignTokens extends DesignTokens<ProgressBarDesignT
          * @designToken progressbar.height
          */
         height?: string;
-    };
-    /**
-     * Used to pass tokens of the value section
-     */
-    value?: {
+    }
+
+    interface Value {
         /**
          * Background of value
          *
          * @designToken progressbar.value.background
          */
         background?: string;
-    };
-    /**
-     * Used to pass tokens of the label section
-     */
-    label?: {
+    }
+
+    interface Label {
         /**
          * Color of label
          *
@@ -65,5 +64,28 @@ export interface ProgressBarDesignTokens extends DesignTokens<ProgressBarDesignT
          * @designToken progressbar.label.font.weight
          */
         fontWeight?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ProgressBarDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ProgressBarDesignTokens extends DesignTokens<ProgressBarDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ProgressBarTokenSections.Root;
+    /**
+     * Used to pass tokens of the value section
+     */
+    value?: ProgressBarTokenSections.Value;
+    /**
+     * Used to pass tokens of the label section
+     */
+    label?: ProgressBarTokenSections.Label;
 }

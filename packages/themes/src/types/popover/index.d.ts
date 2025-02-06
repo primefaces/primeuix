@@ -4,15 +4,18 @@
  *
  * @module themes/popover
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface PopoverDesignTokens extends DesignTokens<PopoverDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace PopoverTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -55,16 +58,33 @@ export interface PopoverDesignTokens extends DesignTokens<PopoverDesignTokens> {
          * @designToken popover.arrow.offset
          */
         arrowOffset?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Padding of content
          *
          * @designToken popover.content.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<PopoverDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface PopoverDesignTokens extends DesignTokens<PopoverDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: PopoverTokenSections.Root;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: PopoverTokenSections.Content;
 }

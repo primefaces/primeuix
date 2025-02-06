@@ -4,26 +4,27 @@
  *
  * @module themes/accordion
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface AccordionDesignTokens extends DesignTokens<AccordionDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace AccordionTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken accordion.transition.duration
          */
-        transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the panel section
-     */
-    panel?: {
+        transitionDuration: string;
+    }
+
+    interface Panel {
         /**
          * Border width of panel
          *
@@ -36,11 +37,9 @@ export interface AccordionDesignTokens extends DesignTokens<AccordionDesignToken
          * @designToken accordion.panel.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the header section
-     */
-    header?: {
+    }
+
+    interface Header {
         /**
          * Color of header
          *
@@ -211,11 +210,9 @@ export interface AccordionDesignTokens extends DesignTokens<AccordionDesignToken
              */
             activeBottomBorderRadius?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Border width of content
          *
@@ -246,5 +243,32 @@ export interface AccordionDesignTokens extends DesignTokens<AccordionDesignToken
          * @designToken accordion.content.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<AccordionDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface AccordionDesignTokens extends DesignTokens<AccordionDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: AccordionTokenSections.Root;
+    /**
+     * Used to pass tokens of the panel section
+     */
+    panel?: AccordionTokenSections.Panel;
+    /**
+     * Used to pass tokens of the header section
+     */
+    header?: AccordionTokenSections.Header;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: AccordionTokenSections.Content;
 }

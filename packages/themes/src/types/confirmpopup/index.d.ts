@@ -4,15 +4,18 @@
  *
  * @module themes/confirmpopup
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ConfirmPopupDesignTokens extends DesignTokens<ConfirmPopupDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ConfirmPopupTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -55,11 +58,9 @@ export interface ConfirmPopupDesignTokens extends DesignTokens<ConfirmPopupDesig
          * @designToken confirmpopup.arrow.offset
          */
         arrowOffset?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Padding of content
          *
@@ -72,11 +73,9 @@ export interface ConfirmPopupDesignTokens extends DesignTokens<ConfirmPopupDesig
          * @designToken confirmpopup.content.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
@@ -89,11 +88,9 @@ export interface ConfirmPopupDesignTokens extends DesignTokens<ConfirmPopupDesig
          * @designToken confirmpopup.icon.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the footer section
-     */
-    footer?: {
+    }
+
+    interface Footer {
         /**
          * Gap of footer
          *
@@ -106,5 +103,32 @@ export interface ConfirmPopupDesignTokens extends DesignTokens<ConfirmPopupDesig
          * @designToken confirmpopup.footer.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ConfirmPopupDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ConfirmPopupDesignTokens extends DesignTokens<ConfirmPopupDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ConfirmPopupTokenSections.Root;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: ConfirmPopupTokenSections.Content;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: ConfirmPopupTokenSections.Icon;
+    /**
+     * Used to pass tokens of the footer section
+     */
+    footer?: ConfirmPopupTokenSections.Footer;
 }

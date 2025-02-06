@@ -4,15 +4,18 @@
  *
  * @module themes/virtualscroller
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface VirtualScrollerDesignTokens extends DesignTokens<VirtualScrollerDesignTokens> {
-    /**
-     * Used to pass tokens of the loader section
-     */
-    loader?: {
+/**
+ * Design Token Sections
+ */
+declare namespace VirtualScrollerTokenSections {
+    interface Loader {
         /**
          * Used to pass tokens of the mask section
          */
@@ -41,5 +44,20 @@ export interface VirtualScrollerDesignTokens extends DesignTokens<VirtualScrolle
              */
             size?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<VirtualScrollerDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface VirtualScrollerDesignTokens extends DesignTokens<VirtualScrollerDesignTokens> {
+    /**
+     * Used to pass tokens of the loader section
+     */
+    loader?: VirtualScrollerTokenSections.Loader;
 }

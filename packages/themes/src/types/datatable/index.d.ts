@@ -4,15 +4,18 @@
  *
  * @module themes/datatable
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface DataTableDesignTokens extends DesignTokens<DataTableDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace DataTableTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
@@ -25,11 +28,9 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
          * @designToken datatable.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the header section
-     */
-    header?: {
+    }
+
+    interface Header {
         /**
          * Background of header
          *
@@ -82,11 +83,9 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the header cell section
-     */
-    headerCell?: {
+    }
+
+    interface HeaderCell {
         /**
          * Background of header cell
          *
@@ -198,22 +197,18 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the column title section
-     */
-    columnTitle?: {
+    }
+
+    interface ColumnTitle {
         /**
          * Font weight of column title
          *
          * @designToken datatable.column.title.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the row section
-     */
-    row?: {
+    }
+
+    interface Row {
         /**
          * Background of row
          *
@@ -291,11 +286,9 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
          * @designToken datatable.row.striped.background
          */
         stripedBackground?: string;
-    };
-    /**
-     * Used to pass tokens of the body cell section
-     */
-    bodyCell?: {
+    }
+
+    interface BodyCell {
         /**
          * Border color of body cell
          *
@@ -336,11 +329,9 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
          * @designToken datatable.body.cell.selected.border.color
          */
         selectedBorderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the footer cell section
-     */
-    footerCell?: {
+    }
+
+    interface FooterCell {
         /**
          * Background of footer cell
          *
@@ -387,22 +378,18 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the column footer section
-     */
-    columnFooter?: {
+    }
+
+    interface ColumnFooter {
         /**
          * Font weight of column footer
          *
          * @designToken datatable.column.footer.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the footer section
-     */
-    footer?: {
+    }
+
+    interface Footer {
         /**
          * Background of footer
          *
@@ -455,33 +442,27 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the drop point section
-     */
-    dropPoint?: {
+    }
+
+    interface DropPoint {
         /**
          * Color of drop point
          *
          * @designToken datatable.drop.point.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the column resizer section
-     */
-    columnResizer?: {
+    }
+
+    interface ColumnResizer {
         /**
          * Width of column resizer
          *
          * @designToken datatable.column.resizer.width
          */
         width?: string;
-    };
-    /**
-     * Used to pass tokens of the resize indicator section
-     */
-    resizeIndicator?: {
+    }
+
+    interface ResizeIndicator {
         /**
          * Width of resize indicator
          *
@@ -494,11 +475,9 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
          * @designToken datatable.resize.indicator.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the sort icon section
-     */
-    sortIcon?: {
+    }
+
+    interface SortIcon {
         /**
          * Color of sort icon
          *
@@ -517,22 +496,18 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
          * @designToken datatable.sort.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the loading icon section
-     */
-    loadingIcon?: {
+    }
+
+    interface LoadingIcon {
         /**
          * Size of loading icon
          *
          * @designToken datatable.loading.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the row toggle button section
-     */
-    rowToggleButton?: {
+    }
+
+    interface RowToggleButton {
         /**
          * Hover background of row toggle button
          *
@@ -610,11 +585,9 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the filter section
-     */
-    filter?: {
+    }
+
+    interface Filter {
         /**
          * Inline gap of filter
          *
@@ -801,11 +774,9 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
              */
             borderRadius?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the paginator top section
-     */
-    paginatorTop?: {
+    }
+
+    interface PaginatorTop {
         /**
          * Border color of paginator top
          *
@@ -818,11 +789,9 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
          * @designToken datatable.paginator.top.border.width
          */
         borderWidth?: string;
-    };
-    /**
-     * Used to pass tokens of the paginator bottom section
-     */
-    paginatorBottom?: {
+    }
+
+    interface PaginatorBottom {
         /**
          * Border color of paginator bottom
          *
@@ -835,5 +804,88 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
          * @designToken datatable.paginator.bottom.border.width
          */
         borderWidth?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<DataTableDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface DataTableDesignTokens extends DesignTokens<DataTableDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: DataTableTokenSections.Root;
+    /**
+     * Used to pass tokens of the header section
+     */
+    header?: DataTableTokenSections.Header;
+    /**
+     * Used to pass tokens of the header cell section
+     */
+    headerCell?: DataTableTokenSections.HeaderCell;
+    /**
+     * Used to pass tokens of the column title section
+     */
+    columnTitle?: DataTableTokenSections.ColumnTitle;
+    /**
+     * Used to pass tokens of the row section
+     */
+    row?: DataTableTokenSections.Row;
+    /**
+     * Used to pass tokens of the body cell section
+     */
+    bodyCell?: DataTableTokenSections.BodyCell;
+    /**
+     * Used to pass tokens of the footer cell section
+     */
+    footerCell?: DataTableTokenSections.FooterCell;
+    /**
+     * Used to pass tokens of the column footer section
+     */
+    columnFooter?: DataTableTokenSections.ColumnFooter;
+    /**
+     * Used to pass tokens of the footer section
+     */
+    footer?: DataTableTokenSections.Footer;
+    /**
+     * Used to pass tokens of the drop point section
+     */
+    dropPoint?: DataTableTokenSections.DropPoint;
+    /**
+     * Used to pass tokens of the column resizer section
+     */
+    columnResizer?: DataTableTokenSections.ColumnResizer;
+    /**
+     * Used to pass tokens of the resize indicator section
+     */
+    resizeIndicator?: DataTableTokenSections.ResizeIndicator;
+    /**
+     * Used to pass tokens of the sort icon section
+     */
+    sortIcon?: DataTableTokenSections.SortIcon;
+    /**
+     * Used to pass tokens of the loading icon section
+     */
+    loadingIcon?: DataTableTokenSections.LoadingIcon;
+    /**
+     * Used to pass tokens of the row toggle button section
+     */
+    rowToggleButton?: DataTableTokenSections.RowToggleButton;
+    /**
+     * Used to pass tokens of the filter section
+     */
+    filter?: DataTableTokenSections.Filter;
+    /**
+     * Used to pass tokens of the paginator top section
+     */
+    paginatorTop?: DataTableTokenSections.PaginatorTop;
+    /**
+     * Used to pass tokens of the paginator bottom section
+     */
+    paginatorBottom?: DataTableTokenSections.PaginatorBottom;
 }

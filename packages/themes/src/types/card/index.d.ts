@@ -4,15 +4,18 @@
  *
  * @module themes/card
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface CardDesignTokens extends DesignTokens<CardDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace CardTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -37,11 +40,9 @@ export interface CardDesignTokens extends DesignTokens<CardDesignTokens> {
          * @designToken card.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the body section
-     */
-    body?: {
+    }
+
+    interface Body {
         /**
          * Padding of body
          *
@@ -54,22 +55,18 @@ export interface CardDesignTokens extends DesignTokens<CardDesignTokens> {
          * @designToken card.body.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the caption section
-     */
-    caption?: {
+    }
+
+    interface Caption {
         /**
          * Gap of caption
          *
          * @designToken card.caption.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the title section
-     */
-    title?: {
+    }
+
+    interface Title {
         /**
          * Font size of title
          *
@@ -82,16 +79,45 @@ export interface CardDesignTokens extends DesignTokens<CardDesignTokens> {
          * @designToken card.title.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the subtitle section
-     */
-    subtitle?: {
+    }
+
+    interface Subtitle {
         /**
          * Color of subtitle
          *
          * @designToken card.subtitle.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<CardDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface CardDesignTokens extends DesignTokens<CardDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: CardTokenSections.Root;
+    /**
+     * Used to pass tokens of the body section
+     */
+    body?: CardTokenSections.Body;
+    /**
+     * Used to pass tokens of the caption section
+     */
+    caption?: CardTokenSections.Caption;
+    /**
+     * Used to pass tokens of the title section
+     */
+    title?: CardTokenSections.Title;
+    /**
+     * Used to pass tokens of the subtitle section
+     */
+    subtitle?: CardTokenSections.Subtitle;
 }

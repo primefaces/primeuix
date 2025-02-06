@@ -4,26 +4,27 @@
  *
  * @module themes/slider
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface SliderDesignTokens extends DesignTokens<SliderDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace SliderTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken slider.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the track section
-     */
-    track?: {
+    }
+
+    interface Track {
         /**
          * Background of track
          *
@@ -42,22 +43,18 @@ export interface SliderDesignTokens extends DesignTokens<SliderDesignTokens> {
          * @designToken slider.track.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the range section
-     */
-    range?: {
+    }
+
+    interface Range {
         /**
          * Background of range
          *
          * @designToken slider.range.background
          */
         background?: string;
-    };
-    /**
-     * Used to pass tokens of the handle section
-     */
-    handle?: {
+    }
+
+    interface Handle {
         /**
          * Width of handle
          *
@@ -164,5 +161,32 @@ export interface SliderDesignTokens extends DesignTokens<SliderDesignTokens> {
          * @designToken slider.handle.content.background
          */
         contentBackground?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<SliderDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface SliderDesignTokens extends DesignTokens<SliderDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SliderTokenSections.Root;
+    /**
+     * Used to pass tokens of the track section
+     */
+    track?: SliderTokenSections.Track;
+    /**
+     * Used to pass tokens of the range section
+     */
+    range?: SliderTokenSections.Range;
+    /**
+     * Used to pass tokens of the handle section
+     */
+    handle?: SliderTokenSections.Handle;
 }

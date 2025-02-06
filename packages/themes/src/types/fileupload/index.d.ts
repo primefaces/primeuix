@@ -4,15 +4,18 @@
  *
  * @module themes/fileupload
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface FileUploadDesignTokens extends DesignTokens<FileUploadDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace FileUploadTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -43,11 +46,9 @@ export interface FileUploadDesignTokens extends DesignTokens<FileUploadDesignTok
          * @designToken fileupload.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the header section
-     */
-    header?: {
+    }
+
+    interface Header {
         /**
          * Background of header
          *
@@ -90,11 +91,9 @@ export interface FileUploadDesignTokens extends DesignTokens<FileUploadDesignTok
          * @designToken fileupload.header.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Highlight border color of content
          *
@@ -113,11 +112,9 @@ export interface FileUploadDesignTokens extends DesignTokens<FileUploadDesignTok
          * @designToken fileupload.content.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the file section
-     */
-    file?: {
+    }
+
+    interface File {
         /**
          * Padding of file
          *
@@ -147,38 +144,71 @@ export interface FileUploadDesignTokens extends DesignTokens<FileUploadDesignTok
              */
             gap?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the file list section
-     */
-    fileList?: {
+    }
+
+    interface FileList {
         /**
          * Gap of file list
          *
          * @designToken fileupload.file.list.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the progressbar section
-     */
-    progressbar?: {
+    }
+
+    interface Progressbar {
         /**
          * Height of progressbar
          *
          * @designToken fileupload.progressbar.height
          */
         height?: string;
-    };
-    /**
-     * Used to pass tokens of the basic section
-     */
-    basic?: {
+    }
+
+    interface Basic {
         /**
          * Gap of basic
          *
          * @designToken fileupload.basic.gap
          */
         gap?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<FileUploadDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface FileUploadDesignTokens extends DesignTokens<FileUploadDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: FileUploadTokenSections.Root;
+    /**
+     * Used to pass tokens of the header section
+     */
+    header?: FileUploadTokenSections.Header;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: FileUploadTokenSections.Content;
+    /**
+     * Used to pass tokens of the file section
+     */
+    file?: FileUploadTokenSections.File;
+    /**
+     * Used to pass tokens of the file list section
+     */
+    fileList?: FileUploadTokenSections.FileList;
+    /**
+     * Used to pass tokens of the progressbar section
+     */
+    progressbar?: FileUploadTokenSections.Progressbar;
+    /**
+     * Used to pass tokens of the basic section
+     */
+    basic?: FileUploadTokenSections.Basic;
 }

@@ -1,25 +1,26 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
-import type { RatingDesignTokens } from '@primeuix/themes/types/rating';
+import type { RatingDesignTokens, RatingTokenSections } from '@primeuix/themes/types/rating';
 
-export default {
-    root: {
-        gap: '0.5rem',
-        transitionDuration: '{transition.duration}',
-        focusRing: {
-            width: '0',
-            style: 'none',
-            color: 'unset',
-            offset: '0',
-            shadow: 'none'
-        }
-    },
-    icon: {
-        size: '1.125rem',
-        color: '{text.muted.color}',
-        hoverColor: '{primary.color}',
-        activeColor: '{primary.color}'
-    },
-    css: ({ dt }: ThemeStyleOptions) => `
+export const root: RatingTokenSections.Root = {
+    gap: '0.5rem',
+    transitionDuration: '{transition.duration}',
+    focusRing: {
+        width: '0',
+        style: 'none',
+        color: 'unset',
+        offset: '0',
+        shadow: 'none'
+    }
+};
+
+export const icon: RatingTokenSections.Icon = {
+    size: '1.125rem',
+    color: '{text.muted.color}',
+    hoverColor: '{primary.color}',
+    activeColor: '{primary.color}'
+};
+
+// @section:css-start
+export const css: RatingTokenSections.CSS = ({ dt }) => `
 .p-rating:not(.p-disabled):not(.p-readonly) .p-rating-option:hover {
     background: color-mix(in srgb, ${dt('rating.icon.color')}, transparent 96%);
     box-shadow: 0 0 1px 8px color-mix(in srgb, ${dt('rating.icon.color')}, transparent 96%);
@@ -34,5 +35,11 @@ export default {
     background: color-mix(in srgb, ${dt('rating.icon.active.color')}, transparent 84%);
     box-shadow: 0 0 1px 8px color-mix(in srgb, ${dt('rating.icon.active.color')}, transparent 84%);
 }
-`
+`;
+// @section:css-end
+
+export default {
+    root,
+    icon,
+    css
 } satisfies RatingDesignTokens;

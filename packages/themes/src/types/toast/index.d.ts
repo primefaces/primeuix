@@ -4,15 +4,18 @@
  *
  * @module themes/toast
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ToastTokenSections {
+    interface Root {
         /**
          * Width of root
          *
@@ -37,22 +40,18 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
          * @designToken toast.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
          * @designToken toast.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Padding of content
          *
@@ -65,22 +64,18 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
          * @designToken toast.content.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the text section
-     */
-    text?: {
+    }
+
+    interface Text {
         /**
          * Gap of text
          *
          * @designToken toast.text.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the summary section
-     */
-    summary?: {
+    }
+
+    interface Summary {
         /**
          * Font weight of summary
          *
@@ -93,11 +88,9 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
          * @designToken toast.summary.font.size
          */
         fontSize?: string;
-    };
-    /**
-     * Used to pass tokens of the detail section
-     */
-    detail?: {
+    }
+
+    interface Detail {
         /**
          * Font weight of detail
          *
@@ -110,11 +103,9 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
          * @designToken toast.detail.font.size
          */
         fontSize?: string;
-    };
-    /**
-     * Used to pass tokens of the close button section
-     */
-    closeButton?: {
+    }
+
+    interface CloseButton {
         /**
          * Width of close button
          *
@@ -156,28 +147,20 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
              */
             offset?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the close icon section
-     */
-    closeIcon?: {
+    }
+
+    interface CloseIcon {
         /**
          * Size of close icon
          *
          * @designToken toast.close.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the blur section
-     *
-     * @designToken toast.blur
-     */
-    blur?: string;
-    /**
-     * Used to pass tokens of the info section
-     */
-    info?: {
+    }
+
+    type Blur = string;
+
+    interface Info {
         /**
          * Background of info
          *
@@ -236,11 +219,9 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
                 shadow?: string;
             };
         };
-    };
-    /**
-     * Used to pass tokens of the success section
-     */
-    success?: {
+    }
+
+    interface Success {
         /**
          * Background of success
          *
@@ -299,11 +280,9 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
                 shadow?: string;
             };
         };
-    };
-    /**
-     * Used to pass tokens of the warn section
-     */
-    warn?: {
+    }
+
+    interface Warn {
         /**
          * Background of warn
          *
@@ -362,11 +341,9 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
                 shadow?: string;
             };
         };
-    };
-    /**
-     * Used to pass tokens of the error section
-     */
-    error?: {
+    }
+
+    interface Error {
         /**
          * Background of error
          *
@@ -425,11 +402,9 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
                 shadow?: string;
             };
         };
-    };
-    /**
-     * Used to pass tokens of the secondary section
-     */
-    secondary?: {
+    }
+
+    interface Secondary {
         /**
          * Background of secondary
          *
@@ -488,11 +463,9 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
                 shadow?: string;
             };
         };
-    };
-    /**
-     * Used to pass tokens of the contrast section
-     */
-    contrast?: {
+    }
+
+    interface Contrast {
         /**
          * Background of contrast
          *
@@ -551,5 +524,78 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
                 shadow?: string;
             };
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ToastDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ToastTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: ToastTokenSections.Icon;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: ToastTokenSections.Content;
+    /**
+     * Used to pass tokens of the text section
+     */
+    text?: ToastTokenSections.Text;
+    /**
+     * Used to pass tokens of the summary section
+     */
+    summary?: ToastTokenSections.Summary;
+    /**
+     * Used to pass tokens of the detail section
+     */
+    detail?: ToastTokenSections.Detail;
+    /**
+     * Used to pass tokens of the close button section
+     */
+    closeButton?: ToastTokenSections.CloseButton;
+    /**
+     * Used to pass tokens of the close icon section
+     */
+    closeIcon?: ToastTokenSections.CloseIcon;
+    /**
+     * Used to pass tokens of the blur section
+     *
+     * @designToken toast.blur
+     */
+    blur?: ToastTokenSections.Blur;
+    /**
+     * Used to pass tokens of the info section
+     */
+    info?: ToastTokenSections.Info;
+    /**
+     * Used to pass tokens of the success section
+     */
+    success?: ToastTokenSections.Success;
+    /**
+     * Used to pass tokens of the warn section
+     */
+    warn?: ToastTokenSections.Warn;
+    /**
+     * Used to pass tokens of the error section
+     */
+    error?: ToastTokenSections.Error;
+    /**
+     * Used to pass tokens of the secondary section
+     */
+    secondary?: ToastTokenSections.Secondary;
+    /**
+     * Used to pass tokens of the contrast section
+     */
+    contrast?: ToastTokenSections.Contrast;
 }

@@ -4,15 +4,18 @@
  *
  * @module themes/selectbutton
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface SelectButtonDesignTokens extends DesignTokens<SelectButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace SelectButtonTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -25,5 +28,20 @@ export interface SelectButtonDesignTokens extends DesignTokens<SelectButtonDesig
          * @designToken selectbutton.invalid.border.color
          */
         invalidBorderColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<SelectButtonDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface SelectButtonDesignTokens extends DesignTokens<SelectButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SelectButtonTokenSections.Root;
 }

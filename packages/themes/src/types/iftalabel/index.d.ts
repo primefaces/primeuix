@@ -4,15 +4,18 @@
  *
  * @module themes/iftalabel
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface IftaLabelDesignTokens extends DesignTokens<IftaLabelDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace IftaLabelTokenSections {
+    interface Root {
         /**
          * Color of root
          *
@@ -61,11 +64,9 @@ export interface IftaLabelDesignTokens extends DesignTokens<IftaLabelDesignToken
          * @designToken iftalabel.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the input section
-     */
-    input?: {
+    }
+
+    interface Input {
         /**
          * Padding top of input
          *
@@ -78,5 +79,24 @@ export interface IftaLabelDesignTokens extends DesignTokens<IftaLabelDesignToken
          * @designToken iftalabel.input.padding.bottom
          */
         paddingBottom?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<IftaLabelDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface IftaLabelDesignTokens extends DesignTokens<IftaLabelDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: IftaLabelTokenSections.Root;
+    /**
+     * Used to pass tokens of the input section
+     */
+    input?: IftaLabelTokenSections.Input;
 }

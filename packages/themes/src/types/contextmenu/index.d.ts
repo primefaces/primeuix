@@ -4,15 +4,18 @@
  *
  * @module themes/contextmenu
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ContextMenuDesignTokens extends DesignTokens<ContextMenuDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ContextMenuTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -49,11 +52,9 @@ export interface ContextMenuDesignTokens extends DesignTokens<ContextMenuDesignT
          * @designToken contextmenu.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the list section
-     */
-    list?: {
+    }
+
+    interface List {
         /**
          * Padding of list
          *
@@ -66,11 +67,9 @@ export interface ContextMenuDesignTokens extends DesignTokens<ContextMenuDesignT
          * @designToken contextmenu.list.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Focus background of item
          *
@@ -142,22 +141,18 @@ export interface ContextMenuDesignTokens extends DesignTokens<ContextMenuDesignT
              */
             activeColor?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the submenu section
-     */
-    submenu?: {
+    }
+
+    interface Submenu {
         /**
          * Mobile indent of submenu
          *
          * @designToken contextmenu.submenu.mobile.indent
          */
         mobileIndent?: string;
-    };
-    /**
-     * Used to pass tokens of the submenu icon section
-     */
-    submenuIcon?: {
+    }
+
+    interface SubmenuIcon {
         /**
          * Size of submenu icon
          *
@@ -182,16 +177,49 @@ export interface ContextMenuDesignTokens extends DesignTokens<ContextMenuDesignT
          * @designToken contextmenu.submenu.icon.active.color
          */
         activeColor?: string;
-    };
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: {
+    }
+
+    interface Separator {
         /**
          * Border color of separator
          *
          * @designToken contextmenu.separator.border.color
          */
         borderColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ContextMenuDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ContextMenuDesignTokens extends DesignTokens<ContextMenuDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ContextMenuTokenSections.Root;
+    /**
+     * Used to pass tokens of the list section
+     */
+    list?: ContextMenuTokenSections.List;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: ContextMenuTokenSections.Item;
+    /**
+     * Used to pass tokens of the submenu section
+     */
+    submenu?: ContextMenuTokenSections.Submenu;
+    /**
+     * Used to pass tokens of the submenu icon section
+     */
+    submenuIcon?: ContextMenuTokenSections.SubmenuIcon;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: ContextMenuTokenSections.Separator;
 }

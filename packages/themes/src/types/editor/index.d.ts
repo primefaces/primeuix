@@ -4,61 +4,71 @@
  *
  * @module themes/editor
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface EditorDesignTokens extends DesignTokens<EditorDesignTokens> {
-    /**
-     * Used to pass tokens of the toolbar section
-     */
-    toolbar?: {
+/**
+ * Design Token Sections
+ */
+declare namespace EditorTokenSections {
+    interface Toolbar {
         /**
          * Background of toolbar
          *
          * @designToken editor.toolbar.background
          */
         background?: string;
+
         /**
          * Border color of toolbar
          *
          * @designToken editor.toolbar.border.color
          */
         borderColor?: string;
+
         /**
          * Border radius of toolbar
          *
          * @designToken editor.toolbar.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the toolbar item section
-     */
-    toolbarItem?: {
+    }
+
+    interface ToolbarItem {
         /**
          * Color of toolbar item
          *
          * @designToken editor.toolbar.item.color
          */
         color?: string;
+
         /**
-         * Hover color of toolbar item
+         * Focus background of toolbar item
          *
-         * @designToken editor.toolbar.item.hover.color
+         * @designToken editor.toolbar.item.focus.background
          */
-        hoverColor?: string;
+        focusBackground?: string;
+
         /**
-         * Active color of toolbar item
+         * Focus color of toolbar item
          *
-         * @designToken editor.toolbar.item.active.color
+         * @designToken editor.toolbar.item.focus.color
          */
-        activeColor?: string;
-    };
-    /**
-     * Used to pass tokens of the overlay section
-     */
-    overlay?: {
+        focusColor?: string;
+
+        /**
+         * Padding of toolbar item
+         *
+         * @designToken editor.toolbar.item.padding
+         */
+        padding?: string;
+    }
+
+    interface Overlay {
         /**
          * Background of overlay
          *
@@ -95,11 +105,9 @@ export interface EditorDesignTokens extends DesignTokens<EditorDesignTokens> {
          * @designToken editor.overlay.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the overlay option section
-     */
-    overlayOption?: {
+    }
+
+    interface OverlayOption {
         /**
          * Focus background of overlay option
          *
@@ -130,11 +138,9 @@ export interface EditorDesignTokens extends DesignTokens<EditorDesignTokens> {
          * @designToken editor.overlay.option.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Background of content
          *
@@ -159,5 +165,36 @@ export interface EditorDesignTokens extends DesignTokens<EditorDesignTokens> {
          * @designToken editor.content.border.radius
          */
         borderRadius?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<EditorDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface EditorDesignTokens extends DesignTokens<EditorDesignTokens> {
+    /**
+     * Used to pass tokens of the toolbar section
+     */
+    toolbar?: EditorTokenSections.Toolbar;
+    /**
+     * Used to pass tokens of the toolbar item section
+     */
+    toolbarItem?: EditorTokenSections.ToolbarItem;
+    /**
+     * Used to pass tokens of the overlay section
+     */
+    overlay?: EditorTokenSections.Overlay;
+    /**
+     * Used to pass tokens of the overlay option section
+     */
+    overlayOption?: EditorTokenSections.OverlayOption;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: EditorTokenSections.Content;
 }

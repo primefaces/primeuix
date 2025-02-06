@@ -4,26 +4,27 @@
  *
  * @module themes/tabview
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TabViewTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken tabview.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the tab list section
-     */
-    tabList?: {
+    }
+
+    interface TabList {
         /**
          * Background of tab list
          *
@@ -36,11 +37,9 @@ export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {
          * @designToken tabview.tab.list.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the tab section
-     */
-    tab?: {
+    }
+
+    interface Tab {
         /**
          * Border color of tab
          *
@@ -71,11 +70,9 @@ export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {
          * @designToken tabview.tab.active.color
          */
         activeColor?: string;
-    };
-    /**
-     * Used to pass tokens of the tab panel section
-     */
-    tabPanel?: {
+    }
+
+    interface TabPanel {
         /**
          * Background of tab panel
          *
@@ -88,11 +85,9 @@ export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {
          * @designToken tabview.tab.panel.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the nav button section
-     */
-    navButton?: {
+    }
+
+    interface NavButton {
         /**
          * Background of nav button
          *
@@ -117,5 +112,36 @@ export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {
          * @designToken tabview.nav.button.shadow
          */
         shadow?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TabViewDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TabViewTokenSections.Root;
+    /**
+     * Used to pass tokens of the tab list section
+     */
+    tabList?: TabViewTokenSections.TabList;
+    /**
+     * Used to pass tokens of the tab section
+     */
+    tab?: TabViewTokenSections.Tab;
+    /**
+     * Used to pass tokens of the tab panel section
+     */
+    tabPanel?: TabViewTokenSections.TabPanel;
+    /**
+     * Used to pass tokens of the nav button section
+     */
+    navButton?: TabViewTokenSections.NavButton;
 }

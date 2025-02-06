@@ -4,15 +4,18 @@
  *
  * @module themes/button
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ButtonTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -767,11 +770,9 @@ export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
                 shadow?: string;
             };
         };
-    };
-    /**
-     * Used to pass tokens of the outlined section
-     */
-    outlined?: {
+    }
+
+    interface Outlined {
         /**
          * Primary of outlined
          */
@@ -1033,11 +1034,9 @@ export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
              */
             color?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the text section
-     */
-    text?: {
+    }
+
+    interface Text {
         /**
          * Primary of text
          */
@@ -1245,11 +1244,9 @@ export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
              */
             color?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the link section
-     */
-    link?: {
+    }
+
+    interface Link {
         /**
          * Color of link
          *
@@ -1268,5 +1265,32 @@ export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
          * @designToken button.link.active.color
          */
         activeColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ButtonDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ButtonDesignTokens extends DesignTokens<ButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ButtonTokenSections.Root;
+    /**
+     * Used to pass tokens of the outlined section
+     */
+    outlined?: ButtonTokenSections.Outlined;
+    /**
+     * Used to pass tokens of the text section
+     */
+    text?: ButtonTokenSections.Text;
+    /**
+     * Used to pass tokens of the link section
+     */
+    link?: ButtonTokenSections.Link;
 }

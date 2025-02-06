@@ -4,15 +4,18 @@
  *
  * @module themes/listbox
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ListboxTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -67,11 +70,9 @@ export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
          * @designToken listbox.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the list section
-     */
-    list?: {
+    }
+
+    interface List {
         /**
          * Padding of list
          *
@@ -95,11 +96,9 @@ export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the option section
-     */
-    option?: {
+    }
+
+    interface Option {
         /**
          * Focus background of option
          *
@@ -160,11 +159,9 @@ export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
          * @designToken listbox.option.striped.background
          */
         stripedBackground?: string;
-    };
-    /**
-     * Used to pass tokens of the option group section
-     */
-    optionGroup?: {
+    }
+
+    interface OptionGroup {
         /**
          * Background of option group
          *
@@ -189,11 +186,9 @@ export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
          * @designToken listbox.option.group.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the checkmark section
-     */
-    checkmark?: {
+    }
+
+    interface Checkmark {
         /**
          * Color of checkmark
          *
@@ -212,16 +207,49 @@ export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
          * @designToken listbox.checkmark.gutter.end
          */
         gutterEnd?: string;
-    };
-    /**
-     * Used to pass tokens of the empty message section
-     */
-    emptyMessage?: {
+    }
+
+    interface EmptyMessage {
         /**
          * Padding of empty message
          *
          * @designToken listbox.empty.message.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ListboxDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ListboxTokenSections.Root;
+    /**
+     * Used to pass tokens of the list section
+     */
+    list?: ListboxTokenSections.List;
+    /**
+     * Used to pass tokens of the option section
+     */
+    option?: ListboxTokenSections.Option;
+    /**
+     * Used to pass tokens of the option group section
+     */
+    optionGroup?: ListboxTokenSections.OptionGroup;
+    /**
+     * Used to pass tokens of the checkmark section
+     */
+    checkmark?: ListboxTokenSections.Checkmark;
+    /**
+     * Used to pass tokens of the empty message section
+     */
+    emptyMessage?: ListboxTokenSections.EmptyMessage;
 }

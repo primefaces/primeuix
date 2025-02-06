@@ -4,15 +4,18 @@
  *
  * @module themes/autocomplete
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace AutoCompleteTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -156,11 +159,9 @@ export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesig
          * @designToken autocomplete.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the overlay section
-     */
-    overlay?: {
+    }
+
+    interface Overlay {
         /**
          * Background of overlay
          *
@@ -191,11 +192,9 @@ export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesig
          * @designToken autocomplete.overlay.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the list section
-     */
-    list?: {
+    }
+
+    interface List {
         /**
          * Padding of list
          *
@@ -208,11 +207,9 @@ export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesig
          * @designToken autocomplete.list.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the option section
-     */
-    option?: {
+    }
+
+    interface Option {
         /**
          * Focus background of option
          *
@@ -267,11 +264,9 @@ export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesig
          * @designToken autocomplete.option.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the option group section
-     */
-    optionGroup?: {
+    }
+
+    interface OptionGroup {
         /**
          * Background of option group
          *
@@ -296,11 +291,9 @@ export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesig
          * @designToken autocomplete.option.group.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the dropdown section
-     */
-    dropdown?: {
+    }
+
+    interface Dropdown {
         /**
          * Width of dropdown
          *
@@ -424,11 +417,9 @@ export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesig
          * @designToken autocomplete.dropdown.active.color
          */
         activeColor?: string;
-    };
-    /**
-     * Used to pass tokens of the chip section
-     */
-    chip?: {
+    }
+
+    interface Chip {
         /**
          * Border radius of chip
          *
@@ -447,16 +438,57 @@ export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesig
          * @designToken autocomplete.chip.focus.color
          */
         focusColor?: string;
-    };
-    /**
-     * Used to pass tokens of the empty message section
-     */
-    emptyMessage?: {
+    }
+
+    interface EmptyMessage {
         /**
          * Padding of empty message
          *
          * @designToken autocomplete.empty.message.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<AutoCompleteDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: AutoCompleteTokenSections.Root;
+    /**
+     * Used to pass tokens of the overlay section
+     */
+    overlay?: AutoCompleteTokenSections.Overlay;
+    /**
+     * Used to pass tokens of the list section
+     */
+    list?: AutoCompleteTokenSections.List;
+    /**
+     * Used to pass tokens of the option section
+     */
+    option?: AutoCompleteTokenSections.Option;
+    /**
+     * Used to pass tokens of the option group section
+     */
+    optionGroup?: AutoCompleteTokenSections.OptionGroup;
+    /**
+     * Used to pass tokens of the dropdown section
+     */
+    dropdown?: AutoCompleteTokenSections.Dropdown;
+    /**
+     * Used to pass tokens of the chip section
+     */
+    chip?: AutoCompleteTokenSections.Chip;
+    /**
+     * Used to pass tokens of the empty message section
+     */
+    emptyMessage?: AutoCompleteTokenSections.EmptyMessage;
 }

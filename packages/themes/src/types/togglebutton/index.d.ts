@@ -4,15 +4,18 @@
  *
  * @module themes/togglebutton
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ToggleButtonDesignTokens extends DesignTokens<ToggleButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ToggleButtonTokenSections {
+    interface Root {
         /**
          * Padding of root
          *
@@ -184,11 +187,9 @@ export interface ToggleButtonDesignTokens extends DesignTokens<ToggleButtonDesig
          * @designToken togglebutton.checked.border.color
          */
         checkedBorderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Disabled color of icon
          *
@@ -213,11 +214,9 @@ export interface ToggleButtonDesignTokens extends DesignTokens<ToggleButtonDesig
          * @designToken togglebutton.icon.checked.color
          */
         checkedColor?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Padding of content
          *
@@ -264,5 +263,28 @@ export interface ToggleButtonDesignTokens extends DesignTokens<ToggleButtonDesig
          * @designToken togglebutton.content.checked.background
          */
         checkedBackground?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ToggleButtonDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ToggleButtonDesignTokens extends DesignTokens<ToggleButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ToggleButtonTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: ToggleButtonTokenSections.Icon;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: ToggleButtonTokenSections.Content;
 }

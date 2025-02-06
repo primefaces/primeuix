@@ -1,47 +1,51 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
-import type { PanelMenuDesignTokens } from '@primeuix/themes/types/panelmenu';
+import type { PanelMenuDesignTokens, PanelMenuTokenSections } from '@primeuix/themes/types/panelmenu';
 
-export default {
-    root: {
-        gap: '0',
-        transitionDuration: '{transition.duration}'
-    },
-    panel: {
-        background: '{content.background}',
-        borderColor: '{content.border.color}',
+export const root: PanelMenuTokenSections.Root = {
+    gap: '0',
+    transitionDuration: '{transition.duration}'
+};
+
+export const panel: PanelMenuTokenSections.Panel = {
+    background: '{content.background}',
+    borderColor: '{content.border.color}',
+    borderWidth: '0',
+    color: '{content.color}',
+    padding: '0',
+    borderRadius: '0',
+    first: {
         borderWidth: '0',
-        color: '{content.color}',
-        padding: '0',
-        borderRadius: '0',
-        first: {
-            borderWidth: '0',
-            topBorderRadius: '{content.border.radius}'
-        },
-        last: {
-            borderWidth: '0',
-            bottomBorderRadius: '{content.border.radius}'
-        }
+        topBorderRadius: '{content.border.radius}'
     },
-    item: {
-        focusBackground: '{navigation.item.focus.background}',
-        color: '{navigation.item.color}',
-        focusColor: '{navigation.item.focus.color}',
-        gap: '0.5rem',
-        padding: '{navigation.item.padding}',
-        borderRadius: '{content.border.radius}',
-        icon: {
-            color: '{navigation.item.icon.color}',
-            focusColor: '{navigation.item.icon.focus.color}'
-        }
-    },
-    submenu: {
-        indent: '1rem'
-    },
-    submenuIcon: {
-        color: '{navigation.submenu.icon.color}',
-        focusColor: '{navigation.submenu.icon.focus.color}'
-    },
-    css: ({ dt }: ThemeStyleOptions) => `
+    last: {
+        borderWidth: '0',
+        bottomBorderRadius: '{content.border.radius}'
+    }
+};
+
+export const item: PanelMenuTokenSections.Item = {
+    focusBackground: '{navigation.item.focus.background}',
+    color: '{navigation.item.color}',
+    focusColor: '{navigation.item.focus.color}',
+    gap: '0.5rem',
+    padding: '{navigation.item.padding}',
+    borderRadius: '{content.border.radius}',
+    icon: {
+        color: '{navigation.item.icon.color}',
+        focusColor: '{navigation.item.icon.focus.color}'
+    }
+};
+
+export const submenu: PanelMenuTokenSections.Submenu = {
+    indent: '1rem'
+};
+
+export const submenuIcon: PanelMenuTokenSections.SubmenuIcon = {
+    color: '{navigation.submenu.icon.color}',
+    focusColor: '{navigation.submenu.icon.focus.color}'
+};
+
+// @section:css-start
+export const css: PanelMenuTokenSections.CSS = ({ dt }) => `
 .p-panelmenu-panel {
     box-shadow: 0 0 0 1px ${dt('panelmenu.panel.border.color')};
     transition: margin ${dt('panelmenu.transition.duration')};
@@ -66,5 +70,14 @@ export default {
 .p-accordionpanel:not(.p-disabled) .p-accordionheader:focus-visible {
     background: ${dt('navigation.item.active.background')};
 }
-`
+`;
+// @section:css-end
+
+export default {
+    root,
+    panel,
+    item,
+    submenu,
+    submenuIcon,
+    css
 } satisfies PanelMenuDesignTokens;

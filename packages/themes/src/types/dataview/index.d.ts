@@ -4,44 +4,45 @@
  *
  * @module themes/dataview
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface DataViewDesignTokens extends DesignTokens<DataViewDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace DataViewTokenSections {
+    interface Root {
         /**
          * Border color of root
          *
          * @designToken dataview.border.color
          */
-        borderColor?: string;
+        borderColor: string;
         /**
          * Border width of root
          *
          * @designToken dataview.border.width
          */
-        borderWidth?: string;
+        borderWidth: string;
         /**
          * Border radius of root
          *
          * @designToken dataview.border.radius
          */
-        borderRadius?: string;
+        borderRadius: string;
         /**
          * Padding of root
          *
          * @designToken dataview.padding
          */
-        padding?: string;
-    };
-    /**
-     * Used to pass tokens of the header section
-     */
-    header?: {
+        padding: string;
+    }
+
+    interface Header {
         /**
          * Background of header
          *
@@ -78,11 +79,9 @@ export interface DataViewDesignTokens extends DesignTokens<DataViewDesignTokens>
          * @designToken dataview.header.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Background of content
          *
@@ -119,11 +118,9 @@ export interface DataViewDesignTokens extends DesignTokens<DataViewDesignTokens>
          * @designToken dataview.content.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the footer section
-     */
-    footer?: {
+    }
+
+    interface Footer {
         /**
          * Background of footer
          *
@@ -160,11 +157,9 @@ export interface DataViewDesignTokens extends DesignTokens<DataViewDesignTokens>
          * @designToken dataview.footer.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the paginator top section
-     */
-    paginatorTop?: {
+    }
+
+    interface PaginatorTop {
         /**
          * Border color of paginator top
          *
@@ -177,11 +172,9 @@ export interface DataViewDesignTokens extends DesignTokens<DataViewDesignTokens>
          * @designToken dataview.paginator.top.border.width
          */
         borderWidth?: string;
-    };
-    /**
-     * Used to pass tokens of the paginator bottom section
-     */
-    paginatorBottom?: {
+    }
+
+    interface PaginatorBottom {
         /**
          * Border color of paginator bottom
          *
@@ -194,5 +187,40 @@ export interface DataViewDesignTokens extends DesignTokens<DataViewDesignTokens>
          * @designToken dataview.paginator.bottom.border.width
          */
         borderWidth?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<DataViewDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface DataViewDesignTokens extends DesignTokens<DataViewDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: DataViewTokenSections.Root;
+    /**
+     * Used to pass tokens of the header section
+     */
+    header?: DataViewTokenSections.Header;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: DataViewTokenSections.Content;
+    /**
+     * Used to pass tokens of the footer section
+     */
+    footer?: DataViewTokenSections.Footer;
+    /**
+     * Used to pass tokens of the paginator top section
+     */
+    paginatorTop?: DataViewTokenSections.PaginatorTop;
+    /**
+     * Used to pass tokens of the paginator bottom section
+     */
+    paginatorBottom?: DataViewTokenSections.PaginatorBottom;
 }

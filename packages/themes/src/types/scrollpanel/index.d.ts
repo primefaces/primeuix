@@ -4,26 +4,27 @@
  *
  * @module themes/scrollpanel
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ScrollPanelDesignTokens extends DesignTokens<ScrollPanelDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ScrollPanelTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken scrollpanel.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the bar section
-     */
-    bar?: {
+    }
+
+    interface Bar {
         /**
          * Size of bar
          *
@@ -77,5 +78,24 @@ export interface ScrollPanelDesignTokens extends DesignTokens<ScrollPanelDesignT
          * @designToken scrollpanel.bar.background
          */
         background?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ScrollPanelDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ScrollPanelDesignTokens extends DesignTokens<ScrollPanelDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ScrollPanelTokenSections.Root;
+    /**
+     * Used to pass tokens of the bar section
+     */
+    bar?: ScrollPanelTokenSections.Bar;
 }

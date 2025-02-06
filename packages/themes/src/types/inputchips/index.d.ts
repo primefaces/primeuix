@@ -4,15 +4,18 @@
  *
  * @module themes/inputchips
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace InputChipsTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -144,11 +147,9 @@ export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTok
          * @designToken inputchips.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the chip section
-     */
-    chip?: {
+    }
+
+    interface Chip {
         /**
          * Border radius of chip
          *
@@ -167,5 +168,24 @@ export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTok
          * @designToken inputchips.chip.color
          */
         color?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<InputChipsDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InputChipsTokenSections.Root;
+    /**
+     * Used to pass tokens of the chip section
+     */
+    chip?: InputChipsTokenSections.Chip;
 }

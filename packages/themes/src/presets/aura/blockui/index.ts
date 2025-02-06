@@ -1,7 +1,5 @@
-import type { BlockUIDesignTokens } from '@primeuix/themes/types/blockui';
+import type { BlockUITokenSections } from '@primeuix/themes/types/blockui';
 
-export default {
-    root: {
-        borderRadius: '{content.border.radius}'
-    }
-} satisfies BlockUIDesignTokens;
+export const root: BlockUITokenSections.Root = {
+    borderRadius: '{content.border.radius}'
+};

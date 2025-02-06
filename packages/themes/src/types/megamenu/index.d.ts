@@ -4,15 +4,18 @@
  *
  * @module themes/megamenu
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace MegaMenuTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -83,11 +86,9 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
          * @designToken megamenu.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the base item section
-     */
-    baseItem?: {
+    }
+
+    interface BaseItem {
         /**
          * Border radius of base item
          *
@@ -100,11 +101,9 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
          * @designToken megamenu.base.item.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Focus background of item
          *
@@ -176,11 +175,9 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
              */
             activeColor?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the overlay section
-     */
-    overlay?: {
+    }
+
+    interface Overlay {
         /**
          * Padding of overlay
          *
@@ -223,11 +220,9 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
          * @designToken megamenu.overlay.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the submenu section
-     */
-    submenu?: {
+    }
+
+    interface Submenu {
         /**
          * Padding of submenu
          *
@@ -240,11 +235,9 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
          * @designToken megamenu.submenu.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the submenu label section
-     */
-    submenuLabel?: {
+    }
+
+    interface SubmenuLabel {
         /**
          * Padding of submenu label
          *
@@ -269,11 +262,9 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
          * @designToken megamenu.submenu.label.color
          */
         color?: string;
-    };
-    /**
-     * Used to pass tokens of the submenu icon section
-     */
-    submenuIcon?: {
+    }
+
+    interface SubmenuIcon {
         /**
          * Size of submenu icon
          *
@@ -298,22 +289,18 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
          * @designToken megamenu.submenu.icon.active.color
          */
         activeColor?: string;
-    };
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: {
+    }
+
+    interface Separator {
         /**
          * Border color of separator
          *
          * @designToken megamenu.separator.border.color
          */
         borderColor?: string;
-    };
-    /**
-     * Used to pass tokens of the mobile button section
-     */
-    mobileButton?: {
+    }
+
+    interface MobileButton {
         /**
          * Border radius of mobile button
          *
@@ -379,5 +366,52 @@ export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens>
              */
             shadow?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<MegaMenuDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface MegaMenuDesignTokens extends DesignTokens<MegaMenuDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: MegaMenuTokenSections.Root;
+    /**
+     * Used to pass tokens of the base item section
+     */
+    baseItem?: MegaMenuTokenSections.BaseItem;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: MegaMenuTokenSections.Item;
+    /**
+     * Used to pass tokens of the overlay section
+     */
+    overlay?: MegaMenuTokenSections.Overlay;
+    /**
+     * Used to pass tokens of the submenu section
+     */
+    submenu?: MegaMenuTokenSections.Submenu;
+    /**
+     * Used to pass tokens of the submenu label section
+     */
+    submenuLabel?: MegaMenuTokenSections.SubmenuLabel;
+    /**
+     * Used to pass tokens of the submenu icon section
+     */
+    submenuIcon?: MegaMenuTokenSections.SubmenuIcon;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: MegaMenuTokenSections.Separator;
+    /**
+     * Used to pass tokens of the mobile button section
+     */
+    mobileButton?: MegaMenuTokenSections.MobileButton;
 }

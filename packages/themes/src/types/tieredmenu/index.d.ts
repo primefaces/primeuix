@@ -4,15 +4,18 @@
  *
  * @module themes/tieredmenu
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TieredMenuDesignTokens extends DesignTokens<TieredMenuDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TieredMenuTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -49,11 +52,9 @@ export interface TieredMenuDesignTokens extends DesignTokens<TieredMenuDesignTok
          * @designToken tieredmenu.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the list section
-     */
-    list?: {
+    }
+
+    interface List {
         /**
          * Padding of list
          *
@@ -66,11 +67,9 @@ export interface TieredMenuDesignTokens extends DesignTokens<TieredMenuDesignTok
          * @designToken tieredmenu.list.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: {
+    }
+
+    interface Item {
         /**
          * Focus background of item
          *
@@ -142,22 +141,18 @@ export interface TieredMenuDesignTokens extends DesignTokens<TieredMenuDesignTok
              */
             activeColor?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the submenu section
-     */
-    submenu?: {
+    }
+
+    interface Submenu {
         /**
          * Mobile indent of submenu
          *
          * @designToken tieredmenu.submenu.mobile.indent
          */
         mobileIndent?: string;
-    };
-    /**
-     * Used to pass tokens of the submenu icon section
-     */
-    submenuIcon?: {
+    }
+
+    interface SubmenuIcon {
         /**
          * Size of submenu icon
          *
@@ -182,16 +177,49 @@ export interface TieredMenuDesignTokens extends DesignTokens<TieredMenuDesignTok
          * @designToken tieredmenu.submenu.icon.active.color
          */
         activeColor?: string;
-    };
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: {
+    }
+
+    interface Separator {
         /**
          * Border color of separator
          *
          * @designToken tieredmenu.separator.border.color
          */
         borderColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TieredMenuDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TieredMenuDesignTokens extends DesignTokens<TieredMenuDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TieredMenuTokenSections.Root;
+    /**
+     * Used to pass tokens of the list section
+     */
+    list?: TieredMenuTokenSections.List;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: TieredMenuTokenSections.Item;
+    /**
+     * Used to pass tokens of the submenu section
+     */
+    submenu?: TieredMenuTokenSections.Submenu;
+    /**
+     * Used to pass tokens of the submenu icon section
+     */
+    submenuIcon?: TieredMenuTokenSections.SubmenuIcon;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: TieredMenuTokenSections.Separator;
 }

@@ -4,15 +4,18 @@
  *
  * @module themes/avatar
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface AvatarDesignTokens extends DesignTokens<AvatarDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace AvatarTokenSections {
+    interface Root {
         /**
          * Width of root
          *
@@ -49,22 +52,18 @@ export interface AvatarDesignTokens extends DesignTokens<AvatarDesignTokens> {
          * @designToken avatar.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
          * @designToken avatar.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the group section
-     */
-    group?: {
+    }
+
+    interface Group {
         /**
          * Border color of group
          *
@@ -77,11 +76,9 @@ export interface AvatarDesignTokens extends DesignTokens<AvatarDesignTokens> {
          * @designToken avatar.group.offset
          */
         offset?: string;
-    };
-    /**
-     * Used to pass tokens of the lg section
-     */
-    lg?: {
+    }
+
+    interface Lg {
         /**
          * Width of lg
          *
@@ -122,11 +119,9 @@ export interface AvatarDesignTokens extends DesignTokens<AvatarDesignTokens> {
              */
             offset?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the xl section
-     */
-    xl?: {
+    }
+
+    interface Xl {
         /**
          * Width of xl
          *
@@ -167,5 +162,36 @@ export interface AvatarDesignTokens extends DesignTokens<AvatarDesignTokens> {
              */
             offset?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<AvatarDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface AvatarDesignTokens extends DesignTokens<AvatarDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: AvatarTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: AvatarTokenSections.Icon;
+    /**
+     * Used to pass tokens of the group section
+     */
+    group?: AvatarTokenSections.Group;
+    /**
+     * Used to pass tokens of the lg section
+     */
+    lg?: AvatarTokenSections.Lg;
+    /**
+     * Used to pass tokens of the xl section
+     */
+    xl?: AvatarTokenSections.Xl;
 }

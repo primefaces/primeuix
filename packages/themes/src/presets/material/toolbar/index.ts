@@ -1,26 +1,30 @@
-import type { ToolbarDesignTokens } from '@primeuix/themes/types/toolbar';
+import type { ToolbarDesignTokens, ToolbarTokenSections } from '@primeuix/themes/types/toolbar';
 
-export default {
-    root: {
-        color: '{content.color}',
-        borderRadius: '{content.border.radius}',
-        gap: '0.5rem',
-        padding: '1rem'
+export const root: ToolbarTokenSections.Root = {
+    color: '{content.color}',
+    borderRadius: '{content.border.radius}',
+    gap: '0.5rem',
+    padding: '1rem'
+};
+
+export const colorScheme: ToolbarTokenSections.ColorScheme = {
+    light: {
+        root: {
+            background: '{surface.100}',
+            borderColor: '{surface.100}'
+        }
     },
-    colorScheme: {
-        light: {
+    dark: {
+        root: {
             root: {
-                background: '{surface.100}',
-                borderColor: '{surface.100}'
-            }
-        },
-        dark: {
-            root: {
-                root: {
-                    background: '{surface.800}',
-                    borderColor: '{surface.800}'
-                }
+                background: '{surface.800}',
+                borderColor: '{surface.800}'
             }
         }
     }
+};
+
+export default {
+    root,
+    colorScheme
 } satisfies ToolbarDesignTokens;

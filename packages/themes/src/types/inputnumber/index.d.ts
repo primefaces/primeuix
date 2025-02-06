@@ -4,26 +4,27 @@
  *
  * @module themes/inputnumber
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface InputNumberDesignTokens extends DesignTokens<InputNumberDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace InputNumberTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken inputnumber.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the button section
-     */
-    button?: {
+    }
+
+    interface Button {
         /**
          * Width of button
          *
@@ -96,5 +97,24 @@ export interface InputNumberDesignTokens extends DesignTokens<InputNumberDesignT
          * @designToken inputnumber.button.active.color
          */
         activeColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<InputNumberDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface InputNumberDesignTokens extends DesignTokens<InputNumberDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InputNumberTokenSections.Root;
+    /**
+     * Used to pass tokens of the button section
+     */
+    button?: InputNumberTokenSections.Button;
 }

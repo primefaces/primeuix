@@ -4,15 +4,18 @@
  *
  * @module themes/panel
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface PanelDesignTokens extends DesignTokens<PanelDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace PanelTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -37,11 +40,9 @@ export interface PanelDesignTokens extends DesignTokens<PanelDesignTokens> {
          * @designToken panel.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the header section
-     */
-    header?: {
+    }
+
+    interface Header {
         /**
          * Background of header
          *
@@ -78,49 +79,76 @@ export interface PanelDesignTokens extends DesignTokens<PanelDesignTokens> {
          * @designToken panel.header.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the toggleable header section
-     */
-    toggleableHeader?: {
+    }
+
+    interface ToggleableHeader {
         /**
          * Padding of toggleable header
          *
          * @designToken panel.toggleable.header.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the title section
-     */
-    title?: {
+    }
+
+    interface Title {
         /**
          * Font weight of title
          *
          * @designToken panel.title.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Padding of content
          *
          * @designToken panel.content.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the footer section
-     */
-    footer?: {
+    }
+
+    interface Footer {
         /**
          * Padding of footer
          *
          * @designToken panel.footer.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<PanelDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface PanelDesignTokens extends DesignTokens<PanelDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: PanelTokenSections.Root;
+    /**
+     * Used to pass tokens of the header section
+     */
+    header?: PanelTokenSections.Header;
+    /**
+     * Used to pass tokens of the toggleable header section
+     */
+    toggleableHeader?: PanelTokenSections.ToggleableHeader;
+    /**
+     * Used to pass tokens of the title section
+     */
+    title?: PanelTokenSections.Title;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: PanelTokenSections.Content;
+    /**
+     * Used to pass tokens of the footer section
+     */
+    footer?: PanelTokenSections.Footer;
 }

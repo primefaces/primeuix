@@ -1,30 +1,42 @@
-import type { PanelDesignTokens } from '@primeuix/themes/types/panel';
+import type { PanelDesignTokens, PanelTokenSections } from '@primeuix/themes/types/panel';
+
+export const root: PanelTokenSections.Root = {
+    background: '{content.background}',
+    borderColor: '{content.border.color}',
+    color: '{content.color}',
+    borderRadius: '{content.border.radius}'
+};
+
+export const header: PanelTokenSections.Header = {
+    background: 'transparent',
+    color: '{text.color}',
+    padding: '1.25rem',
+    borderColor: '{content.border.color}',
+    borderWidth: '0',
+    borderRadius: '0'
+};
+
+export const toggleableHeader: PanelTokenSections.ToggleableHeader = {
+    padding: '0.5rem 1.25rem'
+};
+
+export const title: PanelTokenSections.Title = {
+    fontWeight: '600'
+};
+
+export const content: PanelTokenSections.Content = {
+    padding: '0 1.25rem 1.25rem 1.25rem'
+};
+
+export const footer: PanelTokenSections.Footer = {
+    padding: '0 1.25rem 1.25rem 1.25rem'
+};
 
 export default {
-    root: {
-        background: '{content.background}',
-        borderColor: '{content.border.color}',
-        color: '{content.color}',
-        borderRadius: '{content.border.radius}'
-    },
-    header: {
-        background: 'transparent',
-        color: '{text.color}',
-        padding: '1.25rem',
-        borderColor: '{content.border.color}',
-        borderWidth: '0',
-        borderRadius: '0'
-    },
-    toggleableHeader: {
-        padding: '0.5rem 1.25rem'
-    },
-    title: {
-        fontWeight: '600'
-    },
-    content: {
-        padding: '0 1.25rem 1.25rem 1.25rem'
-    },
-    footer: {
-        padding: '0 1.25rem 1.25rem 1.25rem'
-    }
+    root,
+    header,
+    toggleableHeader,
+    title,
+    content,
+    footer
 } satisfies PanelDesignTokens;

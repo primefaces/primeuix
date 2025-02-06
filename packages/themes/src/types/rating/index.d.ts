@@ -4,15 +4,18 @@
  *
  * @module themes/rating
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface RatingDesignTokens extends DesignTokens<RatingDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace RatingTokenSections {
+    interface Root {
         /**
          * Gap of root
          *
@@ -60,11 +63,9 @@ export interface RatingDesignTokens extends DesignTokens<RatingDesignTokens> {
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
@@ -89,5 +90,24 @@ export interface RatingDesignTokens extends DesignTokens<RatingDesignTokens> {
          * @designToken rating.icon.active.color
          */
         activeColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<RatingDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface RatingDesignTokens extends DesignTokens<RatingDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: RatingTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: RatingTokenSections.Icon;
 }

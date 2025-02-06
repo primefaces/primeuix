@@ -1,111 +1,115 @@
-import { AccordionDesignTokens } from './accordion';
-import { AutoCompleteDesignTokens } from './autocomplete';
-import { AvatarDesignTokens } from './avatar';
-import { BadgeDesignTokens } from './badge';
-import { BlockUIDesignTokens } from './blockui';
-import { BreadcrumbDesignTokens } from './breadcrumb';
-import { ButtonDesignTokens } from './button';
-import { CardDesignTokens } from './card';
-import { CarouselDesignTokens } from './carousel';
-import { CascadeSelectDesignTokens } from './cascadeselect';
-import { CheckboxDesignTokens } from './checkbox';
-import { ChipDesignTokens } from './chip';
-import { ColorPickerDesignTokens } from './colorpicker';
-import { ConfirmDialogDesignTokens } from './confirmdialog';
-import { ConfirmPopupDesignTokens } from './confirmpopup';
-import { ContextMenuDesignTokens } from './contextmenu';
-import { DataTableDesignTokens } from './datatable';
-import { DataViewDesignTokens } from './dataview';
-import { DatePickerDesignTokens } from './datepicker';
-import { DialogDesignTokens } from './dialog';
-import { DividerDesignTokens } from './divider';
-import { DockDesignTokens } from './dock';
-import { DrawerDesignTokens } from './drawer';
-import { EditorDesignTokens } from './editor';
-import { FieldsetDesignTokens } from './fieldset';
-import { FileUploadDesignTokens } from './fileupload';
-import { FloatLabelDesignTokens } from './floatlabel';
-import { GalleriaDesignTokens } from './galleria';
-import { IconFieldDesignTokens } from './iconfield';
-import { IftaLabelDesignTokens } from './iftalabel';
-import { ImageDesignTokens } from './image';
-import { ImageCompareDesignTokens } from './imagecompare';
-import { InlineMessageDesignTokens } from './inlinemessage';
-import { InplaceDesignTokens } from './inplace';
-import { InputChipsDesignTokens } from './inputchips';
-import { InputGroupDesignTokens } from './inputgroup';
-import { InputNumberDesignTokens } from './inputnumber';
-import { InputOtpDesignTokens } from './inputotp';
-import { InputTextDesignTokens } from './inputtext';
-import { KnobDesignTokens } from './knob';
-import { ListboxDesignTokens } from './listbox';
-import { MegaMenuDesignTokens } from './megamenu';
-import { MenuDesignTokens } from './menu';
-import { MenubarDesignTokens } from './menubar';
-import { MessageDesignTokens } from './message';
-import { MeterGroupDesignTokens } from './metergroup';
-import { MultiSelectDesignTokens } from './multiselect';
-import { OrderListDesignTokens } from './orderlist';
-import { OrganizationChartDesignTokens } from './organizationchart';
-import { OverlayBadgeDesignTokens } from './overlaybadge';
-import { PaginatorDesignTokens } from './paginator';
-import { PanelDesignTokens } from './panel';
-import { PanelMenuDesignTokens } from './panelmenu';
-import { PasswordDesignTokens } from './password';
-import { PickListDesignTokens } from './picklist';
-import { PopoverDesignTokens } from './popover';
-import { ProgressBarDesignTokens } from './progressbar';
-import { ProgressSpinnerDesignTokens } from './progressspinner';
-import { RadioButtonDesignTokens } from './radiobutton';
-import { RatingDesignTokens } from './rating';
-import { RippleDesignTokens } from './ripple';
-import { ScrollPanelDesignTokens } from './scrollpanel';
-import { SelectDesignTokens } from './select';
-import { SelectButtonDesignTokens } from './selectbutton';
-import { SkeletonDesignTokens } from './skeleton';
-import { SliderDesignTokens } from './slider';
-import { SpeedDialDesignTokens } from './speeddial';
-import { SplitButtonDesignTokens } from './splitbutton';
-import { SplitterDesignTokens } from './splitter';
-import { StepperDesignTokens } from './stepper';
-import { StepsDesignTokens } from './steps';
-import { TabmenuDesignTokens } from './tabmenu';
-import { TabsDesignTokens } from './tabs';
-import { TabViewDesignTokens } from './tabview';
-import { TagDesignTokens } from './tag';
-import { TerminalDesignTokens } from './terminal';
-import { TextareaDesignTokens } from './textarea';
-import { TieredMenuDesignTokens } from './tieredmenu';
-import { TimelineDesignTokens } from './timeline';
-import { ToastDesignTokens } from './toast';
-import { ToggleButtonDesignTokens } from './togglebutton';
-import { ToggleSwitchDesignTokens } from './toggleswitch';
-import { ToolbarDesignTokens } from './toolbar';
-import { TooltipDesignTokens } from './tooltip';
-import { TreeDesignTokens } from './tree';
-import { TreeSelectDesignTokens } from './treeselect';
-import { TreeTableDesignTokens } from './treetable';
-import { VirtualScrollerDesignTokens } from './virtualscroller';
+import type { ThemeStyleOptions } from '@primeuix/styled';
+
+import type { AccordionDesignTokens } from './accordion';
+import type { AutoCompleteDesignTokens } from './autocomplete';
+import type { AvatarDesignTokens } from './avatar';
+import type { BadgeDesignTokens } from './badge';
+import type { BlockUIDesignTokens } from './blockui';
+import type { BreadcrumbDesignTokens } from './breadcrumb';
+import type { ButtonDesignTokens } from './button';
+import type { CardDesignTokens } from './card';
+import type { CarouselDesignTokens } from './carousel';
+import type { CascadeSelectDesignTokens } from './cascadeselect';
+import type { CheckboxDesignTokens } from './checkbox';
+import type { ChipDesignTokens } from './chip';
+import type { ColorPickerDesignTokens } from './colorpicker';
+import type { ConfirmDialogDesignTokens } from './confirmdialog';
+import type { ConfirmPopupDesignTokens } from './confirmpopup';
+import type { ContextMenuDesignTokens } from './contextmenu';
+import type { DataTableDesignTokens } from './datatable';
+import type { DataViewDesignTokens } from './dataview';
+import type { DatePickerDesignTokens } from './datepicker';
+import type { DialogDesignTokens } from './dialog';
+import type { DividerDesignTokens } from './divider';
+import type { DockDesignTokens } from './dock';
+import type { DrawerDesignTokens } from './drawer';
+import type { EditorDesignTokens } from './editor';
+import type { FieldsetDesignTokens } from './fieldset';
+import type { FileUploadDesignTokens } from './fileupload';
+import type { FloatLabelDesignTokens } from './floatlabel';
+import type { GalleriaDesignTokens } from './galleria';
+import type { IconFieldDesignTokens } from './iconfield';
+import type { IftaLabelDesignTokens } from './iftalabel';
+import type { ImageDesignTokens } from './image';
+import type { ImageCompareDesignTokens } from './imagecompare';
+import type { InlineMessageDesignTokens } from './inlinemessage';
+import type { InplaceDesignTokens } from './inplace';
+import type { InputChipsDesignTokens } from './inputchips';
+import type { InputGroupDesignTokens } from './inputgroup';
+import type { InputNumberDesignTokens } from './inputnumber';
+import type { InputOtpDesignTokens } from './inputotp';
+import type { InputTextDesignTokens } from './inputtext';
+import type { KnobDesignTokens } from './knob';
+import type { ListboxDesignTokens } from './listbox';
+import type { MegaMenuDesignTokens } from './megamenu';
+import type { MenuDesignTokens } from './menu';
+import type { MenubarDesignTokens } from './menubar';
+import type { MessageDesignTokens } from './message';
+import type { MeterGroupDesignTokens } from './metergroup';
+import type { MultiSelectDesignTokens } from './multiselect';
+import type { OrderListDesignTokens } from './orderlist';
+import type { OrganizationChartDesignTokens } from './organizationchart';
+import type { OverlayBadgeDesignTokens } from './overlaybadge';
+import type { PaginatorDesignTokens } from './paginator';
+import type { PanelDesignTokens } from './panel';
+import type { PanelMenuDesignTokens } from './panelmenu';
+import type { PasswordDesignTokens } from './password';
+import type { PickListDesignTokens } from './picklist';
+import type { PopoverDesignTokens } from './popover';
+import type { ProgressBarDesignTokens } from './progressbar';
+import type { ProgressSpinnerDesignTokens } from './progressspinner';
+import type { RadioButtonDesignTokens } from './radiobutton';
+import type { RatingDesignTokens } from './rating';
+import type { RippleDesignTokens } from './ripple';
+import type { ScrollPanelDesignTokens } from './scrollpanel';
+import type { SelectDesignTokens } from './select';
+import type { SelectButtonDesignTokens } from './selectbutton';
+import type { SkeletonDesignTokens } from './skeleton';
+import type { SliderDesignTokens } from './slider';
+import type { SpeedDialDesignTokens } from './speeddial';
+import type { SplitButtonDesignTokens } from './splitbutton';
+import type { SplitterDesignTokens } from './splitter';
+import type { StepperDesignTokens } from './stepper';
+import type { StepsDesignTokens } from './steps';
+import type { TabmenuDesignTokens } from './tabmenu';
+import type { TabsDesignTokens } from './tabs';
+import type { TabViewDesignTokens } from './tabview';
+import type { TagDesignTokens } from './tag';
+import type { TerminalDesignTokens } from './terminal';
+import type { TextareaDesignTokens } from './textarea';
+import type { TieredMenuDesignTokens } from './tieredmenu';
+import type { TimelineDesignTokens } from './timeline';
+import type { ToastDesignTokens } from './toast';
+import type { ToggleButtonDesignTokens } from './togglebutton';
+import type { ToggleSwitchDesignTokens } from './toggleswitch';
+import type { ToolbarDesignTokens } from './toolbar';
+import type { TooltipDesignTokens } from './tooltip';
+import type { TreeDesignTokens } from './tree';
+import type { TreeSelectDesignTokens } from './treeselect';
+import type { TreeTableDesignTokens } from './treetable';
+import type { VirtualScrollerDesignTokens } from './virtualscroller';
 
 /**
- *
- * [Live Demo](https://www.primeng.org/)
  *
  * @module themes
  *
  */
-export interface ColorSchemeDesignToken<T> {
-    colorScheme?: {
-        light?: Omit<T, 'colorScheme'>;
-        dark?: Omit<T, 'colorScheme'>;
-    };
+
+export interface ColorScheme<T> {
+    light?: Omit<T, 'colorScheme' | 'extend' | 'css'>;
+    dark?: Omit<T, 'colorScheme' | 'extend' | 'css'>;
 }
 
+export interface ColorSchemeDesignToken<T> {
+    colorScheme?: ColorScheme<T>;
+}
+
+export declare type ExtendedCSS = string | ((options: ThemeStyleOptions) => string);
+export declare type ExtendedTokens = Record<string, any>;
+
 export interface DesignTokens<T> extends ColorSchemeDesignToken<T> {
-    css?: any;
-    extend?: {
-        [key: string]: any;
-    };
+    css?: ExtendedCSS;
+    extend?: ExtendedTokens;
 }
 
 export declare type RequiredDesignTokens<T, C = never> = {

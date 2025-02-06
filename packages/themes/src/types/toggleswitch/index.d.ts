@@ -4,15 +4,18 @@
  *
  * @module themes/toggleswitch
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ToggleSwitchTokenSections {
+    interface Root {
         /**
          * Width of root
          *
@@ -156,11 +159,9 @@ export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesig
          * @designToken toggleswitch.checked.hover.background
          */
         checkedHoverBackground?: string;
-    };
-    /**
-     * Used to pass tokens of the handle section
-     */
-    handle?: {
+    }
+
+    interface Handle {
         /**
          * Border radius of handle
          *
@@ -227,5 +228,24 @@ export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesig
          * @designToken toggleswitch.handle.checked.hover.color
          */
         checkedHoverColor?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ToggleSwitchDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ToggleSwitchTokenSections.Root;
+    /**
+     * Used to pass tokens of the handle section
+     */
+    handle?: ToggleSwitchTokenSections.Handle;
 }

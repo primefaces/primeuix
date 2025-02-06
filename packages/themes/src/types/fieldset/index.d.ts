@@ -4,15 +4,18 @@
  *
  * @module themes/fieldset
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface FieldsetDesignTokens extends DesignTokens<FieldsetDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace FieldsetTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -49,11 +52,9 @@ export interface FieldsetDesignTokens extends DesignTokens<FieldsetDesignTokens>
          * @designToken fieldset.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the legend section
-     */
-    legend?: {
+    }
+
+    interface Legend {
         /**
          * Background of legend
          *
@@ -149,11 +150,9 @@ export interface FieldsetDesignTokens extends DesignTokens<FieldsetDesignTokens>
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the toggle icon section
-     */
-    toggleIcon?: {
+    }
+
+    interface ToggleIcon {
         /**
          * Color of toggle icon
          *
@@ -166,16 +165,41 @@ export interface FieldsetDesignTokens extends DesignTokens<FieldsetDesignTokens>
          * @designToken fieldset.toggle.icon.hover.color
          */
         hoverColor?: string;
-    };
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: {
+    }
+
+    interface Content {
         /**
          * Padding of content
          *
          * @designToken fieldset.content.padding
          */
         padding?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<FieldsetDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface FieldsetDesignTokens extends DesignTokens<FieldsetDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: FieldsetTokenSections.Root;
+    /**
+     * Used to pass tokens of the legend section
+     */
+    legend?: FieldsetTokenSections.Legend;
+    /**
+     * Used to pass tokens of the toggle icon section
+     */
+    toggleIcon?: FieldsetTokenSections.ToggleIcon;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: FieldsetTokenSections.Content;
 }

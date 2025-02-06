@@ -4,15 +4,18 @@
  *
  * @module themes/organizationchart
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface OrganizationChartDesignTokens extends DesignTokens<OrganizationChartDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace OrganizationChartTokenSections {
+    interface Root {
         /**
          * Gutter of root
          *
@@ -25,11 +28,9 @@ export interface OrganizationChartDesignTokens extends DesignTokens<Organization
          * @designToken organizationchart.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the node section
-     */
-    node?: {
+    }
+
+    interface Node {
         /**
          * Background of node
          *
@@ -90,11 +91,9 @@ export interface OrganizationChartDesignTokens extends DesignTokens<Organization
          * @designToken organizationchart.node.border.radius
          */
         borderRadius?: string;
-    };
-    /**
-     * Used to pass tokens of the node toggle button section
-     */
-    nodeToggleButton?: {
+    }
+
+    interface NodeToggleButton {
         /**
          * Background of node toggle button
          *
@@ -172,11 +171,9 @@ export interface OrganizationChartDesignTokens extends DesignTokens<Organization
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the connector section
-     */
-    connector?: {
+    }
+
+    interface Connector {
         /**
          * Color of connector
          *
@@ -195,5 +192,32 @@ export interface OrganizationChartDesignTokens extends DesignTokens<Organization
          * @designToken organizationchart.connector.height
          */
         height?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<OrganizationChartDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface OrganizationChartDesignTokens extends DesignTokens<OrganizationChartDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: OrganizationChartTokenSections.Root;
+    /**
+     * Used to pass tokens of the node section
+     */
+    node?: OrganizationChartTokenSections.Node;
+    /**
+     * Used to pass tokens of the node toggle button section
+     */
+    nodeToggleButton?: OrganizationChartTokenSections.NodeToggleButton;
+    /**
+     * Used to pass tokens of the connector section
+     */
+    connector?: OrganizationChartTokenSections.Connector;
 }

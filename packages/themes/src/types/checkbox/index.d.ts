@@ -4,15 +4,18 @@
  *
  * @module themes/checkbox
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface CheckboxDesignTokens extends DesignTokens<CheckboxDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace CheckboxTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -190,11 +193,9 @@ export interface CheckboxDesignTokens extends DesignTokens<CheckboxDesignTokens>
              */
             height?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: {
+    }
+
+    interface Icon {
         /**
          * Size of icon
          *
@@ -247,5 +248,24 @@ export interface CheckboxDesignTokens extends DesignTokens<CheckboxDesignTokens>
              */
             size?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<CheckboxDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface CheckboxDesignTokens extends DesignTokens<CheckboxDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: CheckboxTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: CheckboxTokenSections.Icon;
 }

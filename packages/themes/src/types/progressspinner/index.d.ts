@@ -4,15 +4,18 @@
  *
  * @module themes/progressspinner
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface ProgressSpinnerDesignTokens extends DesignTokens<ProgressSpinnerDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace ProgressSpinnerTokenSections {
+    interface Root {
         /**
          * Color one of root
          *
@@ -37,5 +40,20 @@ export interface ProgressSpinnerDesignTokens extends DesignTokens<ProgressSpinne
          * @designToken progressspinner.color.four
          */
         colorFour?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<ProgressSpinnerDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface ProgressSpinnerDesignTokens extends DesignTokens<ProgressSpinnerDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ProgressSpinnerTokenSections.Root;
 }

@@ -1,5 +1,5 @@
-export interface LaraBaseDesignTokens {
-    primitive?: {
+declare namespace LaraBaseTokenSections {
+    interface Primitive {
         borderRadius?: {
             none?: string;
             xs?: string;
@@ -294,8 +294,9 @@ export interface LaraBaseDesignTokens {
             900?: string;
             950?: string;
         };
-    };
-    semantic?: {
+    }
+
+    interface Semantic {
         transitionDuration?: string;
         focusRing?: {
             width?: string;
@@ -658,5 +659,10 @@ export interface LaraBaseDesignTokens {
                 };
             };
         };
-    };
+    }
+}
+
+export interface LaraBaseDesignTokens {
+    primitive?: LaraBaseTokenSections.Primitive;
+    semantic?: LaraBaseTokenSections.Semantic;
 }

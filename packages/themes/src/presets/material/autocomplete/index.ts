@@ -1,118 +1,126 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
-import type { AutoCompleteDesignTokens } from '@primeuix/themes/types/autocomplete';
+import type { AutoCompleteDesignTokens, AutoCompleteTokenSections } from '@primeuix/themes/types/autocomplete';
 
-export default {
-    root: {
-        background: '{form.field.background}',
-        disabledBackground: '{form.field.disabled.background}',
-        filledBackground: '{form.field.filled.background}',
-        filledHoverBackground: '{form.field.filled.hover.background}',
-        filledFocusBackground: '{form.field.filled.focus.background}',
-        borderColor: '{form.field.border.color}',
-        hoverBorderColor: '{form.field.hover.border.color}',
-        focusBorderColor: '{form.field.focus.border.color}',
-        invalidBorderColor: '{form.field.invalid.border.color}',
-        color: '{form.field.color}',
-        disabledColor: '{form.field.disabled.color}',
-        placeholderColor: '{form.field.placeholder.color}',
-        shadow: '{form.field.shadow}',
-        paddingX: '{form.field.padding.x}',
-        paddingY: '{form.field.padding.y}',
-        borderRadius: '{form.field.border.radius}',
-        focusRing: {
-            width: '{form.field.focus.ring.width}',
-            style: '{form.field.focus.ring.style}',
-            color: '{form.field.focus.ring.color}',
-            offset: '{form.field.focus.ring.offset}',
-            shadow: '{form.field.focus.ring.shadow}'
+export const root: AutoCompleteTokenSections.Root = {
+    background: '{form.field.background}',
+    disabledBackground: '{form.field.disabled.background}',
+    filledBackground: '{form.field.filled.background}',
+    filledHoverBackground: '{form.field.filled.hover.background}',
+    filledFocusBackground: '{form.field.filled.focus.background}',
+    borderColor: '{form.field.border.color}',
+    hoverBorderColor: '{form.field.hover.border.color}',
+    focusBorderColor: '{form.field.focus.border.color}',
+    invalidBorderColor: '{form.field.invalid.border.color}',
+    color: '{form.field.color}',
+    disabledColor: '{form.field.disabled.color}',
+    placeholderColor: '{form.field.placeholder.color}',
+    shadow: '{form.field.shadow}',
+    paddingX: '{form.field.padding.x}',
+    paddingY: '{form.field.padding.y}',
+    borderRadius: '{form.field.border.radius}',
+    focusRing: {
+        width: '{form.field.focus.ring.width}',
+        style: '{form.field.focus.ring.style}',
+        color: '{form.field.focus.ring.color}',
+        offset: '{form.field.focus.ring.offset}',
+        shadow: '{form.field.focus.ring.shadow}'
+    },
+    transitionDuration: '{form.field.transition.duration}'
+};
+
+export const overlay: AutoCompleteTokenSections.Overlay = {
+    background: '{overlay.select.background}',
+    borderColor: '{overlay.select.border.color}',
+    borderRadius: '{overlay.select.border.radius}',
+    color: '{overlay.select.color}',
+    shadow: '{overlay.select.shadow}'
+};
+
+export const list: AutoCompleteTokenSections.List = {
+    padding: '{list.padding}',
+    gap: '{list.gap}'
+};
+
+export const option: AutoCompleteTokenSections.Option = {
+    focusBackground: '{list.option.focus.background}',
+    selectedBackground: '{list.option.selected.background}',
+    selectedFocusBackground: '{list.option.selected.focus.background}',
+    color: '{list.option.color}',
+    focusColor: '{list.option.focus.color}',
+    selectedColor: '{list.option.selected.color}',
+    selectedFocusColor: '{list.option.selected.focus.color}',
+    padding: '{list.option.padding}',
+    borderRadius: '{list.option.border.radius}'
+};
+
+export const optionGroup: AutoCompleteTokenSections.OptionGroup = {
+    background: '{list.option.group.background}',
+    color: '{list.option.group.color}',
+    fontWeight: '{list.option.group.font.weight}',
+    padding: '{list.option.group.padding}'
+};
+
+export const dropdown: AutoCompleteTokenSections.Dropdown = {
+    width: '3rem',
+    sm: {
+        width: '2.5rem'
+    },
+    lg: {
+        width: '3.5rem'
+    },
+    borderColor: '{form.field.border.color}',
+    hoverBorderColor: '{form.field.border.color}',
+    activeBorderColor: '{form.field.border.color}',
+    borderRadius: '{form.field.border.radius}',
+    focusRing: {
+        width: '0',
+        style: 'none',
+        color: 'unset',
+        offset: '0',
+        shadow: 'none'
+    }
+};
+
+export const chip: AutoCompleteTokenSections.Chip = {
+    borderRadius: '{border.radius.sm}'
+};
+
+export const emptyMessage: AutoCompleteTokenSections.EmptyMessage = {
+    padding: '{list.option.padding}'
+};
+
+export const colorScheme: AutoCompleteTokenSections.ColorScheme = {
+    light: {
+        chip: {
+            focusBackground: '{surface.300}',
+            focusColor: '{surface.950}'
         },
-        transitionDuration: '{form.field.transition.duration}'
-    },
-    overlay: {
-        background: '{overlay.select.background}',
-        borderColor: '{overlay.select.border.color}',
-        borderRadius: '{overlay.select.border.radius}',
-        color: '{overlay.select.color}',
-        shadow: '{overlay.select.shadow}'
-    },
-    list: {
-        padding: '{list.padding}',
-        gap: '{list.gap}'
-    },
-    option: {
-        focusBackground: '{list.option.focus.background}',
-        selectedBackground: '{list.option.selected.background}',
-        selectedFocusBackground: '{list.option.selected.focus.background}',
-        color: '{list.option.color}',
-        focusColor: '{list.option.focus.color}',
-        selectedColor: '{list.option.selected.color}',
-        selectedFocusColor: '{list.option.selected.focus.color}',
-        padding: '{list.option.padding}',
-        borderRadius: '{list.option.border.radius}'
-    },
-    optionGroup: {
-        background: '{list.option.group.background}',
-        color: '{list.option.group.color}',
-        fontWeight: '{list.option.group.font.weight}',
-        padding: '{list.option.group.padding}'
-    },
-    dropdown: {
-        width: '3rem',
-        sm: {
-            width: '2.5rem'
-        },
-        lg: {
-            width: '3.5rem'
-        },
-        borderColor: '{form.field.border.color}',
-        hoverBorderColor: '{form.field.border.color}',
-        activeBorderColor: '{form.field.border.color}',
-        borderRadius: '{form.field.border.radius}',
-        focusRing: {
-            width: '0',
-            style: 'none',
-            color: 'unset',
-            offset: '0',
-            shadow: 'none'
+        dropdown: {
+            background: '{surface.100}',
+            hoverBackground: '{surface.200}',
+            activeBackground: '{surface.300}',
+            color: '{surface.600}',
+            hoverColor: '{surface.700}',
+            activeColor: '{surface.800}'
         }
     },
-    chip: {
-        borderRadius: '{border.radius.sm}'
-    },
-    emptyMessage: {
-        padding: '{list.option.padding}'
-    },
-    colorScheme: {
-        light: {
-            chip: {
-                focusBackground: '{surface.300}',
-                focusColor: '{surface.950}'
-            },
-            dropdown: {
-                background: '{surface.100}',
-                hoverBackground: '{surface.200}',
-                activeBackground: '{surface.300}',
-                color: '{surface.600}',
-                hoverColor: '{surface.700}',
-                activeColor: '{surface.800}'
-            }
+    dark: {
+        chip: {
+            focusBackground: '{surface.600}',
+            focusColor: '{surface.0}'
         },
-        dark: {
-            chip: {
-                focusBackground: '{surface.600}',
-                focusColor: '{surface.0}'
-            },
-            dropdown: {
-                background: '{surface.800}',
-                hoverBackground: '{surface.700}',
-                activeBackground: '{surface.600}',
-                color: '{surface.300}',
-                hoverColor: '{surface.200}',
-                activeColor: '{surface.100}'
-            }
+        dropdown: {
+            background: '{surface.800}',
+            hoverBackground: '{surface.700}',
+            activeBackground: '{surface.600}',
+            color: '{surface.300}',
+            hoverColor: '{surface.200}',
+            activeColor: '{surface.100}'
         }
-    },
-    css: ({ dt }: ThemeStyleOptions) => `
+    }
+};
+
+// @section:css-start
+export const css: AutoCompleteTokenSections.CSS = ({ dt }) => `
 .p-autocomplete-dropdown:focus-visible {
     background: ${dt('autocomplete.dropdown.hover.background')};
     border-color: ${dt('autocomplete.dropdown.hover.border.color')};
@@ -169,5 +177,18 @@ export default {
 .p-autocomplete-option {
     transition: none;
 }
-`
+`;
+// @section:css-end
+
+export default {
+    root,
+    overlay,
+    list,
+    option,
+    optionGroup,
+    dropdown,
+    chip,
+    emptyMessage,
+    colorScheme,
+    css
 } satisfies AutoCompleteDesignTokens;

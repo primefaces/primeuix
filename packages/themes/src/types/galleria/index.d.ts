@@ -4,15 +4,18 @@
  *
  * @module themes/galleria
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace GalleriaTokenSections {
+    interface Root {
         /**
          * Border width of root
          *
@@ -37,11 +40,9 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
          * @designToken galleria.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the nav button section
-     */
-    navButton?: {
+    }
+
+    interface NavButton {
         /**
          * Background of nav button
          *
@@ -135,22 +136,18 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the nav icon section
-     */
-    navIcon?: {
+    }
+
+    interface NavIcon {
         /**
          * Size of nav icon
          *
          * @designToken galleria.nav.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the thumbnails content section
-     */
-    thumbnailsContent?: {
+    }
+
+    interface ThumbnailsContent {
         /**
          * Background of thumbnails content
          *
@@ -163,11 +160,9 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
          * @designToken galleria.thumbnails.content.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the thumbnail nav button section
-     */
-    thumbnailNavButton?: {
+    }
+
+    interface ThumbnailNavButton {
         /**
          * Size of thumbnail nav button
          *
@@ -239,22 +234,18 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
          * @designToken galleria.thumbnail.nav.button.hover.color
          */
         hoverColor?: string;
-    };
-    /**
-     * Used to pass tokens of the thumbnail nav button icon section
-     */
-    thumbnailNavButtonIcon?: {
+    }
+
+    interface ThumbnailNavButtonIcon {
         /**
          * Size of thumbnail nav button icon
          *
          * @designToken galleria.thumbnail.nav.button.icon.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the caption section
-     */
-    caption?: {
+    }
+
+    interface Caption {
         /**
          * Background of caption
          *
@@ -273,11 +264,9 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
          * @designToken galleria.caption.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the indicator list section
-     */
-    indicatorList?: {
+    }
+
+    interface IndicatorList {
         /**
          * Gap of indicator list
          *
@@ -290,11 +279,9 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
          * @designToken galleria.indicator.list.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the indicator button section
-     */
-    indicatorButton?: {
+    }
+
+    interface IndicatorButton {
         /**
          * Width of indicator button
          *
@@ -366,22 +353,18 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
          * @designToken galleria.indicator.button.hover.background
          */
         hoverBackground?: string;
-    };
-    /**
-     * Used to pass tokens of the inset indicator list section
-     */
-    insetIndicatorList?: {
+    }
+
+    interface InsetIndicatorList {
         /**
          * Background of inset indicator list
          *
          * @designToken galleria.inset.indicator.list.background
          */
         background?: string;
-    };
-    /**
-     * Used to pass tokens of the inset indicator button section
-     */
-    insetIndicatorButton?: {
+    }
+
+    interface InsetIndicatorButton {
         /**
          * Background of inset indicator button
          *
@@ -400,11 +383,9 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
          * @designToken galleria.inset.indicator.button.active.background
          */
         activeBackground?: string;
-    };
-    /**
-     * Used to pass tokens of the close button section
-     */
-    closeButton?: {
+    }
+
+    interface CloseButton {
         /**
          * Size of close button
          *
@@ -482,16 +463,77 @@ export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens>
              */
             shadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the close button icon section
-     */
-    closeButtonIcon?: {
+    }
+
+    interface CloseButtonIcon {
         /**
          * Size of close button icon
          *
          * @designToken galleria.close.button.icon.size
          */
         size?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<GalleriaDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface GalleriaDesignTokens extends DesignTokens<GalleriaDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: GalleriaTokenSections.Root;
+    /**
+     * Used to pass tokens of the nav button section
+     */
+    navButton?: GalleriaTokenSections.NavButton;
+    /**
+     * Used to pass tokens of the nav icon section
+     */
+    navIcon?: GalleriaTokenSections.NavIcon;
+    /**
+     * Used to pass tokens of the thumbnails content section
+     */
+    thumbnailsContent?: GalleriaTokenSections.ThumbnailsContent;
+    /**
+     * Used to pass tokens of the thumbnail nav button section
+     */
+    thumbnailNavButton?: GalleriaTokenSections.ThumbnailNavButton;
+    /**
+     * Used to pass tokens of the thumbnail nav button icon section
+     */
+    thumbnailNavButtonIcon?: GalleriaTokenSections.ThumbnailNavButtonIcon;
+    /**
+     * Used to pass tokens of the caption section
+     */
+    caption?: GalleriaTokenSections.Caption;
+    /**
+     * Used to pass tokens of the indicator list section
+     */
+    indicatorList?: GalleriaTokenSections.IndicatorList;
+    /**
+     * Used to pass tokens of the indicator button section
+     */
+    indicatorButton?: GalleriaTokenSections.IndicatorButton;
+    /**
+     * Used to pass tokens of the inset indicator list section
+     */
+    insetIndicatorList?: GalleriaTokenSections.InsetIndicatorList;
+    /**
+     * Used to pass tokens of the inset indicator button section
+     */
+    insetIndicatorButton?: GalleriaTokenSections.InsetIndicatorButton;
+    /**
+     * Used to pass tokens of the close button section
+     */
+    closeButton?: GalleriaTokenSections.CloseButton;
+    /**
+     * Used to pass tokens of the close button icon section
+     */
+    closeButtonIcon?: GalleriaTokenSections.CloseButtonIcon;
 }

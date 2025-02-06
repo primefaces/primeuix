@@ -4,15 +4,18 @@
  *
  * @module themes/speeddial
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface SpeedDialDesignTokens extends DesignTokens<SpeedDialDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace SpeedDialTokenSections {
+    interface Root {
         /**
          * Gap of root
          *
@@ -25,5 +28,20 @@ export interface SpeedDialDesignTokens extends DesignTokens<SpeedDialDesignToken
          * @designToken speeddial.transition.duration
          */
         transitionDuration?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<SpeedDialDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface SpeedDialDesignTokens extends DesignTokens<SpeedDialDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SpeedDialTokenSections.Root;
 }

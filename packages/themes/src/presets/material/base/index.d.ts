@@ -1,5 +1,5 @@
-export interface MaterialBaseDesignTokens {
-    primitive?: {
+declare namespace MaterialBaseTokenSections {
+    interface Primitive {
         borderRadius?: {
             none?: string;
             xs?: string;
@@ -294,8 +294,9 @@ export interface MaterialBaseDesignTokens {
             900?: string;
             950?: string;
         };
-    };
-    semantic?: {
+    }
+
+    interface Semantic {
         transitionDuration?: string;
         focusRing?: {
             width?: string;
@@ -658,5 +659,10 @@ export interface MaterialBaseDesignTokens {
                 };
             };
         };
-    };
+    }
+}
+
+export interface MaterialBaseDesignTokens {
+    primitive?: MaterialBaseTokenSections.Primitive;
+    semantic?: MaterialBaseTokenSections.Semantic;
 }

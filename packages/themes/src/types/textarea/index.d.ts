@@ -4,15 +4,18 @@
  *
  * @module themes/textarea
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TextareaDesignTokens extends DesignTokens<TextareaDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TextareaTokenSections {
+    interface Root {
         /**
          * Background of root
          *
@@ -196,5 +199,20 @@ export interface TextareaDesignTokens extends DesignTokens<TextareaDesignTokens>
              */
             paddingY?: string;
         };
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TextareaDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TextareaDesignTokens extends DesignTokens<TextareaDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TextareaTokenSections.Root;
 }

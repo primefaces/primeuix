@@ -4,15 +4,18 @@
  *
  * @module themes/skeleton
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface SkeletonDesignTokens extends DesignTokens<SkeletonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace SkeletonTokenSections {
+    interface Root {
         /**
          * Border radius of root
          *
@@ -31,5 +34,20 @@ export interface SkeletonDesignTokens extends DesignTokens<SkeletonDesignTokens>
          * @designToken skeleton.animation.background
          */
         animationBackground?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<SkeletonDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface SkeletonDesignTokens extends DesignTokens<SkeletonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SkeletonTokenSections.Root;
 }

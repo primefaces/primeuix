@@ -4,37 +4,36 @@
  *
  * @module themes/steps
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface StepsDesignTokens extends DesignTokens<StepsDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace StepsTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken steps.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: {
+    }
+
+    interface Separator {
         /**
          * Background of separator
          *
          * @designToken steps.separator.background
          */
         background?: string;
-    };
-    /**
-     * Used to pass tokens of the item link section
-     */
-    itemLink?: {
+    }
+
+    interface ItemLink {
         /**
          * Border radius of item link
          *
@@ -82,11 +81,9 @@ export interface StepsDesignTokens extends DesignTokens<StepsDesignTokens> {
          * @designToken steps.item.link.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the item label section
-     */
-    itemLabel?: {
+    }
+
+    interface ItemLabel {
         /**
          * Color of item label
          *
@@ -105,11 +102,9 @@ export interface StepsDesignTokens extends DesignTokens<StepsDesignTokens> {
          * @designToken steps.item.label.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the item number section
-     */
-    itemNumber?: {
+    }
+
+    interface ItemNumber {
         /**
          * Background of item number
          *
@@ -176,5 +171,36 @@ export interface StepsDesignTokens extends DesignTokens<StepsDesignTokens> {
          * @designToken steps.item.number.shadow
          */
         shadow?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<StepsDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface StepsDesignTokens extends DesignTokens<StepsDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: StepsTokenSections.Root;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: StepsTokenSections.Separator;
+    /**
+     * Used to pass tokens of the item link section
+     */
+    itemLink?: StepsTokenSections.ItemLink;
+    /**
+     * Used to pass tokens of the item label section
+     */
+    itemLabel?: StepsTokenSections.ItemLabel;
+    /**
+     * Used to pass tokens of the item number section
+     */
+    itemNumber?: StepsTokenSections.ItemNumber;
 }

@@ -4,26 +4,27 @@
  *
  * @module themes/timeline
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface TimelineDesignTokens extends DesignTokens<TimelineDesignTokens> {
-    /**
-     * Used to pass tokens of the event section
-     */
-    event?: {
+/**
+ * Design Token Sections
+ */
+declare namespace TimelineTokenSections {
+    interface Event {
         /**
          * Min height of event
          *
          * @designToken timeline.event.min.height
          */
         minHeight?: string;
-    };
-    /**
-     * Used to pass tokens of the horizontal section
-     */
-    horizontal?: {
+    }
+
+    interface Horizontal {
         /**
          * Event content of horizontal
          */
@@ -35,11 +36,9 @@ export interface TimelineDesignTokens extends DesignTokens<TimelineDesignTokens>
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the vertical section
-     */
-    vertical?: {
+    }
+
+    interface Vertical {
         /**
          * Event content of vertical
          */
@@ -51,11 +50,9 @@ export interface TimelineDesignTokens extends DesignTokens<TimelineDesignTokens>
              */
             padding?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the event marker section
-     */
-    eventMarker?: {
+    }
+
+    interface EventMarker {
         /**
          * Size of event marker
          *
@@ -115,11 +112,9 @@ export interface TimelineDesignTokens extends DesignTokens<TimelineDesignTokens>
              */
             insetShadow?: string;
         };
-    };
-    /**
-     * Used to pass tokens of the event connector section
-     */
-    eventConnector?: {
+    }
+
+    interface EventConnector {
         /**
          * Color of event connector
          *
@@ -132,5 +127,36 @@ export interface TimelineDesignTokens extends DesignTokens<TimelineDesignTokens>
          * @designToken timeline.event.connector.size
          */
         size?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<TimelineDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface TimelineDesignTokens extends DesignTokens<TimelineDesignTokens> {
+    /**
+     * Used to pass tokens of the event section
+     */
+    event?: TimelineTokenSections.Event;
+    /**
+     * Used to pass tokens of the horizontal section
+     */
+    horizontal?: TimelineTokenSections.Horizontal;
+    /**
+     * Used to pass tokens of the vertical section
+     */
+    vertical?: TimelineTokenSections.Vertical;
+    /**
+     * Used to pass tokens of the event marker section
+     */
+    eventMarker?: TimelineTokenSections.EventMarker;
+    /**
+     * Used to pass tokens of the event connector section
+     */
+    eventConnector?: TimelineTokenSections.EventConnector;
 }

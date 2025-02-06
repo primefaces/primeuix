@@ -4,26 +4,27 @@
  *
  * @module themes/stepper
  *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 
-import { DesignTokens } from '..';
+import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
-export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: {
+/**
+ * Design Token Sections
+ */
+declare namespace StepperTokenSections {
+    interface Root {
         /**
          * Transition duration of root
          *
          * @designToken stepper.transition.duration
          */
         transitionDuration?: string;
-    };
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: {
+    }
+
+    interface Separator {
         /**
          * Background of separator
          *
@@ -48,11 +49,9 @@ export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
          * @designToken stepper.separator.size
          */
         size?: string;
-    };
-    /**
-     * Used to pass tokens of the step section
-     */
-    step?: {
+    }
+
+    interface Step {
         /**
          * Padding of step
          *
@@ -65,11 +64,9 @@ export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
          * @designToken stepper.step.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the step header section
-     */
-    stepHeader?: {
+    }
+
+    interface StepHeader {
         /**
          * Padding of step header
          *
@@ -123,11 +120,9 @@ export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
          * @designToken stepper.step.header.gap
          */
         gap?: string;
-    };
-    /**
-     * Used to pass tokens of the step title section
-     */
-    stepTitle?: {
+    }
+
+    interface StepTitle {
         /**
          * Color of step title
          *
@@ -146,11 +141,9 @@ export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
          * @designToken stepper.step.title.font.weight
          */
         fontWeight?: string;
-    };
-    /**
-     * Used to pass tokens of the step number section
-     */
-    stepNumber?: {
+    }
+
+    interface StepNumber {
         /**
          * Background of step number
          *
@@ -217,22 +210,18 @@ export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
          * @designToken stepper.step.number.shadow
          */
         shadow?: string;
-    };
-    /**
-     * Used to pass tokens of the steppanels section
-     */
-    steppanels?: {
+    }
+
+    interface Steppanels {
         /**
          * Padding of steppanels
          *
          * @designToken stepper.steppanels.padding
          */
         padding?: string;
-    };
-    /**
-     * Used to pass tokens of the steppanel section
-     */
-    steppanel?: {
+    }
+
+    interface Steppanel {
         /**
          * Background of steppanel
          *
@@ -257,5 +246,48 @@ export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
          * @designToken stepper.steppanel.indent
          */
         indent?: string;
-    };
+    }
+
+    /* Static Sections */
+    type ColorScheme = CS<StepperDesignTokens>;
+    type CSS = ExtendedCSS;
+    type Extend = ExtendedTokens;
+}
+
+/**
+ * Design Tokens
+ */
+export interface StepperDesignTokens extends DesignTokens<StepperDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: StepperTokenSections.Root;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: StepperTokenSections.Separator;
+    /**
+     * Used to pass tokens of the step section
+     */
+    step?: StepperTokenSections.Step;
+    /**
+     * Used to pass tokens of the step header section
+     */
+    stepHeader?: StepperTokenSections.StepHeader;
+    /**
+     * Used to pass tokens of the step title section
+     */
+    stepTitle?: StepperTokenSections.StepTitle;
+    /**
+     * Used to pass tokens of the step number section
+     */
+    stepNumber?: StepperTokenSections.StepNumber;
+    /**
+     * Used to pass tokens of the steppanels section
+     */
+    steppanels?: StepperTokenSections.Steppanels;
+    /**
+     * Used to pass tokens of the steppanel section
+     */
+    steppanel?: StepperTokenSections.Steppanel;
 }

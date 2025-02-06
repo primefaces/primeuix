@@ -1,7 +1,9 @@
-import type { IconFieldDesignTokens } from '@primeuix/themes/types/iconfield';
+import type { IconFieldDesignTokens, IconFieldTokenSections } from '@primeuix/themes/types/iconfield';
+
+export const icon: IconFieldTokenSections.Icon = {
+    color: '{form.field.icon.color}'
+};
 
 export default {
-    icon: {
-        color: '{form.field.icon.color}'
-    }
+    icon
 } satisfies IconFieldDesignTokens;
