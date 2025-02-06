@@ -1,4 +1,4 @@
-export function classNames(...args: any[]): string | undefined {
+export function cn(...args: any[]): string | undefined {
     if (args) {
         let classes: any = [];
 
@@ -14,7 +14,7 @@ export function classNames(...args: any[]): string | undefined {
             if (type === 'string' || type === 'number') {
                 classes.push(className);
             } else if (type === 'object') {
-                const _classes = Array.isArray(className) ? [classNames(...className)] : Object.entries(className).map(([key, value]) => (value ? key : undefined));
+                const _classes = Array.isArray(className) ? [cn(...className)] : Object.entries(className).map(([key, value]) => (value ? key : undefined));
 
                 classes = _classes.length ? classes.concat(_classes.filter((c) => !!c)) : classes;
             }
@@ -24,4 +24,13 @@ export function classNames(...args: any[]): string | undefined {
     }
 
     return undefined;
+}
+
+/**
+ * @deprecated Use `cn` instead.
+ * @param args
+ * @returns
+ */
+export function classNames(...args: any[]): string | undefined {
+    return cn(...args);
 }
