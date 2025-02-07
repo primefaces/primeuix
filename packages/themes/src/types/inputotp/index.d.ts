@@ -4,16 +4,13 @@
  *
  * @module inputotp
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
 
 /**
  * Design Token Sections
  */
-declare namespace InputOtpTokenSections {
+export declare namespace InputOtpTokenSections {
     interface Root {
         /**
          * Gap of root
@@ -73,3 +70,24 @@ export interface InputOtpDesignTokens extends DesignTokens<InputOtpDesignTokens>
      */
     input?: InputOtpTokenSections.Input;
 }
+
+/**
+ *
+ * _InputOtp Design Tokens_
+ *
+ * @group components
+ * @module inputotp
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: InputOtpDesignTokens;
+export default _default;

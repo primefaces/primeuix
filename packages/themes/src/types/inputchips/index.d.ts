@@ -4,9 +4,6 @@
  *
  * @module inputchips
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace InputChipsTokenSections {
+export declare namespace InputChipsTokenSections {
     interface Root {
         /**
          * Background of root
@@ -189,3 +186,24 @@ export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTok
      */
     chip?: InputChipsTokenSections.Chip;
 }
+
+/**
+ *
+ * _InputChips Design Tokens_
+ *
+ * @group components
+ * @module inputchips
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: InputChipsDesignTokens;
+export default _default;

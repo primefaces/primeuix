@@ -4,9 +4,6 @@
  *
  * @module avatar
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace AvatarTokenSections {
+export declare namespace AvatarTokenSections {
     interface Root {
         /**
          * Width of root
@@ -195,3 +192,24 @@ export interface AvatarDesignTokens extends DesignTokens<AvatarDesignTokens> {
      */
     xl?: AvatarTokenSections.Xl;
 }
+
+/**
+ *
+ * _Avatar Design Tokens_
+ *
+ * @group components
+ * @module avatar
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: AvatarDesignTokens;
+export default _default;

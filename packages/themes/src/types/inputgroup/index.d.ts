@@ -4,9 +4,6 @@
  *
  * @module inputgroup
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace InputGroupTokenSections {
+export declare namespace InputGroupTokenSections {
     interface Addon {
         /**
          * Background of addon
@@ -69,3 +66,24 @@ export interface InputGroupDesignTokens extends DesignTokens<InputGroupDesignTok
      */
     addon?: InputGroupTokenSections.Addon;
 }
+
+/**
+ *
+ * _InputGroup Design Tokens_
+ *
+ * @group components
+ * @module inputgroup
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: InputGroupDesignTokens;
+export default _default;

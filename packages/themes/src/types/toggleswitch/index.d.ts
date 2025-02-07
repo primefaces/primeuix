@@ -4,9 +4,6 @@
  *
  * @module toggleswitch
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace ToggleSwitchTokenSections {
+export declare namespace ToggleSwitchTokenSections {
     interface Root {
         /**
          * Width of root
@@ -249,3 +246,24 @@ export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesig
      */
     handle?: ToggleSwitchTokenSections.Handle;
 }
+
+/**
+ *
+ * _ToggleSwitch Design Tokens_
+ *
+ * @group components
+ * @module toggleswitch
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: ToggleSwitchDesignTokens;
+export default _default;

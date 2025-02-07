@@ -4,9 +4,6 @@
  *
  * @module badge
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace BadgeTokenSections {
+export declare namespace BadgeTokenSections {
     interface Root {
         /**
          * Border radius of root
@@ -290,3 +287,24 @@ export interface BadgeDesignTokens extends DesignTokens<BadgeDesignTokens> {
      */
     contrast?: BadgeTokenSections.Contrast;
 }
+
+/**
+ *
+ * _Badge Design Tokens_
+ *
+ * @group components
+ * @module badge
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: BadgeDesignTokens;
+export default _default;

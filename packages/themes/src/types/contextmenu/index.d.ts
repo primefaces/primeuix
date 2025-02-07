@@ -4,9 +4,6 @@
  *
  * @module contextmenu
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace ContextMenuTokenSections {
+export declare namespace ContextMenuTokenSections {
     interface Root {
         /**
          * Background of root
@@ -223,3 +220,24 @@ export interface ContextMenuDesignTokens extends DesignTokens<ContextMenuDesignT
      */
     separator?: ContextMenuTokenSections.Separator;
 }
+
+/**
+ *
+ * _ContextMenu Design Tokens_
+ *
+ * @group components
+ * @module contextmenu
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: ContextMenuDesignTokens;
+export default _default;

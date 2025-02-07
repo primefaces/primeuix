@@ -4,9 +4,6 @@
  *
  * @module autocomplete
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace AutoCompleteTokenSections {
+export declare namespace AutoCompleteTokenSections {
     interface Root {
         /**
          * Background of root
@@ -492,3 +489,24 @@ export interface AutoCompleteDesignTokens extends DesignTokens<AutoCompleteDesig
      */
     emptyMessage?: AutoCompleteTokenSections.EmptyMessage;
 }
+
+/**
+ *
+ * _AutoComplete Design Tokens_
+ *
+ * @group components
+ * @module autocomplete
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: AutoCompleteDesignTokens;
+export default _default;

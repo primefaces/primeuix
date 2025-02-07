@@ -1,3 +1,8 @@
+/**
+ *
+ * @module themes
+ *
+ */
 import type { ThemeStyleOptions } from '@primeuix/styled';
 
 import type { AccordionDesignTokens } from './accordion';
@@ -88,12 +93,6 @@ import type { TreeDesignTokens } from './tree';
 import type { TreeSelectDesignTokens } from './treeselect';
 import type { TreeTableDesignTokens } from './treetable';
 import type { VirtualScrollerDesignTokens } from './virtualscroller';
-
-/**
- *
- * @module themes
- *
- */
 
 export interface ColorScheme<T> {
     light?: Omit<T, 'colorScheme' | 'extend' | 'css'>;

@@ -4,9 +4,6 @@
  *
  * @module dock
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace DockTokenSections {
+export declare namespace DockTokenSections {
     interface Root {
         /**
          * Background of root
@@ -117,3 +114,24 @@ export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {
      */
     item?: DockTokenSections.Item;
 }
+
+/**
+ *
+ * _Dock Design Tokens_
+ *
+ * @group components
+ * @module dock
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: DockDesignTokens;
+export default _default;

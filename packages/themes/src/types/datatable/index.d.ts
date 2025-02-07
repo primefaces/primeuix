@@ -4,9 +4,6 @@
  *
  * @module datatable
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace DataTableTokenSections {
+export declare namespace DataTableTokenSections {
     interface Root {
         /**
          * Transition duration of root
@@ -889,3 +886,24 @@ export interface DataTableDesignTokens extends DesignTokens<DataTableDesignToken
      */
     paginatorBottom?: DataTableTokenSections.PaginatorBottom;
 }
+
+/**
+ *
+ * _DataTable Design Tokens_
+ *
+ * @group components
+ * @module datatable
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: DataTableDesignTokens;
+export default _default;

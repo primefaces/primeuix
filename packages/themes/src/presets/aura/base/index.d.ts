@@ -1,4 +1,15 @@
-declare namespace AuraBaseTokenSections {
+/**
+ *
+ * Aura Base Tokens
+ *
+ * @module base
+ *
+ */
+
+/**
+ * Design Token Sections
+ */
+export declare namespace AuraBaseTokenSections {
     interface Primitive {
         borderRadius?: {
             none?: string;
@@ -657,7 +668,31 @@ declare namespace AuraBaseTokenSections {
     }
 }
 
+/**
+ * Design Tokens
+ */
 export interface AuraBaseDesignTokens {
     primitive?: AuraBaseTokenSections.Primitive;
     semantic?: AuraBaseTokenSections.Semantic;
 }
+
+/**
+ *
+ * _Aura Base Tokens_
+ *
+ * @group presets/aura
+ * @module base
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: AuraBaseDesignTokens;
+export default _default;

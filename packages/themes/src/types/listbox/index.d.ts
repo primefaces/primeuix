@@ -4,9 +4,6 @@
  *
  * @module listbox
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace ListboxTokenSections {
+export declare namespace ListboxTokenSections {
     interface Root {
         /**
          * Background of root
@@ -253,3 +250,24 @@ export interface ListboxDesignTokens extends DesignTokens<ListboxDesignTokens> {
      */
     emptyMessage?: ListboxTokenSections.EmptyMessage;
 }
+
+/**
+ *
+ * _Listbox Design Tokens_
+ *
+ * @group components
+ * @module listbox
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: ListboxDesignTokens;
+export default _default;

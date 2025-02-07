@@ -4,9 +4,6 @@
  *
  * @module tree
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace TreeTokenSections {
+export declare namespace TreeTokenSections {
     interface Root {
         /**
          * Background of root
@@ -294,3 +291,24 @@ export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
      */
     filter?: TreeTokenSections.Filter;
 }
+
+/**
+ *
+ * _Tree Design Tokens_
+ *
+ * @group components
+ * @module tree
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: TreeDesignTokens;
+export default _default;

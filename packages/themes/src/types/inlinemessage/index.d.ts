@@ -4,9 +4,6 @@
  *
  * @module inlinemessage
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace InlineMessageTokenSections {
+export declare namespace InlineMessageTokenSections {
     interface Root {
         /**
          * Padding of root
@@ -263,3 +260,24 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
      */
     contrast?: InlineMessageTokenSections.Contrast;
 }
+
+/**
+ *
+ * _InlineMessage Design Tokens_
+ *
+ * @group components
+ * @module inlinemessage
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: InlineMessageDesignTokens;
+export default _default;

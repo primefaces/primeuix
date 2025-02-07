@@ -1,4 +1,15 @@
-declare namespace LaraBaseTokenSections {
+/**
+ *
+ * Lara Base Tokens
+ *
+ * @module base
+ *
+ */
+
+/**
+ * Design Token Sections
+ */
+export declare namespace LaraBaseTokenSections {
     interface Primitive {
         borderRadius?: {
             none?: string;
@@ -662,7 +673,31 @@ declare namespace LaraBaseTokenSections {
     }
 }
 
+/**
+ * Design Tokens
+ */
 export interface LaraBaseDesignTokens {
     primitive?: LaraBaseTokenSections.Primitive;
     semantic?: LaraBaseTokenSections.Semantic;
 }
+
+/**
+ *
+ * _Lara Base Tokens_
+ *
+ * @group presets/lara
+ * @module base
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: LaraBaseDesignTokens;
+export default _default;

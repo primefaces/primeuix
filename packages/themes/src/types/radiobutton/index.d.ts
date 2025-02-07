@@ -4,9 +4,6 @@
  *
  * @module radiobutton
  *
- * Figma UI Kit
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
  */
 
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';
@@ -14,7 +11,7 @@ import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } fro
 /**
  * Design Token Sections
  */
-declare namespace RadioButtonTokenSections {
+export declare namespace RadioButtonTokenSections {
     interface Root {
         /**
          * Width of root
@@ -257,3 +254,24 @@ export interface RadioButtonDesignTokens extends DesignTokens<RadioButtonDesignT
      */
     icon?: RadioButtonTokenSections.Icon;
 }
+
+/**
+ *
+ * _RadioButton Design Tokens_
+ *
+ * @group components
+ * @module radiobutton
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
+ */
+declare const _default: RadioButtonDesignTokens;
+export default _default;
