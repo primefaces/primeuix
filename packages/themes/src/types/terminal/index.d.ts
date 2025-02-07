@@ -2,7 +2,7 @@
  *
  * Terminal Design Tokens
  *
- * @module themes/terminal
+ * @module terminal
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

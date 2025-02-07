@@ -2,7 +2,7 @@
  *
  * SplitButton Design Tokens
  *
- * @module themes/splitbutton
+ * @module splitbutton
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

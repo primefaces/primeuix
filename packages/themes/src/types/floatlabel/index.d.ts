@@ -2,7 +2,7 @@
  *
  * FloatLabel Design Tokens
  *
- * @module themes/floatlabel
+ * @module floatlabel
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

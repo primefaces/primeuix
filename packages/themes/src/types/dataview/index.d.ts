@@ -2,7 +2,7 @@
  *
  * DataView Design Tokens
  *
- * @module themes/dataview
+ * @module dataview
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

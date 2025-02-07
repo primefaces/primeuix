@@ -2,7 +2,7 @@
  *
  * Editor Design Tokens
  *
- * @module themes/editor
+ * @module editor
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
@@ -47,18 +47,18 @@ declare namespace EditorTokenSections {
         color?: string;
 
         /**
-         * Focus background of toolbar item
+         * Hover color of toolbar item
          *
-         * @designToken editor.toolbar.item.focus.background
+         * @designToken editor.toolbar.item.hover.color
          */
-        focusBackground?: string;
+        hoverColor?: string;
 
         /**
-         * Focus color of toolbar item
+         * Active color of toolbar item
          *
-         * @designToken editor.toolbar.item.focus.color
+         * @designToken editor.toolbar.item.active.color
          */
-        focusColor?: string;
+        activeColor?: string;
 
         /**
          * Padding of toolbar item

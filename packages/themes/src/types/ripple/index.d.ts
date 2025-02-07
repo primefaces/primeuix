@@ -2,7 +2,7 @@
  *
  * Ripple Design Tokens
  *
- * @module themes/ripple
+ * @module ripple
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

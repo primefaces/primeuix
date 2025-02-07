@@ -2,7 +2,7 @@
  *
  * InputNumber Design Tokens
  *
- * @module themes/inputnumber
+ * @module inputnumber
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

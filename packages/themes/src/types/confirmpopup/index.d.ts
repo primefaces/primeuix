@@ -2,7 +2,7 @@
  *
  * ConfirmPopup Design Tokens
  *
- * @module themes/confirmpopup
+ * @module confirmpopup
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

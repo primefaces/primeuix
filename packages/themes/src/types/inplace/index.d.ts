@@ -2,7 +2,7 @@
  *
  * Inplace Design Tokens
  *
- * @module themes/inplace
+ * @module inplace
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

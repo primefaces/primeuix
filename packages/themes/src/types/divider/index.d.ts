@@ -2,7 +2,7 @@
  *
  * Divider Design Tokens
  *
- * @module themes/divider
+ * @module divider
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

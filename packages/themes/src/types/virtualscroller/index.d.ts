@@ -2,7 +2,7 @@
  *
  * VirtualScroller Design Tokens
  *
- * @module themes/virtualscroller
+ * @module virtualscroller
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * Breadcrumb Design Tokens
  *
- * @module themes/breadcrumb
+ * @module breadcrumb
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

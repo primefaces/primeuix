@@ -2,7 +2,7 @@
  *
  * Panel Design Tokens
  *
- * @module themes/panel
+ * @module panel
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

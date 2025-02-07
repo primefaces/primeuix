@@ -2,7 +2,7 @@
  *
  * TreeTable Design Tokens
  *
- * @module themes/treetable
+ * @module treetable
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

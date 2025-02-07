@@ -2,7 +2,7 @@
  *
  * TreeSelect Design Tokens
  *
- * @module themes/treeselect
+ * @module treeselect
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

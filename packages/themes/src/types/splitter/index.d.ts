@@ -2,7 +2,7 @@
  *
  * Splitter Design Tokens
  *
- * @module themes/splitter
+ * @module splitter
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

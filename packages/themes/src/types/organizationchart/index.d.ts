@@ -2,7 +2,7 @@
  *
  * OrganizationChart Design Tokens
  *
- * @module themes/organizationchart
+ * @module organizationchart
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * TieredMenu Design Tokens
  *
- * @module themes/tieredmenu
+ * @module tieredmenu
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * Toast Design Tokens
  *
- * @module themes/toast
+ * @module toast
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

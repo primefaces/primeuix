@@ -2,7 +2,7 @@
  *
  * ContextMenu Design Tokens
  *
- * @module themes/contextmenu
+ * @module contextmenu
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

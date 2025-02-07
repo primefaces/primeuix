@@ -2,7 +2,7 @@
  *
  * Carousel Design Tokens
  *
- * @module themes/carousel
+ * @module carousel
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

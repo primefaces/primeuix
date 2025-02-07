@@ -2,7 +2,7 @@
  *
  * Slider Design Tokens
  *
- * @module themes/slider
+ * @module slider
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

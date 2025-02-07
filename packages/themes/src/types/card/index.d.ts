@@ -2,7 +2,7 @@
  *
  * Card Design Tokens
  *
- * @module themes/card
+ * @module card
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

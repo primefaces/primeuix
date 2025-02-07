@@ -47,5 +47,16 @@ export default defineConfig([
             }
         },
         outExtension: () => ({ js: `.js` })
-    }))
+    })),
+    {
+        entry: {
+            'tokens/index': 'tokens.ts'
+        },
+        format: ['esm'],
+        outDir: 'dist',
+        dts: true,
+        minify: 'terser',
+        sourcemap: true,
+        splitting: false
+    }
 ]);

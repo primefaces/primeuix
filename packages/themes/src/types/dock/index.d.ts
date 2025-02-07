@@ -2,7 +2,7 @@
  *
  * Dock Design Tokens
  *
- * @module themes/dock
+ * @module dock
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

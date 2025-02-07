@@ -2,7 +2,7 @@
  *
  * PanelMenu Design Tokens
  *
- * @module themes/panelmenu
+ * @module panelmenu
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

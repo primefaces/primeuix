@@ -2,7 +2,7 @@
  *
  * CascadeSelect Design Tokens
  *
- * @module themes/cascadeselect
+ * @module cascadeselect
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * MegaMenu Design Tokens
  *
- * @module themes/megamenu
+ * @module megamenu
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

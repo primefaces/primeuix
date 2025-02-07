@@ -2,7 +2,7 @@
  *
  * Tree Design Tokens
  *
- * @module themes/tree
+ * @module tree
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

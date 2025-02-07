@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 export function resolvePath(metaUrl) {
     const __dirname = path.dirname(fileURLToPath(metaUrl || import.meta.url));
     const __workspace = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../');
-    const { INPUT_DIR, OUTPUT_DIR, NODE_ENV } = process.env;
+    const { INPUT_DIR = 'src/', OUTPUT_DIR = '/dist', NODE_ENV } = process.env;
     const INPUT_PATH = path.resolve(__dirname, process.env.INPUT_DIR);
     const OUTPUT_PATH = path.resolve(__dirname, process.env.OUTPUT_DIR);
     const isDEV = NODE_ENV !== 'production';

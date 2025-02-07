@@ -2,7 +2,7 @@
  *
  * InputGroup Design Tokens
  *
- * @module themes/inputgroup
+ * @module inputgroup
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

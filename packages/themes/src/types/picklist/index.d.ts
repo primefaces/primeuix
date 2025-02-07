@@ -2,7 +2,7 @@
  *
  * PickList Design Tokens
  *
- * @module themes/picklist
+ * @module picklist
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

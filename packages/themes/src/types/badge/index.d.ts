@@ -2,7 +2,7 @@
  *
  * Badge Design Tokens
  *
- * @module themes/badge
+ * @module badge
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

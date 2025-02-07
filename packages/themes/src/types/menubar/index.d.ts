@@ -2,7 +2,7 @@
  *
  * Menubar Design Tokens
  *
- * @module themes/menubar
+ * @module menubar
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

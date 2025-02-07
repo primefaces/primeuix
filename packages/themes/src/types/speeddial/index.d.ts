@@ -2,7 +2,7 @@
  *
  * SpeedDial Design Tokens
  *
- * @module themes/speeddial
+ * @module speeddial
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * InputChips Design Tokens
  *
- * @module themes/inputchips
+ * @module inputchips
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

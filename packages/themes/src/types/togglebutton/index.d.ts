@@ -2,7 +2,7 @@
  *
  * ToggleButton Design Tokens
  *
- * @module themes/togglebutton
+ * @module togglebutton
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * ProgressSpinner Design Tokens
  *
- * @module themes/progressspinner
+ * @module progressspinner
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * Checkbox Design Tokens
  *
- * @module themes/checkbox
+ * @module checkbox
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

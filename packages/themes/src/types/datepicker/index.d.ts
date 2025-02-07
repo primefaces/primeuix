@@ -2,7 +2,7 @@
  *
  * DatePicker Design Tokens
  *
- * @module themes/datepicker
+ * @module datepicker
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

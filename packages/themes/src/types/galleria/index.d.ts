@@ -2,7 +2,7 @@
  *
  * Galleria Design Tokens
  *
- * @module themes/galleria
+ * @module galleria
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

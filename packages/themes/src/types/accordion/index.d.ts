@@ -2,7 +2,7 @@
  *
  * Accordion Design Tokens
  *
- * @module themes/accordion
+ * @module accordion
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * Password Design Tokens
  *
- * @module themes/password
+ * @module password
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

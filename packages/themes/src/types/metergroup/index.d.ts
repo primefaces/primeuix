@@ -2,7 +2,7 @@
  *
  * MeterGroup Design Tokens
  *
- * @module themes/metergroup
+ * @module metergroup
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * Toolbar Design Tokens
  *
- * @module themes/toolbar
+ * @module toolbar
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

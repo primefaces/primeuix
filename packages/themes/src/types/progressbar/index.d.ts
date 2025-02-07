@@ -2,7 +2,7 @@
  *
  * ProgressBar Design Tokens
  *
- * @module themes/progressbar
+ * @module progressbar
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

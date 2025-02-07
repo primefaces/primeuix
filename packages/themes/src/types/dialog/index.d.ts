@@ -2,7 +2,7 @@
  *
  * Dialog Design Tokens
  *
- * @module themes/dialog
+ * @module dialog
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

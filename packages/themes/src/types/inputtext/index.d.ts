@@ -2,7 +2,7 @@
  *
  * InputText Design Tokens
  *
- * @module themes/inputtext
+ * @module inputtext
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

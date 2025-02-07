@@ -2,7 +2,7 @@
  *
  * Knob Design Tokens
  *
- * @module themes/knob
+ * @module knob
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

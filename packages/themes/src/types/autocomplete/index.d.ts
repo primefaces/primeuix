@@ -2,7 +2,7 @@
  *
  * AutoComplete Design Tokens
  *
- * @module themes/autocomplete
+ * @module autocomplete
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

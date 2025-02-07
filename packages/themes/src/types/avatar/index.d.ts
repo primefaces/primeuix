@@ -2,7 +2,7 @@
  *
  * Avatar Design Tokens
  *
- * @module themes/avatar
+ * @module avatar
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

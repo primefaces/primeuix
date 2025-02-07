@@ -2,7 +2,7 @@
  *
  * Listbox Design Tokens
  *
- * @module themes/listbox
+ * @module listbox
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

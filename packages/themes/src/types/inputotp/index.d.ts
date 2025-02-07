@@ -2,7 +2,10 @@
  *
  * InputOTP Design Tokens
  *
- * @module themes/inputotp
+ * @module inputotp
+ *
+ * Figma UI Kit
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
 import type { ColorScheme as CS, DesignTokens, ExtendedCSS, ExtendedTokens } from '..';

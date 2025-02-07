@@ -2,7 +2,7 @@
  *
  * Chip Design Tokens
  *
- * @module themes/chip
+ * @module chip
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

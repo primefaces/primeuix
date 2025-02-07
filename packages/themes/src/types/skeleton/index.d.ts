@@ -2,7 +2,7 @@
  *
  * Skeleton Design Tokens
  *
- * @module themes/skeleton
+ * @module skeleton
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

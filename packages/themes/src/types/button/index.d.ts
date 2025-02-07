@@ -2,7 +2,7 @@
  *
  * Button Design Tokens
  *
- * @module themes/button
+ * @module button
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

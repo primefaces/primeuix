@@ -2,7 +2,7 @@
  *
  * MultiSelect Design Tokens
  *
- * @module themes/multiselect
+ * @module multiselect
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

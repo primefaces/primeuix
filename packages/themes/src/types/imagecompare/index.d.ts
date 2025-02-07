@@ -2,7 +2,7 @@
  *
  * ImageCompare Design Tokens
  *
- * @module themes/imagecompare
+ * @module imagecompare
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

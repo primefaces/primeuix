@@ -2,7 +2,7 @@
  *
  * Image Design Tokens
  *
- * @module themes/image
+ * @module image
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

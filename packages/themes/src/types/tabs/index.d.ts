@@ -2,7 +2,7 @@
  *
  * Tabs Design Tokens
  *
- * @module themes/tabs
+ * @module tabs
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

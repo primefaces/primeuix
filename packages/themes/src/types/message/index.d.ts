@@ -2,7 +2,7 @@
  *
  * Message Design Tokens
  *
- * @module themes/message
+ * @module message
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)

@@ -2,7 +2,7 @@
  *
  * Textarea Design Tokens
  *
- * @module themes/textarea
+ * @module textarea
  *
  * Figma UI Kit
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
