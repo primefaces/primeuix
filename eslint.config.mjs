@@ -1,21 +1,11 @@
-module.exports = {
-    root: true,
-    env: {
-        node: true,
-        jest: true
-    },
-    extends: ['prettier'],
-    parserOptions: {
-        parser: '@babel/eslint-parser',
-        requireConfigFile: false,
-        babelOptions: {
-            parserOpts: {
-                plugins: ['typescript']
-            }
-        }
-    },
-    plugins: ['prettier'],
-    ignorePatterns: ['**/dist/**'],
+import eslint from '@eslint/js';
+import prettierConfig from 'eslint-config-prettier';
+import tseslint from 'typescript-eslint';
+
+export default tseslint.config({
+    files: ['**/*.{js,mjs,ts,mts,d.ts}'],
+    extends: [eslint.configs.recommended, tseslint.configs.recommended, prettierConfig],
+    ignores: ['**/dist/**', 'submodules/**', '**/node_modules/**'],
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -34,4 +24,4 @@ module.exports = {
             { blankLine: 'always', prev: ['import'], next: ['const', 'let', 'var'] }
         ]
     }
-};
+});
