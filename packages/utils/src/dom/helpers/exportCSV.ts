@@ -1,7 +1,7 @@
 import saveAs from './saveAs';
 
 export default function exportCSV(csv: any, filename: string): void {
-    let blob = new Blob([csv], {
+    const blob = new Blob([csv], {
         type: 'application/csv;charset=utf-8;'
     });
 

@@ -82,13 +82,14 @@ async function run() {
     const project = await app.convert();
 
     if (project) {
-        let doc = {};
+        const doc = {};
 
         project.children.forEach((module) => {
             const { name, comment } = module;
 
             if (name !== 'index') {
                 const description = comment?.summary?.map((s) => s.text || '').join(' ');
+
                 doc[name] = {
                     description
                 };
@@ -98,7 +99,7 @@ async function run() {
             }
         });
 
-        !fs.existsSync(OUTPUT_PATH) && fs.mkdirSync(OUTPUT_PATH);
+        if (!fs.existsSync(OUTPUT_PATH)) fs.mkdirSync(OUTPUT_PATH);
         const metadata = `/***************** PrimeUIX Tokens (Auto-Generated) *****************/
 export interface TokenMetaData {
     description: string;
@@ -118,6 +119,7 @@ ${Object.keys(doc)
 
 export default ${JSON.stringify(doc, null, 4)} as Tokens;
 `;
+
         fs.writeFileSync(OUTPUT_FILE, metadata);
     }
 }

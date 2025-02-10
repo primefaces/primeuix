@@ -3,7 +3,7 @@ export default function getOuterHeight(element: HTMLElement, margin?: boolean): 
         let height = element.offsetHeight;
 
         if (margin) {
-            let style = getComputedStyle(element);
+            const style = getComputedStyle(element);
 
             height += parseFloat(style.marginTop) + parseFloat(style.marginBottom);
         }

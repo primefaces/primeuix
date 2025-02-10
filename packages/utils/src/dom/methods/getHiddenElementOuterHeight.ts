@@ -2,7 +2,7 @@ export default function getHiddenElementOuterHeight(element: HTMLElement): numbe
     if (element) {
         element.style.visibility = 'hidden';
         element.style.display = 'block';
-        let elementHeight = element.offsetHeight;
+        const elementHeight = element.offsetHeight;
 
         element.style.display = 'none';
         element.style.visibility = 'visible';

@@ -4,12 +4,13 @@ let calculatedScrollbarWidth: number | undefined = undefined;
 
 export default function calculateScrollbarWidth(element?: HTMLElement): number {
     if (element) {
-        let style = getComputedStyle(element);
+        const style = getComputedStyle(element);
+
         return element.offsetWidth - element.clientWidth - parseFloat(style.borderLeftWidth) - parseFloat(style.borderRightWidth);
     } else {
         if (calculatedScrollbarWidth != null) return calculatedScrollbarWidth;
 
-        let scrollDiv = document.createElement('div');
+        const scrollDiv = document.createElement('div');
 
         addStyle(scrollDiv, {
             width: '100px',
@@ -20,7 +21,7 @@ export default function calculateScrollbarWidth(element?: HTMLElement): number {
         });
         document.body.appendChild(scrollDiv);
 
-        let scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+        const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
 
         document.body.removeChild(scrollDiv);
 

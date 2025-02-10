@@ -1,6 +1,6 @@
 export default function saveAs(file: { name: string; src: string }): boolean {
     if (file) {
-        let link = document.createElement('a');
+        const link = document.createElement('a');
 
         if (link.download !== undefined) {
             const { name, src } = file;

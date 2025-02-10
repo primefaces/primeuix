@@ -3,11 +3,11 @@ import { defineConfig, type Options } from 'tsup';
 
 const themes: string[] = [];
 
-const entry = globSync('src/**/index.ts').reduce((acc: any, file) => {
+const entry = globSync('src/**/index.ts').reduce((acc: Record<string, string>, file: string) => {
     const name = file.replace(/^src\//, '').replace(/\.ts$/, '');
     const themeName: string | undefined = name.startsWith('presets/') ? name.split('/')?.[1] : undefined;
 
-    themeName && !themes.includes(themeName) && themes.push(themeName);
+    if (themeName && !themes.includes(themeName)) themes.push(themeName);
 
     acc[name] = file;
 

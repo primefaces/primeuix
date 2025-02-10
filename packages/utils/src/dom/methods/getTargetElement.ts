@@ -1,7 +1,7 @@
 import isExist from './isExist';
 import toElement from './toElement';
 
-export default function getTargetElement(target: any, currentElement: Element): Window | Document | Element | null | undefined {
+export default function getTargetElement(target: unknown, currentElement: Element): Window | Document | Element | null | undefined {
     if (!target) return undefined;
 
     switch (target) {
@@ -19,14 +19,16 @@ export default function getTargetElement(target: any, currentElement: Element): 
             return currentElement?.parentElement;
         case '@grandparent':
             return currentElement?.parentElement?.parentElement;
-        default:
+
+        default: {
             if (typeof target === 'string') {
                 return document.querySelector(target);
             }
 
-            const isFunction = (obj: any): obj is Function => !!(obj && obj.constructor && obj.call && obj.apply);
+            const isFunction = (value: unknown): value is (...args: unknown[]) => unknown => typeof value === 'function' && 'call' in value && 'apply' in value;
             const element = toElement(isFunction(target) ? target() : target);
 
             return element?.nodeType === 9 || isExist(element as Element) ? element : undefined;
+        }
     }
 }

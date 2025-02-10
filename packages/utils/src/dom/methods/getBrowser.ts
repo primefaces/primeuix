@@ -10,7 +10,7 @@ export default function getBrowser(): BrowserType {
     if (!browser) {
         browser = {};
 
-        let matched = resolveUserAgent();
+        const matched = resolveUserAgent();
 
         if (matched.browser) {
             browser[matched.browser] = true;

@@ -12,7 +12,7 @@ export default function setAttributes(element: HTMLElement, attributes: { [key: 
                     if (type === 'string' || type === 'number') {
                         cv.push(v);
                     } else if (type === 'object') {
-                        const _cv = Array.isArray(v) ? computedStyles(rule, v) : Object.entries(v).map(([_k, _v]) => (rule === 'style' && (!!_v || _v === 0) ? `${_k.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}:${_v}` : !!_v ? _k : undefined));
+                        const _cv = Array.isArray(v) ? computedStyles(rule, v) : Object.entries(v).map(([_k, _v]) => (rule === 'style' && (!!_v || _v === 0) ? `${_k.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()}:${_v}` : _v ? _k : undefined));
 
                         cv = _cv.length ? cv.concat(_cv.filter((c) => !!c)) : cv;
                     }

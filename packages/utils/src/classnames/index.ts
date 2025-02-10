@@ -3,7 +3,7 @@ export function cn(...args: any[]): string | undefined {
         let classes: any = [];
 
         for (let i = 0; i < args.length; i++) {
-            let className = args[i];
+            const className = args[i];
 
             if (!className) {
                 continue;

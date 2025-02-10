@@ -104,7 +104,7 @@ export interface ColorSchemeDesignToken<T> {
 }
 
 export declare type ExtendedCSS = string | ((options: ThemeStyleOptions) => string);
-export declare type ExtendedTokens = Record<string, any>;
+export declare type ExtendedTokens = Record<string, object | string | number>;
 
 export interface DesignTokens<T> extends ColorSchemeDesignToken<T> {
     css?: ExtendedCSS;
@@ -114,7 +114,7 @@ export interface DesignTokens<T> extends ColorSchemeDesignToken<T> {
 export declare type RequiredDesignTokens<T, C = never> = {
     [K in keyof Omit<T, keyof DesignTokens<T>>]-?: DeepRequired<T[K]>;
 } & DesignTokens<T> &
-    (C extends never ? {} : ColorSchemeDesignToken<C>);
+    (C extends never ? object : ColorSchemeDesignToken<C>);
 
 /* @todo: check if this is needed
 export type RequiredAccordionDesignTokens = RequiredDesignTokens<
@@ -229,7 +229,7 @@ export interface ComponentsDesignTokens {
     treeselect?: TreeSelectDesignTokens;
     treetable?: TreeTableDesignTokens;
     virtualscroller?: VirtualScrollerDesignTokens;
-    [key: string]: any;
+    [key: string]: object | undefined;
 }
 
 export declare type Preset<T extends object> = {

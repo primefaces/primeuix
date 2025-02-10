@@ -1,6 +1,4 @@
-import { StyleOptions } from '../types';
-
-export const style = ({ dt }: StyleOptions) => `
+export const style = `
 .p-checkbox-group {
     display: inline-flex;
 }

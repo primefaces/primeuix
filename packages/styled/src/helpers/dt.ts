@@ -16,8 +16,7 @@ export const $dt = (tokenPath: string): { name: string; variable: string; value:
     };
 };
 
-export const dt = (...args: any[]) => {
-    // @ts-ignore
+export const dt = (...args: Parameters<typeof dtwt> extends [unknown, ...infer Rest] ? Rest : never) => {
     return dtwt(Theme.getTheme(), ...args);
 };
 

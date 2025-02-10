@@ -4,7 +4,7 @@ export default function removeStyleTag(element: Node): Node | null {
     if (isExist(element)) {
         try {
             element.parentNode?.removeChild(element);
-        } catch (error) {
+        } catch {
             // style element may have already been removed in a fast refresh
         }
 

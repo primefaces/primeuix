@@ -3,7 +3,7 @@ export default function getOuterWidth(element: unknown, margin?: boolean): numbe
         let width = element.offsetWidth;
 
         if (margin) {
-            let style = getComputedStyle(element);
+            const style = getComputedStyle(element);
 
             width += parseFloat(style.marginLeft) + parseFloat(style.marginRight);
         }

@@ -5,7 +5,7 @@ export default function insertIntoOrderedArray<T>(item: T, index: number, arr: T
         let injected = false;
 
         for (let i = 0; i < arr.length; i++) {
-            let currentItemIndex = findIndexInList(arr[i], sourceArr);
+            const currentItemIndex = findIndexInList(arr[i], sourceArr);
 
             if (currentItemIndex > index) {
                 arr.splice(i, 0, item);

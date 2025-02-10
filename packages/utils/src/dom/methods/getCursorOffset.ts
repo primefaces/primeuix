@@ -1,7 +1,7 @@
 export default function getCursorOffset(element: Element, prevText: string, nextText: string, currentText: string): { top: number | string; left: number | string } {
     if (element) {
-        let style = getComputedStyle(element);
-        let ghostDiv = document.createElement('div');
+        const style = getComputedStyle(element);
+        const ghostDiv = document.createElement('div');
 
         ghostDiv.style.position = 'absolute';
         ghostDiv.style.top = '0px';
@@ -18,12 +18,12 @@ export default function getCursorOffset(element: Element, prevText: string, next
         ghostDiv.style.lineHeight = style.lineHeight;
         ghostDiv.innerHTML = prevText.replace(/\r\n|\r|\n/g, '<br />');
 
-        let ghostSpan = document.createElement('span');
+        const ghostSpan = document.createElement('span');
 
         ghostSpan.textContent = currentText;
         ghostDiv.appendChild(ghostSpan);
 
-        let text = document.createTextNode(nextText);
+        const text = document.createTextNode(nextText);
 
         ghostDiv.appendChild(text);
         document.body.appendChild(ghostDiv);

@@ -1,6 +1,4 @@
-import { StyleOptions } from '../types';
-
-export const style = ({ dt }: StyleOptions) => `
+export const style = `
 .p-buttongroup {
     display: inline-flex;
 }

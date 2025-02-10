@@ -22,7 +22,7 @@ export default function resolveFieldData(data: any, field: any): any {
         } else if (field.indexOf('.') === -1) {
             return data[field];
         } else {
-            let fields = field.split('.');
+            const fields = field.split('.');
             let value = data;
 
             for (let i = 0, len = fields.length; i < len; ++i) {

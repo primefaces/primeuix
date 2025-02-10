@@ -2,7 +2,7 @@ import getParentNode from './getParentNode';
 
 export default function getIndex(element: HTMLElement): number {
     if (element) {
-        let children = getParentNode(element)?.childNodes;
+        const children = getParentNode(element)?.childNodes;
         let num = 0;
 
         if (children) {

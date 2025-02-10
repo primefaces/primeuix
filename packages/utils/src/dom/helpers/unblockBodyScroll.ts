@@ -9,7 +9,7 @@ export default function unblockBodyScroll(option: string | UnblockBodyScrollOpti
     if (typeof option === 'string') {
         removeClass(document.body, option || 'p-overflow-hidden');
     } else {
-        option?.variableName && document.body.style.removeProperty(option.variableName);
+        if (option?.variableName) document.body.style.removeProperty(option.variableName);
         removeClass(document.body, option?.className || 'p-overflow-hidden');
     }
 }

@@ -1,3 +1,3 @@
-export default function isElement(element: any): boolean {
-    return typeof HTMLElement === 'object' ? element instanceof HTMLElement : element && typeof element === 'object' && element !== null && element.nodeType === 1 && typeof element.nodeName === 'string';
+export default function isElement(element: unknown): element is Element {
+    return typeof HTMLElement !== 'undefined' ? element instanceof HTMLElement : element !== null && typeof element === 'object' && (element as Element).nodeType === 1 && typeof (element as Element).nodeName === 'string';
 }

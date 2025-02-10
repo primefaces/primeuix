@@ -51,7 +51,7 @@ export default function removeAccents(str: string): string {
             z: /[\u017A\u017C\u017E]/g
         };
 
-        for (let key in accentsMap) {
+        for (const key in accentsMap) {
             str = str.replace(accentsMap[key], key);
         }
     }

@@ -10,14 +10,14 @@ const pkg = path.resolve(__root, './package.json');
 
 updatePackageJson(pkg);
 
-let folderExports = [];
+const folderExports = [];
 
 // Fill * > index.ts in subfolders
 fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
     .filter((dir) => dir.isDirectory())
     .forEach(({ name: folderName }) => {
         const folderPath = path.resolve(__root, INPUT_DIR + folderName);
-        let exports = [];
+        const exports = [];
 
         folderExports.push(`export * from '@primeuix/utils/${folderName}';\n`);
 
@@ -27,14 +27,14 @@ fs.readdirSync(path.resolve(__root, INPUT_DIR), { withFileTypes: true })
                 const subFolderPath = path.resolve(folderPath, `./${subFolderName}`);
 
                 fs.readdirSync(subFolderPath).forEach((file) => {
-                    let fileName = file.split(/(.ts)$/)[0];
+                    const fileName = file.split(/(.ts)$/)[0];
 
                     exports.push(`export { default as ${fileName} } from './${subFolderName}/${fileName}';\n`);
                 });
             });
 
-        exports.length && fs.writeFileSync(path.resolve(folderPath, 'index.ts'), exports.join(''));
+        if (exports.length) fs.writeFileSync(path.resolve(folderPath, 'index.ts'), exports.join(''));
     });
 
 // src > index.ts
-folderExports.length && fs.writeFileSync(path.resolve(__root, INPUT_DIR + 'index.ts'), folderExports.join(''));
+if (folderExports.length) fs.writeFileSync(path.resolve(__root, INPUT_DIR + 'index.ts'), folderExports.join(''));

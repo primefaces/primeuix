@@ -3,12 +3,12 @@ import isDate from './isDate';
 import isFunction from './isFunction';
 import isObject from './isObject';
 
-export default function stringify(value: any, indent: number = 2, currentIndent: number = 0): string {
+export default function stringify(value: unknown, indent: number = 2, currentIndent: number = 0): string {
     const currentIndentStr = ' '.repeat(currentIndent);
     const nextIndentStr = ' '.repeat(currentIndent + indent);
 
     if (isArray(value)) {
-        return '[' + value.map((v: any) => stringify(v, indent, currentIndent + indent)).join(', ') + ']';
+        return '[' + (value as unknown[]).map((v: unknown) => stringify(v, indent, currentIndent + indent)).join(', ') + ']';
     } else if (isDate(value)) {
         return value.toISOString();
     } else if (isFunction(value)) {

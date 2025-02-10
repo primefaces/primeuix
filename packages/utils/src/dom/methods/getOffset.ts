@@ -2,7 +2,7 @@ import getScrollLeft from './getScrollLeft';
 
 export default function getOffset(element?: Element | null): { top: number | string; left: number | string } {
     if (element) {
-        let rect = element.getBoundingClientRect();
+        const rect = element.getBoundingClientRect();
 
         return {
             top: rect.top + (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0),

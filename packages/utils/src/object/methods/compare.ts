@@ -1,6 +1,6 @@
 import isEmpty from './isEmpty';
 
-export default function compare<T = any>(value1: T, value2: T, comparator: (val1: T, val2: T) => number, order: number = 1): number {
+export default function compare<T = unknown>(value1: T, value2: T, comparator: (val1: T, val2: T) => number, order: number = 1): number {
     let result = -1;
     const emptyValue1 = isEmpty(value1);
     const emptyValue2 = isEmpty(value2);

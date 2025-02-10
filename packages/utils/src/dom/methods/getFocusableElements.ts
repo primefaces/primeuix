@@ -1,7 +1,7 @@
 import find from './find';
 
 export default function getFocusableElements(element: Element, selector: string = ''): Element[] {
-    let focusableElements = find(
+    const focusableElements = find(
         element,
         `button:not([tabindex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector},
             [href][clientHeight][clientWidth]:not([tabindex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector},
@@ -12,9 +12,9 @@ export default function getFocusableElements(element: Element, selector: string 
             [contenteditable]:not([tabIndex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector}`
     );
 
-    let visibleFocusableElements: Element[] = [];
+    const visibleFocusableElements: Element[] = [];
 
-    for (let focusableElement of focusableElements) {
+    for (const focusableElement of focusableElements) {
         if (getComputedStyle(focusableElement).display != 'none' && getComputedStyle(focusableElement).visibility != 'hidden') visibleFocusableElements.push(focusableElement);
     }
 

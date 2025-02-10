@@ -1,13 +1,16 @@
 import resolve from './resolve';
 
-export default function toValue(value: any): any {
+type ReactRef = { current: unknown };
+type VueRef = { value: unknown };
+
+export default function toValue(value: unknown): unknown {
     if (value && typeof value === 'object') {
-        if (value.hasOwnProperty('current')) {
+        if (Object.hasOwn(value, 'current')) {
             // For React
-            return value.current;
-        } else if (value.hasOwnProperty('value')) {
+            return (value as ReactRef).current;
+        } else if (Object.hasOwn(value, 'value')) {
             // For Vue
-            return value.value;
+            return (value as VueRef).value;
         }
     }
 

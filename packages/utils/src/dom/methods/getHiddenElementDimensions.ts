@@ -1,5 +1,5 @@
 export default function getHiddenElementDimensions(element?: HTMLElement): { width: number; height: number } {
-    let dimensions: { width: number; height: number } = { width: 0, height: 0 };
+    const dimensions: { width: number; height: number } = { width: 0, height: 0 };
 
     if (element) {
         element.style.visibility = 'hidden';

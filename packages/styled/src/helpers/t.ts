@@ -25,8 +25,8 @@ export const $t = (theme: any = {}) => {
         },
         surfacePalette(surface: any) {
             const { semantic } = _preset || {};
-            const lightSurface = surface?.hasOwnProperty('light') ? surface?.light : surface;
-            const darkSurface = surface?.hasOwnProperty('dark') ? surface?.dark : surface;
+            const lightSurface = surface && Object.hasOwn(surface, 'light') ? surface.light : surface;
+            const darkSurface = surface && Object.hasOwn(surface, 'dark') ? surface.dark : surface;
             const newColorScheme = {
                 colorScheme: {
                     light: { ...semantic?.colorScheme?.light, ...(!!lightSurface && { surface: lightSurface }) },

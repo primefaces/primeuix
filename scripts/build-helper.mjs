@@ -85,6 +85,7 @@ export async function renameDTSFile(dir, newName) {
             await renameDTSFile(fullPath, newName);
         } else if (entry.name.endsWith('.d.ts')) {
             const newFullPath = path.join(dir, `${newName}.d.ts`);
+
             await fs.rename(fullPath, newFullPath);
         }
     }

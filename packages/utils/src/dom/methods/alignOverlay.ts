@@ -7,7 +7,7 @@ export default function alignOverlay(overlay: HTMLElement, target: HTMLElement, 
         if (appendTo === 'self') {
             relativePosition(overlay, target);
         } else {
-            calculateMinWidth && (overlay.style.minWidth = getOuterWidth(target) + 'px');
+            if (calculateMinWidth) overlay.style.minWidth = getOuterWidth(target) + 'px';
             absolutePosition(overlay, target);
         }
     }

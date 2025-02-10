@@ -1,15 +1,17 @@
+export type Handler = (evt: unknown) => void;
+
 export interface EventBusOptions {
-    on(type: string, handler: Function): void;
-    off(type: string, handler: Function): void;
-    emit(type: string, evt?: any): void;
+    on(type: string, handler: Handler): void;
+    off(type: string, handler: Handler): void;
+    emit(type: string, evt?: unknown): void;
     clear(): void;
 }
 
 export function EventBus(): EventBusOptions {
-    const allHandlers = new Map<string, Function[]>();
+    const allHandlers = new Map<string, Handler[]>();
 
     return {
-        on(type: string, handler: Function) {
+        on(type: string, handler: Handler) {
             let handlers = allHandlers.get(type);
 
             if (!handlers) handlers = [handler];
@@ -19,8 +21,8 @@ export function EventBus(): EventBusOptions {
 
             return this;
         },
-        off(type: string, handler: Function) {
-            let handlers = allHandlers.get(type);
+        off(type: string, handler: Handler) {
+            const handlers = allHandlers.get(type);
 
             if (handlers) {
                 handlers.splice(handlers.indexOf(handler) >>> 0, 1);
@@ -28,8 +30,8 @@ export function EventBus(): EventBusOptions {
 
             return this;
         },
-        emit(type: string, evt?: any) {
-            let handlers = allHandlers.get(type);
+        emit(type: string, evt?: unknown) {
+            const handlers = allHandlers.get(type);
 
             if (handlers) {
                 handlers.forEach((handler) => {

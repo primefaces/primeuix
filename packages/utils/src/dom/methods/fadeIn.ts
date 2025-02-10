@@ -5,13 +5,14 @@ export default function fadeIn(element: HTMLElement, duration: number): void {
         let last = +new Date();
         let opacity = '0';
 
-        let tick = function () {
+        const tick = function () {
             opacity = `${+element.style.opacity + (new Date().getTime() - last) / duration}`;
             element.style.opacity = opacity;
             last = +new Date();
 
             if (+opacity < 1) {
-                (!!window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+                if ('requestAnimationFrame' in window) requestAnimationFrame(tick);
+                else setTimeout(tick, 16);
             }
         };
 

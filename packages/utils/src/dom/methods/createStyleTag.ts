@@ -1,7 +1,8 @@
 import setAttributes from './setAttributes';
 
 export default function createStyleTag(attributes: { [key: string]: any } = {}, container: Element): HTMLStyleElement {
-    let element = document.createElement('style');
+    const element = document.createElement('style');
+
     setAttributes(element, attributes);
 
     if (!container) {
