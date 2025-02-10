@@ -1,6 +1,6 @@
-import { StyleOptions } from '../types';
+import { StyleType } from '../types';
 
-export const style = ({ dt }: StyleOptions) => `
+export const style: StyleType = ({ dt }) => `
 /*!
 * Quill Editor v1.3.3
 * https://quilljs.com/

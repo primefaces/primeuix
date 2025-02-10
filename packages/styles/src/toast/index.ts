@@ -1,6 +1,6 @@
-import { StyleOptions } from '../types';
+import { StyleType } from '../types';
 
-export const style = ({ dt }: StyleOptions) => `
+export const style: StyleType = ({ dt }) => `
 .p-toast {
     width: ${dt('toast.width')};
     white-space: pre-line;

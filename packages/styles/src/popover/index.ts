@@ -1,6 +1,6 @@
-import { StyleOptions } from '../types';
+import { StyleType } from '../types';
 
-export const style = ({ dt }: StyleOptions) => `
+export const style: StyleType = ({ dt }) => `
 .p-popover {
     margin-block-start: ${dt('popover.gutter')};
     background: ${dt('popover.background')};

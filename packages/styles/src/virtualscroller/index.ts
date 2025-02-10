@@ -1,6 +1,6 @@
-import { StyleOptions } from '../types';
+import { StyleType } from '../types';
 
-export const style = ({ dt }: StyleOptions) => `
+export const style: StyleType = ({ dt }) => `
 .p-virtualscroller-loader {
     background: ${dt('virtualscroller.loader.mask.background')};
     color: ${dt('virtualscroller.loader.mask.color')};

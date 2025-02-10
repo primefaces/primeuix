@@ -1,6 +1,6 @@
-import { StyleOptions } from '../types';
+import { StyleType } from '../types';
 
-export const style = ({ dt }: StyleOptions) => `
+export const style: StyleType = ({ dt }) => `
 .p-dataview {
     border-color: ${dt('dataview.border.color')};
     border-width: ${dt('dataview.border.width')};

@@ -307,7 +307,7 @@ export default {
                     order: 'primeui'
                 };
 
-                isObject(cssLayer) && (layerOptions.name = resolve(cssLayer.name, { name, type }));
+                isObject(cssLayer) && (layerOptions.name = resolve((cssLayer as any).name, { name, type }));
 
                 if (isNotEmpty(layerOptions.name)) {
                     css = getRule(`@layer ${layerOptions.name}`, css);

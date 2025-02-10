@@ -1,6 +1,6 @@
-import { StyleOptions } from '../types';
+import { StyleType } from '../types';
 
-export const style = ({ dt }: StyleOptions) => `
+export const style: StyleType = ({ dt }) => `
 .p-fieldset {
     background: ${dt('fieldset.background')};
     border: 1px solid ${dt('fieldset.border.color')};

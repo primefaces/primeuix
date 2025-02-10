@@ -1,6 +1,6 @@
-import { StyleOptions } from '../types';
+import { StyleType } from '../types';
 
-export const style = ({ dt }: StyleOptions) => `
+export const style: StyleType = ({ dt }) => `
 .p-panel {
     border: 1px solid ${dt('panel.border.color')};
     border-radius: ${dt('panel.border.radius')};

@@ -1,9 +1,9 @@
 import { isObject } from '@primeuix/utils/object';
 
 export const toValues = (value: any, name?: string) => {
-    if (isObject(value) && Object.hasOwn(value, name)) {
-        return value;
+    if (name) {
+        return isObject(value) && Object.hasOwn(value, name) ? value : { [name]: value };
     }
 
-    return name ? { [name]: value } : value;
+    return value;
 };

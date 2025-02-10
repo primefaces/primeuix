@@ -28,7 +28,7 @@
                 "import": "./index.mjs"
             },
             "./*": {
-                "types": "./*/index.d.mts",
+                "types": "./types.d.mts",
                 "import": "./*/index.mjs"
             }
         },

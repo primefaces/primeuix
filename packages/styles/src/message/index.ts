@@ -1,6 +1,6 @@
-import { StyleOptions } from '../types';
+import { StyleType } from '../types';
 
-export const style = ({ dt }: StyleOptions) => `
+export const style: StyleType = ({ dt }) => `
 .p-message {
     border-radius: ${dt('message.border.radius')};
     outline-width: ${dt('message.border.width')};

@@ -1,4 +1,6 @@
-export const style = `
+import { StyleType } from '../types';
+
+export const style: StyleType = `
 .p-scrolltop.p-button {
     position: fixed !important;
     inset-block-end: 20px;

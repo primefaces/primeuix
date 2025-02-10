@@ -14,7 +14,7 @@ export function merge(value1: any, value2: any): void {
 
 export function toValue(value: any): any {
     // Check for Figma ($value-$type)
-    return isObject(value) && value.hasOwnProperty('$value') && value.hasOwnProperty('$type') ? value.$value : value;
+    return isObject(value) && value.hasOwnProperty('$value') && value.hasOwnProperty('$type') ? (value as any).$value : value;
 }
 
 export function toUnit(value: string, variable: string = ''): string {
