@@ -83,7 +83,7 @@ export function getComputedValue(obj = {}, value: any): any {
         const regex = /{([^}]*)}/g;
         const val = value.trim();
 
-        return matchRegex(val, regex) ? val.replaceAll(regex, (v: string) => getKeyValue(obj, v.replace(/{|}/g, ''))) : val;
+        return matchRegex(val, regex) ? val.replaceAll(regex, (v: string) => getKeyValue(obj, v.replace(/{|}/g, '')) as string) : val;
     } else if (isNumber(value)) {
         return value;
     }

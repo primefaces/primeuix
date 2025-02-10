@@ -232,12 +232,12 @@ export interface ComponentsDesignTokens {
     [key: PropertyKey]: object | string | number | undefined;
 }
 
-export declare type BaseDesignTokens<T extends Partial<{ primitives: unknown; semantic: unknown }> = object> = {
-    primitives?: T extends { primitives: infer P } ? P : undefined;
-    semantic?: T extends { semantic: infer S } ? S : undefined;
+export declare type BaseDesignTokens<T extends Partial<{ primitive: unknown; semantic: unknown }> = object> = {
+    primitive?: T extends { primitive?: infer P } ? P : undefined;
+    semantic?: T extends { semantic?: infer S } ? S : undefined;
 };
 
-export declare type Preset<T extends Record<PropertyKey, unknown> = object> = BaseDesignTokens<T> & {
+export declare type Preset<T = object> = BaseDesignTokens<T> & {
     components?: ComponentsDesignTokens;
     extend?: ExtendedTokens;
     css?: ExtendedCSS;
