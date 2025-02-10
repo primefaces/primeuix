@@ -3,7 +3,7 @@
  * @module themes
  *
  */
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { ThemeOptions, ThemeStyleOptions } from '@primeuix/styled';
 
 import type { AccordionDesignTokens } from './accordion';
 import type { AutoCompleteDesignTokens } from './autocomplete';
@@ -229,15 +229,22 @@ export interface ComponentsDesignTokens {
     treeselect?: TreeSelectDesignTokens;
     treetable?: TreeTableDesignTokens;
     virtualscroller?: VirtualScrollerDesignTokens;
-    [key: string]: object | undefined;
+    [key: PropertyKey]: object | string | number | undefined;
 }
 
-export declare type Preset<T extends object> = {
-    // base tokens
-    [K in keyof T]?: T[K];
-} & {
-    components?: ComponentsDesignTokens;
+export declare type BaseDesignTokens<T extends Partial<{ primitives: unknown; semantic: unknown }> = object> = {
+    primitives?: T extends { primitives: infer P } ? P : undefined;
+    semantic?: T extends { semantic: infer S } ? S : undefined;
 };
+
+export declare type Preset<T extends Record<PropertyKey, unknown> = object> = BaseDesignTokens<T> & {
+    components?: ComponentsDesignTokens;
+    extend?: ExtendedTokens;
+    css?: ExtendedCSS;
+    [key: PropertyKey]: object | string | number | undefined;
+};
+
+export declare type Theme = { preset?: Preset; options?: ThemeOptions };
 
 /**
  * Custom types

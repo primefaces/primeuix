@@ -1,5 +1,5 @@
 import { $t } from '../helpers/index';
 
-export default function updatePrimaryPalette(primary?: any): any {
-    return $t().primaryPalette(primary).update().preset;
+export default function updatePrimaryPalette<T = unknown, P = unknown>(palette?: T): P {
+    return $t().primaryPalette(palette).update().preset as P;
 }

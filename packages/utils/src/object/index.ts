@@ -1,6 +1,7 @@
 export { default as compare } from './methods/compare';
 export { default as contains } from './methods/contains';
 export { default as deepEquals } from './methods/deepEquals';
+export { default as deepMerge } from './methods/deepMerge';
 export { default as equals } from './methods/equals';
 export { default as filter } from './methods/filter';
 export { default as findIndexInList } from './methods/findIndexInList';
