@@ -20,5 +20,5 @@ export interface LocaleInstance {
     update(lang: string, locale: Record<string, any>): LocaleInstance;
     get(lang?: string): Record<string, any> | undefined;
     readonly lang: string;
-    readonly locale: Record<string, any> | undefined;
+    readonly locale: Record<string, unknown>;
 }
