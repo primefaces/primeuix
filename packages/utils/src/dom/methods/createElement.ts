@@ -1,6 +1,6 @@
 import setAttributes from './setAttributes';
 
-export default function createElement(type: string, attributes: { [key: string]: any } = {}, ...children: (string | Node)[]): HTMLElement | undefined {
+export default function createElement(type: string, attributes: Record<string, unknown> = {}, ...children: (string | Node)[]): HTMLElement | undefined {
     if (type) {
         const element = document.createElement(type);
 
