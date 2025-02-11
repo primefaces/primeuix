@@ -34,7 +34,7 @@ export default defineConfig([
         outDir: 'dist',
         dts: true,
         external: [/^@primeuix\/(.*)$/],
-        minify: 'terser',
+        minify: true,
         sourcemap: true,
         splitting: false
     }
