@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import * as prettier from 'prettier';
 import * as TypeDoc from 'typedoc';
 import { resolvePath } from '../../../scripts/build-helper.mjs';
 
@@ -120,7 +121,11 @@ ${Object.keys(doc)
 export default ${JSON.stringify(doc, null, 4)} as Tokens;
 `;
 
-        fs.writeFileSync(OUTPUT_FILE, metadata);
+        prettier.resolveConfig(__dirname).then(async (config) => {
+            const formattedData = await prettier.format(metadata, { ...config, parser: 'typescript' });
+
+            fs.writeFileSync(OUTPUT_FILE, formattedData);
+        });
     }
 }
 
