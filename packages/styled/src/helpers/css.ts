@@ -1,8 +1,9 @@
 import { resolve } from '@primeuix/utils';
 import { type StyleType, transformDtToInterpolated } from '..';
-import { dt } from './dt';
+import { dt as dtSingleton } from './dt';
 
-export function css(strings: TemplateStringsArray | StyleType, ...exprs: unknown[]): string | undefined {
+export const getCssInstance = (dt: typeof dtSingleton) => {
+    function css(strings: TemplateStringsArray | StyleType, ...exprs: unknown[]): string | undefined {
     if (strings instanceof Array) {
         const raw = strings.reduce((acc, str, i) => acc + str + (resolve(exprs[i], { dt }) ?? ''), '');
         const interpolated = transformDtToInterpolated(raw);
@@ -12,5 +13,10 @@ export function css(strings: TemplateStringsArray | StyleType, ...exprs: unknown
         return compile({ dt }) as string | undefined;
     }
 
-    return resolve(strings as unknown, { dt }) as string | undefined;
-}
+        return resolve(strings as unknown, { dt }) as string | undefined;
+    }
+
+    return { css };
+};
+
+export const { css } = getCssInstance(dtSingleton);
