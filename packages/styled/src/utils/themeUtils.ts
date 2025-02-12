@@ -1,6 +1,5 @@
-import { isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve } from '@primeuix/utils/object';
-import { dt, toVariables } from '../helpers/index';
-import { CALC_REGEX, EXPR_REGEX, getRule, toTokenKey, VAR_REGEX } from './sharedUtils';
+import { isEmpty, isNotEmpty, isObject, matchRegex, transformCSS, resolve } from '@primeuix/utils/object';
+import { CALC_REGEX, EXPR_REGEX, getRule, toTokenKey, VAR_REGEX, getVariableValue, toVariables } from './sharedUtils';
 
 export default {
     regex: {
@@ -43,10 +42,22 @@ export default {
             return [value].flat().map((v) => rules.map((r) => r.resolve(v)).find((rr) => rr.matched) ?? this.rules.custom.resolve(v));
         }
     },
-    _toVariables(theme: any, options: any) {
-        return toVariables(theme, { prefix: options?.prefix });
+    _toVariables(defaults: any, theme: any, options: any) {
+        return toVariables(defaults, theme, { prefix: options?.prefix });
     },
-    getCommon({ name = '', theme = {}, params, set, defaults }: any) {
+    dtwt(defaults: any, tokens: any, theme: any = {}, tokenPath: string, fallback?: string, type?: string) {
+        if (tokenPath) {
+            const { variable: VARIABLE, options: OPTIONS } = defaults || {};
+            const { prefix, transform } = theme?.options || OPTIONS || {};
+            const token = matchRegex(tokenPath, EXPR_REGEX) ? tokenPath : `{${tokenPath}}`;
+            const isStrictTransform = type === 'value' || (isEmpty(type) && transform === 'strict'); // @todo - TRANSFORM: strict | lenient(default)
+
+            return isStrictTransform ? this.getTokenValue(tokens, tokenPath, defaults) : getVariableValue(token, undefined, prefix, [VARIABLE.excludedKeyRegex], fallback);
+        }
+
+        return '';
+    },
+    getCommon({ name = '', theme = {}, params, set, defaults, tokens }: any) {
         const { preset, options } = theme;
         let primitive_css, primitive_tokens, semantic_css, semantic_tokens, global_css, global_tokens, style;
 
@@ -57,13 +68,13 @@ export default {
             const { colorScheme: eColorScheme, ...eRest } = extend || {};
             const { dark, ...csRest } = colorScheme || {};
             const { dark: eDark, ...ecsRest } = eColorScheme || {};
-            const prim_var: any = isNotEmpty(primitive) ? this._toVariables({ primitive }, options) : {};
-            const sRest_var: any = isNotEmpty(sRest) ? this._toVariables({ semantic: sRest }, options) : {};
-            const csRest_var: any = isNotEmpty(csRest) ? this._toVariables({ light: csRest }, options) : {};
-            const csDark_var: any = isNotEmpty(dark) ? this._toVariables({ dark }, options) : {};
-            const eRest_var: any = isNotEmpty(eRest) ? this._toVariables({ semantic: eRest }, options) : {};
-            const ecsRest_var: any = isNotEmpty(ecsRest) ? this._toVariables({ light: ecsRest }, options) : {};
-            const ecsDark_var: any = isNotEmpty(eDark) ? this._toVariables({ dark: eDark }, options) : {};
+            const prim_var: any = isNotEmpty(primitive) ? this._toVariables(defaults, { primitive }, options) : {};
+            const sRest_var: any = isNotEmpty(sRest) ? this._toVariables(defaults, { semantic: sRest }, options) : {};
+            const csRest_var: any = isNotEmpty(csRest) ? this._toVariables(defaults, { light: csRest }, options) : {};
+            const csDark_var: any = isNotEmpty(dark) ? this._toVariables(defaults, { dark }, options) : {};
+            const eRest_var: any = isNotEmpty(eRest) ? this._toVariables(defaults, { semantic: eRest }, options) : {};
+            const ecsRest_var: any = isNotEmpty(ecsRest) ? this._toVariables(defaults, { light: ecsRest }, options) : {};
+            const ecsDark_var: any = isNotEmpty(eDark) ? this._toVariables(defaults, { dark: eDark }, options) : {};
 
             const [prim_css, prim_tokens] = [prim_var.declarations ?? '', prim_var.tokens];
             const [sRest_css, sRest_tokens] = [sRest_var.declarations ?? '', sRest_var.tokens || []];
@@ -88,7 +99,7 @@ export default {
             global_css = `${global_light_css}${global_dark_css}`;
             global_tokens = [...new Set([...eRest_tokens, ...ecsRest_tokens, ...ecsDark_tokens])];
 
-            style = resolve(preset.css, { dt }) as string;
+            style = resolve(preset.css, { dt: this.dtwt.bind(this, defaults, tokens, theme) }) as string;
         }
 
         return {
@@ -107,7 +118,7 @@ export default {
             style
         };
     },
-    getPreset({ name = '', preset = {}, options, params, set, defaults, selector }: any) {
+    getPreset({ name = '', theme = {}, preset = {}, options, params, set, defaults, tokens, selector }: any) {
         let p_css, p_tokens, p_style;
 
         if (isNotEmpty(preset) && options.transform !== 'strict') {
@@ -116,9 +127,9 @@ export default {
             const { colorScheme: eColorScheme, ...evRest } = extend || {};
             const { dark, ...csRest } = colorScheme || {};
             const { dark: ecsDark, ...ecsRest } = eColorScheme || {};
-            const vRest_var: any = isNotEmpty(vRest) ? this._toVariables({ [_name]: { ...vRest, ...evRest } }, options) : {};
-            const csRest_var: any = isNotEmpty(csRest) ? this._toVariables({ [_name]: { ...csRest, ...ecsRest } }, options) : {};
-            const csDark_var: any = isNotEmpty(dark) ? this._toVariables({ [_name]: { ...dark, ...ecsDark } }, options) : {};
+            const vRest_var: any = isNotEmpty(vRest) ? this._toVariables(defaults, { [_name]: { ...vRest, ...evRest } }, options) : {};
+            const csRest_var: any = isNotEmpty(csRest) ? this._toVariables(defaults, { [_name]: { ...csRest, ...ecsRest } }, options) : {};
+            const csDark_var: any = isNotEmpty(dark) ? this._toVariables(defaults, { [_name]: { ...dark, ...ecsDark } }, options) : {};
 
             const [vRest_css, vRest_tokens] = [vRest_var.declarations ?? '', vRest_var.tokens || []];
             const [csRest_css, csRest_tokens] = [csRest_var.declarations ?? '', csRest_var.tokens || []];
@@ -130,7 +141,7 @@ export default {
             p_css = `${light_variable_css}${dark_variable_css}`;
             p_tokens = [...new Set([...vRest_tokens, ...csRest_tokens, ...csDark_tokens])];
 
-            p_style = resolve(css, { dt }) as string;
+            p_style = resolve(css, { dt: this.dtwt.bind(this, defaults, tokens, theme) }) as string;
         }
 
         return {
@@ -139,19 +150,19 @@ export default {
             style: p_style
         };
     },
-    getPresetC({ name = '', theme = {}, params, set, defaults }: any) {
+    getPresetC({ name = '', theme = {}, params, set, defaults, tokens }: any) {
         const { preset, options } = theme;
         const cPreset = preset?.components?.[name];
 
-        return this.getPreset({ name, preset: cPreset, options, params, set, defaults });
+        return this.getPreset({ name, theme, preset: cPreset, options, params, set, defaults, tokens });
     },
     // @deprecated - use getPresetC instead
-    getPresetD({ name = '', theme = {}, params, set, defaults }: any) {
+    getPresetD({ name = '', theme = {}, params, set, defaults, tokens }: any) {
         const dName = name.replace('-directive', '');
         const { preset, options } = theme;
         const dPreset = preset?.components?.[dName] || preset?.directives?.[dName];
 
-        return this.getPreset({ name: dName, preset: dPreset, options, params, set, defaults });
+        return this.getPreset({ name: dName, theme, preset: dPreset, options, params, set, defaults, tokens });
     },
     applyDarkColorScheme(options: any) {
         return !(options.darkModeSelector === 'none' || options.darkModeSelector === false);
@@ -165,13 +176,13 @@ export default {
         if (cssLayer) {
             const order = resolve(cssLayer.order || cssLayer.name || 'primeui', params);
 
-            return `@layer ${order}`;
+            return `@layer ${order};`;
         }
 
         return '';
     },
-    getCommonStyleSheet({ name = '', theme = {}, params, props = {}, set, defaults }: any) {
-        const common = this.getCommon({ name, theme, params, set, defaults });
+    getCommonStyleSheet({ name = '', theme = {}, params, props = {}, set, defaults, tokens }: any) {
+        const common = this.getCommon({ name, theme, params, set, defaults, tokens });
         const _props = Object.entries(props)
             .reduce((acc: any, [k, v]) => acc.push(`${k}="${v}"`) && acc, [])
             .join(' ');
@@ -179,8 +190,12 @@ export default {
         return Object.entries(common || {})
             .reduce((acc: any, [key, value]) => {
                 if (isObject(value) && Object.hasOwn(value, 'css')) {
-                    const _css = minifyCSS((value as any).css);
-                    const id = `${key}-variables`;
+                    const _css = transformCSS((value as any).css, params);
+                    let id = `${key}-variables`;
+
+                    if (params?.prefix) {
+                        id = id ? `${params.prefix}_${id}` : id;
+                    }
 
                     acc.push(`<style type="text/css" data-primevue-style-id="${id}" ${_props}>${_css}</style>`); // @todo data-primevue -> data-primeui check in primevue usestyle
                 }
@@ -189,14 +204,19 @@ export default {
             }, [])
             .join('');
     },
-    getStyleSheet({ name = '', theme = {}, params, props = {}, set, defaults }: any) {
-        const options = { name, theme, params, set, defaults };
+    getStyleSheet({ name = '', theme = {}, params, props = {}, set, defaults, tokens }: any) {
+        const options = { name, theme, params, set, defaults, tokens };
         const preset_css = (name.includes('-directive') ? this.getPresetD(options) : this.getPresetC(options))?.css;
         const _props = Object.entries(props)
             .reduce((acc: any, [k, v]) => acc.push(`${k}="${v}"`) && acc, [])
             .join(' ');
+        let id = `${name}-variables`;
 
-        return preset_css ? `<style type="text/css" data-primevue-style-id="${name}-variables" ${_props}>${minifyCSS(preset_css)}</style>` : ''; // @todo check
+        if (params?.prefix) {
+            id = id ? `${params.prefix}_${id}` : id;
+        }
+
+        return preset_css ? `<style type="text/css" data-primevue-style-id="${id}" ${_props}>${transformCSS(preset_css, params)}</style>` : ''; // @todo check
     },
     createTokens(obj: any = {}, defaults: any, parentKey: string = '', parentPath: string = '', tokens: any = {}) {
         const computedFn = function (this: any, colorScheme: string, tokenPathMap: any = {}, stack: string[] = []) {

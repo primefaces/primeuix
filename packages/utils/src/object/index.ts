@@ -38,3 +38,4 @@ export { default as toKebabCase } from './methods/toKebabCase';
 export { default as toMs } from './methods/toMs';
 export { default as toTokenKey } from './methods/toTokenKey';
 export { default as toValue } from './methods/toValue';
+export { default as transformCSS } from './methods/transformCSS';

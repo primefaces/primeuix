@@ -1,10 +1,16 @@
 import { deepMerge } from '@primeuix/utils/object';
-import Theme from '../config/index';
+import { default as ThemeSingleton } from '../config/index';
 
-export default function usePreset<T extends Record<string, unknown>>(...presets: T[]): T {
-    const newPreset = deepMerge(...presets);
+export const getUsePresetInstance = (Theme: typeof ThemeSingleton) => {
+    function usePreset<T extends Record<string, unknown>>(...presets: T[]): T {
+        const newPreset = deepMerge(...presets);
 
-    Theme.setPreset(newPreset);
+        Theme.setPreset(newPreset);
 
-    return newPreset as T;
-}
+        return newPreset as T;
+    }
+
+    return usePreset;
+};
+
+export default getUsePresetInstance(ThemeSingleton);
