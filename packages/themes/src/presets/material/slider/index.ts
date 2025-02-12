@@ -22,7 +22,7 @@ export const handle: SliderTokenSections.Handle = {
     hoverBackground: '{primary.color}',
     content: {
         borderRadius: '50%',
-        contentBackground: '{primary.color}',
+        background: '{primary.color}',
         hoverBackground: '{primary.color}',
         width: '18px',
         height: '18px',

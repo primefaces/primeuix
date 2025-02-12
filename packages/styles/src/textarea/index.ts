@@ -38,6 +38,10 @@ export const style: StyleType = ({ dt }) => `
     background: ${dt('textarea.filled.background')};
 }
 
+.p-textarea.p-variant-filled:enabled:hover {
+    background: ${dt('textarea.filled.hover.background')};
+}
+
 .p-textarea.p-variant-filled:enabled:focus {
     background: ${dt('textarea.filled.focus.background')};
 }

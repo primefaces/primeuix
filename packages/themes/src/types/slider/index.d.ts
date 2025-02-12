@@ -93,6 +93,12 @@ export declare namespace SliderTokenSections {
              */
             borderRadius?: string;
             /**
+             * Background of handle
+             *
+             * @designToken slider.handle.content.background
+             */
+            background?: string;
+            /**
              * Content hover background of handle
              *
              * @designToken slider.handle.content.hover.background
@@ -152,12 +158,6 @@ export declare namespace SliderTokenSections {
              */
             shadow?: string;
         };
-        /**
-         * Content background of handle
-         *
-         * @designToken slider.handle.content.background
-         */
-        contentBackground?: string;
     }
 
     /* Static Sections */

@@ -42,6 +42,7 @@ export interface Tokens {
     iftalabel: TokenMetaData;
     image: TokenMetaData;
     imagecompare: TokenMetaData;
+    themes: TokenMetaData;
     inlinemessage: TokenMetaData;
     inplace: TokenMetaData;
     inputchips: TokenMetaData;
@@ -6123,6 +6124,10 @@ export default {
             }
         ]
     },
+    themes: {
+        description: '',
+        tokens: []
+    },
     inlinemessage: {
         description: 'InlineMessage Design Tokens',
         tokens: [
@@ -10306,6 +10311,12 @@ export default {
                 description: 'Content border radius of handle'
             },
             {
+                name: 'slider.content.background',
+                token: 'slider.handle.content.background',
+                variable: '--p-slider-handle-content-background',
+                description: 'Background of handle'
+            },
+            {
                 name: 'slider.content.hoverBackground',
                 token: 'slider.handle.content.hover.background',
                 variable: '--p-slider-handle-content-hover-background',
@@ -10358,12 +10369,6 @@ export default {
                 token: 'slider.handle.focus.ring.shadow',
                 variable: '--p-slider-handle-focus-ring-shadow',
                 description: 'Focus ring shadow of handle'
-            },
-            {
-                name: 'slider.handle.contentBackground',
-                token: 'slider.handle.content.background',
-                variable: '--p-slider-handle-content-background',
-                description: 'Content background of handle'
             }
         ]
     },
@@ -11583,6 +11588,12 @@ export default {
                 token: 'textarea.filled.background',
                 variable: '--p-textarea-filled-background',
                 description: 'Filled background of root'
+            },
+            {
+                name: 'textarea.root.filledHoverBackground',
+                token: 'textarea.filled.hover.background',
+                variable: '--p-textarea-filled-hover-background',
+                description: 'Filled hover background of root'
             },
             {
                 name: 'textarea.root.filledFocusBackground',

@@ -4,6 +4,7 @@ export const root: TextareaTokenSections.Root = {
     background: '{form.field.background}',
     disabledBackground: '{form.field.disabled.background}',
     filledBackground: '{form.field.filled.background}',
+    filledHoverBackground: '{form.field.filled.hover.background}',
     filledFocusBackground: '{form.field.filled.focus.background}',
     borderColor: '{form.field.border.color}',
     hoverBorderColor: '{form.field.hover.border.color}',

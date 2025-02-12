@@ -16,10 +16,8 @@ export const colorScheme: ToolbarTokenSections.ColorScheme = {
     },
     dark: {
         root: {
-            root: {
-                background: '{surface.800}',
-                borderColor: '{surface.800}'
-            }
+            background: '{surface.800}',
+            borderColor: '{surface.800}'
         }
     }
 };
