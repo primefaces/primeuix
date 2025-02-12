@@ -57,7 +57,4 @@ This project includes **PrimeVue** and **PrimeNG** as submodules. To update thes
    git submodule foreach git pull origin master
    ```
 
-### Flow
-![primeuix-flow](https://github.com/user-attachments/assets/8f01d968-8a89-4420-aefd-afffff9f25b2)
-
 All set! Happy coding! 🚀
