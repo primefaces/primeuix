@@ -50,6 +50,7 @@ export default {
         const { preset, options } = theme;
         let primitive_css, primitive_tokens, semantic_css, semantic_tokens, global_css, global_tokens, style;
 
+        // @todo - check if options is not empty
         if (isNotEmpty(preset) && options.transform !== 'strict') {
             const { primitive, semantic, extend } = preset;
             const { colorScheme, ...sRest } = semantic || {};

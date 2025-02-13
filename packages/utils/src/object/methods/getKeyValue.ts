@@ -3,14 +3,18 @@ import resolve from './resolve';
 import toFlatCase from './toFlatCase';
 
 export default function getKeyValue<T extends Record<string, unknown>>(obj: T, key: string = '', params: unknown = {}): unknown {
-    if (!isObject(obj)) return undefined;
-
     const fKeys = toFlatCase(key).split('.');
     const fKey = fKeys.shift();
 
-    if (!fKey) return resolve(obj, params);
+    if (fKey) {
+        if (isObject(obj)) {
+            const matchedKey = Object.keys(obj).find((k) => toFlatCase(k) === fKey) || '';
 
-    const matchedKey = Object.keys(obj).find((k) => toFlatCase(k) === fKey) as keyof T | undefined;
+            return getKeyValue(resolve(obj[matchedKey], params) as Record<string, unknown>, fKeys.join('.'), params);
+        }
 
-    return matchedKey ? getKeyValue(resolve(obj[matchedKey], params) as Record<string, unknown>, fKeys.join('.'), params) : undefined;
+        return undefined;
+    }
+
+    return resolve(obj, params);
 }
