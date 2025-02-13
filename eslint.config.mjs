@@ -1,5 +1,6 @@
 import eslint from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
+import jest from 'eslint-plugin-jest';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config({
@@ -23,5 +24,12 @@ export default tseslint.config({
             { blankLine: 'always', prev: '*', next: 'block-like' },
             { blankLine: 'always', prev: ['import'], next: ['const', 'let', 'var'] }
         ]
-    }
+    },
+    overrides: [
+        {
+            files: ['**/__tests__/**/*', '**/*.test.*'],
+            extends: [jest.configs['flat/recommended']],
+            rules: {}
+        }
+    ]
 });
