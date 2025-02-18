@@ -9,7 +9,7 @@ const entry = globSync('src/**/index.ts').reduce((acc: Record<string, string>, f
 
     if (themeName && !themes.includes(themeName)) themes.push(themeName);
 
-    acc[name] = file;
+    acc[name.replace(/^presets\//, '')] = file;
 
     return acc;
 }, {});

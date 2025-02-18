@@ -242,20 +242,6 @@ export declare namespace RadioButtonTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface RadioButtonDesignTokens extends DesignTokens<RadioButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: RadioButtonTokenSections.Root;
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: RadioButtonTokenSections.Icon;
-}
-
-/**
  *
  * _RadioButton Design Tokens_
  *
@@ -273,5 +259,13 @@ export interface RadioButtonDesignTokens extends DesignTokens<RadioButtonDesignT
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: RadioButtonDesignTokens;
-export default _default;
+export interface RadioButtonDesignTokens extends DesignTokens<RadioButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: RadioButtonTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: RadioButtonTokenSections.Icon;
+}

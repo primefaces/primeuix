@@ -134,24 +134,6 @@ export declare namespace BreadcrumbTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface BreadcrumbDesignTokens extends DesignTokens<BreadcrumbDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: BreadcrumbTokenSections.Root;
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: BreadcrumbTokenSections.Item;
-    /**
-     * Used to pass tokens of the separator section
-     */
-    separator?: BreadcrumbTokenSections.Separator;
-}
-
-/**
  *
  * _Breadcrumb Design Tokens_
  *
@@ -169,5 +151,17 @@ export interface BreadcrumbDesignTokens extends DesignTokens<BreadcrumbDesignTok
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: BreadcrumbDesignTokens;
-export default _default;
+export interface BreadcrumbDesignTokens extends DesignTokens<BreadcrumbDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: BreadcrumbTokenSections.Root;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: BreadcrumbTokenSections.Item;
+    /**
+     * Used to pass tokens of the separator section
+     */
+    separator?: BreadcrumbTokenSections.Separator;
+}

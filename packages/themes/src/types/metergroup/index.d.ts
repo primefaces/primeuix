@@ -91,7 +91,22 @@ export declare namespace MeterGroupTokenSections {
 }
 
 /**
- * Design Tokens
+ *
+ * _MeterGroup Design Tokens_
+ *
+ * @group components
+ * @module metergroup
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTokens> {
     /**
@@ -119,24 +134,3 @@ export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTok
      */
     labelList?: MeterGroupTokenSections.LabelList;
 }
-
-/**
- *
- * _MeterGroup Design Tokens_
- *
- * @group components
- * @module metergroup
- * @see
- * --- ---
- * **Compatible Libraries**
- *
- * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
- * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
- * --- ---
- * **Figma UI Kit**
- *
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
- */
-declare const _default: MeterGroupDesignTokens;
-export default _default;

@@ -64,16 +64,6 @@ export declare namespace TooltipTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface TooltipDesignTokens extends DesignTokens<TooltipDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: TooltipTokenSections.Root;
-}
-
-/**
  *
  * _Tooltip Design Tokens_
  *
@@ -91,5 +81,9 @@ export interface TooltipDesignTokens extends DesignTokens<TooltipDesignTokens> {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: TooltipDesignTokens;
-export default _default;
+export interface TooltipDesignTokens extends DesignTokens<TooltipDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TooltipTokenSections.Root;
+}

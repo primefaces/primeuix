@@ -111,24 +111,6 @@ export declare namespace SplitterTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface SplitterDesignTokens extends DesignTokens<SplitterDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: SplitterTokenSections.Root;
-    /**
-     * Used to pass tokens of the gutter section
-     */
-    gutter?: SplitterTokenSections.Gutter;
-    /**
-     * Used to pass tokens of the handle section
-     */
-    handle?: SplitterTokenSections.Handle;
-}
-
-/**
  *
  * _Splitter Design Tokens_
  *
@@ -146,5 +128,17 @@ export interface SplitterDesignTokens extends DesignTokens<SplitterDesignTokens>
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: SplitterDesignTokens;
-export default _default;
+export interface SplitterDesignTokens extends DesignTokens<SplitterDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SplitterTokenSections.Root;
+    /**
+     * Used to pass tokens of the gutter section
+     */
+    gutter?: SplitterTokenSections.Gutter;
+    /**
+     * Used to pass tokens of the handle section
+     */
+    handle?: SplitterTokenSections.Handle;
+}

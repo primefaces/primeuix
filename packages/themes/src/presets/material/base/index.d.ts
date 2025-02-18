@@ -674,14 +674,6 @@ export declare namespace MaterialBaseTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface MaterialBaseDesignTokens {
-    primitive?: MaterialBaseTokenSections.Primitive;
-    semantic?: MaterialBaseTokenSections.Semantic;
-}
-
-/**
  *
  * _Material Base Tokens_
  *
@@ -699,5 +691,16 @@ export interface MaterialBaseDesignTokens {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: MaterialBaseDesignTokens;
-export default _default;
+export interface MaterialBaseDesignTokens {
+    primitive?: MaterialBaseTokenSections.Primitive;
+    semantic?: MaterialBaseTokenSections.Semantic;
+}
+
+declare const primitive: MaterialBaseTokenSections.Primitive;
+declare const semantic: MaterialBaseTokenSections.Semantic;
+declare const _default: {
+    primitive: MaterialBaseTokenSections.Primitive;
+    semantic: MaterialBaseTokenSections.Semantic;
+};
+
+export { _default as default, primitive, semantic };

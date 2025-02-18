@@ -96,20 +96,6 @@ export declare namespace RatingTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface RatingDesignTokens extends DesignTokens<RatingDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: RatingTokenSections.Root;
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: RatingTokenSections.Icon;
-}
-
-/**
  *
  * _Rating Design Tokens_
  *
@@ -127,5 +113,13 @@ export interface RatingDesignTokens extends DesignTokens<RatingDesignTokens> {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: RatingDesignTokens;
-export default _default;
+export interface RatingDesignTokens extends DesignTokens<RatingDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: RatingTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: RatingTokenSections.Icon;
+}

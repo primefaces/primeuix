@@ -254,20 +254,6 @@ export declare namespace CheckboxTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface CheckboxDesignTokens extends DesignTokens<CheckboxDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: CheckboxTokenSections.Root;
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: CheckboxTokenSections.Icon;
-}
-
-/**
  *
  * _Checkbox Design Tokens_
  *
@@ -285,5 +271,13 @@ export interface CheckboxDesignTokens extends DesignTokens<CheckboxDesignTokens>
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: CheckboxDesignTokens;
-export default _default;
+export interface CheckboxDesignTokens extends DesignTokens<CheckboxDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: CheckboxTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: CheckboxTokenSections.Icon;
+}

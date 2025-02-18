@@ -85,20 +85,6 @@ export declare namespace IftaLabelTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface IftaLabelDesignTokens extends DesignTokens<IftaLabelDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: IftaLabelTokenSections.Root;
-    /**
-     * Used to pass tokens of the input section
-     */
-    input?: IftaLabelTokenSections.Input;
-}
-
-/**
  *
  * _IftaLabel Design Tokens_
  *
@@ -116,5 +102,13 @@ export interface IftaLabelDesignTokens extends DesignTokens<IftaLabelDesignToken
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: IftaLabelDesignTokens;
-export default _default;
+export interface IftaLabelDesignTokens extends DesignTokens<IftaLabelDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: IftaLabelTokenSections.Root;
+    /**
+     * Used to pass tokens of the input section
+     */
+    input?: IftaLabelTokenSections.Input;
+}

@@ -674,14 +674,6 @@ export declare namespace LaraBaseTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface LaraBaseDesignTokens {
-    primitive?: LaraBaseTokenSections.Primitive;
-    semantic?: LaraBaseTokenSections.Semantic;
-}
-
-/**
  *
  * _Lara Base Tokens_
  *
@@ -699,5 +691,16 @@ export interface LaraBaseDesignTokens {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: LaraBaseDesignTokens;
-export default _default;
+export interface LaraBaseDesignTokens {
+    primitive?: LaraBaseTokenSections.Primitive;
+    semantic?: LaraBaseTokenSections.Semantic;
+}
+
+declare const primitive: LaraBaseTokenSections.Primitive;
+declare const semantic: LaraBaseTokenSections.Semantic;
+declare const _default: {
+    primitive: LaraBaseTokenSections.Primitive;
+    semantic: LaraBaseTokenSections.Semantic;
+};
+
+export { _default as default, primitive, semantic };

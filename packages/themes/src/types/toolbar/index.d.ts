@@ -58,16 +58,6 @@ export declare namespace ToolbarTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface ToolbarDesignTokens extends DesignTokens<ToolbarDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: ToolbarTokenSections.Root;
-}
-
-/**
  *
  * _Toolbar Design Tokens_
  *
@@ -85,5 +75,9 @@ export interface ToolbarDesignTokens extends DesignTokens<ToolbarDesignTokens> {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: ToolbarDesignTokens;
-export default _default;
+export interface ToolbarDesignTokens extends DesignTokens<ToolbarDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ToolbarTokenSections.Root;
+}

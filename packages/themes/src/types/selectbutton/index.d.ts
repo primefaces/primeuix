@@ -34,16 +34,6 @@ export declare namespace SelectButtonTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface SelectButtonDesignTokens extends DesignTokens<SelectButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: SelectButtonTokenSections.Root;
-}
-
-/**
  *
  * _SelectButton Design Tokens_
  *
@@ -61,5 +51,9 @@ export interface SelectButtonDesignTokens extends DesignTokens<SelectButtonDesig
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: SelectButtonDesignTokens;
-export default _default;
+export interface SelectButtonDesignTokens extends DesignTokens<SelectButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SelectButtonTokenSections.Root;
+}

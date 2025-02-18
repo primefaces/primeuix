@@ -304,7 +304,22 @@ export declare namespace MenubarTokenSections {
 }
 
 /**
- * Design Tokens
+ *
+ * _Menubar Design Tokens_
+ *
+ * @group components
+ * @module menubar
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
     /**
@@ -332,24 +347,3 @@ export interface MenubarDesignTokens extends DesignTokens<MenubarDesignTokens> {
      */
     mobileButton?: MenubarTokenSections.MobileButton;
 }
-
-/**
- *
- * _Menubar Design Tokens_
- *
- * @group components
- * @module menubar
- * @see
- * --- ---
- * **Compatible Libraries**
- *
- * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
- * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
- * --- ---
- * **Figma UI Kit**
- *
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
- */
-declare const _default: MenubarDesignTokens;
-export default _default;

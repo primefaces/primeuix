@@ -211,16 +211,6 @@ export declare namespace InputTextTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface InputTextDesignTokens extends DesignTokens<InputTextDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: InputTextTokenSections.Root;
-}
-
-/**
  *
  * _InputText Design Tokens_
  *
@@ -238,5 +228,9 @@ export interface InputTextDesignTokens extends DesignTokens<InputTextDesignToken
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: InputTextDesignTokens;
-export default _default;
+export interface InputTextDesignTokens extends DesignTokens<InputTextDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InputTextTokenSections.Root;
+}

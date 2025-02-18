@@ -102,20 +102,6 @@ export declare namespace DockTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: DockTokenSections.Root;
-    /**
-     * Used to pass tokens of the item section
-     */
-    item?: DockTokenSections.Item;
-}
-
-/**
  *
  * _Dock Design Tokens_
  *
@@ -133,5 +119,13 @@ export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: DockDesignTokens;
-export default _default;
+export interface DockDesignTokens extends DesignTokens<DockDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: DockTokenSections.Root;
+    /**
+     * Used to pass tokens of the item section
+     */
+    item?: DockTokenSections.Item;
+}

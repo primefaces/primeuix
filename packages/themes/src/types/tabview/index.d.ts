@@ -118,7 +118,22 @@ export declare namespace TabViewTokenSections {
 }
 
 /**
- * Design Tokens
+ *
+ * _TabView Design Tokens_
+ *
+ * @group components
+ * @module tabview
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {
     /**
@@ -142,24 +157,3 @@ export interface TabViewDesignTokens extends DesignTokens<TabViewDesignTokens> {
      */
     navButton?: TabViewTokenSections.NavButton;
 }
-
-/**
- *
- * _TabView Design Tokens_
- *
- * @group components
- * @module tabview
- * @see
- * --- ---
- * **Compatible Libraries**
- *
- * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
- * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
- * --- ---
- * **Figma UI Kit**
- *
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
- */
-declare const _default: TabViewDesignTokens;
-export default _default;

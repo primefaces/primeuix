@@ -669,14 +669,6 @@ export declare namespace NoraBaseTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface NoraBaseDesignTokens {
-    primitive?: NoraBaseTokenSections.Primitive;
-    semantic?: NoraBaseTokenSections.Semantic;
-}
-
-/**
  *
  * _Nora Base Tokens_
  *
@@ -694,5 +686,16 @@ export interface NoraBaseDesignTokens {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: NoraBaseDesignTokens;
-export default _default;
+export interface NoraBaseDesignTokens {
+    primitive?: NoraBaseTokenSections.Primitive;
+    semantic?: NoraBaseTokenSections.Semantic;
+}
+
+declare const primitive: NoraBaseTokenSections.Primitive;
+declare const semantic: NoraBaseTokenSections.Semantic;
+declare const _default: {
+    primitive: NoraBaseTokenSections.Primitive;
+    semantic: NoraBaseTokenSections.Semantic;
+};
+
+export { _default as default, primitive, semantic };

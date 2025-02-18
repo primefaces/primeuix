@@ -103,20 +103,6 @@ export declare namespace InputNumberTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface InputNumberDesignTokens extends DesignTokens<InputNumberDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: InputNumberTokenSections.Root;
-    /**
-     * Used to pass tokens of the button section
-     */
-    button?: InputNumberTokenSections.Button;
-}
-
-/**
  *
  * _InputNumber Design Tokens_
  *
@@ -134,5 +120,13 @@ export interface InputNumberDesignTokens extends DesignTokens<InputNumberDesignT
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: InputNumberDesignTokens;
-export default _default;
+export interface InputNumberDesignTokens extends DesignTokens<InputNumberDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InputNumberTokenSections.Root;
+    /**
+     * Used to pass tokens of the button section
+     */
+    button?: InputNumberTokenSections.Button;
+}

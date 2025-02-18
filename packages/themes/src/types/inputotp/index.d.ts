@@ -58,20 +58,6 @@ export declare namespace InputOtpTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface InputOtpDesignTokens extends DesignTokens<InputOtpDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: InputOtpTokenSections.Root;
-    /**
-     * Used to pass tokens of the input section
-     */
-    input?: InputOtpTokenSections.Input;
-}
-
-/**
  *
  * _InputOtp Design Tokens_
  *
@@ -89,5 +75,13 @@ export interface InputOtpDesignTokens extends DesignTokens<InputOtpDesignTokens>
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: InputOtpDesignTokens;
-export default _default;
+export interface InputOtpDesignTokens extends DesignTokens<InputOtpDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InputOtpTokenSections.Root;
+    /**
+     * Used to pass tokens of the input section
+     */
+    input?: InputOtpTokenSections.Input;
+}

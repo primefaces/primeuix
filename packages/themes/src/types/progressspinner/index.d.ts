@@ -46,16 +46,6 @@ export declare namespace ProgressSpinnerTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface ProgressSpinnerDesignTokens extends DesignTokens<ProgressSpinnerDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: ProgressSpinnerTokenSections.Root;
-}
-
-/**
  *
  * _ProgressSpinner Design Tokens_
  *
@@ -73,5 +63,9 @@ export interface ProgressSpinnerDesignTokens extends DesignTokens<ProgressSpinne
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: ProgressSpinnerDesignTokens;
-export default _default;
+export interface ProgressSpinnerDesignTokens extends DesignTokens<ProgressSpinnerDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ProgressSpinnerTokenSections.Root;
+}

@@ -669,14 +669,6 @@ export declare namespace AuraBaseTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface AuraBaseDesignTokens {
-    primitive?: AuraBaseTokenSections.Primitive;
-    semantic?: AuraBaseTokenSections.Semantic;
-}
-
-/**
  *
  * _Aura Base Tokens_
  *
@@ -694,5 +686,16 @@ export interface AuraBaseDesignTokens {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: AuraBaseDesignTokens;
-export default _default;
+export interface AuraBaseDesignTokens {
+    primitive?: AuraBaseTokenSections.Primitive;
+    semantic?: AuraBaseTokenSections.Semantic;
+}
+
+declare const primitive: AuraBaseTokenSections.Primitive;
+declare const semantic: AuraBaseTokenSections.Semantic;
+declare const _default: {
+    primitive: AuraBaseTokenSections.Primitive;
+    semantic: AuraBaseTokenSections.Semantic;
+};
+
+export { _default as default, primitive, semantic };

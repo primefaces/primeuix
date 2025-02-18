@@ -28,16 +28,6 @@ export declare namespace RippleTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface RippleDesignTokens extends DesignTokens<RippleDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: RippleDesignTokens.Root;
-}
-
-/**
  *
  * _Ripple Design Tokens_
  *
@@ -55,5 +45,9 @@ export interface RippleDesignTokens extends DesignTokens<RippleDesignTokens> {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: RippleDesignTokens;
-export default _default;
+export interface RippleDesignTokens extends DesignTokens<RippleDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: RippleTokenSections.Root;
+}

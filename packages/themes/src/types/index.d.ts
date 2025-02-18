@@ -116,15 +116,6 @@ export declare type RequiredDesignTokens<T, C = never> = {
 } & DesignTokens<T> &
     (C extends never ? object : ColorSchemeDesignToken<C>);
 
-/* @todo: check if this is needed
-export type RequiredAccordionDesignTokens = RequiredDesignTokens<
-    AccordionDesignTokens,
-    {
-        header: Pick<AccordionDesignTokens['header'], 'background' | 'hoverBackground' | 'activeBackground' | 'activeHoverBackground'>;
-    }
->;
-*/
-
 export interface PaletteDesignToken {
     0?: string;
     50?: string;

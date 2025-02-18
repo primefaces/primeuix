@@ -37,20 +37,6 @@ export declare namespace PickListTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface PickListDesignTokens extends DesignTokens<PickListDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: PickListTokenSections.Root;
-    /**
-     * Used to pass tokens of the controls section
-     */
-    controls?: PickListTokenSections.Controls;
-}
-
-/**
  *
  * _PickList Design Tokens_
  *
@@ -68,5 +54,13 @@ export interface PickListDesignTokens extends DesignTokens<PickListDesignTokens>
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: PickListDesignTokens;
-export default _default;
+export interface PickListDesignTokens extends DesignTokens<PickListDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: PickListTokenSections.Root;
+    /**
+     * Used to pass tokens of the controls section
+     */
+    controls?: PickListTokenSections.Controls;
+}

@@ -174,20 +174,6 @@ export declare namespace InputChipsTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: InputChipsTokenSections.Root;
-    /**
-     * Used to pass tokens of the chip section
-     */
-    chip?: InputChipsTokenSections.Chip;
-}
-
-/**
  *
  * _InputChips Design Tokens_
  *
@@ -205,5 +191,13 @@ export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTok
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: InputChipsDesignTokens;
-export default _default;
+export interface InputChipsDesignTokens extends DesignTokens<InputChipsDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InputChipsTokenSections.Root;
+    /**
+     * Used to pass tokens of the chip section
+     */
+    chip?: InputChipsTokenSections.Chip;
+}

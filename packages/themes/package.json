@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/themes",
-    "version": "0.1.0-beta.5",
+    "version": "0.1.0-beta.6",
     "author": "PrimeTek Informatics",
     "description": "",
     "license": "MIT",
@@ -37,29 +37,13 @@
             "./types/*": {
                 "types": "./types/*/index.d.ts"
             },
-            "./aura/*": {
-                "types": "./types/*/index.d.ts",
-                "import": "./presets/aura/*/index.mjs"
-            },
-            "./lara/*": {
-                "types": "./types/*/index.d.ts",
-                "import": "./presets/lara/*/index.mjs"
-            },
-            "./material/*": {
-                "types": "./types/*/index.d.ts",
-                "import": "./presets/material/*/index.mjs"
-            },
-            "./nora/*": {
-                "types": "./types/*/index.d.ts",
-                "import": "./presets/nora/*/index.mjs"
-            },
             "./tokens": {
                 "types": "./tokens/index.d.ts",
                 "import": "./tokens/index.mjs"
             },
             "./*": {
-                "types": "./presets/*/index.d.ts",
-                "import": "./presets/*/index.mjs"
+                "types": "./*/index.d.ts",
+                "import": "./*/index.mjs"
             }
         },
         "directory": "dist",

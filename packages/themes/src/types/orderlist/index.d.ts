@@ -37,20 +37,6 @@ export declare namespace OrderListTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface OrderListDesignTokens extends DesignTokens<OrderListDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: OrderListTokenSections.Root;
-    /**
-     * Used to pass tokens of the controls section
-     */
-    controls?: OrderListTokenSections.Controls;
-}
-
-/**
  *
  * _OrderList Design Tokens_
  *
@@ -68,5 +54,13 @@ export interface OrderListDesignTokens extends DesignTokens<OrderListDesignToken
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: OrderListDesignTokens;
-export default _default;
+export interface OrderListDesignTokens extends DesignTokens<OrderListDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: OrderListTokenSections.Root;
+    /**
+     * Used to pass tokens of the controls section
+     */
+    controls?: OrderListTokenSections.Controls;
+}

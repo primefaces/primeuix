@@ -167,7 +167,22 @@ export declare namespace SliderTokenSections {
 }
 
 /**
- * Design Tokens
+ *
+ * _Slider Design Tokens_
+ *
+ * @group components
+ * @module slider
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 export interface SliderDesignTokens extends DesignTokens<SliderDesignTokens> {
     /**
@@ -187,24 +202,3 @@ export interface SliderDesignTokens extends DesignTokens<SliderDesignTokens> {
      */
     handle?: SliderTokenSections.Handle;
 }
-
-/**
- *
- * _Slider Design Tokens_
- *
- * @group components
- * @module slider
- * @see
- * --- ---
- * **Compatible Libraries**
- *
- * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
- * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
- * --- ---
- * **Figma UI Kit**
- *
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
- */
-declare const _default: SliderDesignTokens;
-export default _default;

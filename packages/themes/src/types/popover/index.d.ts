@@ -73,20 +73,6 @@ export declare namespace PopoverTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface PopoverDesignTokens extends DesignTokens<PopoverDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: PopoverTokenSections.Root;
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: PopoverTokenSections.Content;
-}
-
-/**
  *
  * _Popover Design Tokens_
  *
@@ -104,5 +90,13 @@ export interface PopoverDesignTokens extends DesignTokens<PopoverDesignTokens> {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: PopoverDesignTokens;
-export default _default;
+export interface PopoverDesignTokens extends DesignTokens<PopoverDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: PopoverTokenSections.Root;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: PopoverTokenSections.Content;
+}

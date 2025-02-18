@@ -40,16 +40,6 @@ export declare namespace SkeletonTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface SkeletonDesignTokens extends DesignTokens<SkeletonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: SkeletonTokenSections.Root;
-}
-
-/**
  *
  * _Skeleton Design Tokens_
  *
@@ -67,5 +57,9 @@ export interface SkeletonDesignTokens extends DesignTokens<SkeletonDesignTokens>
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: SkeletonDesignTokens;
-export default _default;
+export interface SkeletonDesignTokens extends DesignTokens<SkeletonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SkeletonTokenSections.Root;
+}

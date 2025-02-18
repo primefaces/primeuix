@@ -43,20 +43,6 @@ export declare namespace ConfirmDialogTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface ConfirmDialogDesignTokens extends DesignTokens<ConfirmDialogDesignTokens> {
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: ConfirmDialogTokenSections.Icon;
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: ConfirmDialogTokenSections.Content;
-}
-
-/**
  *
  * _ConfirmDialog Design Tokens_
  *
@@ -74,5 +60,13 @@ export interface ConfirmDialogDesignTokens extends DesignTokens<ConfirmDialogDes
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: ConfirmDialogDesignTokens;
-export default _default;
+export interface ConfirmDialogDesignTokens extends DesignTokens<ConfirmDialogDesignTokens> {
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: ConfirmDialogTokenSections.Icon;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: ConfirmDialogTokenSections.Content;
+}

@@ -28,16 +28,6 @@ export declare namespace IconFieldTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface IconFieldDesignTokens extends DesignTokens<IconFieldDesignTokens> {
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: IconFieldTokenSections.Icon;
-}
-
-/**
  *
  * _IconField Design Tokens_
  *
@@ -55,5 +45,9 @@ export interface IconFieldDesignTokens extends DesignTokens<IconFieldDesignToken
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: IconFieldDesignTokens;
-export default _default;
+export interface IconFieldDesignTokens extends DesignTokens<IconFieldDesignTokens> {
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: IconFieldTokenSections.Icon;
+}

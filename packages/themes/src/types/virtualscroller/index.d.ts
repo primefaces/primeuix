@@ -50,16 +50,6 @@ export declare namespace VirtualScrollerTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface VirtualScrollerDesignTokens extends DesignTokens<VirtualScrollerDesignTokens> {
-    /**
-     * Used to pass tokens of the loader section
-     */
-    loader?: VirtualScrollerTokenSections.Loader;
-}
-
-/**
  *
  * _VirtualScroller Design Tokens_
  *
@@ -77,5 +67,9 @@ export interface VirtualScrollerDesignTokens extends DesignTokens<VirtualScrolle
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: VirtualScrollerDesignTokens;
-export default _default;
+export interface VirtualScrollerDesignTokens extends DesignTokens<VirtualScrollerDesignTokens> {
+    /**
+     * Used to pass tokens of the loader section
+     */
+    loader?: VirtualScrollerTokenSections.Loader;
+}

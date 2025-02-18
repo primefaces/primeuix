@@ -90,20 +90,6 @@ export declare namespace InplaceTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: InplaceDesignTokens.Root;
-    /**
-     * Used to pass tokens of the display section
-     */
-    display?: InplaceDesignTokens.Display;
-}
-
-/**
  *
  * _Inplace Design Tokens_
  *
@@ -121,5 +107,13 @@ export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: InplaceDesignTokens;
-export default _default;
+export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: InplaceDesignTokens.Root;
+    /**
+     * Used to pass tokens of the display section
+     */
+    display?: InplaceDesignTokens.Display;
+}

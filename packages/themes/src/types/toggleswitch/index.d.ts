@@ -234,20 +234,6 @@ export declare namespace ToggleSwitchTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: ToggleSwitchTokenSections.Root;
-    /**
-     * Used to pass tokens of the handle section
-     */
-    handle?: ToggleSwitchTokenSections.Handle;
-}
-
-/**
  *
  * _ToggleSwitch Design Tokens_
  *
@@ -265,5 +251,13 @@ export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesig
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: ToggleSwitchDesignTokens;
-export default _default;
+export interface ToggleSwitchDesignTokens extends DesignTokens<ToggleSwitchDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ToggleSwitchTokenSections.Root;
+    /**
+     * Used to pass tokens of the handle section
+     */
+    handle?: ToggleSwitchTokenSections.Handle;
+}

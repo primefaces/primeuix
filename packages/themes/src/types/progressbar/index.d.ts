@@ -70,24 +70,6 @@ export declare namespace ProgressBarTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface ProgressBarDesignTokens extends DesignTokens<ProgressBarDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: ProgressBarTokenSections.Root;
-    /**
-     * Used to pass tokens of the value section
-     */
-    value?: ProgressBarTokenSections.Value;
-    /**
-     * Used to pass tokens of the label section
-     */
-    label?: ProgressBarTokenSections.Label;
-}
-
-/**
  *
  * _ProgressBar Design Tokens_
  *
@@ -105,5 +87,17 @@ export interface ProgressBarDesignTokens extends DesignTokens<ProgressBarDesignT
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: ProgressBarDesignTokens;
-export default _default;
+export interface ProgressBarDesignTokens extends DesignTokens<ProgressBarDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ProgressBarTokenSections.Root;
+    /**
+     * Used to pass tokens of the value section
+     */
+    value?: ProgressBarTokenSections.Value;
+    /**
+     * Used to pass tokens of the label section
+     */
+    label?: ProgressBarTokenSections.Label;
+}

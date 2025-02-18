@@ -144,7 +144,22 @@ export declare namespace ChipTokenSections {
 }
 
 /**
- * Design Tokens
+ *
+ * _Chip Design Tokens_
+ *
+ * @group components
+ * @module chip
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
     /**
@@ -164,24 +179,3 @@ export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
      */
     removeIcon?: ChipTokenSections.RemoveIcon;
 }
-
-/**
- *
- * _Chip Design Tokens_
- *
- * @group components
- * @module chip
- * @see
- * --- ---
- * **Compatible Libraries**
- *
- * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
- * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
- * --- ---
- * **Figma UI Kit**
- *
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
- */
-declare const _default: ChipDesignTokens;
-export default _default;

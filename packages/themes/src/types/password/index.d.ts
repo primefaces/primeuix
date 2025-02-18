@@ -118,7 +118,22 @@ export declare namespace PasswordTokenSections {
 }
 
 /**
- * Design Tokens
+ *
+ * _Password Design Tokens_
+ *
+ * @group components
+ * @module password
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens> {
     /**
@@ -142,24 +157,3 @@ export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens>
      */
     strength?: PasswordTokenSections.Strength;
 }
-
-/**
- *
- * _Password Design Tokens_
- *
- * @group components
- * @module password
- * @see
- * --- ---
- * **Compatible Libraries**
- *
- * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
- * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
- * --- ---
- * **Figma UI Kit**
- *
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
- */
-declare const _default: PasswordDesignTokens;
-export default _default;

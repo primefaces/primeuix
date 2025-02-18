@@ -58,16 +58,6 @@ export declare namespace InputGroupTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface InputGroupDesignTokens extends DesignTokens<InputGroupDesignTokens> {
-    /**
-     * Used to pass tokens of the addon section
-     */
-    addon?: InputGroupTokenSections.Addon;
-}
-
-/**
  *
  * _InputGroup Design Tokens_
  *
@@ -85,5 +75,9 @@ export interface InputGroupDesignTokens extends DesignTokens<InputGroupDesignTok
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: InputGroupDesignTokens;
-export default _default;
+export interface InputGroupDesignTokens extends DesignTokens<InputGroupDesignTokens> {
+    /**
+     * Used to pass tokens of the addon section
+     */
+    addon?: InputGroupTokenSections.Addon;
+}

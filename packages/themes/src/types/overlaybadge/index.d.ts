@@ -39,16 +39,6 @@ export declare namespace OverlayBadgeTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface OverlayBadgeDesignTokens extends DesignTokens<OverlayBadgeDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: OverlayBadgeTokenSections.Root;
-}
-
-/**
  *
  * _OverlayBadge Design Tokens_
  *
@@ -66,5 +56,9 @@ export interface OverlayBadgeDesignTokens extends DesignTokens<OverlayBadgeDesig
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: OverlayBadgeDesignTokens;
-export default _default;
+export interface OverlayBadgeDesignTokens extends DesignTokens<OverlayBadgeDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: OverlayBadgeTokenSections.Root;
+}

@@ -111,16 +111,6 @@ export declare namespace ImageCompareTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface ImageCompareDesignTokens extends DesignTokens<ImageCompareDesignTokens> {
-    /**
-     * Used to pass tokens of the handle section
-     */
-    handle?: ImageCompareTokenSections.Handle;
-}
-
-/**
  *
  * _ImageCompare Design Tokens_
  *
@@ -138,5 +128,9 @@ export interface ImageCompareDesignTokens extends DesignTokens<ImageCompareDesig
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: ImageCompareDesignTokens;
-export default _default;
+export interface ImageCompareDesignTokens extends DesignTokens<ImageCompareDesignTokens> {
+    /**
+     * Used to pass tokens of the handle section
+     */
+    handle?: ImageCompareTokenSections.Handle;
+}

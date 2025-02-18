@@ -40,16 +40,6 @@ export declare namespace SplitButtonTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface SplitButtonDesignTokens extends DesignTokens<SplitButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: SplitButtonTokenSections.Root;
-}
-
-/**
  *
  * _SplitButton Design Tokens_
  *
@@ -67,5 +57,9 @@ export interface SplitButtonDesignTokens extends DesignTokens<SplitButtonDesignT
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: SplitButtonDesignTokens;
-export default _default;
+export interface SplitButtonDesignTokens extends DesignTokens<SplitButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SplitButtonTokenSections.Root;
+}

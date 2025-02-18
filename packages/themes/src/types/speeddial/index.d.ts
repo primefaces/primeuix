@@ -34,16 +34,6 @@ export declare namespace SpeedDialTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface SpeedDialDesignTokens extends DesignTokens<SpeedDialDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: SpeedDialTokenSections.Root;
-}
-
-/**
  *
  * _SpeedDial Design Tokens_
  *
@@ -61,5 +51,9 @@ export interface SpeedDialDesignTokens extends DesignTokens<SpeedDialDesignToken
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: SpeedDialDesignTokens;
-export default _default;
+export interface SpeedDialDesignTokens extends DesignTokens<SpeedDialDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: SpeedDialTokenSections.Root;
+}

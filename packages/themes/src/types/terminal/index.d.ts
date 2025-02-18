@@ -76,24 +76,6 @@ export declare namespace TerminalTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface TerminalDesignTokens extends DesignTokens<TerminalDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: TerminalTokenSections.Root;
-    /**
-     * Used to pass tokens of the prompt section
-     */
-    prompt?: TerminalTokenSections.Prompt;
-    /**
-     * Used to pass tokens of the command response section
-     */
-    commandResponse?: TerminalTokenSections.CommandResponse;
-}
-
-/**
  *
  * _Terminal Design Tokens_
  *
@@ -111,5 +93,17 @@ export interface TerminalDesignTokens extends DesignTokens<TerminalDesignTokens>
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: TerminalDesignTokens;
-export default _default;
+export interface TerminalDesignTokens extends DesignTokens<TerminalDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TerminalTokenSections.Root;
+    /**
+     * Used to pass tokens of the prompt section
+     */
+    prompt?: TerminalTokenSections.Prompt;
+    /**
+     * Used to pass tokens of the command response section
+     */
+    commandResponse?: TerminalTokenSections.CommandResponse;
+}

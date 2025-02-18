@@ -28,16 +28,6 @@ export declare namespace BlockUITokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface BlockUIDesignTokens extends DesignTokens<BlockUIDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: BlockUITokenSections.Root;
-}
-
-/**
  *
  * _BlockUI Design Tokens_
  *
@@ -55,5 +45,9 @@ export interface BlockUIDesignTokens extends DesignTokens<BlockUIDesignTokens> {
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: BlockUIDesignTokens;
-export default _default;
+export interface BlockUIDesignTokens extends DesignTokens<BlockUIDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: BlockUITokenSections.Root;
+}

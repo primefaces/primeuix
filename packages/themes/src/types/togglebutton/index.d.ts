@@ -269,24 +269,6 @@ export declare namespace ToggleButtonTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface ToggleButtonDesignTokens extends DesignTokens<ToggleButtonDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: ToggleButtonTokenSections.Root;
-    /**
-     * Used to pass tokens of the icon section
-     */
-    icon?: ToggleButtonTokenSections.Icon;
-    /**
-     * Used to pass tokens of the content section
-     */
-    content?: ToggleButtonTokenSections.Content;
-}
-
-/**
  *
  * _ToggleButton Design Tokens_
  *
@@ -304,5 +286,17 @@ export interface ToggleButtonDesignTokens extends DesignTokens<ToggleButtonDesig
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: ToggleButtonDesignTokens;
-export default _default;
+export interface ToggleButtonDesignTokens extends DesignTokens<ToggleButtonDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ToggleButtonTokenSections.Root;
+    /**
+     * Used to pass tokens of the icon section
+     */
+    icon?: ToggleButtonTokenSections.Icon;
+    /**
+     * Used to pass tokens of the content section
+     */
+    content?: ToggleButtonTokenSections.Content;
+}

@@ -211,16 +211,6 @@ export declare namespace TextareaTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface TextareaDesignTokens extends DesignTokens<TextareaDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: TextareaTokenSections.Root;
-}
-
-/**
  *
  * _Textarea Design Tokens_
  *
@@ -238,5 +228,9 @@ export interface TextareaDesignTokens extends DesignTokens<TextareaDesignTokens>
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: TextareaDesignTokens;
-export default _default;
+export interface TextareaDesignTokens extends DesignTokens<TextareaDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: TextareaTokenSections.Root;
+}

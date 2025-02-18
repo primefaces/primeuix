@@ -220,7 +220,22 @@ export declare namespace InlineMessageTokenSections {
 }
 
 /**
- * Design Tokens
+ *
+ * _InlineMessage Design Tokens_
+ *
+ * @group components
+ * @module inlinemessage
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDesignTokens> {
     /**
@@ -260,24 +275,3 @@ export interface InlineMessageDesignTokens extends DesignTokens<InlineMessageDes
      */
     contrast?: InlineMessageTokenSections.Contrast;
 }
-
-/**
- *
- * _InlineMessage Design Tokens_
- *
- * @group components
- * @module inlinemessage
- * @see
- * --- ---
- * **Compatible Libraries**
- *
- * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
- * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
- * --- ---
- * **Figma UI Kit**
- *
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
- */
-declare const _default: InlineMessageDesignTokens;
-export default _default;

@@ -90,7 +90,22 @@ export declare namespace KnobTokenSections {
 }
 
 /**
- * Design Tokens
+ *
+ * _Knob Design Tokens_
+ *
+ * @group components
+ * @module knob
+ * @see
+ * --- ---
+ * **Compatible Libraries**
+ *
+ * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
+ * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
+ * --- ---
+ * **Figma UI Kit**
+ *
+ * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
+ *
  */
 export interface KnobDesignTokens extends DesignTokens<KnobDesignTokens> {
     /**
@@ -110,24 +125,3 @@ export interface KnobDesignTokens extends DesignTokens<KnobDesignTokens> {
      */
     text?: KnobTokenSections.Text;
 }
-
-/**
- *
- * _Knob Design Tokens_
- *
- * @group components
- * @module knob
- * @see
- * --- ---
- * **Compatible Libraries**
- *
- * [![PrimeNG](https://i.postimg.cc/63f7jVST/primeng-icon-24.png)](https://primeng.org/theming/styled)
- * [![PrimeVue](https://i.postimg.cc/cC1vVgyh/primevue-icon-24.png)](https://primevue.org/theming/styled)
- * --- ---
- * **Figma UI Kit**
- *
- * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
- *
- */
-declare const _default: KnobDesignTokens;
-export default _default;

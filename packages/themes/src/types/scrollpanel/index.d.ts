@@ -84,20 +84,6 @@ export declare namespace ScrollPanelTokenSections {
 }
 
 /**
- * Design Tokens
- */
-export interface ScrollPanelDesignTokens extends DesignTokens<ScrollPanelDesignTokens> {
-    /**
-     * Used to pass tokens of the root section
-     */
-    root?: ScrollPanelTokenSections.Root;
-    /**
-     * Used to pass tokens of the bar section
-     */
-    bar?: ScrollPanelTokenSections.Bar;
-}
-
-/**
  *
  * _ScrollPanel Design Tokens_
  *
@@ -115,5 +101,13 @@ export interface ScrollPanelDesignTokens extends DesignTokens<ScrollPanelDesignT
  * [PrimeNG](https://primeng.org/uikit) | [PrimeVue](https://primevue.org/uikit)
  *
  */
-declare const _default: ScrollPanelDesignTokens;
-export default _default;
+export interface ScrollPanelDesignTokens extends DesignTokens<ScrollPanelDesignTokens> {
+    /**
+     * Used to pass tokens of the root section
+     */
+    root?: ScrollPanelTokenSections.Root;
+    /**
+     * Used to pass tokens of the bar section
+     */
+    bar?: ScrollPanelTokenSections.Bar;
+}
