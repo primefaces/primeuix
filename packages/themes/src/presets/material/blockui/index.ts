@@ -4,6 +4,9 @@ export const root: BlockUITokenSections.Root = {
     borderRadius: '{content.border.radius}'
 };
 
+export const css: BlockUITokenSections.CSS = ``;
+
 export default {
-    root
+    root,
+    css
 } satisfies BlockUIDesignTokens;

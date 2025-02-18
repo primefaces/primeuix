@@ -29,8 +29,11 @@ export const colorScheme: ScrollPanelTokenSections.ColorScheme = {
     }
 };
 
+export const css: ScrollPanelTokenSections.CSS = ``;
+
 export default {
     root,
     bar,
-    colorScheme
+    colorScheme,
+    css
 } satisfies ScrollPanelDesignTokens;

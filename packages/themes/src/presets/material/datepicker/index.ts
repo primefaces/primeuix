@@ -42,7 +42,7 @@ export const dropdown: DatePickerTokenSections.Dropdown = {
         style: 'none',
         color: 'unset',
         offset: '0',
-        shadow: 'nıne'
+        shadow: 'none'
     }
 };
 

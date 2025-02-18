@@ -318,6 +318,8 @@ export const colorScheme: MessageTokenSections.ColorScheme = {
     }
 };
 
+export const css: MessageTokenSections.CSS = ``;
+
 export default {
     root,
     content,
@@ -327,5 +329,6 @@ export default {
     closeIcon,
     outlined,
     simple,
-    colorScheme
+    colorScheme,
+    css
 } satisfies MessageDesignTokens;

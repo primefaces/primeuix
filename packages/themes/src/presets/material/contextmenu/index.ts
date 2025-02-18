@@ -45,11 +45,14 @@ export const separator: ContextMenuTokenSections.Separator = {
     borderColor: '{content.border.color}'
 };
 
+export const css: ContextMenuTokenSections.CSS = ``;
+
 export default {
     root,
     list,
     item,
     submenu,
     submenuIcon,
-    separator
+    separator,
+    css
 } satisfies ContextMenuDesignTokens;

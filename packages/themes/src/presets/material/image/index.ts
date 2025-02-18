@@ -46,9 +46,12 @@ export const action: ImageTokenSections.Action = {
     }
 };
 
+export const css: ImageTokenSections.CSS = ``;
+
 export default {
     root,
     preview,
     toolbar,
-    action
+    action,
+    css
 } satisfies ImageDesignTokens;

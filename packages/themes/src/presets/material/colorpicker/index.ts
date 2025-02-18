@@ -43,9 +43,12 @@ export const colorScheme: ColorPickerTokenSections.ColorScheme = {
     }
 };
 
+export const css: ColorPickerTokenSections.CSS = ``;
+
 export default {
     root,
     preview,
     panel,
-    colorScheme
+    colorScheme,
+    css
 } satisfies ColorPickerDesignTokens;

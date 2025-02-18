@@ -222,6 +222,8 @@ export const colorScheme: ToastTokenSections.ColorScheme = {
     }
 };
 
+export const css: ToastTokenSections.CSS = ``;
+
 export default {
     root,
     icon,
@@ -231,5 +233,6 @@ export default {
     detail,
     closeButton,
     closeIcon,
-    colorScheme
+    colorScheme,
+    css
 } satisfies ToastDesignTokens;

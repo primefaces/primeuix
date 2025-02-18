@@ -18,7 +18,10 @@ export const display: InplaceTokenSections.Display = {
     hoverColor: '{content.hover.color}'
 };
 
+export const css: InplaceTokenSections.CSS = ``;
+
 export default {
     root,
-    display
+    display,
+    css
 } satisfies InplaceDesignTokens;

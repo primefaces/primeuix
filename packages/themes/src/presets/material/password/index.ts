@@ -40,10 +40,13 @@ export const colorScheme: PasswordTokenSections.ColorScheme = {
     }
 };
 
+export const css: PasswordTokenSections.CSS = ``;
+
 export default {
     meter,
     icon,
     overlay,
     content,
-    colorScheme
+    colorScheme,
+    css
 } satisfies PasswordDesignTokens;

@@ -14,7 +14,10 @@ export const content: PopoverTokenSections.Content = {
     padding: '{overlay.popover.padding}'
 };
 
+export const css: PopoverTokenSections.CSS = ``;
+
 export default {
     root,
-    content
+    content,
+    css
 } satisfies PopoverDesignTokens;

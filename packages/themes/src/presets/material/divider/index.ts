@@ -25,9 +25,12 @@ export const vertical: DividerTokenSections.Vertical = {
     }
 };
 
+export const css: DividerTokenSections.CSS = ``;
+
 export default {
     root,
     content,
     horizontal,
-    vertical
+    vertical,
+    css
 } satisfies DividerDesignTokens;

@@ -136,6 +136,8 @@ export const colorScheme: GalleriaTokenSections.ColorScheme = {
     }
 };
 
+export const css: GalleriaTokenSections.CSS = ``;
+
 export default {
     root,
     navButton,
@@ -150,5 +152,6 @@ export default {
     insetIndicatorButton,
     closeButton,
     closeButtonIcon,
-    colorScheme
+    colorScheme,
+    css
 } satisfies GalleriaDesignTokens;

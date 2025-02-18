@@ -39,9 +39,12 @@ export const on: FloatLabelTokenSections.On = {
     }
 };
 
+export const css: FloatLabelTokenSections.CSS = ``;
+
 export default {
     root,
     over,
     in: inside,
-    on
+    on,
+    css
 } satisfies FloatLabelDesignTokens;

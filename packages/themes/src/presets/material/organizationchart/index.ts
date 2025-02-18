@@ -41,9 +41,12 @@ export const connector: OrganizationChartTokenSections.Connector = {
     height: '24px'
 };
 
+export const css: OrganizationChartTokenSections.CSS = ``;
+
 export default {
     root,
     node,
     nodeToggleButton,
-    connector
+    connector,
+    css
 } satisfies OrganizationChartDesignTokens;

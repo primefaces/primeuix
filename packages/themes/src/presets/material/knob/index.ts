@@ -23,9 +23,12 @@ export const text: KnobTokenSections.Text = {
     color: '{text.muted.color}'
 };
 
+export const css: KnobTokenSections.CSS = ``;
+
 export default {
     root,
     value,
     range,
-    text
+    text,
+    css
 } satisfies KnobDesignTokens;

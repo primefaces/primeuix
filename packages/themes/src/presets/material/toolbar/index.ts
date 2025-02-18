@@ -22,7 +22,10 @@ export const colorScheme: ToolbarTokenSections.ColorScheme = {
     }
 };
 
+export const css: ToolbarTokenSections.CSS = ``;
+
 export default {
     root,
-    colorScheme
+    colorScheme,
+    css
 } satisfies ToolbarDesignTokens;

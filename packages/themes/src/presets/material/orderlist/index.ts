@@ -8,7 +8,10 @@ export const controls: OrderListTokenSections.Controls = {
     gap: '0.5rem'
 };
 
+export const css: OrderListTokenSections.CSS = ``;
+
 export default {
     root,
-    controls
+    controls,
+    css
 } satisfies OrderListDesignTokens;

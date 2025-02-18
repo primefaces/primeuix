@@ -17,8 +17,11 @@ export const commandResponse: TerminalTokenSections.CommandResponse = {
     margin: '2px 0'
 };
 
+export const css: TerminalTokenSections.CSS = ``;
+
 export default {
     root,
     prompt,
-    commandResponse
+    commandResponse,
+    css
 } satisfies TerminalDesignTokens;

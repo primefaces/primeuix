@@ -7,6 +7,9 @@ export const root: OverlayBadgeTokenSections.Root = {
     }
 };
 
+export const css: OverlayBadgeTokenSections.CSS = ``;
+
 export default {
-    root
+    root,
+    css
 } satisfies OverlayBadgeDesignTokens;

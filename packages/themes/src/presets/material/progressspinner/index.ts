@@ -19,6 +19,9 @@ export const colorScheme: ProgressSpinnerTokenSections.ColorScheme = {
     }
 };
 
+export const css: ProgressSpinnerTokenSections.CSS = ``;
+
 export default {
-    colorScheme
+    colorScheme,
+    css
 } satisfies ProgressSpinnerDesignTokens;

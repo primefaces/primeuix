@@ -19,6 +19,9 @@ export const handle: ImageCompareTokenSections.Handle = {
     }
 };
 
+export const css: ImageCompareTokenSections.CSS = ``;
+
 export default {
-    handle
+    handle,
+    css
 } satisfies ImageCompareDesignTokens;

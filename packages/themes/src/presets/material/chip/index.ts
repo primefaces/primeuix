@@ -60,10 +60,13 @@ export const colorScheme: ChipTokenSections.ColorScheme = {
     }
 };
 
+export const css: ChipTokenSections.CSS = ``;
+
 export default {
     root,
     image,
     icon,
     removeIcon,
-    colorScheme
+    colorScheme,
+    css
 } satisfies ChipDesignTokens;

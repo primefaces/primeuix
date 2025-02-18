@@ -24,8 +24,11 @@ export const handle: SplitterTokenSections.Handle = {
     }
 };
 
+export const css: SplitterTokenSections.CSS = ``;
+
 export default {
     root,
     gutter,
-    handle
+    handle,
+    css
 } satisfies SplitterDesignTokens;

@@ -9,7 +9,10 @@ export const content: ConfirmDialogTokenSections.Content = {
     gap: '1rem'
 };
 
+export const css: ConfirmDialogTokenSections.CSS = ``;
+
 export default {
     icon,
-    content
+    content,
+    css
 } satisfies ConfirmDialogDesignTokens;

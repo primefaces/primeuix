@@ -46,10 +46,13 @@ export const activeBar: TabmenuTokenSections.ActiveBar = {
     background: '{primary.color}'
 };
 
+export const css: TabmenuTokenSections.CSS = ``;
+
 export default {
     root,
     tablist,
     item,
     itemIcon,
-    activeBar
+    activeBar,
+    css
 } satisfies TabmenuDesignTokens;

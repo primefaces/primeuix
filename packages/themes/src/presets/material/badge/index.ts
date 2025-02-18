@@ -94,11 +94,14 @@ export const colorScheme: BadgeTokenSections.ColorScheme = {
     }
 };
 
+export const css: BadgeTokenSections.CSS = ``;
+
 export default {
     root,
     dot,
     sm,
     lg,
     xl,
-    colorScheme
+    colorScheme,
+    css
 } satisfies BadgeDesignTokens;

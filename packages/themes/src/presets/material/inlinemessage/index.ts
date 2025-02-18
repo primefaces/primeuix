@@ -93,9 +93,12 @@ export const colorScheme: InlineMessageTokenSections.ColorScheme = {
     }
 };
 
+export const css: InlineMessageTokenSections.CSS = ``;
+
 export default {
     root,
     text,
     icon,
-    colorScheme
+    colorScheme,
+    css
 } satisfies InlineMessageDesignTokens;

@@ -13,6 +13,9 @@ export const colorScheme: RippleTokenSections.ColorScheme = {
     }
 };
 
+export const css: RippleTokenSections.CSS = ``;
+
 export default {
-    colorScheme
+    colorScheme,
+    css
 } satisfies RippleDesignTokens;

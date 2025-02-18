@@ -41,11 +41,14 @@ export const colorScheme: TabViewTokenSections.ColorScheme = {
     }
 };
 
+export const css: TabViewTokenSections.CSS = ``;
+
 export default {
     root,
     tabList,
     tab,
     tabPanel,
     navButton,
-    colorScheme
+    colorScheme,
+    css
 } satisfies TabViewDesignTokens;

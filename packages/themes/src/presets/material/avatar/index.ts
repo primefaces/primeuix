@@ -42,10 +42,13 @@ export const xl: AvatarTokenSections.Xl = {
     }
 };
 
+export const css: AvatarTokenSections.CSS = ``;
+
 export default {
     root,
     icon,
     group,
     lg,
-    xl
+    xl,
+    css
 } satisfies AvatarDesignTokens;

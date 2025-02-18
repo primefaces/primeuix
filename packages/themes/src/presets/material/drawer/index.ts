@@ -24,10 +24,13 @@ export const footer: DrawerTokenSections.Footer = {
     padding: '{overlay.modal.padding}'
 };
 
+export const css: DrawerTokenSections.CSS = ``;
+
 export default {
     root,
     header,
     title,
     content,
-    footer
+    footer,
+    css
 } satisfies DrawerDesignTokens;

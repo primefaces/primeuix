@@ -47,11 +47,14 @@ export const colorScheme: TimelineTokenSections.ColorScheme = {
     }
 };
 
+export const css: TimelineTokenSections.CSS = ``;
+
 export default {
     event,
     horizontal,
     vertical,
     eventMarker,
     eventConnector,
-    colorScheme
+    colorScheme,
+    css
 } satisfies TimelineDesignTokens;

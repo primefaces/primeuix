@@ -76,8 +76,11 @@ export const colorScheme: TagTokenSections.ColorScheme = {
     }
 };
 
+export const css: TagTokenSections.CSS = ``;
+
 export default {
     root,
     icon,
-    colorScheme
+    colorScheme,
+    css
 } satisfies TagDesignTokens;
