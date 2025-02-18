@@ -1,5 +1,5 @@
 import * as Styled from '@primeuix/styled';
-import { PaletteDesignToken, Preset, Theme } from './types';
+import type { PaletteDesignToken, Preset, Theme } from '@primeuix/themes/types';
 
 export const definePreset = (...presets: Preset[]) => Styled.definePreset(...presets);
 export const updatePreset = (...presets: Preset[]) => Styled.updatePreset(...presets);
