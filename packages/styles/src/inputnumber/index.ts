@@ -18,12 +18,16 @@ export const style: StyleType = ({ dt }) => `
     transition: background ${dt('inputnumber.transition.duration')}, color ${dt('inputnumber.transition.duration')}, border-color ${dt('inputnumber.transition.duration')}, outline-color ${dt('inputnumber.transition.duration')};
 }
 
-.p-inputnumber-button:hover {
+.p-inputnumber-button:disabled {
+    cursor: auto;
+}
+
+.p-inputnumber-button:not(:disabled):hover {
     background: ${dt('inputnumber.button.hover.background')};
     color: ${dt('inputnumber.button.hover.color')};
 }
 
-.p-inputnumber-button:active {
+.p-inputnumber-button:not(:disabled):active {
     background: ${dt('inputnumber.button.active.background')};
     color: ${dt('inputnumber.button.active.color')};
 }
