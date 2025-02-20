@@ -52,7 +52,7 @@ export const style: StyleType = ({ dt }) => `
 .p-slider-range {
     display: block;
     background: ${dt('slider.range.background')};
-    border-radius: ${dt('slider.border.radius')};
+    border-radius: ${dt('slider.track.border.radius')};
 }
 
 .p-slider.p-slider-horizontal {
