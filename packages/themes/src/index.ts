@@ -9,9 +9,3 @@ export const usePreset = (...presets: Preset[]) => Styled.usePreset(...presets);
 export const useTheme = (theme: Theme) => Styled.useTheme(theme);
 
 export * from '@primeuix/styled';
-
-// Presets
-export { default as Aura } from '@primeuix/themes/aura';
-export { default as Lara } from '@primeuix/themes/lara';
-export { default as Material } from '@primeuix/themes/material';
-export { default as Nora } from '@primeuix/themes/nora';
