@@ -39,7 +39,9 @@ export const style: StyleType = ({ dt }) => `
 .p-floatlabel:has(textarea:focus) label,
 .p-floatlabel:has(textarea.p-filled) label,
 .p-floatlabel:has(.p-inputwrapper-focus) label,
-.p-floatlabel:has(.p-inputwrapper-filled) label {
+.p-floatlabel:has(.p-inputwrapper-filled) label,
+.p-floatlabel:has(input[placeholder]) label,
+.p-floatlabel:has(textarea[placeholder]) label {
     top: ${dt('floatlabel.over.active.top')};
     transform: translateY(0);
     font-size: ${dt('floatlabel.active.font.size')};
@@ -76,7 +78,9 @@ export const style: StyleType = ({ dt }) => `
 .p-floatlabel-in:has(textarea:focus) label,
 .p-floatlabel-in:has(textarea.p-filled) label,
 .p-floatlabel-in:has(.p-inputwrapper-focus) label,
-.p-floatlabel-in:has(.p-inputwrapper-filled) label {
+.p-floatlabel-in:has(.p-inputwrapper-filled) label,
+.p-floatlabel-in:has(input[placeholder]) label,
+.p-floatlabel-in:has(textarea[placeholder]) label {
     top: ${dt('floatlabel.in.active.top')};
 }
 
@@ -86,7 +90,9 @@ export const style: StyleType = ({ dt }) => `
 .p-floatlabel-on:has(textarea:focus) label,
 .p-floatlabel-on:has(textarea.p-filled) label,
 .p-floatlabel-on:has(.p-inputwrapper-focus) label,
-.p-floatlabel-on:has(.p-inputwrapper-filled) label {
+.p-floatlabel-on:has(.p-inputwrapper-filled) label,
+.p-floatlabel-on:has(input[placeholder]) label,
+.p-floatlabel-on:has(textarea[placeholder]) label {
     top: 0;
     transform: translateY(-50%);
     border-radius: ${dt('floatlabel.on.border.radius')};
