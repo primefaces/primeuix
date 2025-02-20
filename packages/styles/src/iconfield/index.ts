@@ -11,6 +11,7 @@ export const style: StyleType = ({ dt }) => `
     margin-top: calc(-1 * (${dt('icon.size')} / 2));
     color: ${dt('iconfield.icon.color')};
     line-height: 1;
+    z-index: 1;
 }
 
 .p-iconfield .p-inputicon:first-child {
@@ -21,7 +22,8 @@ export const style: StyleType = ({ dt }) => `
     inset-inline-end: ${dt('form.field.padding.x')};
 }
 
-.p-iconfield .p-inputtext:not(:first-child) {
+.p-iconfield .p-inputtext:not(:first-child),
+.p-iconfield .p-inputwrapper:not(:first-child) .p-inputtext {
     padding-inline-start: calc((${dt('form.field.padding.x')} * 2) + ${dt('icon.size')});
 }
 
