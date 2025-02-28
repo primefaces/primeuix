@@ -37,3 +37,4 @@ export { default as toFlatCase } from './methods/toFlatCase';
 export { default as toKebabCase } from './methods/toKebabCase';
 export { default as toTokenKey } from './methods/toTokenKey';
 export { default as toValue } from './methods/toValue';
+export { default as transformCSS } from './methods/transformCSS';
