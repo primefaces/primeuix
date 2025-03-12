@@ -196,79 +196,79 @@ export default {
                 description: 'Active hover background of header'
             },
             {
-                name: 'accordion.focusRing.width',
+                name: 'accordion.header.focusRing.width',
                 token: 'accordion.header.focus.ring.width',
                 variable: '--p-accordion-header-focus-ring-width',
                 description: 'Focus ring width of header'
             },
             {
-                name: 'accordion.focusRing.style',
+                name: 'accordion.header.focusRing.style',
                 token: 'accordion.header.focus.ring.style',
                 variable: '--p-accordion-header-focus-ring-style',
                 description: 'Focus ring style of header'
             },
             {
-                name: 'accordion.focusRing.color',
+                name: 'accordion.header.focusRing.color',
                 token: 'accordion.header.focus.ring.color',
                 variable: '--p-accordion-header-focus-ring-color',
                 description: 'Focus ring color of header'
             },
             {
-                name: 'accordion.focusRing.offset',
+                name: 'accordion.header.focusRing.offset',
                 token: 'accordion.header.focus.ring.offset',
                 variable: '--p-accordion-header-focus-ring-offset',
                 description: 'Focus ring offset of header'
             },
             {
-                name: 'accordion.focusRing.shadow',
+                name: 'accordion.header.focusRing.shadow',
                 token: 'accordion.header.focus.ring.shadow',
                 variable: '--p-accordion-header-focus-ring-shadow',
                 description: 'Focus ring shadow of header'
             },
             {
-                name: 'accordion.toggleIcon.color',
+                name: 'accordion.header.toggleIcon.color',
                 token: 'accordion.header.toggle.icon.color',
                 variable: '--p-accordion-header-toggle-icon-color',
                 description: 'Toggle icon color of header'
             },
             {
-                name: 'accordion.toggleIcon.hoverColor',
+                name: 'accordion.header.toggleIcon.hoverColor',
                 token: 'accordion.header.toggle.icon.hover.color',
                 variable: '--p-accordion-header-toggle-icon-hover-color',
                 description: 'Toggle icon hover color of header'
             },
             {
-                name: 'accordion.toggleIcon.activeColor',
+                name: 'accordion.header.toggleIcon.activeColor',
                 token: 'accordion.header.toggle.icon.active.color',
                 variable: '--p-accordion-header-toggle-icon-active-color',
                 description: 'Toggle icon active color of header'
             },
             {
-                name: 'accordion.toggleIcon.activeHoverColor',
+                name: 'accordion.header.toggleIcon.activeHoverColor',
                 token: 'accordion.header.toggle.icon.active.hover.color',
                 variable: '--p-accordion-header-toggle-icon-active-hover-color',
                 description: 'Toggle icon active hover color of header'
             },
             {
-                name: 'accordion.first.topBorderRadius',
+                name: 'accordion.header.first.topBorderRadius',
                 token: 'accordion.header.first.top.border.radius',
                 variable: '--p-accordion-header-first-top-border-radius',
                 description: 'First top border radius of header'
             },
             {
-                name: 'accordion.first.borderWidth',
+                name: 'accordion.header.first.borderWidth',
                 token: 'accordion.header.first.border.width',
                 variable: '--p-accordion-header-first-border-width',
                 description: 'First border width of header'
             },
             {
-                name: 'accordion.last.bottomBorderRadius',
+                name: 'accordion.header.last.bottomBorderRadius',
                 token: 'accordion.header.last.bottom.border.radius',
                 variable: '--p-accordion-header-last-bottom-border-radius',
                 description: 'Last bottom border radius of header'
             },
             {
-                name: 'accordion.last.activeBottomBorderRadius',
+                name: 'accordion.header.last.activeBottomBorderRadius',
                 token: 'accordion.header.last.active.bottom.border.radius',
                 variable: '--p-accordion-header-last-active-bottom-border-radius',
                 description: 'Last active bottom border radius of header'
@@ -411,31 +411,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'autocomplete.focusRing.width',
+                name: 'autocomplete.root.focusRing.width',
                 token: 'autocomplete.focus.ring.width',
                 variable: '--p-autocomplete-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'autocomplete.focusRing.style',
+                name: 'autocomplete.root.focusRing.style',
                 token: 'autocomplete.focus.ring.style',
                 variable: '--p-autocomplete-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'autocomplete.focusRing.color',
+                name: 'autocomplete.root.focusRing.color',
                 token: 'autocomplete.focus.ring.color',
                 variable: '--p-autocomplete-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'autocomplete.focusRing.offset',
+                name: 'autocomplete.root.focusRing.offset',
                 token: 'autocomplete.focus.ring.offset',
                 variable: '--p-autocomplete-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'autocomplete.focusRing.shadow',
+                name: 'autocomplete.root.focusRing.shadow',
                 token: 'autocomplete.focus.ring.shadow',
                 variable: '--p-autocomplete-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -573,13 +573,13 @@ export default {
                 description: 'Width of dropdown'
             },
             {
-                name: 'autocomplete.sm.width',
+                name: 'autocomplete.dropdown.sm.width',
                 token: 'autocomplete.dropdown.sm.width',
                 variable: '--p-autocomplete-dropdown-sm-width',
                 description: 'Sm width of dropdown'
             },
             {
-                name: 'autocomplete.lg.width',
+                name: 'autocomplete.dropdown.lg.width',
                 token: 'autocomplete.dropdown.lg.width',
                 variable: '--p-autocomplete-dropdown-lg-width',
                 description: 'Lg width of dropdown'
@@ -609,31 +609,31 @@ export default {
                 description: 'Border radius of dropdown'
             },
             {
-                name: 'autocomplete.focusRing.width',
+                name: 'autocomplete.dropdown.focusRing.width',
                 token: 'autocomplete.dropdown.focus.ring.width',
                 variable: '--p-autocomplete-dropdown-focus-ring-width',
                 description: 'Focus ring width of dropdown'
             },
             {
-                name: 'autocomplete.focusRing.style',
+                name: 'autocomplete.dropdown.focusRing.style',
                 token: 'autocomplete.dropdown.focus.ring.style',
                 variable: '--p-autocomplete-dropdown-focus-ring-style',
                 description: 'Focus ring style of dropdown'
             },
             {
-                name: 'autocomplete.focusRing.color',
+                name: 'autocomplete.dropdown.focusRing.color',
                 token: 'autocomplete.dropdown.focus.ring.color',
                 variable: '--p-autocomplete-dropdown-focus-ring-color',
                 description: 'Focus ring color of dropdown'
             },
             {
-                name: 'autocomplete.focusRing.offset',
+                name: 'autocomplete.dropdown.focusRing.offset',
                 token: 'autocomplete.dropdown.focus.ring.offset',
                 variable: '--p-autocomplete-dropdown-focus-ring-offset',
                 description: 'Focus ring offset of dropdown'
             },
             {
-                name: 'autocomplete.focusRing.shadow',
+                name: 'autocomplete.dropdown.focusRing.shadow',
                 token: 'autocomplete.dropdown.focus.ring.shadow',
                 variable: '--p-autocomplete-dropdown-focus-ring-shadow',
                 description: 'Focus ring shadow of dropdown'
@@ -776,13 +776,13 @@ export default {
                 description: 'Font size of lg'
             },
             {
-                name: 'avatar.icon.size',
+                name: 'avatar.lg.icon.size',
                 token: 'avatar.lg.icon.size',
                 variable: '--p-avatar-lg-icon-size',
                 description: 'Icon size of lg'
             },
             {
-                name: 'avatar.group.offset',
+                name: 'avatar.lg.group.offset',
                 token: 'avatar.lg.group.offset',
                 variable: '--p-avatar-lg-group-offset',
                 description: 'Group offset of lg'
@@ -806,13 +806,13 @@ export default {
                 description: 'Font size of xl'
             },
             {
-                name: 'avatar.icon.size',
+                name: 'avatar.xl.icon.size',
                 token: 'avatar.xl.icon.size',
                 variable: '--p-avatar-xl-icon-size',
                 description: 'Icon size of xl'
             },
             {
-                name: 'avatar.group.offset',
+                name: 'avatar.xl.group.offset',
                 token: 'avatar.xl.group.offset',
                 variable: '--p-avatar-xl-group-offset',
                 description: 'Group offset of xl'
@@ -1067,43 +1067,43 @@ export default {
                 description: 'Gap of item'
             },
             {
-                name: 'breadcrumb.icon.color',
+                name: 'breadcrumb.item.icon.color',
                 token: 'breadcrumb.item.icon.color',
                 variable: '--p-breadcrumb-item-icon-color',
                 description: 'Icon color of item'
             },
             {
-                name: 'breadcrumb.icon.hoverColor',
+                name: 'breadcrumb.item.icon.hoverColor',
                 token: 'breadcrumb.item.icon.hover.color',
                 variable: '--p-breadcrumb-item-icon-hover-color',
                 description: 'Icon hover color of item'
             },
             {
-                name: 'breadcrumb.focusRing.width',
+                name: 'breadcrumb.item.focusRing.width',
                 token: 'breadcrumb.item.focus.ring.width',
                 variable: '--p-breadcrumb-item-focus-ring-width',
                 description: 'Focus ring width of item'
             },
             {
-                name: 'breadcrumb.focusRing.style',
+                name: 'breadcrumb.item.focusRing.style',
                 token: 'breadcrumb.item.focus.ring.style',
                 variable: '--p-breadcrumb-item-focus-ring-style',
                 description: 'Focus ring style of item'
             },
             {
-                name: 'breadcrumb.focusRing.color',
+                name: 'breadcrumb.item.focusRing.color',
                 token: 'breadcrumb.item.focus.ring.color',
                 variable: '--p-breadcrumb-item-focus-ring-color',
                 description: 'Focus ring color of item'
             },
             {
-                name: 'breadcrumb.focusRing.offset',
+                name: 'breadcrumb.item.focusRing.offset',
                 token: 'breadcrumb.item.focus.ring.offset',
                 variable: '--p-breadcrumb-item-focus-ring-offset',
                 description: 'Focus ring offset of item'
             },
             {
-                name: 'breadcrumb.focusRing.shadow',
+                name: 'breadcrumb.item.focusRing.shadow',
                 token: 'breadcrumb.item.focus.ring.shadow',
                 variable: '--p-breadcrumb-item-focus-ring-shadow',
                 description: 'Focus ring shadow of item'
@@ -1156,55 +1156,55 @@ export default {
                 description: 'Icon only width of root'
             },
             {
-                name: 'button.sm.fontSize',
+                name: 'button.root.sm.fontSize',
                 token: 'button.sm.font.size',
                 variable: '--p-button-sm-font-size',
                 description: 'Sm font size of root'
             },
             {
-                name: 'button.sm.paddingX',
+                name: 'button.root.sm.paddingX',
                 token: 'button.sm.padding.x',
                 variable: '--p-button-sm-padding-x',
                 description: 'Sm padding x of root'
             },
             {
-                name: 'button.sm.paddingY',
+                name: 'button.root.sm.paddingY',
                 token: 'button.sm.padding.y',
                 variable: '--p-button-sm-padding-y',
                 description: 'Sm padding y of root'
             },
             {
-                name: 'button.sm.iconOnlyWidth',
+                name: 'button.root.sm.iconOnlyWidth',
                 token: 'button.sm.icon.only.width',
                 variable: '--p-button-sm-icon-only-width',
                 description: 'Sm icon only width of root'
             },
             {
-                name: 'button.lg.fontSize',
+                name: 'button.root.lg.fontSize',
                 token: 'button.lg.font.size',
                 variable: '--p-button-lg-font-size',
                 description: 'Lg font size of root'
             },
             {
-                name: 'button.lg.paddingX',
+                name: 'button.root.lg.paddingX',
                 token: 'button.lg.padding.x',
                 variable: '--p-button-lg-padding-x',
                 description: 'Lg padding x of root'
             },
             {
-                name: 'button.lg.paddingY',
+                name: 'button.root.lg.paddingY',
                 token: 'button.lg.padding.y',
                 variable: '--p-button-lg-padding-y',
                 description: 'Lg padding y of root'
             },
             {
-                name: 'button.lg.iconOnlyWidth',
+                name: 'button.root.lg.iconOnlyWidth',
                 token: 'button.lg.icon.only.width',
                 variable: '--p-button-lg-icon-only-width',
                 description: 'Lg icon only width of root'
             },
             {
-                name: 'button.label.fontWeight',
+                name: 'button.root.label.fontWeight',
                 token: 'button.label.font.weight',
                 variable: '--p-button-label-font-weight',
                 description: 'Label font weight of root'
@@ -1216,19 +1216,19 @@ export default {
                 description: 'Raised shadow of root'
             },
             {
-                name: 'button.focusRing.width',
+                name: 'button.root.focusRing.width',
                 token: 'button.focus.ring.width',
                 variable: '--p-button-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'button.focusRing.style',
+                name: 'button.root.focusRing.style',
                 token: 'button.focus.ring.style',
                 variable: '--p-button-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'button.focusRing.offset',
+                name: 'button.root.focusRing.offset',
                 token: 'button.focus.ring.offset',
                 variable: '--p-button-focus-ring-offset',
                 description: 'Focus ring offset of root'
@@ -1246,907 +1246,907 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'button.primary.background',
+                name: 'button.root.primary.background',
                 token: 'button.primary.background',
                 variable: '--p-button-primary-background',
                 description: 'Primary background of root'
             },
             {
-                name: 'button.primary.hoverBackground',
+                name: 'button.root.primary.hoverBackground',
                 token: 'button.primary.hover.background',
                 variable: '--p-button-primary-hover-background',
                 description: 'Primary hover background of root'
             },
             {
-                name: 'button.primary.activeBackground',
+                name: 'button.root.primary.activeBackground',
                 token: 'button.primary.active.background',
                 variable: '--p-button-primary-active-background',
                 description: 'Primary active background of root'
             },
             {
-                name: 'button.primary.borderColor',
+                name: 'button.root.primary.borderColor',
                 token: 'button.primary.border.color',
                 variable: '--p-button-primary-border-color',
                 description: 'Primary border color of root'
             },
             {
-                name: 'button.primary.hoverBorderColor',
+                name: 'button.root.primary.hoverBorderColor',
                 token: 'button.primary.hover.border.color',
                 variable: '--p-button-primary-hover-border-color',
                 description: 'Primary hover border color of root'
             },
             {
-                name: 'button.primary.activeBorderColor',
+                name: 'button.root.primary.activeBorderColor',
                 token: 'button.primary.active.border.color',
                 variable: '--p-button-primary-active-border-color',
                 description: 'Primary active border color of root'
             },
             {
-                name: 'button.primary.color',
+                name: 'button.root.primary.color',
                 token: 'button.primary.color',
                 variable: '--p-button-primary-color',
                 description: 'Primary color of root'
             },
             {
-                name: 'button.primary.hoverColor',
+                name: 'button.root.primary.hoverColor',
                 token: 'button.primary.hover.color',
                 variable: '--p-button-primary-hover-color',
                 description: 'Primary hover color of root'
             },
             {
-                name: 'button.primary.activeColor',
+                name: 'button.root.primary.activeColor',
                 token: 'button.primary.active.color',
                 variable: '--p-button-primary-active-color',
                 description: 'Primary active color of root'
             },
             {
-                name: 'button.focusRing.color',
+                name: 'button.root.primary.focusRing.color',
                 token: 'button.primary.focus.ring.color',
                 variable: '--p-button-primary-focus-ring-color',
                 description: 'Primary focus ring color of root'
             },
             {
-                name: 'button.focusRing.shadow',
+                name: 'button.root.primary.focusRing.shadow',
                 token: 'button.primary.focus.ring.shadow',
                 variable: '--p-button-primary-focus-ring-shadow',
                 description: 'Primary focus ring shadow of root'
             },
             {
-                name: 'button.secondary.background',
+                name: 'button.root.secondary.background',
                 token: 'button.secondary.background',
                 variable: '--p-button-secondary-background',
                 description: 'Secondary background of root'
             },
             {
-                name: 'button.secondary.hoverBackground',
+                name: 'button.root.secondary.hoverBackground',
                 token: 'button.secondary.hover.background',
                 variable: '--p-button-secondary-hover-background',
                 description: 'Secondary hover background of root'
             },
             {
-                name: 'button.secondary.activeBackground',
+                name: 'button.root.secondary.activeBackground',
                 token: 'button.secondary.active.background',
                 variable: '--p-button-secondary-active-background',
                 description: 'Secondary active background of root'
             },
             {
-                name: 'button.secondary.borderColor',
+                name: 'button.root.secondary.borderColor',
                 token: 'button.secondary.border.color',
                 variable: '--p-button-secondary-border-color',
                 description: 'Secondary border color of root'
             },
             {
-                name: 'button.secondary.hoverBorderColor',
+                name: 'button.root.secondary.hoverBorderColor',
                 token: 'button.secondary.hover.border.color',
                 variable: '--p-button-secondary-hover-border-color',
                 description: 'Secondary hover border color of root'
             },
             {
-                name: 'button.secondary.activeBorderColor',
+                name: 'button.root.secondary.activeBorderColor',
                 token: 'button.secondary.active.border.color',
                 variable: '--p-button-secondary-active-border-color',
                 description: 'Secondary active border color of root'
             },
             {
-                name: 'button.secondary.color',
+                name: 'button.root.secondary.color',
                 token: 'button.secondary.color',
                 variable: '--p-button-secondary-color',
                 description: 'Secondary color of root'
             },
             {
-                name: 'button.secondary.hoverColor',
+                name: 'button.root.secondary.hoverColor',
                 token: 'button.secondary.hover.color',
                 variable: '--p-button-secondary-hover-color',
                 description: 'Secondary hover color of root'
             },
             {
-                name: 'button.secondary.activeColor',
+                name: 'button.root.secondary.activeColor',
                 token: 'button.secondary.active.color',
                 variable: '--p-button-secondary-active-color',
                 description: 'Secondary active color of root'
             },
             {
-                name: 'button.focusRing.color',
+                name: 'button.root.secondary.focusRing.color',
                 token: 'button.secondary.focus.ring.color',
                 variable: '--p-button-secondary-focus-ring-color',
                 description: 'Secondary focus ring color of root'
             },
             {
-                name: 'button.focusRing.shadow',
+                name: 'button.root.secondary.focusRing.shadow',
                 token: 'button.secondary.focus.ring.shadow',
                 variable: '--p-button-secondary-focus-ring-shadow',
                 description: 'Secondary focus ring shadow of root'
             },
             {
-                name: 'button.info.background',
+                name: 'button.root.info.background',
                 token: 'button.info.background',
                 variable: '--p-button-info-background',
                 description: 'Info background of root'
             },
             {
-                name: 'button.info.hoverBackground',
+                name: 'button.root.info.hoverBackground',
                 token: 'button.info.hover.background',
                 variable: '--p-button-info-hover-background',
                 description: 'Info hover background of root'
             },
             {
-                name: 'button.info.activeBackground',
+                name: 'button.root.info.activeBackground',
                 token: 'button.info.active.background',
                 variable: '--p-button-info-active-background',
                 description: 'Info active background of root'
             },
             {
-                name: 'button.info.borderColor',
+                name: 'button.root.info.borderColor',
                 token: 'button.info.border.color',
                 variable: '--p-button-info-border-color',
                 description: 'Info border color of root'
             },
             {
-                name: 'button.info.hoverBorderColor',
+                name: 'button.root.info.hoverBorderColor',
                 token: 'button.info.hover.border.color',
                 variable: '--p-button-info-hover-border-color',
                 description: 'Info hover border color of root'
             },
             {
-                name: 'button.info.activeBorderColor',
+                name: 'button.root.info.activeBorderColor',
                 token: 'button.info.active.border.color',
                 variable: '--p-button-info-active-border-color',
                 description: 'Info active border color of root'
             },
             {
-                name: 'button.info.color',
+                name: 'button.root.info.color',
                 token: 'button.info.color',
                 variable: '--p-button-info-color',
                 description: 'Info color of root'
             },
             {
-                name: 'button.info.hoverColor',
+                name: 'button.root.info.hoverColor',
                 token: 'button.info.hover.color',
                 variable: '--p-button-info-hover-color',
                 description: 'Info hover color of root'
             },
             {
-                name: 'button.info.activeColor',
+                name: 'button.root.info.activeColor',
                 token: 'button.info.active.color',
                 variable: '--p-button-info-active-color',
                 description: 'Info active color of root'
             },
             {
-                name: 'button.focusRing.color',
+                name: 'button.root.info.focusRing.color',
                 token: 'button.info.focus.ring.color',
                 variable: '--p-button-info-focus-ring-color',
                 description: 'Info focus ring color of root'
             },
             {
-                name: 'button.focusRing.shadow',
+                name: 'button.root.info.focusRing.shadow',
                 token: 'button.info.focus.ring.shadow',
                 variable: '--p-button-info-focus-ring-shadow',
                 description: 'Info focus ring shadow of root'
             },
             {
-                name: 'button.success.background',
+                name: 'button.root.success.background',
                 token: 'button.success.background',
                 variable: '--p-button-success-background',
                 description: 'Success background of root'
             },
             {
-                name: 'button.success.hoverBackground',
+                name: 'button.root.success.hoverBackground',
                 token: 'button.success.hover.background',
                 variable: '--p-button-success-hover-background',
                 description: 'Success hover background of root'
             },
             {
-                name: 'button.success.activeBackground',
+                name: 'button.root.success.activeBackground',
                 token: 'button.success.active.background',
                 variable: '--p-button-success-active-background',
                 description: 'Success active background of root'
             },
             {
-                name: 'button.success.borderColor',
+                name: 'button.root.success.borderColor',
                 token: 'button.success.border.color',
                 variable: '--p-button-success-border-color',
                 description: 'Success border color of root'
             },
             {
-                name: 'button.success.hoverBorderColor',
+                name: 'button.root.success.hoverBorderColor',
                 token: 'button.success.hover.border.color',
                 variable: '--p-button-success-hover-border-color',
                 description: 'Success hover border color of root'
             },
             {
-                name: 'button.success.activeBorderColor',
+                name: 'button.root.success.activeBorderColor',
                 token: 'button.success.active.border.color',
                 variable: '--p-button-success-active-border-color',
                 description: 'Success active border color of root'
             },
             {
-                name: 'button.success.color',
+                name: 'button.root.success.color',
                 token: 'button.success.color',
                 variable: '--p-button-success-color',
                 description: 'Success color of root'
             },
             {
-                name: 'button.success.hoverColor',
+                name: 'button.root.success.hoverColor',
                 token: 'button.success.hover.color',
                 variable: '--p-button-success-hover-color',
                 description: 'Success hover color of root'
             },
             {
-                name: 'button.success.activeColor',
+                name: 'button.root.success.activeColor',
                 token: 'button.success.active.color',
                 variable: '--p-button-success-active-color',
                 description: 'Success active color of root'
             },
             {
-                name: 'button.focusRing.color',
+                name: 'button.root.success.focusRing.color',
                 token: 'button.success.focus.ring.color',
                 variable: '--p-button-success-focus-ring-color',
                 description: 'Success focus ring color of root'
             },
             {
-                name: 'button.focusRing.shadow',
+                name: 'button.root.success.focusRing.shadow',
                 token: 'button.success.focus.ring.shadow',
                 variable: '--p-button-success-focus-ring-shadow',
                 description: 'Success focus ring shadow of root'
             },
             {
-                name: 'button.warn.background',
+                name: 'button.root.warn.background',
                 token: 'button.warn.background',
                 variable: '--p-button-warn-background',
                 description: 'Warn background of root'
             },
             {
-                name: 'button.warn.hoverBackground',
+                name: 'button.root.warn.hoverBackground',
                 token: 'button.warn.hover.background',
                 variable: '--p-button-warn-hover-background',
                 description: 'Warn hover background of root'
             },
             {
-                name: 'button.warn.activeBackground',
+                name: 'button.root.warn.activeBackground',
                 token: 'button.warn.active.background',
                 variable: '--p-button-warn-active-background',
                 description: 'Warn active background of root'
             },
             {
-                name: 'button.warn.borderColor',
+                name: 'button.root.warn.borderColor',
                 token: 'button.warn.border.color',
                 variable: '--p-button-warn-border-color',
                 description: 'Warn border color of root'
             },
             {
-                name: 'button.warn.hoverBorderColor',
+                name: 'button.root.warn.hoverBorderColor',
                 token: 'button.warn.hover.border.color',
                 variable: '--p-button-warn-hover-border-color',
                 description: 'Warn hover border color of root'
             },
             {
-                name: 'button.warn.activeBorderColor',
+                name: 'button.root.warn.activeBorderColor',
                 token: 'button.warn.active.border.color',
                 variable: '--p-button-warn-active-border-color',
                 description: 'Warn active border color of root'
             },
             {
-                name: 'button.warn.color',
+                name: 'button.root.warn.color',
                 token: 'button.warn.color',
                 variable: '--p-button-warn-color',
                 description: 'Warn color of root'
             },
             {
-                name: 'button.warn.hoverColor',
+                name: 'button.root.warn.hoverColor',
                 token: 'button.warn.hover.color',
                 variable: '--p-button-warn-hover-color',
                 description: 'Warn hover color of root'
             },
             {
-                name: 'button.warn.activeColor',
+                name: 'button.root.warn.activeColor',
                 token: 'button.warn.active.color',
                 variable: '--p-button-warn-active-color',
                 description: 'Warn active color of root'
             },
             {
-                name: 'button.focusRing.color',
+                name: 'button.root.warn.focusRing.color',
                 token: 'button.warn.focus.ring.color',
                 variable: '--p-button-warn-focus-ring-color',
                 description: 'Warn focus ring color of root'
             },
             {
-                name: 'button.focusRing.shadow',
+                name: 'button.root.warn.focusRing.shadow',
                 token: 'button.warn.focus.ring.shadow',
                 variable: '--p-button-warn-focus-ring-shadow',
                 description: 'Warn focus ring shadow of root'
             },
             {
-                name: 'button.help.background',
+                name: 'button.root.help.background',
                 token: 'button.help.background',
                 variable: '--p-button-help-background',
                 description: 'Help background of root'
             },
             {
-                name: 'button.help.hoverBackground',
+                name: 'button.root.help.hoverBackground',
                 token: 'button.help.hover.background',
                 variable: '--p-button-help-hover-background',
                 description: 'Help hover background of root'
             },
             {
-                name: 'button.help.activeBackground',
+                name: 'button.root.help.activeBackground',
                 token: 'button.help.active.background',
                 variable: '--p-button-help-active-background',
                 description: 'Help active background of root'
             },
             {
-                name: 'button.help.borderColor',
+                name: 'button.root.help.borderColor',
                 token: 'button.help.border.color',
                 variable: '--p-button-help-border-color',
                 description: 'Help border color of root'
             },
             {
-                name: 'button.help.hoverBorderColor',
+                name: 'button.root.help.hoverBorderColor',
                 token: 'button.help.hover.border.color',
                 variable: '--p-button-help-hover-border-color',
                 description: 'Help hover border color of root'
             },
             {
-                name: 'button.help.activeBorderColor',
+                name: 'button.root.help.activeBorderColor',
                 token: 'button.help.active.border.color',
                 variable: '--p-button-help-active-border-color',
                 description: 'Help active border color of root'
             },
             {
-                name: 'button.help.color',
+                name: 'button.root.help.color',
                 token: 'button.help.color',
                 variable: '--p-button-help-color',
                 description: 'Help color of root'
             },
             {
-                name: 'button.help.hoverColor',
+                name: 'button.root.help.hoverColor',
                 token: 'button.help.hover.color',
                 variable: '--p-button-help-hover-color',
                 description: 'Help hover color of root'
             },
             {
-                name: 'button.help.activeColor',
+                name: 'button.root.help.activeColor',
                 token: 'button.help.active.color',
                 variable: '--p-button-help-active-color',
                 description: 'Help active color of root'
             },
             {
-                name: 'button.focusRing.color',
+                name: 'button.root.help.focusRing.color',
                 token: 'button.help.focus.ring.color',
                 variable: '--p-button-help-focus-ring-color',
                 description: 'Help focus ring color of root'
             },
             {
-                name: 'button.focusRing.shadow',
+                name: 'button.root.help.focusRing.shadow',
                 token: 'button.help.focus.ring.shadow',
                 variable: '--p-button-help-focus-ring-shadow',
                 description: 'Help focus ring shadow of root'
             },
             {
-                name: 'button.danger.background',
+                name: 'button.root.danger.background',
                 token: 'button.danger.background',
                 variable: '--p-button-danger-background',
                 description: 'Danger background of root'
             },
             {
-                name: 'button.danger.hoverBackground',
+                name: 'button.root.danger.hoverBackground',
                 token: 'button.danger.hover.background',
                 variable: '--p-button-danger-hover-background',
                 description: 'Danger hover background of root'
             },
             {
-                name: 'button.danger.activeBackground',
+                name: 'button.root.danger.activeBackground',
                 token: 'button.danger.active.background',
                 variable: '--p-button-danger-active-background',
                 description: 'Danger active background of root'
             },
             {
-                name: 'button.danger.borderColor',
+                name: 'button.root.danger.borderColor',
                 token: 'button.danger.border.color',
                 variable: '--p-button-danger-border-color',
                 description: 'Danger border color of root'
             },
             {
-                name: 'button.danger.hoverBorderColor',
+                name: 'button.root.danger.hoverBorderColor',
                 token: 'button.danger.hover.border.color',
                 variable: '--p-button-danger-hover-border-color',
                 description: 'Danger hover border color of root'
             },
             {
-                name: 'button.danger.activeBorderColor',
+                name: 'button.root.danger.activeBorderColor',
                 token: 'button.danger.active.border.color',
                 variable: '--p-button-danger-active-border-color',
                 description: 'Danger active border color of root'
             },
             {
-                name: 'button.danger.color',
+                name: 'button.root.danger.color',
                 token: 'button.danger.color',
                 variable: '--p-button-danger-color',
                 description: 'Danger color of root'
             },
             {
-                name: 'button.danger.hoverColor',
+                name: 'button.root.danger.hoverColor',
                 token: 'button.danger.hover.color',
                 variable: '--p-button-danger-hover-color',
                 description: 'Danger hover color of root'
             },
             {
-                name: 'button.danger.activeColor',
+                name: 'button.root.danger.activeColor',
                 token: 'button.danger.active.color',
                 variable: '--p-button-danger-active-color',
                 description: 'Danger active color of root'
             },
             {
-                name: 'button.focusRing.color',
+                name: 'button.root.danger.focusRing.color',
                 token: 'button.danger.focus.ring.color',
                 variable: '--p-button-danger-focus-ring-color',
                 description: 'Danger focus ring color of root'
             },
             {
-                name: 'button.focusRing.shadow',
+                name: 'button.root.danger.focusRing.shadow',
                 token: 'button.danger.focus.ring.shadow',
                 variable: '--p-button-danger-focus-ring-shadow',
                 description: 'Danger focus ring shadow of root'
             },
             {
-                name: 'button.contrast.background',
+                name: 'button.root.contrast.background',
                 token: 'button.contrast.background',
                 variable: '--p-button-contrast-background',
                 description: 'Contrast background of root'
             },
             {
-                name: 'button.contrast.hoverBackground',
+                name: 'button.root.contrast.hoverBackground',
                 token: 'button.contrast.hover.background',
                 variable: '--p-button-contrast-hover-background',
                 description: 'Contrast hover background of root'
             },
             {
-                name: 'button.contrast.activeBackground',
+                name: 'button.root.contrast.activeBackground',
                 token: 'button.contrast.active.background',
                 variable: '--p-button-contrast-active-background',
                 description: 'Contrast active background of root'
             },
             {
-                name: 'button.contrast.borderColor',
+                name: 'button.root.contrast.borderColor',
                 token: 'button.contrast.border.color',
                 variable: '--p-button-contrast-border-color',
                 description: 'Contrast border color of root'
             },
             {
-                name: 'button.contrast.hoverBorderColor',
+                name: 'button.root.contrast.hoverBorderColor',
                 token: 'button.contrast.hover.border.color',
                 variable: '--p-button-contrast-hover-border-color',
                 description: 'Contrast hover border color of root'
             },
             {
-                name: 'button.contrast.activeBorderColor',
+                name: 'button.root.contrast.activeBorderColor',
                 token: 'button.contrast.active.border.color',
                 variable: '--p-button-contrast-active-border-color',
                 description: 'Contrast active border color of root'
             },
             {
-                name: 'button.contrast.color',
+                name: 'button.root.contrast.color',
                 token: 'button.contrast.color',
                 variable: '--p-button-contrast-color',
                 description: 'Contrast color of root'
             },
             {
-                name: 'button.contrast.hoverColor',
+                name: 'button.root.contrast.hoverColor',
                 token: 'button.contrast.hover.color',
                 variable: '--p-button-contrast-hover-color',
                 description: 'Contrast hover color of root'
             },
             {
-                name: 'button.contrast.activeColor',
+                name: 'button.root.contrast.activeColor',
                 token: 'button.contrast.active.color',
                 variable: '--p-button-contrast-active-color',
                 description: 'Contrast active color of root'
             },
             {
-                name: 'button.focusRing.color',
+                name: 'button.root.contrast.focusRing.color',
                 token: 'button.contrast.focus.ring.color',
                 variable: '--p-button-contrast-focus-ring-color',
                 description: 'Contrast focus ring color of root'
             },
             {
-                name: 'button.focusRing.shadow',
+                name: 'button.root.contrast.focusRing.shadow',
                 token: 'button.contrast.focus.ring.shadow',
                 variable: '--p-button-contrast-focus-ring-shadow',
                 description: 'Contrast focus ring shadow of root'
             },
             {
-                name: 'button.primary.hoverBackground',
+                name: 'button.outlined.primary.hoverBackground',
                 token: 'button.outlined.primary.hover.background',
                 variable: '--p-button-outlined-primary-hover-background',
                 description: 'Primary hover background of outlined'
             },
             {
-                name: 'button.primary.activeBackground',
+                name: 'button.outlined.primary.activeBackground',
                 token: 'button.outlined.primary.active.background',
                 variable: '--p-button-outlined-primary-active-background',
                 description: 'Primary active background of outlined'
             },
             {
-                name: 'button.primary.borderColor',
+                name: 'button.outlined.primary.borderColor',
                 token: 'button.outlined.primary.border.color',
                 variable: '--p-button-outlined-primary-border-color',
                 description: 'Primary border color of outlined'
             },
             {
-                name: 'button.primary.color',
+                name: 'button.outlined.primary.color',
                 token: 'button.outlined.primary.color',
                 variable: '--p-button-outlined-primary-color',
                 description: 'Primary color of outlined'
             },
             {
-                name: 'button.secondary.hoverBackground',
+                name: 'button.outlined.secondary.hoverBackground',
                 token: 'button.outlined.secondary.hover.background',
                 variable: '--p-button-outlined-secondary-hover-background',
                 description: 'Secondary hover background of outlined'
             },
             {
-                name: 'button.secondary.activeBackground',
+                name: 'button.outlined.secondary.activeBackground',
                 token: 'button.outlined.secondary.active.background',
                 variable: '--p-button-outlined-secondary-active-background',
                 description: 'Secondary active background of outlined'
             },
             {
-                name: 'button.secondary.borderColor',
+                name: 'button.outlined.secondary.borderColor',
                 token: 'button.outlined.secondary.border.color',
                 variable: '--p-button-outlined-secondary-border-color',
                 description: 'Secondary border color of outlined'
             },
             {
-                name: 'button.secondary.color',
+                name: 'button.outlined.secondary.color',
                 token: 'button.outlined.secondary.color',
                 variable: '--p-button-outlined-secondary-color',
                 description: 'Secondary color of outlined'
             },
             {
-                name: 'button.success.hoverBackground',
+                name: 'button.outlined.success.hoverBackground',
                 token: 'button.outlined.success.hover.background',
                 variable: '--p-button-outlined-success-hover-background',
                 description: 'Success hover background of outlined'
             },
             {
-                name: 'button.success.activeBackground',
+                name: 'button.outlined.success.activeBackground',
                 token: 'button.outlined.success.active.background',
                 variable: '--p-button-outlined-success-active-background',
                 description: 'Success active background of outlined'
             },
             {
-                name: 'button.success.borderColor',
+                name: 'button.outlined.success.borderColor',
                 token: 'button.outlined.success.border.color',
                 variable: '--p-button-outlined-success-border-color',
                 description: 'Success border color of outlined'
             },
             {
-                name: 'button.success.color',
+                name: 'button.outlined.success.color',
                 token: 'button.outlined.success.color',
                 variable: '--p-button-outlined-success-color',
                 description: 'Success color of outlined'
             },
             {
-                name: 'button.info.hoverBackground',
+                name: 'button.outlined.info.hoverBackground',
                 token: 'button.outlined.info.hover.background',
                 variable: '--p-button-outlined-info-hover-background',
                 description: 'Info hover background of outlined'
             },
             {
-                name: 'button.info.activeBackground',
+                name: 'button.outlined.info.activeBackground',
                 token: 'button.outlined.info.active.background',
                 variable: '--p-button-outlined-info-active-background',
                 description: 'Info active background of outlined'
             },
             {
-                name: 'button.info.borderColor',
+                name: 'button.outlined.info.borderColor',
                 token: 'button.outlined.info.border.color',
                 variable: '--p-button-outlined-info-border-color',
                 description: 'Info border color of outlined'
             },
             {
-                name: 'button.info.color',
+                name: 'button.outlined.info.color',
                 token: 'button.outlined.info.color',
                 variable: '--p-button-outlined-info-color',
                 description: 'Info color of outlined'
             },
             {
-                name: 'button.warn.hoverBackground',
+                name: 'button.outlined.warn.hoverBackground',
                 token: 'button.outlined.warn.hover.background',
                 variable: '--p-button-outlined-warn-hover-background',
                 description: 'Warn hover background of outlined'
             },
             {
-                name: 'button.warn.activeBackground',
+                name: 'button.outlined.warn.activeBackground',
                 token: 'button.outlined.warn.active.background',
                 variable: '--p-button-outlined-warn-active-background',
                 description: 'Warn active background of outlined'
             },
             {
-                name: 'button.warn.borderColor',
+                name: 'button.outlined.warn.borderColor',
                 token: 'button.outlined.warn.border.color',
                 variable: '--p-button-outlined-warn-border-color',
                 description: 'Warn border color of outlined'
             },
             {
-                name: 'button.warn.color',
+                name: 'button.outlined.warn.color',
                 token: 'button.outlined.warn.color',
                 variable: '--p-button-outlined-warn-color',
                 description: 'Warn color of outlined'
             },
             {
-                name: 'button.help.hoverBackground',
+                name: 'button.outlined.help.hoverBackground',
                 token: 'button.outlined.help.hover.background',
                 variable: '--p-button-outlined-help-hover-background',
                 description: 'Help hover background of outlined'
             },
             {
-                name: 'button.help.activeBackground',
+                name: 'button.outlined.help.activeBackground',
                 token: 'button.outlined.help.active.background',
                 variable: '--p-button-outlined-help-active-background',
                 description: 'Help active background of outlined'
             },
             {
-                name: 'button.help.borderColor',
+                name: 'button.outlined.help.borderColor',
                 token: 'button.outlined.help.border.color',
                 variable: '--p-button-outlined-help-border-color',
                 description: 'Help border color of outlined'
             },
             {
-                name: 'button.help.color',
+                name: 'button.outlined.help.color',
                 token: 'button.outlined.help.color',
                 variable: '--p-button-outlined-help-color',
                 description: 'Help color of outlined'
             },
             {
-                name: 'button.danger.hoverBackground',
+                name: 'button.outlined.danger.hoverBackground',
                 token: 'button.outlined.danger.hover.background',
                 variable: '--p-button-outlined-danger-hover-background',
                 description: 'Danger hover background of outlined'
             },
             {
-                name: 'button.danger.activeBackground',
+                name: 'button.outlined.danger.activeBackground',
                 token: 'button.outlined.danger.active.background',
                 variable: '--p-button-outlined-danger-active-background',
                 description: 'Danger active background of outlined'
             },
             {
-                name: 'button.danger.borderColor',
+                name: 'button.outlined.danger.borderColor',
                 token: 'button.outlined.danger.border.color',
                 variable: '--p-button-outlined-danger-border-color',
                 description: 'Danger border color of outlined'
             },
             {
-                name: 'button.danger.color',
+                name: 'button.outlined.danger.color',
                 token: 'button.outlined.danger.color',
                 variable: '--p-button-outlined-danger-color',
                 description: 'Danger color of outlined'
             },
             {
-                name: 'button.contrast.hoverBackground',
+                name: 'button.outlined.contrast.hoverBackground',
                 token: 'button.outlined.contrast.hover.background',
                 variable: '--p-button-outlined-contrast-hover-background',
                 description: 'Contrast hover background of outlined'
             },
             {
-                name: 'button.contrast.activeBackground',
+                name: 'button.outlined.contrast.activeBackground',
                 token: 'button.outlined.contrast.active.background',
                 variable: '--p-button-outlined-contrast-active-background',
                 description: 'Contrast active background of outlined'
             },
             {
-                name: 'button.contrast.borderColor',
+                name: 'button.outlined.contrast.borderColor',
                 token: 'button.outlined.contrast.border.color',
                 variable: '--p-button-outlined-contrast-border-color',
                 description: 'Contrast border color of outlined'
             },
             {
-                name: 'button.contrast.color',
+                name: 'button.outlined.contrast.color',
                 token: 'button.outlined.contrast.color',
                 variable: '--p-button-outlined-contrast-color',
                 description: 'Contrast color of outlined'
             },
             {
-                name: 'button.plain.hoverBackground',
+                name: 'button.outlined.plain.hoverBackground',
                 token: 'button.outlined.plain.hover.background',
                 variable: '--p-button-outlined-plain-hover-background',
                 description: 'Plain hover background of outlined'
             },
             {
-                name: 'button.plain.activeBackground',
+                name: 'button.outlined.plain.activeBackground',
                 token: 'button.outlined.plain.active.background',
                 variable: '--p-button-outlined-plain-active-background',
                 description: 'Plain active background of outlined'
             },
             {
-                name: 'button.plain.borderColor',
+                name: 'button.outlined.plain.borderColor',
                 token: 'button.outlined.plain.border.color',
                 variable: '--p-button-outlined-plain-border-color',
                 description: 'Plain border color of outlined'
             },
             {
-                name: 'button.plain.color',
+                name: 'button.outlined.plain.color',
                 token: 'button.outlined.plain.color',
                 variable: '--p-button-outlined-plain-color',
                 description: 'Plain color of outlined'
             },
             {
-                name: 'button.primary.hoverBackground',
+                name: 'button.text.primary.hoverBackground',
                 token: 'button.text.primary.hover.background',
                 variable: '--p-button-text-primary-hover-background',
                 description: 'Primary hover background of text'
             },
             {
-                name: 'button.primary.activeBackground',
+                name: 'button.text.primary.activeBackground',
                 token: 'button.text.primary.active.background',
                 variable: '--p-button-text-primary-active-background',
                 description: 'Primary active background of text'
             },
             {
-                name: 'button.primary.color',
+                name: 'button.text.primary.color',
                 token: 'button.text.primary.color',
                 variable: '--p-button-text-primary-color',
                 description: 'Primary color of text'
             },
             {
-                name: 'button.secondary.hoverBackground',
+                name: 'button.text.secondary.hoverBackground',
                 token: 'button.text.secondary.hover.background',
                 variable: '--p-button-text-secondary-hover-background',
                 description: 'Secondary hover background of text'
             },
             {
-                name: 'button.secondary.activeBackground',
+                name: 'button.text.secondary.activeBackground',
                 token: 'button.text.secondary.active.background',
                 variable: '--p-button-text-secondary-active-background',
                 description: 'Secondary active background of text'
             },
             {
-                name: 'button.secondary.color',
+                name: 'button.text.secondary.color',
                 token: 'button.text.secondary.color',
                 variable: '--p-button-text-secondary-color',
                 description: 'Secondary color of text'
             },
             {
-                name: 'button.success.hoverBackground',
+                name: 'button.text.success.hoverBackground',
                 token: 'button.text.success.hover.background',
                 variable: '--p-button-text-success-hover-background',
                 description: 'Success hover background of text'
             },
             {
-                name: 'button.success.activeBackground',
+                name: 'button.text.success.activeBackground',
                 token: 'button.text.success.active.background',
                 variable: '--p-button-text-success-active-background',
                 description: 'Success active background of text'
             },
             {
-                name: 'button.success.color',
+                name: 'button.text.success.color',
                 token: 'button.text.success.color',
                 variable: '--p-button-text-success-color',
                 description: 'Success color of text'
             },
             {
-                name: 'button.info.hoverBackground',
+                name: 'button.text.info.hoverBackground',
                 token: 'button.text.info.hover.background',
                 variable: '--p-button-text-info-hover-background',
                 description: 'Info hover background of text'
             },
             {
-                name: 'button.info.activeBackground',
+                name: 'button.text.info.activeBackground',
                 token: 'button.text.info.active.background',
                 variable: '--p-button-text-info-active-background',
                 description: 'Info active background of text'
             },
             {
-                name: 'button.info.color',
+                name: 'button.text.info.color',
                 token: 'button.text.info.color',
                 variable: '--p-button-text-info-color',
                 description: 'Info color of text'
             },
             {
-                name: 'button.warn.hoverBackground',
+                name: 'button.text.warn.hoverBackground',
                 token: 'button.text.warn.hover.background',
                 variable: '--p-button-text-warn-hover-background',
                 description: 'Warn hover background of text'
             },
             {
-                name: 'button.warn.activeBackground',
+                name: 'button.text.warn.activeBackground',
                 token: 'button.text.warn.active.background',
                 variable: '--p-button-text-warn-active-background',
                 description: 'Warn active background of text'
             },
             {
-                name: 'button.warn.color',
+                name: 'button.text.warn.color',
                 token: 'button.text.warn.color',
                 variable: '--p-button-text-warn-color',
                 description: 'Warn color of text'
             },
             {
-                name: 'button.help.hoverBackground',
+                name: 'button.text.help.hoverBackground',
                 token: 'button.text.help.hover.background',
                 variable: '--p-button-text-help-hover-background',
                 description: 'Help hover background of text'
             },
             {
-                name: 'button.help.activeBackground',
+                name: 'button.text.help.activeBackground',
                 token: 'button.text.help.active.background',
                 variable: '--p-button-text-help-active-background',
                 description: 'Help active background of text'
             },
             {
-                name: 'button.help.color',
+                name: 'button.text.help.color',
                 token: 'button.text.help.color',
                 variable: '--p-button-text-help-color',
                 description: 'Help color of text'
             },
             {
-                name: 'button.danger.hoverBackground',
+                name: 'button.text.danger.hoverBackground',
                 token: 'button.text.danger.hover.background',
                 variable: '--p-button-text-danger-hover-background',
                 description: 'Danger hover background of text'
             },
             {
-                name: 'button.danger.activeBackground',
+                name: 'button.text.danger.activeBackground',
                 token: 'button.text.danger.active.background',
                 variable: '--p-button-text-danger-active-background',
                 description: 'Danger active background of text'
             },
             {
-                name: 'button.danger.color',
+                name: 'button.text.danger.color',
                 token: 'button.text.danger.color',
                 variable: '--p-button-text-danger-color',
                 description: 'Danger color of text'
             },
             {
-                name: 'button.contrast.hoverBackground',
+                name: 'button.text.contrast.hoverBackground',
                 token: 'button.text.contrast.hover.background',
                 variable: '--p-button-text-contrast-hover-background',
                 description: 'Contrast hover background of text'
             },
             {
-                name: 'button.contrast.activeBackground',
+                name: 'button.text.contrast.activeBackground',
                 token: 'button.text.contrast.active.background',
                 variable: '--p-button-text-contrast-active-background',
                 description: 'Contrast active background of text'
             },
             {
-                name: 'button.contrast.color',
+                name: 'button.text.contrast.color',
                 token: 'button.text.contrast.color',
                 variable: '--p-button-text-contrast-color',
                 description: 'Contrast color of text'
             },
             {
-                name: 'button.plain.hoverBackground',
+                name: 'button.text.plain.hoverBackground',
                 token: 'button.text.plain.hover.background',
                 variable: '--p-button-text-plain-hover-background',
                 description: 'Plain hover background of text'
             },
             {
-                name: 'button.plain.activeBackground',
+                name: 'button.text.plain.activeBackground',
                 token: 'button.text.plain.active.background',
                 variable: '--p-button-text-plain-active-background',
                 description: 'Plain active background of text'
             },
             {
-                name: 'button.plain.color',
+                name: 'button.text.plain.color',
                 token: 'button.text.plain.color',
                 variable: '--p-button-text-plain-color',
                 description: 'Plain color of text'
@@ -2282,31 +2282,31 @@ export default {
                 description: 'Border radius of indicator'
             },
             {
-                name: 'carousel.focusRing.width',
+                name: 'carousel.indicator.focusRing.width',
                 token: 'carousel.indicator.focus.ring.width',
                 variable: '--p-carousel-indicator-focus-ring-width',
                 description: 'Focus ring width of indicator'
             },
             {
-                name: 'carousel.focusRing.style',
+                name: 'carousel.indicator.focusRing.style',
                 token: 'carousel.indicator.focus.ring.style',
                 variable: '--p-carousel-indicator-focus-ring-style',
                 description: 'Focus ring style of indicator'
             },
             {
-                name: 'carousel.focusRing.color',
+                name: 'carousel.indicator.focusRing.color',
                 token: 'carousel.indicator.focus.ring.color',
                 variable: '--p-carousel-indicator-focus-ring-color',
                 description: 'Focus ring color of indicator'
             },
             {
-                name: 'carousel.focusRing.offset',
+                name: 'carousel.indicator.focusRing.offset',
                 token: 'carousel.indicator.focus.ring.offset',
                 variable: '--p-carousel-indicator-focus-ring-offset',
                 description: 'Focus ring offset of indicator'
             },
             {
-                name: 'carousel.focusRing.shadow',
+                name: 'carousel.indicator.focusRing.shadow',
                 token: 'carousel.indicator.focus.ring.shadow',
                 variable: '--p-carousel-indicator-focus-ring-shadow',
                 description: 'Focus ring shadow of indicator'
@@ -2437,31 +2437,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'cascadeselect.focusRing.width',
+                name: 'cascadeselect.root.focusRing.width',
                 token: 'cascadeselect.focus.ring.width',
                 variable: '--p-cascadeselect-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'cascadeselect.focusRing.style',
+                name: 'cascadeselect.root.focusRing.style',
                 token: 'cascadeselect.focus.ring.style',
                 variable: '--p-cascadeselect-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'cascadeselect.focusRing.color',
+                name: 'cascadeselect.root.focusRing.color',
                 token: 'cascadeselect.focus.ring.color',
                 variable: '--p-cascadeselect-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'cascadeselect.focusRing.offset',
+                name: 'cascadeselect.root.focusRing.offset',
                 token: 'cascadeselect.focus.ring.offset',
                 variable: '--p-cascadeselect-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'cascadeselect.focusRing.shadow',
+                name: 'cascadeselect.root.focusRing.shadow',
                 token: 'cascadeselect.focus.ring.shadow',
                 variable: '--p-cascadeselect-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -2473,37 +2473,37 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'cascadeselect.sm.fontSize',
+                name: 'cascadeselect.root.sm.fontSize',
                 token: 'cascadeselect.sm.font.size',
                 variable: '--p-cascadeselect-sm-font-size',
                 description: 'Sm font size of root'
             },
             {
-                name: 'cascadeselect.sm.paddingX',
+                name: 'cascadeselect.root.sm.paddingX',
                 token: 'cascadeselect.sm.padding.x',
                 variable: '--p-cascadeselect-sm-padding-x',
                 description: 'Sm padding x of root'
             },
             {
-                name: 'cascadeselect.sm.paddingY',
+                name: 'cascadeselect.root.sm.paddingY',
                 token: 'cascadeselect.sm.padding.y',
                 variable: '--p-cascadeselect-sm-padding-y',
                 description: 'Sm padding y of root'
             },
             {
-                name: 'cascadeselect.lg.fontSize',
+                name: 'cascadeselect.root.lg.fontSize',
                 token: 'cascadeselect.lg.font.size',
                 variable: '--p-cascadeselect-lg-font-size',
                 description: 'Lg font size of root'
             },
             {
-                name: 'cascadeselect.lg.paddingX',
+                name: 'cascadeselect.root.lg.paddingX',
                 token: 'cascadeselect.lg.padding.x',
                 variable: '--p-cascadeselect-lg-padding-x',
                 description: 'Lg padding x of root'
             },
             {
-                name: 'cascadeselect.lg.paddingY',
+                name: 'cascadeselect.root.lg.paddingY',
                 token: 'cascadeselect.lg.padding.y',
                 variable: '--p-cascadeselect-lg-padding-y',
                 description: 'Lg padding y of root'
@@ -2623,19 +2623,19 @@ export default {
                 description: 'Border radius of option'
             },
             {
-                name: 'cascadeselect.icon.color',
+                name: 'cascadeselect.option.icon.color',
                 token: 'cascadeselect.option.icon.color',
                 variable: '--p-cascadeselect-option-icon-color',
                 description: 'Icon color of option'
             },
             {
-                name: 'cascadeselect.icon.focusColor',
+                name: 'cascadeselect.option.icon.focusColor',
                 token: 'cascadeselect.option.icon.focus.color',
                 variable: '--p-cascadeselect-option-icon-focus-color',
                 description: 'Icon focus color of option'
             },
             {
-                name: 'cascadeselect.icon.size',
+                name: 'cascadeselect.option.icon.size',
                 token: 'cascadeselect.option.icon.size',
                 variable: '--p-cascadeselect-option-icon-size',
                 description: 'Icon size of option'
@@ -2754,31 +2754,31 @@ export default {
                 description: 'Shadow of root'
             },
             {
-                name: 'checkbox.focusRing.width',
+                name: 'checkbox.root.focusRing.width',
                 token: 'checkbox.focus.ring.width',
                 variable: '--p-checkbox-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'checkbox.focusRing.style',
+                name: 'checkbox.root.focusRing.style',
                 token: 'checkbox.focus.ring.style',
                 variable: '--p-checkbox-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'checkbox.focusRing.color',
+                name: 'checkbox.root.focusRing.color',
                 token: 'checkbox.focus.ring.color',
                 variable: '--p-checkbox-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'checkbox.focusRing.offset',
+                name: 'checkbox.root.focusRing.offset',
                 token: 'checkbox.focus.ring.offset',
                 variable: '--p-checkbox-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'checkbox.focusRing.shadow',
+                name: 'checkbox.root.focusRing.shadow',
                 token: 'checkbox.focus.ring.shadow',
                 variable: '--p-checkbox-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -2790,25 +2790,25 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'checkbox.sm.width',
+                name: 'checkbox.root.sm.width',
                 token: 'checkbox.sm.width',
                 variable: '--p-checkbox-sm-width',
                 description: 'Sm width of root'
             },
             {
-                name: 'checkbox.sm.height',
+                name: 'checkbox.root.sm.height',
                 token: 'checkbox.sm.height',
                 variable: '--p-checkbox-sm-height',
                 description: 'Sm height of root'
             },
             {
-                name: 'checkbox.lg.width',
+                name: 'checkbox.root.lg.width',
                 token: 'checkbox.lg.width',
                 variable: '--p-checkbox-lg-width',
                 description: 'Lg width of root'
             },
             {
-                name: 'checkbox.lg.height',
+                name: 'checkbox.root.lg.height',
                 token: 'checkbox.lg.height',
                 variable: '--p-checkbox-lg-height',
                 description: 'Lg height of root'
@@ -2844,13 +2844,13 @@ export default {
                 description: 'Disabled color of icon'
             },
             {
-                name: 'checkbox.sm.size',
+                name: 'checkbox.icon.sm.size',
                 token: 'checkbox.icon.sm.size',
                 variable: '--p-checkbox-icon-sm-size',
                 description: 'Sm size of icon'
             },
             {
-                name: 'checkbox.lg.size',
+                name: 'checkbox.icon.lg.size',
                 token: 'checkbox.icon.lg.size',
                 variable: '--p-checkbox-icon-lg-size',
                 description: 'Lg size of icon'
@@ -2933,31 +2933,31 @@ export default {
                 description: 'Size of remove icon'
             },
             {
-                name: 'chip.focusRing.width',
+                name: 'chip.removeIcon.focusRing.width',
                 token: 'chip.remove.icon.focus.ring.width',
                 variable: '--p-chip-remove-icon-focus-ring-width',
                 description: 'Focus ring width of remove icon'
             },
             {
-                name: 'chip.focusRing.style',
+                name: 'chip.removeIcon.focusRing.style',
                 token: 'chip.remove.icon.focus.ring.style',
                 variable: '--p-chip-remove-icon-focus-ring-style',
                 description: 'Focus ring style of remove icon'
             },
             {
-                name: 'chip.focusRing.color',
+                name: 'chip.removeIcon.focusRing.color',
                 token: 'chip.remove.icon.focus.ring.color',
                 variable: '--p-chip-remove-icon-focus-ring-color',
                 description: 'Focus ring color of remove icon'
             },
             {
-                name: 'chip.focusRing.offset',
+                name: 'chip.removeIcon.focusRing.offset',
                 token: 'chip.remove.icon.focus.ring.offset',
                 variable: '--p-chip-remove-icon-focus-ring-offset',
                 description: 'Focus ring offset of remove icon'
             },
             {
-                name: 'chip.focusRing.shadow',
+                name: 'chip.removeIcon.focusRing.shadow',
                 token: 'chip.remove.icon.focus.ring.shadow',
                 variable: '--p-chip-remove-icon-focus-ring-shadow',
                 description: 'Focus ring shadow of remove icon'
@@ -2998,31 +2998,31 @@ export default {
                 description: 'Border radius of preview'
             },
             {
-                name: 'colorpicker.focusRing.width',
+                name: 'colorpicker.preview.focusRing.width',
                 token: 'colorpicker.preview.focus.ring.width',
                 variable: '--p-colorpicker-preview-focus-ring-width',
                 description: 'Focus ring width of preview'
             },
             {
-                name: 'colorpicker.focusRing.style',
+                name: 'colorpicker.preview.focusRing.style',
                 token: 'colorpicker.preview.focus.ring.style',
                 variable: '--p-colorpicker-preview-focus-ring-style',
                 description: 'Focus ring style of preview'
             },
             {
-                name: 'colorpicker.focusRing.color',
+                name: 'colorpicker.preview.focusRing.color',
                 token: 'colorpicker.preview.focus.ring.color',
                 variable: '--p-colorpicker-preview-focus-ring-color',
                 description: 'Focus ring color of preview'
             },
             {
-                name: 'colorpicker.focusRing.offset',
+                name: 'colorpicker.preview.focusRing.offset',
                 token: 'colorpicker.preview.focus.ring.offset',
                 variable: '--p-colorpicker-preview-focus-ring-offset',
                 description: 'Focus ring offset of preview'
             },
             {
-                name: 'colorpicker.focusRing.shadow',
+                name: 'colorpicker.preview.focusRing.shadow',
                 token: 'colorpicker.preview.focus.ring.shadow',
                 variable: '--p-colorpicker-preview-focus-ring-shadow',
                 description: 'Focus ring shadow of preview'
@@ -3265,19 +3265,19 @@ export default {
                 description: 'Gap of item'
             },
             {
-                name: 'contextmenu.icon.color',
+                name: 'contextmenu.item.icon.color',
                 token: 'contextmenu.item.icon.color',
                 variable: '--p-contextmenu-item-icon-color',
                 description: 'Icon color of item'
             },
             {
-                name: 'contextmenu.icon.focusColor',
+                name: 'contextmenu.item.icon.focusColor',
                 token: 'contextmenu.item.icon.focus.color',
                 variable: '--p-contextmenu-item-icon-focus-color',
                 description: 'Icon focus color of item'
             },
             {
-                name: 'contextmenu.icon.activeColor',
+                name: 'contextmenu.item.icon.activeColor',
                 token: 'contextmenu.item.icon.active.color',
                 variable: '--p-contextmenu-item-icon-active-color',
                 description: 'Icon active color of item'
@@ -3366,13 +3366,13 @@ export default {
                 description: 'Padding of header'
             },
             {
-                name: 'datatable.sm.padding',
+                name: 'datatable.header.sm.padding',
                 token: 'datatable.header.sm.padding',
                 variable: '--p-datatable-header-sm-padding',
                 description: 'Sm padding of header'
             },
             {
-                name: 'datatable.lg.padding',
+                name: 'datatable.header.lg.padding',
                 token: 'datatable.header.lg.padding',
                 variable: '--p-datatable-header-lg-padding',
                 description: 'Lg padding of header'
@@ -3432,43 +3432,43 @@ export default {
                 description: 'Padding of header cell'
             },
             {
-                name: 'datatable.focusRing.width',
+                name: 'datatable.headerCell.focusRing.width',
                 token: 'datatable.header.cell.focus.ring.width',
                 variable: '--p-datatable-header-cell-focus-ring-width',
                 description: 'Focus ring width of header cell'
             },
             {
-                name: 'datatable.focusRing.style',
+                name: 'datatable.headerCell.focusRing.style',
                 token: 'datatable.header.cell.focus.ring.style',
                 variable: '--p-datatable-header-cell-focus-ring-style',
                 description: 'Focus ring style of header cell'
             },
             {
-                name: 'datatable.focusRing.color',
+                name: 'datatable.headerCell.focusRing.color',
                 token: 'datatable.header.cell.focus.ring.color',
                 variable: '--p-datatable-header-cell-focus-ring-color',
                 description: 'Focus ring color of header cell'
             },
             {
-                name: 'datatable.focusRing.offset',
+                name: 'datatable.headerCell.focusRing.offset',
                 token: 'datatable.header.cell.focus.ring.offset',
                 variable: '--p-datatable-header-cell-focus-ring-offset',
                 description: 'Focus ring offset of header cell'
             },
             {
-                name: 'datatable.focusRing.shadow',
+                name: 'datatable.headerCell.focusRing.shadow',
                 token: 'datatable.header.cell.focus.ring.shadow',
                 variable: '--p-datatable-header-cell-focus-ring-shadow',
                 description: 'Focus ring shadow of header cell'
             },
             {
-                name: 'datatable.sm.padding',
+                name: 'datatable.headerCell.sm.padding',
                 token: 'datatable.header.cell.sm.padding',
                 variable: '--p-datatable-header-cell-sm-padding',
                 description: 'Sm padding of header cell'
             },
             {
-                name: 'datatable.lg.padding',
+                name: 'datatable.headerCell.lg.padding',
                 token: 'datatable.header.cell.lg.padding',
                 variable: '--p-datatable-header-cell-lg-padding',
                 description: 'Lg padding of header cell'
@@ -3516,31 +3516,31 @@ export default {
                 description: 'Selected color of row'
             },
             {
-                name: 'datatable.focusRing.width',
+                name: 'datatable.row.focusRing.width',
                 token: 'datatable.row.focus.ring.width',
                 variable: '--p-datatable-row-focus-ring-width',
                 description: 'Focus ring width of row'
             },
             {
-                name: 'datatable.focusRing.style',
+                name: 'datatable.row.focusRing.style',
                 token: 'datatable.row.focus.ring.style',
                 variable: '--p-datatable-row-focus-ring-style',
                 description: 'Focus ring style of row'
             },
             {
-                name: 'datatable.focusRing.color',
+                name: 'datatable.row.focusRing.color',
                 token: 'datatable.row.focus.ring.color',
                 variable: '--p-datatable-row-focus-ring-color',
                 description: 'Focus ring color of row'
             },
             {
-                name: 'datatable.focusRing.offset',
+                name: 'datatable.row.focusRing.offset',
                 token: 'datatable.row.focus.ring.offset',
                 variable: '--p-datatable-row-focus-ring-offset',
                 description: 'Focus ring offset of row'
             },
             {
-                name: 'datatable.focusRing.shadow',
+                name: 'datatable.row.focusRing.shadow',
                 token: 'datatable.row.focus.ring.shadow',
                 variable: '--p-datatable-row-focus-ring-shadow',
                 description: 'Focus ring shadow of row'
@@ -3564,13 +3564,13 @@ export default {
                 description: 'Padding of body cell'
             },
             {
-                name: 'datatable.sm.padding',
+                name: 'datatable.bodyCell.sm.padding',
                 token: 'datatable.body.cell.sm.padding',
                 variable: '--p-datatable-body-cell-sm-padding',
                 description: 'Sm padding of body cell'
             },
             {
-                name: 'datatable.lg.padding',
+                name: 'datatable.bodyCell.lg.padding',
                 token: 'datatable.body.cell.lg.padding',
                 variable: '--p-datatable-body-cell-lg-padding',
                 description: 'Lg padding of body cell'
@@ -3606,13 +3606,13 @@ export default {
                 description: 'Padding of footer cell'
             },
             {
-                name: 'datatable.sm.padding',
+                name: 'datatable.footerCell.sm.padding',
                 token: 'datatable.footer.cell.sm.padding',
                 variable: '--p-datatable-footer-cell-sm-padding',
                 description: 'Sm padding of footer cell'
             },
             {
-                name: 'datatable.lg.padding',
+                name: 'datatable.footerCell.lg.padding',
                 token: 'datatable.footer.cell.lg.padding',
                 variable: '--p-datatable-footer-cell-lg-padding',
                 description: 'Lg padding of footer cell'
@@ -3654,13 +3654,13 @@ export default {
                 description: 'Padding of footer'
             },
             {
-                name: 'datatable.sm.padding',
+                name: 'datatable.footer.sm.padding',
                 token: 'datatable.footer.sm.padding',
                 variable: '--p-datatable-footer-sm-padding',
                 description: 'Sm padding of footer'
             },
             {
-                name: 'datatable.lg.padding',
+                name: 'datatable.footer.lg.padding',
                 token: 'datatable.footer.lg.padding',
                 variable: '--p-datatable-footer-lg-padding',
                 description: 'Lg padding of footer'
@@ -3756,31 +3756,31 @@ export default {
                 description: 'Border radius of row toggle button'
             },
             {
-                name: 'datatable.focusRing.width',
+                name: 'datatable.rowToggleButton.focusRing.width',
                 token: 'datatable.row.toggle.button.focus.ring.width',
                 variable: '--p-datatable-row-toggle-button-focus-ring-width',
                 description: 'Focus ring width of row toggle button'
             },
             {
-                name: 'datatable.focusRing.style',
+                name: 'datatable.rowToggleButton.focusRing.style',
                 token: 'datatable.row.toggle.button.focus.ring.style',
                 variable: '--p-datatable-row-toggle-button-focus-ring-style',
                 description: 'Focus ring style of row toggle button'
             },
             {
-                name: 'datatable.focusRing.color',
+                name: 'datatable.rowToggleButton.focusRing.color',
                 token: 'datatable.row.toggle.button.focus.ring.color',
                 variable: '--p-datatable-row-toggle-button-focus-ring-color',
                 description: 'Focus ring color of row toggle button'
             },
             {
-                name: 'datatable.focusRing.offset',
+                name: 'datatable.rowToggleButton.focusRing.offset',
                 token: 'datatable.row.toggle.button.focus.ring.offset',
                 variable: '--p-datatable-row-toggle-button-focus-ring-offset',
                 description: 'Focus ring offset of row toggle button'
             },
             {
-                name: 'datatable.focusRing.shadow',
+                name: 'datatable.rowToggleButton.focusRing.shadow',
                 token: 'datatable.row.toggle.button.focus.ring.shadow',
                 variable: '--p-datatable-row-toggle-button-focus-ring-shadow',
                 description: 'Focus ring shadow of row toggle button'
@@ -3792,151 +3792,151 @@ export default {
                 description: 'Inline gap of filter'
             },
             {
-                name: 'datatable.overlaySelect.background',
+                name: 'datatable.filter.overlaySelect.background',
                 token: 'datatable.filter.overlay.select.background',
                 variable: '--p-datatable-filter-overlay-select-background',
                 description: 'Overlay select background of filter'
             },
             {
-                name: 'datatable.overlaySelect.borderColor',
+                name: 'datatable.filter.overlaySelect.borderColor',
                 token: 'datatable.filter.overlay.select.border.color',
                 variable: '--p-datatable-filter-overlay-select-border-color',
                 description: 'Overlay select border color of filter'
             },
             {
-                name: 'datatable.overlaySelect.borderRadius',
+                name: 'datatable.filter.overlaySelect.borderRadius',
                 token: 'datatable.filter.overlay.select.border.radius',
                 variable: '--p-datatable-filter-overlay-select-border-radius',
                 description: 'Overlay select border radius of filter'
             },
             {
-                name: 'datatable.overlaySelect.color',
+                name: 'datatable.filter.overlaySelect.color',
                 token: 'datatable.filter.overlay.select.color',
                 variable: '--p-datatable-filter-overlay-select-color',
                 description: 'Overlay select color of filter'
             },
             {
-                name: 'datatable.overlaySelect.shadow',
+                name: 'datatable.filter.overlaySelect.shadow',
                 token: 'datatable.filter.overlay.select.shadow',
                 variable: '--p-datatable-filter-overlay-select-shadow',
                 description: 'Overlay select shadow of filter'
             },
             {
-                name: 'datatable.overlayPopover.background',
+                name: 'datatable.filter.overlayPopover.background',
                 token: 'datatable.filter.overlay.popover.background',
                 variable: '--p-datatable-filter-overlay-popover-background',
                 description: 'Overlay popover background of filter'
             },
             {
-                name: 'datatable.overlayPopover.borderColor',
+                name: 'datatable.filter.overlayPopover.borderColor',
                 token: 'datatable.filter.overlay.popover.border.color',
                 variable: '--p-datatable-filter-overlay-popover-border-color',
                 description: 'Overlay popover border color of filter'
             },
             {
-                name: 'datatable.overlayPopover.borderRadius',
+                name: 'datatable.filter.overlayPopover.borderRadius',
                 token: 'datatable.filter.overlay.popover.border.radius',
                 variable: '--p-datatable-filter-overlay-popover-border-radius',
                 description: 'Overlay popover border radius of filter'
             },
             {
-                name: 'datatable.overlayPopover.color',
+                name: 'datatable.filter.overlayPopover.color',
                 token: 'datatable.filter.overlay.popover.color',
                 variable: '--p-datatable-filter-overlay-popover-color',
                 description: 'Overlay popover color of filter'
             },
             {
-                name: 'datatable.overlayPopover.shadow',
+                name: 'datatable.filter.overlayPopover.shadow',
                 token: 'datatable.filter.overlay.popover.shadow',
                 variable: '--p-datatable-filter-overlay-popover-shadow',
                 description: 'Overlay popover shadow of filter'
             },
             {
-                name: 'datatable.overlayPopover.padding',
+                name: 'datatable.filter.overlayPopover.padding',
                 token: 'datatable.filter.overlay.popover.padding',
                 variable: '--p-datatable-filter-overlay-popover-padding',
                 description: 'Overlay popover padding of filter'
             },
             {
-                name: 'datatable.overlayPopover.gap',
+                name: 'datatable.filter.overlayPopover.gap',
                 token: 'datatable.filter.overlay.popover.gap',
                 variable: '--p-datatable-filter-overlay-popover-gap',
                 description: 'Overlay popover gap of filter'
             },
             {
-                name: 'datatable.rule.borderColor',
+                name: 'datatable.filter.rule.borderColor',
                 token: 'datatable.filter.rule.border.color',
                 variable: '--p-datatable-filter-rule-border-color',
                 description: 'Rule border color of filter'
             },
             {
-                name: 'datatable.constraintList.padding',
+                name: 'datatable.filter.constraintList.padding',
                 token: 'datatable.filter.constraint.list.padding',
                 variable: '--p-datatable-filter-constraint-list-padding',
                 description: 'Constraint list padding of filter'
             },
             {
-                name: 'datatable.constraintList.gap',
+                name: 'datatable.filter.constraintList.gap',
                 token: 'datatable.filter.constraint.list.gap',
                 variable: '--p-datatable-filter-constraint-list-gap',
                 description: 'Constraint list gap of filter'
             },
             {
-                name: 'datatable.constraint.focusBackground',
+                name: 'datatable.filter.constraint.focusBackground',
                 token: 'datatable.filter.constraint.focus.background',
                 variable: '--p-datatable-filter-constraint-focus-background',
                 description: 'Constraint focus background of filter'
             },
             {
-                name: 'datatable.constraint.selectedBackground',
+                name: 'datatable.filter.constraint.selectedBackground',
                 token: 'datatable.filter.constraint.selected.background',
                 variable: '--p-datatable-filter-constraint-selected-background',
                 description: 'Constraint selected background of filter'
             },
             {
-                name: 'datatable.constraint.selectedFocusBackground',
+                name: 'datatable.filter.constraint.selectedFocusBackground',
                 token: 'datatable.filter.constraint.selected.focus.background',
                 variable: '--p-datatable-filter-constraint-selected-focus-background',
                 description: 'Constraint selected focus background of filter'
             },
             {
-                name: 'datatable.constraint.color',
+                name: 'datatable.filter.constraint.color',
                 token: 'datatable.filter.constraint.color',
                 variable: '--p-datatable-filter-constraint-color',
                 description: 'Constraint color of filter'
             },
             {
-                name: 'datatable.constraint.focusColor',
+                name: 'datatable.filter.constraint.focusColor',
                 token: 'datatable.filter.constraint.focus.color',
                 variable: '--p-datatable-filter-constraint-focus-color',
                 description: 'Constraint focus color of filter'
             },
             {
-                name: 'datatable.constraint.selectedColor',
+                name: 'datatable.filter.constraint.selectedColor',
                 token: 'datatable.filter.constraint.selected.color',
                 variable: '--p-datatable-filter-constraint-selected-color',
                 description: 'Constraint selected color of filter'
             },
             {
-                name: 'datatable.constraint.selectedFocusColor',
+                name: 'datatable.filter.constraint.selectedFocusColor',
                 token: 'datatable.filter.constraint.selected.focus.color',
                 variable: '--p-datatable-filter-constraint-selected-focus-color',
                 description: 'Constraint selected focus color of filter'
             },
             {
-                name: 'datatable.separator.borderColor',
+                name: 'datatable.filter.constraint.separator.borderColor',
                 token: 'datatable.filter.constraint.separator.border.color',
                 variable: '--p-datatable-filter-constraint-separator-border-color',
                 description: 'Constraint separator border color of filter'
             },
             {
-                name: 'datatable.constraint.padding',
+                name: 'datatable.filter.constraint.padding',
                 token: 'datatable.filter.constraint.padding',
                 variable: '--p-datatable-filter-constraint-padding',
                 description: 'Constraint padding of filter'
             },
             {
-                name: 'datatable.constraint.borderRadius',
+                name: 'datatable.filter.constraint.borderRadius',
                 token: 'datatable.filter.constraint.border.radius',
                 variable: '--p-datatable-filter-constraint-border-radius',
                 description: 'Constraint border radius of filter'
@@ -4216,13 +4216,13 @@ export default {
                 description: 'Width of dropdown'
             },
             {
-                name: 'datepicker.sm.width',
+                name: 'datepicker.dropdown.sm.width',
                 token: 'datepicker.dropdown.sm.width',
                 variable: '--p-datepicker-dropdown-sm-width',
                 description: 'Sm width of dropdown'
             },
             {
-                name: 'datepicker.lg.width',
+                name: 'datepicker.dropdown.lg.width',
                 token: 'datepicker.dropdown.lg.width',
                 variable: '--p-datepicker-dropdown-lg-width',
                 description: 'Lg width of dropdown'
@@ -4252,31 +4252,31 @@ export default {
                 description: 'Border radius of dropdown'
             },
             {
-                name: 'datepicker.focusRing.width',
+                name: 'datepicker.dropdown.focusRing.width',
                 token: 'datepicker.dropdown.focus.ring.width',
                 variable: '--p-datepicker-dropdown-focus-ring-width',
                 description: 'Focus ring width of dropdown'
             },
             {
-                name: 'datepicker.focusRing.style',
+                name: 'datepicker.dropdown.focusRing.style',
                 token: 'datepicker.dropdown.focus.ring.style',
                 variable: '--p-datepicker-dropdown-focus-ring-style',
                 description: 'Focus ring style of dropdown'
             },
             {
-                name: 'datepicker.focusRing.color',
+                name: 'datepicker.dropdown.focusRing.color',
                 token: 'datepicker.dropdown.focus.ring.color',
                 variable: '--p-datepicker-dropdown-focus-ring-color',
                 description: 'Focus ring color of dropdown'
             },
             {
-                name: 'datepicker.focusRing.offset',
+                name: 'datepicker.dropdown.focusRing.offset',
                 token: 'datepicker.dropdown.focus.ring.offset',
                 variable: '--p-datepicker-dropdown-focus-ring-offset',
                 description: 'Focus ring offset of dropdown'
             },
             {
-                name: 'datepicker.focusRing.shadow',
+                name: 'datepicker.dropdown.focusRing.shadow',
                 token: 'datepicker.dropdown.focus.ring.shadow',
                 variable: '--p-datepicker-dropdown-focus-ring-shadow',
                 description: 'Focus ring shadow of dropdown'
@@ -4486,31 +4486,31 @@ export default {
                 description: 'Padding of date'
             },
             {
-                name: 'datepicker.focusRing.width',
+                name: 'datepicker.date.focusRing.width',
                 token: 'datepicker.date.focus.ring.width',
                 variable: '--p-datepicker-date-focus-ring-width',
                 description: 'Focus ring width of date'
             },
             {
-                name: 'datepicker.focusRing.style',
+                name: 'datepicker.date.focusRing.style',
                 token: 'datepicker.date.focus.ring.style',
                 variable: '--p-datepicker-date-focus-ring-style',
                 description: 'Focus ring style of date'
             },
             {
-                name: 'datepicker.focusRing.color',
+                name: 'datepicker.date.focusRing.color',
                 token: 'datepicker.date.focus.ring.color',
                 variable: '--p-datepicker-date-focus-ring-color',
                 description: 'Focus ring color of date'
             },
             {
-                name: 'datepicker.focusRing.offset',
+                name: 'datepicker.date.focusRing.offset',
                 token: 'datepicker.date.focus.ring.offset',
                 variable: '--p-datepicker-date-focus-ring-offset',
                 description: 'Focus ring offset of date'
             },
             {
-                name: 'datepicker.focusRing.shadow',
+                name: 'datepicker.date.focusRing.shadow',
                 token: 'datepicker.date.focus.ring.shadow',
                 variable: '--p-datepicker-date-focus-ring-shadow',
                 description: 'Focus ring shadow of date'
@@ -4712,7 +4712,7 @@ export default {
                 description: 'Padding of horizontal'
             },
             {
-                name: 'divider.content.padding',
+                name: 'divider.horizontal.content.padding',
                 token: 'divider.horizontal.content.padding',
                 variable: '--p-divider-horizontal-content-padding',
                 description: 'Content padding of horizontal'
@@ -4730,7 +4730,7 @@ export default {
                 description: 'Padding of vertical'
             },
             {
-                name: 'divider.content.padding',
+                name: 'divider.vertical.content.padding',
                 token: 'divider.vertical.content.padding',
                 variable: '--p-divider-vertical-content-padding',
                 description: 'Content padding of vertical'
@@ -4783,31 +4783,31 @@ export default {
                 description: 'Size of item'
             },
             {
-                name: 'dock.focusRing.width',
+                name: 'dock.item.focusRing.width',
                 token: 'dock.item.focus.ring.width',
                 variable: '--p-dock-item-focus-ring-width',
                 description: 'Focus ring width of item'
             },
             {
-                name: 'dock.focusRing.style',
+                name: 'dock.item.focusRing.style',
                 token: 'dock.item.focus.ring.style',
                 variable: '--p-dock-item-focus-ring-style',
                 description: 'Focus ring style of item'
             },
             {
-                name: 'dock.focusRing.color',
+                name: 'dock.item.focusRing.color',
                 token: 'dock.item.focus.ring.color',
                 variable: '--p-dock-item-focus-ring-color',
                 description: 'Focus ring color of item'
             },
             {
-                name: 'dock.focusRing.offset',
+                name: 'dock.item.focusRing.offset',
                 token: 'dock.item.focus.ring.offset',
                 variable: '--p-dock-item-focus-ring-offset',
                 description: 'Focus ring offset of item'
             },
             {
-                name: 'dock.focusRing.shadow',
+                name: 'dock.item.focusRing.shadow',
                 token: 'dock.item.focus.ring.shadow',
                 variable: '--p-dock-item-focus-ring-shadow',
                 description: 'Focus ring shadow of item'
@@ -5110,31 +5110,31 @@ export default {
                 description: 'Font weight of legend'
             },
             {
-                name: 'fieldset.focusRing.width',
+                name: 'fieldset.legend.focusRing.width',
                 token: 'fieldset.legend.focus.ring.width',
                 variable: '--p-fieldset-legend-focus-ring-width',
                 description: 'Focus ring width of legend'
             },
             {
-                name: 'fieldset.focusRing.style',
+                name: 'fieldset.legend.focusRing.style',
                 token: 'fieldset.legend.focus.ring.style',
                 variable: '--p-fieldset-legend-focus-ring-style',
                 description: 'Focus ring style of legend'
             },
             {
-                name: 'fieldset.focusRing.color',
+                name: 'fieldset.legend.focusRing.color',
                 token: 'fieldset.legend.focus.ring.color',
                 variable: '--p-fieldset-legend-focus-ring-color',
                 description: 'Focus ring color of legend'
             },
             {
-                name: 'fieldset.focusRing.offset',
+                name: 'fieldset.legend.focusRing.offset',
                 token: 'fieldset.legend.focus.ring.offset',
                 variable: '--p-fieldset-legend-focus-ring-offset',
                 description: 'Focus ring offset of legend'
             },
             {
-                name: 'fieldset.focusRing.shadow',
+                name: 'fieldset.legend.focusRing.shadow',
                 token: 'fieldset.legend.focus.ring.shadow',
                 variable: '--p-fieldset-legend-focus-ring-shadow',
                 description: 'Focus ring shadow of legend'
@@ -5271,7 +5271,7 @@ export default {
                 description: 'Border color of file'
             },
             {
-                name: 'fileupload.info.gap',
+                name: 'fileupload.file.info.gap',
                 token: 'fileupload.file.info.gap',
                 variable: '--p-fileupload-file-info-gap',
                 description: 'Info gap of file'
@@ -5348,37 +5348,37 @@ export default {
                 description: 'Font weight of root'
             },
             {
-                name: 'floatlabel.active.fontSize',
+                name: 'floatlabel.root.active.fontSize',
                 token: 'floatlabel.active.font.size',
                 variable: '--p-floatlabel-active-font-size',
                 description: 'Active font size of root'
             },
             {
-                name: 'floatlabel.active.fontWeight',
+                name: 'floatlabel.root.active.fontWeight',
                 token: 'floatlabel.active.font.weight',
                 variable: '--p-floatlabel-active-font-weight',
                 description: 'Active font weight of root'
             },
             {
-                name: 'floatlabel.active.top',
+                name: 'floatlabel.over.active.top',
                 token: 'floatlabel.over.active.top',
                 variable: '--p-floatlabel-over-active-top',
                 description: 'Active top of over'
             },
             {
-                name: 'floatlabel.input.paddingTop',
+                name: 'floatlabel.in.input.paddingTop',
                 token: 'floatlabel.in.input.padding.top',
                 variable: '--p-floatlabel-in-input-padding-top',
                 description: 'Input padding top of in'
             },
             {
-                name: 'floatlabel.input.paddingBottom',
+                name: 'floatlabel.in.input.paddingBottom',
                 token: 'floatlabel.in.input.padding.bottom',
                 variable: '--p-floatlabel-in-input-padding-bottom',
                 description: 'Input padding bottom of in'
             },
             {
-                name: 'floatlabel.active.top',
+                name: 'floatlabel.in.active.top',
                 token: 'floatlabel.in.active.top',
                 variable: '--p-floatlabel-in-active-top',
                 description: 'Active top of in'
@@ -5390,13 +5390,13 @@ export default {
                 description: 'Border radius of on'
             },
             {
-                name: 'floatlabel.active.background',
+                name: 'floatlabel.on.active.background',
                 token: 'floatlabel.on.active.background',
                 variable: '--p-floatlabel-on-active-background',
                 description: 'Active background of on'
             },
             {
-                name: 'floatlabel.active.padding',
+                name: 'floatlabel.on.active.padding',
                 token: 'floatlabel.on.active.padding',
                 variable: '--p-floatlabel-on-active-padding',
                 description: 'Active padding of on'
@@ -5467,43 +5467,43 @@ export default {
                 description: 'Gutter of nav button'
             },
             {
-                name: 'galleria.prev.borderRadius',
+                name: 'galleria.navButton.prev.borderRadius',
                 token: 'galleria.nav.button.prev.border.radius',
                 variable: '--p-galleria-nav-button-prev-border-radius',
                 description: 'Prev border radius of nav button'
             },
             {
-                name: 'galleria.next.borderRadius',
+                name: 'galleria.navButton.next.borderRadius',
                 token: 'galleria.nav.button.next.border.radius',
                 variable: '--p-galleria-nav-button-next-border-radius',
                 description: 'Next border radius of nav button'
             },
             {
-                name: 'galleria.focusRing.width',
+                name: 'galleria.navButton.focusRing.width',
                 token: 'galleria.nav.button.focus.ring.width',
                 variable: '--p-galleria-nav-button-focus-ring-width',
                 description: 'Focus ring width of nav button'
             },
             {
-                name: 'galleria.focusRing.style',
+                name: 'galleria.navButton.focusRing.style',
                 token: 'galleria.nav.button.focus.ring.style',
                 variable: '--p-galleria-nav-button-focus-ring-style',
                 description: 'Focus ring style of nav button'
             },
             {
-                name: 'galleria.focusRing.color',
+                name: 'galleria.navButton.focusRing.color',
                 token: 'galleria.nav.button.focus.ring.color',
                 variable: '--p-galleria-nav-button-focus-ring-color',
                 description: 'Focus ring color of nav button'
             },
             {
-                name: 'galleria.focusRing.offset',
+                name: 'galleria.navButton.focusRing.offset',
                 token: 'galleria.nav.button.focus.ring.offset',
                 variable: '--p-galleria-nav-button-focus-ring-offset',
                 description: 'Focus ring offset of nav button'
             },
             {
-                name: 'galleria.focusRing.shadow',
+                name: 'galleria.navButton.focusRing.shadow',
                 token: 'galleria.nav.button.focus.ring.shadow',
                 variable: '--p-galleria-nav-button-focus-ring-shadow',
                 description: 'Focus ring shadow of nav button'
@@ -5545,31 +5545,31 @@ export default {
                 description: 'Gutter of thumbnail nav button'
             },
             {
-                name: 'galleria.focusRing.width',
+                name: 'galleria.thumbnailNavButton.focusRing.width',
                 token: 'galleria.thumbnail.nav.button.focus.ring.width',
                 variable: '--p-galleria-thumbnail-nav-button-focus-ring-width',
                 description: 'Focus ring width of thumbnail nav button'
             },
             {
-                name: 'galleria.focusRing.style',
+                name: 'galleria.thumbnailNavButton.focusRing.style',
                 token: 'galleria.thumbnail.nav.button.focus.ring.style',
                 variable: '--p-galleria-thumbnail-nav-button-focus-ring-style',
                 description: 'Focus ring style of thumbnail nav button'
             },
             {
-                name: 'galleria.focusRing.color',
+                name: 'galleria.thumbnailNavButton.focusRing.color',
                 token: 'galleria.thumbnail.nav.button.focus.ring.color',
                 variable: '--p-galleria-thumbnail-nav-button-focus-ring-color',
                 description: 'Focus ring color of thumbnail nav button'
             },
             {
-                name: 'galleria.focusRing.offset',
+                name: 'galleria.thumbnailNavButton.focusRing.offset',
                 token: 'galleria.thumbnail.nav.button.focus.ring.offset',
                 variable: '--p-galleria-thumbnail-nav-button-focus-ring-offset',
                 description: 'Focus ring offset of thumbnail nav button'
             },
             {
-                name: 'galleria.focusRing.shadow',
+                name: 'galleria.thumbnailNavButton.focusRing.shadow',
                 token: 'galleria.thumbnail.nav.button.focus.ring.shadow',
                 variable: '--p-galleria-thumbnail-nav-button-focus-ring-shadow',
                 description: 'Focus ring shadow of thumbnail nav button'
@@ -5653,31 +5653,31 @@ export default {
                 description: 'Border radius of indicator button'
             },
             {
-                name: 'galleria.focusRing.width',
+                name: 'galleria.indicatorButton.focusRing.width',
                 token: 'galleria.indicator.button.focus.ring.width',
                 variable: '--p-galleria-indicator-button-focus-ring-width',
                 description: 'Focus ring width of indicator button'
             },
             {
-                name: 'galleria.focusRing.style',
+                name: 'galleria.indicatorButton.focusRing.style',
                 token: 'galleria.indicator.button.focus.ring.style',
                 variable: '--p-galleria-indicator-button-focus-ring-style',
                 description: 'Focus ring style of indicator button'
             },
             {
-                name: 'galleria.focusRing.color',
+                name: 'galleria.indicatorButton.focusRing.color',
                 token: 'galleria.indicator.button.focus.ring.color',
                 variable: '--p-galleria-indicator-button-focus-ring-color',
                 description: 'Focus ring color of indicator button'
             },
             {
-                name: 'galleria.focusRing.offset',
+                name: 'galleria.indicatorButton.focusRing.offset',
                 token: 'galleria.indicator.button.focus.ring.offset',
                 variable: '--p-galleria-indicator-button-focus-ring-offset',
                 description: 'Focus ring offset of indicator button'
             },
             {
-                name: 'galleria.focusRing.shadow',
+                name: 'galleria.indicatorButton.focusRing.shadow',
                 token: 'galleria.indicator.button.focus.ring.shadow',
                 variable: '--p-galleria-indicator-button-focus-ring-shadow',
                 description: 'Focus ring shadow of indicator button'
@@ -5761,31 +5761,31 @@ export default {
                 description: 'Border radius of close button'
             },
             {
-                name: 'galleria.focusRing.width',
+                name: 'galleria.closeButton.focusRing.width',
                 token: 'galleria.close.button.focus.ring.width',
                 variable: '--p-galleria-close-button-focus-ring-width',
                 description: 'Focus ring width of close button'
             },
             {
-                name: 'galleria.focusRing.style',
+                name: 'galleria.closeButton.focusRing.style',
                 token: 'galleria.close.button.focus.ring.style',
                 variable: '--p-galleria-close-button-focus-ring-style',
                 description: 'Focus ring style of close button'
             },
             {
-                name: 'galleria.focusRing.color',
+                name: 'galleria.closeButton.focusRing.color',
                 token: 'galleria.close.button.focus.ring.color',
                 variable: '--p-galleria-close-button-focus-ring-color',
                 description: 'Focus ring color of close button'
             },
             {
-                name: 'galleria.focusRing.offset',
+                name: 'galleria.closeButton.focusRing.offset',
                 token: 'galleria.close.button.focus.ring.offset',
                 variable: '--p-galleria-close-button-focus-ring-offset',
                 description: 'Focus ring offset of close button'
             },
             {
-                name: 'galleria.focusRing.shadow',
+                name: 'galleria.closeButton.focusRing.shadow',
                 token: 'galleria.close.button.focus.ring.shadow',
                 variable: '--p-galleria-close-button-focus-ring-shadow',
                 description: 'Focus ring shadow of close button'
@@ -5884,43 +5884,43 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'image.icon.size',
+                name: 'image.preview.icon.size',
                 token: 'image.preview.icon.size',
                 variable: '--p-image-preview-icon-size',
                 description: 'Icon size of preview'
             },
             {
-                name: 'image.mask.background',
+                name: 'image.preview.mask.background',
                 token: 'image.preview.mask.background',
                 variable: '--p-image-preview-mask-background',
                 description: 'Mask background of preview'
             },
             {
-                name: 'image.mask.color',
+                name: 'image.preview.mask.color',
                 token: 'image.preview.mask.color',
                 variable: '--p-image-preview-mask-color',
                 description: 'Mask color of preview'
             },
             {
-                name: 'image.position.left',
+                name: 'image.toolbar.position.left',
                 token: 'image.toolbar.position.left',
                 variable: '--p-image-toolbar-position-left',
                 description: 'Position left of toolbar'
             },
             {
-                name: 'image.position.right',
+                name: 'image.toolbar.position.right',
                 token: 'image.toolbar.position.right',
                 variable: '--p-image-toolbar-position-right',
                 description: 'Position right of toolbar'
             },
             {
-                name: 'image.position.top',
+                name: 'image.toolbar.position.top',
                 token: 'image.toolbar.position.top',
                 variable: '--p-image-toolbar-position-top',
                 description: 'Position top of toolbar'
             },
             {
-                name: 'image.position.bottom',
+                name: 'image.toolbar.position.bottom',
                 token: 'image.toolbar.position.bottom',
                 variable: '--p-image-toolbar-position-bottom',
                 description: 'Position bottom of toolbar'
@@ -6004,31 +6004,31 @@ export default {
                 description: 'Border radius of action'
             },
             {
-                name: 'image.focusRing.width',
+                name: 'image.action.focusRing.width',
                 token: 'image.action.focus.ring.width',
                 variable: '--p-image-action-focus-ring-width',
                 description: 'Focus ring width of action'
             },
             {
-                name: 'image.focusRing.style',
+                name: 'image.action.focusRing.style',
                 token: 'image.action.focus.ring.style',
                 variable: '--p-image-action-focus-ring-style',
                 description: 'Focus ring style of action'
             },
             {
-                name: 'image.focusRing.color',
+                name: 'image.action.focusRing.color',
                 token: 'image.action.focus.ring.color',
                 variable: '--p-image-action-focus-ring-color',
                 description: 'Focus ring color of action'
             },
             {
-                name: 'image.focusRing.offset',
+                name: 'image.action.focusRing.offset',
                 token: 'image.action.focus.ring.offset',
                 variable: '--p-image-action-focus-ring-offset',
                 description: 'Focus ring offset of action'
             },
             {
-                name: 'image.focusRing.shadow',
+                name: 'image.action.focusRing.shadow',
                 token: 'image.action.focus.ring.shadow',
                 variable: '--p-image-action-focus-ring-shadow',
                 description: 'Focus ring shadow of action'
@@ -6093,31 +6093,31 @@ export default {
                 description: 'Transition duration of handle'
             },
             {
-                name: 'imagecompare.focusRing.width',
+                name: 'imagecompare.handle.focusRing.width',
                 token: 'imagecompare.handle.focus.ring.width',
                 variable: '--p-imagecompare-handle-focus-ring-width',
                 description: 'Focus ring width of handle'
             },
             {
-                name: 'imagecompare.focusRing.style',
+                name: 'imagecompare.handle.focusRing.style',
                 token: 'imagecompare.handle.focus.ring.style',
                 variable: '--p-imagecompare-handle-focus-ring-style',
                 description: 'Focus ring style of handle'
             },
             {
-                name: 'imagecompare.focusRing.color',
+                name: 'imagecompare.handle.focusRing.color',
                 token: 'imagecompare.handle.focus.ring.color',
                 variable: '--p-imagecompare-handle-focus-ring-color',
                 description: 'Focus ring color of handle'
             },
             {
-                name: 'imagecompare.focusRing.offset',
+                name: 'imagecompare.handle.focusRing.offset',
                 token: 'imagecompare.handle.focus.ring.offset',
                 variable: '--p-imagecompare-handle-focus-ring-offset',
                 description: 'Focus ring offset of handle'
             },
             {
-                name: 'imagecompare.focusRing.shadow',
+                name: 'imagecompare.handle.focusRing.shadow',
                 token: 'imagecompare.handle.focus.ring.shadow',
                 variable: '--p-imagecompare-handle-focus-ring-shadow',
                 description: 'Focus ring shadow of handle'
@@ -6323,31 +6323,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'inplace.focusRing.width',
+                name: 'inplace.root.focusRing.width',
                 token: 'inplace.focus.ring.width',
                 variable: '--p-inplace-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'inplace.focusRing.style',
+                name: 'inplace.root.focusRing.style',
                 token: 'inplace.focus.ring.style',
                 variable: '--p-inplace-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'inplace.focusRing.color',
+                name: 'inplace.root.focusRing.color',
                 token: 'inplace.focus.ring.color',
                 variable: '--p-inplace-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'inplace.focusRing.offset',
+                name: 'inplace.root.focusRing.offset',
                 token: 'inplace.focus.ring.offset',
                 variable: '--p-inplace-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'inplace.focusRing.shadow',
+                name: 'inplace.root.focusRing.shadow',
                 token: 'inplace.focus.ring.shadow',
                 variable: '--p-inplace-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -6466,31 +6466,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'inputchips.focusRing.width',
+                name: 'inputchips.root.focusRing.width',
                 token: 'inputchips.focus.ring.width',
                 variable: '--p-inputchips-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'inputchips.focusRing.style',
+                name: 'inputchips.root.focusRing.style',
                 token: 'inputchips.focus.ring.style',
                 variable: '--p-inputchips-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'inputchips.focusRing.color',
+                name: 'inputchips.root.focusRing.color',
                 token: 'inputchips.focus.ring.color',
                 variable: '--p-inputchips-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'inputchips.focusRing.offset',
+                name: 'inputchips.root.focusRing.offset',
                 token: 'inputchips.focus.ring.offset',
                 variable: '--p-inputchips-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'inputchips.focusRing.shadow',
+                name: 'inputchips.root.focusRing.shadow',
                 token: 'inputchips.focus.ring.shadow',
                 variable: '--p-inputchips-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -6661,13 +6661,13 @@ export default {
                 description: 'Width of input'
             },
             {
-                name: 'inputotp.sm.width',
+                name: 'inputotp.input.sm.width',
                 token: 'inputotp.input.sm.width',
                 variable: '--p-inputotp-input-sm-width',
                 description: 'Width of input in small screens'
             },
             {
-                name: 'inputotp.lg.width',
+                name: 'inputotp.input.lg.width',
                 token: 'inputotp.input.lg.width',
                 variable: '--p-inputotp-input-lg-width',
                 description: 'Width of input in large screens'
@@ -6780,31 +6780,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'inputtext.focusRing.width',
+                name: 'inputtext.root.focusRing.width',
                 token: 'inputtext.focus.ring.width',
                 variable: '--p-inputtext-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'inputtext.focusRing.style',
+                name: 'inputtext.root.focusRing.style',
                 token: 'inputtext.focus.ring.style',
                 variable: '--p-inputtext-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'inputtext.focusRing.color',
+                name: 'inputtext.root.focusRing.color',
                 token: 'inputtext.focus.ring.color',
                 variable: '--p-inputtext-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'inputtext.focusRing.offset',
+                name: 'inputtext.root.focusRing.offset',
                 token: 'inputtext.focus.ring.offset',
                 variable: '--p-inputtext-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'inputtext.focusRing.shadow',
+                name: 'inputtext.root.focusRing.shadow',
                 token: 'inputtext.focus.ring.shadow',
                 variable: '--p-inputtext-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -6816,37 +6816,37 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'inputtext.sm.fontSize',
+                name: 'inputtext.root.sm.fontSize',
                 token: 'inputtext.sm.font.size',
                 variable: '--p-inputtext-sm-font-size',
                 description: 'Sm font size of root'
             },
             {
-                name: 'inputtext.sm.paddingX',
+                name: 'inputtext.root.sm.paddingX',
                 token: 'inputtext.sm.padding.x',
                 variable: '--p-inputtext-sm-padding-x',
                 description: 'Sm padding x of root'
             },
             {
-                name: 'inputtext.sm.paddingY',
+                name: 'inputtext.root.sm.paddingY',
                 token: 'inputtext.sm.padding.y',
                 variable: '--p-inputtext-sm-padding-y',
                 description: 'Sm padding y of root'
             },
             {
-                name: 'inputtext.lg.fontSize',
+                name: 'inputtext.root.lg.fontSize',
                 token: 'inputtext.lg.font.size',
                 variable: '--p-inputtext-lg-font-size',
                 description: 'Lg font size of root'
             },
             {
-                name: 'inputtext.lg.paddingX',
+                name: 'inputtext.root.lg.paddingX',
                 token: 'inputtext.lg.padding.x',
                 variable: '--p-inputtext-lg-padding-x',
                 description: 'Lg padding x of root'
             },
             {
-                name: 'inputtext.lg.paddingY',
+                name: 'inputtext.root.lg.paddingY',
                 token: 'inputtext.lg.padding.y',
                 variable: '--p-inputtext-lg-padding-y',
                 description: 'Lg padding y of root'
@@ -6863,31 +6863,31 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'knob.focusRing.width',
+                name: 'knob.root.focusRing.width',
                 token: 'knob.focus.ring.width',
                 variable: '--p-knob-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'knob.focusRing.style',
+                name: 'knob.root.focusRing.style',
                 token: 'knob.focus.ring.style',
                 variable: '--p-knob-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'knob.focusRing.color',
+                name: 'knob.root.focusRing.color',
                 token: 'knob.focus.ring.color',
                 variable: '--p-knob-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'knob.focusRing.offset',
+                name: 'knob.root.focusRing.offset',
                 token: 'knob.focus.ring.offset',
                 variable: '--p-knob-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'knob.focusRing.shadow',
+                name: 'knob.root.focusRing.shadow',
                 token: 'knob.focus.ring.shadow',
                 variable: '--p-knob-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -6982,7 +6982,7 @@ export default {
                 description: 'Gap of list'
             },
             {
-                name: 'listbox.header.padding',
+                name: 'listbox.list.header.padding',
                 token: 'listbox.list.header.padding',
                 variable: '--p-listbox-list-header-padding',
                 description: 'Header padding of list'
@@ -7131,25 +7131,25 @@ export default {
                 description: 'Gap of root'
             },
             {
-                name: 'megamenu.verticalOrientation.padding',
+                name: 'megamenu.root.verticalOrientation.padding',
                 token: 'megamenu.vertical.orientation.padding',
                 variable: '--p-megamenu-vertical-orientation-padding',
                 description: 'Vertical orientation padding of root'
             },
             {
-                name: 'megamenu.verticalOrientation.gap',
+                name: 'megamenu.root.verticalOrientation.gap',
                 token: 'megamenu.vertical.orientation.gap',
                 variable: '--p-megamenu-vertical-orientation-gap',
                 description: 'Vertical orientation gap of root'
             },
             {
-                name: 'megamenu.horizontalOrientation.padding',
+                name: 'megamenu.root.horizontalOrientation.padding',
                 token: 'megamenu.horizontal.orientation.padding',
                 variable: '--p-megamenu-horizontal-orientation-padding',
                 description: 'Horizontal orientation padding of root'
             },
             {
-                name: 'megamenu.horizontalOrientation.gap',
+                name: 'megamenu.root.horizontalOrientation.gap',
                 token: 'megamenu.horizontal.orientation.gap',
                 variable: '--p-megamenu-horizontal-orientation-gap',
                 description: 'Horizontal orientation gap of root'
@@ -7221,19 +7221,19 @@ export default {
                 description: 'Gap of item'
             },
             {
-                name: 'megamenu.icon.color',
+                name: 'megamenu.item.icon.color',
                 token: 'megamenu.item.icon.color',
                 variable: '--p-megamenu-item-icon-color',
                 description: 'Icon color of item'
             },
             {
-                name: 'megamenu.icon.focusColor',
+                name: 'megamenu.item.icon.focusColor',
                 token: 'megamenu.item.icon.focus.color',
                 variable: '--p-megamenu-item-icon-focus-color',
                 description: 'Icon focus color of item'
             },
             {
-                name: 'megamenu.icon.activeColor',
+                name: 'megamenu.item.icon.activeColor',
                 token: 'megamenu.item.icon.active.color',
                 variable: '--p-megamenu-item-icon-active-color',
                 description: 'Icon active color of item'
@@ -7377,31 +7377,31 @@ export default {
                 description: 'Hover background of mobile button'
             },
             {
-                name: 'megamenu.focusRing.width',
+                name: 'megamenu.mobileButton.focusRing.width',
                 token: 'megamenu.mobile.button.focus.ring.width',
                 variable: '--p-megamenu-mobile-button-focus-ring-width',
                 description: 'Focus ring width of mobile button'
             },
             {
-                name: 'megamenu.focusRing.style',
+                name: 'megamenu.mobileButton.focusRing.style',
                 token: 'megamenu.mobile.button.focus.ring.style',
                 variable: '--p-megamenu-mobile-button-focus-ring-style',
                 description: 'Focus ring style of mobile button'
             },
             {
-                name: 'megamenu.focusRing.color',
+                name: 'megamenu.mobileButton.focusRing.color',
                 token: 'megamenu.mobile.button.focus.ring.color',
                 variable: '--p-megamenu-mobile-button-focus-ring-color',
                 description: 'Focus ring color of mobile button'
             },
             {
-                name: 'megamenu.focusRing.offset',
+                name: 'megamenu.mobileButton.focusRing.offset',
                 token: 'megamenu.mobile.button.focus.ring.offset',
                 variable: '--p-megamenu-mobile-button-focus-ring-offset',
                 description: 'Focus ring offset of mobile button'
             },
             {
-                name: 'megamenu.focusRing.shadow',
+                name: 'megamenu.mobileButton.focusRing.shadow',
                 token: 'megamenu.mobile.button.focus.ring.shadow',
                 variable: '--p-megamenu-mobile-button-focus-ring-shadow',
                 description: 'Focus ring shadow of mobile button'
@@ -7496,13 +7496,13 @@ export default {
                 description: 'Gap of item'
             },
             {
-                name: 'menu.icon.color',
+                name: 'menu.item.icon.color',
                 token: 'menu.item.icon.color',
                 variable: '--p-menu-item-icon-color',
                 description: 'Icon color of item'
             },
             {
-                name: 'menu.icon.focusColor',
+                name: 'menu.item.icon.focusColor',
                 token: 'menu.item.icon.focus.color',
                 variable: '--p-menu-item-icon-focus-color',
                 description: 'Icon focus color of item'
@@ -7645,19 +7645,19 @@ export default {
                 description: 'Gap of item'
             },
             {
-                name: 'menubar.icon.color',
+                name: 'menubar.item.icon.color',
                 token: 'menubar.item.icon.color',
                 variable: '--p-menubar-item-icon-color',
                 description: 'Icon color of item'
             },
             {
-                name: 'menubar.icon.focusColor',
+                name: 'menubar.item.icon.focusColor',
                 token: 'menubar.item.icon.focus.color',
                 variable: '--p-menubar-item-icon-focus-color',
                 description: 'Icon focus color of item'
             },
             {
-                name: 'menubar.icon.activeColor',
+                name: 'menubar.item.icon.activeColor',
                 token: 'menubar.item.icon.active.color',
                 variable: '--p-menubar-item-icon-active-color',
                 description: 'Icon active color of item'
@@ -7705,25 +7705,25 @@ export default {
                 description: 'Mobile indent of submenu'
             },
             {
-                name: 'menubar.icon.size',
+                name: 'menubar.submenu.icon.size',
                 token: 'menubar.submenu.icon.size',
                 variable: '--p-menubar-submenu-icon-size',
                 description: 'Icon size of submenu'
             },
             {
-                name: 'menubar.icon.color',
+                name: 'menubar.submenu.icon.color',
                 token: 'menubar.submenu.icon.color',
                 variable: '--p-menubar-submenu-icon-color',
                 description: 'Icon color of submenu'
             },
             {
-                name: 'menubar.icon.focusColor',
+                name: 'menubar.submenu.icon.focusColor',
                 token: 'menubar.submenu.icon.focus.color',
                 variable: '--p-menubar-submenu-icon-focus-color',
                 description: 'Icon focus color of submenu'
             },
             {
-                name: 'menubar.icon.activeColor',
+                name: 'menubar.submenu.icon.activeColor',
                 token: 'menubar.submenu.icon.active.color',
                 variable: '--p-menubar-submenu-icon-active-color',
                 description: 'Icon active color of submenu'
@@ -7765,31 +7765,31 @@ export default {
                 description: 'Hover background of mobile button'
             },
             {
-                name: 'menubar.focusRing.width',
+                name: 'menubar.mobileButton.focusRing.width',
                 token: 'menubar.mobile.button.focus.ring.width',
                 variable: '--p-menubar-mobile-button-focus-ring-width',
                 description: 'Focus ring width of mobile button'
             },
             {
-                name: 'menubar.focusRing.style',
+                name: 'menubar.mobileButton.focusRing.style',
                 token: 'menubar.mobile.button.focus.ring.style',
                 variable: '--p-menubar-mobile-button-focus-ring-style',
                 description: 'Focus ring style of mobile button'
             },
             {
-                name: 'menubar.focusRing.color',
+                name: 'menubar.mobileButton.focusRing.color',
                 token: 'menubar.mobile.button.focus.ring.color',
                 variable: '--p-menubar-mobile-button-focus-ring-color',
                 description: 'Focus ring color of mobile button'
             },
             {
-                name: 'menubar.focusRing.offset',
+                name: 'menubar.mobileButton.focusRing.offset',
                 token: 'menubar.mobile.button.focus.ring.offset',
                 variable: '--p-menubar-mobile-button-focus-ring-offset',
                 description: 'Focus ring offset of mobile button'
             },
             {
-                name: 'menubar.focusRing.shadow',
+                name: 'menubar.mobileButton.focusRing.shadow',
                 token: 'menubar.mobile.button.focus.ring.shadow',
                 variable: '--p-menubar-mobile-button-focus-ring-shadow',
                 description: 'Focus ring shadow of mobile button'
@@ -7830,13 +7830,13 @@ export default {
                 description: 'Gap of content'
             },
             {
-                name: 'message.sm.padding',
+                name: 'message.content.sm.padding',
                 token: 'message.content.sm.padding',
                 variable: '--p-message-content-sm-padding',
                 description: 'Sm padding of content'
             },
             {
-                name: 'message.lg.padding',
+                name: 'message.content.lg.padding',
                 token: 'message.content.lg.padding',
                 variable: '--p-message-content-lg-padding',
                 description: 'Lg padding of content'
@@ -7854,13 +7854,13 @@ export default {
                 description: 'Font weight of text'
             },
             {
-                name: 'message.sm.fontSize',
+                name: 'message.text.sm.fontSize',
                 token: 'message.text.sm.font.size',
                 variable: '--p-message-text-sm-font-size',
                 description: 'Sm font size of text'
             },
             {
-                name: 'message.lg.fontSize',
+                name: 'message.text.lg.fontSize',
                 token: 'message.text.lg.font.size',
                 variable: '--p-message-text-lg-font-size',
                 description: 'Lg font size of text'
@@ -7872,13 +7872,13 @@ export default {
                 description: 'Size of icon'
             },
             {
-                name: 'message.sm.size',
+                name: 'message.icon.sm.size',
                 token: 'message.icon.sm.size',
                 variable: '--p-message-icon-sm-size',
                 description: 'Sm size of icon'
             },
             {
-                name: 'message.lg.size',
+                name: 'message.icon.lg.size',
                 token: 'message.icon.lg.size',
                 variable: '--p-message-icon-lg-size',
                 description: 'Lg size of icon'
@@ -7902,19 +7902,19 @@ export default {
                 description: 'Border radius of close button'
             },
             {
-                name: 'message.focusRing.width',
+                name: 'message.closeButton.focusRing.width',
                 token: 'message.close.button.focus.ring.width',
                 variable: '--p-message-close-button-focus-ring-width',
                 description: 'Focus ring width of close button'
             },
             {
-                name: 'message.focusRing.style',
+                name: 'message.closeButton.focusRing.style',
                 token: 'message.close.button.focus.ring.style',
                 variable: '--p-message-close-button-focus-ring-style',
                 description: 'Focus ring style of close button'
             },
             {
-                name: 'message.focusRing.offset',
+                name: 'message.closeButton.focusRing.offset',
                 token: 'message.close.button.focus.ring.offset',
                 variable: '--p-message-close-button-focus-ring-offset',
                 description: 'Focus ring offset of close button'
@@ -7926,25 +7926,25 @@ export default {
                 description: 'Size of close icon'
             },
             {
-                name: 'message.sm.size',
+                name: 'message.closeIcon.sm.size',
                 token: 'message.close.icon.sm.size',
                 variable: '--p-message-close-icon-sm-size',
                 description: 'Sm size of close icon'
             },
             {
-                name: 'message.lg.size',
+                name: 'message.closeIcon.lg.size',
                 token: 'message.close.icon.lg.size',
                 variable: '--p-message-close-icon-lg-size',
                 description: 'Lg size of close icon'
             },
             {
-                name: 'message.root.borderWidth',
+                name: 'message.outlined.root.borderWidth',
                 token: 'message.outlined.border.width',
                 variable: '--p-message-outlined-border-width',
                 description: 'Root border width of outlined'
             },
             {
-                name: 'message.content.padding',
+                name: 'message.simple.content.padding',
                 token: 'message.simple.content.padding',
                 variable: '--p-message-simple-content-padding',
                 description: 'Content padding of simple'
@@ -7974,37 +7974,37 @@ export default {
                 description: 'Shadow of info'
             },
             {
-                name: 'message.closeButton.hoverBackground',
+                name: 'message.info.closeButton.hoverBackground',
                 token: 'message.info.close.button.hover.background',
                 variable: '--p-message-info-close-button-hover-background',
                 description: 'Close button hover background of info'
             },
             {
-                name: 'message.focusRing.color',
+                name: 'message.info.closeButton.focusRing.color',
                 token: 'message.info.close.button.focus.ring.color',
                 variable: '--p-message-info-close-button-focus-ring-color',
                 description: 'Close button focus ring color of info'
             },
             {
-                name: 'message.focusRing.shadow',
+                name: 'message.info.closeButton.focusRing.shadow',
                 token: 'message.info.close.button.focus.ring.shadow',
                 variable: '--p-message-info-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of info'
             },
             {
-                name: 'message.outlined.color',
+                name: 'message.info.outlined.color',
                 token: 'message.info.outlined.color',
                 variable: '--p-message-info-outlined-color',
                 description: 'Outlined color of info'
             },
             {
-                name: 'message.outlined.borderColor',
+                name: 'message.info.outlined.borderColor',
                 token: 'message.info.outlined.border.color',
                 variable: '--p-message-info-outlined-border-color',
                 description: 'Outlined border color of info'
             },
             {
-                name: 'message.simple.color',
+                name: 'message.info.simple.color',
                 token: 'message.info.simple.color',
                 variable: '--p-message-info-simple-color',
                 description: 'Simple color of info'
@@ -8034,37 +8034,37 @@ export default {
                 description: 'Shadow of success'
             },
             {
-                name: 'message.closeButton.hoverBackground',
+                name: 'message.success.closeButton.hoverBackground',
                 token: 'message.success.close.button.hover.background',
                 variable: '--p-message-success-close-button-hover-background',
                 description: 'Close button hover background of success'
             },
             {
-                name: 'message.focusRing.color',
+                name: 'message.success.closeButton.focusRing.color',
                 token: 'message.success.close.button.focus.ring.color',
                 variable: '--p-message-success-close-button-focus-ring-color',
                 description: 'Close button focus ring color of success'
             },
             {
-                name: 'message.focusRing.shadow',
+                name: 'message.success.closeButton.focusRing.shadow',
                 token: 'message.success.close.button.focus.ring.shadow',
                 variable: '--p-message-success-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of success'
             },
             {
-                name: 'message.outlined.color',
+                name: 'message.success.outlined.color',
                 token: 'message.success.outlined.color',
                 variable: '--p-message-success-outlined-color',
                 description: 'Outlined color of success'
             },
             {
-                name: 'message.outlined.borderColor',
+                name: 'message.success.outlined.borderColor',
                 token: 'message.success.outlined.border.color',
                 variable: '--p-message-success-outlined-border-color',
                 description: 'Outlined border color of success'
             },
             {
-                name: 'message.simple.color',
+                name: 'message.success.simple.color',
                 token: 'message.success.simple.color',
                 variable: '--p-message-success-simple-color',
                 description: 'Simple color of success'
@@ -8094,37 +8094,37 @@ export default {
                 description: 'Shadow of warn'
             },
             {
-                name: 'message.closeButton.hoverBackground',
+                name: 'message.warn.closeButton.hoverBackground',
                 token: 'message.warn.close.button.hover.background',
                 variable: '--p-message-warn-close-button-hover-background',
                 description: 'Close button hover background of warn'
             },
             {
-                name: 'message.focusRing.color',
+                name: 'message.warn.closeButton.focusRing.color',
                 token: 'message.warn.close.button.focus.ring.color',
                 variable: '--p-message-warn-close-button-focus-ring-color',
                 description: 'Close button focus ring color of warn'
             },
             {
-                name: 'message.focusRing.shadow',
+                name: 'message.warn.closeButton.focusRing.shadow',
                 token: 'message.warn.close.button.focus.ring.shadow',
                 variable: '--p-message-warn-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of warn'
             },
             {
-                name: 'message.outlined.color',
+                name: 'message.warn.outlined.color',
                 token: 'message.warn.outlined.color',
                 variable: '--p-message-warn-outlined-color',
                 description: 'Outlined color of warn'
             },
             {
-                name: 'message.outlined.borderColor',
+                name: 'message.warn.outlined.borderColor',
                 token: 'message.warn.outlined.border.color',
                 variable: '--p-message-warn-outlined-border-color',
                 description: 'Outlined border color of warn'
             },
             {
-                name: 'message.simple.color',
+                name: 'message.warn.simple.color',
                 token: 'message.warn.simple.color',
                 variable: '--p-message-warn-simple-color',
                 description: 'Simple color of warn'
@@ -8154,37 +8154,37 @@ export default {
                 description: 'Shadow of error'
             },
             {
-                name: 'message.closeButton.hoverBackground',
+                name: 'message.error.closeButton.hoverBackground',
                 token: 'message.error.close.button.hover.background',
                 variable: '--p-message-error-close-button-hover-background',
                 description: 'Close button hover background of error'
             },
             {
-                name: 'message.focusRing.color',
+                name: 'message.error.closeButton.focusRing.color',
                 token: 'message.error.close.button.focus.ring.color',
                 variable: '--p-message-error-close-button-focus-ring-color',
                 description: 'Close button focus ring color of error'
             },
             {
-                name: 'message.focusRing.shadow',
+                name: 'message.error.closeButton.focusRing.shadow',
                 token: 'message.error.close.button.focus.ring.shadow',
                 variable: '--p-message-error-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of error'
             },
             {
-                name: 'message.outlined.color',
+                name: 'message.error.outlined.color',
                 token: 'message.error.outlined.color',
                 variable: '--p-message-error-outlined-color',
                 description: 'Outlined color of error'
             },
             {
-                name: 'message.outlined.borderColor',
+                name: 'message.error.outlined.borderColor',
                 token: 'message.error.outlined.border.color',
                 variable: '--p-message-error-outlined-border-color',
                 description: 'Outlined border color of error'
             },
             {
-                name: 'message.simple.color',
+                name: 'message.error.simple.color',
                 token: 'message.error.simple.color',
                 variable: '--p-message-error-simple-color',
                 description: 'Simple color of error'
@@ -8214,37 +8214,37 @@ export default {
                 description: 'Shadow of secondary'
             },
             {
-                name: 'message.closeButton.hoverBackground',
+                name: 'message.secondary.closeButton.hoverBackground',
                 token: 'message.secondary.close.button.hover.background',
                 variable: '--p-message-secondary-close-button-hover-background',
                 description: 'Close button hover background of secondary'
             },
             {
-                name: 'message.focusRing.color',
+                name: 'message.secondary.closeButton.focusRing.color',
                 token: 'message.secondary.close.button.focus.ring.color',
                 variable: '--p-message-secondary-close-button-focus-ring-color',
                 description: 'Close button focus ring color of secondary'
             },
             {
-                name: 'message.focusRing.shadow',
+                name: 'message.secondary.closeButton.focusRing.shadow',
                 token: 'message.secondary.close.button.focus.ring.shadow',
                 variable: '--p-message-secondary-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of secondary'
             },
             {
-                name: 'message.outlined.color',
+                name: 'message.secondary.outlined.color',
                 token: 'message.secondary.outlined.color',
                 variable: '--p-message-secondary-outlined-color',
                 description: 'Outlined color of secondary'
             },
             {
-                name: 'message.outlined.borderColor',
+                name: 'message.secondary.outlined.borderColor',
                 token: 'message.secondary.outlined.border.color',
                 variable: '--p-message-secondary-outlined-border-color',
                 description: 'Outlined border color of secondary'
             },
             {
-                name: 'message.simple.color',
+                name: 'message.secondary.simple.color',
                 token: 'message.secondary.simple.color',
                 variable: '--p-message-secondary-simple-color',
                 description: 'Simple color of secondary'
@@ -8274,37 +8274,37 @@ export default {
                 description: 'Shadow of contrast'
             },
             {
-                name: 'message.closeButton.hoverBackground',
+                name: 'message.contrast.closeButton.hoverBackground',
                 token: 'message.contrast.close.button.hover.background',
                 variable: '--p-message-contrast-close-button-hover-background',
                 description: 'Close button hover background of contrast'
             },
             {
-                name: 'message.focusRing.color',
+                name: 'message.contrast.closeButton.focusRing.color',
                 token: 'message.contrast.close.button.focus.ring.color',
                 variable: '--p-message-contrast-close-button-focus-ring-color',
                 description: 'Close button focus ring color of contrast'
             },
             {
-                name: 'message.focusRing.shadow',
+                name: 'message.contrast.closeButton.focusRing.shadow',
                 token: 'message.contrast.close.button.focus.ring.shadow',
                 variable: '--p-message-contrast-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of contrast'
             },
             {
-                name: 'message.outlined.color',
+                name: 'message.contrast.outlined.color',
                 token: 'message.contrast.outlined.color',
                 variable: '--p-message-contrast-outlined-color',
                 description: 'Outlined color of contrast'
             },
             {
-                name: 'message.outlined.borderColor',
+                name: 'message.contrast.outlined.borderColor',
                 token: 'message.contrast.outlined.border.color',
                 variable: '--p-message-contrast-outlined-border-color',
                 description: 'Outlined border color of contrast'
             },
             {
-                name: 'message.simple.color',
+                name: 'message.contrast.simple.color',
                 token: 'message.contrast.simple.color',
                 variable: '--p-message-contrast-simple-color',
                 description: 'Simple color of contrast'
@@ -8476,31 +8476,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'multiselect.focusRing.width',
+                name: 'multiselect.root.focusRing.width',
                 token: 'multiselect.focus.ring.width',
                 variable: '--p-multiselect-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'multiselect.focusRing.style',
+                name: 'multiselect.root.focusRing.style',
                 token: 'multiselect.focus.ring.style',
                 variable: '--p-multiselect-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'multiselect.focusRing.color',
+                name: 'multiselect.root.focusRing.color',
                 token: 'multiselect.focus.ring.color',
                 variable: '--p-multiselect-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'multiselect.focusRing.offset',
+                name: 'multiselect.root.focusRing.offset',
                 token: 'multiselect.focus.ring.offset',
                 variable: '--p-multiselect-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'multiselect.focusRing.shadow',
+                name: 'multiselect.root.focusRing.shadow',
                 token: 'multiselect.focus.ring.shadow',
                 variable: '--p-multiselect-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -8512,37 +8512,37 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'multiselect.sm.fontSize',
+                name: 'multiselect.root.sm.fontSize',
                 token: 'multiselect.sm.font.size',
                 variable: '--p-multiselect-sm-font-size',
                 description: 'Sm font size of root'
             },
             {
-                name: 'multiselect.sm.paddingX',
+                name: 'multiselect.root.sm.paddingX',
                 token: 'multiselect.sm.padding.x',
                 variable: '--p-multiselect-sm-padding-x',
                 description: 'Sm padding x of root'
             },
             {
-                name: 'multiselect.sm.paddingY',
+                name: 'multiselect.root.sm.paddingY',
                 token: 'multiselect.sm.padding.y',
                 variable: '--p-multiselect-sm-padding-y',
                 description: 'Sm padding y of root'
             },
             {
-                name: 'multiselect.lg.fontSize',
+                name: 'multiselect.root.lg.fontSize',
                 token: 'multiselect.lg.font.size',
                 variable: '--p-multiselect-lg-font-size',
                 description: 'Lg font size of root'
             },
             {
-                name: 'multiselect.lg.paddingX',
+                name: 'multiselect.root.lg.paddingX',
                 token: 'multiselect.lg.padding.x',
                 variable: '--p-multiselect-lg-padding-x',
                 description: 'Lg padding x of root'
             },
             {
-                name: 'multiselect.lg.paddingY',
+                name: 'multiselect.root.lg.paddingY',
                 token: 'multiselect.lg.padding.y',
                 variable: '--p-multiselect-lg-padding-y',
                 description: 'Lg padding y of root'
@@ -8602,7 +8602,7 @@ export default {
                 description: 'Gap of list'
             },
             {
-                name: 'multiselect.header.padding',
+                name: 'multiselect.list.header.padding',
                 token: 'multiselect.list.header.padding',
                 variable: '--p-multiselect-list-header-padding',
                 description: 'Header padding of list'
@@ -8846,31 +8846,31 @@ export default {
                 description: 'Border radius of node toggle button'
             },
             {
-                name: 'organizationchart.focusRing.width',
+                name: 'organizationchart.nodeToggleButton.focusRing.width',
                 token: 'organizationchart.node.toggle.button.focus.ring.width',
                 variable: '--p-organizationchart-node-toggle-button-focus-ring-width',
                 description: 'Focus ring width of node toggle button'
             },
             {
-                name: 'organizationchart.focusRing.style',
+                name: 'organizationchart.nodeToggleButton.focusRing.style',
                 token: 'organizationchart.node.toggle.button.focus.ring.style',
                 variable: '--p-organizationchart-node-toggle-button-focus-ring-style',
                 description: 'Focus ring style of node toggle button'
             },
             {
-                name: 'organizationchart.focusRing.color',
+                name: 'organizationchart.nodeToggleButton.focusRing.color',
                 token: 'organizationchart.node.toggle.button.focus.ring.color',
                 variable: '--p-organizationchart-node-toggle-button-focus-ring-color',
                 description: 'Focus ring color of node toggle button'
             },
             {
-                name: 'organizationchart.focusRing.offset',
+                name: 'organizationchart.nodeToggleButton.focusRing.offset',
                 token: 'organizationchart.node.toggle.button.focus.ring.offset',
                 variable: '--p-organizationchart-node-toggle-button-focus-ring-offset',
                 description: 'Focus ring offset of node toggle button'
             },
             {
-                name: 'organizationchart.focusRing.shadow',
+                name: 'organizationchart.nodeToggleButton.focusRing.shadow',
                 token: 'organizationchart.node.toggle.button.focus.ring.shadow',
                 variable: '--p-organizationchart-node-toggle-button-focus-ring-shadow',
                 description: 'Focus ring shadow of node toggle button'
@@ -8899,13 +8899,13 @@ export default {
         description: 'OverlayBadge Design Tokens',
         tokens: [
             {
-                name: 'overlaybadge.outline.width',
+                name: 'overlaybadge.root.outline.width',
                 token: 'overlaybadge.outline.width',
                 variable: '--p-overlaybadge-outline-width',
                 description: 'Outline width of root'
             },
             {
-                name: 'overlaybadge.outline.color',
+                name: 'overlaybadge.root.outline.color',
                 token: 'overlaybadge.outline.color',
                 variable: '--p-overlaybadge-outline-color',
                 description: 'Outline color of root'
@@ -9006,31 +9006,31 @@ export default {
                 description: 'Border radius of nav button'
             },
             {
-                name: 'paginator.focusRing.width',
+                name: 'paginator.navButton.focusRing.width',
                 token: 'paginator.nav.button.focus.ring.width',
                 variable: '--p-paginator-nav-button-focus-ring-width',
                 description: 'Focus ring width of nav button'
             },
             {
-                name: 'paginator.focusRing.style',
+                name: 'paginator.navButton.focusRing.style',
                 token: 'paginator.nav.button.focus.ring.style',
                 variable: '--p-paginator-nav-button-focus-ring-style',
                 description: 'Focus ring style of nav button'
             },
             {
-                name: 'paginator.focusRing.color',
+                name: 'paginator.navButton.focusRing.color',
                 token: 'paginator.nav.button.focus.ring.color',
                 variable: '--p-paginator-nav-button-focus-ring-color',
                 description: 'Focus ring color of nav button'
             },
             {
-                name: 'paginator.focusRing.offset',
+                name: 'paginator.navButton.focusRing.offset',
                 token: 'paginator.nav.button.focus.ring.offset',
                 variable: '--p-paginator-nav-button-focus-ring-offset',
                 description: 'Focus ring offset of nav button'
             },
             {
-                name: 'paginator.focusRing.shadow',
+                name: 'paginator.navButton.focusRing.shadow',
                 token: 'paginator.nav.button.focus.ring.shadow',
                 variable: '--p-paginator-nav-button-focus-ring-shadow',
                 description: 'Focus ring shadow of nav button'
@@ -9190,25 +9190,25 @@ export default {
                 description: 'Border radius of panel'
             },
             {
-                name: 'panelmenu.first.borderWidth',
+                name: 'panelmenu.panel.first.borderWidth',
                 token: 'panelmenu.panel.first.border.width',
                 variable: '--p-panelmenu-panel-first-border-width',
                 description: 'First border width of panel'
             },
             {
-                name: 'panelmenu.first.topBorderRadius',
+                name: 'panelmenu.panel.first.topBorderRadius',
                 token: 'panelmenu.panel.first.top.border.radius',
                 variable: '--p-panelmenu-panel-first-top-border-radius',
                 description: 'First top border radius of panel'
             },
             {
-                name: 'panelmenu.last.borderWidth',
+                name: 'panelmenu.panel.last.borderWidth',
                 token: 'panelmenu.panel.last.border.width',
                 variable: '--p-panelmenu-panel-last-border-width',
                 description: 'Last border width of panel'
             },
             {
-                name: 'panelmenu.last.bottomBorderRadius',
+                name: 'panelmenu.panel.last.bottomBorderRadius',
                 token: 'panelmenu.panel.last.bottom.border.radius',
                 variable: '--p-panelmenu-panel-last-bottom-border-radius',
                 description: 'Last bottom border radius of panel'
@@ -9250,13 +9250,13 @@ export default {
                 description: 'Border radius of item'
             },
             {
-                name: 'panelmenu.icon.color',
+                name: 'panelmenu.item.icon.color',
                 token: 'panelmenu.item.icon.color',
                 variable: '--p-panelmenu-item-icon-color',
                 description: 'Icon color of item'
             },
             {
-                name: 'panelmenu.icon.focusColor',
+                name: 'panelmenu.item.icon.focusColor',
                 token: 'panelmenu.item.icon.focus.color',
                 variable: '--p-panelmenu-item-icon-focus-color',
                 description: 'Icon focus color of item'
@@ -9616,31 +9616,31 @@ export default {
                 description: 'Shadow of root'
             },
             {
-                name: 'radiobutton.focusRing.width',
+                name: 'radiobutton.root.focusRing.width',
                 token: 'radiobutton.focus.ring.width',
                 variable: '--p-radiobutton-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'radiobutton.focusRing.style',
+                name: 'radiobutton.root.focusRing.style',
                 token: 'radiobutton.focus.ring.style',
                 variable: '--p-radiobutton-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'radiobutton.focusRing.color',
+                name: 'radiobutton.root.focusRing.color',
                 token: 'radiobutton.focus.ring.color',
                 variable: '--p-radiobutton-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'radiobutton.focusRing.offset',
+                name: 'radiobutton.root.focusRing.offset',
                 token: 'radiobutton.focus.ring.offset',
                 variable: '--p-radiobutton-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'radiobutton.focusRing.shadow',
+                name: 'radiobutton.root.focusRing.shadow',
                 token: 'radiobutton.focus.ring.shadow',
                 variable: '--p-radiobutton-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -9652,25 +9652,25 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'radiobutton.sm.width',
+                name: 'radiobutton.root.sm.width',
                 token: 'radiobutton.sm.width',
                 variable: '--p-radiobutton-sm-width',
                 description: 'Sm width of root'
             },
             {
-                name: 'radiobutton.sm.height',
+                name: 'radiobutton.root.sm.height',
                 token: 'radiobutton.sm.height',
                 variable: '--p-radiobutton-sm-height',
                 description: 'Sm height of root'
             },
             {
-                name: 'radiobutton.lg.width',
+                name: 'radiobutton.root.lg.width',
                 token: 'radiobutton.lg.width',
                 variable: '--p-radiobutton-lg-width',
                 description: 'Lg width of root'
             },
             {
-                name: 'radiobutton.lg.height',
+                name: 'radiobutton.root.lg.height',
                 token: 'radiobutton.lg.height',
                 variable: '--p-radiobutton-lg-height',
                 description: 'Lg height of root'
@@ -9700,13 +9700,13 @@ export default {
                 description: 'Disabled color of icon'
             },
             {
-                name: 'radiobutton.sm.size',
+                name: 'radiobutton.icon.sm.size',
                 token: 'radiobutton.icon.sm.size',
                 variable: '--p-radiobutton-icon-sm-size',
                 description: 'Sm size of icon'
             },
             {
-                name: 'radiobutton.lg.size',
+                name: 'radiobutton.icon.lg.size',
                 token: 'radiobutton.icon.lg.size',
                 variable: '--p-radiobutton-icon-lg-size',
                 description: 'Lg size of icon'
@@ -9729,31 +9729,31 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'rating.focusRing.width',
+                name: 'rating.root.focusRing.width',
                 token: 'rating.focus.ring.width',
                 variable: '--p-rating-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'rating.focusRing.style',
+                name: 'rating.root.focusRing.style',
                 token: 'rating.focus.ring.style',
                 variable: '--p-rating-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'rating.focusRing.color',
+                name: 'rating.root.focusRing.color',
                 token: 'rating.focus.ring.color',
                 variable: '--p-rating-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'rating.focusRing.offset',
+                name: 'rating.root.focusRing.offset',
                 token: 'rating.focus.ring.offset',
                 variable: '--p-rating-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'rating.focusRing.shadow',
+                name: 'rating.root.focusRing.shadow',
                 token: 'rating.focus.ring.shadow',
                 variable: '--p-rating-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -9817,31 +9817,31 @@ export default {
                 description: 'Border radius of bar'
             },
             {
-                name: 'scrollpanel.focusRing.width',
+                name: 'scrollpanel.bar.focusRing.width',
                 token: 'scrollpanel.bar.focus.ring.width',
                 variable: '--p-scrollpanel-bar-focus-ring-width',
                 description: 'Focus ring width of bar'
             },
             {
-                name: 'scrollpanel.focusRing.style',
+                name: 'scrollpanel.bar.focusRing.style',
                 token: 'scrollpanel.bar.focus.ring.style',
                 variable: '--p-scrollpanel-bar-focus-ring-style',
                 description: 'Focus ring style of bar'
             },
             {
-                name: 'scrollpanel.focusRing.color',
+                name: 'scrollpanel.bar.focusRing.color',
                 token: 'scrollpanel.bar.focus.ring.color',
                 variable: '--p-scrollpanel-bar-focus-ring-color',
                 description: 'Focus ring color of bar'
             },
             {
-                name: 'scrollpanel.focusRing.offset',
+                name: 'scrollpanel.bar.focusRing.offset',
                 token: 'scrollpanel.bar.focus.ring.offset',
                 variable: '--p-scrollpanel-bar-focus-ring-offset',
                 description: 'Focus ring offset of bar'
             },
             {
-                name: 'scrollpanel.focusRing.shadow',
+                name: 'scrollpanel.bar.focusRing.shadow',
                 token: 'scrollpanel.bar.focus.ring.shadow',
                 variable: '--p-scrollpanel-bar-focus-ring-shadow',
                 description: 'Focus ring shadow of bar'
@@ -9960,31 +9960,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'select.focusRing.width',
+                name: 'select.root.focusRing.width',
                 token: 'select.focus.ring.width',
                 variable: '--p-select-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'select.focusRing.style',
+                name: 'select.root.focusRing.style',
                 token: 'select.focus.ring.style',
                 variable: '--p-select-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'select.focusRing.color',
+                name: 'select.root.focusRing.color',
                 token: 'select.focus.ring.color',
                 variable: '--p-select-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'select.focusRing.offset',
+                name: 'select.root.focusRing.offset',
                 token: 'select.focus.ring.offset',
                 variable: '--p-select-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'select.focusRing.shadow',
+                name: 'select.root.focusRing.shadow',
                 token: 'select.focus.ring.shadow',
                 variable: '--p-select-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -9996,37 +9996,37 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'select.sm.fontSize',
+                name: 'select.root.sm.fontSize',
                 token: 'select.sm.font.size',
                 variable: '--p-select-sm-font-size',
                 description: 'Sm font size of root'
             },
             {
-                name: 'select.sm.paddingX',
+                name: 'select.root.sm.paddingX',
                 token: 'select.sm.padding.x',
                 variable: '--p-select-sm-padding-x',
                 description: 'Sm padding x of root'
             },
             {
-                name: 'select.sm.paddingY',
+                name: 'select.root.sm.paddingY',
                 token: 'select.sm.padding.y',
                 variable: '--p-select-sm-padding-y',
                 description: 'Sm padding y of root'
             },
             {
-                name: 'select.lg.fontSize',
+                name: 'select.root.lg.fontSize',
                 token: 'select.lg.font.size',
                 variable: '--p-select-lg-font-size',
                 description: 'Lg font size of root'
             },
             {
-                name: 'select.lg.paddingX',
+                name: 'select.root.lg.paddingX',
                 token: 'select.lg.padding.x',
                 variable: '--p-select-lg-padding-x',
                 description: 'Lg padding x of root'
             },
             {
-                name: 'select.lg.paddingY',
+                name: 'select.root.lg.paddingY',
                 token: 'select.lg.padding.y',
                 variable: '--p-select-lg-padding-y',
                 description: 'Lg padding y of root'
@@ -10086,7 +10086,7 @@ export default {
                 description: 'Gap of list'
             },
             {
-                name: 'select.header.padding',
+                name: 'select.list.header.padding',
                 token: 'select.list.header.padding',
                 variable: '--p-select-list-header-padding',
                 description: 'Header padding of list'
@@ -10305,67 +10305,67 @@ export default {
                 description: 'Hover background of handle'
             },
             {
-                name: 'slider.content.borderRadius',
+                name: 'slider.handle.content.borderRadius',
                 token: 'slider.handle.content.border.radius',
                 variable: '--p-slider-handle-content-border-radius',
                 description: 'Content border radius of handle'
             },
             {
-                name: 'slider.content.background',
+                name: 'slider.handle.content.background',
                 token: 'slider.handle.content.background',
                 variable: '--p-slider-handle-content-background',
                 description: 'Background of handle'
             },
             {
-                name: 'slider.content.hoverBackground',
+                name: 'slider.handle.content.hoverBackground',
                 token: 'slider.handle.content.hover.background',
                 variable: '--p-slider-handle-content-hover-background',
                 description: 'Content hover background of handle'
             },
             {
-                name: 'slider.content.width',
+                name: 'slider.handle.content.width',
                 token: 'slider.handle.content.width',
                 variable: '--p-slider-handle-content-width',
                 description: 'Content width of handle'
             },
             {
-                name: 'slider.content.height',
+                name: 'slider.handle.content.height',
                 token: 'slider.handle.content.height',
                 variable: '--p-slider-handle-content-height',
                 description: 'Content height of handle'
             },
             {
-                name: 'slider.content.shadow',
+                name: 'slider.handle.content.shadow',
                 token: 'slider.handle.content.shadow',
                 variable: '--p-slider-handle-content-shadow',
                 description: 'Content shadow of handle'
             },
             {
-                name: 'slider.focusRing.width',
+                name: 'slider.handle.focusRing.width',
                 token: 'slider.handle.focus.ring.width',
                 variable: '--p-slider-handle-focus-ring-width',
                 description: 'Focus ring width of handle'
             },
             {
-                name: 'slider.focusRing.style',
+                name: 'slider.handle.focusRing.style',
                 token: 'slider.handle.focus.ring.style',
                 variable: '--p-slider-handle-focus-ring-style',
                 description: 'Focus ring style of handle'
             },
             {
-                name: 'slider.focusRing.color',
+                name: 'slider.handle.focusRing.color',
                 token: 'slider.handle.focus.ring.color',
                 variable: '--p-slider-handle-focus-ring-color',
                 description: 'Focus ring color of handle'
             },
             {
-                name: 'slider.focusRing.offset',
+                name: 'slider.handle.focusRing.offset',
                 token: 'slider.handle.focus.ring.offset',
                 variable: '--p-slider-handle-focus-ring-offset',
                 description: 'Focus ring offset of handle'
             },
             {
-                name: 'slider.focusRing.shadow',
+                name: 'slider.handle.focusRing.shadow',
                 token: 'slider.handle.focus.ring.shadow',
                 variable: '--p-slider-handle-focus-ring-shadow',
                 description: 'Focus ring shadow of handle'
@@ -10464,31 +10464,31 @@ export default {
                 description: 'Border radius of handle'
             },
             {
-                name: 'splitter.focusRing.width',
+                name: 'splitter.handle.focusRing.width',
                 token: 'splitter.handle.focus.ring.width',
                 variable: '--p-splitter-handle-focus-ring-width',
                 description: 'Focus ring width of handle'
             },
             {
-                name: 'splitter.focusRing.style',
+                name: 'splitter.handle.focusRing.style',
                 token: 'splitter.handle.focus.ring.style',
                 variable: '--p-splitter-handle-focus-ring-style',
                 description: 'Focus ring style of handle'
             },
             {
-                name: 'splitter.focusRing.color',
+                name: 'splitter.handle.focusRing.color',
                 token: 'splitter.handle.focus.ring.color',
                 variable: '--p-splitter-handle-focus-ring-color',
                 description: 'Focus ring color of handle'
             },
             {
-                name: 'splitter.focusRing.offset',
+                name: 'splitter.handle.focusRing.offset',
                 token: 'splitter.handle.focus.ring.offset',
                 variable: '--p-splitter-handle-focus-ring-offset',
                 description: 'Focus ring offset of handle'
             },
             {
-                name: 'splitter.focusRing.shadow',
+                name: 'splitter.handle.focusRing.shadow',
                 token: 'splitter.handle.focus.ring.shadow',
                 variable: '--p-splitter-handle-focus-ring-shadow',
                 description: 'Focus ring shadow of handle'
@@ -10553,31 +10553,31 @@ export default {
                 description: 'Border radius of step header'
             },
             {
-                name: 'stepper.focusRing.width',
+                name: 'stepper.stepHeader.focusRing.width',
                 token: 'stepper.step.header.focus.ring.width',
                 variable: '--p-stepper-step-header-focus-ring-width',
                 description: 'Focus ring width of step header'
             },
             {
-                name: 'stepper.focusRing.style',
+                name: 'stepper.stepHeader.focusRing.style',
                 token: 'stepper.step.header.focus.ring.style',
                 variable: '--p-stepper-step-header-focus-ring-style',
                 description: 'Focus ring style of step header'
             },
             {
-                name: 'stepper.focusRing.color',
+                name: 'stepper.stepHeader.focusRing.color',
                 token: 'stepper.step.header.focus.ring.color',
                 variable: '--p-stepper-step-header-focus-ring-color',
                 description: 'Focus ring color of step header'
             },
             {
-                name: 'stepper.focusRing.offset',
+                name: 'stepper.stepHeader.focusRing.offset',
                 token: 'stepper.step.header.focus.ring.offset',
                 variable: '--p-stepper-step-header-focus-ring-offset',
                 description: 'Focus ring offset of step header'
             },
             {
-                name: 'stepper.focusRing.shadow',
+                name: 'stepper.stepHeader.focusRing.shadow',
                 token: 'stepper.step.header.focus.ring.shadow',
                 variable: '--p-stepper-step-header-focus-ring-shadow',
                 description: 'Focus ring shadow of step header'
@@ -10726,31 +10726,31 @@ export default {
                 description: 'Border radius of item link'
             },
             {
-                name: 'steps.focusRing.width',
+                name: 'steps.itemLink.focusRing.width',
                 token: 'steps.item.link.focus.ring.width',
                 variable: '--p-steps-item-link-focus-ring-width',
                 description: 'Focus ring width of item link'
             },
             {
-                name: 'steps.focusRing.style',
+                name: 'steps.itemLink.focusRing.style',
                 token: 'steps.item.link.focus.ring.style',
                 variable: '--p-steps-item-link-focus-ring-style',
                 description: 'Focus ring style of item link'
             },
             {
-                name: 'steps.focusRing.color',
+                name: 'steps.itemLink.focusRing.color',
                 token: 'steps.item.link.focus.ring.color',
                 variable: '--p-steps-item-link-focus-ring-color',
                 description: 'Focus ring color of item link'
             },
             {
-                name: 'steps.focusRing.offset',
+                name: 'steps.itemLink.focusRing.offset',
                 token: 'steps.item.link.focus.ring.offset',
                 variable: '--p-steps-item-link-focus-ring-offset',
                 description: 'Focus ring offset of item link'
             },
             {
-                name: 'steps.focusRing.shadow',
+                name: 'steps.itemLink.focusRing.shadow',
                 token: 'steps.item.link.focus.ring.shadow',
                 variable: '--p-steps-item-link-focus-ring-shadow',
                 description: 'Focus ring shadow of item link'
@@ -10959,31 +10959,31 @@ export default {
                 description: 'Gap of item'
             },
             {
-                name: 'tabmenu.focusRing.width',
+                name: 'tabmenu.item.focusRing.width',
                 token: 'tabmenu.item.focus.ring.width',
                 variable: '--p-tabmenu-item-focus-ring-width',
                 description: 'Focus ring width of item'
             },
             {
-                name: 'tabmenu.focusRing.style',
+                name: 'tabmenu.item.focusRing.style',
                 token: 'tabmenu.item.focus.ring.style',
                 variable: '--p-tabmenu-item-focus-ring-style',
                 description: 'Focus ring style of item'
             },
             {
-                name: 'tabmenu.focusRing.color',
+                name: 'tabmenu.item.focusRing.color',
                 token: 'tabmenu.item.focus.ring.color',
                 variable: '--p-tabmenu-item-focus-ring-color',
                 description: 'Focus ring color of item'
             },
             {
-                name: 'tabmenu.focusRing.offset',
+                name: 'tabmenu.item.focusRing.offset',
                 token: 'tabmenu.item.focus.ring.offset',
                 variable: '--p-tabmenu-item-focus-ring-offset',
                 description: 'Focus ring offset of item'
             },
             {
-                name: 'tabmenu.focusRing.shadow',
+                name: 'tabmenu.item.focusRing.shadow',
                 token: 'tabmenu.item.focus.ring.shadow',
                 variable: '--p-tabmenu-item-focus-ring-shadow',
                 description: 'Focus ring shadow of item'
@@ -11138,31 +11138,31 @@ export default {
                 description: 'Gap of tab'
             },
             {
-                name: 'tabs.focusRing.width',
+                name: 'tabs.tab.focusRing.width',
                 token: 'tabs.tab.focus.ring.width',
                 variable: '--p-tabs-tab-focus-ring-width',
                 description: 'Focus ring width of tab'
             },
             {
-                name: 'tabs.focusRing.style',
+                name: 'tabs.tab.focusRing.style',
                 token: 'tabs.tab.focus.ring.style',
                 variable: '--p-tabs-tab-focus-ring-style',
                 description: 'Focus ring style of tab'
             },
             {
-                name: 'tabs.focusRing.color',
+                name: 'tabs.tab.focusRing.color',
                 token: 'tabs.tab.focus.ring.color',
                 variable: '--p-tabs-tab-focus-ring-color',
                 description: 'Focus ring color of tab'
             },
             {
-                name: 'tabs.focusRing.offset',
+                name: 'tabs.tab.focusRing.offset',
                 token: 'tabs.tab.focus.ring.offset',
                 variable: '--p-tabs-tab-focus-ring-offset',
                 description: 'Focus ring offset of tab'
             },
             {
-                name: 'tabs.focusRing.shadow',
+                name: 'tabs.tab.focusRing.shadow',
                 token: 'tabs.tab.focus.ring.shadow',
                 variable: '--p-tabs-tab-focus-ring-shadow',
                 description: 'Focus ring shadow of tab'
@@ -11186,31 +11186,31 @@ export default {
                 description: 'Padding of tabpanel'
             },
             {
-                name: 'tabs.focusRing.width',
+                name: 'tabs.tabpanel.focusRing.width',
                 token: 'tabs.tabpanel.focus.ring.width',
                 variable: '--p-tabs-tabpanel-focus-ring-width',
                 description: 'Focus ring width of tabpanel'
             },
             {
-                name: 'tabs.focusRing.style',
+                name: 'tabs.tabpanel.focusRing.style',
                 token: 'tabs.tabpanel.focus.ring.style',
                 variable: '--p-tabs-tabpanel-focus-ring-style',
                 description: 'Focus ring style of tabpanel'
             },
             {
-                name: 'tabs.focusRing.color',
+                name: 'tabs.tabpanel.focusRing.color',
                 token: 'tabs.tabpanel.focus.ring.color',
                 variable: '--p-tabs-tabpanel-focus-ring-color',
                 description: 'Focus ring color of tabpanel'
             },
             {
-                name: 'tabs.focusRing.offset',
+                name: 'tabs.tabpanel.focusRing.offset',
                 token: 'tabs.tabpanel.focus.ring.offset',
                 variable: '--p-tabs-tabpanel-focus-ring-offset',
                 description: 'Focus ring offset of tabpanel'
             },
             {
-                name: 'tabs.focusRing.shadow',
+                name: 'tabs.tabpanel.focusRing.shadow',
                 token: 'tabs.tabpanel.focus.ring.shadow',
                 variable: '--p-tabs-tabpanel-focus-ring-shadow',
                 description: 'Focus ring shadow of tabpanel'
@@ -11240,31 +11240,31 @@ export default {
                 description: 'Width of nav button'
             },
             {
-                name: 'tabs.focusRing.width',
+                name: 'tabs.navButton.focusRing.width',
                 token: 'tabs.nav.button.focus.ring.width',
                 variable: '--p-tabs-nav-button-focus-ring-width',
                 description: 'Focus ring width of nav button'
             },
             {
-                name: 'tabs.focusRing.style',
+                name: 'tabs.navButton.focusRing.style',
                 token: 'tabs.nav.button.focus.ring.style',
                 variable: '--p-tabs-nav-button-focus-ring-style',
                 description: 'Focus ring style of nav button'
             },
             {
-                name: 'tabs.focusRing.color',
+                name: 'tabs.navButton.focusRing.color',
                 token: 'tabs.nav.button.focus.ring.color',
                 variable: '--p-tabs-nav-button-focus-ring-color',
                 description: 'Focus ring color of nav button'
             },
             {
-                name: 'tabs.focusRing.offset',
+                name: 'tabs.navButton.focusRing.offset',
                 token: 'tabs.nav.button.focus.ring.offset',
                 variable: '--p-tabs-nav-button-focus-ring-offset',
                 description: 'Focus ring offset of nav button'
             },
             {
-                name: 'tabs.focusRing.shadow',
+                name: 'tabs.navButton.focusRing.shadow',
                 token: 'tabs.nav.button.focus.ring.shadow',
                 variable: '--p-tabs-nav-button-focus-ring-shadow',
                 description: 'Focus ring shadow of nav button'
@@ -11674,31 +11674,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'textarea.focusRing.width',
+                name: 'textarea.root.focusRing.width',
                 token: 'textarea.focus.ring.width',
                 variable: '--p-textarea-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'textarea.focusRing.style',
+                name: 'textarea.root.focusRing.style',
                 token: 'textarea.focus.ring.style',
                 variable: '--p-textarea-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'textarea.focusRing.color',
+                name: 'textarea.root.focusRing.color',
                 token: 'textarea.focus.ring.color',
                 variable: '--p-textarea-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'textarea.focusRing.offset',
+                name: 'textarea.root.focusRing.offset',
                 token: 'textarea.focus.ring.offset',
                 variable: '--p-textarea-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'textarea.focusRing.shadow',
+                name: 'textarea.root.focusRing.shadow',
                 token: 'textarea.focus.ring.shadow',
                 variable: '--p-textarea-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -11710,37 +11710,37 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'textarea.sm.fontSize',
+                name: 'textarea.root.sm.fontSize',
                 token: 'textarea.sm.font.size',
                 variable: '--p-textarea-sm-font-size',
                 description: 'Sm font size of root'
             },
             {
-                name: 'textarea.sm.paddingX',
+                name: 'textarea.root.sm.paddingX',
                 token: 'textarea.sm.padding.x',
                 variable: '--p-textarea-sm-padding-x',
                 description: 'Sm padding x of root'
             },
             {
-                name: 'textarea.sm.paddingY',
+                name: 'textarea.root.sm.paddingY',
                 token: 'textarea.sm.padding.y',
                 variable: '--p-textarea-sm-padding-y',
                 description: 'Sm padding y of root'
             },
             {
-                name: 'textarea.lg.fontSize',
+                name: 'textarea.root.lg.fontSize',
                 token: 'textarea.lg.font.size',
                 variable: '--p-textarea-lg-font-size',
                 description: 'Lg font size of root'
             },
             {
-                name: 'textarea.lg.paddingX',
+                name: 'textarea.root.lg.paddingX',
                 token: 'textarea.lg.padding.x',
                 variable: '--p-textarea-lg-padding-x',
                 description: 'Lg padding x of root'
             },
             {
-                name: 'textarea.lg.paddingY',
+                name: 'textarea.root.lg.paddingY',
                 token: 'textarea.lg.padding.y',
                 variable: '--p-textarea-lg-padding-y',
                 description: 'Lg padding y of root'
@@ -11847,19 +11847,19 @@ export default {
                 description: 'Gap of item'
             },
             {
-                name: 'tieredmenu.icon.color',
+                name: 'tieredmenu.item.icon.color',
                 token: 'tieredmenu.item.icon.color',
                 variable: '--p-tieredmenu-item-icon-color',
                 description: 'Icon color of item'
             },
             {
-                name: 'tieredmenu.icon.focusColor',
+                name: 'tieredmenu.item.icon.focusColor',
                 token: 'tieredmenu.item.icon.focus.color',
                 variable: '--p-tieredmenu-item-icon-focus-color',
                 description: 'Icon focus color of item'
             },
             {
-                name: 'tieredmenu.icon.activeColor',
+                name: 'tieredmenu.item.icon.activeColor',
                 token: 'tieredmenu.item.icon.active.color',
                 variable: '--p-tieredmenu-item-icon-active-color',
                 description: 'Icon active color of item'
@@ -11912,13 +11912,13 @@ export default {
                 description: 'Min height of event'
             },
             {
-                name: 'timeline.eventContent.padding',
+                name: 'timeline.horizontal.eventContent.padding',
                 token: 'timeline.horizontal.event.content.padding',
                 variable: '--p-timeline-horizontal-event-content-padding',
                 description: 'Event content padding of horizontal'
             },
             {
-                name: 'timeline.eventContent.padding',
+                name: 'timeline.vertical.eventContent.padding',
                 token: 'timeline.vertical.event.content.padding',
                 variable: '--p-timeline-vertical-event-content-padding',
                 description: 'Event content padding of vertical'
@@ -11954,25 +11954,25 @@ export default {
                 description: 'Border color of event marker'
             },
             {
-                name: 'timeline.content.borderRadius',
+                name: 'timeline.eventMarker.content.borderRadius',
                 token: 'timeline.event.marker.content.border.radius',
                 variable: '--p-timeline-event-marker-content-border-radius',
                 description: 'Content border radius of event marker'
             },
             {
-                name: 'timeline.content.size',
+                name: 'timeline.eventMarker.content.size',
                 token: 'timeline.event.marker.content.size',
                 variable: '--p-timeline-event-marker-content-size',
                 description: 'Content size of event marker'
             },
             {
-                name: 'timeline.content.background',
+                name: 'timeline.eventMarker.content.background',
                 token: 'timeline.event.marker.content.background',
                 variable: '--p-timeline-event-marker-content-background',
                 description: 'Content background of event marker'
             },
             {
-                name: 'timeline.content.insetShadow',
+                name: 'timeline.eventMarker.content.insetShadow',
                 token: 'timeline.event.marker.content.inset.shadow',
                 variable: '--p-timeline-event-marker-content-inset-shadow',
                 description: 'Content inset shadow of event marker'
@@ -12091,19 +12091,19 @@ export default {
                 description: 'Border radius of close button'
             },
             {
-                name: 'toast.focusRing.width',
+                name: 'toast.closeButton.focusRing.width',
                 token: 'toast.close.button.focus.ring.width',
                 variable: '--p-toast-close-button-focus-ring-width',
                 description: 'Focus ring width of close button'
             },
             {
-                name: 'toast.focusRing.style',
+                name: 'toast.closeButton.focusRing.style',
                 token: 'toast.close.button.focus.ring.style',
                 variable: '--p-toast-close-button-focus-ring-style',
                 description: 'Focus ring style of close button'
             },
             {
-                name: 'toast.focusRing.offset',
+                name: 'toast.closeButton.focusRing.offset',
                 token: 'toast.close.button.focus.ring.offset',
                 variable: '--p-toast-close-button-focus-ring-offset',
                 description: 'Focus ring offset of close button'
@@ -12145,19 +12145,19 @@ export default {
                 description: 'Shadow of info'
             },
             {
-                name: 'toast.closeButton.hoverBackground',
+                name: 'toast.info.closeButton.hoverBackground',
                 token: 'toast.info.close.button.hover.background',
                 variable: '--p-toast-info-close-button-hover-background',
                 description: 'Close button hover background of info'
             },
             {
-                name: 'toast.focusRing.color',
+                name: 'toast.info.closeButton.focusRing.color',
                 token: 'toast.info.close.button.focus.ring.color',
                 variable: '--p-toast-info-close-button-focus-ring-color',
                 description: 'Close button focus ring color of info'
             },
             {
-                name: 'toast.focusRing.shadow',
+                name: 'toast.info.closeButton.focusRing.shadow',
                 token: 'toast.info.close.button.focus.ring.shadow',
                 variable: '--p-toast-info-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of info'
@@ -12193,19 +12193,19 @@ export default {
                 description: 'Shadow of success'
             },
             {
-                name: 'toast.closeButton.hoverBackground',
+                name: 'toast.success.closeButton.hoverBackground',
                 token: 'toast.success.close.button.hover.background',
                 variable: '--p-toast-success-close-button-hover-background',
                 description: 'Close button hover background of success'
             },
             {
-                name: 'toast.focusRing.color',
+                name: 'toast.success.closeButton.focusRing.color',
                 token: 'toast.success.close.button.focus.ring.color',
                 variable: '--p-toast-success-close-button-focus-ring-color',
                 description: 'Close button focus ring color of success'
             },
             {
-                name: 'toast.focusRing.shadow',
+                name: 'toast.success.closeButton.focusRing.shadow',
                 token: 'toast.success.close.button.focus.ring.shadow',
                 variable: '--p-toast-success-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of success'
@@ -12241,19 +12241,19 @@ export default {
                 description: 'Shadow of warn'
             },
             {
-                name: 'toast.closeButton.hoverBackground',
+                name: 'toast.warn.closeButton.hoverBackground',
                 token: 'toast.warn.close.button.hover.background',
                 variable: '--p-toast-warn-close-button-hover-background',
                 description: 'Close button hover background of warn'
             },
             {
-                name: 'toast.focusRing.color',
+                name: 'toast.warn.closeButton.focusRing.color',
                 token: 'toast.warn.close.button.focus.ring.color',
                 variable: '--p-toast-warn-close-button-focus-ring-color',
                 description: 'Close button focus ring color of warn'
             },
             {
-                name: 'toast.focusRing.shadow',
+                name: 'toast.warn.closeButton.focusRing.shadow',
                 token: 'toast.warn.close.button.focus.ring.shadow',
                 variable: '--p-toast-warn-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of warn'
@@ -12289,19 +12289,19 @@ export default {
                 description: 'Shadow of error'
             },
             {
-                name: 'toast.closeButton.hoverBackground',
+                name: 'toast.error.closeButton.hoverBackground',
                 token: 'toast.error.close.button.hover.background',
                 variable: '--p-toast-error-close-button-hover-background',
                 description: 'Close button hover background of error'
             },
             {
-                name: 'toast.focusRing.color',
+                name: 'toast.error.closeButton.focusRing.color',
                 token: 'toast.error.close.button.focus.ring.color',
                 variable: '--p-toast-error-close-button-focus-ring-color',
                 description: 'Close button focus ring color of error'
             },
             {
-                name: 'toast.focusRing.shadow',
+                name: 'toast.error.closeButton.focusRing.shadow',
                 token: 'toast.error.close.button.focus.ring.shadow',
                 variable: '--p-toast-error-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of error'
@@ -12337,19 +12337,19 @@ export default {
                 description: 'Shadow of secondary'
             },
             {
-                name: 'toast.closeButton.hoverBackground',
+                name: 'toast.secondary.closeButton.hoverBackground',
                 token: 'toast.secondary.close.button.hover.background',
                 variable: '--p-toast-secondary-close-button-hover-background',
                 description: 'Close button hover background of secondary'
             },
             {
-                name: 'toast.focusRing.color',
+                name: 'toast.secondary.closeButton.focusRing.color',
                 token: 'toast.secondary.close.button.focus.ring.color',
                 variable: '--p-toast-secondary-close-button-focus-ring-color',
                 description: 'Close button focus ring color of secondary'
             },
             {
-                name: 'toast.focusRing.shadow',
+                name: 'toast.secondary.closeButton.focusRing.shadow',
                 token: 'toast.secondary.close.button.focus.ring.shadow',
                 variable: '--p-toast-secondary-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of secondary'
@@ -12385,19 +12385,19 @@ export default {
                 description: 'Shadow of contrast'
             },
             {
-                name: 'toast.closeButton.hoverBackground',
+                name: 'toast.contrast.closeButton.hoverBackground',
                 token: 'toast.contrast.close.button.hover.background',
                 variable: '--p-toast-contrast-close-button-hover-background',
                 description: 'Close button hover background of contrast'
             },
             {
-                name: 'toast.focusRing.color',
+                name: 'toast.contrast.closeButton.focusRing.color',
                 token: 'toast.contrast.close.button.focus.ring.color',
                 variable: '--p-toast-contrast-close-button-focus-ring-color',
                 description: 'Close button focus ring color of contrast'
             },
             {
-                name: 'toast.focusRing.shadow',
+                name: 'toast.contrast.closeButton.focusRing.shadow',
                 token: 'toast.contrast.close.button.focus.ring.shadow',
                 variable: '--p-toast-contrast-close-button-focus-ring-shadow',
                 description: 'Close button focus ring shadow of contrast'
@@ -12456,31 +12456,31 @@ export default {
                 description: 'Invalid border color of root'
             },
             {
-                name: 'togglebutton.focusRing.width',
+                name: 'togglebutton.root.focusRing.width',
                 token: 'togglebutton.focus.ring.width',
                 variable: '--p-togglebutton-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'togglebutton.focusRing.style',
+                name: 'togglebutton.root.focusRing.style',
                 token: 'togglebutton.focus.ring.style',
                 variable: '--p-togglebutton-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'togglebutton.focusRing.color',
+                name: 'togglebutton.root.focusRing.color',
                 token: 'togglebutton.focus.ring.color',
                 variable: '--p-togglebutton-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'togglebutton.focusRing.offset',
+                name: 'togglebutton.root.focusRing.offset',
                 token: 'togglebutton.focus.ring.offset',
                 variable: '--p-togglebutton-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'togglebutton.focusRing.shadow',
+                name: 'togglebutton.root.focusRing.shadow',
                 token: 'togglebutton.focus.ring.shadow',
                 variable: '--p-togglebutton-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -12492,25 +12492,25 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'togglebutton.sm.fontSize',
+                name: 'togglebutton.root.sm.fontSize',
                 token: 'togglebutton.sm.font.size',
                 variable: '--p-togglebutton-sm-font-size',
                 description: 'Sm font size of root'
             },
             {
-                name: 'togglebutton.sm.padding',
+                name: 'togglebutton.root.sm.padding',
                 token: 'togglebutton.sm.padding',
                 variable: '--p-togglebutton-sm-padding',
                 description: 'Sm padding of root'
             },
             {
-                name: 'togglebutton.lg.fontSize',
+                name: 'togglebutton.root.lg.fontSize',
                 token: 'togglebutton.lg.font.size',
                 variable: '--p-togglebutton-lg-font-size',
                 description: 'Lg font size of root'
             },
             {
-                name: 'togglebutton.lg.padding',
+                name: 'togglebutton.root.lg.padding',
                 token: 'togglebutton.lg.padding',
                 variable: '--p-togglebutton-lg-padding',
                 description: 'Lg padding of root'
@@ -12606,13 +12606,13 @@ export default {
                 description: 'Checked shadow of content'
             },
             {
-                name: 'togglebutton.sm.padding',
+                name: 'togglebutton.content.sm.padding',
                 token: 'togglebutton.content.sm.padding',
                 variable: '--p-togglebutton-content-sm-padding',
                 description: 'Sm padding of content'
             },
             {
-                name: 'togglebutton.lg.padding',
+                name: 'togglebutton.content.lg.padding',
                 token: 'togglebutton.content.lg.padding',
                 variable: '--p-togglebutton-content-lg-padding',
                 description: 'Lg padding of content'
@@ -12659,31 +12659,31 @@ export default {
                 description: 'Shadow of root'
             },
             {
-                name: 'toggleswitch.focusRing.width',
+                name: 'toggleswitch.root.focusRing.width',
                 token: 'toggleswitch.focus.ring.width',
                 variable: '--p-toggleswitch-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'toggleswitch.focusRing.style',
+                name: 'toggleswitch.root.focusRing.style',
                 token: 'toggleswitch.focus.ring.style',
                 variable: '--p-toggleswitch-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'toggleswitch.focusRing.color',
+                name: 'toggleswitch.root.focusRing.color',
                 token: 'toggleswitch.focus.ring.color',
                 variable: '--p-toggleswitch-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'toggleswitch.focusRing.offset',
+                name: 'toggleswitch.root.focusRing.offset',
                 token: 'toggleswitch.focus.ring.offset',
                 variable: '--p-toggleswitch-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'toggleswitch.focusRing.shadow',
+                name: 'toggleswitch.root.focusRing.shadow',
                 token: 'toggleswitch.focus.ring.shadow',
                 variable: '--p-toggleswitch-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -13004,31 +13004,31 @@ export default {
                 description: 'Selected color of node'
             },
             {
-                name: 'tree.focusRing.width',
+                name: 'tree.node.focusRing.width',
                 token: 'tree.node.focus.ring.width',
                 variable: '--p-tree-node-focus-ring-width',
                 description: 'Focus ring width of node'
             },
             {
-                name: 'tree.focusRing.style',
+                name: 'tree.node.focusRing.style',
                 token: 'tree.node.focus.ring.style',
                 variable: '--p-tree-node-focus-ring-style',
                 description: 'Focus ring style of node'
             },
             {
-                name: 'tree.focusRing.color',
+                name: 'tree.node.focusRing.color',
                 token: 'tree.node.focus.ring.color',
                 variable: '--p-tree-node-focus-ring-color',
                 description: 'Focus ring color of node'
             },
             {
-                name: 'tree.focusRing.offset',
+                name: 'tree.node.focusRing.offset',
                 token: 'tree.node.focus.ring.offset',
                 variable: '--p-tree-node-focus-ring-offset',
                 description: 'Focus ring offset of node'
             },
             {
-                name: 'tree.focusRing.shadow',
+                name: 'tree.node.focusRing.shadow',
                 token: 'tree.node.focus.ring.shadow',
                 variable: '--p-tree-node-focus-ring-shadow',
                 description: 'Focus ring shadow of node'
@@ -13100,31 +13100,31 @@ export default {
                 description: 'Selected hover color of node toggle button'
             },
             {
-                name: 'tree.focusRing.width',
+                name: 'tree.nodeToggleButton.focusRing.width',
                 token: 'tree.node.toggle.button.focus.ring.width',
                 variable: '--p-tree-node-toggle-button-focus-ring-width',
                 description: 'Focus ring width of node toggle button'
             },
             {
-                name: 'tree.focusRing.style',
+                name: 'tree.nodeToggleButton.focusRing.style',
                 token: 'tree.node.toggle.button.focus.ring.style',
                 variable: '--p-tree-node-toggle-button-focus-ring-style',
                 description: 'Focus ring style of node toggle button'
             },
             {
-                name: 'tree.focusRing.color',
+                name: 'tree.nodeToggleButton.focusRing.color',
                 token: 'tree.node.toggle.button.focus.ring.color',
                 variable: '--p-tree-node-toggle-button-focus-ring-color',
                 description: 'Focus ring color of node toggle button'
             },
             {
-                name: 'tree.focusRing.offset',
+                name: 'tree.nodeToggleButton.focusRing.offset',
                 token: 'tree.node.toggle.button.focus.ring.offset',
                 variable: '--p-tree-node-toggle-button-focus-ring-offset',
                 description: 'Focus ring offset of node toggle button'
             },
             {
-                name: 'tree.focusRing.shadow',
+                name: 'tree.nodeToggleButton.focusRing.shadow',
                 token: 'tree.node.toggle.button.focus.ring.shadow',
                 variable: '--p-tree-node-toggle-button-focus-ring-shadow',
                 description: 'Focus ring shadow of node toggle button'
@@ -13249,31 +13249,31 @@ export default {
                 description: 'Border radius of root'
             },
             {
-                name: 'treeselect.focusRing.width',
+                name: 'treeselect.root.focusRing.width',
                 token: 'treeselect.focus.ring.width',
                 variable: '--p-treeselect-focus-ring-width',
                 description: 'Focus ring width of root'
             },
             {
-                name: 'treeselect.focusRing.style',
+                name: 'treeselect.root.focusRing.style',
                 token: 'treeselect.focus.ring.style',
                 variable: '--p-treeselect-focus-ring-style',
                 description: 'Focus ring style of root'
             },
             {
-                name: 'treeselect.focusRing.color',
+                name: 'treeselect.root.focusRing.color',
                 token: 'treeselect.focus.ring.color',
                 variable: '--p-treeselect-focus-ring-color',
                 description: 'Focus ring color of root'
             },
             {
-                name: 'treeselect.focusRing.offset',
+                name: 'treeselect.root.focusRing.offset',
                 token: 'treeselect.focus.ring.offset',
                 variable: '--p-treeselect-focus-ring-offset',
                 description: 'Focus ring offset of root'
             },
             {
-                name: 'treeselect.focusRing.shadow',
+                name: 'treeselect.root.focusRing.shadow',
                 token: 'treeselect.focus.ring.shadow',
                 variable: '--p-treeselect-focus-ring-shadow',
                 description: 'Focus ring shadow of root'
@@ -13285,37 +13285,37 @@ export default {
                 description: 'Transition duration of root'
             },
             {
-                name: 'treeselect.sm.fontSize',
+                name: 'treeselect.root.sm.fontSize',
                 token: 'treeselect.sm.font.size',
                 variable: '--p-treeselect-sm-font-size',
                 description: 'Sm font size of root'
             },
             {
-                name: 'treeselect.sm.paddingX',
+                name: 'treeselect.root.sm.paddingX',
                 token: 'treeselect.sm.padding.x',
                 variable: '--p-treeselect-sm-padding-x',
                 description: 'Sm padding x of root'
             },
             {
-                name: 'treeselect.sm.paddingY',
+                name: 'treeselect.root.sm.paddingY',
                 token: 'treeselect.sm.padding.y',
                 variable: '--p-treeselect-sm-padding-y',
                 description: 'Sm padding y of root'
             },
             {
-                name: 'treeselect.lg.fontSize',
+                name: 'treeselect.root.lg.fontSize',
                 token: 'treeselect.lg.font.size',
                 variable: '--p-treeselect-lg-font-size',
                 description: 'Lg font size of root'
             },
             {
-                name: 'treeselect.lg.paddingX',
+                name: 'treeselect.root.lg.paddingX',
                 token: 'treeselect.lg.padding.x',
                 variable: '--p-treeselect-lg-padding-x',
                 description: 'Lg padding x of root'
             },
             {
-                name: 'treeselect.lg.paddingY',
+                name: 'treeselect.root.lg.paddingY',
                 token: 'treeselect.lg.padding.y',
                 variable: '--p-treeselect-lg-padding-y',
                 description: 'Lg padding y of root'
@@ -13488,31 +13488,31 @@ export default {
                 description: 'Padding of header cell'
             },
             {
-                name: 'treetable.focusRing.width',
+                name: 'treetable.headerCell.focusRing.width',
                 token: 'treetable.header.cell.focus.ring.width',
                 variable: '--p-treetable-header-cell-focus-ring-width',
                 description: 'Focus ring width of header cell'
             },
             {
-                name: 'treetable.focusRing.style',
+                name: 'treetable.headerCell.focusRing.style',
                 token: 'treetable.header.cell.focus.ring.style',
                 variable: '--p-treetable-header-cell-focus-ring-style',
                 description: 'Focus ring style of header cell'
             },
             {
-                name: 'treetable.focusRing.color',
+                name: 'treetable.headerCell.focusRing.color',
                 token: 'treetable.header.cell.focus.ring.color',
                 variable: '--p-treetable-header-cell-focus-ring-color',
                 description: 'Focus ring color of header cell'
             },
             {
-                name: 'treetable.focusRing.offset',
+                name: 'treetable.headerCell.focusRing.offset',
                 token: 'treetable.header.cell.focus.ring.offset',
                 variable: '--p-treetable-header-cell-focus-ring-offset',
                 description: 'Focus ring offset of header cell'
             },
             {
-                name: 'treetable.focusRing.shadow',
+                name: 'treetable.headerCell.focusRing.shadow',
                 token: 'treetable.header.cell.focus.ring.shadow',
                 variable: '--p-treetable-header-cell-focus-ring-shadow',
                 description: 'Focus ring shadow of header cell'
@@ -13560,31 +13560,31 @@ export default {
                 description: 'Selected color of row'
             },
             {
-                name: 'treetable.focusRing.width',
+                name: 'treetable.row.focusRing.width',
                 token: 'treetable.row.focus.ring.width',
                 variable: '--p-treetable-row-focus-ring-width',
                 description: 'Focus ring width of row'
             },
             {
-                name: 'treetable.focusRing.style',
+                name: 'treetable.row.focusRing.style',
                 token: 'treetable.row.focus.ring.style',
                 variable: '--p-treetable-row-focus-ring-style',
                 description: 'Focus ring style of row'
             },
             {
-                name: 'treetable.focusRing.color',
+                name: 'treetable.row.focusRing.color',
                 token: 'treetable.row.focus.ring.color',
                 variable: '--p-treetable-row-focus-ring-color',
                 description: 'Focus ring color of row'
             },
             {
-                name: 'treetable.focusRing.offset',
+                name: 'treetable.row.focusRing.offset',
                 token: 'treetable.row.focus.ring.offset',
                 variable: '--p-treetable-row-focus-ring-offset',
                 description: 'Focus ring offset of row'
             },
             {
-                name: 'treetable.focusRing.shadow',
+                name: 'treetable.row.focusRing.shadow',
                 token: 'treetable.row.focus.ring.shadow',
                 variable: '--p-treetable-row-focus-ring-shadow',
                 description: 'Focus ring shadow of row'
@@ -13758,31 +13758,31 @@ export default {
                 description: 'Border radius of node toggle button'
             },
             {
-                name: 'treetable.focusRing.width',
+                name: 'treetable.nodeToggleButton.focusRing.width',
                 token: 'treetable.node.toggle.button.focus.ring.width',
                 variable: '--p-treetable-node-toggle-button-focus-ring-width',
                 description: 'Focus ring width of node toggle button'
             },
             {
-                name: 'treetable.focusRing.style',
+                name: 'treetable.nodeToggleButton.focusRing.style',
                 token: 'treetable.node.toggle.button.focus.ring.style',
                 variable: '--p-treetable-node-toggle-button-focus-ring-style',
                 description: 'Focus ring style of node toggle button'
             },
             {
-                name: 'treetable.focusRing.color',
+                name: 'treetable.nodeToggleButton.focusRing.color',
                 token: 'treetable.node.toggle.button.focus.ring.color',
                 variable: '--p-treetable-node-toggle-button-focus-ring-color',
                 description: 'Focus ring color of node toggle button'
             },
             {
-                name: 'treetable.focusRing.offset',
+                name: 'treetable.nodeToggleButton.focusRing.offset',
                 token: 'treetable.node.toggle.button.focus.ring.offset',
                 variable: '--p-treetable-node-toggle-button-focus-ring-offset',
                 description: 'Focus ring offset of node toggle button'
             },
             {
-                name: 'treetable.focusRing.shadow',
+                name: 'treetable.nodeToggleButton.focusRing.shadow',
                 token: 'treetable.node.toggle.button.focus.ring.shadow',
                 variable: '--p-treetable-node-toggle-button-focus-ring-shadow',
                 description: 'Focus ring shadow of node toggle button'
@@ -13817,19 +13817,19 @@ export default {
         description: 'VirtualScroller Design Tokens',
         tokens: [
             {
-                name: 'virtualscroller.mask.background',
+                name: 'virtualscroller.loader.mask.background',
                 token: 'virtualscroller.loader.mask.background',
                 variable: '--p-virtualscroller-loader-mask-background',
                 description: 'Background of loader mask'
             },
             {
-                name: 'virtualscroller.mask.color',
+                name: 'virtualscroller.loader.mask.color',
                 token: 'virtualscroller.loader.mask.color',
                 variable: '--p-virtualscroller-loader-mask-color',
                 description: 'Color of loader mask'
             },
             {
-                name: 'virtualscroller.icon.size',
+                name: 'virtualscroller.loader.icon.size',
                 token: 'virtualscroller.loader.icon.size',
                 variable: '--p-virtualscroller-loader-icon-size',
                 description: 'Size of the loader icon'
