@@ -26,3 +26,5 @@ export interface ThemeOptions {
 export interface ThemeStyleOptions {
     dt: (key: string, fallback?: string | number | Pick<ThemeStyleOptions, 'dt'>) => string | number | undefined;
 }
+
+export declare type StyleType<T = ThemeStyleOptions> = string | ((options: T) => string);
