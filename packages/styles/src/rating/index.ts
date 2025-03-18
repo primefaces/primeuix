@@ -11,7 +11,6 @@ export const style: StyleType = ({ dt }) => `
 .p-rating-option {
     display: inline-flex;
     align-items: center;
-    cursor: pointer;
     outline-color: transparent;
     border-radius: 50%;
     transition: background ${dt('rating.transition.duration')}, color ${dt('rating.transition.duration')}, border-color ${dt('rating.transition.duration')}, outline-color ${dt('rating.transition.duration')}, box-shadow ${dt(
@@ -36,6 +35,7 @@ export const style: StyleType = ({ dt }) => `
 }
 
 .p-rating:not(.p-disabled):not(.p-readonly) .p-rating-option:hover .p-rating-icon {
+    cursor: pointer;
     color: ${dt('rating.icon.hover.color')};
 }
 
