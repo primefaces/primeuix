@@ -37,7 +37,7 @@ export const style: StyleType = ({ dt }) => `
 
 .p-rating.p-disabled .p-rating-option,
 .p-rating.p-readonly .p-rating-option {
-    cursor: not-allowed;
+    cursor: default;
 }
 
 .p-rating:not(.p-disabled):not(.p-readonly) .p-rating-option:hover .p-rating-icon {
