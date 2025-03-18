@@ -35,8 +35,8 @@ export const style: StyleType = ({ dt }) => `
     height: ${dt('rating.icon.size')};
 }
 
-.p-rating.p-disabled,
-.p-rating.p-readonly {
+.p-rating.p-disabled .p-rating-option,
+.p-rating.p-readonly .p-rating-option {
     cursor: not-allowed;
 }
 
