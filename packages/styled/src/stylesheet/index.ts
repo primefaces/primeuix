@@ -5,13 +5,14 @@ export interface StyleSheetProps {
 }
 
 export interface StyleMeta {
+    name?: string;
     css?: string;
     attrs?: Record<string, unknown>;
     markup?: string;
     element?: HTMLStyleElement;
 }
 
-class StyleSheet {
+class StyleSheet<E = HTMLStyleElement> {
     _styles: Map<string, StyleMeta>;
     _attrs: Record<string, unknown>;
     constructor({ attrs }: StyleSheetProps = {}) {
@@ -33,6 +34,7 @@ class StyleSheet {
     add(key: string, css?: string) {
         if (isNotEmpty(css)) {
             const meta = {
+                name: key,
                 css,
                 attrs: this._attrs,
                 markup: createStyleMarkup(css, this._attrs)
@@ -66,7 +68,7 @@ class StyleSheet {
      * @returns {HTMLStyleElement | undefined}
      */
     // eslint-disable-next-line
-    createStyleElement(meta?: StyleMeta): HTMLStyleElement | undefined {
+    createStyleElement(meta: StyleMeta = {}): E | undefined {
         return undefined;
     }
 }

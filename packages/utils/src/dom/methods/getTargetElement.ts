@@ -39,9 +39,10 @@ export default function getTargetElement(target: unknown, currentElement?: Eleme
             }
 
             const isFunction = (value: unknown): value is (...args: unknown[]) => unknown => typeof value === 'function' && 'call' in value && 'apply' in value;
-            const element = toElement(isFunction(target) ? target() : target);
+            const computedTarget = isFunction(target) ? target() : target;
+            const element = toElement(computedTarget);
 
-            return element?.nodeType === 9 || isExist(element as Element) ? element : undefined;
+            return isExist(element as Element) ? (element as Element) : (computedTarget as Document)?.nodeType === 9 ? (computedTarget as Document) : undefined;
         }
     }
 }
