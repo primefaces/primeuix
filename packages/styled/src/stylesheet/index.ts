@@ -4,16 +4,16 @@ export interface StyleSheetProps {
     attrs?: Record<string, unknown>;
 }
 
-export interface StyleMeta {
+export interface StyleMeta<E = HTMLStyleElement> {
     name?: string;
     css?: string;
     attrs?: Record<string, unknown>;
     markup?: string;
-    element?: HTMLStyleElement;
+    element?: E;
 }
 
 class StyleSheet<E = HTMLStyleElement> {
-    _styles: Map<string, StyleMeta>;
+    _styles: Map<string, StyleMeta<E>>;
     _attrs: Record<string, unknown>;
     constructor({ attrs }: StyleSheetProps = {}) {
         this._styles = new Map();
@@ -38,7 +38,7 @@ class StyleSheet<E = HTMLStyleElement> {
                 css,
                 attrs: this._attrs,
                 markup: createStyleMarkup(css, this._attrs)
-            } satisfies StyleMeta;
+            } satisfies StyleMeta<E>;
 
             this._styles.set(key, {
                 ...meta,
