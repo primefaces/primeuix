@@ -1,4 +1,4 @@
-import Locale from '../config/index';
+import Locale from '../config';
 import type { LocaleInstance, LocaleOptions } from '../types';
 
 export const $l = (options?: LocaleOptions) => {
