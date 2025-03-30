@@ -4,3 +4,7 @@
 [submodule "submodules/primeng"]
 	path = submodules/primeng
 	url = https://github.com/primefaces/primeng.git
+[submodule "submodules/primereact"]
+	path = submodules/primereact
+	url = https://github.com/primefaces/primereact.git
+	branch = v11

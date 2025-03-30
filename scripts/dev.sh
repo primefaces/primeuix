@@ -7,8 +7,11 @@ case $1 in
     vue)
         cd submodules/primevue && pnpm run hot:dev
         ;;
+    react)
+        cd submodules/primereact && pnpm run dev
+        ;;
     *)
-        echo "Usage: $0 {ng|vue}"
+        echo "Usage: $0 {ng|vue|react}"
         exit 1
         ;;
 esac
