@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { ToggleButtonTokenSections } from '@primeuix/themes/types/togglebutton';
 
 export * from '@primeuix/themes/types/togglebutton';
@@ -13,7 +13,7 @@ declare const _default: {
     icon: ToggleButtonTokenSections.Icon;
     content: ToggleButtonTokenSections.Content;
     colorScheme: ToggleButtonTokenSections.ColorScheme;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { colorScheme, content, css, _default as default, icon, root };

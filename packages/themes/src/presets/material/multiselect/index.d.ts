@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { MultiSelectTokenSections } from '@primeuix/themes/types/multiselect';
 
 export * from '@primeuix/themes/types/multiselect';
@@ -23,7 +23,7 @@ declare const _default: {
     chip: MultiSelectTokenSections.Chip;
     clearIcon: MultiSelectTokenSections.ClearIcon;
     emptyMessage: MultiSelectTokenSections.EmptyMessage;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { chip, clearIcon, css, _default as default, dropdown, emptyMessage, list, option, optionGroup, overlay, root };

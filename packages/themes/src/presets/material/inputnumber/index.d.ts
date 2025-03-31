@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { InputNumberTokenSections } from '@primeuix/themes/types/inputnumber';
 
 export * from '@primeuix/themes/types/inputnumber';
@@ -11,7 +11,7 @@ declare const _default: {
     root: InputNumberTokenSections.Root;
     button: InputNumberTokenSections.Button;
     colorScheme: InputNumberTokenSections.ColorScheme;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { button, colorScheme, css, _default as default, root };

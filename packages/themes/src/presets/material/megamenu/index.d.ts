@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { MegaMenuTokenSections } from '@primeuix/themes/types/megamenu';
 
 export * from '@primeuix/themes/types/megamenu';
@@ -23,7 +23,7 @@ declare const _default: {
     submenuIcon: MegaMenuTokenSections.SubmenuIcon;
     separator: MegaMenuTokenSections.Separator;
     mobileButton: MegaMenuTokenSections.MobileButton;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { baseItem, css, _default as default, item, mobileButton, overlay, root, separator, submenu, submenuIcon, submenuLabel };

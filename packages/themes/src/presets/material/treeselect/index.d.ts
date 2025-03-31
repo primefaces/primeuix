@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { TreeSelectTokenSections } from '@primeuix/themes/types/treeselect';
 
 export * from '@primeuix/themes/types/treeselect';
@@ -19,7 +19,7 @@ declare const _default: {
     emptyMessage: TreeSelectTokenSections.EmptyMessage;
     chip: TreeSelectTokenSections.Chip;
     clearIcon: TreeSelectTokenSections.ClearIcon;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { chip, clearIcon, css, _default as default, dropdown, emptyMessage, overlay, root, tree };

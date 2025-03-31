@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { CascadeSelectTokenSections } from '@primeuix/themes/types/cascadeselect';
 
 export * from '@primeuix/themes/types/cascadeselect';
@@ -17,7 +17,7 @@ declare const _default: {
     list: CascadeSelectTokenSections.List;
     option: CascadeSelectTokenSections.Option;
     clearIcon: CascadeSelectTokenSections.ClearIcon;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { clearIcon, css, _default as default, dropdown, list, option, overlay, root };

@@ -24,8 +24,8 @@ export interface ThemeOptions {
     cssLayer?: boolean | { name?: string; order?: string };
 }
 
-export interface ThemeStyleOptions {
-    dt: (key: string, fallback?: string | number | Pick<ThemeStyleOptions, 'dt'>) => string | number | undefined;
+export interface StyleOptions {
+    dt: (key: string, fallback?: string | number | Pick<StyleOptions, 'dt'>) => string | number | undefined;
 }
 
-export declare type StyleType<T = ThemeStyleOptions> = string | ((options: T) => string);
+export declare type StyleType<T = StyleOptions> = string | ((options: T) => string);

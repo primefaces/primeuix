@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { SliderTokenSections } from '@primeuix/themes/types/slider';
 
 export * from '@primeuix/themes/types/slider';
@@ -13,7 +13,7 @@ declare const _default: {
     track: SliderTokenSections.Track;
     range: SliderTokenSections.Range;
     handle: SliderTokenSections.Handle;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { css, _default as default, handle, range, root, track };

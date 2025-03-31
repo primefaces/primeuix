@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { AccordionTokenSections } from '@primeuix/themes/types/accordion';
 
 export * from '@primeuix/themes/types/accordion';
@@ -13,7 +13,7 @@ declare const _default: {
     panel: AccordionTokenSections.Panel;
     header: AccordionTokenSections.Header;
     content: AccordionTokenSections.Content;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { content, css, _default as default, header, panel, root };

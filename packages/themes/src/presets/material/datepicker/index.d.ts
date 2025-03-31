@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { DatePickerTokenSections } from '@primeuix/themes/types/datepicker';
 
 export * from '@primeuix/themes/types/datepicker';
@@ -43,7 +43,7 @@ declare const _default: {
     buttonbar: DatePickerTokenSections.Buttonbar;
     timePicker: DatePickerTokenSections.TimePicker;
     colorScheme: DatePickerTokenSections.ColorScheme;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { buttonbar, colorScheme, css, date, dayView, _default as default, dropdown, group, header, inputIcon, month, monthView, panel, root, selectMonth, selectYear, timePicker, title, weekDay, year, yearView };

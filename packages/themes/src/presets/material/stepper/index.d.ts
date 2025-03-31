@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { StepperTokenSections } from '@primeuix/themes/types/stepper';
 
 export * from '@primeuix/themes/types/stepper';
@@ -23,7 +23,7 @@ declare const _default: {
     steppanels: StepperTokenSections.Steppanels;
     steppanel: StepperTokenSections.Steppanel;
     colorScheme: StepperTokenSections.ColorScheme;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { colorScheme, css, _default as default, root, separator, step, stepHeader, stepNumber, steppanel, steppanels, stepTitle };
