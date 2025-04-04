@@ -30,7 +30,7 @@ export const style: StyleType = ({ dt }) => `
 }
 
 .p-floatlabel:has(.p-invalid) label {
-    color: ${dt('floatlabel.invalid.color')};
+    color: ${dt('floatlabel.invalid.color')} !important;
 }
 
 .p-floatlabel:has(input:focus) label,
