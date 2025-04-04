@@ -29,10 +29,6 @@ export const style: StyleType = ({ dt }) => `
     inset-inline-start: calc((${dt('form.field.padding.x')} * 2) + ${dt('icon.size')});
 }
 
-.p-floatlabel:has(.p-invalid) label {
-    color: ${dt('floatlabel.invalid.color')};
-}
-
 .p-floatlabel:has(input:focus) label,
 .p-floatlabel:has(input.p-filled) label,
 .p-floatlabel:has(input:-webkit-autofill) label,
@@ -92,5 +88,9 @@ export const style: StyleType = ({ dt }) => `
     border-radius: ${dt('floatlabel.on.border.radius')};
     background: ${dt('floatlabel.on.active.background')};
     padding: ${dt('floatlabel.on.active.padding')};
+}
+
+.p-floatlabel:has(.p-invalid) label {
+    color: ${dt('floatlabel.invalid.color')};
 }
 `;
