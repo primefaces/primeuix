@@ -11995,12 +11995,6 @@ export default {
         description: 'Toast Design Tokens',
         tokens: [
             {
-                name: 'toast.toastDesignTokens.blur',
-                token: 'toast.blur',
-                variable: '--p-toast-blur',
-                description: 'Used to pass tokens of the blur section'
-            },
-            {
                 name: 'toast.root.width',
                 token: 'toast.width',
                 variable: '--p-toast-width',
@@ -12023,6 +12017,12 @@ export default {
                 token: 'toast.transition.duration',
                 variable: '--p-toast-transition-duration',
                 description: 'Transition duration of root'
+            },
+            {
+                name: 'toast.root.blur',
+                token: 'toast.blur',
+                variable: '--p-toast-blur',
+                description: 'Used to pass tokens of the blur section'
             },
             {
                 name: 'toast.icon.size',
