@@ -58,17 +58,17 @@ export const style: StyleType = ({ dt }) => `
 @keyframes p-progressspinner-color {
     100%,
     0% {
-        stroke: ${dt('progressspinner.colorOne')};
+        stroke: ${dt('progressspinner.color.one')};
     }
     40% {
-        stroke: ${dt('progressspinner.colorTwo')};
+        stroke: ${dt('progressspinner.color.two')};
     }
     66% {
-        stroke: ${dt('progressspinner.colorThree')};
+        stroke: ${dt('progressspinner.color.three')};
     }
     80%,
     90% {
-        stroke: ${dt('progressspinner.colorFour')};
+        stroke: ${dt('progressspinner.color.four')};
     }
 }
 `;
