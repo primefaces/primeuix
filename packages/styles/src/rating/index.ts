@@ -35,6 +35,11 @@ export const style: StyleType = ({ dt }) => `
     height: ${dt('rating.icon.size')};
 }
 
+.p-rating.p-disabled .p-rating-option,
+.p-rating.p-readonly .p-rating-option {
+    cursor: default;
+}
+
 .p-rating:not(.p-disabled):not(.p-readonly) .p-rating-option:hover .p-rating-icon {
     color: ${dt('rating.icon.hover.color')};
 }
