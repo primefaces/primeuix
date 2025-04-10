@@ -13,6 +13,7 @@ export const root: AutoCompleteTokenSections.Root = {
     color: '{form.field.color}',
     disabledColor: '{form.field.disabled.color}',
     placeholderColor: '{form.field.placeholder.color}',
+    invalidPlaceholderColor: '{form.field.invalid.placeholder.color}',
     shadow: '{form.field.shadow}',
     paddingX: '{form.field.padding.x}',
     paddingY: '{form.field.padding.y}',

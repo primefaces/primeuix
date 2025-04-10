@@ -83,7 +83,6 @@ export const style: StyleType = ({ dt }) => `
     transform: rotate(180deg);
 }
 
-
 .p-tab {
     flex-shrink: 0;
     cursor: pointer;
@@ -91,6 +90,7 @@ export const style: StyleType = ({ dt }) => `
     position: relative;
     border-style: solid;
     white-space: nowrap;
+    gap: ${dt('tabs.tab.gap')};
     background: ${dt('tabs.tab.background')};
     border-width: ${dt('tabs.tab.border.width')};
     border-color: ${dt('tabs.tab.border.color')};
