@@ -1,7 +1,8 @@
 import ThemeService from '../service/index';
 import { ThemeUtils } from '../utils/index';
+import type { EventBusOptions } from '@primeuix/utils/eventbus';
 
-export default {
+export const getThemeInstance = (ThemeService: EventBusOptions) => ({
     defaults: {
         variable: {
             prefix: 'p',
@@ -99,21 +100,21 @@ export default {
         return ThemeUtils.getTokenValue(this.tokens, tokenPath, this.defaults);
     },
     getCommon(name = '', params: any) {
-        return ThemeUtils.getCommon({ name, theme: this.theme, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
+        return ThemeUtils.getCommon({ name, theme: this.theme, params, defaults: this.defaults, tokens: this.tokens, set: { layerNames: this.setLayerNames.bind(this) } });
     },
     getComponent(name = '', params: any) {
-        const options = { name, theme: this.theme, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
+        const options = { name, theme: this.theme, params, defaults: this.defaults, tokens: this.tokens, set: { layerNames: this.setLayerNames.bind(this) } };
 
         return ThemeUtils.getPresetC(options);
     },
     // @deprecated - use getComponent instead
     getDirective(name = '', params: any) {
-        const options = { name, theme: this.theme, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
+        const options = { name, theme: this.theme, params, defaults: this.defaults, tokens: this.tokens, set: { layerNames: this.setLayerNames.bind(this) } };
 
         return ThemeUtils.getPresetD(options);
     },
     getCustomPreset(name = '', preset: any, selector: string, params: any) {
-        const options = { name, preset, options: this.options, selector, params, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
+        const options = { name, preset, options: this.options, selector, params, defaults: this.defaults, tokens: this.tokens, set: { layerNames: this.setLayerNames.bind(this) } };
 
         return ThemeUtils.getPreset(options);
     },
@@ -124,10 +125,10 @@ export default {
         return ThemeUtils.transformCSS(name, css, mode, type, this.options, { layerNames: this.setLayerNames.bind(this) }, this.defaults);
     },
     getCommonStyleSheet(name = '', params: any, props = {}) {
-        return ThemeUtils.getCommonStyleSheet({ name, theme: this.theme, params, props, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
+        return ThemeUtils.getCommonStyleSheet({ name, theme: this.theme, params, props, defaults: this.defaults, tokens: this.tokens, set: { layerNames: this.setLayerNames.bind(this) } });
     },
     getStyleSheet(name: string, params: any, props = {}) {
-        return ThemeUtils.getStyleSheet({ name, theme: this.theme, params, props, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
+        return ThemeUtils.getStyleSheet({ name, theme: this.theme, params, props, defaults: this.defaults, tokens: this.tokens, set: { layerNames: this.setLayerNames.bind(this) } });
     },
     onStyleMounted(name: string) {
         this._loadingStyles.add(name);
@@ -143,4 +144,6 @@ export default {
             !this._loadingStyles.size && ThemeService.emit('theme:load');
         }
     }
-};
+});
+
+export default getThemeInstance(ThemeService);
