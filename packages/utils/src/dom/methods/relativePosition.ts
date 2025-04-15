@@ -39,9 +39,9 @@ export default function relativePosition(element: HTMLElement, target: HTMLEleme
         element.style.transformOrigin = origin;
 
         if (gutter) {
-            const gutterValue = getCSSVariableByRegex(/-anchor-gutter$/)?.value ?? '2px';
+            const gutterValue = getCSSVariableByRegex(/-anchor-gutter$/)?.value;
 
-            element.style.marginTop = origin === 'bottom' ? `calc(${gutterValue} * -1)` : gutterValue;
+            element.style.marginTop = origin === 'bottom' ? `calc(${gutterValue ?? '2px'} * -1)` : (gutterValue ?? '');
         }
     }
 }
