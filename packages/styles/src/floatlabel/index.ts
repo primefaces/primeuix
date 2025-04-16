@@ -48,6 +48,10 @@ export const style: StyleType = ({ dt }) => `
     color: ${dt('floatlabel.active.color')};
 }
 
+.p-floatlabel:has(.p-invalid) label {
+    color: ${dt('floatlabel.invalid.color')};
+}
+
 .p-floatlabel:has(input:focus) label,
 .p-floatlabel:has(input:-webkit-autofill) label,
 .p-floatlabel:has(textarea:focus) label,
@@ -88,9 +92,5 @@ export const style: StyleType = ({ dt }) => `
     border-radius: ${dt('floatlabel.on.border.radius')};
     background: ${dt('floatlabel.on.active.background')};
     padding: ${dt('floatlabel.on.active.padding')};
-}
-
-.p-floatlabel:has(.p-invalid) label {
-    color: ${dt('floatlabel.invalid.color')};
 }
 `;
