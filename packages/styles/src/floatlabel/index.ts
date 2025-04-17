@@ -29,10 +29,6 @@ export const style: StyleType = ({ dt }) => `
     inset-inline-start: calc((${dt('form.field.padding.x')} * 2) + ${dt('icon.size')});
 }
 
-.p-floatlabel:has(.p-invalid) label {
-    color: ${dt('floatlabel.invalid.color')};
-}
-
 .p-floatlabel:has(input:focus) label,
 .p-floatlabel:has(input.p-filled) label,
 .p-floatlabel:has(input:-webkit-autofill) label,
@@ -50,6 +46,10 @@ export const style: StyleType = ({ dt }) => `
 .p-floatlabel:has(textarea.p-filled) label,
 .p-floatlabel:has(.p-inputwrapper-filled) label {
     color: ${dt('floatlabel.active.color')};
+}
+
+.p-floatlabel:has(.p-invalid) label {
+    color: ${dt('floatlabel.invalid.color')};
 }
 
 .p-floatlabel:has(input:focus) label,
