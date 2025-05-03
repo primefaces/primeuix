@@ -59,6 +59,20 @@ export const style: StyleType = ({ dt }) => `
     color: ${dt('floatlabel.focus.color')};
 }
 
+.p-floatlabel:has(.p-inputtext-fluid),
+.p-floatlabel:has(.p-inputnumber-fluid),
+.p-floatlabel:has(.p-inputmask-fluid),
+.p-floatlabel:has(.p-select-fluid),
+.p-floatlabel:has(.p-datepicker-fluid),
+.p-floatlabel:has(.p-autocomplete-fluid),
+.p-floatlabel:has(.p-cascadeselect-fluid),
+.p-floatlabel:has(.p-multiselect-fluid),
+.p-floatlabel:has(.p-password-fluid),
+.p-floatlabel:has(.p-textarea-fluid),
+.p-floatlabel:has(.p-treeselect-fluid) {
+    width: 100% !important;
+}
+
 .p-floatlabel-in .p-inputtext,
 .p-floatlabel-in .p-textarea,
 .p-floatlabel-in .p-select-label,
