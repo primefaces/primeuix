@@ -2,14 +2,19 @@ import { resolve } from '@primeuix/utils';
 import { type StyleType, transformDtToInterpolated } from '..';
 import { dt } from './dt';
 
+const INTERPOLATION_REGEX = /\$\{dt\.([a-zA-Z0-9_.]+)\}/g;
+
 export function css(strings: TemplateStringsArray | StyleType, ...exprs: unknown[]): string | undefined {
-    if (strings instanceof Array) {
+    if (Array.isArray(strings)) {
         const raw = strings.reduce((acc, str, i) => acc + str + (resolve(exprs[i], { dt }) ?? ''), '');
-        const interpolated = transformDtToInterpolated(raw);
+        let interpolated = transformDtToInterpolated(raw);
 
-        const compile = new Function('{ dt }', `return \`${interpolated}\`;`);
+        interpolated = interpolated.replace(INTERPOLATION_REGEX, (_, path) => {
+            const value = resolve(path, { dt });
+            return value != null ? String(value) : '';
+        });
 
-        return compile({ dt }) as string | undefined;
+        return interpolated;
     }
 
     return resolve(strings as unknown, { dt }) as string | undefined;
