@@ -16,7 +16,7 @@ export const input: IftaLabelTokenSections.Input = {
     paddingBottom: '0.5rem'
 };
 
-export const css: IftaLabelTokenSections.CSS = ``;
+export const css: IftaLabelTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

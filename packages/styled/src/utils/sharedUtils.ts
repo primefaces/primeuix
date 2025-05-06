@@ -105,39 +105,93 @@ export function getRule(selector: string, properties: string): string {
     return '';
 }
 
-export function transformDtToInterpolated(input: string): string {
-    let result = '';
-    let i = 0;
+export function evaluateDtExpressions(input: string, fn: (...args: any[]) => string): string {
+    const findInnermostDt = (str: string): { start: number; end: number; content: string } | null => {
+        let depth = 0;
+        let start = -1;
 
-    function extractDtCall(i: number): [string, number] {
-        let depth = 1;
-        let expr = 'dt(';
+        for (let i = 0; i < str.length; i++) {
+            if (str.slice(i, i + 3) === 'dt(') {
+                if (depth === 0) start = i;
+                depth++;
+                i += 2;
+            } else if (str[i] === ')' && depth > 0) {
+                depth--;
 
-        i += 3;
-
-        while (i < input.length && depth > 0) {
-            const c = input[i];
-
-            if (c === '(') depth++;
-            else if (c === ')') depth--;
-
-            expr += c;
-            i++;
+                if (depth === 0) {
+                    return {
+                        start,
+                        end: i,
+                        content: str.slice(start, i + 1)
+                    };
+                }
+            }
         }
 
-        return [`\${${expr}}`, i];
-    }
+        return null;
+    };
 
-    while (i < input.length) {
-        if (input.slice(i, i + 3) === 'dt(') {
-            const [repl, next] = extractDtCall(i);
+    const parseArgs = (argsStr: string): (string | number)[] => {
+        const args: (string | number)[] = [];
+        let current = '';
+        let depth = 0;
+        let quote: string | null = null;
 
-            result += repl;
-            i = next;
-        } else {
-            result += input[i++];
+        for (let i = 0; i < argsStr.length; i++) {
+            const c = argsStr[i];
+            const prev = argsStr[i - 1];
+
+            if ((c === '"' || c === "'" || c === '`') && prev !== '\\') {
+                quote = quote === c ? null : c;
+            }
+
+            if (!quote) {
+                if (c === '(') depth++;
+                if (c === ')') depth--;
+
+                if (c === ',' && depth === 0) {
+                    args.push(processArg(current.trim()));
+                    current = '';
+                    continue;
+                }
+            }
+
+            current += c;
         }
+
+        if (current.trim()) {
+            args.push(processArg(current.trim()));
+        }
+
+        return args;
+    };
+
+    const processArg = (arg: string): string | number => {
+        if (arg.startsWith('dt(')) {
+            return evaluateDtExpressions(arg, fn);
+        }
+
+        if (/^(['"`])(.*)\1$/.test(arg)) {
+            return arg.slice(1, -1);
+        }
+
+        const num = Number(arg);
+
+        return isNaN(num) ? arg : num;
+    };
+
+    let result = input;
+
+    while (true) {
+        const match = findInnermostDt(result);
+
+        if (!match) break;
+
+        const args = parseArgs(match.content.slice(3, -1));
+        const value = fn(...args);
+
+        result = result.slice(0, match.start) + value + result.slice(match.end + 1);
     }
 
-    return result?.replace(/\\(?!\\)/g, '\\\\');
+    return result;
 }

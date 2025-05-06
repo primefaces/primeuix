@@ -136,7 +136,7 @@ export const colorScheme: GalleriaTokenSections.ColorScheme = {
     }
 };
 
-export const css: GalleriaTokenSections.CSS = ``;
+export const css: GalleriaTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

@@ -62,13 +62,11 @@ export const colorScheme: ListboxTokenSections.ColorScheme = {
     }
 };
 
-// @section:css-start
-export const css: ListboxTokenSections.CSS = `
+export const css: ListboxTokenSections.CSS = /*css*/ `
 .p-listbox-option {
     transition: none;
 }
 `;
-// @section:css-end
 
 export default {
     root,

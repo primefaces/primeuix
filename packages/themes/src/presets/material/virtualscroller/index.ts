@@ -10,7 +10,7 @@ export const loader: VirtualScrollerTokenSections.Loader = {
     }
 };
 
-export const css: VirtualScrollerTokenSections.CSS = ``;
+export const css: VirtualScrollerTokenSections.CSS = /*css*/ ``;
 
 export default {
     loader,

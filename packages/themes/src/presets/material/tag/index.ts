@@ -76,7 +76,7 @@ export const colorScheme: TagTokenSections.ColorScheme = {
     }
 };
 
-export const css: TagTokenSections.CSS = ``;
+export const css: TagTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

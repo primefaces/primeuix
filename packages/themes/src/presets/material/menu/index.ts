@@ -38,13 +38,11 @@ export const separator: MenuTokenSections.Separator = {
     borderColor: '{content.border.color}'
 };
 
-// @section:css-start
-export const css: MenuTokenSections.CSS = `
+export const css: MenuTokenSections.CSS = /*css*/ `
 .p-menu-overlay {
     border-color: transparent;
 }
 `;
-// @section:css-end
 
 export default {
     root,

@@ -53,11 +53,10 @@ export const content: AccordionTokenSections.Content = {
     padding: '0 1.25rem 1.25rem 1.25rem'
 };
 
-// @section:css-start
-export const css: AccordionTokenSections.CSS = ({ dt }) => `
+export const css: AccordionTokenSections.CSS = /*css*/ `
 .p-accordionpanel {
     box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-    transition: margin ${dt('accordion.transition.duration')};
+    transition: margin dt('accordion.transition.duration');
 }
 
 .p-accordionpanel-active {
@@ -65,22 +64,21 @@ export const css: AccordionTokenSections.CSS = ({ dt }) => `
 }
 
 .p-accordionpanel:first-child {
-    border-top-left-radius: ${dt('content.border.radius')};
-    border-top-right-radius: ${dt('content.border.radius')};
+    border-top-left-radius: dt('content.border.radius');
+    border-top-right-radius: dt('content.border.radius');
     margin-top: 0;
 }
 
 .p-accordionpanel:last-child {
-    border-bottom-left-radius: ${dt('content.border.radius')};
-    border-bottom-right-radius: ${dt('content.border.radius')};
+    border-bottom-left-radius: dt('content.border.radius');
+    border-bottom-right-radius: dt('content.border.radius');
     margin-bottom: 0;
 }
 
 .p-accordionpanel:not(.p-disabled) .p-accordionheader:focus-visible {
-    background: ${dt('navigation.item.active.background')};
+    background: dt('navigation.item.active.background');
 }
 `;
-// @section:css-end
 
 export default {
     root,

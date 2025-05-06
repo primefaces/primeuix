@@ -19,7 +19,7 @@ export const colorScheme: ProgressSpinnerTokenSections.ColorScheme = {
     }
 };
 
-export const css: ProgressSpinnerTokenSections.CSS = ``;
+export const css: ProgressSpinnerTokenSections.CSS = /*css*/ ``;
 
 export default {
     colorScheme,

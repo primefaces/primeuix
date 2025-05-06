@@ -37,22 +37,20 @@ export const handle: SliderTokenSections.Handle = {
     }
 };
 
-// @section:css-start
-export const css: SliderTokenSections.CSS = ({ dt }) => `
+export const css: SliderTokenSections.CSS = /*css*/ `
 .p-slider-handle {
-    transition: box-shadow ${dt('slider.transition.duration')};
+    transition: box-shadow dt('slider.transition.duration');
 }
 
 .p-slider:not(.p-disabled) .p-slider-handle:hover {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('slider.handle.background')}, transparent 92%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('slider.handle.background'), transparent 92%);
 }
 
 .p-slider-handle:focus-visible,
 .p-slider:not(.p-disabled) .p-slider-handle:focus:hover {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('slider.handle.background')}, transparent 84%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('slider.handle.background'), transparent 84%);
 }
 `;
-// @section:css-end
 
 export default {
     root,

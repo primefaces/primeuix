@@ -46,7 +46,7 @@ export const action: ImageTokenSections.Action = {
     }
 };
 
-export const css: ImageTokenSections.CSS = ``;
+export const css: ImageTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

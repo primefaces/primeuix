@@ -221,14 +221,12 @@ export const colorScheme: DataTableTokenSections.ColorScheme = {
     }
 };
 
-// @section:css-start
-export const css: DataTableTokenSections.CSS = `
+export const css: DataTableTokenSections.CSS = /*css*/ `
 .p-datatable-header-cell,
 .p-datatable-tbody > tr {
     transition: none;
 }
 `;
-// @section:css-end
 
 export default {
     root,

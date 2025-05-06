@@ -40,7 +40,7 @@ export const colorScheme: PasswordTokenSections.ColorScheme = {
     }
 };
 
-export const css: PasswordTokenSections.CSS = ``;
+export const css: PasswordTokenSections.CSS = /*css*/ ``;
 
 export default {
     meter,

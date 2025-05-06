@@ -19,7 +19,7 @@ export const handle: ImageCompareTokenSections.Handle = {
     }
 };
 
-export const css: ImageCompareTokenSections.CSS = ``;
+export const css: ImageCompareTokenSections.CSS = /*css*/ ``;
 
 export default {
     handle,

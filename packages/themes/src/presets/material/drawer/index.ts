@@ -24,7 +24,7 @@ export const footer: DrawerTokenSections.Footer = {
     padding: '{overlay.modal.padding}'
 };
 
-export const css: DrawerTokenSections.CSS = ``;
+export const css: DrawerTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

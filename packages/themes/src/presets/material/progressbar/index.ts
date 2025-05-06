@@ -16,7 +16,7 @@ export const label: ProgressBarTokenSections.Label = {
     fontWeight: '600'
 };
 
-export const css: ProgressBarTokenSections.CSS = ``;
+export const css: ProgressBarTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

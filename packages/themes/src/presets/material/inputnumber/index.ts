@@ -39,8 +39,7 @@ export const colorScheme: InputNumberTokenSections.ColorScheme = {
     }
 };
 
-// @section:css-start
-export const css: InputNumberTokenSections.CSS = ({ dt }) => `
+export const css: InputNumberTokenSections.CSS = /*css*/ `
 .p-inputnumber-stacked .p-inputnumber-button-group {
     top: 2px;
     right: 2px;
@@ -48,24 +47,23 @@ export const css: InputNumberTokenSections.CSS = ({ dt }) => `
 }
 
 .p-inputnumber-horizontal:has(.p-variant-filled) .p-inputnumber-button {
-    border-block-start-color: ${dt('inputtext.filled.background')};
-    border-inline-color: ${dt('inputtext.filled.background')};
-    background: ${dt('inputtext.filled.background')} no-repeat;
+    border-block-start-color: dt('inputtext.filled.background');
+    border-inline-color: dt('inputtext.filled.background');
+    background: dt('inputtext.filled.background') no-repeat;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 .p-inputnumber-vertical:has(.p-variant-filled) .p-inputnumber-button {
-    border-block-color: ${dt('inputtext.filled.background')};
-    border-inline-color: ${dt('inputtext.filled.background')};
-    background: ${dt('inputtext.filled.background')} no-repeat;
+    border-block-color: dt('inputtext.filled.background');
+    border-inline-color: dt('inputtext.filled.background');
+    background: dt('inputtext.filled.background') no-repeat;
 }
 
 .p-inputnumber-vertical:has(.p-variant-filled) .p-inputnumber-increment-button {
-    border-block-end: 1px solid ${dt('inputtext.border.color')}
+    border-block-end: 1px solid dt('inputtext.border.color')
 }
 `;
-// @section:css-end
 
 export default {
     root,

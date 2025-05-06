@@ -103,7 +103,7 @@ export interface ColorSchemeDesignToken<T> {
     colorScheme?: ColorScheme<T>;
 }
 
-export declare type ExtendedCSS = string | ((options: StyleOptions) => string);
+export declare type ExtendedCSS = string | ((options: StyleOptions) => string) | undefined;
 export declare type ExtendedTokens = Record<string, object | string | number>;
 
 export interface DesignTokens<T> extends ColorSchemeDesignToken<T> {

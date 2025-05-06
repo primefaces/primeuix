@@ -66,13 +66,11 @@ export const mobileButton: MenubarTokenSections.MobileButton = {
     }
 };
 
-// @section:css-start
-export const css: MenubarTokenSections.CSS = ({ dt }) => `
+export const css: MenubarTokenSections.CSS = /*css*/ `
 .p-menubar-button:focus-visible {
-    background: ${dt('navigation.item.active.background')};
+    background: dt('navigation.item.active.background');
 }
 `;
-// @section:css-end
 
 export default {
     root,
