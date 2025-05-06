@@ -104,3 +104,40 @@ export function getRule(selector: string, properties: string): string {
 
     return '';
 }
+
+export function transformDtToInterpolated(input: string): string {
+    let result = '';
+    let i = 0;
+
+    function extractDtCall(i: number): [string, number] {
+        let depth = 1;
+        let expr = 'dt(';
+
+        i += 3;
+
+        while (i < input.length && depth > 0) {
+            const c = input[i];
+
+            if (c === '(') depth++;
+            else if (c === ')') depth--;
+
+            expr += c;
+            i++;
+        }
+
+        return [`\${${expr}}`, i];
+    }
+
+    while (i < input.length) {
+        if (input.slice(i, i + 3) === 'dt(') {
+            const [repl, next] = extractDtCall(i);
+
+            result += repl;
+            i = next;
+        } else {
+            result += input[i++];
+        }
+    }
+
+    return result?.replace(/\\(?!\\)/g, '\\\\');
+}

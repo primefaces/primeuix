@@ -1,7 +1,7 @@
-import { StyleType } from '../types';
+import { css } from '@primeuix/styled';
 
-export const style: StyleType = `
-.p-checkbox-group {
-    display: inline-flex;
-}
+export const style = css`
+    .p-checkbox-group {
+        display: inline-flex;
+    }
 `;

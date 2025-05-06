@@ -1,19 +1,19 @@
-import { StyleType } from '../types';
+import { css } from '@primeuix/styled';
 
-export const style: StyleType = ({ dt }) => `
-.p-blockui {
-    position: relative;
-}
+export const style = css`
+    .p-blockui {
+        position: relative;
+    }
 
-.p-blockui-mask {
-    border-radius: ${dt('blockui.border.radius')};
-}
+    .p-blockui-mask {
+        border-radius: dt('blockui.border.radius');
+    }
 
-.p-blockui-mask.p-overlay-mask {
-    position: absolute;
-}
+    .p-blockui-mask.p-overlay-mask {
+        position: absolute;
+    }
 
-.p-blockui-mask-document.p-overlay-mask {
-    position: fixed;
-}
+    .p-blockui-mask-document.p-overlay-mask {
+        position: fixed;
+    }
 `;
