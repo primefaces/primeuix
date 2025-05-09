@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-scrolltop.p-button {
         position: fixed !important;
         inset-block-end: 20px;

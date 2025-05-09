@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-inputgroup,
     .p-inputgroup .p-iconfield,
     .p-inputgroup .p-floatlabel,

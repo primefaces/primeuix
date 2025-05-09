@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-tree {
         background: dt('tree.background');
         color: dt('tree.color');

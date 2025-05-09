@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-breadcrumb {
         background: dt('breadcrumb.background');
         padding: dt('breadcrumb.padding');

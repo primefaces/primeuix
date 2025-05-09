@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-contextmenu {
         background: dt('contextmenu.background');
         color: dt('contextmenu.color');

@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-knob-range {
         fill: none;
         transition: stroke 0.1s ease-in;

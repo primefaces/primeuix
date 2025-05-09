@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     /*!
 * Quill Editor v1.3.3
 * https://quilljs.com/

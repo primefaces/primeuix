@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-tieredmenu {
         background: dt('tieredmenu.background');
         color: dt('tieredmenu.color');

@@ -1,5 +1,5 @@
 import { isArray, isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve, toTokenKey } from '@primeuix/utils/object';
-import { css as Css, toVariables } from '../helpers/index';
+import { dt, toVariables } from '../helpers/index';
 import { getRule } from './sharedUtils';
 
 export default {
@@ -88,7 +88,7 @@ export default {
             global_css = `${global_light_css}${global_dark_css}`;
             global_tokens = [...new Set([...eRest_tokens, ...ecsRest_tokens, ...ecsDark_tokens])];
 
-            style = Css`${preset.css}`;
+            style = resolve(preset.css, { dt }) as string;
         }
 
         return {
@@ -130,7 +130,7 @@ export default {
             p_css = `${light_variable_css}${dark_variable_css}`;
             p_tokens = [...new Set([...vRest_tokens, ...csRest_tokens, ...csDark_tokens])];
 
-            p_style = Css`${css}`;
+            p_style = resolve(css, { dt }) as string;
         }
 
         return {

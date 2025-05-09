@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-popover {
         margin-block-start: dt('popover.gutter');
         background: dt('popover.background');

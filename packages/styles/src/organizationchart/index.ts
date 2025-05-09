@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-organizationchart-table {
         border-spacing: 0;
         border-collapse: separate;

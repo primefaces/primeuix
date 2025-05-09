@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-virtualscroller-loader {
         background: dt('virtualscroller.loader.mask.background');
         color: dt('virtualscroller.loader.mask.color');

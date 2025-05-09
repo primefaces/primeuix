@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-panel {
         border: 1px solid dt('panel.border.color');
         border-radius: dt('panel.border.radius');

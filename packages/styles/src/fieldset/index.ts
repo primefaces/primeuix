@@ -1,6 +1,4 @@
-import { css } from '@primeuix/styled';
-
-export const style = css`
+export const style = /*css*/ `
     .p-fieldset {
         background: dt('fieldset.background');
         border: 1px solid dt('fieldset.border.color');
