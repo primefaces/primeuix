@@ -2,7 +2,7 @@ import getCSSVariableByRegex from './getCSSVariableByRegex';
 import getHiddenElementDimensions from './getHiddenElementDimensions';
 import getViewport from './getViewport';
 
-export default function relativePosition(element: HTMLElement, target: HTMLElement, gutter: boolean = true): void {
+export default function relativePosition(element: HTMLElement, target: HTMLElement, gutter: boolean = true, fixedOrigin: 'top' | 'bottom' | undefined = undefined): void {
     if (element) {
         const elementDimensions = element.offsetParent ? { width: element.offsetWidth, height: element.offsetHeight } : getHiddenElementDimensions(element);
         const targetHeight = target.offsetHeight;
@@ -10,9 +10,9 @@ export default function relativePosition(element: HTMLElement, target: HTMLEleme
         const viewport = getViewport();
         let top,
             left,
-            origin = 'top';
+            origin = fixedOrigin ?? 'top';
 
-        if (targetOffset.top + targetHeight + elementDimensions.height > viewport.height) {
+        if (!fixedOrigin && targetOffset.top + targetHeight + elementDimensions.height > viewport.height) {
             top = -1 * elementDimensions.height;
             origin = 'bottom';
 
@@ -37,6 +37,11 @@ export default function relativePosition(element: HTMLElement, target: HTMLEleme
         element.style.top = top + 'px';
         element.style.insetInlineStart = left + 'px';
         element.style.transformOrigin = origin;
-        gutter && (element.style.marginTop = origin === 'bottom' ? `calc(${getCSSVariableByRegex(/-anchor-gutter$/)?.value ?? '2px'} * -1)` : (getCSSVariableByRegex(/-anchor-gutter$/)?.value ?? ''));
+
+        if (gutter) {
+            const gutterValue = getCSSVariableByRegex(/-anchor-gutter$/)?.value;
+
+            element.style.marginTop = origin === 'bottom' ? `calc(${gutterValue ?? '2px'} * -1)` : (gutterValue ?? '');
+        }
     }
 }
