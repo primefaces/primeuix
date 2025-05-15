@@ -282,7 +282,7 @@ export const style: StyleType = ({ dt }) => `
     text-align: right;
 }
 .ql-editor.ql-blank::before {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--p-form-field-placeholder-color);
     content: attr(data-placeholder);
     font-style: italic;
     inset-inline-start: 15px;
