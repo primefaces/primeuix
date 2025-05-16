@@ -7,5 +7,6 @@ export default function minifyCSS(css?: string): string | undefined {
               .replace(/([;,]) /g, '$1')
               .replace(/ !/g, '!')
               .replace(/: /g, ':')
+              .trim()
         : css;
 }

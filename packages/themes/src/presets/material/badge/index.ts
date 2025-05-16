@@ -94,7 +94,7 @@ export const colorScheme: BadgeTokenSections.ColorScheme = {
     }
 };
 
-export const css: BadgeTokenSections.CSS = ``;
+export const css: BadgeTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

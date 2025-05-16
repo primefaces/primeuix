@@ -38,14 +38,13 @@ export const root: TextareaTokenSections.Root = {
     }
 };
 
-// @section:css-start
-export const css: TextareaTokenSections.CSS = ({ dt }) => `
+export const css: TextareaTokenSections.CSS = /*css*/ `
 .p-textarea.p-variant-filled {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border: 1px solid transparent;
-    background: ${dt('textarea.filled.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('textarea.focus.border.color')}, ${dt('textarea.focus.border.color')}), linear-gradient(to bottom, ${dt('textarea.border.color')}, ${dt('textarea.border.color')});
+    background: dt('textarea.filled.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('textarea.focus.border.color'), dt('textarea.focus.border.color')), linear-gradient(to bottom, dt('textarea.border.color'), dt('textarea.border.color'));
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -53,8 +52,8 @@ export const css: TextareaTokenSections.CSS = ({ dt }) => `
 }
 
 .p-textarea.p-variant-filled:enabled:hover {
-    background: ${dt('textarea.filled.hover.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('textarea.focus.border.color')}, ${dt('textarea.focus.border.color')}), linear-gradient(to bottom, ${dt('textarea.hover.border.color')}, ${dt('textarea.hover.border.color')});
+    background: dt('textarea.filled.hover.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('textarea.focus.border.color'), dt('textarea.focus.border.color')), linear-gradient(to bottom, dt('textarea.hover.border.color'), dt('textarea.hover.border.color'));
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -63,8 +62,8 @@ export const css: TextareaTokenSections.CSS = ({ dt }) => `
 
 .p-textarea.p-variant-filled:enabled:focus {
     outline: 0 none;
-    background: ${dt('textarea.filled.focus.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('textarea.focus.border.color')}, ${dt('textarea.focus.border.color')}), linear-gradient(to bottom, ${dt('textarea.border.color')}, ${dt('textarea.border.color')});
+    background: dt('textarea.filled.focus.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('textarea.focus.border.color'), dt('textarea.focus.border.color')), linear-gradient(to bottom, dt('textarea.border.color'), dt('textarea.border.color'));
     background-size: 100% 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -72,18 +71,17 @@ export const css: TextareaTokenSections.CSS = ({ dt }) => `
 }
 
 .p-textarea.p-variant-filled:enabled:hover:focus {
-    background-image: linear-gradient(to bottom, ${dt('textarea.focus.border.color')}, ${dt('textarea.focus.border.color')}), linear-gradient(to bottom, ${dt('textarea.hover.border.color')}, ${dt('textarea.hover.border.color')});
+    background-image: linear-gradient(to bottom, dt('textarea.focus.border.color'), dt('textarea.focus.border.color')), linear-gradient(to bottom, dt('textarea.hover.border.color'), dt('textarea.hover.border.color'));
 }
 
 .p-textarea.p-variant-filled.p-invalid {
-    background-image: linear-gradient(to bottom, ${dt('textarea.invalid.border.color')}, ${dt('textarea.invalid.border.color')}), linear-gradient(to bottom, ${dt('textarea.invalid.border.color')}, ${dt('textarea.invalid.border.color')});
+    background-image: linear-gradient(to bottom, dt('textarea.invalid.border.color'), dt('textarea.invalid.border.color')), linear-gradient(to bottom, dt('textarea.invalid.border.color'), dt('textarea.invalid.border.color'));
 }
 
 .p-textarea.p-variant-filled.p-invalid:enabled:focus {
-    background-image: linear-gradient(to bottom, ${dt('textarea.invalid.border.color')}, ${dt('textarea.invalid.border.color')}), linear-gradient(to bottom, ${dt('textarea.invalid.border.color')}, ${dt('textarea.invalid.border.color')});
+    background-image: linear-gradient(to bottom, dt('textarea.invalid.border.color'), dt('textarea.invalid.border.color')), linear-gradient(to bottom, dt('textarea.invalid.border.color'), dt('textarea.invalid.border.color'));
 }
 `;
-// @section:css-end
 
 export default {
     root,

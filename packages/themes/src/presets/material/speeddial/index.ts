@@ -5,7 +5,7 @@ export const root: SpeedDialTokenSections.Root = {
     transitionDuration: '{transition.duration}'
 };
 
-export const css: SpeedDialTokenSections.CSS = ``;
+export const css: SpeedDialTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

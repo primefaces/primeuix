@@ -9,17 +9,15 @@ export const addon: InputGroupTokenSections.Addon = {
     minWidth: '3rem'
 };
 
-// @section:css-start
-export const css: InputGroupTokenSections.CSS = ({ dt }) => `
+export const css: InputGroupTokenSections.CSS = /*css*/ `
 .p-inputgroup:has(.p-variant-filled) .p-inputgroupaddon {
-    border-block-start-color: ${dt('inputtext.filled.background')};
-    border-inline-color: ${dt('inputtext.filled.background')};
-    background: ${dt('inputtext.filled.background')} no-repeat;
+    border-block-start-color: dt('inputtext.filled.background');
+    border-inline-color: dt('inputtext.filled.background');
+    background: dt('inputtext.filled.background') no-repeat;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 `;
-// @section:css-end
 
 export default {
     addon,

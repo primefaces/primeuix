@@ -45,13 +45,11 @@ export const separator: TieredMenuTokenSections.Separator = {
     borderColor: '{content.border.color}'
 };
 
-// @section:css-start
-export const css: TieredMenuTokenSections.CSS = `
+export const css: TieredMenuTokenSections.CSS = /*css*/ `
 .p-tieredmenu-overlay {
     border-color: transparent;
 }
 `;
-// @section:css-end
 
 export default {
     root,

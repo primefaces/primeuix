@@ -141,14 +141,12 @@ export const colorScheme: TreeTableTokenSections.ColorScheme = {
     }
 };
 
-// @section:css-start
-export const css: TreeTableTokenSections.CSS = `
+export const css: TreeTableTokenSections.CSS = /*css*/ `
 .p-treetable-header-cell,
 .p-treetable-tbody > tr {
     transition: none;
 }
 `;
-// @section:css-end
 
 export default {
     root,

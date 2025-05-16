@@ -86,13 +86,11 @@ export const mobileButton: MegaMenuTokenSections.MobileButton = {
     }
 };
 
-// @section:css-start
-export const css: MegaMenuTokenSections.CSS = ({ dt }) => `
+export const css: MegaMenuTokenSections.CSS = /*css*/ `
 .p-megamenu-button:focus-visible {
-    background: ${dt('navigation.item.active.background')};
+    background: dt('navigation.item.active.background');
 }
 `;
-// @section:css-end
 
 export default {
     root,

@@ -8,7 +8,7 @@ export const controls: PickListTokenSections.Controls = {
     gap: '0.5rem'
 };
 
-export const css: PickListTokenSections.CSS = ``;
+export const css: PickListTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

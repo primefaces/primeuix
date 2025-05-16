@@ -41,7 +41,7 @@ export const colorScheme: TabViewTokenSections.ColorScheme = {
     }
 };
 
-export const css: TabViewTokenSections.CSS = ``;
+export const css: TabViewTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

@@ -38,13 +38,11 @@ export const content: FieldsetTokenSections.Content = {
     padding: '0'
 };
 
-// @section:css-start
-export const css: FieldsetTokenSections.CSS = ({ dt }) => `
+export const css: FieldsetTokenSections.CSS = /*css*/ `
 .p-fieldset-toggle-button:focus-visible {
-    background: ${dt('navigation.item.active.background')};
+    background: dt('navigation.item.active.background');
 }
 `;
-// @section:css-end
 
 export default {
     root,

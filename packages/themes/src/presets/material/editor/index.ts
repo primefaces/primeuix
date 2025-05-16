@@ -36,13 +36,11 @@ export const content: EditorTokenSections.Content = {
     borderRadius: '{content.border.radius}'
 };
 
-// @section:css-start
-export const css: EditorTokenSections.CSS = `
+export const css: EditorTokenSections.CSS = /*css*/ `
 .p-editor .p-editor-toolbar {
     padding: 0.75rem
 }
 `;
-// @section:css-end
 
 export default {
     toolbar,

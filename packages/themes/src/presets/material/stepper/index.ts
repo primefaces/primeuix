@@ -74,13 +74,11 @@ export const colorScheme: StepperTokenSections.ColorScheme = {
     }
 };
 
-// @section:css-start
-export const css: StepperTokenSections.CSS = ({ dt }) => `
+export const css: StepperTokenSections.CSS = /*css*/ `
 .p-step-header:focus-visible {
-    background: ${dt('navigation.item.active.background')};
+    background: dt('navigation.item.active.background');
 }
 `;
-// @section:css-end
 
 export default {
     root,

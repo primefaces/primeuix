@@ -48,11 +48,10 @@ export const icon: RadioButtonTokenSections.Icon = {
     }
 };
 
-// @section:css-start
-export const css: RadioButtonTokenSections.CSS = ({ dt }) => `
+export const css: RadioButtonTokenSections.CSS = /*css*/ `
 .p-radiobutton {
     border-radius: 50%;
-    transition: box-shadow ${dt('radiobutton.transition.duration')};
+    transition: box-shadow dt('radiobutton.transition.duration');
 }
 
 .p-radiobutton-box {
@@ -60,22 +59,21 @@ export const css: RadioButtonTokenSections.CSS = ({ dt }) => `
 }
 
 .p-radiobutton:not(.p-disabled):has(.p-radiobutton-input:hover) {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('text.color')}, transparent 96%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('text.color'), transparent 96%);
 }
 
 .p-radiobutton:not(.p-disabled):has(.p-radiobutton-input:focus-visible) {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('text.color')}, transparent 88%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('text.color'), transparent 88%);
 }
 
 .p-radiobutton-checked:not(.p-disabled):has(.p-radiobutton-input:hover) {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('radiobutton.checked.border.color')}, transparent 92%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('radiobutton.checked.border.color'), transparent 92%);
 }
 
 .p-radiobutton-checked:not(.p-disabled):has(.p-radiobutton-input:focus-visible) {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('radiobutton.checked.border.color')}, transparent 84%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('radiobutton.checked.border.color'), transparent 84%);
 }
 `;
-// @section:css-end
 
 export default {
     root,

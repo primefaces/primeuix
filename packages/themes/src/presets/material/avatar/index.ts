@@ -42,7 +42,7 @@ export const xl: AvatarTokenSections.Xl = {
     }
 };
 
-export const css: AvatarTokenSections.CSS = ``;
+export const css: AvatarTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

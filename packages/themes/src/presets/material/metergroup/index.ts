@@ -27,7 +27,7 @@ export const labelList: MeterGroupTokenSections.LabelList = {
     horizontalGap: '1rem'
 };
 
-export const css: MeterGroupTokenSections.CSS = ``;
+export const css: MeterGroupTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

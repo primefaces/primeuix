@@ -14,7 +14,7 @@ export const input: InputOtpTokenSections.Input = {
     }
 };
 
-export const css: InputOtpTokenSections.CSS = ``;
+export const css: InputOtpTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

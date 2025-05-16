@@ -43,25 +43,23 @@ export const colorScheme: CarouselTokenSections.ColorScheme = {
     }
 };
 
-// @section:css-start
-export const css: CarouselTokenSections.CSS = ({ dt }) => `
+export const css: CarouselTokenSections.CSS = /*css*/ `
 .p-carousel-indicator-button:hover {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('text.color')}, transparent 96%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('text.color'), transparent 96%);
 }
 
 .p-carousel-indicator-button:focus-visible {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('text.color')}, transparent 96%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('text.color'), transparent 96%);
 }
 
 .p-carousel-indicator-active .p-carousel-indicator-button:hover {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('carousel.indicator.active.background')}, transparent 92%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('carousel.indicator.active.background'), transparent 92%);
 }
 
 .p-carousel-indicator-active .p-carousel-indicator-button:focus-visible {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('carousel.indicator.active.background')}, transparent 84%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('carousel.indicator.active.background'), transparent 84%);
 }
 `;
-// @section:css-end
 
 export default {
     root,

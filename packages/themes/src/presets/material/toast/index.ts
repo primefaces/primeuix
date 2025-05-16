@@ -226,7 +226,7 @@ export const colorScheme: ToastTokenSections.ColorScheme = {
     }
 };
 
-export const css: ToastTokenSections.CSS = ``;
+export const css: ToastTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

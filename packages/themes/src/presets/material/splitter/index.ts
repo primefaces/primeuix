@@ -24,7 +24,7 @@ export const handle: SplitterTokenSections.Handle = {
     }
 };
 
-export const css: SplitterTokenSections.CSS = ``;
+export const css: SplitterTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,
