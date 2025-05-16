@@ -7,7 +7,7 @@ export const root: OverlayBadgeTokenSections.Root = {
     }
 };
 
-export const css: OverlayBadgeTokenSections.CSS = ``;
+export const css: OverlayBadgeTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

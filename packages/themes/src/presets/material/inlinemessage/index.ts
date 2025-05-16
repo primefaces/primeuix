@@ -93,7 +93,7 @@ export const colorScheme: InlineMessageTokenSections.ColorScheme = {
     }
 };
 
-export const css: InlineMessageTokenSections.CSS = ``;
+export const css: InlineMessageTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

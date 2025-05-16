@@ -19,7 +19,7 @@ export const colorScheme: SkeletonTokenSections.ColorScheme = {
     }
 };
 
-export const css: SkeletonTokenSections.CSS = ``;
+export const css: SkeletonTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

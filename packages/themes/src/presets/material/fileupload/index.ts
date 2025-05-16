@@ -45,7 +45,7 @@ export const basic: FileUploadTokenSections.Basic = {
     gap: '0.5rem'
 };
 
-export const css: FileUploadTokenSections.CSS = ``;
+export const css: FileUploadTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

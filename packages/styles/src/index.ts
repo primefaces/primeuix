@@ -1,5 +1,3 @@
-// @todo - add auto-generated exports
-
 // Accordion
 export * as AccordionStyle from '@primeuix/styles/accordion';
 
@@ -13,7 +11,7 @@ export * as AvatarStyle from '@primeuix/styles/avatar';
 export * as BadgeStyle from '@primeuix/styles/badge';
 
 // Base
-export * as BaseeStyle from '@primeuix/styles/base';
+export * as BaseStyle from '@primeuix/styles/base';
 
 // BlockUI
 export * as BlockUIStyle from '@primeuix/styles/blockui';

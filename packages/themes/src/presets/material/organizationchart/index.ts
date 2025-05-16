@@ -41,7 +41,7 @@ export const connector: OrganizationChartTokenSections.Connector = {
     height: '24px'
 };
 
-export const css: OrganizationChartTokenSections.CSS = ``;
+export const css: OrganizationChartTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

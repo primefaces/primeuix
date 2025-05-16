@@ -60,7 +60,7 @@ export const colorScheme: ChipTokenSections.ColorScheme = {
     }
 };
 
-export const css: ChipTokenSections.CSS = ``;
+export const css: ChipTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

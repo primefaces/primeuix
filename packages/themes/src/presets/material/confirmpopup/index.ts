@@ -25,7 +25,7 @@ export const footer: ConfirmPopupTokenSections.Footer = {
     padding: '0 {overlay.popover.padding} {overlay.popover.padding} {overlay.popover.padding}'
 };
 
-export const css: ConfirmPopupTokenSections.CSS = ``;
+export const css: ConfirmPopupTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

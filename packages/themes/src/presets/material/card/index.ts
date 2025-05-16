@@ -25,7 +25,7 @@ export const subtitle: CardTokenSections.Subtitle = {
     color: '{text.muted.color}'
 };
 
-export const css: CardTokenSections.CSS = ``;
+export const css: CardTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

@@ -43,7 +43,7 @@ export const colorScheme: ColorPickerTokenSections.ColorScheme = {
     }
 };
 
-export const css: ColorPickerTokenSections.CSS = ``;
+export const css: ColorPickerTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

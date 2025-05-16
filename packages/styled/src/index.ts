@@ -28,4 +28,4 @@ export interface StyleOptions {
     dt: (key: string, fallback?: string | number | Pick<StyleOptions, 'dt'>) => string | number | undefined;
 }
 
-export declare type StyleType<T = StyleOptions> = string | ((options: T) => string);
+export declare type StyleType<T = StyleOptions> = string | ((options?: T) => string);

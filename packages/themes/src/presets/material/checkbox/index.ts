@@ -50,11 +50,10 @@ export const icon: CheckboxTokenSections.Icon = {
     }
 };
 
-// @section:css-start
-export const css: CheckboxTokenSections.CSS = ({ dt }) => `
+export const css: CheckboxTokenSections.CSS = /*css*/ `
 .p-checkbox {
     border-radius: 50%;
-    transition: box-shadow ${dt('checkbox.transition.duration')};
+    transition: box-shadow dt('checkbox.transition.duration');
 }
 
 .p-checkbox-box {
@@ -62,19 +61,19 @@ export const css: CheckboxTokenSections.CSS = ({ dt }) => `
 }
 
 .p-checkbox:not(.p-disabled):has(.p-checkbox-input:hover) {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('text.color')}, transparent 96%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('text.color'), transparent 96%);
 }
 
 .p-checkbox:not(.p-disabled):has(.p-checkbox-input:focus-visible) {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('text.color')}, transparent 88%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('text.color'), transparent 88%);
 }
 
 .p-checkbox-checked:not(.p-disabled):has(.p-checkbox-input:hover) {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('checkbox.checked.background')}, transparent 92%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('checkbox.checked.background'), transparent 92%);
 }
 
 .p-checkbox-checked:not(.p-disabled):has(.p-checkbox-input:focus-visible) {
-    box-shadow: 0 0 1px 10px color-mix(in srgb, ${dt('checkbox.checked.background')}, transparent 84%);
+    box-shadow: 0 0 1px 10px color-mix(in srgb, dt('checkbox.checked.background'), transparent 84%);
 }
 
 .p-checkbox-checked .p-checkbox-box:before  {
@@ -115,7 +114,7 @@ export const css: CheckboxTokenSections.CSS = ({ dt }) => `
     0%{
       width: 0;
       height: 0;
-      border-color: ${dt('checkbox.icon.checked.color')};
+      border-color: dt('checkbox.icon.checked.color');
       transform: translate3d(0,0,0) rotate(45deg);
     }
     33%{
@@ -126,12 +125,11 @@ export const css: CheckboxTokenSections.CSS = ({ dt }) => `
     100%{
       width: var(--p-md-check-icon-w);
       height: var(--p-md-check-icon-h);
-      border-color: ${dt('checkbox.icon.checked.color')};
+      border-color: dt('checkbox.icon.checked.color');
       transform: translate3d(0,calc(-1 * var(--p-md-check-icon-h)),0) rotate(45deg);
     }
 }
 `;
-// @section:css-end
 
 export default {
     root,

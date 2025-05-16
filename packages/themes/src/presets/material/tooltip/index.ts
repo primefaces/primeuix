@@ -10,7 +10,7 @@ export const root: TooltipTokenSections.Root = {
     borderRadius: '{overlay.popover.border.radius}'
 };
 
-export const css: TooltipTokenSections.CSS = ``;
+export const css: TooltipTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

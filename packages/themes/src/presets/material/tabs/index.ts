@@ -68,25 +68,23 @@ export const activeBar: TabsTokenSections.ActiveBar = {
     background: '{primary.color}'
 };
 
-// @section:css-start
-export const css: TabsTokenSections.CSS = ({ dt }) => `
+export const css: TabsTokenSections.CSS = /*css*/ `
 .p-tabs-scrollable .p-tab {
     flex-grow: 0
 }
 
 .p-tab-active {
-    --p-ripple-background: color-mix(in srgb, ${dt('primary.color')}, transparent 90%);
+    --p-ripple-background: color-mix(in srgb, dt('primary.color'), transparent 90%);
 }
 
 .p-tab:not(.p-disabled):focus-visible {
-    background: ${dt('navigation.item.active.background')};
+    background: dt('navigation.item.active.background');
 }
 
 .p-tablist-nav-button:focus-visible {
-    background: ${dt('navigation.item.active.background')};
+    background: dt('navigation.item.active.background');
 }
 `;
-// @section:css-end
 
 export default {
     root,

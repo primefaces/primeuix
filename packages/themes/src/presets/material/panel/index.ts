@@ -32,7 +32,7 @@ export const footer: PanelTokenSections.Footer = {
     padding: '0 1.25rem 1.25rem 1.25rem'
 };
 
-export const css: PanelTokenSections.CSS = ``;
+export const css: PanelTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

@@ -78,14 +78,13 @@ export const clearIcon: CascadeSelectTokenSections.ClearIcon = {
     color: '{form.field.icon.color}'
 };
 
-// @section:css-start
-export const css: CascadeSelectTokenSections.CSS = ({ dt }) => `
+export const css: CascadeSelectTokenSections.CSS = /*css*/ `
 .p-cascadeselect.p-variant-filled {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border: 1px solid transparent;
-    background: ${dt('cascadeselect.filled.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('cascadeselect.focus.border.color')}, ${dt('cascadeselect.focus.border.color')}), linear-gradient(to bottom, ${dt('cascadeselect.border.color')}, ${dt('cascadeselect.border.color')});
+    background: dt('cascadeselect.filled.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('cascadeselect.focus.border.color'), dt('cascadeselect.focus.border.color')), linear-gradient(to bottom, dt('cascadeselect.border.color'), dt('cascadeselect.border.color'));
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -93,8 +92,8 @@ export const css: CascadeSelectTokenSections.CSS = ({ dt }) => `
 }
 
 .p-cascadeselect.p-variant-filled:not(.p-disabled):hover {
-    background: ${dt('cascadeselect.filled.hover.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('cascadeselect.focus.border.color')}, ${dt('cascadeselect.focus.border.color')}), linear-gradient(to bottom, ${dt('cascadeselect.hover.border.color')}, ${dt('cascadeselect.hover.border.color')});
+    background: dt('cascadeselect.filled.hover.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('cascadeselect.focus.border.color'), dt('cascadeselect.focus.border.color')), linear-gradient(to bottom, dt('cascadeselect.hover.border.color'), dt('cascadeselect.hover.border.color'));
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -103,8 +102,8 @@ export const css: CascadeSelectTokenSections.CSS = ({ dt }) => `
 
 .p-cascadeselect.p-variant-filled:not(.p-disabled).p-focus {
     outline: 0 none;
-    background: ${dt('cascadeselect.filled.focus.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('cascadeselect.focus.border.color')}, ${dt('cascadeselect.focus.border.color')}), linear-gradient(to bottom, ${dt('cascadeselect.border.color')}, ${dt('cascadeselect.border.color')});
+    background: dt('cascadeselect.filled.focus.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('cascadeselect.focus.border.color'), dt('cascadeselect.focus.border.color')), linear-gradient(to bottom, dt('cascadeselect.border.color'), dt('cascadeselect.border.color'));
     background-size: 100% 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -112,26 +111,21 @@ export const css: CascadeSelectTokenSections.CSS = ({ dt }) => `
 }
 
 .p-cascadeselect.p-variant-filled:not(.p-disabled).p-focus:hover {
-    background-image: linear-gradient(to bottom, ${dt('cascadeselect.focus.border.color')}, ${dt('cascadeselect.focus.border.color')}), linear-gradient(to bottom, ${dt('cascadeselect.hover.border.color')}, ${dt('cascadeselect.hover.border.color')});
+    background-image: linear-gradient(to bottom, dt('cascadeselect.focus.border.color'), dt('cascadeselect.focus.border.color')), linear-gradient(to bottom, dt('cascadeselect.hover.border.color'), dt('cascadeselect.hover.border.color'));
 }
 
 .p-cascadeselect.p-variant-filled.p-invalid {
-    background-image: linear-gradient(to bottom, ${dt('cascadeselect.invalid.border.color')}, ${dt('cascadeselect.invalid.border.color')}), linear-gradient(to bottom, ${dt('cascadeselect.invalid.border.color')}, ${dt(
-        'cascadeselect.invalid.border.color'
-    )});
+    background-image: linear-gradient(to bottom, dt('cascadeselect.invalid.border.color'), dt('cascadeselect.invalid.border.color')), linear-gradient(to bottom, dt('cascadeselect.invalid.border.color'), dt('cascadeselect.invalid.border.color'));
 }
 
 .p-cascadeselect.p-variant-filled.p-invalid:not(.p-disabled).p-focus  {
-    background-image: linear-gradient(to bottom, ${dt('cascadeselect.invalid.border.color')}, ${dt('cascadeselect.invalid.border.color')}), linear-gradient(to bottom, ${dt('cascadeselect.invalid.border.color')}, ${dt(
-        'cascadeselect.invalid.border.color'
-    )});
+    background-image: linear-gradient(to bottom, dt('cascadeselect.invalid.border.color'), dt('cascadeselect.invalid.border.color')), linear-gradient(to bottom, dt('cascadeselect.invalid.border.color'), dt('cascadeselect.invalid.border.color'));
 }
 
 .p-cascadeselect-option {
     transition: none;
 }
 `;
-// @section:css-end
 
 export default {
     root,

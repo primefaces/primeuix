@@ -36,7 +36,7 @@ export const jumpToPageInput: PaginatorTokenSections.JumpToPageInput = {
     maxWidth: '2.5rem'
 };
 
-export const css: PaginatorTokenSections.CSS = ``;
+export const css: PaginatorTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

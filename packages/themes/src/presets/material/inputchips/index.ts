@@ -45,7 +45,7 @@ export const colorScheme: InputChipsTokenSections.ColorScheme = {
     }
 };
 
-export const css: InputChipsTokenSections.CSS = ``;
+export const css: InputChipsTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

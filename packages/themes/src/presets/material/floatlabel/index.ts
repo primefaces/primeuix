@@ -39,7 +39,7 @@ export const on: FloatLabelTokenSections.On = {
     }
 };
 
-export const css: FloatLabelTokenSections.CSS = ``;
+export const css: FloatLabelTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

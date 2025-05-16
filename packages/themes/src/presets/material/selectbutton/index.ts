@@ -17,7 +17,7 @@ export const colorScheme: SelectButtonTokenSections.ColorScheme = {
     }
 };
 
-export const css: SelectButtonTokenSections.CSS = ``;
+export const css: SelectButtonTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

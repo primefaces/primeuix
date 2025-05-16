@@ -44,11 +44,10 @@ export const submenuIcon: PanelMenuTokenSections.SubmenuIcon = {
     focusColor: '{navigation.submenu.icon.focus.color}'
 };
 
-// @section:css-start
-export const css: PanelMenuTokenSections.CSS = ({ dt }) => `
+export const css: PanelMenuTokenSections.CSS = /*css*/ `
 .p-panelmenu-panel {
-    box-shadow: 0 0 0 1px ${dt('panelmenu.panel.border.color')};
-    transition: margin ${dt('panelmenu.transition.duration')};
+    box-shadow: 0 0 0 1px dt('panelmenu.panel.border.color');
+    transition: margin dt('panelmenu.transition.duration');
 }
 
 .p-panelmenu-panel:has(.p-panelmenu-header-active) {
@@ -56,22 +55,21 @@ export const css: PanelMenuTokenSections.CSS = ({ dt }) => `
 }
 
 .p-panelmenu-panel:first-child {
-    border-top-left-radius: ${dt('content.border.radius')};
-    border-top-right-radius: ${dt('content.border.radius')};
+    border-top-left-radius: dt('content.border.radius');
+    border-top-right-radius: dt('content.border.radius');
     margin-top: 0;
 }
 
 .p-panelmenu-panel:last-child {
-    border-bottom-left-radius: ${dt('content.border.radius')};
-    border-bottom-right-radius: ${dt('content.border.radius')};
+    border-bottom-left-radius: dt('content.border.radius');
+    border-bottom-right-radius: dt('content.border.radius');
     margin-bottom: 0;
 }
 
 .p-accordionpanel:not(.p-disabled) .p-accordionheader:focus-visible {
-    background: ${dt('navigation.item.active.background')};
+    background: dt('navigation.item.active.background');
 }
 `;
-// @section:css-end
 
 export default {
     root,

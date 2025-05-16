@@ -88,7 +88,7 @@ export default {
             global_css = `${global_light_css}${global_dark_css}`;
             global_tokens = [...new Set([...eRest_tokens, ...ecsRest_tokens, ...ecsDark_tokens])];
 
-            style = resolve(preset.css, { dt });
+            style = resolve(preset.css, { dt }) as string;
         }
 
         return {
@@ -130,7 +130,7 @@ export default {
             p_css = `${light_variable_css}${dark_variable_css}`;
             p_tokens = [...new Set([...vRest_tokens, ...csRest_tokens, ...csDark_tokens])];
 
-            p_style = resolve(css, { dt });
+            p_style = resolve(css, { dt }) as string;
         }
 
         return {
@@ -178,8 +178,8 @@ export default {
 
         return Object.entries(common || {})
             .reduce((acc: any, [key, value]) => {
-                if (value?.css) {
-                    const _css = minifyCSS(value?.css);
+                if (isObject(value) && Object.hasOwn(value, 'css')) {
+                    const _css = minifyCSS(value.css);
                     const id = `${key}-variables`;
 
                     acc.push(`<style type="text/css" data-primevue-style-id="${id}" ${_props}>${_css}</style>`); // @todo data-primevue -> data-primeui check in primevue usestyle
