@@ -105,7 +105,7 @@ export function getRule(selector: string, properties: string): string {
     return '';
 }
 
-export function evaluateDtExpressions(input: string, fn: (...args: (string | number)[]) => string): string {
+export function evaluateDtExpressions(input: string, fn: (...args: any[]) => string): string {
     if (input.indexOf('dt(') === -1) return input;
 
     function fastParseArgs(str: string, fn: (...args: (string | number)[]) => string): (string | number)[] {
