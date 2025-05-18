@@ -105,43 +105,20 @@ export function getRule(selector: string, properties: string): string {
     return '';
 }
 
-export function evaluateDtExpressions(input: string, fn: (...args: any[]) => string): string {
-    const findInnermostDt = (str: string): { start: number; end: number; content: string } | null => {
-        let depth = 0;
-        let start = -1;
+export function evaluateDtExpressions(input: string, fn: (...args: (string | number)[]) => string): string {
+    if (input.indexOf('dt(') === -1) return input;
 
-        for (let i = 0; i < str.length; i++) {
-            if (str.slice(i, i + 3) === 'dt(') {
-                if (depth === 0) start = i;
-                depth++;
-                i += 2;
-            } else if (str[i] === ')' && depth > 0) {
-                depth--;
-
-                if (depth === 0) {
-                    return {
-                        start,
-                        end: i,
-                        content: str.slice(start, i + 1)
-                    };
-                }
-            }
-        }
-
-        return null;
-    };
-
-    const parseArgs = (argsStr: string): (string | number)[] => {
+    function fastParseArgs(str: string, fn: (...args: (string | number)[]) => string): (string | number)[] {
         const args: (string | number)[] = [];
+        let i = 0;
         let current = '';
-        let depth = 0;
         let quote: string | null = null;
+        let depth = 0;
 
-        for (let i = 0; i < argsStr.length; i++) {
-            const c = argsStr[i];
-            const prev = argsStr[i - 1];
+        while (i <= str.length) {
+            const c = str[i];
 
-            if ((c === '"' || c === "'" || c === '`') && prev !== '\\') {
+            if ((c === '"' || c === "'" || c === '`') && str[i - 1] !== '\\') {
                 quote = quote === c ? null : c;
             }
 
@@ -149,49 +126,66 @@ export function evaluateDtExpressions(input: string, fn: (...args: any[]) => str
                 if (c === '(') depth++;
                 if (c === ')') depth--;
 
-                if (c === ',' && depth === 0) {
-                    args.push(processArg(current.trim()));
+                if ((c === ',' || i === str.length) && depth === 0) {
+                    const arg = current.trim();
+
+                    if (arg.startsWith('dt(')) {
+                        args.push(evaluateDtExpressions(arg, fn)); // recursive çözüm
+                    } else {
+                        args.push(parseArg(arg));
+                    }
+
                     current = '';
+                    i++;
                     continue;
                 }
             }
 
-            current += c;
-        }
-
-        if (current.trim()) {
-            args.push(processArg(current.trim()));
+            if (c !== undefined) current += c;
+            i++;
         }
 
         return args;
-    };
+    }
 
-    const processArg = (arg: string): string | number => {
-        if (arg.startsWith('dt(')) {
-            return evaluateDtExpressions(arg, fn);
-        }
+    function parseArg(arg: string): string | number {
+        const q = arg[0];
 
-        if (/^(['"`])(.*)\1$/.test(arg)) {
+        if ((q === '"' || q === "'" || q === '`') && arg[arg.length - 1] === q) {
             return arg.slice(1, -1);
         }
 
         const num = Number(arg);
 
         return isNaN(num) ? arg : num;
-    };
-
-    let result = input;
-
-    while (true) {
-        const match = findInnermostDt(result);
-
-        if (!match) break;
-
-        const args = parseArgs(match.content.slice(3, -1));
-        const value = fn(...args);
-
-        result = result.slice(0, match.start) + value + result.slice(match.end + 1);
     }
 
-    return result;
+    const indices: [number, number][] = [];
+    const stack: number[] = [];
+
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === 'd' && input.slice(i, i + 3) === 'dt(') {
+            stack.push(i);
+            i += 2;
+        } else if (input[i] === ')' && stack.length > 0) {
+            const start = stack.pop()!;
+
+            if (stack.length === 0) {
+                indices.push([start, i]);
+            }
+        }
+    }
+
+    if (!indices.length) return input;
+
+    for (let i = indices.length - 1; i >= 0; i--) {
+        const [start, end] = indices[i];
+        const inner = input.slice(start + 3, end);
+        const args = fastParseArgs(inner, fn);
+        const resolved = fn(...args);
+
+        input = input.slice(0, start) + resolved + input.slice(end + 1);
+    }
+
+    return input;
 }
