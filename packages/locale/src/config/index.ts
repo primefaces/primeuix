@@ -1,5 +1,5 @@
 import { mergeKeys } from '@primeuix/utils/object';
-import LocaleService from '../service/index';
+import LocaleService from '../service';
 import type { LocaleInstance, LocaleOptions } from '../types';
 
 export default {

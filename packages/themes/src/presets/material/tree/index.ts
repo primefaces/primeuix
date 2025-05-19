@@ -58,13 +58,11 @@ export const filter: TreeTokenSections.Filter = {
     margin: '0 0 0.75rem 0'
 };
 
-// @section:css-start
-export const css: TreeTokenSections.CSS = `
+export const css: TreeTokenSections.CSS = /*css*/ `
 .p-tree-node-content {
     transition: none;
 }
 `;
-// @section:css-end
 
 export default {
     root,

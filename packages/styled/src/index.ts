@@ -2,6 +2,7 @@ export * from './actions/index';
 export { default as Theme } from './config/index';
 export * from './helpers/index';
 export { default as ThemeService } from './service/index';
+export * from './stylesheet/index';
 export { default as StyleSheet } from './stylesheet/index';
 export * from './utils/index';
 
@@ -23,6 +24,8 @@ export interface ThemeOptions {
     cssLayer?: boolean | { name?: string; order?: string };
 }
 
-export interface ThemeStyleOptions {
-    dt: (key: string, fallback?: string | number | Pick<ThemeStyleOptions, 'dt'>) => string | number | undefined;
+export interface StyleOptions {
+    dt: (key: string, fallback?: string | number | Pick<StyleOptions, 'dt'>) => string | number | undefined;
 }
+
+export declare type StyleType<T = StyleOptions> = string | ((options?: T) => string);

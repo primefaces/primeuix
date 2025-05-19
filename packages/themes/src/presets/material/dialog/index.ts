@@ -27,7 +27,7 @@ export const footer: DialogTokenSections.Footer = {
     gap: '0.5rem'
 };
 
-export const css: DialogTokenSections.CSS = ``;
+export const css: DialogTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

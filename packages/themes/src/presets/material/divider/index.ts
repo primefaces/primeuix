@@ -25,7 +25,7 @@ export const vertical: DividerTokenSections.Vertical = {
     }
 };
 
-export const css: DividerTokenSections.CSS = ``;
+export const css: DividerTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

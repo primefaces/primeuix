@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { SelectTokenSections } from '@primeuix/themes/types/select';
 
 export * from '@primeuix/themes/types/select';
@@ -23,7 +23,7 @@ declare const _default: {
     clearIcon: SelectTokenSections.ClearIcon;
     checkmark: SelectTokenSections.Checkmark;
     emptyMessage: SelectTokenSections.EmptyMessage;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { checkmark, clearIcon, css, _default as default, dropdown, emptyMessage, list, option, optionGroup, overlay, root };

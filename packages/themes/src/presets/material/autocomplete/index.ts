@@ -119,20 +119,19 @@ export const colorScheme: AutoCompleteTokenSections.ColorScheme = {
     }
 };
 
-// @section:css-start
-export const css: AutoCompleteTokenSections.CSS = ({ dt }) => `
+export const css: AutoCompleteTokenSections.CSS = /*css*/ `
 .p-autocomplete-dropdown:focus-visible {
-    background: ${dt('autocomplete.dropdown.hover.background')};
-    border-color: ${dt('autocomplete.dropdown.hover.border.color')};
-    color: ${dt('autocomplete.dropdown.hover.color')};
+    background: dt('autocomplete.dropdown.hover.background');
+    border-color: dt('autocomplete.dropdown.hover.border.color');
+    color: dt('autocomplete.dropdown.hover.color');
 }
 
 .p-variant-filled.p-autocomplete-input-multiple {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border: 1px solid transparent;
-    background: ${dt('autocomplete.filled.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('autocomplete.focus.border.color')}, ${dt('autocomplete.focus.border.color')}), linear-gradient(to bottom, ${dt('autocomplete.border.color')}, ${dt('autocomplete.border.color')});
+    background: dt('autocomplete.filled.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('autocomplete.focus.border.color'), dt('autocomplete.focus.border.color')), linear-gradient(to bottom, dt('autocomplete.border.color'), dt('autocomplete.border.color'));
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -140,8 +139,8 @@ export const css: AutoCompleteTokenSections.CSS = ({ dt }) => `
 }
 
 .p-autocomplete:not(.p-disabled):hover .p-variant-filled.p-autocomplete-input-multiple {
-    background: ${dt('autocomplete.filled.hover.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('autocomplete.focus.border.color')}, ${dt('autocomplete.focus.border.color')}), linear-gradient(to bottom, ${dt('autocomplete.hover.border.color')}, ${dt('autocomplete.hover.border.color')});
+    background: dt('autocomplete.filled.hover.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('autocomplete.focus.border.color'), dt('autocomplete.focus.border.color')), linear-gradient(to bottom, dt('autocomplete.hover.border.color'), dt('autocomplete.hover.border.color'));
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -150,8 +149,8 @@ export const css: AutoCompleteTokenSections.CSS = ({ dt }) => `
 
 .p-autocomplete:not(.p-disabled).p-focus .p-variant-filled.p-autocomplete-input-multiple {
     outline: 0 none;
-    background: ${dt('autocomplete.filled.focus.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('autocomplete.focus.border.color')}, ${dt('autocomplete.focus.border.color')}), linear-gradient(to bottom, ${dt('autocomplete.border.color')}, ${dt('autocomplete.border.color')});
+    background: dt('autocomplete.filled.focus.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('autocomplete.focus.border.color'), dt('autocomplete.focus.border.color')), linear-gradient(to bottom, dt('autocomplete.border.color'), dt('autocomplete.border.color'));
     background-size: 100% 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -159,26 +158,21 @@ export const css: AutoCompleteTokenSections.CSS = ({ dt }) => `
 }
 
 .p-autocomplete:not(.p-disabled).p-focus:hover .p-variant-filled.p-autocomplete-input-multiple {
-    background-image: linear-gradient(to bottom, ${dt('autocomplete.focus.border.color')}, ${dt('autocomplete.focus.border.color')}), linear-gradient(to bottom, ${dt('autocomplete.hover.border.color')}, ${dt('autocomplete.hover.border.color')});
+    background-image: linear-gradient(to bottom, dt('autocomplete.focus.border.color'), dt('autocomplete.focus.border.color')), linear-gradient(to bottom, dt('autocomplete.hover.border.color'), dt('autocomplete.hover.border.color'));
 }
 
 .p-autocomplete.p-invalid .p-autocomplete-input-multiple {
-    background-image: linear-gradient(to bottom, ${dt('autocomplete.invalid.border.color')}, ${dt('autocomplete.invalid.border.color')}), linear-gradient(to bottom, ${dt('autocomplete.invalid.border.color')}, ${dt(
-        'autocomplete.invalid.border.color'
-    )});
+    background-image: linear-gradient(to bottom, dt('autocomplete.invalid.border.color'), dt('autocomplete.invalid.border.color')), linear-gradient(to bottom, dt('autocomplete.invalid.border.color'), dt('autocomplete.invalid.border.color'));
 }
 
 .p-autocomplete.p-invalid.p-focus .p-autocomplete-input-multiple  {
-    background-image: linear-gradient(to bottom, ${dt('autocomplete.invalid.border.color')}, ${dt('autocomplete.invalid.border.color')}), linear-gradient(to bottom, ${dt('autocomplete.invalid.border.color')}, ${dt(
-        'autocomplete.invalid.border.color'
-    )});
+    background-image: linear-gradient(to bottom, dt('autocomplete.invalid.border.color'), dt('autocomplete.invalid.border.color')), linear-gradient(to bottom, dt('autocomplete.invalid.border.color'), dt('autocomplete.invalid.border.color'));
 }
 
 .p-autocomplete-option {
     transition: none;
 }
 `;
-// @section:css-end
 
 export default {
     root,

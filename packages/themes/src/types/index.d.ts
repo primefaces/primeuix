@@ -3,7 +3,7 @@
  * @module themes
  *
  */
-import type { ThemeOptions, ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions, ThemeOptions } from '@primeuix/styled';
 
 import type { AccordionDesignTokens } from './accordion';
 import type { AutoCompleteDesignTokens } from './autocomplete';
@@ -103,7 +103,7 @@ export interface ColorSchemeDesignToken<T> {
     colorScheme?: ColorScheme<T>;
 }
 
-export declare type ExtendedCSS = string | ((options: ThemeStyleOptions) => string);
+export declare type ExtendedCSS = string | ((options: StyleOptions) => string) | undefined;
 export declare type ExtendedTokens = Record<string, object | string | number>;
 
 export interface DesignTokens<T> extends ColorSchemeDesignToken<T> {

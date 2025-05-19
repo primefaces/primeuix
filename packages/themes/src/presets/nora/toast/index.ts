@@ -4,7 +4,8 @@ export const root: ToastTokenSections.Root = {
     width: '25rem',
     borderRadius: '{content.border.radius}',
     borderWidth: '0 0 0 6px',
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{transition.duration}',
+    blur: '0'
 };
 
 export const icon: ToastTokenSections.Icon = {
@@ -47,7 +48,6 @@ export const closeIcon: ToastTokenSections.CloseIcon = {
 
 export const colorScheme: ToastTokenSections.ColorScheme = {
     light: {
-        blur: '0',
         info: {
             background: '{blue.800}',
             borderColor: '{blue.800}',
@@ -134,7 +134,6 @@ export const colorScheme: ToastTokenSections.ColorScheme = {
         }
     },
     dark: {
-        blur: '0',
         info: {
             background: '{blue.200}',
             borderColor: '{blue.200}',

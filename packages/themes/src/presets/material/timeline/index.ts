@@ -47,7 +47,7 @@ export const colorScheme: TimelineTokenSections.ColorScheme = {
     }
 };
 
-export const css: TimelineTokenSections.CSS = ``;
+export const css: TimelineTokenSections.CSS = /*css*/ ``;
 
 export default {
     event,

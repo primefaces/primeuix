@@ -38,14 +38,13 @@ export const root: InputTextTokenSections.Root = {
     }
 };
 
-// @section:css-start
-export const css: InputTextTokenSections.CSS = ({ dt }) => `
+export const css: InputTextTokenSections.CSS = /*css*/ `
 .p-inputtext.p-variant-filled {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border: 1px solid transparent;
-    background: ${dt('inputtext.filled.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('inputtext.focus.border.color')}, ${dt('inputtext.focus.border.color')}), linear-gradient(to bottom, ${dt('inputtext.border.color')}, ${dt('inputtext.border.color')});
+    background: dt('inputtext.filled.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('inputtext.focus.border.color'), dt('inputtext.focus.border.color')), linear-gradient(to bottom, dt('inputtext.border.color'), dt('inputtext.border.color'));
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -53,8 +52,8 @@ export const css: InputTextTokenSections.CSS = ({ dt }) => `
 }
 
 .p-inputtext.p-variant-filled:enabled:hover {
-    background: ${dt('inputtext.filled.hover.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('inputtext.focus.border.color')}, ${dt('inputtext.focus.border.color')}), linear-gradient(to bottom, ${dt('inputtext.hover.border.color')}, ${dt('inputtext.hover.border.color')});
+    background: dt('inputtext.filled.hover.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('inputtext.focus.border.color'), dt('inputtext.focus.border.color')), linear-gradient(to bottom, dt('inputtext.hover.border.color'), dt('inputtext.hover.border.color'));
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -63,8 +62,8 @@ export const css: InputTextTokenSections.CSS = ({ dt }) => `
 
 .p-inputtext.p-variant-filled:enabled:focus {
     outline: 0 none;
-    background: ${dt('inputtext.filled.focus.background')} no-repeat;
-    background-image: linear-gradient(to bottom, ${dt('inputtext.focus.border.color')}, ${dt('inputtext.focus.border.color')}), linear-gradient(to bottom, ${dt('inputtext.border.color')}, ${dt('inputtext.border.color')});
+    background: dt('inputtext.filled.focus.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('inputtext.focus.border.color'), dt('inputtext.focus.border.color')), linear-gradient(to bottom, dt('inputtext.border.color'), dt('inputtext.border.color'));
     background-size: 100% 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
     background-origin: border-box;
@@ -72,18 +71,17 @@ export const css: InputTextTokenSections.CSS = ({ dt }) => `
 }
 
 .p-inputtext.p-variant-filled:enabled:hover:focus {
-    background-image: linear-gradient(to bottom, ${dt('inputtext.focus.border.color')}, ${dt('inputtext.focus.border.color')}), linear-gradient(to bottom, ${dt('inputtext.hover.border.color')}, ${dt('inputtext.hover.border.color')});
+    background-image: linear-gradient(to bottom, dt('inputtext.focus.border.color'), dt('inputtext.focus.border.color')), linear-gradient(to bottom, dt('inputtext.hover.border.color'), dt('inputtext.hover.border.color'));
 }
 
 .p-inputtext.p-variant-filled.p-invalid {
-    background-image: linear-gradient(to bottom, ${dt('inputtext.invalid.border.color')}, ${dt('inputtext.invalid.border.color')}), linear-gradient(to bottom, ${dt('inputtext.invalid.border.color')}, ${dt('inputtext.invalid.border.color')});
+    background-image: linear-gradient(to bottom, dt('inputtext.invalid.border.color'), dt('inputtext.invalid.border.color')), linear-gradient(to bottom, dt('inputtext.invalid.border.color'), dt('inputtext.invalid.border.color'));
 }
 
 .p-inputtext.p-variant-filled.p-invalid:enabled:focus {
-    background-image: linear-gradient(to bottom, ${dt('inputtext.invalid.border.color')}, ${dt('inputtext.invalid.border.color')}), linear-gradient(to bottom, ${dt('inputtext.invalid.border.color')}, ${dt('inputtext.invalid.border.color')});
+    background-image: linear-gradient(to bottom, dt('inputtext.invalid.border.color'), dt('inputtext.invalid.border.color')), linear-gradient(to bottom, dt('inputtext.invalid.border.color'), dt('inputtext.invalid.border.color'));
 }
 `;
-// @section:css-end
 
 export default {
     root,

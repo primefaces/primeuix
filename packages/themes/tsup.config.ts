@@ -33,21 +33,32 @@ export default defineConfig([
             }
         }
     },
-    ...themes.map<Options>((theme) => ({
-        entry: {
-            [theme]: `src/presets/${theme}/index.ts`
-        },
-        format: ['iife'],
-        outDir: 'dist/umd',
-        globalName: `PrimeUIX.Themes.${theme.charAt(0).toUpperCase() + theme.slice(1)}`,
-        minify: 'terser',
-        terserOptions: {
-            mangle: {
-                reserved: ['theme', 'style', 'css']
+    ...themes.map<Options>((theme) => {
+        const name = theme.charAt(0).toUpperCase() + theme.slice(1);
+        const globalName = `PrimeUIX.Themes.${name}`;
+
+        return {
+            entry: {
+                [theme]: `src/presets/${theme}/index.ts`
+            },
+            format: ['iife'],
+            outDir: 'dist/umd',
+            globalName,
+            minify: 'terser',
+            terserOptions: {
+                mangle: {
+                    reserved: ['theme', 'style', 'css']
+                }
+            },
+            outExtension: () => ({ js: `.js` }),
+            esbuildOptions(options) {
+                options.footer = {
+                    // https://github.com/egoist/tsup/issues/710
+                    js: `${globalName} = ${globalName}.default || ${globalName};`
+                };
             }
-        },
-        outExtension: () => ({ js: `.js` })
-    })),
+        };
+    }),
     {
         entry: {
             'tokens/index': 'tokens.ts'

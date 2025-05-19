@@ -1,6 +1,6 @@
 import { isArray, isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve, toTokenKey } from '@primeuix/utils/object';
 import { dt, toVariables } from '../helpers/index';
-import { getRule } from './sharedUtils';
+import { CALC_REGEX, EXPR_REGEX, getRule, VAR_REGEX } from './sharedUtils';
 
 export default {
     regex: {
@@ -88,7 +88,7 @@ export default {
             global_css = `${global_light_css}${global_dark_css}`;
             global_tokens = [...new Set([...eRest_tokens, ...ecsRest_tokens, ...ecsDark_tokens])];
 
-            style = resolve(preset.css, { dt });
+            style = resolve(preset.css, { dt }) as string;
         }
 
         return {
@@ -130,7 +130,7 @@ export default {
             p_css = `${light_variable_css}${dark_variable_css}`;
             p_tokens = [...new Set([...vRest_tokens, ...csRest_tokens, ...csDark_tokens])];
 
-            p_style = resolve(css, { dt });
+            p_style = resolve(css, { dt }) as string;
         }
 
         return {
@@ -178,8 +178,8 @@ export default {
 
         return Object.entries(common || {})
             .reduce((acc: any, [key, value]) => {
-                if (value?.css) {
-                    const _css = minifyCSS(value?.css);
+                if (isObject(value) && Object.hasOwn(value, 'css')) {
+                    const _css = minifyCSS(value.css);
                     const id = `${key}-variables`;
 
                     acc.push(`<style type="text/css" data-primevue-style-id="${id}" ${_props}>${_css}</style>`); // @todo data-primevue -> data-primeui check in primevue usestyle
@@ -223,25 +223,21 @@ export default {
                     value,
                     scheme: currentPath.includes('colorScheme.light') ? 'light' : currentPath.includes('colorScheme.dark') ? 'dark' : 'none',
                     computed(colorScheme: string, tokenPathMap: any = {}) {
-                        const regex = /{([^}]*)}/g;
                         let computedValue: any = value;
 
                         tokenPathMap['name'] = this.path;
                         tokenPathMap['binding'] ||= {};
 
-                        if (matchRegex(value as string, regex)) {
+                        if (matchRegex(value as string, EXPR_REGEX)) {
                             const val = (value as string).trim();
-                            const _val = val.replaceAll(regex, (v) => {
+                            const _val = val.replaceAll(EXPR_REGEX, (v) => {
                                 const path = v.replace(/{|}/g, '');
                                 const computed = tokens[path]?.computed(colorScheme, tokenPathMap);
 
                                 return isArray(computed) && computed.length === 2 ? `light-dark(${computed[0].value},${computed[1].value})` : computed?.value;
                             });
 
-                            const calculationRegex = /(\d+\w*\s+[\+\-\*\/]\s+\d+\w*)/g;
-                            const cleanedVarRegex = /var\([^)]+\)/g;
-
-                            computedValue = matchRegex(_val.replace(cleanedVarRegex, '0'), calculationRegex) ? `calc(${_val})` : _val;
+                            computedValue = matchRegex(_val.replace(VAR_REGEX, '0'), CALC_REGEX) ? `calc(${_val})` : _val;
                         }
 
                         isEmpty(tokenPathMap['binding']) && delete tokenPathMap['binding'];

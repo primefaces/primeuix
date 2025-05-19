@@ -19,16 +19,18 @@ const setTokens = (doc, moduleName, declaration, name) => {
 
     if (declaration?.groups) {
         const event_props_group = declaration.groups.find((g) => g.title === 'Properties');
+        const toUncapitalized = (str) => str.charAt(0).toLowerCase() + str.slice(1);
 
         event_props_group?.children?.forEach((prop) => {
+            const computedName = toUncapitalized(name ? `${name}.${prop.name}` : prop.name);
+
             if (prop.type?.declaration) {
-                setTokens(doc, moduleName, prop.type?.declaration, prop.name);
+                setTokens(doc, moduleName, prop.type?.declaration, computedName);
             } else if (prop.comment?.getTag('@designToken')) {
                 const variable = prop.comment.getTag('@designToken').content[0]?.text || '';
-                const toLowerCase = (str) => str.charAt(0).toLowerCase() + str.slice(1);
 
                 doc[moduleName]['tokens'].push({
-                    name: moduleName + '.' + toLowerCase(name ? `${name}.${prop.name}` : prop.name),
+                    name: moduleName + '.' + computedName,
                     token: variable,
                     variable: '--p-' + variable.replaceAll('.', '-'),
                     description: prop.comment?.summary

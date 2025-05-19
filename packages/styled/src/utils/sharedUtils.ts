@@ -1,5 +1,9 @@
 import { getKeyValue, isArray, isNotEmpty, isNumber, isObject, isString, matchRegex, toKebabCase } from '@primeuix/utils/object';
 
+export const EXPR_REGEX = /{([^}]*)}/g; // Exp: '{a}', '{a.b}', '{a.b.c}' etc.
+export const CALC_REGEX = /(\d+\s+[\+\-\*\/]\s+\d+)/g;
+export const VAR_REGEX = /var\([^)]+\)/g;
+
 export function toTokenKey(str: string): string {
     return isString(str) ? str.replace(/[A-Z]/g, (c: string, i: number) => (i === 0 ? c : '.' + c.toLowerCase())).toLowerCase() : str;
 }
@@ -51,23 +55,19 @@ export function hasOddBraces(str: string = ''): boolean {
 
 export function getVariableValue(value: any, variable: string = '', prefix: string = '', excludedKeyRegexes: RegExp[] = [], fallback?: string): string | undefined {
     if (isString(value)) {
-        const regex = /{([^}]*)}/g; // Exp: '{a}', '{a.b}', '{a.b.c}' etc.
         const val = value.trim();
 
         if (hasOddBraces(val)) {
             return undefined;
-        } else if (matchRegex(val, regex)) {
-            const _val = val.replaceAll(regex, (v: string) => {
+        } else if (matchRegex(val, EXPR_REGEX)) {
+            const _val = val.replaceAll(EXPR_REGEX, (v: string) => {
                 const path = v.replace(/{|}/g, '');
                 const keys = path.split('.').filter((_v: string) => !excludedKeyRegexes.some((_r) => matchRegex(_v, _r)));
 
                 return `var(${getVariableName(prefix, toKebabCase(keys.join('-')))}${isNotEmpty(fallback) ? `, ${fallback}` : ''})`;
             });
 
-            const calculationRegex = /(\d+\s+[\+\-\*\/]\s+\d+)/g;
-            const cleanedVarRegex = /var\([^)]+\)/g;
-
-            return matchRegex(_val.replace(cleanedVarRegex, '0'), calculationRegex) ? `calc(${_val})` : _val;
+            return matchRegex(_val.replace(VAR_REGEX, '0'), CALC_REGEX) ? `calc(${_val})` : _val;
         }
 
         return val; //toUnit(val, variable);
@@ -80,10 +80,9 @@ export function getVariableValue(value: any, variable: string = '', prefix: stri
 
 export function getComputedValue(obj = {}, value: any): any {
     if (isString(value)) {
-        const regex = /{([^}]*)}/g;
         const val = value.trim();
 
-        return matchRegex(val, regex) ? val.replaceAll(regex, (v: string) => getKeyValue(obj, v.replace(/{|}/g, '')) as string) : val;
+        return matchRegex(val, EXPR_REGEX) ? val.replaceAll(EXPR_REGEX, (v: string) => getKeyValue(obj, v.replace(/{|}/g, '')) as string) : val;
     } else if (isNumber(value)) {
         return value;
     }
@@ -103,4 +102,89 @@ export function getRule(selector: string, properties: string): string {
     }
 
     return '';
+}
+
+export function evaluateDtExpressions(input: string, fn: (...args: any[]) => string): string {
+    if (input.indexOf('dt(') === -1) return input;
+
+    function fastParseArgs(str: string, fn: (...args: (string | number)[]) => string): (string | number)[] {
+        const args: (string | number)[] = [];
+        let i = 0;
+        let current = '';
+        let quote: string | null = null;
+        let depth = 0;
+
+        while (i <= str.length) {
+            const c = str[i];
+
+            if ((c === '"' || c === "'" || c === '`') && str[i - 1] !== '\\') {
+                quote = quote === c ? null : c;
+            }
+
+            if (!quote) {
+                if (c === '(') depth++;
+                if (c === ')') depth--;
+
+                if ((c === ',' || i === str.length) && depth === 0) {
+                    const arg = current.trim();
+
+                    if (arg.startsWith('dt(')) {
+                        args.push(evaluateDtExpressions(arg, fn)); // recursive çözüm
+                    } else {
+                        args.push(parseArg(arg));
+                    }
+
+                    current = '';
+                    i++;
+                    continue;
+                }
+            }
+
+            if (c !== undefined) current += c;
+            i++;
+        }
+
+        return args;
+    }
+
+    function parseArg(arg: string): string | number {
+        const q = arg[0];
+
+        if ((q === '"' || q === "'" || q === '`') && arg[arg.length - 1] === q) {
+            return arg.slice(1, -1);
+        }
+
+        const num = Number(arg);
+
+        return isNaN(num) ? arg : num;
+    }
+
+    const indices: [number, number][] = [];
+    const stack: number[] = [];
+
+    for (let i = 0; i < input.length; i++) {
+        if (input[i] === 'd' && input.slice(i, i + 3) === 'dt(') {
+            stack.push(i);
+            i += 2;
+        } else if (input[i] === ')' && stack.length > 0) {
+            const start = stack.pop()!;
+
+            if (stack.length === 0) {
+                indices.push([start, i]);
+            }
+        }
+    }
+
+    if (!indices.length) return input;
+
+    for (let i = indices.length - 1; i >= 0; i--) {
+        const [start, end] = indices[i];
+        const inner = input.slice(start + 3, end);
+        const args = fastParseArgs(inner, fn);
+        const resolved = fn(...args);
+
+        input = input.slice(0, start) + resolved + input.slice(end + 1);
+    }
+
+    return input;
 }

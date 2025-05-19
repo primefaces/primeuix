@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { MenubarTokenSections } from '@primeuix/themes/types/menubar';
 
 export * from '@primeuix/themes/types/menubar';
@@ -17,7 +17,7 @@ declare const _default: {
     submenu: MenubarTokenSections.Submenu;
     separator: MenubarTokenSections.Separator;
     mobileButton: MenubarTokenSections.MobileButton;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { baseItem, css, _default as default, item, mobileButton, root, separator, submenu };

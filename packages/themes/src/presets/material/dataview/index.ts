@@ -44,7 +44,7 @@ export const paginatorBottom: DataViewTokenSections.PaginatorBottom = {
     borderWidth: '1px 0 0 0'
 };
 
-export const css: DataViewTokenSections.CSS = ``;
+export const css: DataViewTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

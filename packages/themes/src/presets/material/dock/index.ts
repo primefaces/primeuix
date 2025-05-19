@@ -20,7 +20,7 @@ export const item: DockTokenSections.Item = {
     }
 };
 
-export const css: DockTokenSections.CSS = ``;
+export const css: DockTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

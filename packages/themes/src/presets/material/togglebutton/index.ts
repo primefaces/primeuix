@@ -68,13 +68,11 @@ export const colorScheme: ToggleButtonTokenSections.ColorScheme = {
     }
 };
 
-// @section:css-start
-export const css: ToggleButtonTokenSections.CSS = ({ dt }) => `
+export const css: ToggleButtonTokenSections.CSS = /*css*/ `
 .p-togglebutton:focus-visible {
-    background: ${dt('togglebutton.hover.background')};
+    background: dt('togglebutton.hover.background');
 }
 `;
-// @section:css-end
 
 export default {
     root,

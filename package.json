@@ -11,7 +11,7 @@
         "url": "https://github.com/primefaces/primeuix/issues"
     },
     "scripts": {
-        "setup": "npx rimraf --glob **/node_modules **/dist ./pnpm-lock.yaml && pnpm run ng:setup && pnpm run vue:setup && pnpm run init",
+        "setup": "npx rimraf --glob **/node_modules **/dist ./pnpm-lock.yaml && pnpm run ng:setup && pnpm run vue:setup && pnpm run react:setup && pnpm run init",
         "init": "pnpm install && husky",
         "link": "pnpm --filter './packages/*' dev:link",
         "release": "pnpm run build && pnpm recursive publish --filter './packages/*' --no-git-checks --report-summary",
@@ -30,6 +30,8 @@
         "ng:dev": "./scripts/dev.sh ng",
         "vue:setup": "./scripts/setup.sh vue",
         "vue:dev": "./scripts/dev.sh vue",
+        "react:setup": "./scripts/setup.sh react",
+        "react:dev": "./scripts/dev.sh react",
         "playground:dev": "pnpm --filter playground dev",
         "typecheck": "pnpm --filter './packages/*' typecheck",
         "test": "pnpm run test:locale",

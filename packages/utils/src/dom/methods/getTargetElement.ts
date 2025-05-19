@@ -1,7 +1,7 @@
 import isExist from './isExist';
 import toElement from './toElement';
 
-export default function getTargetElement(target: unknown, currentElement: Element): Window | Document | Element | null | undefined {
+export default function getTargetElement(target: unknown, currentElement?: Element): Window | Document | Element | null | undefined {
     if (!target) return undefined;
 
     switch (target) {
@@ -15,6 +15,12 @@ export default function getTargetElement(target: unknown, currentElement: Elemen
             return currentElement?.nextElementSibling;
         case '@prev':
             return currentElement?.previousElementSibling;
+        case '@first':
+            return currentElement?.firstElementChild;
+        case '@last':
+            return currentElement?.lastElementChild;
+        case '@child':
+            return currentElement?.children?.[0];
         case '@parent':
             return currentElement?.parentElement;
         case '@grandparent':
@@ -22,13 +28,21 @@ export default function getTargetElement(target: unknown, currentElement: Elemen
 
         default: {
             if (typeof target === 'string') {
-                return document.querySelector(target);
+                // child selector
+                const match = target.match(/^@child\[(\d+)]/);
+
+                if (match) {
+                    return currentElement?.children?.[parseInt(match[1], 10)] || null;
+                }
+
+                return document.querySelector(target) || null;
             }
 
             const isFunction = (value: unknown): value is (...args: unknown[]) => unknown => typeof value === 'function' && 'call' in value && 'apply' in value;
-            const element = toElement(isFunction(target) ? target() : target);
+            const computedTarget = isFunction(target) ? target() : target;
+            const element = toElement(computedTarget);
 
-            return element?.nodeType === 9 || isExist(element as Element) ? element : undefined;
+            return isExist(element as Element) ? (element as Element) : (computedTarget as Document)?.nodeType === 9 ? (computedTarget as Document) : undefined;
         }
     }
 }

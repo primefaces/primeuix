@@ -1,8 +1,10 @@
 import type { PanelDesignTokens, PanelTokenSections } from '@primeuix/themes/types/panel';
 
 export const root: PanelTokenSections.Root = {
+    background: '{content.background}',
     borderColor: '{content.border.color}',
-    borderRadius: '{content.border.radius}'
+    borderRadius: '{content.border.radius}',
+    color: '{content.color}'
 };
 
 export const header: PanelTokenSections.Header = {

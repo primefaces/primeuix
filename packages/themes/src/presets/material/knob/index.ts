@@ -23,7 +23,7 @@ export const text: KnobTokenSections.Text = {
     color: '{text.muted.color}'
 };
 
-export const css: KnobTokenSections.CSS = ``;
+export const css: KnobTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

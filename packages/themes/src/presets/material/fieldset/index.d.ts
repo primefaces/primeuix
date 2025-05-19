@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { FieldsetTokenSections } from '@primeuix/themes/types/fieldset';
 
 export * from '@primeuix/themes/types/fieldset';
@@ -13,7 +13,7 @@ declare const _default: {
     legend: FieldsetTokenSections.Legend;
     toggleIcon: FieldsetTokenSections.ToggleIcon;
     content: FieldsetTokenSections.Content;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { content, css, _default as default, legend, root, toggleIcon };

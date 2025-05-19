@@ -1,7 +1,5 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleType } from '@primeuix/styled';
 
-export interface StyleOptions extends ThemeStyleOptions {
-    [key: string]: unknown;
-}
+export declare const style: StyleType;
 
-export declare type StyleType = string | ((options: StyleOptions) => string);
+export type { StyleType };

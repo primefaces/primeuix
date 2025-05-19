@@ -40,7 +40,7 @@ export const itemNumber: StepsTokenSections.ItemNumber = {
     shadow: '0px 0.5px 0px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)'
 };
 
-export const css: StepsTokenSections.CSS = ``;
+export const css: StepsTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

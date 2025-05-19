@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { PanelMenuTokenSections } from '@primeuix/themes/types/panelmenu';
 
 export * from '@primeuix/themes/types/panelmenu';
@@ -15,7 +15,7 @@ declare const _default: {
     item: PanelMenuTokenSections.Item;
     submenu: PanelMenuTokenSections.Submenu;
     submenuIcon: PanelMenuTokenSections.SubmenuIcon;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { css, _default as default, item, panel, root, submenu, submenuIcon };

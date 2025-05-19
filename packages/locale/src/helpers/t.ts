@@ -1,5 +1,5 @@
 import { getKeyValue, isObject, isString, resolve } from '@primeuix/utils/object';
-import Locale from '../config/index';
+import Locale from '../config';
 
 /**
  * Translate the key to the current language

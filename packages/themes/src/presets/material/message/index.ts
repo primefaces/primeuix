@@ -318,7 +318,7 @@ export const colorScheme: MessageTokenSections.ColorScheme = {
     }
 };
 
-export const css: MessageTokenSections.CSS = ``;
+export const css: MessageTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

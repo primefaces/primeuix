@@ -47,7 +47,9 @@ export const closeIcon: ToastTokenSections.CloseIcon = {
 
 export const colorScheme: ToastTokenSections.ColorScheme = {
     light: {
-        blur: '1.5px',
+        root: {
+            blur: '1.5px'
+        },
         info: {
             background: 'color-mix(in srgb, {blue.50}, transparent 5%)',
             borderColor: '{blue.200}',
@@ -134,7 +136,9 @@ export const colorScheme: ToastTokenSections.ColorScheme = {
         }
     },
     dark: {
-        blur: '10px',
+        root: {
+            blur: '10px'
+        },
         info: {
             background: 'color-mix(in srgb, {blue.500}, transparent 84%)',
             borderColor: 'color-mix(in srgb, {blue.700}, transparent 64%)',

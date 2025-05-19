@@ -29,7 +29,7 @@ export const separator: BreadcrumbTokenSections.Separator = {
     color: '{navigation.item.icon.color}'
 };
 
-export const css: BreadcrumbTokenSections.CSS = ``;
+export const css: BreadcrumbTokenSections.CSS = /*css*/ ``;
 
 export default {
     root,

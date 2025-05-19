@@ -1,4 +1,4 @@
-import type { ThemeStyleOptions } from '@primeuix/styled';
+import type { StyleOptions } from '@primeuix/styled';
 import type { CarouselTokenSections } from '@primeuix/themes/types/carousel';
 
 export * from '@primeuix/themes/types/carousel';
@@ -15,7 +15,7 @@ declare const _default: {
     indicatorList: CarouselTokenSections.IndicatorList;
     indicator: CarouselTokenSections.Indicator;
     colorScheme: CarouselTokenSections.ColorScheme;
-    css: (options: ThemeStyleOptions) => string;
+    css: (options: StyleOptions) => string;
 };
 
 export { colorScheme, content, css, _default as default, indicator, indicatorList, root };

@@ -37,6 +37,12 @@ export declare namespace ToastTokenSections {
          * @designToken toast.transition.duration
          */
         transitionDuration?: string;
+        /**
+         * Used to pass tokens of the blur section
+         *
+         * @designToken toast.blur
+         */
+        blur?: ToastTokenSections.Blur;
     }
 
     interface Icon {
@@ -580,12 +586,6 @@ export interface ToastDesignTokens extends DesignTokens<ToastDesignTokens> {
      * Used to pass tokens of the close icon section
      */
     closeIcon?: ToastTokenSections.CloseIcon;
-    /**
-     * Used to pass tokens of the blur section
-     *
-     * @designToken toast.blur
-     */
-    blur?: ToastTokenSections.Blur;
     /**
      * Used to pass tokens of the info section
      */
