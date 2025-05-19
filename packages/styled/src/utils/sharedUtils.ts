@@ -1,5 +1,9 @@
 import { getKeyValue, isArray, isNotEmpty, isNumber, isObject, isString, matchRegex, toKebabCase } from '@primeuix/utils/object';
 
+export const EXPR_REGEX = /{([^}]*)}/g; // Exp: '{a}', '{a.b}', '{a.b.c}' etc.
+export const CALC_REGEX = /(\d+\s+[\+\-\*\/]\s+\d+)/g;
+export const VAR_REGEX = /var\([^)]+\)/g;
+
 export function toTokenKey(str: string): string {
     return isString(str) ? str.replace(/[A-Z]/g, (c: string, i: number) => (i === 0 ? c : '.' + c.toLowerCase())).toLowerCase() : str;
 }
@@ -51,23 +55,19 @@ export function hasOddBraces(str: string = ''): boolean {
 
 export function getVariableValue(value: any, variable: string = '', prefix: string = '', excludedKeyRegexes: RegExp[] = [], fallback?: string): string | undefined {
     if (isString(value)) {
-        const regex = /{([^}]*)}/g; // Exp: '{a}', '{a.b}', '{a.b.c}' etc.
         const val = value.trim();
 
         if (hasOddBraces(val)) {
             return undefined;
-        } else if (matchRegex(val, regex)) {
-            const _val = val.replaceAll(regex, (v: string) => {
+        } else if (matchRegex(val, EXPR_REGEX)) {
+            const _val = val.replaceAll(EXPR_REGEX, (v: string) => {
                 const path = v.replace(/{|}/g, '');
                 const keys = path.split('.').filter((_v: string) => !excludedKeyRegexes.some((_r) => matchRegex(_v, _r)));
 
                 return `var(${getVariableName(prefix, toKebabCase(keys.join('-')))}${isNotEmpty(fallback) ? `, ${fallback}` : ''})`;
             });
 
-            const calculationRegex = /(\d+\s+[\+\-\*\/]\s+\d+)/g;
-            const cleanedVarRegex = /var\([^)]+\)/g;
-
-            return matchRegex(_val.replace(cleanedVarRegex, '0'), calculationRegex) ? `calc(${_val})` : _val;
+            return matchRegex(_val.replace(VAR_REGEX, '0'), CALC_REGEX) ? `calc(${_val})` : _val;
         }
 
         return val; //toUnit(val, variable);
@@ -80,10 +80,9 @@ export function getVariableValue(value: any, variable: string = '', prefix: stri
 
 export function getComputedValue(obj = {}, value: any): any {
     if (isString(value)) {
-        const regex = /{([^}]*)}/g;
         const val = value.trim();
 
-        return matchRegex(val, regex) ? val.replaceAll(regex, (v: string) => getKeyValue(obj, v.replace(/{|}/g, '')) as string) : val;
+        return matchRegex(val, EXPR_REGEX) ? val.replaceAll(EXPR_REGEX, (v: string) => getKeyValue(obj, v.replace(/{|}/g, '')) as string) : val;
     } else if (isNumber(value)) {
         return value;
     }
