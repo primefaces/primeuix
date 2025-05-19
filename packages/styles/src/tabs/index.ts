@@ -108,6 +108,11 @@ export const style = /*css*/ `
         outline-color: transparent;
     }
 
+    .p-tab.p-disabled {
+        pointer-events: auto;
+        cursor: default;
+    }
+
     .p-tab:not(.p-disabled):focus-visible {
         z-index: 1;
         box-shadow: dt('tabs.tab.focus.ring.shadow');
