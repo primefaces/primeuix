@@ -82,6 +82,7 @@ export const style = /*css*/ `
         background: transparent;
         border: 0 none;
         outline: 0 none;
+        font-size: 1rem;
     }
 
     .p-select-label.p-placeholder {
