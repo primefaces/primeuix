@@ -32,6 +32,7 @@
     "paths": {                                           /* (UPDATED) Specify a set of entries that re-map imports to additional lookup locations. */
         "@primeuix/forms/*": ["./packages/forms/src/*"],
         "@primeuix/locale/*": ["./packages/locale/src/*"],
+        "@primeuix/motion/*": ["./packages/motion/src/*"],
         "@primeuix/styled/*": ["./packages/styled/src/*"],
         "@primeuix/utils/*": ["./packages/utils/src/*"],
         "@primeuix/styles/*": ["./packages/styles/src/*"],
