@@ -1,5 +1,7 @@
 import { EventBus } from '@primeuix/utils/eventbus';
 
-const ThemeService = EventBus();
+export const getThemeServiceInstance = () => EventBus();
+
+const ThemeService = getThemeServiceInstance();
 
 export default ThemeService;
