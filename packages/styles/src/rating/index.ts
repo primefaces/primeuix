@@ -43,6 +43,11 @@ export const style = /*css*/ `
         color: dt('rating.icon.hover.color');
     }
 
+    .p-rating.p-disabled .p-rating-option,
+    .p-rating.p-readonly .p-rating-option {
+        cursor: not-allowed;
+    }
+
     .p-rating-option-active .p-rating-icon {
         color: dt('rating.icon.active.color');
     }
