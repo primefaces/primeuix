@@ -1,13 +1,13 @@
 {
-    "name": "@primeuix/styled",
-    "version": "0.6.4",
+    "name": "@primeuix/motion",
+    "version": "0.0.1",
     "author": "PrimeTek Informatics",
     "description": "",
     "license": "MIT",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/primefaces/primeuix.git",
-        "directory": "packages/styled"
+        "directory": "packages/motion"
     },
     "bugs": {
         "url": "https://github.com/primefaces/primeuix/issues"

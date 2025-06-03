@@ -35,5 +35,6 @@ export { default as stringify } from './methods/stringify';
 export { default as toCapitalCase } from './methods/toCapitalCase';
 export { default as toFlatCase } from './methods/toFlatCase';
 export { default as toKebabCase } from './methods/toKebabCase';
+export { default as toMs } from './methods/toMs';
 export { default as toTokenKey } from './methods/toTokenKey';
 export { default as toValue } from './methods/toValue';

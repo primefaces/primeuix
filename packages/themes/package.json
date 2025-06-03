@@ -29,7 +29,8 @@
         "exports": {
             ".": {
                 "types": "./index.d.mts",
-                "import": "./index.mjs"
+                "import": "./index.mjs",
+                "default": "./index.mjs"
             },
             "./types": {
                 "types": "./types/index.d.ts"
@@ -39,11 +40,13 @@
             },
             "./tokens": {
                 "types": "./tokens/index.d.ts",
-                "import": "./tokens/index.mjs"
+                "import": "./tokens/index.mjs",
+                "default": "./tokens/index.mjs"
             },
             "./*": {
                 "types": "./*/index.d.ts",
-                "import": "./*/index.mjs"
+                "import": "./*/index.mjs",
+                "default": "./*/index.mjs"
             }
         },
         "directory": "dist",

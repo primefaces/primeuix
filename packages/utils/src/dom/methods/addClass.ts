@@ -1,6 +1,6 @@
 import hasClass from './hasClass';
 
-export default function addClass(element: Element, className: string | string[]): void {
+export default function addClass(element: Element, className: string | undefined | null | (string | undefined | null)[]): void {
     if (element && className) {
         const fn = (_className: string) => {
             if (!hasClass(element, _className)) {
@@ -12,6 +12,6 @@ export default function addClass(element: Element, className: string | string[])
         [className]
             .flat()
             .filter(Boolean)
-            .forEach((_classNames) => _classNames.split(' ').forEach(fn));
+            .forEach((_classNames) => (_classNames as string).split(' ').forEach(fn));
     }
 }
