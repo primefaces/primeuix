@@ -36,6 +36,7 @@ export const style = /*css*/ `
 
     .p-inputnumber-stacked .p-inputnumber-button {
         position: relative;
+        flex: 1 1 auto;
         border: 0 none;
     }
 
@@ -57,11 +58,6 @@ export const style = /*css*/ `
     .p-inputnumber-stacked .p-inputnumber-decrement-button {
         padding: 0;
         border-end-end-radius: calc(dt('inputnumber.button.border.radius') - 1px);
-    }
-
-    .p-inputnumber-stacked .p-inputnumber-button {
-        flex: 1 1 auto;
-        border: 0 none;
     }
 
     .p-inputnumber-horizontal .p-inputnumber-button {
