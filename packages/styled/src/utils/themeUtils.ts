@@ -163,7 +163,7 @@ export default {
         const { cssLayer } = options;
 
         if (cssLayer) {
-            const order = resolve(cssLayer.order || 'primeui', params);
+            const order = resolve(cssLayer.order || cssLayer.name || 'primeui', params);
 
             return `@layer ${order}`;
         }
@@ -179,7 +179,7 @@ export default {
         return Object.entries(common || {})
             .reduce((acc: any, [key, value]) => {
                 if (isObject(value) && Object.hasOwn(value, 'css')) {
-                    const _css = minifyCSS(value.css);
+                    const _css = minifyCSS((value as any).css);
                     const id = `${key}-variables`;
 
                     acc.push(`<style type="text/css" data-primevue-style-id="${id}" ${_props}>${_css}</style>`); // @todo data-primevue -> data-primeui check in primevue usestyle
