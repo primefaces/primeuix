@@ -2,7 +2,7 @@ import isObject from './isObject';
 import resolve from './resolve';
 import toFlatCase from './toFlatCase';
 
-export default function getKeyValue<T extends Record<string, unknown>>(obj: T, key: string = '', params: unknown = {}): unknown {
+export default function getKeyValue<T extends Record<string, unknown>>(obj: T | undefined, key: string = '', params: unknown = {}): unknown {
     const fKeys = toFlatCase(key).split('.');
     const fKey = fKeys.shift();
 
