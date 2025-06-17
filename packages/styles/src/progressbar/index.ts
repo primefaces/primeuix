@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-progressbar {
+        display: block;
         position: relative;
         overflow: hidden;
         height: dt('progressbar.height');

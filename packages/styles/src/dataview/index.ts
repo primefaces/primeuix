@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-dataview {
+        position: relative;
         border-color: dt('dataview.border.color');
         border-width: dt('dataview.border.width');
         border-style: solid;
@@ -47,5 +48,13 @@ export const style = /*css*/ `
         border-width: dt('dataview.paginator.bottom.border.width');
         border-color: dt('dataview.paginator.bottom.border.color');
         border-style: solid;
+    }
+
+    .p-dataview-loading-overlay {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
     }
 `;

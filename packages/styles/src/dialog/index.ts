@@ -145,4 +145,15 @@ export const style = /*css*/ `
     .p-dialog-maximized .p-dialog-content {
         flex-grow: 1;
     }
+
+    .p-dialog .p-resizable-handle {
+        position: absolute;
+        font-size: 0.1px;
+        display: block;
+        cursor: se-resize;
+        width: 12px;
+        height: 12px;
+        right: 1px;
+        bottom: 1px;
+    }
 `;

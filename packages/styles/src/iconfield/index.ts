@@ -1,6 +1,7 @@
 export const style = /*css*/ `
     .p-iconfield {
         position: relative;
+        display: block;
     }
 
     .p-inputicon {

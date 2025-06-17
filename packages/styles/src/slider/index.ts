@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-slider {
+        display: block;
         position: relative;
         background: dt('slider.track.background');
         border-radius: dt('slider.track.border.radius');

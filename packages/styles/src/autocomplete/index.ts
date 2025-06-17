@@ -271,4 +271,17 @@ export const style = /*css*/ `
         width: dt('form.field.lg.font.size');
         height: dt('form.field.lg.font.size');
     }
+
+    .p-autocomplete-clear-icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -0.5rem;
+        cursor: pointer;
+        color: dt('autocomplete.dropdown.color');
+        inset-inline-end: dt('autocomplete.padding.x');
+    }
+
+    .p-autocomplete:has(.p-autocomplete-dropdown) .p-autocomplete-clear-icon {
+        inset-inline-end: calc(dt('autocomplete.padding.x') + dt('autocomplete.dropdown.width'));
+    }
 `;

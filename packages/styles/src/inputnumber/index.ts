@@ -165,4 +165,18 @@ export const style = /*css*/ `
         width: dt('form.field.lg.font.size');
         height: dt('form.field.lg.font.size');
     }
+
+    .p-inputnumber-clear-icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -0.5rem;
+        cursor: pointer;
+        inset-inline-end: dt('form.field.padding.x');
+        color: dt('form.field.icon.color');
+    }
+
+    .p-inputnumber-stacked,.p-inputnumber-clear-icon 
+    .p-inputnumber-horizontal .p-inputnumber-clear-icon{
+        inset-inline-end: calc(dt('inputnumber.button.width') + dt('form.field.padding.x'));
+    }
 `;
