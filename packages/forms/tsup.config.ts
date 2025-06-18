@@ -1,13 +1,16 @@
 import { globSync } from 'glob';
 import { defineConfig, type Options } from 'tsup';
 
+const isProduction = process.env.NODE_ENV === 'production';
 const resolvers: string[] = [];
 
-const entry = globSync('src/**/index.ts').reduce((acc: any, file) => {
+const entry = globSync('src/**/index.ts').reduce((acc: Record<string, string>, file) => {
     const name = file.replace(/^src\//, '').replace(/\.ts$/, '');
     const resolver: string | undefined = name.startsWith('resolvers/') ? name.split('/')?.[1] : undefined;
 
-    resolver && !resolvers.includes(resolver) && resolvers.push(resolver);
+    if (resolver && !resolvers.includes(resolver)) {
+        resolvers.push(resolver);
+    }
 
     acc[name] = file;
 
@@ -21,10 +24,10 @@ export default defineConfig([
         outDir: 'dist',
         dts: true,
         external: [/^@primeuix\/(.*)$/, 'joi', 'superstruct', 'valibot', 'yup', 'zod'],
-        minify: true,
-        sourcemap: true,
+        minify: isProduction,
+        sourcemap: isProduction,
         splitting: false,
-        clean: true,
+        clean: isProduction,
         target: 'esnext'
     },
     ...resolvers.map<Options>((resolver) => ({
@@ -32,10 +35,11 @@ export default defineConfig([
             [resolver]: `src/resolvers/${resolver}/index.ts`
         },
         format: ['iife'],
-        outDir: 'dist/umd/resolvers',
+        outDir: 'umd/resolvers',
         globalName: `PrimeUIX.Forms.${resolver.charAt(0).toUpperCase() + resolver.slice(1)}`,
         external: ['joi', 'superstruct', 'valibot', 'yup', 'zod'],
         minify: true,
+        watch: false,
         outExtension: () => ({ js: `.js` })
     }))
 ]);
