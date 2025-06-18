@@ -1,6 +1,8 @@
 import { globSync } from 'glob';
 import { defineConfig } from 'tsup';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const entry = globSync('src/**/index.ts').reduce((acc: Record<string, string>, file: string) => {
     const name = file.replace(/^src\//, '').replace(/\.ts$/, '');
 
@@ -15,10 +17,10 @@ export default defineConfig([
         format: ['esm'],
         outDir: 'dist',
         external: [/^@primeuix\/(.*)$/],
-        minify: 'terser',
-        sourcemap: true,
+        minify: isProduction ? 'terser' : false,
+        sourcemap: isProduction,
         splitting: false,
-        clean: true,
+        clean: isProduction,
         terserOptions: {
             mangle: {
                 reserved: ['theme', 'style', 'css']
@@ -34,8 +36,8 @@ export default defineConfig([
         outDir: 'dist',
         dts: true,
         external: [/^@primeuix\/(.*)$/],
-        minify: true,
-        sourcemap: true,
+        minify: isProduction,
+        sourcemap: isProduction,
         splitting: false
     }
 ]);
