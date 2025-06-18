@@ -10,3 +10,8 @@ dist
 .eslintcache
 **/.DS_Store
 **/node_modules
+
+# Ignore build directories
+packages/forms/umd/*
+packages/themes/umd/*
+packages/themes/tokens/*

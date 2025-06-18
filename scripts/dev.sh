@@ -1,5 +1,9 @@
 #!/bin/bash
 
+pnpm run build:dev &
+
+sleep 2
+
 case $1 in
     ng)
         cd submodules/primeng && pnpm run dev
