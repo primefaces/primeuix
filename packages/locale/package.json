@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/locale",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "PrimeTek Informatics",
     "description": "Locale utilities for PrimeUI Libraries",
     "keywords": ["locale", "internationalization", "i18n", "translation", "localization", "utilities", "primeng", "primereact", "primevue", "primeuix"],
