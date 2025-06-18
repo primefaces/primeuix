@@ -1,5 +1,5 @@
 import { isPrefersReducedMotion, toMs } from '@primeuix/utils';
-import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionMetadata, MotionOptions, MotionPhase, MotionType } from '../types';
+import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionMetadata, MotionOptions, MotionPhase, MotionType } from '../../types';
 
 export const ANIMATION = 'animation';
 export const TRANSITION = 'transition';

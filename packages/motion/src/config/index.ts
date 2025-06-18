@@ -1,5 +1,5 @@
 import { addClass, getHiddenElementDimensions, removeClass, setCSSProperty } from '@primeuix/utils';
-import { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionInstance, MotionOptions, MotionPhase, MotionType } from '../types';
+import { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionInstance, MotionOptions, MotionPhase, MotionType } from '../../types';
 import { getMotionHooks, getMotionMetadata, mergeOptions, nextFrame, resolveClassNames, resolveDuration, shouldSkipMotion } from '../utils';
 
 export const DEFAULT_MOTION_OPTIONS: MotionOptions = {

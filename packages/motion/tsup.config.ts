@@ -1,11 +1,15 @@
 import { defineConfig } from 'tsup';
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 export default defineConfig({
-    entry: ['src/index.ts'],
+    entry: ['src/index.ts', 'types/index.ts'],
     format: ['esm'],
     outDir: 'dist',
     dts: true,
     external: [/^@primeuix\/(.*)$/],
-    sourcemap: true,
-    splitting: false
+    minify: isProduction,
+    sourcemap: isProduction,
+    splitting: false,
+    clean: isProduction
 });
