@@ -31,5 +31,9 @@
         "editor.formatOnSave": true
     },
     "vue.server.hybridMode": "typeScriptPluginOnly",
-    "angular.enable-strict-mode-prompt": false
+    "search.exclude": {
+        "**/dist": true,
+        "**/node_modules": true,
+        "submodules/**": true
+    }
 }
