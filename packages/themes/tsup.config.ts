@@ -1,6 +1,7 @@
 import { globSync } from 'glob';
 import { defineConfig, type Options } from 'tsup';
 
+const isProduction = process.env.NODE_ENV === 'production';
 const themes: string[] = [];
 
 const entry = globSync('src/**/index.ts').reduce((acc: Record<string, string>, file: string) => {
@@ -23,10 +24,10 @@ export default defineConfig([
             entry: ['src/index.ts']
         },
         external: [/^@primeuix\/(.*)$/],
-        minify: 'terser',
-        sourcemap: true,
+        minify: isProduction ? 'terser' : false,
+        sourcemap: isProduction,
         splitting: false,
-        clean: true,
+        clean: isProduction,
         terserOptions: {
             mangle: {
                 reserved: ['theme', 'style', 'css']
@@ -42,9 +43,11 @@ export default defineConfig([
                 [theme]: `src/presets/${theme}/index.ts`
             },
             format: ['iife'],
-            outDir: 'dist/umd',
+            outDir: 'umd',
             globalName,
             minify: 'terser',
+            watch: false,
+            clean: isProduction,
             terserOptions: {
                 mangle: {
                     reserved: ['theme', 'style', 'css']
@@ -61,13 +64,14 @@ export default defineConfig([
     }),
     {
         entry: {
-            'tokens/index': 'tokens.ts'
+            index: 'tokens.ts'
         },
         format: ['esm'],
-        outDir: 'dist',
+        outDir: 'tokens',
         dts: true,
-        minify: 'terser',
-        sourcemap: true,
-        splitting: false
+        minify: isProduction ? 'terser' : false,
+        sourcemap: isProduction,
+        splitting: false,
+        clean: isProduction
     }
 ]);
