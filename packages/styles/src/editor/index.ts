@@ -920,7 +920,7 @@ export const style = /*css*/ `
         color: dt('editor.overlay.option.focus.color');
     }
 
-    .p-editor .p-editor-toolbar.ql-snow .ql-picker.ql-expanded:not(.ql-icon-picker) .ql-picker-item {
+    .p-editor .p-editor-toolbar.ql-snow .ql-picker.ql-expanded:not(.ql-color-picker, .ql-icon-picker) .ql-picker-item {
         padding: dt('editor.overlay.option.padding');
     }
 
