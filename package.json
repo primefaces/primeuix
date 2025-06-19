@@ -11,7 +11,7 @@
         "url": "https://github.com/primefaces/primeuix/issues"
     },
     "scripts": {
-        "setup": "pnpm run clean && pnpm run ng:setup && pnpm run vue:setup && pnpm run react:setup && pnpm run init",
+        "setup": "pnpm run clean && npx concurrently 'pnpm run ng:setup' 'pnpm run vue:setup' 'pnpm run react:setup' 'pnpm run init'",
         "clean": "npx rimraf --glob **/node_modules **/dist ./pnpm-lock.yaml",
         "init": "pnpm install && husky",
         "link": "pnpm --filter './packages/*' dev:link",
@@ -31,6 +31,7 @@
         "build:styles": "pnpm --filter styles build",
         "build:themes": "pnpm --filter themes build",
         "build:utils": "pnpm --filter utils build",
+        "dev": "concurrently 'pnpm run ng:dev' 'pnpm run vue:dev' 'pnpm run react:dev'",
         "ng:setup": "./scripts/setup.sh ng",
         "ng:dev": "./scripts/dev.sh ng",
         "vue:setup": "./scripts/setup.sh vue",
@@ -54,6 +55,7 @@
         "@commitlint/config-conventional": "^19.6.0",
         "@types/jest": "^27.4.0",
         "cross-env": "^7.0.3",
+        "concurrently": "^9.1.2",
         "eslint": "^9.19.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-jest": "^28.11.0",
