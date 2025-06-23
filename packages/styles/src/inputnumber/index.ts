@@ -175,8 +175,8 @@ export const style = /*css*/ `
         color: dt('form.field.icon.color');
     }
 
-    .p-inputnumber-stacked,.p-inputnumber-clear-icon 
-    .p-inputnumber-horizontal .p-inputnumber-clear-icon{
+    .p-inputnumber-stacked .p-inputnumber-clear-icon, 
+    .p-inputnumber-horizontal .p-inputnumber-clear-icon {
         inset-inline-end: calc(dt('inputnumber.button.width') + dt('form.field.padding.x'));
     }
 `;
