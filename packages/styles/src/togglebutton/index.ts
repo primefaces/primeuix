@@ -113,4 +113,8 @@ export const style = /*css*/ `
     .p-togglebutton-lg .p-togglebutton-content {
         padding: dt('togglebutton.content.lg.padding');
     }
+
+    .p-togglebutton-fluid {
+        width: 100%;
+    }
 `;

@@ -116,4 +116,8 @@ export const style = /*css*/ `
     .p-listbox-empty-message {
         padding: dt('listbox.empty.message.padding');
     }
+
+    .p-listbox-fluid {
+        width: 100%;
+    }
 `;

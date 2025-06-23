@@ -32,4 +32,12 @@ export const style = /*css*/ `
         outline: 1px solid dt('selectbutton.invalid.border.color');
         outline-offset: 0;
     }
+
+    .p-selectbutton-fluid {
+        width: 100%;
+    }
+    
+    .p-selectbutton-fluid .p-togglebutton {
+        flex: 1 1 0;
+    }
 `;
