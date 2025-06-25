@@ -19,6 +19,13 @@
             "options": {
                 "parser": "json"
             }
+        },
+        {
+            "files": ["*.yml", "*.yaml"],
+            "options": {
+                "parser": "yaml",
+                "tabWidth": 2
+            }
         }
     ]
 }

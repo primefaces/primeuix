@@ -81,6 +81,6 @@
     },
     "packageManager": "pnpm@9.6.0",
     "lint-staged": {
-        "**/*.{js,mjs,ts,mts,d.ts}": ["prettier --write"]
+        "**/*.{js,mjs,ts,mts,d.ts,yml}": ["prettier --write"]
     }
 }
