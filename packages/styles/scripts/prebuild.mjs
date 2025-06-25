@@ -21,7 +21,7 @@ export default function preBuild() {
                     const { prop, value } = decl;
 
                     if (!knownProperties.includes(prop)) {
-                        console.error(`❌ Invalid CSS prop: "${prop}" (value: "${value}") [line ${decl.source.start.line}]`);
+                        console.error(`❌ Invalid CSS prop: \x1b[41m ${prop} \x1b[0m (value: "${value}") [line ${decl.source.start.line}](${file})\n`);
                         hasError = true;
                     }
                 });
