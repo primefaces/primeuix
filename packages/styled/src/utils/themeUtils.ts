@@ -278,8 +278,6 @@ export default {
               }, undefined);
     },
     getSelectorRule(selector1: any, selector2: any, type: string, css: string) {
-        console.log(selector1, selector2, type);
-
         return type === 'class' || type === 'attr' ? getRule(isNotEmpty(selector2) ? `${selector1}${selector2},${selector1} ${selector2}` : selector1, css) : getRule(selector1, getRule(selector2 ?? ':root', css));
     },
     transformCSS(name: string, css: string, mode?: string, type?: string, options: any = {}, set?: any, defaults?: any, selector?: string) {
