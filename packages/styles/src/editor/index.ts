@@ -851,6 +851,10 @@ export const style = /*css*/ `
         border: 1px solid #ccc;
     }
 
+    .p-editor {
+        display: block;
+    }
+
     .p-editor .p-editor-toolbar {
         background: dt('editor.toolbar.background');
         border-start-end-radius: dt('editor.toolbar.border.radius');

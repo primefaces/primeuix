@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-listbox {
+        display: block;
         background: dt('listbox.background');
         color: dt('listbox.color');
         border: 1px solid dt('listbox.border.color');
@@ -114,5 +115,9 @@ export const style = /*css*/ `
 
     .p-listbox-empty-message {
         padding: dt('listbox.empty.message.padding');
+    }
+
+    .p-listbox-fluid {
+        width: 100%;
     }
 `;

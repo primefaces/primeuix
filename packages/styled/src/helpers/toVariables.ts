@@ -42,7 +42,6 @@ export default function (theme: any, options: toVariableOptions = {}): toVariabl
 
                 setProperty(variables, varName, varValue);
 
-                // Token (ör: button.color.primary -> button.color.primary)
                 let token = variablePath;
 
                 if (prefix && token.startsWith(prefix + '-')) {

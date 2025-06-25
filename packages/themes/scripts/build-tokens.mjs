@@ -6,7 +6,7 @@ import { resolvePath } from '../../../scripts/build-helper.mjs';
 
 const { __dirname } = resolvePath(import.meta.url);
 
-const INPUT_PATH = path.resolve(__dirname, '../src');
+//const INPUT_PATH = path.resolve(__dirname, '../src');
 const OUTPUT_PATH = path.resolve(__dirname, '../');
 const OUTPUT_FILE = path.resolve(OUTPUT_PATH, 'tokens.ts');
 
@@ -72,7 +72,7 @@ const findInNamespaces = (doc, module, name) => {
 async function run() {
     const app = await TypeDoc.Application.bootstrapWithPlugins({
         name: 'PrimeUIX-Themes',
-        entryPoints: [`${INPUT_PATH}/types`],
+        entryPoints: ['types'],
         entryPointStrategy: 'expand',
         hideGenerator: true,
         excludeExternals: false,
@@ -131,4 +131,5 @@ export default ${JSON.stringify(doc, null, 4)} as Tokens;
     }
 }
 
+// eslint-disable-next-line no-console
 run().catch(console.error);

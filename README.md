@@ -26,6 +26,7 @@
    cd packages/themes && sudo pnpm run dev:link
    ...
    ```
+
 > [!NOTE]
 > This linking process only needs to be performed once.
 
@@ -37,21 +38,28 @@
    ```
 
 3. **Start Development Server**  
-   - For **Vue**:
 
-     ```sh
-     pnpm run vue:dev
-     ```
-
-   - For **Angular**:
+- For **Angular**:
 
      ```sh
      pnpm run ng:dev
      ```
 
+- For **React**:
+
+     ```sh
+     pnpm run react:dev
+     ```
+
+- For **Vue**:
+
+     ```sh
+     pnpm run vue:dev
+     ```
+
 ### Submodules
 
-This project includes **PrimeVue** and **PrimeNG** as submodules. To update these submodules, run the following command:
+This project includes **PrimeNG**, **PrimeReact** and **PrimeVue** as submodules. To update these submodules, run the following command:
 
    ```sh
    git submodule foreach git pull origin master

@@ -5,11 +5,19 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config([
     {
+        ignores: ['**/dist/**', '**/node_modules/**', '**/submodules/**', '**/umd/**']
+    },
+    {
+        files: ['**/__tests__/**/*', '**/*.test.*'],
+        extends: [jest.configs['flat/recommended']],
+        rules: {}
+    },
+    {
         files: ['**/*.{js,mjs,ts,mts,d.ts}'],
         extends: [eslint.configs.recommended, tseslint.configs.recommended, prettierConfig],
         rules: {
-            'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-            'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+            'no-console': 'error',
+            'no-debugger': 'error',
             'no-fallthrough': 'off',
             'padding-line-between-statements': [
                 'error',
@@ -25,13 +33,5 @@ export default tseslint.config([
                 { blankLine: 'always', prev: ['import'], next: ['const', 'let', 'var'] }
             ]
         }
-    },
-    {
-        files: ['**/__tests__/**/*', '**/*.test.*'],
-        extends: [jest.configs['flat/recommended']],
-        rules: {}
-    },
-    {
-        ignores: ['**/dist/**', '**/node_modules/**', '**/submodules/**']
     }
 ]);

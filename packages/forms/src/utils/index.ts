@@ -1,4 +1,4 @@
-import { isObject } from '@primeuix/utils/object';
+import { isObject } from '@primeuix/utils';
 
 export const toValues = (value: any, name?: string) => {
     if (name) {

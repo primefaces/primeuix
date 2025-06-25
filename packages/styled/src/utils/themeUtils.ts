@@ -20,13 +20,13 @@ export default {
             media: {
                 pattern: /^@media (.*)$/,
                 resolve(value: string) {
-                    return { type: 'media', selector: `${value}{:root{[CSS]}}`, matched: this.pattern.test(value.trim()) };
+                    return { type: 'media', selector: value, matched: this.pattern.test(value.trim()) };
                 }
             },
             system: {
                 pattern: /^system$/,
                 resolve(value: string) {
-                    return { type: 'system', selector: '@media (prefers-color-scheme: dark){:root{[CSS]}}', matched: this.pattern.test(value.trim()) };
+                    return { type: 'system', selector: '@media (prefers-color-scheme: dark)', matched: this.pattern.test(value.trim()) };
                 }
             },
             custom: {
@@ -163,7 +163,7 @@ export default {
         const { cssLayer } = options;
 
         if (cssLayer) {
-            const order = resolve(cssLayer.order || 'primeui', params);
+            const order = resolve(cssLayer.order || cssLayer.name || 'primeui', params);
 
             return `@layer ${order}`;
         }
@@ -179,7 +179,7 @@ export default {
         return Object.entries(common || {})
             .reduce((acc: any, [key, value]) => {
                 if (isObject(value) && Object.hasOwn(value, 'css')) {
-                    const _css = minifyCSS(value.css);
+                    const _css = minifyCSS((value as any).css);
                     const id = `${key}-variables`;
 
                     acc.push(`<style type="text/css" data-primevue-style-id="${id}" ${_props}>${_css}</style>`); // @todo data-primevue -> data-primeui check in primevue usestyle
@@ -278,7 +278,7 @@ export default {
               }, undefined);
     },
     getSelectorRule(selector1: any, selector2: any, type: string, css: string) {
-        return type === 'class' || type === 'attr' ? getRule(isNotEmpty(selector2) ? `${selector1}${selector2},${selector1} ${selector2}` : selector1, css) : getRule(selector1, isNotEmpty(selector2) ? getRule(selector2, css) : css);
+        return type === 'class' || type === 'attr' ? getRule(isNotEmpty(selector2) ? `${selector1}${selector2},${selector1} ${selector2}` : selector1, css) : getRule(selector1, getRule(selector2 ?? ':root', css));
     },
     transformCSS(name: string, css: string, mode?: string, type?: string, options: any = {}, set?: any, defaults?: any, selector?: string) {
         if (isNotEmpty(css)) {

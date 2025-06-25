@@ -1,12 +1,57 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
 node_modules
-coverage
-*.log*
-.cache
-.output
-.env
-dist
-.DS_Store
-.idea
-.eslintcache
-**/.DS_Store
 **/node_modules
+/.pnp
+.pnp.js
+/idea
+/.idea
+/.sass-cache
+
+# testing
+/coverage
+
+# next.js
+**/.next/
+**/out/
+tsconfig.tsbuildinfo
+
+# production
+dist
+/build
+
+# misc
+.DS_Store
+**/.DS_Store
+*.pem
+*.code-workspace
+Thumbs.db
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+**/.vercel
+.vercel
+.nx
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# contentlayer
+.contentlayer
+
+# Ignore build directories
+packages/forms/umd/*
+packages/themes/umd/*
+packages/themes/tokens/*

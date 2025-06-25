@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-panel {
+        display: block;
         border: 1px solid dt('panel.border.color');
         border-radius: dt('panel.border.radius');
         background: dt('panel.background');

@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-tree {
+        display: block;
         background: dt('tree.background');
         color: dt('tree.color');
         padding: dt('tree.padding');

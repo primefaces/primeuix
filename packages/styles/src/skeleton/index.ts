@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-skeleton {
+        display: block;
         overflow: hidden;
         background: dt('skeleton.background');
         border-radius: dt('skeleton.border.radius');

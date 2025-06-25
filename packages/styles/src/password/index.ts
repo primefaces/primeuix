@@ -71,7 +71,20 @@ export const style = /*css*/ `
         height: dt('icon.size');
     }
 
+    .p-password-clear-icon {
+        position: absolute;
+        top: 50%;
+        margin-top: -0.5rem;
+        cursor: pointer;
+        inset-inline-end: dt('form.field.padding.x');
+        color: dt('form.field.icon.color');
+    }
+
     .p-password:has(.p-password-toggle-mask-icon) .p-password-input {
         padding-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
+    }
+
+    .p-password:has(.p-password-toggle-mask-icon) .p-password-clear-icon {
+        inset-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
     }
 `;

@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-terminal {
+        display: block;
         height: dt('terminal.height');
         overflow: auto;
         background: dt('terminal.background');
