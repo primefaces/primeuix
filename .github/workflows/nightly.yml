@@ -19,12 +19,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v4
+      with:
+         run_install: false
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+        cache: 'pnpm'
 
     - name: Update submodules
       run: |
@@ -36,5 +39,5 @@ jobs:
 
     - name: Build
       run: |
-        npm run init
-        npm run build
+        pnpm install --frozen-lockfile
+        pnpm run build
