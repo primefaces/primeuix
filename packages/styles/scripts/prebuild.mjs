@@ -21,6 +21,7 @@ export default function preBuild() {
                     const { prop, value } = decl;
 
                     if (!knownProperties.includes(prop)) {
+                        // eslint-disable-next-line no-console
                         console.error(`❌ Invalid CSS prop: \x1b[41m ${prop} \x1b[0m (value: "${value}") [line ${decl.source.start.line}](${file})\n`);
                         hasError = true;
                     }
@@ -28,6 +29,7 @@ export default function preBuild() {
 
                 if (hasError) process.exit(1);
             } catch (e) {
+                // eslint-disable-next-line no-console
                 console.error(`❌ Invalid CSS in ${file}: ${e.message}`);
                 process.exit(1);
             }

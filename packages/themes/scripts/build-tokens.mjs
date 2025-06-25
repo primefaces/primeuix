@@ -131,4 +131,5 @@ export default ${JSON.stringify(doc, null, 4)} as Tokens;
     }
 }
 
+// eslint-disable-next-line no-console
 run().catch(console.error);
