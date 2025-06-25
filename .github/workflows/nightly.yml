@@ -1,0 +1,39 @@
+name: Nightly Job
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    name: Node ${{ matrix.node-version }}
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Update submodules
+      run: |
+        git submodule foreach git pull origin master
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
+        git commit -a -m "chore: update submodule commits for Prime UI Libraries" || echo "No changes to commit"
+        git push
+
+    - name: Build
+      run: |
+        npm run init
+        npm run build
