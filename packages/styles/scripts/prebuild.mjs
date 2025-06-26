@@ -30,7 +30,7 @@ export default function preBuild() {
                 if (hasError) process.exit(1);
             } catch (e) {
                 // eslint-disable-next-line no-console
-                console.error(`❌ Invalid CSS in ${file}: ${e.message}`);
+                console.error(`❌ Invalid CSS in ${file}: ${e.message}\n`);
                 process.exit(1);
             }
         }
