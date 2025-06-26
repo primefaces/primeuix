@@ -82,6 +82,7 @@ export const style = /*css*/ `
         background: transparent;
         border: 0 none;
         outline: 0 none;
+        font-size: 1rem;
     }
 
     .p-select-label.p-placeholder {
@@ -109,10 +110,6 @@ export const style = /*css*/ `
         cursor: default;
     }
 
-    .p-select .p-select-overlay {
-        min-width: 100%;
-    }
-
     .p-select-overlay {
         position: absolute;
         top: 0;
@@ -122,6 +119,7 @@ export const style = /*css*/ `
         border: 1px solid dt('select.overlay.border.color');
         border-radius: dt('select.overlay.border.radius');
         box-shadow: dt('select.overlay.shadow');
+        min-width: 100%;
     }
 
     .p-select-header {
