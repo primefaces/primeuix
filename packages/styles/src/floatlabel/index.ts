@@ -91,4 +91,8 @@ export const style = /*css*/ `
         background: dt('floatlabel.on.active.background');
         padding: dt('floatlabel.on.active.padding');
     }
+
+    .p-floatlabel:has([class^='p-'][class$='-fluid']) {
+        width: 100%;
+    }
 `;
