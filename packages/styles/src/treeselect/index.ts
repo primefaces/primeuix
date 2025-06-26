@@ -104,10 +104,6 @@ export const style = /*css*/ `
         visibility: hidden;
     }
 
-    .p-treeselect .p-treeselect-overlay {
-        min-width: 100%;
-    }
-
     .p-treeselect-overlay {
         position: absolute;
         top: 0;
@@ -118,6 +114,7 @@ export const style = /*css*/ `
         border-radius: dt('treeselect.overlay.border.radius');
         box-shadow: dt('treeselect.overlay.shadow');
         overflow: hidden;
+        min-width: 100%;
     }
 
     .p-treeselect-tree-container {

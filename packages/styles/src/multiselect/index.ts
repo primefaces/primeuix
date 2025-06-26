@@ -104,10 +104,6 @@ export const style = /*css*/ `
         visibility: hidden;
     }
 
-    .p-multiselect .p-multiselect-overlay {
-        min-width: 100%;
-    }
-
     .p-multiselect-overlay {
         position: absolute;
         top: 0;
@@ -117,6 +113,7 @@ export const style = /*css*/ `
         border: 1px solid dt('multiselect.overlay.border.color');
         border-radius: dt('multiselect.overlay.border.radius');
         box-shadow: dt('multiselect.overlay.shadow');
+        min-width: 100%;
     }
 
     .p-multiselect-header {
