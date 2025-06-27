@@ -142,6 +142,12 @@ export default {
                 description: 'Active color of header'
             },
             {
+                name: 'accordion.header.activeHoverColor',
+                token: 'accordion.header.active.hover.color',
+                variable: '--p-accordion-header-active-hover-color',
+                description: 'Active hover color of header'
+            },
+            {
                 name: 'accordion.header.padding',
                 token: 'accordion.header.padding',
                 variable: '--p-accordion-header-padding',
