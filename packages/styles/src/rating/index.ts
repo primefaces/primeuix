@@ -53,6 +53,6 @@ export const style = /*css*/ `
     }
 
     .p-rating.p-readonly .p-rating-option {
-        cursor: default;
+        cursor: not-allowed;
     }
 `;
