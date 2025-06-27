@@ -51,4 +51,8 @@ export const style = /*css*/ `
         /* @todo */
         stroke: dt('rating.invalid.icon.color');
     }
+
+    .p-rating.p-readonly .p-rating-option {
+        cursor: default;
+    }
 `;
