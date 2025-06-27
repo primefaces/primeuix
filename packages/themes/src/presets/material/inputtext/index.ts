@@ -81,6 +81,15 @@ export const css: InputTextTokenSections.CSS = /*css*/ `
 .p-inputtext.p-variant-filled.p-invalid:enabled:focus {
     background-image: linear-gradient(to bottom, dt('inputtext.invalid.border.color'), dt('inputtext.invalid.border.color')), linear-gradient(to bottom, dt('inputtext.invalid.border.color'), dt('inputtext.invalid.border.color'));
 }
+
+.p-inputtext.p-variant-filled:disabled {
+    background: dt('inputtext.disabled.background') no-repeat;
+    background-image: linear-gradient(to bottom, dt('inputtext.border.color'), dt('inputtext.border.color')), linear-gradient(to bottom, dt('inputtext.border.color'), dt('inputtext.border.color'));
+    background-size: 0 2px, 100% 1px;
+    background-position: 50% 100%, 50% 100%;
+    background-origin: border-box;
+    border-color: transparent;
+}
 `;
 
 export default {
