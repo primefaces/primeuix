@@ -286,7 +286,7 @@ export const style = /*css*/ `
         text-align: right;
     }
     .ql-editor.ql-blank::before {
-        color: rgba(0, 0, 0, 0.6);
+        color: dt('form.field.placeholder.color');
         content: attr(data-placeholder);
         font-style: italic;
         inset-inline-start: 15px;
