@@ -158,6 +158,12 @@ export const style = /*css*/ `
         box-shadow: dt('autocomplete.shadow');
     }
 
+    .p-autocomplete-input-multiple.p-disabled {
+        opacity: 1;
+        background: dt('inputtext.disabled.background');
+        color: dt('inputtext.disabled.color');
+    }
+
     .p-autocomplete:not(.p-disabled):hover .p-autocomplete-input-multiple {
         border-color: dt('autocomplete.hover.border.color');
     }
