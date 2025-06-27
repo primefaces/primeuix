@@ -17,7 +17,7 @@ export const style = /*css*/ `
         color: dt('floatlabel.color');
         transition-duration: dt('floatlabel.transition.duration');
     }
-
+f
     .p-floatlabel:has(.p-textarea) label {
         top: dt('floatlabel.position.y');
         transform: translateY(0);
@@ -25,10 +25,6 @@ export const style = /*css*/ `
 
     .p-floatlabel:has(.p-inputicon:first-child) label {
         inset-inline-start: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
-    }
-
-    .p-floatlabel:has(.p-invalid) label {
-        color: dt('floatlabel.invalid.color');
     }
 
     .p-floatlabel:has(input:focus) label,
@@ -100,5 +96,9 @@ export const style = /*css*/ `
 
     .p-floatlabel:has([class^='p-'][class$='-fluid']) {
         width: 100%;
+    }
+
+    .p-floatlabel:has(.p-invalid) label {
+        color: dt('floatlabel.invalid.color');
     }
 `;
