@@ -129,7 +129,7 @@ export function evaluateDtExpressions(input: string, fn: (...args: any[]) => str
                     const arg = current.trim();
 
                     if (arg.startsWith('dt(')) {
-                        args.push(evaluateDtExpressions(arg, fn)); // recursive çözüm
+                        args.push(evaluateDtExpressions(arg, fn));
                     } else {
                         args.push(parseArg(arg));
                     }
