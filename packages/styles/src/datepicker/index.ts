@@ -393,6 +393,10 @@ export const style = /*css*/ `
         border-block-start: 0 none;
     }
 
+    .p-datepicker-time-picker:dir(rtl) {
+        flex-direction: row-reverse;
+    }
+
     .p-datepicker:has(.p-inputtext-sm) .p-datepicker-dropdown {
         width: dt('datepicker.dropdown.sm.width');
     }
