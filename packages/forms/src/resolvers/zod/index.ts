@@ -16,10 +16,10 @@ export const zodResolver =
                 errors: {}
             };
         } catch (e: any) {
-            if (Array.isArray(e?.issues)) {
+            if (Array.isArray(e?.issues || e?.errors)) {
                 return {
                     values: toValues(raw ? values : undefined, name),
-                    errors: e.issues.reduce((acc: Record<string, any[]>, error: any) => {
+                    errors: (e.issues || e.errors).reduce((acc: Record<string, any[]>, error: any) => {
                         const pathKey = isNotEmpty(error.path) ? error.path.join('.') : name;
 
                         if (pathKey) {
