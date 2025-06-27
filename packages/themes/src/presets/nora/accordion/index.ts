@@ -10,18 +10,19 @@ export const panel: AccordionTokenSections.Panel = {
 };
 
 export const header: AccordionTokenSections.Header = {
-    background: '{content.background}',
-    hoverBackground: '{content.hover.background}',
-    activeBackground: '{content.background}',
-    activeHoverBackground: '{content.hover.background}',
     color: '{text.color}',
     hoverColor: '{text.color}',
     activeColor: '{text.color}',
+    activeHoverColor: '{text.color}',
     padding: '1.125rem',
     fontWeight: '700',
     borderRadius: '0',
     borderWidth: '0 1px 1px 1px',
     borderColor: '{content.border.color}',
+    background: '{content.background}',
+    hoverBackground: '{content.hover.background}',
+    activeBackground: '{content.background}',
+    activeHoverBackground: '{content.hover.background}',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',

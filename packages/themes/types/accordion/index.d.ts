@@ -56,6 +56,12 @@ export declare namespace AccordionTokenSections {
          */
         activeColor?: string;
         /**
+         * Active hover color of header
+         *
+         * @designToken accordion.header.active.hover.color
+         */
+        activeHoverColor?: string;
+        /**
          * Padding of header
          *
          * @designToken accordion.header.padding
