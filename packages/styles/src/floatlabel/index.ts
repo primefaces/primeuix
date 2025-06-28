@@ -17,7 +17,7 @@ export const style = /*css*/ `
         color: dt('floatlabel.color');
         transition-duration: dt('floatlabel.transition.duration');
     }
-f
+
     .p-floatlabel:has(.p-textarea) label {
         top: dt('floatlabel.position.y');
         transform: translateY(0);
