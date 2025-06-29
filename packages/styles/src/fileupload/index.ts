@@ -74,11 +74,14 @@ export const style = /*css*/ `
         border: 1px dashed dt('fileupload.content.highlight.border.color');
     }
 
-    .p-fileupload-basic {
+    .p-fileupload-basic .p-message {
+        margin-block-end: dt('fileupload.basic.gap');
+    }
+
+    .p-fileupload-basic-content {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
         gap: dt('fileupload.basic.gap');
     }
 `;
