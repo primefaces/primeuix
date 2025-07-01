@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/styled",
-    "version": "0.7.0-beta.2",
+    "version": "0.7.0-beta.3",
     "author": "PrimeTek Informatics",
     "description": "Styled utilities for PrimeUI Libraries",
     "keywords": ["styled", "css", "style utilities", "primeng", "primereact", "primevue", "primeuix"],

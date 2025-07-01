@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/forms",
-    "version": "0.1.0-beta.2",
+    "version": "0.1.0-beta.3",
     "author": "PrimeTek Informatics",
     "description": "Forms utilities for PrimeUI Libraries",
     "keywords": ["forms", "validation", "utilities", "primeng", "primereact", "primevue", "primeuix"],
