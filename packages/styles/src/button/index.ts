@@ -29,11 +29,6 @@ export const style = /*css*/ `
         cursor: default;
     }
 
-    .p-button-icon,
-    .p-button-icon.pi {
-        line-height: inherit;
-    }
-
     .p-button-icon-right {
         order: 1;
     }
