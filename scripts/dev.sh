@@ -3,7 +3,6 @@
 # This script starts the development servers for PrimeNG, PrimeVue, or PrimeReact
 # based on the argument provided. It also sets up a common build watcher using tsup.
 
-
 # Store background process IDs
 pids=()
 
