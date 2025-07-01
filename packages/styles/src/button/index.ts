@@ -62,6 +62,12 @@ export const style = /*css*/ `
         width: 0;
     }
 
+    .p-button-icon-only::after {
+        content: "\x00A0";
+        visibility: hidden;
+        width: 0;
+    }
+
     .p-button-sm {
         font-size: dt('button.sm.font.size');
         padding: dt('button.sm.padding.y') dt('button.sm.padding.x');
