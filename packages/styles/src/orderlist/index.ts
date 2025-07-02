@@ -4,6 +4,10 @@ export const style = /*css*/ `
         gap: dt('orderlist.gap');
     }
 
+    .p-orderlist .p-listbox {
+        flex: 1 1 auto;
+    }
+
     .p-orderlist-controls {
         display: flex;
         flex-direction: column;
