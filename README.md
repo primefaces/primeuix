@@ -1,4 +1,5 @@
 # PRIMEUIX
+PrimeUIX is a shared package between all Prime libraries, this shared approach allows PrimeTek teams to share theming and the Design team who is responsible for the Figma UI Kit to work on a single design file, which is the single source of truth.
 
 ### Setup
 
