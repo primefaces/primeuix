@@ -1,24 +1,12 @@
 {
 	"publishedPackages": [
 		{
-			"name": "@primeuix/utils",
-			"version": "0.6.0"
-		},
-		{
-			"name": "@primeuix/forms",
-			"version": "0.1.0"
-		},
-		{
-			"name": "@primeuix/styled",
-			"version": "0.7.0"
-		},
-		{
 			"name": "@primeuix/styles",
-			"version": "1.2.0"
+			"version": "1.2.1"
 		},
 		{
 			"name": "@primeuix/themes",
-			"version": "1.2.0"
+			"version": "1.2.1"
 		}
 	]
 }
