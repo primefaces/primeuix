@@ -111,9 +111,9 @@ export interface InplaceDesignTokens extends DesignTokens<InplaceDesignTokens> {
     /**
      * Used to pass tokens of the root section
      */
-    root?: InplaceDesignTokens.Root;
+    root?: InplaceTokenSections.Root;
     /**
      * Used to pass tokens of the display section
      */
-    display?: InplaceDesignTokens.Display;
+    display?: InplaceTokenSections.Display;
 }
