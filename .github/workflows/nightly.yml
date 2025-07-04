@@ -37,7 +37,10 @@ jobs:
           git commit -a -m "chore: update submodule commits for Prime UI Libraries" || echo "No changes to commit"
           git push
 
+      - name: Install dependencies
+        run: |
+          pnpm install --no-frozen-lockfile
+  
       - name: Build
         run: |
-          pnpm install
           pnpm run build
