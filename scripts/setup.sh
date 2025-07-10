@@ -21,7 +21,7 @@ case $1 in
         cd ../../packages/core && pnpm link @primeuix/styled @primeuix/utils --global && \
         cd ../headless && pnpm link @primeuix/styled @primeuix/utils --global && \
         cd ../hooks && pnpm link @primeuix/utils --global && \
-        cd ../primereact && pnpm link @primeuix/styled @primeuix/styles @primeuix/utils --global && \
+        cd ../primereact && pnpm link @primeuix/styled @primeuix/styles @primeuix/utils @primeuix/motion --global && \
         cd ../styles && pnpm link @primeuix/styled @primeuix/styles @primeuix/utils --global && \
         cd ../types && pnpm link @primeuix/styled --global
         ;;
