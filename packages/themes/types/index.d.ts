@@ -228,7 +228,7 @@ export declare type BaseDesignTokens<T extends Partial<{ primitive: unknown; sem
     semantic?: T extends { semantic?: infer S } ? S : undefined;
 };
 
-export declare type Preset<T = object> = BaseDesignTokens<T> & {
+export declare type Preset<T = object> = BaseDesignTokens<T extends Partial<{ primitive: unknown; semantic: unknown }> ? T : never> & {
     components?: ComponentsDesignTokens;
     extend?: ExtendedTokens;
     css?: ExtendedCSS;
