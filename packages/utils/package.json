@@ -43,5 +43,11 @@
     },
     "engines": {
         "node": ">=12.11.0"
+    },
+    "dependencies": {
+        "stylis": "^4.3.6"
+    },
+    "devDependencies": {
+        "@types/stylis": "^4.2.7"
     }
 }
