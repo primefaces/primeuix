@@ -1,6 +1,6 @@
-import { isNotEmpty, isObject, matchRegex, minifyCSS, resolve } from '@primeuix/utils/object';
+import { isArray, isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve, toTokenKey } from '@primeuix/utils/object';
 import { dt, toVariables } from '../helpers/index';
-import { getRule } from './sharedUtils';
+import { CALC_REGEX, EXPR_REGEX, getRule, VAR_REGEX } from './sharedUtils';
 
 export default {
     regex: {
@@ -199,7 +199,7 @@ export default {
         return preset_css ? `<style type="text/css" data-primevue-style-id="${name}-variables" ${_props}>${minifyCSS(preset_css)}</style>` : ''; // @todo check
     },
     createTokens(obj: any = {}, defaults: any, parentKey: string = '', parentPath: string = '', tokens: any = {}) {
-        /*Object.entries(obj).forEach(([key, value]) => {
+        Object.entries(obj).forEach(([key, value]) => {
             const currentKey = matchRegex(key, defaults.variable.excludedKeyRegex) ? parentKey : parentKey ? `${parentKey}.${toTokenKey(key)}` : toTokenKey(key);
             const currentPath = parentPath ? `${parentPath}.${key}` : key;
 
@@ -253,8 +253,7 @@ export default {
             }
         });
 
-        return tokens;*/
-        return {};
+        return tokens;
     },
     getTokenValue(tokens: any, path: string, defaults: any) {
         const normalizePath = (str: string) => {
