@@ -1,6 +1,6 @@
 import { addClass, getHiddenElementDimensions, removeClass, setCSSProperty } from '@primeuix/utils';
 import { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionInstance, MotionOptions, MotionPhase, MotionType } from '../../types';
-import { getMotionHooks, getMotionMetadata, mergeOptions, nextFrame, resolveClassNames, resolveDuration, shouldSkipMotion } from '../utils';
+import { getMotionHooks, getMotionMetadata, mergeOptions, resolveClassNames, resolveDuration, shouldSkipMotion } from '../utils';
 
 export const DEFAULT_MOTION_OPTIONS: MotionOptions = {
     name: 'p',
@@ -22,8 +22,6 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
         Object.assign(opts, mergeOptions(newOpts, DEFAULT_MOTION_OPTIONS));
         if (!opts.enter && !opts.leave) throw new Error('Enter or leave must be true.');
 
-        setCSSProperty(element as HTMLElement, '--pui-motion-height', getHiddenElementDimensions(element as HTMLElement)?.height + 'px');
-
         hooks = getMotionHooks(opts);
         skipMotion = shouldSkipMotion(opts);
         classNames = resolveClassNames(opts);
@@ -34,8 +32,6 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
         cancelCurrent?.();
 
         const { onBefore, onStart, onAfter, onCancelled } = hooks[phase] || {};
-
-        setCSSProperty(element as HTMLElement, '--pui-motion-height', getHiddenElementDimensions(element as HTMLElement)?.height + 'px');
 
         if (skipMotion) {
             onBefore?.(element);
@@ -50,7 +46,8 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
         onBefore?.(element);
         addClass(element, [fromClass, activeClass]);
 
-        await nextFrame();
+        setCSSProperty(element as HTMLElement, '--pui-motion-height', getHiddenElementDimensions(element as HTMLElement)?.height + 'px');
+        //await nextFrame();
         //void element.offsetHeight; // force reflow
 
         removeClass(element, fromClass);
