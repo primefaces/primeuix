@@ -1,6 +1,6 @@
-import { isNotEmpty, isObject, matchRegex, minifyCSS, resolve } from '@primeuix/utils/object';
+import { isEmpty, isNotEmpty, isObject, matchRegex, minifyCSS, resolve } from '@primeuix/utils/object';
 import { dt, toVariables } from '../helpers/index';
-import { getRule } from './sharedUtils';
+import { CALC_REGEX, EXPR_REGEX, getRule, toTokenKey, VAR_REGEX } from './sharedUtils';
 
 export default {
     regex: {
@@ -199,62 +199,106 @@ export default {
         return preset_css ? `<style type="text/css" data-primevue-style-id="${name}-variables" ${_props}>${minifyCSS(preset_css)}</style>` : ''; // @todo check
     },
     createTokens(obj: any = {}, defaults: any, parentKey: string = '', parentPath: string = '', tokens: any = {}) {
-        /*Object.entries(obj).forEach(([key, value]) => {
-            const currentKey = matchRegex(key, defaults.variable.excludedKeyRegex) ? parentKey : parentKey ? `${parentKey}.${toTokenKey(key)}` : toTokenKey(key);
-            const currentPath = parentPath ? `${parentPath}.${key}` : key;
+        const computedFn = function (this: any, colorScheme: string, tokenPathMap: any = {}, stack: string[] = []) {
+            if (stack.includes(this.path)) {
+                console.warn(`Circular reference detected at ${this.path}`);
 
-            if (isObject(value)) {
-                this.createTokens(value, defaults, currentKey, currentPath, tokens);
-            } else {
-                tokens[currentKey] ||= {
-                    paths: [],
-                    computed(colorScheme: string, tokenPathMap: any = {}) {
-                        if (this.paths.length === 1) {
-                            return this.paths[0]?.computed(this.paths[0].scheme, tokenPathMap['binding']);
-                        } else if (colorScheme && colorScheme !== 'none') {
-                            return this.paths.find((p: any) => p.scheme === colorScheme)?.computed(colorScheme, tokenPathMap['binding']);
-                        }
-
-                        return this.paths.map((p: any) => p.computed(p.scheme, tokenPathMap[p.scheme]));
-                    }
+                return {
+                    colorScheme,
+                    path: this.path,
+                    paths: tokenPathMap,
+                    value: undefined
                 };
-                tokens[currentKey].paths.push({
-                    path: currentPath,
-                    value,
-                    scheme: currentPath.includes('colorScheme.light') ? 'light' : currentPath.includes('colorScheme.dark') ? 'dark' : 'none',
-                    computed(colorScheme: string, tokenPathMap: any = {}) {
-                        let computedValue: any = value;
+            }
 
-                        tokenPathMap['name'] = this.path;
-                        tokenPathMap['binding'] ||= {};
+            stack.push(this.path);
+            tokenPathMap['name'] = this.path;
+            tokenPathMap['binding'] ||= {};
 
-                        if (matchRegex(value as string, EXPR_REGEX)) {
-                            const val = (value as string).trim();
-                            const _val = val.replaceAll(EXPR_REGEX, (v) => {
-                                const path = v.replace(/{|}/g, '');
-                                const computed = tokens[path]?.computed(colorScheme, tokenPathMap);
+            let computedValue: any = this.value;
 
-                                return isArray(computed) && computed.length === 2 ? `light-dark(${computed[0].value},${computed[1].value})` : computed?.value;
-                            });
+            if (typeof this.value === 'string' && EXPR_REGEX.test(this.value)) {
+                const val = this.value.trim();
+                const _val = val.replace(EXPR_REGEX, (v: any) => {
+                    const refPath = v.slice(1, -1);
+                    const refToken = this.tokens[refPath];
 
-                            computedValue = matchRegex(_val.replace(VAR_REGEX, '0'), CALC_REGEX) ? `calc(${_val})` : _val;
-                        }
+                    if (!refToken) {
+                        console.warn(`Token not found for path: ${refPath}`);
 
-                        isEmpty(tokenPathMap['binding']) && delete tokenPathMap['binding'];
+                        return `__UNRESOLVED__`;
+                    }
 
-                        return {
-                            colorScheme,
-                            path: this.path,
-                            paths: tokenPathMap,
-                            value: computedValue.includes('undefined') ? undefined : computedValue
-                        };
+                    const computed = refToken.computed(colorScheme, tokenPathMap, stack);
+
+                    if (Array.isArray(computed) && computed.length === 2) {
+                        return `light-dark(${computed[0].value},${computed[1].value})`;
+                    } else {
+                        return computed?.value ?? `__UNRESOLVED__`;
                     }
                 });
-            }
-        });
 
-        return tokens;*/
-        return {};
+                computedValue = CALC_REGEX.test(_val.replace(VAR_REGEX, '0')) ? `calc(${_val})` : _val;
+            }
+
+            if (isEmpty(tokenPathMap['binding'])) {
+                delete tokenPathMap['binding'];
+            }
+
+            stack.pop();
+
+            return {
+                colorScheme,
+                path: this.path,
+                paths: tokenPathMap,
+                value: computedValue.includes('__UNRESOLVED__') ? undefined : computedValue
+            };
+        };
+
+        const traverse = (obj: any, parentKey: string, parentPath: string) => {
+            Object.entries(obj).forEach(([key, value]) => {
+                const currentKey = matchRegex(key, defaults.variable.excludedKeyRegex) ? parentKey : parentKey ? `${parentKey}.${toTokenKey(key)}` : toTokenKey(key);
+
+                const currentPath = parentPath ? `${parentPath}.${key}` : key;
+
+                if (isObject(value)) {
+                    traverse(value, currentKey, currentPath);
+                } else {
+                    if (!tokens[currentKey]) {
+                        tokens[currentKey] = {
+                            paths: [],
+                            computed: (colorScheme: string, tokenPathMap: any = {}, stack: string[] = []) => {
+                                if (tokens[currentKey].paths.length === 1) {
+                                    return tokens[currentKey].paths[0].computed(tokens[currentKey].paths[0].scheme, tokenPathMap['binding'], stack);
+                                } else if (colorScheme && colorScheme !== 'none') {
+                                    for (let i = 0; i < tokens[currentKey].paths.length; i++) {
+                                        const p = tokens[currentKey].paths[i];
+
+                                        if (p.scheme === colorScheme) {
+                                            return p.computed(colorScheme, tokenPathMap['binding'], stack);
+                                        }
+                                    }
+                                }
+
+                                return tokens[currentKey].paths.map((p: any) => p.computed(p.scheme, tokenPathMap[p.scheme], stack));
+                            }
+                        };
+                    }
+
+                    tokens[currentKey].paths.push({
+                        path: currentPath,
+                        value,
+                        scheme: currentPath.includes('colorScheme.light') ? 'light' : currentPath.includes('colorScheme.dark') ? 'dark' : 'none',
+                        computed: computedFn,
+                        tokens
+                    });
+                }
+            });
+        };
+
+        traverse(obj, parentKey, parentPath);
+
+        return tokens;
     },
     getTokenValue(tokens: any, path: string, defaults: any) {
         const normalizePath = (str: string) => {
