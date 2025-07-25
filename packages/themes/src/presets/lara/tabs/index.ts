@@ -11,6 +11,9 @@ export const tablist: TabsTokenSections.Tablist = {
 };
 
 export const tab: TabsTokenSections.Tab = {
+    background: '{surface.50}',
+    hoverBackground: '{surface.100}',
+    activeBackground: '{surface.0}',
     borderWidth: '2px 0 0 0',
     borderColor: 'transparent',
     hoverBorderColor: 'transparent',
