@@ -5,6 +5,7 @@
  * @module base
  *
  */
+import type { ColorScale } from '@primeuix/styled';
 
 /**
  * Design Token Sections
@@ -19,292 +20,28 @@ export declare namespace LaraBaseTokenSections {
             lg?: string;
             xl?: string;
         };
-        emerald?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        green?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        lime?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        red?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        orange?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        amber?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        yellow?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        teal?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        cyan?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        sky?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        blue?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        indigo?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        violet?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        purple?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        fuchsia?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        pink?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        rose?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        slate?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        gray?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        zinc?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        neutral?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
-        stone?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
+        emerald?: ColorScale;
+        green?: ColorScale;
+        lime?: ColorScale;
+        red?: ColorScale;
+        orange?: ColorScale;
+        amber?: ColorScale;
+        yellow?: ColorScale;
+        teal?: ColorScale;
+        cyan?: ColorScale;
+        sky?: ColorScale;
+        blue?: ColorScale;
+        indigo?: ColorScale;
+        violet?: ColorScale;
+        purple?: ColorScale;
+        fuchsia?: ColorScale;
+        pink?: ColorScale;
+        rose?: ColorScale;
+        slate?: ColorScale;
+        gray?: ColorScale;
+        zinc?: ColorScale;
+        neutral?: ColorScale;
+        stone?: ColorScale;
     }
 
     interface Semantic {
@@ -318,19 +55,7 @@ export declare namespace LaraBaseTokenSections {
         disabledOpacity?: string;
         iconSize?: string;
         anchorGutter?: string;
-        primary?: {
-            50?: string;
-            100?: string;
-            200?: string;
-            300?: string;
-            400?: string;
-            500?: string;
-            600?: string;
-            700?: string;
-            800?: string;
-            900?: string;
-            950?: string;
-        };
+        primary?: ColorScale;
         formField?: {
             paddingX?: string;
             paddingY?: string;
@@ -414,20 +139,7 @@ export declare namespace LaraBaseTokenSections {
         };
         colorScheme?: {
             light?: {
-                surface?: {
-                    0?: string;
-                    50?: string;
-                    100?: string;
-                    200?: string;
-                    300?: string;
-                    400?: string;
-                    500?: string;
-                    600?: string;
-                    700?: string;
-                    800?: string;
-                    900?: string;
-                    950?: string;
-                };
+                surface?: ColorScale;
                 primary?: {
                     color?: string;
                     contrastColor?: string;
@@ -542,20 +254,7 @@ export declare namespace LaraBaseTokenSections {
                 };
             };
             dark?: {
-                surface?: {
-                    0?: string;
-                    50?: string;
-                    100?: string;
-                    200?: string;
-                    300?: string;
-                    400?: string;
-                    500?: string;
-                    600?: string;
-                    700?: string;
-                    800?: string;
-                    900?: string;
-                    950?: string;
-                };
+                surface?: ColorScale;
                 primary?: {
                     color?: string;
                     contrastColor?: string;
