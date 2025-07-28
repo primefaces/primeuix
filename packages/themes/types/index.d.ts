@@ -116,6 +116,7 @@ export declare type RequiredDesignTokens<T, C = never> = {
 } & DesignTokens<T> &
     (C extends never ? object : ColorSchemeDesignToken<C>);
 
+// @todo: Remove this when the types are fixed in the styled package. Use `ColorScale` from `@primeuix/styled` instead.
 export interface PaletteDesignToken {
     0?: string;
     50?: string;
@@ -228,7 +229,7 @@ export declare type BaseDesignTokens<T extends Partial<{ primitive: unknown; sem
     semantic?: T extends { semantic?: infer S } ? S : undefined;
 };
 
-export declare type Preset<T = object> = BaseDesignTokens<T> & {
+export declare type Preset<T extends Partial<{ primitive: unknown; semantic: unknown }> = object> = BaseDesignTokens<T> & {
     components?: ComponentsDesignTokens;
     extend?: ExtendedTokens;
     css?: ExtendedCSS;
