@@ -5,6 +5,7 @@
  * @module base
  *
  */
+import type { ColorScale } from '@primeuix/styled';
 
 /**
  * Design Token Sections
