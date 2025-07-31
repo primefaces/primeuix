@@ -1,4 +1,5 @@
 # PRIMEUIX
+
 PrimeUIX is a shared package between all Prime libraries, this shared approach allows PrimeTek teams to share theming and the Design team who is responsible for the Figma UI Kit to work on a single design file, which is the single source of truth.
 
 ### Setup
@@ -6,7 +7,14 @@ PrimeUIX is a shared package between all Prime libraries, this shared approach a
 > [!IMPORTANT]
 > This project requires **pnpm 9.6.0 or later**. Please ensure the correct version is installed before proceeding.
 
-1. **Link Dependencies**  
+1. **Initialize Git Submodules**
+   On a fresh clone, submodules must be initialized before running any setup commands:
+
+   ```sh
+   git submodule update --init --recursive
+   ```
+
+2. **Link Dependencies**  
    Run the following command to link dependencies:
 
    ```sh
@@ -31,14 +39,14 @@ PrimeUIX is a shared package between all Prime libraries, this shared approach a
 > [!NOTE]
 > This linking process only needs to be performed once.
 
-2. **Setup the Project**  
-   Run the setup command:
+3. **Setup the Project**  
+   Run the following command to bootstrap the workspace:
 
    ```sh
    pnpm run setup
    ```
 
-3. **Start Development Server**  
+4. **Start Development Server**  
 
 - For **Angular**:
 
