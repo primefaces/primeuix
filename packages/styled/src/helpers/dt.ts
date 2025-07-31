@@ -2,7 +2,7 @@ import { isEmpty, matchRegex } from '@primeuix/utils/object';
 import Theme from '../config/index';
 import { EXPR_REGEX, getVariableValue } from '../utils/index';
 
-export const $dt = (tokenPath: string): { name: string; variable: string; value: any } => {
+export const $dt = (tokenPath: string): { name: string; variable: string; value: unknown } => {
     const theme = Theme.getTheme();
 
     const variable = dtwt(theme, tokenPath, undefined, 'variable');
