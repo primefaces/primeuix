@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/themes",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "author": "PrimeTek Informatics",
     "description": "Themes for PrimeUI Libraries",
     "keywords": ["themes", "css", "style utilities", "primeng", "primereact", "primevue", "primeuix"],
