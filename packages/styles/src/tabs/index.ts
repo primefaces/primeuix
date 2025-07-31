@@ -7,9 +7,6 @@ export const style = /*css*/ `
     .p-tablist {
         display: flex;
         position: relative;
-    }
-
-    .p-tabs-scrollable > .p-tablist {
         overflow: hidden;
     }
 
