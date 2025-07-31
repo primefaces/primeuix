@@ -4,7 +4,7 @@ export default function getFocusableElements(element: Element, selector: string 
     const focusableElements = find(
         element,
         `button:not([tabindex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector},
-            [href][clientHeight][clientWidth]:not([tabindex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector},
+            [href]:not([tabindex = "-1"]):not([style*="display:none"]):not([hidden])${selector},
             input:not([tabindex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector},
             select:not([tabindex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector},
             textarea:not([tabindex = "-1"]):not([disabled]):not([style*="display:none"]):not([hidden])${selector},
