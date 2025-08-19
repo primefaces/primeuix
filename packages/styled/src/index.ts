@@ -1,7 +1,28 @@
+import { getActionsInstance, getActionsSingleton } from './actions/index';
+import { default as Theme, getThemeInstance } from './config/index';
+import { getHelpersInstance, getHelpersSingleton } from './helpers/index';
+import { default as ThemeService, getThemeServiceInstance } from './service/index';
+
+export const getStyledInstance = () => {
+    const ThemeService = getThemeServiceInstance();
+    const Theme = getThemeInstance(ThemeService);
+    const helpersInstance = getHelpersInstance(Theme);
+    const actionsInstance = getActionsInstance(Theme, helpersInstance.$t);
+
+    return { ...actionsInstance, Theme, ...helpersInstance, ThemeService };
+};
+
+export const getStyledSingleton = () => {
+    const helpersInstance = getHelpersSingleton();
+    const actionsInstance = getActionsSingleton();
+
+    return { ...actionsInstance, Theme, ...helpersInstance, ThemeService };
+};
+
 export * from './actions/index';
-export { default as Theme } from './config/index';
+export { default as Theme, getThemeInstance } from './config/index';
 export * from './helpers/index';
-export { default as ThemeService } from './service/index';
+export { default as ThemeService, getThemeServiceInstance } from './service/index';
 export * from './stylesheet/index';
 export { default as StyleSheet } from './stylesheet/index';
 export * from './utils/index';
