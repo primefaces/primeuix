@@ -25,7 +25,6 @@ export const style = /*css*/ `
     .p-tablist-tab-list {
         position: relative;
         display: flex;
-        background: dt('tabs.tablist.background');
         border-style: solid;
         border-color: dt('tabs.tablist.border.color');
         border-width: dt('tabs.tablist.border.width');
@@ -33,6 +32,7 @@ export const style = /*css*/ `
 
     .p-tablist-content {
         flex-grow: 1;
+        background: dt('tabs.tablist.background');
     }
 
     .p-tablist-nav-button {
