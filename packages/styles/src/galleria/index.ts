@@ -192,6 +192,10 @@ export const style = /*css*/ `
         display: flex;
     }
 
+    .p-galleria-thumbnail-items:dir(rtl) {
+        flex-direction: row-reverse;
+    }
+
     .p-galleria-thumbnail-item {
         overflow: auto;
         display: flex;
