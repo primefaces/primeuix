@@ -60,6 +60,7 @@ export const semantic: MaterialBaseTokenSections.Semantic = {
     formField: {
         paddingX: '0.75rem',
         paddingY: '0.75rem',
+        fontSize: '1rem',
         sm: {
             fontSize: '0.875rem',
             paddingX: '0.625rem',

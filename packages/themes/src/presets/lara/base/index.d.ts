@@ -59,6 +59,7 @@ export declare namespace LaraBaseTokenSections {
         formField?: {
             paddingX?: string;
             paddingY?: string;
+            fontSize?: string;
             sm?: {
                 fontSize?: string;
                 paddingX?: string;

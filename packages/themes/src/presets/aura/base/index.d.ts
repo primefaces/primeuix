@@ -60,6 +60,7 @@ export declare namespace AuraBaseTokenSections {
         formField?: {
             paddingX?: string;
             paddingY?: string;
+            fontSize?: string;
             sm?: {
                 fontSize?: string;
                 paddingX?: string;

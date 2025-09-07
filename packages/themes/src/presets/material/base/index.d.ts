@@ -59,6 +59,7 @@ export declare namespace MaterialBaseTokenSections {
         formField?: {
             paddingX?: string;
             paddingY?: string;
+            fontSize?: string;
             sm?: {
                 fontSize?: string;
                 paddingX?: string;

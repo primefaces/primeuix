@@ -60,6 +60,7 @@ export declare namespace NoraBaseTokenSections {
         formField?: {
             paddingX?: string;
             paddingY?: string;
+            fontSize?: string;
             sm?: {
                 fontSize?: string;
                 paddingX?: string;
