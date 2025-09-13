@@ -48,7 +48,11 @@ export const style = /*css*/ `
         border-color: dt('datepicker.dropdown.active.border.color');
         color: dt('datepicker.dropdown.active.color');
     }
-
+    
+    .p-datepicker-dropdown:disabled {
+        cursor: default;
+    }
+    
     .p-datepicker-dropdown:focus-visible {
         box-shadow: dt('datepicker.dropdown.focus.ring.shadow');
         outline: dt('datepicker.dropdown.focus.ring.width') dt('datepicker.dropdown.focus.ring.style') dt('datepicker.dropdown.focus.ring.color');
