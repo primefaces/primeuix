@@ -55,7 +55,7 @@ export const style = /*css*/ `
         color: dt('floatlabel.focus.color');
     }
 
-    .p-floatlabel-in .p-inputtext,
+    .p-floatlabel-in .p-inputtext:not(.p-select-filter),
     .p-floatlabel-in .p-textarea,
     .p-floatlabel-in .p-select-label,
     .p-floatlabel-in .p-multiselect-label,
