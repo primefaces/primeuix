@@ -285,4 +285,18 @@ export const style = /*css*/ `
     .p-autocomplete:has(.p-autocomplete-clear-icon) .p-autocomplete-input {
         padding-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
     }
+
+    .p-inputgroup .p-autocomplete-dropdown {
+        border-radius: 0;
+    }
+
+    .p-inputgroup > .p-autocomplete:last-child:has(.p-autocomplete-dropdown) > .p-autocomplete-input {
+        border-start-end-radius: 0;
+        border-end-end-radius: 0;
+    }
+
+    .p-inputgroup > .p-autocomplete:last-child .p-autocomplete-dropdown {
+        border-start-end-radius: dt('autocomplete.dropdown.border.radius');
+        border-end-end-radius: dt('autocomplete.dropdown.border.radius');
+    }
 `;

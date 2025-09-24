@@ -71,6 +71,7 @@ export const style = /*css*/ `
         margin-block-start: calc(-1 * (dt('icon.size') / 2));
         color: dt('datepicker.input.icon.color');
         line-height: 1;
+        z-index: 1;
     }
 
     .p-datepicker:has(.p-datepicker-input:disabled) .p-datepicker-input-icon-container {
@@ -435,5 +436,19 @@ export const style = /*css*/ `
         cursor: pointer;
         color: dt('form.field.icon.color');
         inset-inline-end: dt('form.field.padding.x');
+    }
+
+    .p-inputgroup .p-datepicker-dropdown {
+        border-radius: 0;
+    }
+
+    .p-inputgroup > .p-datepicker:last-child:has(.p-datepicker-dropdown) > .p-datepicker-input {
+        border-start-end-radius: 0;
+        border-end-end-radius: 0;
+    }
+
+    .p-inputgroup > .p-datepicker:last-child .p-datepicker-dropdown {
+        border-start-end-radius: dt('datepicker.dropdown.border.radius');
+        border-end-end-radius: dt('datepicker.dropdown.border.radius');
     }
 `;
