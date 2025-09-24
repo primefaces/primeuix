@@ -164,11 +164,11 @@ export const style = /*css*/ `
         color: dt('inputtext.disabled.color');
     }
 
-    .p-autocomplete:not(.p-disabled):hover .p-autocomplete-input-multiple {
+    .p-autocomplete-input-multiple:not(.p-disabled):hover {
         border-color: dt('autocomplete.hover.border.color');
     }
 
-    .p-autocomplete:not(.p-disabled).p-focus .p-autocomplete-input-multiple {
+    .p-autocomplete.p-focus .p-autocomplete-input-multiple:not(.p-disabled) {
         border-color: dt('autocomplete.focus.border.color');
         box-shadow: dt('autocomplete.focus.ring.shadow');
         outline: dt('autocomplete.focus.ring.width') dt('autocomplete.focus.ring.style') dt('autocomplete.focus.ring.color');
@@ -183,18 +183,12 @@ export const style = /*css*/ `
         background: dt('autocomplete.filled.background');
     }
 
-    .p-autocomplete:not(.p-disabled):hover .p-variant-filled.p-autocomplete-input-multiple {
+    .p-autocomplete-input-multiple.p-variant-filled:not(.p-disabled):hover {
         background: dt('autocomplete.filled.hover.background');
     }
 
-    .p-autocomplete:not(.p-disabled).p-focus .p-variant-filled.p-autocomplete-input-multiple {
+    .p-autocomplete.p-focus .p-autocomplete-input-multiple.p-variant-filled:not(.p-disabled) {
         background: dt('autocomplete.filled.focus.background');
-    }
-
-    .p-autocomplete.p-disabled .p-autocomplete-input-multiple {
-        opacity: 1;
-        background: dt('autocomplete.disabled.background');
-        color: dt('autocomplete.disabled.color');
     }
 
     .p-autocomplete-chip.p-chip {
