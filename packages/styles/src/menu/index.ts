@@ -23,6 +23,7 @@ export const style = /*css*/ `
             color dt('menu.transition.duration');
         border-radius: dt('menu.item.border.radius');
         color: dt('menu.item.color');
+        overflow: hidden;
     }
 
     .p-menu-item-link {
