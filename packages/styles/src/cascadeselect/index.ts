@@ -100,14 +100,6 @@ export const style = /*css*/ `
         visibility: hidden;
     }
 
-    .p-cascadeselect-fluid {
-        display: flex;
-    }
-
-    .p-cascadeselect-fluid .p-cascadeselect-label {
-        width: 1%;
-    }
-
     .p-cascadeselect-overlay {
         background: dt('cascadeselect.overlay.background');
         color: dt('cascadeselect.overlay.color');
@@ -247,5 +239,17 @@ export const style = /*css*/ `
         font-size: dt('cascadeselect.lg.font.size');
         width: dt('cascadeselect.lg.font.size');
         height: dt('cascadeselect.lg.font.size');
+    }
+
+    .p-cascadeselect-fluid {
+        display: flex;
+    }
+
+    .p-cascadeselect-fluid .p-cascadeselect-label {
+        width: 1%;
+    }
+
+    .p-cascadeselect-fluid .p-cascadeselect-overlay .p-cascadeselect-overlay {
+         min-width: 12.5rem;
     }
 `;
