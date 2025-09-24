@@ -287,4 +287,8 @@ export const style = /*css*/ `
     .p-autocomplete:has(.p-autocomplete-dropdown) .p-autocomplete-clear-icon {
         inset-inline-end: calc(dt('autocomplete.padding.x') + dt('autocomplete.dropdown.width'));
     }
+
+    .p-autocomplete:has(.p-autocomplete-clear-icon) .p-autocomplete-input {
+        padding-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
+    }
 `;
