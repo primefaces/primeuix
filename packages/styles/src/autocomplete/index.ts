@@ -280,7 +280,7 @@ export const style = /*css*/ `
         top: 50%;
         margin-top: -0.5rem;
         cursor: pointer;
-        color: dt('autocomplete.dropdown.color');
+        color: dt('form.field.icon.color');
         inset-inline-end: dt('autocomplete.padding.x');
     }
 

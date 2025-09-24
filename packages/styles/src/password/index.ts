@@ -93,7 +93,7 @@ export const style = /*css*/ `
     }
 
     .p-password:has(.p-password-clear-icon):has(.p-password-toggle-mask-icon)  .p-password-input {
-        padding-inline-end: calc((dt('form.field.padding.x') * 4) + dt('icon.size'));
+        padding-inline-end: calc((dt('form.field.padding.x') * 3) + calc(dt('icon.size') * 2));
     }
 
 `;

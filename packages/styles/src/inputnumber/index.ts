@@ -60,6 +60,10 @@ export const style = /*css*/ `
         border-end-end-radius: calc(dt('inputnumber.button.border.radius') - 1px);
     }
 
+    .p-inputnumber-stacked .p-inputnumber-input {
+        padding-inline-end: calc(dt('inputnumber.button.width') + dt('form.field.padding.x'));
+    }
+
     .p-inputnumber-horizontal .p-inputnumber-button {
         border: 1px solid dt('inputnumber.button.border.color');
     }
@@ -171,24 +175,19 @@ export const style = /*css*/ `
         color: dt('form.field.icon.color');
     }
 
-    .p-inputnumber-stacked .p-inputnumber-clear-icon,
-    .p-inputnumber-horizontal .p-inputnumber-clear-icon {
-        inset-inline-end: calc(dt('inputnumber.button.width') + dt('form.field.padding.x'));
-    }
-
     .p-inputnumber:has(.p-inputnumber-clear-icon) .p-inputnumber-input {
         padding-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
     }
 
-    .p-inputnumber:has(.p-inputnumber-button-group) .p-inputnumber-clear-icon {
-        inset-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
+    .p-inputnumber-stacked .p-inputnumber-clear-icon {
+        inset-inline-end: calc(dt('inputnumber.button.width') + dt('form.field.padding.x'));
     }
 
-    .p-inputnumber:has(.p-inputnumber-button-group) .p-inputnumber-input {
-        padding-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
+    .p-inputnumber-stacked:has(.p-inputnumber-clear-icon) .p-inputnumber-input {
+        padding-inline-end: calc(dt('inputnumber.button.width') + (dt('form.field.padding.x') * 2) + dt('icon.size'));
     }
 
-    .p-inputnumber:has(.p-inputnumber-button-group):has(.p-inputnumber-clear-icon) .p-inputnumber-input {
-        padding-inline-end: calc((dt('form.field.padding.x') * 4) + dt('icon.size'));
+    .p-inputnumber-horizontal .p-inputnumber-clear-icon {
+        inset-inline-end: calc(dt('inputnumber.button.width') + dt('form.field.padding.x'));
     }
 `;
