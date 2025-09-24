@@ -241,7 +241,7 @@ export const style = /*css*/ `
     }
 
     .p-floatlabel-in .p-multiselect-filter {
-        padding-block-start: dt('select.padding.y');
-        padding-block-end: dt('select.padding.y');
+        padding-block-start: dt('multiselect.padding.y');
+        padding-block-end: dt('multiselect.padding.y');
     }
 `;
