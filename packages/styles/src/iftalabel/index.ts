@@ -22,6 +22,7 @@ export const style = /*css*/ `
     .p-iftalabel .p-textarea,
     .p-iftalabel .p-select-label,
     .p-iftalabel .p-multiselect-label,
+    .p-iftalabel .p-multiselect-label:has(.p-chip),
     .p-iftalabel .p-autocomplete-input-multiple,
     .p-iftalabel .p-cascadeselect-label,
     .p-iftalabel .p-treeselect-label {

@@ -59,6 +59,7 @@ export const style = /*css*/ `
     .p-floatlabel-in .p-textarea,
     .p-floatlabel-in .p-select-label,
     .p-floatlabel-in .p-multiselect-label,
+    .p-floatlabel-in .p-multiselect-label:has(.p-chip),
     .p-floatlabel-in .p-autocomplete-input-multiple,
     .p-floatlabel-in .p-cascadeselect-label,
     .p-floatlabel-in .p-treeselect-label {
