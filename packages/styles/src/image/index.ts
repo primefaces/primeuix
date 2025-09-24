@@ -30,10 +30,12 @@ export const style = /*css*/ `
         transition: background dt('image.transition.duration');
     }
 
-    .p-image-preview:hover > .p-image-preview-mask {
+    .p-image-preview:hover > .p-image-preview-mask,
+    .p-image-preview-mask:focus-visible {
         opacity: 1;
         cursor: pointer;
         background: dt('image.preview.mask.background');
+        outline: 0 none;
     }
 
     .p-image-preview-icon {
