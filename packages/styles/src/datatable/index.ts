@@ -1,6 +1,7 @@
 export const style = /*css*/ `
     .p-datatable {
         position: relative;
+        display: block;
     }
 
     .p-datatable-table {
