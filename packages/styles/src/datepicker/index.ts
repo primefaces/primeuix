@@ -73,6 +73,10 @@ export const style = /*css*/ `
         line-height: 1;
     }
 
+    .p-datepicker:has(.p-datepicker-input:disabled) .p-datepicker-input-icon-container {
+        cursor: default;
+    }
+
     .p-datepicker-fluid {
         display: flex;
     }
