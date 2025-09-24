@@ -50,9 +50,7 @@ export const style = /*css*/ `
     }
 
     .p-treeselect-clear-icon {
-        position: absolute;
-        top: 50%;
-        margin-top: -0.5rem;
+        align-self: center;
         color: dt('treeselect.clear.icon.color');
         inset-inline-end: dt('treeselect.dropdown.width');
     }
@@ -97,6 +95,10 @@ export const style = /*css*/ `
 
     .p-treeselect.p-invalid .p-treeselect-label.p-placeholder {
         color: dt('treeselect.invalid.placeholder.color');
+    }
+
+    .p-treeselect:has(.p-select-clear-icon) .p-treeselect-label {
+        padding-inline-end: dt('treeselect.padding.x');
     }
 
     .p-treeselect.p-disabled .p-treeselect-label {

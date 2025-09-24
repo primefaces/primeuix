@@ -50,9 +50,7 @@ export const style = /*css*/ `
     }
 
     .p-select-clear-icon {
-        position: absolute;
-        top: 50%;
-        margin-top: -0.5rem;
+        align-self: center;
         color: dt('select.clear.icon.color');
         inset-inline-end: dt('select.dropdown.width');
     }
@@ -94,7 +92,7 @@ export const style = /*css*/ `
     }
 
     .p-select:has(.p-select-clear-icon) .p-select-label {
-        padding-inline-end: calc(1rem + dt('select.padding.x'));
+        padding-inline-end: dt('select.padding.x');
     }
 
     .p-select.p-disabled .p-select-label {
