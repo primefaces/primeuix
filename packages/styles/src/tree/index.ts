@@ -70,6 +70,11 @@ export const style = /*css*/ `
         color: inherit;
     }
 
+    .p-tree-node-content.p-tree-node-dragover {
+        background: dt('tree.node.hover.background');
+        color: dt('tree.node.hover.color');
+    }
+
     .p-tree-node-toggle-button {
         cursor: pointer;
         user-select: none;
@@ -164,4 +169,8 @@ export const style = /*css*/ `
     .p-tree-flex-scrollable .p-tree-root {
         flex: 1;
     }
+
+    .p-treenode-droppoint.p-treenode-droppoint-active {
+		background-color: dt('primary.color');
+	}
 `;
