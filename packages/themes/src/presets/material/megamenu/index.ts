@@ -56,7 +56,7 @@ export const submenu: MegaMenuTokenSections.Submenu = {
 export const submenuLabel: MegaMenuTokenSections.SubmenuLabel = {
     padding: '{navigation.submenu.label.padding}',
     fontWeight: '{navigation.submenu.label.font.weight}',
-    background: '{navigation.submenu.label.background.}',
+    background: '{navigation.submenu.label.background}',
     color: '{navigation.submenu.label.color}'
 };
 
