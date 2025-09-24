@@ -239,4 +239,9 @@ export const style = /*css*/ `
         width: dt('multiselect.lg.font.size');
         height: dt('multiselect.lg.font.size');
     }
+
+    .p-floatlabel-in .p-multiselect-filter {
+        padding-block-start: dt('select.padding.y');
+        padding-block-end: dt('select.padding.y');
+    }
 `;

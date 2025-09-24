@@ -233,4 +233,9 @@ export const style = /*css*/ `
         width: dt('select.lg.font.size');
         height: dt('select.lg.font.size');
     }
+
+    .p-floatlabel-in .p-select-filter {
+        padding-block-start: dt('select.padding.y');
+        padding-block-end: dt('select.padding.y');
+    }
 `;
