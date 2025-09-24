@@ -62,9 +62,7 @@ export const style = /*css*/ `
     }
 
     .p-cascadeselect-clear-icon {
-        position: absolute;
-        top: 50%;
-        margin-top: -0.5rem;
+        align-self: center;
         color: dt('cascadeselect.clear.icon.color');
         inset-inline-end: dt('cascadeselect.dropdown.width');
     }

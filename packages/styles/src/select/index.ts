@@ -91,10 +91,6 @@ export const style = /*css*/ `
         color: dt('select.invalid.placeholder.color');
     }
 
-    .p-select:has(.p-select-clear-icon) .p-select-label {
-        padding-inline-end: dt('select.padding.x');
-    }
-
     .p-select.p-disabled .p-select-label {
         color: dt('select.disabled.color');
     }

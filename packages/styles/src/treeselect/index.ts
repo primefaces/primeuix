@@ -55,10 +55,6 @@ export const style = /*css*/ `
         inset-inline-end: dt('treeselect.dropdown.width');
     }
 
-    .p-treeselect:has(.p-treeselect-clear-icon) .p-treeselect-label-container {
-        padding-inline-end: calc(dt('treeselect.padding.x') + dt('icon.size'));
-    }
-
     .p-treeselect-dropdown {
         display: flex;
         align-items: center;
