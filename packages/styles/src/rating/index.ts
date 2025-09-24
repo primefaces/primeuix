@@ -1,7 +1,7 @@
 export const style = /*css*/ `
     .p-rating {
         position: relative;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: dt('rating.gap');
     }
