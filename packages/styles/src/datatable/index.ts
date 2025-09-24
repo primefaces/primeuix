@@ -31,11 +31,14 @@ export const style = /*css*/ `
 
     .p-datatable-scrollable .p-datatable-frozen-column {
         position: sticky;
-        background: dt('datatable.header.cell.background');
     }
 
     .p-datatable-scrollable th.p-datatable-frozen-column {
         z-index: 1;
+    }
+
+    .p-datatable-scrollable td.p-datatable-frozen-column {
+        background: inherit;
     }
 
     .p-datatable-scrollable > .p-datatable-table-container > .p-datatable-table > .p-datatable-thead,
