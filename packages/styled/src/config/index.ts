@@ -5,7 +5,7 @@ export default {
     defaults: {
         variable: {
             prefix: 'p',
-            selector: ':root',
+            selector: ':root,:host',
             excludedKeyRegex: /^(primitive|semantic|components|directives|variables|colorscheme|light|dark|common|root|states|extend|css)$/gi
         },
         options: {
