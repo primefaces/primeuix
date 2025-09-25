@@ -46,6 +46,16 @@ export const style = /*css*/ `
             box-shadow dt('tree.transition.duration');
     }
 
+    .p-tree-node-content[data-p-dragging] {
+        outline: 1px dashed dt('primary.color');
+        outline-offset: -1px;
+        opacity: 0.6;
+    }
+
+    .p-tree-node-content[data-pc-section="drag-image"] {
+        background: dt('tree.background');
+    }
+
     .p-tree-node:focus-visible > .p-tree-node-content {
         box-shadow: dt('tree.node.focus.ring.shadow');
         outline: dt('tree.node.focus.ring.width') dt('tree.node.focus.ring.style') dt('tree.node.focus.ring.color');
@@ -74,6 +84,10 @@ export const style = /*css*/ `
         background: dt('tree.node.hover.background');
         color: dt('tree.node.hover.color');
     }
+
+    .p-tree-node-drop-point {
+		outline: 1px solid dt('primary.color');
+	}
 
     .p-tree-node-toggle-button {
         cursor: pointer;
@@ -169,8 +183,4 @@ export const style = /*css*/ `
     .p-tree-flex-scrollable .p-tree-root {
         flex: 1;
     }
-
-    .p-treenode-droppoint.p-treenode-droppoint-active {
-		background-color: dt('primary.color');
-	}
 `;
