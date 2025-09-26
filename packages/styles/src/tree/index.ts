@@ -49,7 +49,6 @@ export const style = /*css*/ `
     .p-tree-node-content[data-p-dragging] {
         outline: 1px dashed dt('primary.color');
         outline-offset: -1px;
-        opacity: 0.6;
     }
 
     .p-tree-node-content[data-pc-section="drag-image"] {
