@@ -4,7 +4,7 @@ export const style = /*css*/ `
         max-width: 100%;
     }
 
-    .p-datepicker-input {
+    .p-datepicker:has(.p-datepicker-dropdown) .p-datepicker-input {
         flex: 1 1 auto;
         width: 1%;
     }
@@ -424,11 +424,6 @@ export const style = /*css*/ `
         height: dt('form.field.lg.font.size');
     }
 
-    .p-datepicker:has(.p-datepicker-dropdown) .p-datepicker-clear-icon,
-    .p-datepicker:has(.p-datepicker-input-icon-container) .p-datepicker-clear-icon {
-        inset-inline-end: calc(dt('datepicker.dropdown.width') + dt('form.field.padding.x'));
-    }
-
     .p-datepicker-clear-icon {
         position: absolute;
         top: 50%;
@@ -436,6 +431,22 @@ export const style = /*css*/ `
         cursor: pointer;
         color: dt('form.field.icon.color');
         inset-inline-end: dt('form.field.padding.x');
+    }
+
+    .p-datepicker:has(.p-datepicker-dropdown) .p-datepicker-clear-icon {
+        inset-inline-end: calc(dt('datepicker.dropdown.width') + dt('form.field.padding.x'));
+    }
+
+    .p-datepicker:has(.p-datepicker-input-icon-container) .p-datepicker-clear-icon {
+        inset-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
+    }
+
+    .p-datepicker:has(.p-datepicker-clear-icon) .p-datepicker-input {
+        padding-inline-end: calc((dt('form.field.padding.x') * 2) + dt('icon.size'));
+    }
+
+    .p-datepicker:has(.p-datepicker-input-icon-container):has(.p-datepicker-clear-icon) .p-datepicker-input {
+        padding-inline-end: calc((dt('form.field.padding.x') * 3) + calc(dt('icon.size') * 2));
     }
 
     .p-inputgroup .p-datepicker-dropdown {
