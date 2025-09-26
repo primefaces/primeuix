@@ -34,6 +34,6 @@
     "search.exclude": {
         "**/dist": true,
         "**/node_modules": true,
-        "submodules/**": true
+        "submodules/**": false
     }
 }
