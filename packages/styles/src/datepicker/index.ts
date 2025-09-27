@@ -5,11 +5,6 @@ export const style = /*css*/ `
     }
 
     .p-datepicker:has(.p-datepicker-dropdown) .p-datepicker-input {
-        flex: 1 1 auto;
-        width: 1%;
-    }
-
-    .p-datepicker:has(.p-datepicker-dropdown) .p-datepicker-input {
         border-start-end-radius: 0;
         border-end-end-radius: 0;
     }
@@ -82,7 +77,8 @@ export const style = /*css*/ `
         display: flex;
     }
 
-    .p-datepicker-fluid .p-datepicker-input {
+    .p-datepicker-fluid:has(.p-datepicker-dropdown) .p-datepicker-input {
+        flex: 1 1 auto;
         width: 1%;
     }
 
