@@ -14,7 +14,7 @@ export default {
             attr: {
                 pattern: /^\[(.*)\]$/,
                 resolve(value: string) {
-                    return { type: 'attr', selector: `:root,:host${value}`, matched: this.pattern.test(value.trim()) };
+                    return { type: 'attr', selector: `:root${value},:host${value}`, matched: this.pattern.test(value.trim()) };
                 }
             },
             media: {
