@@ -31,6 +31,7 @@
     "baseUrl": "./",                                     /* (UPDATED) Specify the base directory to resolve non-relative module names. */
     "paths": {                                           /* (UPDATED) Specify a set of entries that re-map imports to additional lookup locations. */
         "@primeuix/forms/*": ["./packages/forms/src/*"],
+        "@primeuix/headless/*": ["./packages/headless/src/*"],
         "@primeuix/locale/*": ["./packages/locale/src/*"],
         "@primeuix/motion/*": ["./packages/motion/src/*", "./packages/motion/types/*"],
         "@primeuix/styled/*": ["./packages/styled/src/*"],

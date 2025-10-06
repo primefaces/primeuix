@@ -17,9 +17,9 @@ case $1 in
         ;;
     react)
         cd submodules/primereact && pnpm run setup && \
-        cd apps/showcase && pnpm link @primeuix/themes --global && \
+        cd apps/showcase && pnpm link @primeuix/themes @primeuix/headless --global && \
         cd ../../packages/core && pnpm link @primeuix/styled @primeuix/utils --global && \
-        cd ../headless && pnpm link @primeuix/styled @primeuix/utils --global && \
+        cd ../headless && pnpm link @primeuix/styled @primeuix/utils @primeuix/headless --global && \
         cd ../hooks && pnpm link @primeuix/utils --global && \
         cd ../primereact && pnpm link @primeuix/styled @primeuix/styles @primeuix/utils @primeuix/motion --global && \
         cd ../styles && pnpm link @primeuix/styled @primeuix/styles @primeuix/utils --global && \
