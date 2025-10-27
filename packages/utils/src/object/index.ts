@@ -30,6 +30,7 @@ export { default as removeAccents } from './methods/removeAccents';
 export { default as reorderArray } from './methods/reorderArray';
 export { default as resolve } from './methods/resolve';
 export { default as resolveFieldData } from './methods/resolveFieldData';
+export { default as shallowEqualProps } from './methods/shallowEqualProps';
 export { default as shallowEquals } from './methods/shallowEquals';
 export { default as sort } from './methods/sort';
 export { default as stringify } from './methods/stringify';

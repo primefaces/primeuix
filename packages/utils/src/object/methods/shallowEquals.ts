@@ -15,7 +15,7 @@
  * shallowEquals([1, 2], [1, 2]) // true (shallow)
  * shallowEquals([1, [2]], [1, [2]]) // false (nested arrays are different references)
  */
-export function shallowEquals(objA: unknown, objB: unknown): boolean {
+export default function shallowEquals(objA: unknown, objB: unknown): boolean {
     // Fast path: same reference
     if (objA === objB) return true;
 
@@ -70,35 +70,6 @@ export function shallowEquals(objA: unknown, objB: unknown): boolean {
     // Check if all keys and values match
     for (const key of keysA) {
         if (!Object.prototype.hasOwnProperty.call(objB, key) || !Object.is((objA as Record<string, unknown>)[key], (objB as Record<string, unknown>)[key])) {
-            return false;
-        }
-    }
-
-    return true;
-}
-
-/**
- * Shallow equal for React/Vue props comparison
- * Ignores functions (common in props)
- */
-export function shallowEqualProps(propsA: Record<string, unknown>, propsB: Record<string, unknown>): boolean {
-    if (propsA === propsB) return true;
-
-    const keysA = Object.keys(propsA);
-    const keysB = Object.keys(propsB);
-
-    if (keysA.length !== keysB.length) return false;
-
-    for (const key of keysA) {
-        const valueA = propsA[key];
-        const valueB = propsB[key];
-
-        // Skip function comparison (they rarely change)
-        if (typeof valueA === 'function' && typeof valueB === 'function') {
-            continue;
-        }
-
-        if (!Object.is(valueA, valueB)) {
             return false;
         }
     }
