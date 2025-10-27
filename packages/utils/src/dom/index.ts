@@ -73,6 +73,7 @@ export { default as isServer } from './methods/isServer';
 export { default as isTouchDevice } from './methods/isTouchDevice';
 export { default as isVisible } from './methods/isVisible';
 export { default as nestedPosition } from './methods/nestedPosition';
+export { default as nextFrame } from './methods/nextFrame';
 export { default as relativePosition } from './methods/relativePosition';
 export { default as remove } from './methods/remove';
 export { default as removeChild } from './methods/removeChild';
