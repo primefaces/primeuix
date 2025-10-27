@@ -1,3 +1,4 @@
+import { cn } from '../classnames';
 import { isFunction } from '../object';
 
 export function mergeProps(...props: any[]): object | undefined {
@@ -7,11 +8,8 @@ export function mergeProps(...props: any[]): object | undefined {
 
             if (key === 'style') {
                 merged['style'] = { ...merged['style'], ...ps['style'] };
-            } else if (key === 'class') {
-                merged['class'] = [merged['class'], ps['class']].join(' ').trim() || undefined;
-            } else if (key === 'className') {
-                // For React
-                merged['className'] = [merged['className'], ps['className']].join(' ').trim() || undefined;
+            } else if (key === 'class' || key === 'className') {
+                merged[key] = cn(merged[key], ps[key]);
             } else if (isFunction(value)) {
                 const fn = merged[key];
 
