@@ -5,6 +5,7 @@ export const style = /*css*/ `
 
     .p-buttongroup .p-button {
         margin: 0;
+        height: 100%;
     }
 
     .p-buttongroup .p-button:not(:last-child),
