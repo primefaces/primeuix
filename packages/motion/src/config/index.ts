@@ -49,7 +49,7 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
         addClass(element, [fromClass, activeClass]);
 
         //await nextFrame();
-        //void element.offsetHeight; // force reflow
+        void (element as HTMLElement).offsetHeight; // force reflow
 
         removeClass(element, fromClass);
         addClass(element, toClass);
