@@ -4,6 +4,9 @@ export const style = /*css*/ `
         flex-grow: 1;
         flex-direction: column;
         direction: ltr;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     .p-timeline-left .p-timeline-event-opposite {
