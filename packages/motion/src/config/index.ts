@@ -43,10 +43,11 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
 
         const { from: fromClass, active: activeClass, to: toClass } = classNames[phase] || {};
 
+        setCSSProperty(element as HTMLElement, '--pui-motion-height', getHiddenElementDimensions(element as HTMLElement)?.height + 'px');
+
         onBefore?.(element);
         addClass(element, [fromClass, activeClass]);
 
-        setCSSProperty(element as HTMLElement, '--pui-motion-height', getHiddenElementDimensions(element as HTMLElement)?.height + 'px');
         //await nextFrame();
         //void element.offsetHeight; // force reflow
 
