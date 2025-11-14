@@ -1,8 +1,8 @@
 {
 	"publishedPackages": [
 		{
-			"name": "@primeuix/motion",
-			"version": "0.0.6"
+			"name": "@primeuix/utils",
+			"version": "0.6.3"
 		}
 	]
 }
