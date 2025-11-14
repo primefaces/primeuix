@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/utils",
-    "version": "0.6.2",
+    "version": "0.6.3",
     "author": "PrimeTek Informatics",
     "description": "Utility functions and helpers for PrimeUI Libraries",
     "keywords": ["utilities", "helpers", "primeng", "primereact", "primevue", "primeuix"],
