@@ -8,6 +8,11 @@ export const style = /*css*/ `
         width: 100%;
     }
 
+    .p-inputgroup .p-floatlabel .p-inputwrapper,
+    .p-inputgroup .p-iftalabel .p-inputwrapper {
+        display: inline-flex;
+    }
+
     .p-inputgroup .p-inputtext,
     .p-inputgroup .p-inputwrapper {
         flex: 1 1 auto;
