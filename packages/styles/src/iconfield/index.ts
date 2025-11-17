@@ -13,11 +13,11 @@ export const style = /*css*/ `
         z-index: 1;
     }
 
-    .p-iconfield .p-inputicon:first-child {
+    .p-iconfield:not(.p-iconfield-left):not(.p-iconfield-right) .p-inputicon:first-child {
         inset-inline-start: dt('form.field.padding.x');
     }
 
-    .p-iconfield .p-inputicon:last-child {
+    .p-iconfield:not(.p-iconfield-left):not(.p-iconfield-right) .p-inputicon:last-child {
         inset-inline-end: dt('form.field.padding.x');
     }
 
@@ -42,5 +42,13 @@ export const style = /*css*/ `
         width: dt('form.field.lg.font.size');
         height: dt('form.field.lg.font.size');
         margin-top: calc(-1 * (dt('form.field.lg.font.size') / 2));
+    }
+
+    .p-iconfield-left .p-inputicon {
+        inset-inline-start: dt('form.field.padding.x');
+    }
+
+    .p-iconfield-right .p-inputicon {
+        inset-inline-end: dt('form.field.padding.x');
     }
 `;
