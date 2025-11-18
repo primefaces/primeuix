@@ -9,7 +9,7 @@ export function shouldSkipMotion(options: MotionOptions | undefined): boolean {
         return false;
     }
 
-    return !!(options.safe && isPrefersReducedMotion());
+    return options.disabled || !!(options.safe && isPrefersReducedMotion());
 }
 
 export function mergeOptions(inOptions: MotionOptions | undefined, defaultOptions: MotionOptions): MotionOptions {

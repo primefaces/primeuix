@@ -40,6 +40,7 @@ export interface MotionOptions extends MotionClassNames, MotionHooks {
     name?: string | undefined;
     type?: MotionType | undefined;
     safe?: boolean | undefined;
+    disabled?: boolean | undefined;
     appear?: boolean | undefined;
     enter?: boolean | undefined;
     leave?: boolean | undefined;

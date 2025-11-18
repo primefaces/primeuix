@@ -5,6 +5,7 @@ import { getMotionHooks, getMotionMetadata, mergeOptions, resolveClassNames, res
 export const DEFAULT_MOTION_OPTIONS: MotionOptions = {
     name: 'p',
     safe: true,
+    disabled: false,
     enter: true,
     leave: true
 };
