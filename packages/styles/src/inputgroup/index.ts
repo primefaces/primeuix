@@ -90,8 +90,8 @@ export const style = /*css*/ `
     .p-inputgroup .p-component:focus ~ label,
     .p-inputgroup .p-component.p-focus ~ label,
     .p-inputgroup .p-inputwrapper-focus ~ label,
-    .p-inputgroup .p-floatlabel .p-inputwrapper-focus ~ label,
-    .p-inputgroup .p-iftalabel .p-inputwrapper-focus ~ label {
+    .p-inputgroup .p-floatlabel .p-inputwrapper ~ label,
+    .p-inputgroup .p-iftalabel .p-inputwrapper ~ label {
         z-index: 1;
     }
 
