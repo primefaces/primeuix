@@ -1,5 +1,5 @@
 import { addClass, getHiddenElementDimensions, removeClass, setCSSProperty } from '@primeuix/utils';
-import { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionInstance, MotionOptions, MotionPhase, MotionType } from '../../types';
+import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionInstance, MotionOptions, MotionPhase, MotionType } from '../../types';
 import { getMotionHooks, getMotionMetadata, mergeOptions, resolveClassNames, resolveDuration, shouldSkipMotion } from '../utils';
 
 export const DEFAULT_MOTION_OPTIONS: MotionOptions = {
@@ -10,6 +10,12 @@ export const DEFAULT_MOTION_OPTIONS: MotionOptions = {
     leave: true
 };
 
+/**
+ * Creates a MotionInstance for the given element with the specified options.
+ * @param element - The target element for motion effects.
+ * @param options - Configuration options for the motion instance.
+ * @returns A MotionInstance that can be used to control the motion.
+ */
 export function createMotion(element: Element, options?: MotionOptions): MotionInstance {
     if (!element) throw new Error('Element is required.');
 
@@ -33,20 +39,22 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
         cancelCurrent?.();
 
         const { onBefore, onStart, onAfter, onCancelled } = hooks[phase] || {};
+        const event = { element };
 
         if (skipMotion) {
-            onBefore?.(element);
-            onStart?.(element);
-            onAfter?.(element);
+            onBefore?.(event);
+            onStart?.(event);
+            onAfter?.(event);
 
             return;
         }
 
         const { from: fromClass, active: activeClass, to: toClass } = classNames[phase] || {};
+        const { height } = getHiddenElementDimensions(element as HTMLElement);
 
-        setCSSProperty(element as HTMLElement, '--pui-motion-height', getHiddenElementDimensions(element as HTMLElement)?.height + 'px');
+        setCSSProperty(element as HTMLElement, '--pui-motion-height', height + 'px');
 
-        onBefore?.(element);
+        onBefore?.(event);
         addClass(element, [fromClass, activeClass]);
 
         //await nextFrame();
@@ -54,7 +62,7 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
 
         removeClass(element, fromClass);
         addClass(element, toClass);
-        onStart?.(element);
+        onStart?.(event);
 
         return new Promise((resolve) => {
             const duration = resolveDuration(opts.duration, phase);
@@ -66,13 +74,13 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
 
             const onDone = () => {
                 cleanup();
-                onAfter?.(element);
+                onAfter?.(event);
                 resolve();
             };
 
             cancelCurrent = () => {
                 cleanup();
-                onCancelled?.(element);
+                onCancelled?.(event);
                 resolve();
             };
 

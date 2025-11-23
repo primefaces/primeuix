@@ -4,6 +4,11 @@ import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionMetadata, M
 export const ANIMATION = 'animation';
 export const TRANSITION = 'transition';
 
+/**
+ * Determines whether motion effects should be skipped based on the provided options.
+ * @param options - The motion options to evaluate.
+ * @returns A boolean indicating whether motion should be skipped.
+ */
 export function shouldSkipMotion(options: MotionOptions | undefined): boolean {
     if (!options) {
         return false;
@@ -12,6 +17,12 @@ export function shouldSkipMotion(options: MotionOptions | undefined): boolean {
     return options.disabled || !!(options.safe && isPrefersReducedMotion());
 }
 
+/**
+ * Merges the provided motion options with the default options.
+ * @param inOptions - The motion options to merge.
+ * @param defaultOptions - The default motion options.
+ * @returns The merged motion options.
+ */
 export function mergeOptions(inOptions: MotionOptions | undefined, defaultOptions: MotionOptions): MotionOptions {
     if (!inOptions) {
         return defaultOptions;
@@ -27,6 +38,11 @@ export function mergeOptions(inOptions: MotionOptions | undefined, defaultOption
     };
 }
 
+/**
+ * Resolves class names for motion phases based on the provided options.
+ * @param options - The motion options containing class names and base name.
+ * @returns The resolved class names organized by motion phase.
+ */
 export function resolveClassNames(options: MotionOptions | undefined): MotionClassNamesWithPhase {
     const { name, enterClass, leaveClass } = options || {};
 
@@ -44,6 +60,11 @@ export function resolveClassNames(options: MotionOptions | undefined): MotionCla
     };
 }
 
+/**
+ * Retrieves the motion hooks organized by phase based on the provided options.
+ * @param options - The motion options containing hooks.
+ * @returns The motion hooks organized by phase.
+ */
 export function getMotionHooks(options: MotionOptions | undefined): MotionHooksWithPhase {
     return {
         enter: {
@@ -61,6 +82,12 @@ export function getMotionHooks(options: MotionOptions | undefined): MotionHooksW
     };
 }
 
+/**
+ * Retrieves motion metadata including type, timeout, and count for the given element.
+ * @param element - The target element to retrieve motion metadata from.
+ * @param expectedType - The expected type of motion ('transition' or 'animation').
+ * @returns The motion metadata including type, timeout, and count.
+ */
 export function getMotionMetadata(element: Element, expectedType?: MotionMetadata['type']): MotionMetadata {
     const styles = window.getComputedStyle(element);
 
@@ -104,25 +131,6 @@ export function getMotionMetadata(element: Element, expectedType?: MotionMetadat
         timeout,
         count
     };
-}
-
-/**
- * It is useful for deferring execution until the browser has had a chance to render the next frame.
- * @returns A promise that resolves on the next animation frame.
- *
- * @example
- * ```ts
- * await nextFrame();
- * // Code to run after the next animation frame
- * console.log('This runs after the next frame');
- * ```
- */
-export function nextFrame(): Promise<void> {
-    return new Promise((resolve) => {
-        requestAnimationFrame(() => {
-            requestAnimationFrame(resolve as () => void);
-        });
-    });
 }
 
 /**
