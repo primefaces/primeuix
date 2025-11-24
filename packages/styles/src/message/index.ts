@@ -216,22 +216,21 @@ export const style = /*css*/ `
         height: dt('message.icon.size');
     }
 
-    .p-message-enter-from {
+    .p-message-enter-from, 
+    .p-message-leave-to {
         opacity: 0;
+        max-height: 0;
     }
 
     .p-message-enter-active {
-        transition: opacity 0.3s;
+        overflow: hidden;
+        transition: max-height 1s ease-in-out, opacity 0.3s;
     }
 
-    .p-message.p-message-leave-from {
+    .p-message-enter-to,
+    .p-message-leave-from {
         max-height: 1000px;
-    }
-
-    .p-message.p-message-leave-to {
-        max-height: 0;
-        opacity: 0;
-        margin: 0;
+        opacity: 1;
     }
 
     .p-message-leave-active {
