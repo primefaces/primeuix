@@ -98,14 +98,14 @@ export const style = /*css*/ `
     }
 
     .p-overlay-mask-enter {
-        animation: p-overlay-mask-enter-animation dt('mask.transition.duration') forwards;
+        animation: p-animate-overlay-mask-enter dt('mask.transition.duration') forwards;
     }
 
     .p-overlay-mask-leave {
-        animation: p-overlay-mask-leave-animation dt('mask.transition.duration') forwards;
+        animation: p-animate-overlay-mask-leave dt('mask.transition.duration') forwards;
     }
 
-    @keyframes p-overlay-mask-enter-animation {
+    @keyframes p-animate-overlay-mask-enter {
         from {
             background: transparent;
         }
@@ -113,7 +113,7 @@ export const style = /*css*/ `
             background: dt('mask.background');
         }
     }
-    @keyframes p-overlay-mask-leave-animation {
+    @keyframes p-animate-overlay-mask-leave {
         from {
             background: dt('mask.background');
         }

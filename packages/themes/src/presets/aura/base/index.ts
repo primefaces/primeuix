@@ -100,7 +100,7 @@ export const semantic: AuraBaseTokenSections.Semantic = {
         borderRadius: '{border.radius.md}'
     },
     mask: {
-        transitionDuration: '0.15s'
+        transitionDuration: '0.3s'
     },
     navigation: {
         list: {

@@ -100,7 +100,7 @@ export const semantic: NoraBaseTokenSections.Semantic = {
         borderRadius: '{border.radius.xs}'
     },
     mask: {
-        transitionDuration: '0.15s'
+        transitionDuration: '0.3s'
     },
     navigation: {
         list: {

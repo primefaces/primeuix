@@ -99,7 +99,7 @@ export const semantic: MaterialBaseTokenSections.Semantic = {
         borderRadius: '{border.radius.sm}'
     },
     mask: {
-        transitionDuration: '0.15s'
+        transitionDuration: '0.3s'
     },
     navigation: {
         list: {
