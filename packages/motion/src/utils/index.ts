@@ -1,4 +1,4 @@
-import { isPrefersReducedMotion, toMs } from '@primeuix/utils';
+import { getHiddenElementDimensions, isPrefersReducedMotion, setCSSProperty, toMs } from '@primeuix/utils';
 import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionMetadata, MotionOptions, MotionPhase, MotionType } from '../../types';
 
 export const ANIMATION = 'animation';
@@ -147,4 +147,25 @@ export function resolveDuration(duration: MotionOptions['duration'], phase: Moti
     }
 
     return null;
+}
+
+/**
+ * Sets CSS custom properties for auto height and/or width on the given element.
+ * @param element - The target HTML element.
+ * @param autoHeight - Whether to set the auto height CSS variable.
+ * @param autoWidth - Whether to set the auto width CSS variable.
+ * @returns
+ */
+export function setAutoDimensionVariables(element: HTMLElement, autoHeight: boolean = true, autoWidth: boolean = false): void {
+    if (!autoHeight && !autoWidth) return;
+
+    const dimensions = getHiddenElementDimensions(element);
+
+    if (autoHeight) {
+        setCSSProperty(element, '--pui-motion-height', dimensions.height + 'px');
+    }
+
+    if (autoWidth) {
+        setCSSProperty(element, '--pui-motion-width', dimensions.width + 'px');
+    }
 }

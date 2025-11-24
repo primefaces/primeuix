@@ -181,6 +181,14 @@ export interface MotionOptions extends MotionClassNames, MotionHooks {
      * @see MotionDuration
      */
     duration?: MotionDuration | undefined;
+    /**
+     * Indicates whether to automatically adjust height during the motion.
+     */
+    autoHeight?: boolean | undefined;
+    /**
+     * Indicates whether to automatically adjust width during the motion.
+     */
+    autoWidth?: boolean | undefined;
 }
 
 /**

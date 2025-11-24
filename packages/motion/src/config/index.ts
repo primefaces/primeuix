@@ -1,13 +1,15 @@
-import { addClass, getHiddenElementDimensions, removeClass, setCSSProperty } from '@primeuix/utils';
+import { addClass, removeClass } from '@primeuix/utils';
 import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionInstance, MotionOptions, MotionPhase, MotionType } from '../../types';
-import { getMotionHooks, getMotionMetadata, mergeOptions, resolveClassNames, resolveDuration, shouldSkipMotion } from '../utils';
+import { getMotionHooks, getMotionMetadata, mergeOptions, resolveClassNames, resolveDuration, setAutoDimensionVariables, shouldSkipMotion } from '../utils';
 
 export const DEFAULT_MOTION_OPTIONS: MotionOptions = {
     name: 'p',
     safe: true,
     disabled: false,
     enter: true,
-    leave: true
+    leave: true,
+    autoHeight: true,
+    autoWidth: false
 };
 
 /**
@@ -50,12 +52,19 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
         }
 
         const { from: fromClass, active: activeClass, to: toClass } = classNames[phase] || {};
-        const { height } = getHiddenElementDimensions(element as HTMLElement);
 
-        setCSSProperty(element as HTMLElement, '--pui-motion-height', height + 'px');
+        if (phase === 'leave') {
+            setAutoDimensionVariables(element as HTMLElement, opts.autoHeight, opts.autoWidth);
+        }
 
         onBefore?.(event);
-        addClass(element, [fromClass, activeClass]);
+        addClass(element, fromClass);
+
+        if (phase === 'enter') {
+            setAutoDimensionVariables(element as HTMLElement, opts.autoHeight, opts.autoWidth);
+        }
+
+        addClass(element, activeClass);
 
         //await nextFrame();
         void (element as HTMLElement).offsetHeight; // force reflow
