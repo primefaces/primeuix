@@ -121,4 +121,46 @@ export const style = /*css*/ `
             background: transparent;
         }
     }
+
+    .p-anchored-overlay-enter-active {
+        animation: p-animate-anchored-overlay-enter 300ms cubic-bezier(.19,1,.22,1);
+    }
+
+    .p-anchored-overlay-leave-active {
+        animation: p-animate-anchored-overlay-leave 300ms cubic-bezier(.19,1,.22,1);
+    }
+
+    @keyframes p-animate-anchored-overlay-enter {
+        from {
+            opacity: 0;
+            transform: scale(0.93);
+        }
+    }
+
+    @keyframes p-animate-anchored-overlay-leave {
+        to {
+            opacity: 0;
+            transform: scale(0.93);
+        }
+    }
+
+    .p-collapsible-enter-from,
+    .p-collapsible-leave-to {
+        max-height: 0;
+    }
+
+    .p-collapsible-enter-to,
+    .p-collapsible-leave-from {
+        max-height: var(--pui-motion-height, 1000px);
+    }
+
+    .p-collapsible-leave-active {
+        overflow: hidden;
+        transition: max-height 200ms ease-out;
+    }
+
+    .p-collapsible-enter-active {
+        overflow: hidden;
+        transition: max-height 200ms ease-out;
+    }
 `;

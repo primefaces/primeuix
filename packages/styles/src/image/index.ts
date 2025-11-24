@@ -106,22 +106,29 @@ export const style = /*css*/ `
     }
 
     .p-image-original {
-        transition: transform 0.15s;
         max-width: 100vw;
         max-height: 100vh;
     }
 
     .p-image-original-enter-active {
-        transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
+        animation: p-animate-image-original-enter 300ms cubic-bezier(.19,1,.22,1);
     }
 
     .p-image-original-leave-active {
-        transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+        animation: p-animate-image-original-leave 300ms cubic-bezier(.19,1,.22,1);
     }
 
-    .p-image-original-enter-from,
-    .p-image-original-leave-to {
-        opacity: 0;
-        transform: scale(0.7);
+    @keyframes p-animate-image-original-enter {
+        from {
+            opacity: 0;
+            transform: scale(0.93);
+        }
+    }
+
+    @keyframes p-animate-image-original-leave {
+        to {
+            opacity: 0;
+            transform: scale(0.93);
+        }
     }
 `;

@@ -114,6 +114,8 @@ export const style = /*css*/ `
         border-radius: dt('select.overlay.border.radius');
         box-shadow: dt('select.overlay.shadow');
         min-width: 100%;
+        transform-origin: inherit;
+        will-change: transform;
     }
 
     .p-select-header {

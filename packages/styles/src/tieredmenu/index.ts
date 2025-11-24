@@ -123,15 +123,6 @@ export const style = /*css*/ `
         box-shadow: dt('tieredmenu.shadow');
     }
 
-    .p-tieredmenu-enter-from,
-    .p-tieredmenu-leave-active {
-        opacity: 0;
-    }
-
-    .p-tieredmenu-enter-active {
-        transition: opacity 250ms;
-    }
-
     .p-tieredmenu-mobile .p-tieredmenu-submenu {
         position: static;
         box-shadow: none;

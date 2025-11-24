@@ -9,6 +9,7 @@ export const style = /*css*/ `
         border: 1px solid dt('confirmpopup.border.color');
         border-radius: dt('confirmpopup.border.radius');
         box-shadow: dt('confirmpopup.shadow');
+        will-change: transform;
     }
 
     .p-confirmpopup-content {
@@ -43,25 +44,6 @@ export const style = /*css*/ `
     .p-confirmpopup-flipped {
         margin-block-start: calc(dt('confirmpopup.gutter') * -1);
         margin-block-end: dt('confirmpopup.gutter');
-    }
-
-    .p-confirmpopup-enter-from {
-        opacity: 0;
-        transform: scaleY(0.8);
-    }
-
-    .p-confirmpopup-leave-to {
-        opacity: 0;
-    }
-
-    .p-confirmpopup-enter-active {
-        transition:
-            transform 0.12s cubic-bezier(0, 0, 0.2, 1),
-            opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    .p-confirmpopup-leave-active {
-        transition: opacity 0.1s linear;
     }
 
     .p-confirmpopup:after,

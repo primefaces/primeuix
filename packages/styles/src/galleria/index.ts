@@ -420,29 +420,41 @@ export const style = /*css*/ `
         top: 50%;
     }
 
+       .p-items-hidden .p-galleria-thumbnail-item {
+        visibility: hidden;
+    }
+
+    .p-items-hidden .p-galleria-thumbnail-item.p-galleria-thumbnail-item-active {
+        visibility: visible;
+    }
+
     .p-galleria-enter-active {
-        transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
+        animation: p-animate-galleria-enter 300ms cubic-bezier(.19,1,.22,1);
     }
 
     .p-galleria-leave-active {
-        transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .p-galleria-enter-from,
-    .p-galleria-leave-to {
-        opacity: 0;
-        transform: scale(0.7);
+        animation: p-animate-galleria-leave 300ms cubic-bezier(.19,1,.22,1);
     }
 
     .p-galleria-enter-active .p-galleria-nav-button {
         opacity: 0;
     }
 
-    .p-items-hidden .p-galleria-thumbnail-item {
-        visibility: hidden;
+    @keyframes p-animate-galleria-enter {
+        from {
+            opacity: 0;
+            transform: scale(0.93);
+        }
     }
 
-    .p-items-hidden .p-galleria-thumbnail-item.p-galleria-thumbnail-item-active {
-        visibility: visible;
+    @keyframes p-animate-galleria-leave {
+        from {
+            opacity: 1;
+            transform: scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: scale(0.93);
+        }
     }
 `;

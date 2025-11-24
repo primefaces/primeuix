@@ -16,14 +16,14 @@ export const style = /*css*/ `
     }
 
     .p-scrolltop-enter-active {
-        transition: opacity 0.15s;
+        transition: opacity 300ms;
     }
 
-    .p-scrolltop.p-scrolltop-leave-to {
+    .p-scrolltop-leave-to {
         opacity: 0;
     }
 
     .p-scrolltop-leave-active {
-        transition: opacity 0.15s;
+        transition: opacity 300ms;
     }
 `;

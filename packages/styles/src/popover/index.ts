@@ -6,6 +6,7 @@ export const style = /*css*/ `
         border: 1px solid dt('popover.border.color');
         border-radius: dt('popover.border.radius');
         box-shadow: dt('popover.shadow');
+        will-change: transform;
     }
 
     .p-popover-content {
@@ -15,25 +16,6 @@ export const style = /*css*/ `
     .p-popover-flipped {
         margin-block-start: calc(dt('popover.gutter') * -1);
         margin-block-end: dt('popover.gutter');
-    }
-
-    .p-popover-enter-from {
-        opacity: 0;
-        transform: scaleY(0.8);
-    }
-
-    .p-popover-leave-to {
-        opacity: 0;
-    }
-
-    .p-popover-enter-active {
-        transition:
-            transform 0.12s cubic-bezier(0, 0, 0.2, 1),
-            opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    .p-popover-leave-active {
-        transition: opacity 0.1s linear;
     }
 
     .p-popover:after,

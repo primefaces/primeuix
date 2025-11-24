@@ -121,15 +121,6 @@ export const style = /*css*/ `
         border-block-start: 1px solid dt('contextmenu.separator.border.color');
     }
 
-    .p-contextmenu-enter-from,
-    .p-contextmenu-leave-active {
-        opacity: 0;
-    }
-
-    .p-contextmenu-enter-active {
-        transition: opacity 250ms;
-    }
-
     .p-contextmenu-mobile .p-contextmenu-submenu {
         position: static;
         box-shadow: none;

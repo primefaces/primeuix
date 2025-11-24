@@ -41,20 +41,6 @@ export const style = /*css*/ `
         gap: dt('dialog.header.gap');
     }
 
-    .p-dialog-enter-active {
-        transition: all 150ms cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    .p-dialog-leave-active {
-        transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .p-dialog-enter-from,
-    .p-dialog-leave-to {
-        opacity: 0;
-        transform: scale(0.7);
-    }
-
     .p-dialog-top .p-dialog,
     .p-dialog-bottom .p-dialog,
     .p-dialog-left .p-dialog,
@@ -155,5 +141,27 @@ export const style = /*css*/ `
         height: 12px;
         right: 1px;
         bottom: 1px;
+    }
+
+    .p-dialog-enter-active {
+        animation: p-animate-dialog-enter 300ms cubic-bezier(.19,1,.22,1);
+    }
+
+    .p-dialog-leave-active {
+        animation: p-animate-dialog-leave 300ms cubic-bezier(.19,1,.22,1);
+    }
+
+    @keyframes p-animate-dialog-enter {
+        from {
+            opacity: 0;
+            transform: scale(0.93);
+        }
+    }
+
+    @keyframes p-animate-dialog-leave {
+        to {
+            opacity: 0;
+            transform: scale(0.93);
+        }
     }
 `;
