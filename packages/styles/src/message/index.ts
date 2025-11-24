@@ -1,5 +1,6 @@
 export const style = /*css*/ `
     .p-message {
+        display: block;
         border-radius: dt('message.border.radius');
         outline-width: dt('message.border.width');
         outline-style: solid;
@@ -216,36 +217,6 @@ export const style = /*css*/ `
         height: dt('message.icon.size');
     }
 
-    .p-message-enter-from {
-        opacity: 0;
-    }
-
-    .p-message-enter-active {
-        transition: opacity 0.3s;
-    }
-
-    .p-message.p-message-leave-from {
-        max-height: 1000px;
-    }
-
-    .p-message.p-message-leave-to {
-        max-height: 0;
-        opacity: 0;
-        margin: 0;
-    }
-
-    .p-message-leave-active {
-        overflow: hidden;
-        transition:
-            max-height 0.45s cubic-bezier(0, 1, 0, 1),
-            opacity 0.3s,
-            margin 0.3s;
-    }
-
-    .p-message-leave-active .p-message-close-button {
-        opacity: 0;
-    }
-
     .p-message-sm .p-message-content {
         padding: dt('message.content.sm.padding');
     }
@@ -304,5 +275,37 @@ export const style = /*css*/ `
     .p-message-outlined .p-message-close-button:hover,
     .p-message-simple .p-message-close-button:hover {
         background: transparent;
+    }
+
+    .p-message-enter-active {
+        animation: p-animate-message-enter 0.3s ease-in forwards;
+        overflow: hidden;
+    }
+
+    .p-message-leave-active {
+        animation: p-animate-message-leave 0.3s ease-out forwards;
+        overflow: hidden;
+    }
+
+    @keyframes p-animate-message-enter {
+        from {
+            max-height: 0;
+            opacity: 0;
+        }
+        to {
+            max-height: 1000px;
+            opacity: 1;
+        }
+    }
+
+    @keyframes p-animate-message-leave {
+        from {
+            max-height: 1000px;
+            opacity: 1;
+        }
+        to {
+            max-height: 0;
+            opacity: 0;
+        }
     }
 `;
