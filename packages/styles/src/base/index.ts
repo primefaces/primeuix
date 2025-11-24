@@ -5,7 +5,7 @@ export const style = /*css*/ `
         box-sizing: border-box;
     }
 
-    /* Non vue overlay animations */
+    /* @Deprecated in favor of p-anchored-overlay */
     .p-connected-overlay {
         opacity: 0;
         transform: scaleY(0.8);
@@ -25,7 +25,7 @@ export const style = /*css*/ `
         transition: opacity 0.1s linear;
     }
 
-    /* Vue based overlay animations */
+    /* @Deprecated in favor of p-anchored-overlay */
     .p-connected-overlay-enter-from {
         opacity: 0;
         transform: scaleY(0.8);
