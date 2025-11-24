@@ -7,6 +7,8 @@ export const style = /*css*/ `
 
     .p-toast-message {
         margin: 0 0 1rem 0;
+        display: grid;
+        grid-template-rows: 1fr;
     }
 
     .p-toast-message-icon {
@@ -21,6 +23,9 @@ export const style = /*css*/ `
         align-items: flex-start;
         padding: dt('toast.content.padding');
         gap: dt('toast.content.gap');
+        min-height: 0;
+        overflow: hidden;
+        transition: padding 250ms ease-in;
     }
 
     .p-toast-message-text {
@@ -228,32 +233,39 @@ export const style = /*css*/ `
         transform: translate(-50%, -50%);
     }
 
-    .p-toast-message-enter-from {
-        opacity: 0;
-        transform: translateY(50%);
-    }
-
-    .p-toast-message-leave-from {
-        max-height: 1000px;
-    }
-
-    .p-toast .p-toast-message.p-toast-message-leave-to {
-        max-height: 0;
-        opacity: 0;
-        margin-bottom: 0;
-        overflow: hidden;
-    }
-
     .p-toast-message-enter-active {
-        transition:
-            transform 0.3s,
-            opacity 0.3s;
+        animation: p-animate-toast-enter 0.3s ease-out;
     }
 
     .p-toast-message-leave-active {
-        transition:
-            max-height 0.45s cubic-bezier(0, 1, 0, 1),
-            opacity 0.3s,
-            margin-bottom 0.3s;
+        animation: p-animate-toast-leave 0.25s ease-in;
+    }
+
+    .p-toast-message-leave-to .p-toast-message-content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @keyframes p-animate-toast-enter {
+        from {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+        to {
+            opacity: 1;
+            grid-template-rows: 1fr;
+        }
+    }
+
+     @keyframes p-animate-toast-leave {
+        from {
+            opacity: 1;
+            grid-template-rows: 1fr;
+        }
+        to {
+            opacity: 0;
+            margin-bottom: 0;
+            grid-template-rows: 0fr;
+        }
     }
 `;
