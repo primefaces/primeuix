@@ -53,17 +53,10 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
 
         const { from: fromClass, active: activeClass, to: toClass } = classNames[phase] || {};
 
-        if (phase === 'leave') {
-            setAutoDimensionVariables(element as HTMLElement, opts.autoHeight, opts.autoWidth);
-        }
+        setAutoDimensionVariables(element as HTMLElement, opts.autoHeight, opts.autoWidth);
 
         onBefore?.(event);
         addClass(element, fromClass);
-
-        if (phase === 'enter') {
-            setAutoDimensionVariables(element as HTMLElement, opts.autoHeight, opts.autoWidth);
-        }
-
         addClass(element, activeClass);
 
         //await nextFrame();
