@@ -1,8 +1,12 @@
 {
 	"publishedPackages": [
 		{
-			"name": "@primeuix/motion",
-			"version": "0.0.10"
+			"name": "@primeuix/styles",
+			"version": "2.0.0"
+		},
+		{
+			"name": "@primeuix/themes",
+			"version": "2.0.0"
 		}
 	]
 }
