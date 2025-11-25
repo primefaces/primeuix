@@ -5,65 +5,32 @@ export const style = /*css*/ `
         box-sizing: border-box;
     }
 
-    /* @Deprecated in favor of p-anchored-overlay */
-    .p-connected-overlay {
-        opacity: 0;
-        transform: scaleY(0.8);
-        transition:
-            transform 0.12s cubic-bezier(0, 0, 0.2, 1),
-            opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    .p-connected-overlay-visible {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-
-    .p-connected-overlay-hidden {
-        opacity: 0;
-        transform: scaleY(1);
-        transition: opacity 0.1s linear;
-    }
-
-    /* @Deprecated in favor of p-anchored-overlay */
-    .p-connected-overlay-enter-from {
-        opacity: 0;
-        transform: scaleY(0.8);
-    }
-
-    .p-connected-overlay-leave-to {
-        opacity: 0;
-    }
-
-    .p-connected-overlay-enter-active {
-        transition:
-            transform 0.12s cubic-bezier(0, 0, 0.2, 1),
-            opacity 0.12s cubic-bezier(0, 0, 0.2, 1);
-    }
-
-    .p-connected-overlay-leave-active {
-        transition: opacity 0.1s linear;
-    }
-
-    /* Toggleable Content */
-    .p-toggleable-content-enter-from,
-    .p-toggleable-content-leave-to {
-        max-height: 0;
-    }
-
-    .p-toggleable-content-enter-to,
-    .p-toggleable-content-leave-from {
-        max-height: 1000px;
-    }
-
-    .p-toggleable-content-leave-active {
+    .p-collapsible-enter-active {
+        animation: p-animate-collapsible-expand 0.2s ease-out;
         overflow: hidden;
-        transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
     }
 
-    .p-toggleable-content-enter-active {
+    .p-collapsible-leave-active {
+        animation: p-animate-collapsible-collapse 0.2s ease-out;
         overflow: hidden;
-        transition: max-height 1s ease-in-out;
+    }
+
+    @keyframes p-animate-collapsible-expand {
+        from {
+            grid-template-rows: 0fr;
+        }
+        to {
+            grid-template-rows: 1fr;
+        }
+    }
+
+    @keyframes p-animate-collapsible-collapse {
+        from {
+            grid-template-rows: 1fr;
+        }
+        to {
+            grid-template-rows: 0fr;
+        }
     }
 
     .p-disabled,
@@ -142,25 +109,5 @@ export const style = /*css*/ `
             opacity: 0;
             transform: scale(0.93);
         }
-    }
-
-    .p-collapsible-enter-from,
-    .p-collapsible-leave-to {
-        max-height: 0;
-    }
-
-    .p-collapsible-enter-to,
-    .p-collapsible-leave-from {
-        max-height: var(--pui-motion-height, 1000px);
-    }
-
-    .p-collapsible-leave-active {
-        overflow: hidden;
-        transition: max-height 200ms ease-out;
-    }
-
-    .p-collapsible-enter-active {
-        overflow: hidden;
-        transition: max-height 200ms ease-out;
     }
 `;

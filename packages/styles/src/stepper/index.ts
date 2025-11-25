@@ -157,16 +157,21 @@ export const style = /*css*/ `
     .p-stepitem .p-step {
         flex: initial;
     }
+    
+    .p-stepitem .p-steppanel {
+        display: grid;
+        grid-template-rows: 1fr;
+    }
 
+    .p-stepitem .p-steppanel-content-wrapper {
+        display: flex;
+        flex: 1 1 auto;
+        min-height: 0;
+    }
     .p-stepitem .p-steppanel-content {
         width: 100%;
         padding: dt('stepper.steppanel.padding');
         margin-inline-start: 1rem;
-    }
-
-    .p-stepitem .p-steppanel {
-        display: flex;
-        flex: 1 1 auto;
     }
 
     .p-stepitem .p-stepper-separator {

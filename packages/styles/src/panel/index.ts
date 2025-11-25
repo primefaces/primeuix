@@ -29,6 +29,15 @@ export const style = /*css*/ `
         font-weight: dt('panel.title.font.weight');
     }
 
+    .p-panel-content-container {
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+
+    .p-panel-content-wrapper {
+        min-height: 0;
+    }
+
     .p-panel-content {
         padding: dt('panel.content.padding');
     }

@@ -82,6 +82,15 @@ export const style = /*css*/ `
         color: dt('accordion.header.toggle.icon.active.hover.color');
     }
 
+    .p-accordioncontent {
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+
+    .p-accordioncontent-wrapper {
+        min-height: 0;
+    }
+
     .p-accordioncontent-content {
         border-style: solid;
         border-width: dt('accordion.content.border.width');

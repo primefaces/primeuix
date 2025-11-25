@@ -1,9 +1,14 @@
 export const style = /*css*/ `
     .p-message {
-        display: block;
+        display: grid;
+        grid-template-rows: 1fr;
         border-radius: dt('message.border.radius');
         outline-width: dt('message.border.width');
         outline-style: solid;
+    }
+
+    .p-message-content-wrapper {
+        min-height: 0;
     }
 
     .p-message-content {
@@ -11,7 +16,6 @@ export const style = /*css*/ `
         align-items: center;
         padding: dt('message.content.padding');
         gap: dt('message.content.gap');
-        height: 100%;
     }
 
     .p-message-icon {
@@ -278,34 +282,35 @@ export const style = /*css*/ `
     }
 
     .p-message-enter-active {
-        animation: p-animate-message-enter 0.3s ease-in forwards;
+        animation: p-animate-message-enter 0.3s ease-out forwards;
         overflow: hidden;
     }
 
     .p-message-leave-active {
-        animation: p-animate-message-leave 0.3s ease-out forwards;
+        animation: p-animate-message-leave 0.15s ease-in forwards;
         overflow: hidden;
     }
 
     @keyframes p-animate-message-enter {
         from {
-            max-height: 0;
             opacity: 0;
+            grid-template-rows: 0fr;
         }
         to {
-            max-height: 1000px;
             opacity: 1;
+            grid-template-rows: 1fr;
         }
     }
 
     @keyframes p-animate-message-leave {
         from {
-            max-height: 1000px;
             opacity: 1;
+            grid-template-rows: 1fr;
         }
         to {
-            max-height: 0;
             opacity: 0;
+            margin: 0;
+            grid-template-rows: 0fr;
         }
     }
 `;

@@ -206,7 +206,7 @@ export const style = /*css*/ `
         color: dt('toast.contrast.color');
         box-shadow: dt('toast.contrast.shadow');
     }
-
+    
     .p-toast-message-contrast .p-toast-detail {
         color: dt('toast.contrast.detail.color');
     }

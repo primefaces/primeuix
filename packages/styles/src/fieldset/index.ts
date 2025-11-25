@@ -72,7 +72,16 @@ export const style = /*css*/ `
         color: dt('fieldset.toggle.icon.hover.color');
     }
 
-    .p-fieldset .p-fieldset-content {
+    .p-fieldset-content-container {
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+
+    .p-fieldset-content-wrapper {
+        min-height: 0;
+    }
+
+    .p-fieldset-content {
         padding: dt('fieldset.content.padding');
     }
 `;

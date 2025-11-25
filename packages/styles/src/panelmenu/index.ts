@@ -157,4 +157,13 @@ export const style = /*css*/ `
     .p-panelmenu-item:not(.p-disabled) > .p-panelmenu-item-content:hover .p-panelmenu-submenu-icon {
         color: dt('panelmenu.submenu.icon.focus.color');
     }
+
+    .p-panelmenu-content-container {
+        display: grid;
+        grid-template-rows: 1fr;
+    }
+
+    .p-panelmenu-content-wrapper {
+        min-height: 0;
+    }
 `;
