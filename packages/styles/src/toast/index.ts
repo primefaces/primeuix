@@ -234,11 +234,11 @@ export const style = /*css*/ `
     }
 
     .p-toast-message-enter-active {
-        animation: p-animate-toast-enter 200ms ease-out;
+        animation: p-animate-toast-enter 300ms ease-out;
     }
 
     .p-toast-message-leave-active {
-        animation: p-animate-toast-leave 300ms ease-in;
+        animation: p-animate-toast-leave 250ms ease-in;
     }
 
     .p-toast-message-leave-to .p-toast-message-content {
