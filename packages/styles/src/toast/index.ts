@@ -234,11 +234,11 @@ export const style = /*css*/ `
     }
 
     .p-toast-message-enter-active {
-        animation: p-animate-toast-enter 0.3s ease-out;
+        animation: p-animate-toast-enter 200ms ease-out;
     }
 
     .p-toast-message-leave-active {
-        animation: p-animate-toast-leave 0.25s ease-in;
+        animation: p-animate-toast-leave 300ms ease-in;
     }
 
     .p-toast-message-leave-to .p-toast-message-content {
@@ -249,7 +249,7 @@ export const style = /*css*/ `
     @keyframes p-animate-toast-enter {
         from {
             opacity: 0;
-            transform: translateY(50%);
+            transform: scale(0.6);
         }
         to {
             opacity: 1;
@@ -260,12 +260,12 @@ export const style = /*css*/ `
      @keyframes p-animate-toast-leave {
         from {
             opacity: 1;
-            grid-template-rows: 1fr;
         }
         to {
             opacity: 0;
             margin-bottom: 0;
             grid-template-rows: 0fr;
+            transform: translateY(-100%) scale(0.6);
         }
     }
 `;
