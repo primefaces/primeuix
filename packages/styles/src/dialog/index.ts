@@ -12,6 +12,7 @@ export const style = /*css*/ `
     .p-dialog-content {
         overflow-y: auto;
         padding: dt('dialog.content.padding');
+        flex-grow: 1;
     }
 
     .p-dialog-header {
