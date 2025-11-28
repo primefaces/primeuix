@@ -71,7 +71,7 @@ PrimeUIX is a shared package between all Prime libraries, this shared approach a
 This project includes **PrimeNG**, **PrimeReact** and **PrimeVue** as submodules. To update these submodules, run the following command:
 
    ```sh
-   git submodule foreach git pull origin master
+   git submodule update --init --remote
    ```
 
 All set! Happy coding! 🚀
