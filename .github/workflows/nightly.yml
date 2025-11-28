@@ -31,7 +31,7 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule foreach git pull origin master
+          git submodule update --init --remote
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
           git commit -a -m "chore: update submodule commits for Prime UI Libraries" || echo "No changes to commit"
@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install --no-frozen-lockfile
-  
+
       - name: Build
         run: |
           pnpm run build
