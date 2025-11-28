@@ -31,7 +31,7 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule update --init --remote
+          git submodule update --init --remote --merge
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
           git commit -a -m "chore: update submodule references for Prime UI Libraries" || echo "No changes to commit"
