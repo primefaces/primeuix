@@ -34,7 +34,7 @@ jobs:
           git submodule update --init --remote
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          git commit -a -m "chore: update submodule commits for Prime UI Libraries" || echo "No changes to commit"
+          git commit -a -m "chore: update submodule references for Prime UI Libraries" || echo "No changes to commit"
           git push
 
       - name: Install dependencies
