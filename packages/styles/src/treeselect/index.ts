@@ -117,6 +117,7 @@ export const style = /*css*/ `
         box-shadow: dt('treeselect.overlay.shadow');
         overflow: hidden;
         min-width: 100%;
+        will-change: transform;
     }
 
     .p-treeselect-tree-container {
