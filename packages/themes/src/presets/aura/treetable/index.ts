@@ -141,6 +141,12 @@ export const colorScheme: TreeTableTokenSections.ColorScheme = {
     }
 };
 
+export const css: TreeTableTokenSections.CSS = /*css*/ `
+    .p-datatable-mask.p-overlay-mask {
+        --px-mask-background: light-dark(rgba(255,255,255,0.5),rgba(0,0,0,0.3));
+    }
+`;
+
 export default {
     root,
     header,
@@ -158,5 +164,6 @@ export default {
     nodeToggleButton,
     paginatorTop,
     paginatorBottom,
-    colorScheme
+    colorScheme,
+    css
 } satisfies TreeTableDesignTokens;

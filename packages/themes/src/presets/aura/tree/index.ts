@@ -58,11 +58,18 @@ export const filter: TreeTokenSections.Filter = {
     margin: '0 0 0.5rem 0'
 };
 
+export const css: TreeTokenSections.CSS = /*css*/ `
+    .p-tree-mask.p-overlay-mask {
+        --px-mask-background: light-dark(rgba(255,255,255,0.5),rgba(0,0,0,0.3));
+    }
+`;
+
 export default {
     root,
     node,
     nodeIcon,
     nodeToggleButton,
     loadingIcon,
-    filter
+    filter,
+    css
 } satisfies TreeDesignTokens;
