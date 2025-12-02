@@ -64,11 +64,11 @@ export const style = /*css*/ `
         height: 100%;
     }
 
-    .p-overlay-mask-enter {
+    .p-overlay-mask-enter-active {
         animation: p-animate-overlay-mask-enter dt('mask.transition.duration') forwards;
     }
 
-    .p-overlay-mask-leave {
+    .p-overlay-mask-leave-active {
         animation: p-animate-overlay-mask-leave dt('mask.transition.duration') forwards;
     }
 

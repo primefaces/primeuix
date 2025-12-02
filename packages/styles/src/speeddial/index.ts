@@ -51,20 +51,7 @@ export const style = /*css*/ `
 
     .p-speeddial-mask {
         position: absolute;
-        inset-inline-start: 0;
-        inset-block-start: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        background: dt('mask.background');
-        border-radius: 6px;
-        transition: opacity 150ms;
-    }
-
-    .p-speeddial-mask-visible {
-        pointer-events: none;
-        opacity: 1;
-        transition: opacity 150ms;
+        border-radius: dt('content.border.radius');
     }
 
     .p-speeddial-open .p-speeddial-list {
