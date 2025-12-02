@@ -21,7 +21,6 @@ export const style = /*css*/ `
         align-items: center;
         justify-content: center;
         opacity: 0;
-        transition: opacity 0.3s;
         border: 0 none;
         padding: 0;
         cursor: pointer;
@@ -108,6 +107,7 @@ export const style = /*css*/ `
     .p-image-original {
         max-width: 100vw;
         max-height: 100vh;
+        transition: transform 300ms;
     }
 
     .p-image-original-enter-active {
