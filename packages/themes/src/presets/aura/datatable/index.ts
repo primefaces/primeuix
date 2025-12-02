@@ -221,6 +221,12 @@ export const colorScheme: DataTableTokenSections.ColorScheme = {
     }
 };
 
+export const css: DataTableTokenSections.CSS = /*css*/ `
+    .p-datatable-mask.p-overlay-mask {
+        --px-mask-background: light-dark(rgba(255,255,255,0.5),rgba(0,0,0,0.3));
+    }
+`;
+
 export default {
     root,
     header,
@@ -240,5 +246,6 @@ export default {
     filter,
     paginatorTop,
     paginatorBottom,
-    colorScheme
+    colorScheme,
+    css
 } satisfies DataTableDesignTokens;
