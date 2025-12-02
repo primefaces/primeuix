@@ -73,9 +73,9 @@ export const style = /*css*/ `
     }
 
     .p-organizationchart-node-toggle-button:focus-visible {
-        box-shadow: dt('breadcrumb.item.focus.ring.shadow');
-        outline: dt('breadcrumb.item.focus.ring.width') dt('breadcrumb.item.focus.ring.style') dt('breadcrumb.item.focus.ring.color');
-        outline-offset: dt('breadcrumb.item.focus.ring.offset');
+        box-shadow: dt('organizationchart.node.toggle.button.focus.ring.shadow');
+        outline: dt('organizationchart.node.toggle.button.focus.ring.width') dt('organizationchart.node.toggle.button.focus.ring.style') dt('organizationchart.node.toggle.button.focus.ring.color');
+        outline-offset: dt('organizationchart.node.toggle.button.focus.ring.offset');
     }
 
     .p-organizationchart-node-toggle-button-icon {
