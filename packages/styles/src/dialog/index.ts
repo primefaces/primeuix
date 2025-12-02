@@ -49,73 +49,7 @@ export const style = /*css*/ `
     .p-dialog-topright .p-dialog,
     .p-dialog-bottomleft .p-dialog,
     .p-dialog-bottomright .p-dialog {
-        margin: 0.75rem;
-        transform: translate3d(0px, 0px, 0px);
-    }
-
-    .p-dialog-top .p-dialog-enter-active,
-    .p-dialog-top .p-dialog-leave-active,
-    .p-dialog-bottom .p-dialog-enter-active,
-    .p-dialog-bottom .p-dialog-leave-active,
-    .p-dialog-left .p-dialog-enter-active,
-    .p-dialog-left .p-dialog-leave-active,
-    .p-dialog-right .p-dialog-enter-active,
-    .p-dialog-right .p-dialog-leave-active,
-    .p-dialog-topleft .p-dialog-enter-active,
-    .p-dialog-topleft .p-dialog-leave-active,
-    .p-dialog-topright .p-dialog-enter-active,
-    .p-dialog-topright .p-dialog-leave-active,
-    .p-dialog-bottomleft .p-dialog-enter-active,
-    .p-dialog-bottomleft .p-dialog-leave-active,
-    .p-dialog-bottomright .p-dialog-enter-active,
-    .p-dialog-bottomright .p-dialog-leave-active {
-        transition: all 0.3s ease-out;
-    }
-
-    .p-dialog-top .p-dialog-enter-from,
-    .p-dialog-top .p-dialog-leave-to {
-        transform: translate3d(0px, -100%, 0px);
-    }
-
-    .p-dialog-bottom .p-dialog-enter-from,
-    .p-dialog-bottom .p-dialog-leave-to {
-        transform: translate3d(0px, 100%, 0px);
-    }
-
-    .p-dialog-left .p-dialog-enter-from,
-    .p-dialog-left .p-dialog-leave-to,
-    .p-dialog-topleft .p-dialog-enter-from,
-    .p-dialog-topleft .p-dialog-leave-to,
-    .p-dialog-bottomleft .p-dialog-enter-from,
-    .p-dialog-bottomleft .p-dialog-leave-to {
-        transform: translate3d(-100%, 0px, 0px);
-    }
-
-    .p-dialog-right .p-dialog-enter-from,
-    .p-dialog-right .p-dialog-leave-to,
-    .p-dialog-topright .p-dialog-enter-from,
-    .p-dialog-topright .p-dialog-leave-to,
-    .p-dialog-bottomright .p-dialog-enter-from,
-    .p-dialog-bottomright .p-dialog-leave-to {
-        transform: translate3d(100%, 0px, 0px);
-    }
-
-    .p-dialog-left:dir(rtl) .p-dialog-enter-from,
-    .p-dialog-left:dir(rtl) .p-dialog-leave-to,
-    .p-dialog-topleft:dir(rtl) .p-dialog-enter-from,
-    .p-dialog-topleft:dir(rtl) .p-dialog-leave-to,
-    .p-dialog-bottomleft:dir(rtl) .p-dialog-enter-from,
-    .p-dialog-bottomleft:dir(rtl) .p-dialog-leave-to {
-        transform: translate3d(100%, 0px, 0px);
-    }
-
-    .p-dialog-right:dir(rtl) .p-dialog-enter-from,
-    .p-dialog-right:dir(rtl) .p-dialog-leave-to,
-    .p-dialog-topright:dir(rtl) .p-dialog-enter-from,
-    .p-dialog-topright:dir(rtl) .p-dialog-leave-to,
-    .p-dialog-bottomright:dir(rtl) .p-dialog-enter-from,
-    .p-dialog-bottomright:dir(rtl) .p-dialog-leave-to {
-        transform: translate3d(-100%, 0px, 0px);
+        margin: 1rem;
     }
 
     .p-dialog-maximized {
