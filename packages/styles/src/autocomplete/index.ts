@@ -160,8 +160,8 @@ export const style = /*css*/ `
 
     .p-autocomplete-input-multiple.p-disabled {
         opacity: 1;
-        background: dt('inputtext.disabled.background');
-        color: dt('inputtext.disabled.color');
+        background: dt('autocomplete.disabled.background');
+        color: dt('autocomplete.disabled.color');
     }
 
     .p-autocomplete-input-multiple:not(.p-disabled):hover {
