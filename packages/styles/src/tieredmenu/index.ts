@@ -5,6 +5,7 @@ export const style = /*css*/ `
         border: 1px solid dt('tieredmenu.border.color');
         border-radius: dt('tieredmenu.border.radius');
         min-width: 12.5rem;
+        will-change: transform;
     }
 
     .p-tieredmenu-root-list,
