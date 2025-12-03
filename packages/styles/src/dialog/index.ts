@@ -7,6 +7,7 @@ export const style = /*css*/ `
         background: dt('dialog.background');
         border: 1px solid dt('dialog.border.color');
         color: dt('dialog.color');
+        will-change: transform;
     }
 
     .p-dialog-content {
