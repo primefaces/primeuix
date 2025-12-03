@@ -176,6 +176,11 @@ export const style = /*css*/ `
         color: dt('multiselect.option.focus.color');
     }
 
+    .p-multiselect-option:not(.p-multiselect-option-selected):not(.p-disabled):hover {
+        background: dt('multiselect.option.focus.background');
+        color: dt('multiselect.option.focus.color');
+    }
+
     .p-multiselect-option.p-multiselect-option-selected {
         background: dt('multiselect.option.selected.background');
         color: dt('multiselect.option.selected.color');

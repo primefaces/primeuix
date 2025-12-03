@@ -115,6 +115,11 @@ export const style = /*css*/ `
         color: dt('autocomplete.option.focus.color');
     }
 
+    .p-autocomplete-option:not(.p-autocomplete-option-selected):not(.p-disabled):hover {
+        background: dt('autocomplete.option.focus.background');
+        color: dt('autocomplete.option.focus.color');
+    }
+
     .p-autocomplete-option-selected {
         background: dt('autocomplete.option.selected.background');
         color: dt('autocomplete.option.selected.color');

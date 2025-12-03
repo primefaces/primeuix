@@ -152,7 +152,16 @@ export const style = /*css*/ `
         color: dt('cascadeselect.option.focus.color');
     }
 
+    .p-cascadeselect-option:not(.p-cascadeselect-option-selected):not(.p-disabled):hover > .p-cascadeselect-option-content {
+        background: dt('cascadeselect.option.focus.background');
+        color: dt('cascadeselect.option.focus.color');
+    }
+
     .p-cascadeselect-option:not(.p-cascadeselect-option-selected):not(.p-disabled).p-focus > .p-cascadeselect-option-content > .p-cascadeselect-group-icon-container > .p-cascadeselect-group-icon {
+        color: dt('cascadeselect.option.icon.focus.color');
+    }
+
+    .p-cascadeselect-option:not(.p-cascadeselect-option-selected):not(.p-disabled):hover > .p-cascadeselect-option-content > .p-cascadeselect-group-icon-container > .p-cascadeselect-group-icon {
         color: dt('cascadeselect.option.icon.focus.color');
     }
 

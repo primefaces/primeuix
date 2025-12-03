@@ -175,6 +175,11 @@ export const style = /*css*/ `
         color: dt('select.option.focus.color');
     }
 
+    .p-select-option:not(.p-select-option-selected):not(.p-disabled):hover {
+        background: dt('select.option.focus.background');
+        color: dt('select.option.focus.color');
+    }
+
     .p-select-option.p-select-option-selected {
         background: dt('select.option.selected.background');
         color: dt('select.option.selected.color');
@@ -184,7 +189,7 @@ export const style = /*css*/ `
         background: dt('select.option.selected.focus.background');
         color: dt('select.option.selected.focus.color');
     }
-
+   
     .p-select-option-blank-icon {
         flex-shrink: 0;
     }
