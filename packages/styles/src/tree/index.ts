@@ -85,6 +85,13 @@ export const style = /*css*/ `
         color: dt('tree.node.hover.color');
     }
 
+    .p-tree-node-content:focus-visible,
+    .p-tree-node-content.p-tree-node-contextmenu-selected {
+        box-shadow: dt('tree.node.focus.ring.shadow');
+        outline: dt('tree.node.focus.ring.width') dt('tree.node.focus.ring.style') dt('tree.node.focus.ring.color');
+        outline-offset: dt('tree.node.focus.ring.offset');
+    }
+
     .p-tree-node-drop-point {
 		outline: 1px solid dt('primary.color');
 	}
