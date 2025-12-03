@@ -5,8 +5,8 @@ export const style = /*css*/ `
         border: 1px solid dt('tieredmenu.border.color');
         border-radius: dt('tieredmenu.border.radius');
         min-width: 12.5rem;
-        will-change: transform;
     }
+    
 
     .p-tieredmenu-root-list,
     .p-tieredmenu-submenu {
@@ -122,6 +122,7 @@ export const style = /*css*/ `
 
     .p-tieredmenu-overlay {
         box-shadow: dt('tieredmenu.shadow');
+        will-change: transform;
     }
 
     .p-tieredmenu-mobile .p-tieredmenu-submenu {
