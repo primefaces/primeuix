@@ -18,6 +18,7 @@ import colorpicker from '@primeuix/themes/aura/colorpicker';
 import confirmdialog from '@primeuix/themes/aura/confirmdialog';
 import confirmpopup from '@primeuix/themes/aura/confirmpopup';
 import contextmenu from '@primeuix/themes/aura/contextmenu';
+import css from '@primeuix/themes/aura/css';
 import datatable from '@primeuix/themes/aura/datatable';
 import dataview from '@primeuix/themes/aura/dataview';
 import datepicker from '@primeuix/themes/aura/datepicker';
@@ -182,5 +183,6 @@ export default {
         treeselect,
         treetable,
         virtualscroller
-    }
+    },
+    css
 } satisfies Preset<AuraBaseDesignTokens>;

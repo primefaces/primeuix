@@ -4,6 +4,7 @@ export const style = /*css*/ `
         background: dt('tree.background');
         color: dt('tree.color');
         padding: dt('tree.padding');
+        position: relative;
     }
 
     .p-tree-root-children,
@@ -151,11 +152,6 @@ export const style = /*css*/ `
 
     .p-tree-filter-input {
         width: 100%;
-    }
-
-    .p-tree-loading {
-        position: relative;
-        height: 100%;
     }
 
     .p-tree-loading-icon {
