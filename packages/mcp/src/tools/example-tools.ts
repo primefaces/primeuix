@@ -3,6 +3,7 @@
  */
 
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import { z } from 'zod';
 import { findComponent } from '../helpers.js';
 import type { ComponentsData, PrimeMcpConfig } from '../types.js';
 
@@ -11,13 +12,12 @@ import type { ComponentsData, PrimeMcpConfig } from '../types.js';
  */
 export function registerExampleTools(server: McpServer, data: ComponentsData, config: PrimeMcpConfig): void {
     // list_examples
-    server.tool(
+    server.registerTool(
         'list_examples',
-        `List all available code examples across ${config.frameworkName} components`,
         {
-            component: {
-                type: 'string',
-                description: 'Optional component name to filter examples'
+            description: `List all available code examples across ${config.frameworkName} components`,
+            inputSchema: {
+                component: z.string().optional().describe('Optional component name to filter examples')
             }
         },
         async ({ component }) => {
@@ -56,21 +56,19 @@ export function registerExampleTools(server: McpServer, data: ComponentsData, co
     );
 
     // get_example
-    server.tool(
+    server.registerTool(
         'get_example',
-        `Get a specific code example by ${config.frameworkName} component and section`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
-            },
-            section: {
-                type: 'string',
-                description: "Section ID (e.g., 'basic', 'controlled', 'template')"
-            },
-            variant: {
-                type: 'string',
-                description: `Example variant: 'basic' for ${config.slotKey === 'slots' ? 'composition API' : 'template'}, '${config.slotKey === 'slots' ? 'options' : 'typescript'}' for ${config.slotKey === 'slots' ? 'options API' : 'component class'} (default: 'basic')`
+            description: `Get a specific code example by ${config.frameworkName} component and section`,
+            inputSchema: {
+                component: z.string().describe('Component name'),
+                section: z.string().describe("Section ID (e.g., 'basic', 'controlled', 'template')"),
+                variant: z
+                    .string()
+                    .optional()
+                    .describe(
+                        `Example variant: 'basic' for ${config.slotKey === 'slots' ? 'composition API' : 'template'}, '${config.slotKey === 'slots' ? 'options' : 'typescript'}' for ${config.slotKey === 'slots' ? 'options API' : 'component class'} (default: 'basic')`
+                    )
             }
         },
         async ({ component, section, variant }) => {

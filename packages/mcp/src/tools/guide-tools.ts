@@ -3,6 +3,7 @@
  */
 
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import { z } from 'zod';
 import { getGuideContent } from '../helpers.js';
 import type { ComponentsData, PrimeMcpConfig } from '../types.js';
 
@@ -11,46 +12,48 @@ import type { ComponentsData, PrimeMcpConfig } from '../types.js';
  */
 export function registerGuideTools(server: McpServer, data: ComponentsData, config: PrimeMcpConfig): void {
     // list_guides
-    server.tool('list_guides', `List all available ${config.frameworkName} guides and documentation pages`, {}, async () => {
-        if (!data.pages || data.pages.length === 0) {
+    server.registerTool(
+        'list_guides',
+        {
+            description: `List all available ${config.frameworkName} guides and documentation pages`
+        },
+        async () => {
+            if (!data.pages || data.pages.length === 0) {
+                return {
+                    content: [{ type: 'text', text: 'No guides available.' }]
+                };
+            }
+
             return {
-                content: [{ type: 'text', text: 'No guides available.' }]
+                content: [
+                    {
+                        type: 'text',
+                        text: JSON.stringify(
+                            {
+                                total: data.pages.length,
+                                guides: data.pages.map((p) => ({
+                                    name: p.name,
+                                    title: p.title,
+                                    description: p.description
+                                }))
+                            },
+                            null,
+                            2
+                        )
+                    }
+                ]
             };
         }
-
-        return {
-            content: [
-                {
-                    type: 'text',
-                    text: JSON.stringify(
-                        {
-                            total: data.pages.length,
-                            guides: data.pages.map((p) => ({
-                                name: p.name,
-                                title: p.title,
-                                description: p.description
-                            }))
-                        },
-                        null,
-                        2
-                    )
-                }
-            ]
-        };
-    });
+    );
 
     // get_guide
-    server.tool(
+    server.registerTool(
         'get_guide',
-        `Get a specific ${config.frameworkName} guide by name`,
         {
-            name: {
-                type: 'string',
-                description: 'Guide name'
-            },
-            section: {
-                type: 'string',
-                description: 'Optional section ID within the guide'
+            description: `Get a specific ${config.frameworkName} guide by name`,
+            inputSchema: {
+                name: z.string().describe('Guide name'),
+                section: z.string().optional().describe('Optional section ID within the guide')
             }
         },
         async ({ name, section }) => {
@@ -63,13 +66,12 @@ export function registerGuideTools(server: McpServer, data: ComponentsData, conf
     );
 
     // get_configuration
-    server.tool(
+    server.registerTool(
         'get_configuration',
-        `Get ${config.frameworkName} application-wide configuration options (ripple, zIndex, locale, PT options, etc.)`,
         {
-            section: {
-                type: 'string',
-                description: "Optional section: 'csp', 'dynamic', 'filtermode', 'locale', 'ripple', 'zindex', etc."
+            description: `Get ${config.frameworkName} application-wide configuration options (ripple, zIndex, locale, PT options, etc.)`,
+            inputSchema: {
+                section: z.string().optional().describe("Optional section: 'csp', 'dynamic', 'filtermode', 'locale', 'ripple', 'zindex', etc.")
             }
         },
         async ({ section }) => {
@@ -93,13 +95,12 @@ export function registerGuideTools(server: McpServer, data: ComponentsData, conf
     );
 
     // get_tailwind_guide
-    server.tool(
+    server.registerTool(
         'get_tailwind_guide',
-        `Get guide for integrating ${config.frameworkName} with Tailwind CSS`,
         {
-            section: {
-                type: 'string',
-                description: "Optional section: 'overview', 'darkmode', 'animations', 'colorpalette', etc."
+            description: `Get guide for integrating ${config.frameworkName} with Tailwind CSS`,
+            inputSchema: {
+                section: z.string().optional().describe("Optional section: 'overview', 'darkmode', 'animations', 'colorpalette', etc.")
             }
         },
         async ({ section }) => {
@@ -123,13 +124,12 @@ export function registerGuideTools(server: McpServer, data: ComponentsData, conf
     );
 
     // get_icons_guide
-    server.tool(
+    server.registerTool(
         'get_icons_guide',
-        `Get guide for using icons in ${config.frameworkName} (PrimeIcons, custom icons, FontAwesome, Material)`,
         {
-            type: {
-                type: 'string',
-                description: "Icon type: 'primeicons' (default) or 'custom' (FontAwesome, Material, SVG)"
+            description: `Get guide for using icons in ${config.frameworkName} (PrimeIcons, custom icons, FontAwesome, Material)`,
+            inputSchema: {
+                type: z.string().optional().describe("Icon type: 'primeicons' (default) or 'custom' (FontAwesome, Material, SVG)")
             }
         },
         async ({ type }) => {
@@ -156,19 +156,24 @@ export function registerGuideTools(server: McpServer, data: ComponentsData, conf
     );
 
     // get_accessibility_guide
-    server.tool('get_accessibility_guide', `Get ${config.frameworkName} accessibility guide (WCAG compliance, ARIA, screen readers)`, {}, async () => {
-        try {
-            const content = getGuideContent(data, config, 'accessibility');
+    server.registerTool(
+        'get_accessibility_guide',
+        {
+            description: `Get ${config.frameworkName} accessibility guide (WCAG compliance, ARIA, screen readers)`
+        },
+        async () => {
+            try {
+                const content = getGuideContent(data, config, 'accessibility');
 
-            return {
-                content: [{ type: 'text', text: content }]
-            };
-        } catch {
-            return {
-                content: [
-                    {
-                        type: 'text',
-                        text: `# ${config.frameworkName} Accessibility
+                return {
+                    content: [{ type: 'text', text: content }]
+                };
+            } catch {
+                return {
+                    content: [
+                        {
+                            type: 'text',
+                            text: `# ${config.frameworkName} Accessibility
 
 ${config.frameworkName} components are designed with accessibility in mind, following WAI-ARIA guidelines.
 
@@ -180,20 +185,20 @@ ${config.frameworkName} components are designed with accessibility in mind, foll
 - High contrast support
 
 For detailed accessibility docs, visit: ${config.baseUrl}/accessibility`
-                    }
-                ]
-            };
+                        }
+                    ]
+                };
+            }
         }
-    });
+    );
 
     // get_theming_info
-    server.tool(
+    server.registerTool(
         'get_theming_info',
-        `Get information about ${config.frameworkName} theming`,
         {
-            mode: {
-                type: 'string',
-                description: "Theming mode: 'styled', 'unstyled', or 'passthrough'. Defaults to 'styled'"
+            description: `Get information about ${config.frameworkName} theming`,
+            inputSchema: {
+                mode: z.string().optional().describe("Theming mode: 'styled', 'unstyled', or 'passthrough'. Defaults to 'styled'")
             }
         },
         async ({ mode }) => {
@@ -236,13 +241,12 @@ For detailed accessibility docs, visit: ${config.baseUrl}/accessibility`
     );
 
     // get_theming_guide (alias with mode parameter)
-    server.tool(
+    server.registerTool(
         'get_theming_guide',
-        `Get detailed ${config.frameworkName} theming guide (styled mode, unstyled mode, design tokens)`,
         {
-            mode: {
-                type: 'string',
-                description: "Theming mode: 'styled' (default), 'unstyled'"
+            description: `Get detailed ${config.frameworkName} theming guide (styled mode, unstyled mode, design tokens)`,
+            inputSchema: {
+                mode: z.string().optional().describe("Theming mode: 'styled' (default), 'unstyled'")
             }
         },
         async ({ mode }) => {
@@ -269,13 +273,12 @@ For detailed accessibility docs, visit: ${config.baseUrl}/accessibility`
     );
 
     // get_passthrough_guide
-    server.tool(
+    server.registerTool(
         'get_passthrough_guide',
-        `Get guide for using Pass Through (PT) to customize ${config.frameworkName} component DOM elements`,
         {
-            section: {
-                type: 'string',
-                description: "Optional section: 'basic', 'global', 'instance', 'lifecycle', etc."
+            description: `Get guide for using Pass Through (PT) to customize ${config.frameworkName} component DOM elements`,
+            inputSchema: {
+                section: z.string().optional().describe("Optional section: 'basic', 'global', 'instance', 'lifecycle', etc.")
             }
         },
         async ({ section }) => {
@@ -299,21 +302,18 @@ For detailed accessibility docs, visit: ${config.baseUrl}/accessibility`
     );
 
     // get_installation
-    server.tool(
-        'get_installation',
-        `Get ${config.frameworkName} installation instructions`,
-        config.slotKey === 'slots'
-            ? {
-                  environment: {
-                      type: 'string',
-                      description: "Environment/framework: 'vite', 'nuxt', 'laravel', or 'cdn'. Defaults to 'vite'"
-                  }
-              }
-            : {},
-        async (args) => {
-            if (config.slotKey === 'slots') {
-                // Vue installation
-                const env = ((args.environment as string) || 'vite').toLowerCase();
+    if (config.slotKey === 'slots') {
+        // Vue installation with environment option
+        server.registerTool(
+            'get_installation',
+            {
+                description: `Get ${config.frameworkName} installation instructions`,
+                inputSchema: {
+                    environment: z.string().optional().describe("Environment/framework: 'vite', 'nuxt', 'laravel', or 'cdn'. Defaults to 'vite'")
+                }
+            },
+            async ({ environment }) => {
+                const env = ((environment as string) || 'vite').toLowerCase();
                 let guide = `# ${config.frameworkName} Installation\n\n`;
 
                 if (env === 'nuxt') {
@@ -327,8 +327,16 @@ For detailed accessibility docs, visit: ${config.baseUrl}/accessibility`
                 guide += `\nFor detailed instructions: ${config.baseUrl}/installation`;
 
                 return { content: [{ type: 'text', text: guide }] };
-            } else {
-                // Angular installation
+            }
+        );
+    } else {
+        // Angular installation (no environment option)
+        server.registerTool(
+            'get_installation',
+            {
+                description: `Get ${config.frameworkName} installation instructions`
+            },
+            async () => {
                 return {
                     content: [
                         {
@@ -391,6 +399,6 @@ For detailed installation, visit: ${config.baseUrl}/installation
                     ]
                 };
             }
-        }
-    );
+        );
+    }
 }
