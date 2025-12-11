@@ -6,7 +6,7 @@ export default defineConfig({
     entry: ['src/index.ts'],
     format: ['esm'],
     outDir: 'dist',
-    dts: true,
+    dts: false,
     external: [/^@primeuix\/(.*)$/, /^@modelcontextprotocol\/(.*)$/],
     minify: isProduction,
     sourcemap: isProduction,

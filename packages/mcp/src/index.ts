@@ -28,7 +28,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 
 import { registerComponentTools, registerExampleTools, registerGuideTools, registerSearchTools } from './tools/index.js';
-import type { ComponentsData, CustomToolDefinition, PrimeMcpConfig } from './types.js';
+import type { ComponentsData, CustomToolDefinition, PrimeMcpConfig, ToolResult } from './types.js';
 
 // Re-export types
 export type { Component, ComponentAPI, ComponentsData, CustomToolDefinition, EmitInfo, KeywordMapping, MethodInfo, Page, PassThroughInfo, PrimeMcpConfig, PropInfo, Section, SlotInfo, StyleInfo, TokenInfo, ToolResult } from './types.js';
@@ -93,7 +93,9 @@ function registerCustomTools(server: McpServer, data: ComponentsData, customTool
         }
 
         server.tool(tool.name, tool.description, params, async (args) => {
-            return tool.handler(data, args as Record<string, unknown>);
+            const result = await tool.handler(data, args as Record<string, unknown>);
+
+            return result as ToolResult & { [x: string]: unknown };
         });
     }
 }

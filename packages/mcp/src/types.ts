@@ -126,10 +126,13 @@ export interface CustomToolDefinition {
 
 // Tool result type
 export interface ToolResult {
+    [x: string]: unknown;
     content: Array<{
         type: 'text';
         text: string;
     }>;
+    _meta?: Record<string, unknown>;
+    isError?: boolean;
 }
 
 // Category keywords mapping for component suggestions
