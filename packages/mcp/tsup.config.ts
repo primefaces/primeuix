@@ -7,7 +7,7 @@ export default defineConfig({
     format: ['esm'],
     outDir: 'dist',
     dts: true,
-    external: [/^@primeuix\/(.*)$/],
+    external: [/^@primeuix\/(.*)$/, /^@modelcontextprotocol\/(.*)$/],
     minify: isProduction,
     sourcemap: isProduction,
     splitting: false,
