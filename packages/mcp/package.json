@@ -36,7 +36,8 @@
         "dev:link": "pnpm link --global && npm link"
     },
     "dependencies": {
-        "@modelcontextprotocol/sdk": "^1.24.3"
+        "@modelcontextprotocol/sdk": "^1.24.3",
+        "zod": "^3.25.76"
     },
     "engines": {
         "node": ">=12.11.0"

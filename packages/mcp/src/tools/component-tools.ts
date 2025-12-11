@@ -3,6 +3,7 @@
  */
 
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import { z } from 'zod';
 import { extractCategory, findComponent, getSlotsOrTemplates, getSlotsOrTemplatesCount } from '../helpers.js';
 import type { ComponentsData, PrimeMcpConfig } from '../types.js';
 
@@ -13,13 +14,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     const slotLabel = config.slotKey === 'slots' ? 'slots' : 'templates';
 
     // list_components
-    server.tool(
+    server.registerTool(
         'list_components',
-        `List all available ${config.frameworkName} components with their categories`,
         {
-            category: {
-                type: 'string',
-                description: 'Optional category filter'
+            description: `List all available ${config.frameworkName} components with their categories`,
+            inputSchema: {
+                category: z.string().optional().describe('Optional category filter')
             }
         },
         async ({ category }) => {
@@ -46,13 +46,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component
-    server.tool(
+    server.registerTool(
         'get_component',
-        `Get detailed information about a specific ${config.frameworkName} component`,
         {
-            name: {
-                type: 'string',
-                description: "Component name (e.g., 'DataTable', 'Button')"
+            description: `Get detailed information about a specific ${config.frameworkName} component`,
+            inputSchema: {
+                name: z.string().describe("Component name (e.g., 'DataTable', 'Button')")
             }
         },
         async ({ name }) => {
@@ -97,13 +96,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // search_components
-    server.tool(
+    server.registerTool(
         'search_components',
-        `Search ${config.frameworkName} components by name or description`,
         {
-            query: {
-                type: 'string',
-                description: 'Search query'
+            description: `Search ${config.frameworkName} components by name or description`,
+            inputSchema: {
+                query: z.string().describe('Search query')
             }
         },
         async ({ query }) => {
@@ -131,13 +129,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_props
-    server.tool(
+    server.registerTool(
         'get_component_props',
-        `Get all props/properties for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get all props/properties for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -150,13 +147,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_events
-    server.tool(
+    server.registerTool(
         'get_component_events',
-        `Get all events for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get all events for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -169,13 +165,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_methods (primarily for Angular/PrimeNG)
-    server.tool(
+    server.registerTool(
         'get_component_methods',
-        `Get all methods for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get all methods for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -202,13 +197,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_slots
-    server.tool(
+    server.registerTool(
         'get_component_slots',
-        `Get all ${slotLabel} for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get all ${slotLabel} for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -222,13 +216,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_usage_example
-    server.tool(
+    server.registerTool(
         'get_usage_example',
-        `Get code examples for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get code examples for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -262,13 +255,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_pt
-    server.tool(
+    server.registerTool(
         'get_component_pt',
-        `Get Pass Through (PT) options for a ${config.frameworkName} component to customize DOM elements`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get Pass Through (PT) options for a ${config.frameworkName} component to customize DOM elements`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -301,13 +293,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_tokens
-    server.tool(
+    server.registerTool(
         'get_component_tokens',
-        `Get design tokens (CSS variables) for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get design tokens (CSS variables) for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -332,13 +323,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_styles
-    server.tool(
+    server.registerTool(
         'get_component_styles',
-        `Get CSS class names for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get CSS class names for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -363,13 +353,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // find_by_prop
-    server.tool(
+    server.registerTool(
         'find_by_prop',
-        `Find ${config.frameworkName} components that have a specific prop`,
         {
-            prop_name: {
-                type: 'string',
-                description: 'Property name to search for'
+            description: `Find ${config.frameworkName} components that have a specific prop`,
+            inputSchema: {
+                prop_name: z.string().describe('Property name to search for')
             }
         },
         async ({ prop_name }) => {
@@ -392,13 +381,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // find_by_event
-    server.tool(
+    server.registerTool(
         'find_by_event',
-        `Find ${config.frameworkName} components that emit a specific event`,
         {
-            event_name: {
-                type: 'string',
-                description: 'Event name to search for'
+            description: `Find ${config.frameworkName} components that emit a specific event`,
+            inputSchema: {
+                event_name: z.string().describe('Event name to search for')
             }
         },
         async ({ event_name }) => {
@@ -421,13 +409,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_url
-    server.tool(
+    server.registerTool(
         'get_component_url',
-        `Get the official documentation URL for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get the official documentation URL for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -440,17 +427,13 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // compare_components
-    server.tool(
+    server.registerTool(
         'compare_components',
-        `Compare two ${config.frameworkName} components side by side`,
         {
-            component1: {
-                type: 'string',
-                description: 'First component name'
-            },
-            component2: {
-                type: 'string',
-                description: 'Second component name'
+            description: `Compare two ${config.frameworkName} components side by side`,
+            inputSchema: {
+                component1: z.string().describe('First component name'),
+                component2: z.string().describe('Second component name')
             }
         },
         async ({ component1, component2 }) => {
@@ -480,45 +463,56 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_categories
-    server.tool('get_categories', `Get all ${config.frameworkName} component categories`, {}, async () => {
-        const categories = [...new Set(data.components.map((c) => extractCategory(c)))];
+    server.registerTool(
+        'get_categories',
+        {
+            description: `Get all ${config.frameworkName} component categories`
+        },
+        async () => {
+            const categories = [...new Set(data.components.map((c) => extractCategory(c)))];
 
-        return {
-            content: [{ type: 'text', text: JSON.stringify(categories, null, 2) }]
-        };
-    });
+            return {
+                content: [{ type: 'text', text: JSON.stringify(categories, null, 2) }]
+            };
+        }
+    );
 
     // get_version_info
-    server.tool('get_version_info', `Get ${config.frameworkName} version and compatibility information`, {}, async () => {
-        return {
-            content: [
-                {
-                    type: 'text',
-                    text: JSON.stringify(
-                        {
-                            framework: config.frameworkName.toLowerCase(),
-                            version: data.version,
-                            generated_at: data.generatedAt,
-                            components_count: data.components.length,
-                            pages_count: data.pages?.length || 0,
-                            compatibility: config.compatibility
-                        },
-                        null,
-                        2
-                    )
-                }
-            ]
-        };
-    });
+    server.registerTool(
+        'get_version_info',
+        {
+            description: `Get ${config.frameworkName} version and compatibility information`
+        },
+        async () => {
+            return {
+                content: [
+                    {
+                        type: 'text',
+                        text: JSON.stringify(
+                            {
+                                framework: config.frameworkName.toLowerCase(),
+                                version: data.version,
+                                generated_at: data.generatedAt,
+                                components_count: data.components.length,
+                                pages_count: data.pages?.length || 0,
+                                compatibility: config.compatibility
+                            },
+                            null,
+                            2
+                        )
+                    }
+                ]
+            };
+        }
+    );
 
     // get_component_sections
-    server.tool(
+    server.registerTool(
         'get_component_sections',
-        `Get all available sections/features for a ${config.frameworkName} component with examples`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get all available sections/features for a ${config.frameworkName} component with examples`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -543,13 +537,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_component_import
-    server.tool(
+    server.registerTool(
         'get_component_import',
-        `Get the correct import statement for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get the correct import statement for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -587,13 +580,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_accessibility_info
-    server.tool(
+    server.registerTool(
         'get_accessibility_info',
-        `Get accessibility information for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get accessibility information for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -623,13 +615,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_related_components
-    server.tool(
+    server.registerTool(
         'get_related_components',
-        `Find ${config.frameworkName} components related to or similar to a given component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Find ${config.frameworkName} components related to or similar to a given component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -653,13 +644,12 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // get_performance_tips
-    server.tool(
+    server.registerTool(
         'get_performance_tips',
-        `Get performance optimization tips for a specific ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Get performance optimization tips for a specific ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {
@@ -684,17 +674,13 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // validate_props
-    server.tool(
+    server.registerTool(
         'validate_props',
-        `Validate if props exist and are correctly used for a ${config.frameworkName} component`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
-            },
-            props: {
-                type: 'object',
-                description: 'Props object to validate'
+            description: `Validate if props exist and are correctly used for a ${config.frameworkName} component`,
+            inputSchema: {
+                component: z.string().describe('Component name'),
+                props: z.record(z.unknown()).describe('Props object to validate')
             }
         },
         async ({ component, props }) => {
@@ -725,17 +711,13 @@ export function registerComponentTools(server: McpServer, data: ComponentsData, 
     );
 
     // generate_component_template
-    server.tool(
+    server.registerTool(
         'generate_component_template',
-        `Generate a basic template for a ${config.frameworkName} component with common props`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
-            },
-            include_events: {
-                type: 'boolean',
-                description: 'Include event handlers'
+            description: `Generate a basic template for a ${config.frameworkName} component with common props`,
+            inputSchema: {
+                component: z.string().describe('Component name'),
+                include_events: z.boolean().optional().describe('Include event handlers')
             }
         },
         async ({ component, include_events }) => {
@@ -842,13 +824,12 @@ ${
     );
 
     // export_component_docs
-    server.tool(
+    server.registerTool(
         'export_component_docs',
-        `Export complete documentation for a ${config.frameworkName} component in markdown format`,
         {
-            component: {
-                type: 'string',
-                description: 'Component name'
+            description: `Export complete documentation for a ${config.frameworkName} component in markdown format`,
+            inputSchema: {
+                component: z.string().describe('Component name')
             }
         },
         async ({ component }) => {

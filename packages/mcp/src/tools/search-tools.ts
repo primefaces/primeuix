@@ -3,6 +3,7 @@
  */
 
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
+import { z } from 'zod';
 import { DATA_COMPONENT_NAMES, DEFAULT_KEYWORD_MAPPING, FORM_COMPONENT_NAMES, OVERLAY_COMPONENT_NAMES } from '../helpers.js';
 import type { ComponentsData, PrimeMcpConfig } from '../types.js';
 
@@ -11,13 +12,12 @@ import type { ComponentsData, PrimeMcpConfig } from '../types.js';
  */
 export function registerSearchTools(server: McpServer, data: ComponentsData, config: PrimeMcpConfig): void {
     // find_components_with_feature
-    server.tool(
+    server.registerTool(
         'find_components_with_feature',
-        `Find ${config.frameworkName} components that support a specific feature (e.g., 'filter', 'lazy', 'virtual', 'template', 'multiple', 'disabled')`,
         {
-            feature: {
-                type: 'string',
-                description: 'Feature to search for in component sections'
+            description: `Find ${config.frameworkName} components that support a specific feature (e.g., 'filter', 'lazy', 'virtual', 'template', 'multiple', 'disabled')`,
+            inputSchema: {
+                feature: z.string().describe('Feature to search for in component sections')
             }
         },
         async ({ feature }) => {
@@ -48,13 +48,12 @@ export function registerSearchTools(server: McpServer, data: ComponentsData, con
     );
 
     // search_all
-    server.tool(
+    server.registerTool(
         'search_all',
-        `Search across all ${config.frameworkName} components, guides, props, and examples`,
         {
-            query: {
-                type: 'string',
-                description: 'Search query'
+            description: `Search across all ${config.frameworkName} components, guides, props, and examples`,
+            inputSchema: {
+                query: z.string().describe('Search query')
             }
         },
         async ({ query }) => {
@@ -110,13 +109,12 @@ export function registerSearchTools(server: McpServer, data: ComponentsData, con
     );
 
     // suggest_component
-    server.tool(
+    server.registerTool(
         'suggest_component',
-        `Suggest ${config.frameworkName} components based on a use case description`,
         {
-            use_case: {
-                type: 'string',
-                description: "Description of what you want to build (e.g., 'data table with sorting', 'date picker', 'file upload', 'dropdown menu')"
+            description: `Suggest ${config.frameworkName} components based on a use case description`,
+            inputSchema: {
+                use_case: z.string().describe("Description of what you want to build (e.g., 'data table with sorting', 'date picker', 'file upload', 'dropdown menu')")
             }
         },
         async ({ use_case }) => {
@@ -171,68 +169,86 @@ export function registerSearchTools(server: McpServer, data: ComponentsData, con
     );
 
     // get_form_components
-    server.tool('get_form_components', `Get all ${config.frameworkName} form input components`, {}, async () => {
-        const formComponents = data.components
-            .filter((c) => FORM_COMPONENT_NAMES.includes(c.name.toLowerCase()))
-            .map((c) => ({
-                name: c.name,
-                title: c.title,
-                description: c.description,
-                props_count: c.api.props?.length || 0,
-                has_validation: c.sections.some((s) => s.id.includes('form') || s.id.includes('invalid'))
-            }));
+    server.registerTool(
+        'get_form_components',
+        {
+            description: `Get all ${config.frameworkName} form input components`
+        },
+        async () => {
+            const formComponents = data.components
+                .filter((c) => FORM_COMPONENT_NAMES.includes(c.name.toLowerCase()))
+                .map((c) => ({
+                    name: c.name,
+                    title: c.title,
+                    description: c.description,
+                    props_count: c.api.props?.length || 0,
+                    has_validation: c.sections.some((s) => s.id.includes('form') || s.id.includes('invalid'))
+                }));
 
-        return {
-            content: [
-                {
-                    type: 'text',
-                    text: JSON.stringify({ category: 'Form Components', total: formComponents.length, components: formComponents }, null, 2)
-                }
-            ]
-        };
-    });
+            return {
+                content: [
+                    {
+                        type: 'text',
+                        text: JSON.stringify({ category: 'Form Components', total: formComponents.length, components: formComponents }, null, 2)
+                    }
+                ]
+            };
+        }
+    );
 
     // get_data_components
-    server.tool('get_data_components', `Get all ${config.frameworkName} data display components (tables, lists, trees)`, {}, async () => {
-        const dataComponents = data.components
-            .filter((c) => DATA_COMPONENT_NAMES.includes(c.name.toLowerCase()))
-            .map((c) => ({
-                name: c.name,
-                title: c.title,
-                description: c.description,
-                features: c.sections
-                    .filter((s) => !['import', 'accessibility', 'basic'].includes(s.id))
-                    .map((s) => s.id)
-                    .slice(0, 10)
-            }));
+    server.registerTool(
+        'get_data_components',
+        {
+            description: `Get all ${config.frameworkName} data display components (tables, lists, trees)`
+        },
+        async () => {
+            const dataComponents = data.components
+                .filter((c) => DATA_COMPONENT_NAMES.includes(c.name.toLowerCase()))
+                .map((c) => ({
+                    name: c.name,
+                    title: c.title,
+                    description: c.description,
+                    features: c.sections
+                        .filter((s) => !['import', 'accessibility', 'basic'].includes(s.id))
+                        .map((s) => s.id)
+                        .slice(0, 10)
+                }));
 
-        return {
-            content: [
-                {
-                    type: 'text',
-                    text: JSON.stringify({ category: 'Data Components', total: dataComponents.length, components: dataComponents }, null, 2)
-                }
-            ]
-        };
-    });
+            return {
+                content: [
+                    {
+                        type: 'text',
+                        text: JSON.stringify({ category: 'Data Components', total: dataComponents.length, components: dataComponents }, null, 2)
+                    }
+                ]
+            };
+        }
+    );
 
     // get_overlay_components
-    server.tool('get_overlay_components', `Get all ${config.frameworkName} overlay/popup components (dialogs, drawers, popovers, tooltips)`, {}, async () => {
-        const overlayComponents = data.components
-            .filter((c) => OVERLAY_COMPONENT_NAMES.includes(c.name.toLowerCase()))
-            .map((c) => ({
-                name: c.name,
-                title: c.title,
-                description: c.description
-            }));
+    server.registerTool(
+        'get_overlay_components',
+        {
+            description: `Get all ${config.frameworkName} overlay/popup components (dialogs, drawers, popovers, tooltips)`
+        },
+        async () => {
+            const overlayComponents = data.components
+                .filter((c) => OVERLAY_COMPONENT_NAMES.includes(c.name.toLowerCase()))
+                .map((c) => ({
+                    name: c.name,
+                    title: c.title,
+                    description: c.description
+                }));
 
-        return {
-            content: [
-                {
-                    type: 'text',
-                    text: JSON.stringify({ category: 'Overlay Components', total: overlayComponents.length, components: overlayComponents }, null, 2)
-                }
-            ]
-        };
-    });
+            return {
+                content: [
+                    {
+                        type: 'text',
+                        text: JSON.stringify({ category: 'Overlay Components', total: overlayComponents.length, components: overlayComponents }, null, 2)
+                    }
+                ]
+            };
+        }
+    );
 }
