@@ -33,6 +33,7 @@
         "@primeuix/forms/*": ["./packages/forms/src/*"],
         "@primeuix/headless/*": ["./packages/headless/src/*"],
         "@primeuix/locale/*": ["./packages/locale/src/*"],
+        "@primeuix/mcp/*": ["./packages/mcp/src/*"],
         "@primeuix/motion/*": ["./packages/motion/src/*", "./packages/motion/types/*"],
         "@primeuix/styled/*": ["./packages/styled/src/*"],
         "@primeuix/utils/*": ["./packages/utils/src/*"],

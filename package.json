@@ -27,6 +27,7 @@
         "build:forms": "pnpm --filter forms build",
         "build:headless": "pnpm --filter headless build",
         "build:locale": "pnpm --filter locale build",
+        "build:mcp": "pnpm --filter mcp build",
         "build:motion": "pnpm --filter motion build",
         "build:styled": "pnpm --filter styled build",
         "build:styles": "pnpm --filter styles build",
