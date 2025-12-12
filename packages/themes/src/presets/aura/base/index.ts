@@ -42,7 +42,7 @@ export const semantic: AuraBaseTokenSections.Semantic = {
         offset: '2px',
         shadow: 'none'
     },
-    disabledOpacity: '0.6',
+    disabledOpacity: '1',
     iconSize: '1rem',
     anchorGutter: '2px',
     primary: {
