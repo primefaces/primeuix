@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/mcp",
-    "version": "0.0.1-alpha.3",
+    "version": "1.0.0",
     "author": "PrimeTek Informatics",
     "description": "Model Context Protocol (MCP) server for PrimeUI Libraries",
     "keywords": ["mcp", "model-context-protocol", "claude", "ai", "llm", "primeng", "primereact", "primevue", "primeuix"],
