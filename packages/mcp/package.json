@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/mcp",
-    "version": "0.0.1-alpha.2",
+    "version": "0.0.1-alpha.3",
     "author": "PrimeTek Informatics",
     "description": "Model Context Protocol (MCP) server for PrimeUI Libraries",
     "keywords": ["mcp", "model-context-protocol", "claude", "ai", "llm", "primeng", "primereact", "primevue", "primeuix"],
@@ -13,14 +13,15 @@
     "bugs": {
         "url": "https://github.com/primefaces/primeuix/issues"
     },
-    "main": "./dist/index.mjs",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.mts",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "types": "./dist/index.d.mts",
-            "import": "./dist/index.mjs",
-            "default": "./dist/index.mjs"
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
         }
     },
     "publishConfig": {
