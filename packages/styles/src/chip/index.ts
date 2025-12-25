@@ -12,7 +12,7 @@ export const style = /*css*/ `
 
     .p-chip-icon {
         color: dt('chip.icon.color');
-        font-size: dt('chip.icon.font.size');
+        font-size: dt('chip.icon.size');
         width: dt('chip.icon.size');
         height: dt('chip.icon.size');
     }
