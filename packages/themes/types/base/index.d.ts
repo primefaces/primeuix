@@ -47,7 +47,7 @@ export declare namespace BaseTokenSections {
         stone?: ColorScale;
     }
 
-    interface SemanticRoot {
+    interface Semantic {
         transitionDuration?: string;
         focusRing?: {
             width?: string;
@@ -59,7 +59,14 @@ export declare namespace BaseTokenSections {
         disabledOpacity?: string;
         iconSize?: string;
         anchorGutter?: string;
-        primary?: ColorScale;
+        primary?:
+            | ColorScale
+            | {
+                  color?: string;
+                  contrastColor?: string;
+                  hoverColor?: string;
+                  activeColor?: string;
+              };
         formField?: {
             paddingX?: string;
             paddingY?: string;
@@ -82,89 +89,6 @@ export declare namespace BaseTokenSections {
                 shadow?: string;
             };
             transitionDuration?: string;
-        };
-        list?: {
-            padding?: string;
-            gap?: string;
-            header?: {
-                padding?: string;
-            };
-            option?: {
-                padding?: string;
-                borderRadius?: string;
-            };
-            optionGroup?: {
-                padding?: string;
-                fontWeight?: string;
-            };
-        };
-        content?: {
-            borderRadius?: string;
-        };
-        mask?: {
-            transitionDuration?: string;
-        };
-        navigation?: {
-            list?: {
-                padding?: string;
-                gap?: string;
-            };
-            item?: {
-                padding?: string;
-                borderRadius?: string;
-                gap?: string;
-            };
-            submenuLabel?: {
-                padding?: string;
-                fontWeight?: string;
-            };
-            submenuIcon?: {
-                size?: string;
-            };
-        };
-        overlay?: {
-            select?: {
-                borderRadius?: string;
-                shadow?: string;
-            };
-            popover?: {
-                borderRadius?: string;
-                padding?: string;
-                shadow?: string;
-            };
-            modal?: {
-                borderRadius?: string;
-                padding?: string;
-                shadow?: string;
-            };
-            navigation?: {
-                shadow?: string;
-            };
-        };
-    }
-
-    interface SemanticColorScheme {
-        surface?: ColorScale;
-        primary?: {
-            color?: string;
-            contrastColor?: string;
-            hoverColor?: string;
-            activeColor?: string;
-        };
-        highlight?: {
-            background?: string;
-            focusBackground?: string;
-            color?: string;
-            focusColor?: string;
-        };
-        focusRing?: {
-            shadow?: string;
-        };
-        mask?: {
-            background?: string;
-            color?: string;
-        };
-        formField?: {
             background?: string;
             disabledBackground?: string;
             filledBackground?: string;
@@ -185,38 +109,15 @@ export declare namespace BaseTokenSections {
             iconColor?: string;
             shadow?: string;
         };
-        text?: {
-            color?: string;
-            hoverColor?: string;
-            mutedColor?: string;
-            hoverMutedColor?: string;
-        };
-        content?: {
-            background?: string;
-            hoverBackground?: string;
-            borderColor?: string;
-            color?: string;
-            hoverColor?: string;
-        };
-        overlay?: {
-            select?: {
-                background?: string;
-                borderColor?: string;
-                color?: string;
-            };
-            popover?: {
-                background?: string;
-                borderColor?: string;
-                color?: string;
-            };
-            modal?: {
-                background?: string;
-                borderColor?: string;
-                color?: string;
-            };
-        };
         list?: {
+            padding?: string;
+            gap?: string;
+            header?: {
+                padding?: string;
+            };
             option?: {
+                padding?: string;
+                borderRadius?: string;
                 focusBackground?: string;
                 selectedBackground?: string;
                 selectedFocusBackground?: string;
@@ -230,12 +131,34 @@ export declare namespace BaseTokenSections {
                 };
             };
             optionGroup?: {
+                padding?: string;
+                fontWeight?: string;
                 background?: string;
                 color?: string;
             };
         };
+        content?: {
+            borderRadius?: string;
+            background?: string;
+            hoverBackground?: string;
+            borderColor?: string;
+            color?: string;
+            hoverColor?: string;
+        };
+        mask?: {
+            transitionDuration?: string;
+            background?: string;
+            color?: string;
+        };
         navigation?: {
+            list?: {
+                padding?: string;
+                gap?: string;
+            };
             item?: {
+                padding?: string;
+                borderRadius?: string;
+                gap?: string;
                 focusBackground?: string;
                 activeBackground?: string;
                 color?: string;
@@ -248,21 +171,62 @@ export declare namespace BaseTokenSections {
                 };
             };
             submenuLabel?: {
+                padding?: string;
+                fontWeight?: string;
                 background?: string;
                 color?: string;
             };
             submenuIcon?: {
+                size?: string;
                 color?: string;
                 focusColor?: string;
                 activeColor?: string;
             };
         };
-    }
-
-    interface Semantic extends SemanticRoot {
+        overlay?: {
+            select?: {
+                borderRadius?: string;
+                shadow?: string;
+                background?: string;
+                borderColor?: string;
+                color?: string;
+            };
+            popover?: {
+                borderRadius?: string;
+                padding?: string;
+                shadow?: string;
+                background?: string;
+                borderColor?: string;
+                color?: string;
+            };
+            modal?: {
+                borderRadius?: string;
+                padding?: string;
+                shadow?: string;
+                background?: string;
+                borderColor?: string;
+                color?: string;
+            };
+            navigation?: {
+                shadow?: string;
+            };
+        };
+        surface?: ColorScale;
+        highlight?: {
+            background?: string;
+            focusBackground?: string;
+            color?: string;
+            focusColor?: string;
+        };
+        text?: {
+            color?: string;
+            hoverColor?: string;
+            mutedColor?: string;
+            hoverMutedColor?: string;
+        };
         colorScheme?: {
-            light?: SemanticColorScheme;
-            dark?: SemanticColorScheme;
+            light?: Omit<Semantic, 'colorScheme'>;
+            dark?: Omit<Semantic, 'colorScheme'>;
         };
     }
 
@@ -294,12 +258,3 @@ export interface BaseDesignTokens {
     primitive?: BaseTokenSections.Primitive;
     semantic?: BaseTokenSections.Semantic;
 }
-
-declare const primitive: BaseTokenSections.Primitive;
-declare const semantic: BaseTokenSections.Semantic;
-declare const _default: {
-    primitive: BaseTokenSections.Primitive;
-    semantic: BaseTokenSections.Semantic;
-};
-
-export { _default as default, primitive, semantic };
