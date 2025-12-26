@@ -1,5 +1,5 @@
 import type { Preset } from '@primeuix/themes/types';
-import type { AuraBaseDesignTokens } from './base/index.d';
+import type { BaseDesignTokens } from '@primeuix/themes/types/base';
 
 import accordion from '@primeuix/themes/aura/accordion';
 import autocomplete from '@primeuix/themes/aura/autocomplete';
@@ -185,4 +185,4 @@ export default {
         virtualscroller
     },
     css
-} satisfies Preset<AuraBaseDesignTokens>;
+} satisfies Preset<BaseDesignTokens>;

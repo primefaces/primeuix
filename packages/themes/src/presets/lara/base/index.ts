@@ -1,6 +1,6 @@
-import type { LaraBaseDesignTokens, LaraBaseTokenSections } from './index.d';
+import type { BaseDesignTokens, BaseTokenSections } from '@primeuix/themes/types/base';
 
-export const primitive: LaraBaseTokenSections.Primitive = {
+export const primitive: BaseTokenSections.Primitive = {
     borderRadius: {
         none: '0',
         xs: '2px',
@@ -33,7 +33,7 @@ export const primitive: LaraBaseTokenSections.Primitive = {
     stone: { 50: '#fafaf9', 100: '#f5f5f4', 200: '#e7e5e4', 300: '#d6d3d1', 400: '#a8a29e', 500: '#78716c', 600: '#57534e', 700: '#44403c', 800: '#292524', 900: '#1c1917', 950: '#0c0a09' }
 };
 
-export const semantic: LaraBaseTokenSections.Semantic = {
+export const semantic: BaseTokenSections.Semantic = {
     transitionDuration: '0.2s',
     focusRing: {
         width: '0',
@@ -401,4 +401,4 @@ export const semantic: LaraBaseTokenSections.Semantic = {
 export default {
     primitive,
     semantic
-} satisfies LaraBaseDesignTokens;
+} satisfies BaseDesignTokens;

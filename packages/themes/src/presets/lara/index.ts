@@ -1,5 +1,5 @@
 import type { Preset } from '@primeuix/themes/types';
-import type { LaraBaseDesignTokens } from './base/index.d';
+import type { BaseDesignTokens } from '@primeuix/themes/types/base';
 
 import accordion from '@primeuix/themes/lara/accordion';
 import autocomplete from '@primeuix/themes/lara/autocomplete';
@@ -183,4 +183,4 @@ export default {
         tooltip,
         virtualscroller
     }
-} satisfies Preset<LaraBaseDesignTokens>;
+} satisfies Preset<BaseDesignTokens>;

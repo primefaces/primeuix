@@ -1,5 +1,5 @@
 import type { Preset } from '@primeuix/themes/types';
-import type { NoraBaseDesignTokens } from './base/index.d';
+import type { BaseDesignTokens } from '@primeuix/themes/types/base';
 
 import accordion from '@primeuix/themes/nora/accordion';
 import autocomplete from '@primeuix/themes/nora/autocomplete';
@@ -183,4 +183,4 @@ export default {
         tooltip,
         virtualscroller
     }
-} satisfies Preset<NoraBaseDesignTokens>;
+} satisfies Preset<BaseDesignTokens>;
