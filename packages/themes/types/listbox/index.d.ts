@@ -156,6 +156,18 @@ export declare namespace ListboxTokenSections {
          * @designToken listbox.option.striped.background
          */
         stripedBackground?: string;
+        /**
+         * Font weight of option
+         *
+         * @designToken listbox.option.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of option
+         *
+         * @designToken listbox.option.font.size
+         */
+        fontSize?: string;
     }
 
     interface OptionGroup {
@@ -177,6 +189,12 @@ export declare namespace ListboxTokenSections {
          * @designToken listbox.option.group.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of option group
+         *
+         * @designToken listbox.option.group.font.size
+         */
+        fontSize?: string;
         /**
          * Padding of option group
          *

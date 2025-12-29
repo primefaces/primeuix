@@ -202,6 +202,18 @@ export declare namespace SelectTokenSections {
              */
             paddingY?: string;
         };
+        /**
+         * Font weight of root
+         *
+         * @designToken select.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of root
+         *
+         * @designToken select.font.size
+         */
+        fontSize?: string;
     }
 
     interface Dropdown {
@@ -333,6 +345,18 @@ export declare namespace SelectTokenSections {
          * @designToken select.option.border.radius
          */
         borderRadius?: string;
+        /**
+         * Font weight of option
+         *
+         * @designToken select.option.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of option
+         *
+         * @designToken select.option.font.size
+         */
+        fontSize?: string;
     }
 
     interface OptionGroup {
@@ -354,6 +378,12 @@ export declare namespace SelectTokenSections {
          * @designToken select.option.group.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of option group
+         *
+         * @designToken select.option.group.font.size
+         */
+        fontSize?: string;
         /**
          * Padding of option group
          *

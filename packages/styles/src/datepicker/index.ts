@@ -126,6 +126,7 @@ export const style = /*css*/ `
         justify-content: space-between;
         gap: dt('datepicker.title.gap');
         font-weight: dt('datepicker.title.font.weight');
+        font-size: dt('datepicker.title.font.size');
     }
 
     .p-datepicker-select-year,
@@ -147,12 +148,16 @@ export const style = /*css*/ `
         padding: dt('datepicker.select.month.padding');
         color: dt('datepicker.select.month.color');
         border-radius: dt('datepicker.select.month.border.radius');
+        font-weight: dt('datepicker.select.month.font.weight');
+        font-size: dt('datepicker.select.month.font.size');
     }
 
     .p-datepicker-select-year {
         padding: dt('datepicker.select.year.padding');
         color: dt('datepicker.select.year.color');
         border-radius: dt('datepicker.select.year.border.radius');
+        font-weight: dt('datepicker.select.year.font.weight');
+        font-size: dt('datepicker.select.year.font.size');
     }
 
     .p-datepicker-select-month:enabled:hover {
@@ -205,6 +210,7 @@ export const style = /*css*/ `
 
     .p-datepicker-weekday {
         font-weight: dt('datepicker.week.day.font.weight');
+        font-size: dt('datepicker.week.day.font.size');
         color: dt('datepicker.week.day.color');
     }
 
@@ -232,6 +238,8 @@ export const style = /*css*/ `
         border: 1px solid transparent;
         outline-color: transparent;
         color: dt('datepicker.date.color');
+        font-weight: dt('datepicker.date.font.weight');
+        font-size: dt('datepicker.date.font.size');
     }
 
     .p-datepicker-day:not(.p-datepicker-day-selected):not(.p-disabled):hover {
@@ -296,6 +304,8 @@ export const style = /*css*/ `
         border-radius: dt('datepicker.month.border.radius');
         outline-color: transparent;
         color: dt('datepicker.date.color');
+        font-weight: dt('datepicker.date.font.weight');
+        font-size: dt('datepicker.date.font.size');
     }
 
     .p-datepicker-month:not(.p-disabled):not(.p-datepicker-month-selected):hover {
@@ -336,6 +346,8 @@ export const style = /*css*/ `
         border-radius: dt('datepicker.year.border.radius');
         outline-color: transparent;
         color: dt('datepicker.date.color');
+        font-weight: dt('datepicker.date.font.weight');
+        font-size: dt('datepicker.date.font.size');
     }
 
     .p-datepicker-year:not(.p-disabled):not(.p-datepicker-year-selected):hover {
@@ -377,6 +389,7 @@ export const style = /*css*/ `
 
     .p-datepicker-calendar-container + .p-datepicker-time-picker {
         padding: dt('datepicker.time.picker.padding');
+        margin-block-start: dt('datepicker.time.picker.gap');
     }
 
     .p-datepicker-time-picker > div {
@@ -387,7 +400,9 @@ export const style = /*css*/ `
     }
 
     .p-datepicker-time-picker span {
-        font-size: 1rem;
+        color: dt('datepicker.time.picker.color');
+        font-weight: dt('datepicker.time.picker.font.weight');
+        font-size: dt('datepicker.time.picker.font.size');
     }
 
     .p-datepicker-timeonly .p-datepicker-time-picker {

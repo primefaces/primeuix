@@ -1,8 +1,8 @@
 import type { ToggleSwitchDesignTokens, ToggleSwitchTokenSections } from '@primeuix/themes/types/toggleswitch';
 
 export const root: ToggleSwitchTokenSections.Root = {
-    width: '2.5rem',
-    height: '1.5rem',
+    width: '2.25rem',
+    height: '1.375rem',
     borderRadius: '30px',
     gap: '0.25rem',
     shadow: '{form.field.shadow}',
@@ -25,7 +25,7 @@ export const root: ToggleSwitchTokenSections.Root = {
 
 export const handle: ToggleSwitchTokenSections.Handle = {
     borderRadius: '50%',
-    size: '1rem'
+    size: '0.875rem'
 };
 
 export const colorScheme: ToggleSwitchTokenSections.ColorScheme = {

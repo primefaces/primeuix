@@ -202,6 +202,18 @@ export declare namespace TreeSelectTokenSections {
              */
             paddingY?: string;
         };
+        /**
+         * Font weight of root
+         *
+         * @designToken treeselect.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of root
+         *
+         * @designToken treeselect.font.size
+         */
+        fontSize?: string;
     }
 
     interface Dropdown {

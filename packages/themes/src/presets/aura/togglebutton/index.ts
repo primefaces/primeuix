@@ -4,6 +4,7 @@ export const root: ToggleButtonTokenSections.Root = {
     padding: '0.25rem',
     borderRadius: '{content.border.radius}',
     gap: '0.5rem',
+    fontSize: '{form.field.font.size}',
     fontWeight: '500',
     disabledBackground: '{form.field.disabled.background}',
     disabledBorderColor: '{form.field.disabled.background}',
@@ -32,14 +33,14 @@ export const icon: ToggleButtonTokenSections.Icon = {
 };
 
 export const content: ToggleButtonTokenSections.Content = {
-    padding: '0.25rem 0.75rem',
+    padding: '0.125rem 0.625rem',
     borderRadius: '{content.border.radius}',
     checkedShadow: '0px 1px 2px 0px rgba(0, 0, 0, 0.02), 0px 1px 2px 0px rgba(0, 0, 0, 0.04)',
     sm: {
-        padding: '0.25rem 0.75rem'
+        padding: '0.125rem 0.625rem'
     },
     lg: {
-        padding: '0.25rem 0.75rem'
+        padding: '0.125rem 0.625rem'
     }
 };
 

@@ -33,6 +33,11 @@ export const style = /*css*/ `
         background: dt('password.strength.strong.background');
     }
 
+    .p-password-meter-text {
+        font-weight: dt('password.meter.text.font.weight');
+        font-size: dt('password.meter.text.font.size');
+    }
+
     .p-password-fluid {
         display: flex;
     }

@@ -1,6 +1,8 @@
 import type { TextareaDesignTokens, TextareaTokenSections } from '@primeuix/themes/types/textarea';
 
 export const root: TextareaTokenSections.Root = {
+    fontSize: '{form.field.font.size}',
+    fontWeight: '{form.field.font.weight}',
     background: '{form.field.background}',
     disabledBackground: '{form.field.disabled.background}',
     filledBackground: '{form.field.filled.background}',

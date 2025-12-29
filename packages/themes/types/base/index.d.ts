@@ -23,6 +23,13 @@ export declare namespace BaseTokenSections {
             lg?: string;
             xl?: string;
         };
+        fontSize: {
+            xs?: string;
+            sm?: string;
+            base?: string;
+            lg?: string;
+            xl?: string;
+        };
         emerald?: ColorScale;
         green?: ColorScale;
         lime?: ColorScale;
@@ -47,7 +54,15 @@ export declare namespace BaseTokenSections {
         stone?: ColorScale;
     }
 
+    interface Typography {
+        lineHeight?: string;
+        fontFamily?: string;
+        fontWeight?: string;
+        fontSize?: string;
+    }
+
     interface Semantic {
+        typography?: Typography;
         transitionDuration?: string;
         focusRing?: {
             width?: string;
@@ -68,6 +83,8 @@ export declare namespace BaseTokenSections {
                   activeColor?: string;
               };
         formField?: {
+            fontWeight?: string;
+            fontSize?: string;
             paddingX?: string;
             paddingY?: string;
             sm?: {
@@ -79,6 +96,7 @@ export declare namespace BaseTokenSections {
                 fontSize?: string;
                 paddingX?: string;
                 paddingY?: string;
+                typography?: Typography;
             };
             borderRadius?: string;
             focusRing?: {
@@ -116,6 +134,8 @@ export declare namespace BaseTokenSections {
                 padding?: string;
             };
             option?: {
+                fontWeight?: string;
+                fontSize?: string;
                 padding?: string;
                 borderRadius?: string;
                 focusBackground?: string;
@@ -131,6 +151,8 @@ export declare namespace BaseTokenSections {
                 };
             };
             optionGroup?: {
+                fontWeight?: string;
+                fontSize?: string;
                 padding?: string;
                 fontWeight?: string;
                 background?: string;

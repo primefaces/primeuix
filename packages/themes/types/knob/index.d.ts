@@ -81,6 +81,18 @@ export declare namespace KnobTokenSections {
          * @designToken knob.text.color
          */
         color?: string;
+        /**
+         * Font size of text
+         *
+         * @designToken knob.text.font.size
+         */
+        fontSize?: string;
+        /**
+         * Font weight of text
+         *
+         * @designToken knob.text.font.weight
+         */
+        fontWeight?: string;
     }
 
     /* Static Sections */

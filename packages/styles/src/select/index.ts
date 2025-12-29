@@ -80,7 +80,8 @@ export const style = /*css*/ `
         background: transparent;
         border: 0 none;
         outline: 0 none;
-        font-size: 1rem;
+        font-weight: dt('select.font.weight');
+        font-size: dt('select.font.size');
     }
 
     .p-select-label.p-placeholder {
@@ -137,6 +138,7 @@ export const style = /*css*/ `
         background: dt('select.option.group.background');
         color: dt('select.option.group.color');
         font-weight: dt('select.option.group.font.weight');
+        font-size: dt('select.option.group.font.size');
     }
 
     .p-select-list {
@@ -151,7 +153,8 @@ export const style = /*css*/ `
 
     .p-select-option {
         cursor: pointer;
-        font-weight: normal;
+        font-weight: dt('select.option.font.weight');
+        font-size: dt('select.option.font.size');
         white-space: nowrap;
         position: relative;
         overflow: hidden;

@@ -12,6 +12,7 @@ export const style = /*css*/ `
         transition-property: all;
         transition-timing-function: ease;
         line-height: 1;
+        font-size: dt('floatlabel.font.size');
         font-weight: dt('floatlabel.font.weight');
         inset-inline-start: dt('floatlabel.position.x');
         color: dt('floatlabel.color');

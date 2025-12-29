@@ -90,6 +90,21 @@ export declare namespace PasswordTokenSections {
         gap?: string;
     }
 
+    interface MeterText {
+        /**
+         * Font weight of meter text
+         *
+         * @designToken password.meter.text.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of meter text
+         *
+         * @designToken password.meter.text.font.size
+         */
+        fontSize?: string;
+    }
+
     interface Strength {
         /**
          * Weak background of strength
@@ -156,4 +171,8 @@ export interface PasswordDesignTokens extends DesignTokens<PasswordDesignTokens>
      * Used to pass tokens of the strength section
      */
     strength?: PasswordTokenSections.Strength;
+    /**
+     * Used to pass tokens of the meter text
+     */
+    meterText?: PasswordTokenSections.MeterText;
 }

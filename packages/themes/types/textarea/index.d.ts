@@ -202,6 +202,18 @@ export declare namespace TextareaTokenSections {
              */
             paddingY?: string;
         };
+        /**
+         * Font weight of root
+         *
+         * @designToken textarea.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of root
+         *
+         * @designToken textarea.font.size
+         */
+        fontSize?: string;
     }
 
     /* Static Sections */

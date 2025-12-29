@@ -80,6 +80,8 @@ export const style = /*css*/ `
         text-overflow: ellipsis;
         padding: dt('multiselect.padding.y') dt('multiselect.padding.x');
         color: dt('multiselect.color');
+        font-weight: dt('multiselect.font.weight');
+        font-size: dt('multiselect.font.size');
     }
 
     .p-multiselect-display-chip .p-multiselect-label {
@@ -151,6 +153,8 @@ export const style = /*css*/ `
 
     .p-multiselect-option {
         cursor: pointer;
+        font-weight: dt('multiselect.option.font.weight');
+        font-size: dt('multiselect.option.font.size');
         font-weight: normal;
         white-space: nowrap;
         position: relative;
@@ -198,6 +202,7 @@ export const style = /*css*/ `
         background: dt('multiselect.option.group.background');
         color: dt('multiselect.option.group.color');
         font-weight: dt('multiselect.option.group.font.weight');
+        font-size: dt('multiselect.option.group.font.size');
     }
 
     .p-multiselect-empty-message {

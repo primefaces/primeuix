@@ -9,9 +9,6 @@ export const style = /*css*/ `
         background: dt('togglebutton.background');
         border: 1px solid dt('togglebutton.border.color');
         padding: dt('togglebutton.padding');
-        font-size: 1rem;
-        font-family: inherit;
-        font-feature-settings: inherit;
         transition:
             background dt('togglebutton.transition.duration'),
             color dt('togglebutton.transition.duration'),
@@ -20,6 +17,7 @@ export const style = /*css*/ `
             box-shadow dt('togglebutton.transition.duration');
         border-radius: dt('togglebutton.border.radius');
         outline-color: transparent;
+        font-size: dt('togglebutton.font.size');
         font-weight: dt('togglebutton.font.weight');
     }
 

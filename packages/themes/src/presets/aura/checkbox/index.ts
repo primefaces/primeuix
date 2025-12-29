@@ -2,8 +2,8 @@ import type { CheckboxDesignTokens, CheckboxTokenSections } from '@primeuix/them
 
 export const root: CheckboxTokenSections.Root = {
     borderRadius: '{border.radius.sm}',
-    width: '1.25rem',
-    height: '1.25rem',
+    width: '1.125rem',
+    height: '1.125rem',
     background: '{form.field.background}',
     checkedBackground: '{primary.color}',
     checkedHoverBackground: '{primary.hover.color}',
@@ -27,26 +27,26 @@ export const root: CheckboxTokenSections.Root = {
     },
     transitionDuration: '{form.field.transition.duration}',
     sm: {
-        width: '1rem',
-        height: '1rem'
+        width: '0.875rem',
+        height: '0.875rem'
     },
     lg: {
-        width: '1.5rem',
-        height: '1.5rem'
+        width: '1.25rem',
+        height: '1.25rem'
     }
 };
 
 export const icon: CheckboxTokenSections.Icon = {
-    size: '0.875rem',
+    size: '0.75rem',
     color: '{form.field.color}',
     checkedColor: '{primary.contrast.color}',
     checkedHoverColor: '{primary.contrast.color}',
     disabledColor: '{form.field.disabled.color}',
     sm: {
-        size: '0.75rem'
+        size: '0.625rem'
     },
     lg: {
-        size: '1rem'
+        size: '0.875rem'
     }
 };
 

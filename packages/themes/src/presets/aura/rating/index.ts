@@ -13,7 +13,7 @@ export const root: RatingTokenSections.Root = {
 };
 
 export const icon: RatingTokenSections.Icon = {
-    size: '1rem',
+    size: '0.875rem',
     color: '{text.muted.color}',
     hoverColor: '{primary.color}',
     activeColor: '{primary.color}'

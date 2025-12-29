@@ -1,8 +1,7 @@
 export const style = /*css*/ `
     .p-textarea {
-        font-family: inherit;
-        font-feature-settings: inherit;
-        font-size: 1rem;
+        font-weight: dt('textarea.font.weight');
+        font-size: dt('textarea.font.size');
         color: dt('textarea.color');
         background: dt('textarea.background');
         padding-block: dt('textarea.padding.y');

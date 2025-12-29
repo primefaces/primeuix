@@ -261,6 +261,18 @@ export declare namespace AutoCompleteTokenSections {
          * @designToken autocomplete.option.border.radius
          */
         borderRadius?: string;
+        /**
+         * Font weight of option
+         *
+         * @designToken autocomplete.option.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of option
+         *
+         * @designToken autocomplete.option.font.size
+         */
+        fontSize?: string;
     }
 
     interface OptionGroup {
@@ -282,6 +294,12 @@ export declare namespace AutoCompleteTokenSections {
          * @designToken autocomplete.option.group.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of option group
+         *
+         * @designToken autocomplete.option.group.font.size
+         */
+        fontSize?: string;
         /**
          * Padding of option group
          *

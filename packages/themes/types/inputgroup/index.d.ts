@@ -49,6 +49,18 @@ export declare namespace InputGroupTokenSections {
          * @designToken inputgroup.addon.min.width
          */
         minWidth?: string;
+        /**
+         * Font weight of addon
+         *
+         * @designToken inputgroup.addon.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of addon
+         *
+         * @designToken inputgroup.addon.font.size
+         */
+        fontSize?: string;
     }
 
     /* Static Sections */

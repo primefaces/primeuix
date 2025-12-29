@@ -100,6 +100,12 @@ export declare namespace DatePickerTokenSections {
          * @designToken datepicker.title.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of title
+         *
+         * @designToken datepicker.title.font.size
+         */
+        fontSize?: string;
     }
 
     interface Dropdown {
@@ -268,6 +274,18 @@ export declare namespace DatePickerTokenSections {
          * @designToken datepicker.select.month.border.radius
          */
         borderRadius?: string;
+        /**
+         * Font weight of select month
+         *
+         * @designToken datepicker.select.month.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of select month
+         *
+         * @designToken datepicker.select.month.font.size
+         */
+        fontSize?: string;
     }
 
     interface SelectYear {
@@ -301,6 +319,18 @@ export declare namespace DatePickerTokenSections {
          * @designToken datepicker.select.year.border.radius
          */
         borderRadius?: string;
+        /**
+         * Font weight of select year
+         *
+         * @designToken datepicker.select.year.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of select year
+         *
+         * @designToken datepicker.select.year.font.size
+         */
+        fontSize?: string;
     }
 
     interface Group {
@@ -340,6 +370,12 @@ export declare namespace DatePickerTokenSections {
          * @designToken datepicker.week.day.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of week day
+         *
+         * @designToken datepicker.week.day.font.size
+         */
+        fontSize?: string;
         /**
          * Color of week day
          *
@@ -450,6 +486,18 @@ export declare namespace DatePickerTokenSections {
              */
             shadow?: string;
         };
+        /**
+         * Font weight of date
+         *
+         * @designToken datepicker.date.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of date
+         *
+         * @designToken datepicker.date.font.size
+         */
+        fontSize?: string;
     }
 
     interface MonthView {
@@ -540,6 +588,24 @@ export declare namespace DatePickerTokenSections {
          * @designToken datepicker.time.picker.button.gap
          */
         buttonGap?: string;
+        /**
+         * Color of time picker label
+         *
+         * @designToken datepicker.time.picker.color
+         */
+        color?: string;
+        /**
+         * Font weight of time picker label
+         *
+         * @designToken datepicker.time.picker.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of time picker label
+         *
+         * @designToken datepicker.time.picker.font.size
+         */
+        fontSize?: string;
     }
 
     interface Today {

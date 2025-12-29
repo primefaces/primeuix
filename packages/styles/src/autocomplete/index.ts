@@ -93,6 +93,8 @@ export const style = /*css*/ `
     }
 
     .p-autocomplete-option {
+        font-weight: dt('autocomplete.option.font.weight');
+        font-size: dt('autocomplete.option.font.size');
         cursor: pointer;
         white-space: nowrap;
         position: relative;
@@ -131,11 +133,12 @@ export const style = /*css*/ `
     }
 
     .p-autocomplete-option-group {
+        font-weight: dt('autocomplete.option.group.font.weight');
+        font-size: dt('autocomplete.option.group.font.size');
         margin: 0;
         padding: dt('autocomplete.option.group.padding');
         color: dt('autocomplete.option.group.color');
         background: dt('autocomplete.option.group.background');
-        font-weight: dt('autocomplete.option.group.font.weight');
     }
 
     .p-autocomplete-input-multiple {

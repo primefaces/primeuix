@@ -3,7 +3,7 @@ import type { PasswordDesignTokens, PasswordTokenSections } from '@primeuix/them
 export const meter: PasswordTokenSections.Meter = {
     background: '{content.border.color}',
     borderRadius: '{content.border.radius}',
-    height: '.75rem'
+    height: '.625rem'
 };
 
 export const icon: PasswordTokenSections.Icon = {
@@ -21,6 +21,11 @@ export const overlay: PasswordTokenSections.Overlay = {
 
 export const content: PasswordTokenSections.Content = {
     gap: '0.5rem'
+};
+
+export const meterText: PasswordTokenSections.MeterText = {
+    fontSize: '{typography.font.size}',
+    fontWeight: '{typography.font.weight}'
 };
 
 export const colorScheme: PasswordTokenSections.ColorScheme = {
@@ -45,5 +50,6 @@ export default {
     icon,
     overlay,
     content,
+    meterText,
     colorScheme
 } satisfies PasswordDesignTokens;

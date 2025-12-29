@@ -202,6 +202,18 @@ export declare namespace InputTextTokenSections {
              */
             paddingY?: string;
         };
+        /**
+         * Font weight of root
+         *
+         * @designToken inputtext.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of root
+         *
+         * @designToken inputtext.font.size
+         */
+        fontSize?: string;
     }
 
     /* Static Sections */

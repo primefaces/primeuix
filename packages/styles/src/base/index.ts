@@ -5,6 +5,12 @@ export const style = /*css*/ `
         box-sizing: border-box;
     }
 
+    .p-component {
+        font-family: dt('typography.font.family');
+        font-feature-settings: inherit;
+        line-height: dt('typography.line.height');
+    }
+
     .p-collapsible-enter-active {
         animation: p-animate-collapsible-expand 0.2s ease-out;
         overflow: hidden;

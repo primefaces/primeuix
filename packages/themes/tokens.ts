@@ -14,6 +14,7 @@ export interface Tokens {
     autocomplete: TokenMetaData;
     avatar: TokenMetaData;
     badge: TokenMetaData;
+    base: TokenMetaData;
     blockui: TokenMetaData;
     breadcrumb: TokenMetaData;
     button: TokenMetaData;
@@ -1010,6 +1011,10 @@ export default {
             }
         ]
     },
+    base: {
+        description: 'Base Design Tokens',
+        tokens: []
+    },
     blockui: {
         description: 'BlockUI Design Tokens',
         tokens: [
@@ -1160,6 +1165,12 @@ export default {
                 token: 'button.icon.only.width',
                 variable: '--p-button-icon-only-width',
                 description: 'Icon only width of root'
+            },
+            {
+                name: 'button.root.fontSize',
+                token: 'button.icon.only.width',
+                variable: '--p-button-icon-only-width',
+                description: 'Font size of root'
             },
             {
                 name: 'button.root.sm.fontSize',
@@ -5348,6 +5359,12 @@ export default {
                 description: 'Position y of root'
             },
             {
+                name: 'floatlabel.root.fontSize',
+                token: 'floatlabel.font.size',
+                variable: '--p-floatlabel-font-size',
+                description: 'Font size of root'
+            },
+            {
                 name: 'floatlabel.root.fontWeight',
                 token: 'floatlabel.font.weight',
                 variable: '--p-floatlabel-font-weight',
@@ -6915,6 +6932,18 @@ export default {
                 token: 'knob.text.color',
                 variable: '--p-knob-text-color',
                 description: 'Color of text'
+            },
+            {
+                name: 'knob.text.fontSize',
+                token: 'knob.text.font.size',
+                variable: '--p-knob-text-font-size',
+                description: 'Font size of text'
+            },
+            {
+                name: 'knob.text.fontWeight',
+                token: 'knob.text.font.weight',
+                variable: '--p-knob-text-font-weight',
+                description: 'Font weight of text'
             }
         ]
     },
@@ -9355,6 +9384,18 @@ export default {
                 token: 'password.content.gap',
                 variable: '--p-password-content-gap',
                 description: 'Gap of content'
+            },
+            {
+                name: 'password.meterText.fontSize',
+                token: 'password.meter.text.font.size',
+                variable: '--p-password-meter-text-font-size',
+                description: 'Font size of meter text'
+            },
+            {
+                name: 'password.meterText.fontWeight',
+                token: 'password.meter.text.font.weight',
+                variable: '--p-password-meter-text-font-weight',
+                description: 'Font weight of meter text'
             },
             {
                 name: 'password.strength.weakBackground',

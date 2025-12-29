@@ -1,6 +1,8 @@
 import type { SelectDesignTokens, SelectTokenSections } from '@primeuix/themes/types/select';
 
 export const root: SelectTokenSections.Root = {
+    fontSize: '{form.field.font.size}',
+    fontWeight: '{form.field.font.weight}',
     background: '{form.field.background}',
     disabledBackground: '{form.field.disabled.background}',
     filledBackground: '{form.field.filled.background}',
@@ -39,7 +41,7 @@ export const root: SelectTokenSections.Root = {
 };
 
 export const dropdown: SelectTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     color: '{form.field.icon.color}'
 };
 
@@ -60,6 +62,8 @@ export const list: SelectTokenSections.List = {
 };
 
 export const option: SelectTokenSections.Option = {
+    fontSize: '{list.option.font.size}',
+    fontWeight: '{list.option.font.weight}',
     focusBackground: '{list.option.focus.background}',
     selectedBackground: '{list.option.selected.background}',
     selectedFocusBackground: '{list.option.selected.focus.background}',
@@ -74,6 +78,7 @@ export const option: SelectTokenSections.Option = {
 export const optionGroup: SelectTokenSections.OptionGroup = {
     background: '{list.option.group.background}',
     color: '{list.option.group.color}',
+    fontSize: '{list.option.group.font.size}',
     fontWeight: '{list.option.group.font.weight}',
     padding: '{list.option.group.padding}'
 };
@@ -84,8 +89,8 @@ export const clearIcon: SelectTokenSections.ClearIcon = {
 
 export const checkmark: SelectTokenSections.Checkmark = {
     color: '{list.option.color}',
-    gutterStart: '-0.375rem',
-    gutterEnd: '0.375rem'
+    gutterStart: '-0.25rem',
+    gutterEnd: '0.25rem'
 };
 
 export const emptyMessage: SelectTokenSections.EmptyMessage = {

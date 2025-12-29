@@ -50,6 +50,12 @@ export declare namespace ButtonTokenSections {
          */
         iconOnlyWidth?: string;
         /**
+         * Font size of root
+         *
+         * @designToken button.icon.only.width
+         */
+        fontSize?: string;
+        /**
          * Sm of root
          */
         sm?: {

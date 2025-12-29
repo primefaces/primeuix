@@ -202,6 +202,18 @@ export declare namespace MultiSelectTokenSections {
              */
             paddingY?: string;
         };
+        /**
+         * Font weight of root
+         *
+         * @designToken multiselect.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of root
+         *
+         * @designToken multiselect.font.size
+         */
+        fontSize?: string;
     }
 
     interface Dropdown {
@@ -339,6 +351,18 @@ export declare namespace MultiSelectTokenSections {
          * @designToken multiselect.option.gap
          */
         gap?: string;
+        /**
+         * Font weight of option
+         *
+         * @designToken multiselect.option.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of option
+         *
+         * @designToken multiselect.option.font.size
+         */
+        fontSize?: string;
     }
 
     interface OptionGroup {
@@ -360,6 +384,12 @@ export declare namespace MultiSelectTokenSections {
          * @designToken multiselect.option.group.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of option group
+         *
+         * @designToken multiselect.option.group.font.size
+         */
+        fontSize?: string;
         /**
          * Padding of option group
          *

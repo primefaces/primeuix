@@ -1,6 +1,8 @@
 import type { MultiSelectDesignTokens, MultiSelectTokenSections } from '@primeuix/themes/types/multiselect';
 
 export const root: MultiSelectTokenSections.Root = {
+    fontSize: '{form.field.font.size}',
+    fontWeight: '{form.field.font.weight}',
     background: '{form.field.background}',
     disabledBackground: '{form.field.disabled.background}',
     filledBackground: '{form.field.filled.background}',
@@ -39,7 +41,7 @@ export const root: MultiSelectTokenSections.Root = {
 };
 
 export const dropdown: MultiSelectTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     color: '{form.field.icon.color}'
 };
 
@@ -60,6 +62,8 @@ export const list: MultiSelectTokenSections.List = {
 };
 
 export const option: MultiSelectTokenSections.Option = {
+    fontSize: '{list.option.font.size}',
+    fontWeight: '{list.option.font.weight}',
     focusBackground: '{list.option.focus.background}',
     selectedBackground: '{list.option.selected.background}',
     selectedFocusBackground: '{list.option.selected.focus.background}',
@@ -75,6 +79,7 @@ export const option: MultiSelectTokenSections.Option = {
 export const optionGroup: MultiSelectTokenSections.OptionGroup = {
     background: '{list.option.group.background}',
     color: '{list.option.group.color}',
+    fontSize: '{list.option.group.font.size}',
     fontWeight: '{list.option.group.font.weight}',
     padding: '{list.option.group.padding}'
 };

@@ -56,6 +56,12 @@ export declare namespace FloatLabelTokenSections {
          */
         positionY?: string;
         /**
+         * Font size of root
+         *
+         * @designToken floatlabel.font.size
+         */
+        fontSize?: string;
+        /**
          * Font weight of root
          *
          * @designToken floatlabel.font.weight

@@ -83,6 +83,8 @@ export const style = /*css*/ `
         text-overflow: ellipsis;
         padding: dt('treeselect.padding.y') dt('treeselect.padding.x');
         color: dt('treeselect.color');
+        font-weight: dt('treeselect.font.weight');
+        font-size: dt('treeselect.font.size');
     }
 
     .p-treeselect-label.p-placeholder {

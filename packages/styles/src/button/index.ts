@@ -11,9 +11,7 @@ export const style = /*css*/ `
         background: dt('button.primary.background');
         border: 1px solid dt('button.primary.border.color');
         padding: dt('button.padding.y') dt('button.padding.x');
-        font-size: 1rem;
-        font-family: inherit;
-        font-feature-settings: inherit;
+        font-size: dt('button.font.size');
         transition:
             background dt('button.transition.duration'),
             color dt('button.transition.duration'),

@@ -9,6 +9,13 @@ export const primitive: BaseTokenSections.Primitive = {
         lg: '8px',
         xl: '12px'
     },
+    fontSize: {
+        xs: '0.75rem',
+        sm: '0.875rem',
+        base: '1rem',
+        lg: '1.125rem',
+        xl: '1.25rem'
+    },
     emerald: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b', 950: '#022c22' },
     green: { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d', 950: '#052e16' },
     lime: { 50: '#f7fee7', 100: '#ecfccb', 200: '#d9f99d', 300: '#bef264', 400: '#a3e635', 500: '#84cc16', 600: '#65a30d', 700: '#4d7c0f', 800: '#3f6212', 900: '#365314', 950: '#1a2e05' },
@@ -34,6 +41,12 @@ export const primitive: BaseTokenSections.Primitive = {
 };
 
 export const semantic: BaseTokenSections.Semantic = {
+    typography: {
+        lineHeight: '1.5',
+        fontFamily: 'inherit',
+        fontWeight: 'normal',
+        fontSize: '{font.size.sm}'
+    },
     transitionDuration: '0.2s',
     focusRing: {
         width: '1px',
@@ -43,7 +56,7 @@ export const semantic: BaseTokenSections.Semantic = {
         shadow: 'none'
     },
     disabledOpacity: '0.6',
-    iconSize: '1rem',
+    iconSize: '0.875rem',
     anchorGutter: '2px',
     primary: {
         50: '{emerald.50}',
@@ -59,17 +72,19 @@ export const semantic: BaseTokenSections.Semantic = {
         950: '{emerald.950}'
     },
     formField: {
-        paddingX: '0.75rem',
-        paddingY: '0.5rem',
+        fontWeight: '{typography.font.weight}',
+        fontSize: '{typography.font.size}',
+        paddingX: '0.625rem',
+        paddingY: '0.375rem',
         sm: {
-            fontSize: '0.875rem',
-            paddingX: '0.625rem',
-            paddingY: '0.375rem'
+            fontSize: '0.75rem',
+            paddingX: '0.5rem',
+            paddingY: '0.25rem'
         },
         lg: {
-            fontSize: '1.125rem',
-            paddingX: '0.875rem',
-            paddingY: '0.625rem'
+            fontSize: '1rem',
+            paddingX: '0.75rem',
+            paddingY: '0.5rem'
         },
         borderRadius: '{border.radius.md}',
         focusRing: {
@@ -85,15 +100,18 @@ export const semantic: BaseTokenSections.Semantic = {
         padding: '0.25rem 0.25rem',
         gap: '2px',
         header: {
-            padding: '0.5rem 1rem 0.25rem 1rem'
+            padding: '0.375rem 0.375rem 0.125rem 0.375rem'
         },
         option: {
-            padding: '0.5rem 0.75rem',
-            borderRadius: '{border.radius.sm}'
+            padding: '0.25rem 0.625rem',
+            borderRadius: '{border.radius.sm}',
+            fontWeight: 'normal',
+            fontSize: '0.875rem'
         },
         optionGroup: {
-            padding: '0.5rem 0.75rem',
-            fontWeight: '600'
+            padding: '0.25rem 0.625rem',
+            fontWeight: '600',
+            fontSize: '0.875rem'
         }
     },
     content: {
@@ -108,16 +126,16 @@ export const semantic: BaseTokenSections.Semantic = {
             gap: '2px'
         },
         item: {
-            padding: '0.5rem 0.75rem',
+            padding: '0.25rem 0.625rem',
             borderRadius: '{border.radius.sm}',
             gap: '0.5rem'
         },
         submenuLabel: {
-            padding: '0.5rem 0.75rem',
+            padding: '0.25rem 0.625rem',
             fontWeight: '600'
         },
         submenuIcon: {
-            size: '0.875rem'
+            size: '0.75rem'
         }
     },
     overlay: {
@@ -127,12 +145,12 @@ export const semantic: BaseTokenSections.Semantic = {
         },
         popover: {
             borderRadius: '{border.radius.md}',
-            padding: '0.75rem',
+            padding: '0.625rem',
             shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)'
         },
         modal: {
             borderRadius: '{border.radius.xl}',
-            padding: '1.25rem',
+            padding: '1.125rem',
             shadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)'
         },
         navigation: {

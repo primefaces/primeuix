@@ -24,6 +24,8 @@ export const style = /*css*/ `
         border-block-start: 1px solid dt('inputgroup.addon.border.color');
         border-block-end: 1px solid dt('inputgroup.addon.border.color');
         min-width: dt('inputgroup.addon.min.width');
+        font-weight: dt('inputgroup.addon.font.weight');
+        font-size: dt('inputgroup.addon.font.size');
     }
 
     .p-inputgroupaddon:first-child,

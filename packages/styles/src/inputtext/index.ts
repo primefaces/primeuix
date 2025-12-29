@@ -1,8 +1,7 @@
 export const style = /*css*/ `
     .p-inputtext {
-        font-family: inherit;
-        font-feature-settings: inherit;
-        font-size: 1rem;
+        font-weight: dt('inputtext.font.weight');
+        font-size: dt('inputtext.font.size');
         color: dt('inputtext.color');
         background: dt('inputtext.background');
         padding-block: dt('inputtext.padding.y');

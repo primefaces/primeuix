@@ -11,7 +11,8 @@ export const style = /*css*/ `
     }
 
     .p-knob-text {
-        font-size: 1.3rem;
+        font-size: dt('knob.text.font.size');
+        font-weight: dt('knob.text.font.weight');
         text-align: center;
     }
 

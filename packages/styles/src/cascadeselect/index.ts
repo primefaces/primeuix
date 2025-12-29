@@ -79,6 +79,8 @@ export const style = /*css*/ `
         background: transparent;
         border: 0 none;
         outline: 0 none;
+        font-weight: dt('cascadeselect.font.weight');
+        font-size: dt('cascadeselect.font.size');
     }
 
     .p-cascadeselect-label.p-placeholder {
@@ -130,7 +132,8 @@ export const style = /*css*/ `
 
     .p-cascadeselect-option {
         cursor: pointer;
-        font-weight: normal;
+        font-weight: dt('cascadeselect.option.font.weight');
+        font-size: dt('cascadeselect.option.font.size');
         white-space: nowrap;
         border: 0 none;
         color: dt('cascadeselect.option.color');

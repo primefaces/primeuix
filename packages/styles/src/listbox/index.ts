@@ -61,6 +61,8 @@ export const style = /*css*/ `
         border: 0 none;
         border-radius: dt('listbox.option.border.radius');
         color: dt('listbox.option.color');
+        font-weight: dt('listbox.option.font.weight');
+        font-size: dt('listbox.option.font.size');
         transition:
             background dt('listbox.transition.duration'),
             color dt('listbox.transition.duration'),
@@ -111,6 +113,7 @@ export const style = /*css*/ `
         color: dt('listbox.option.group.color');
         background: dt('listbox.option.group.background');
         font-weight: dt('listbox.option.group.font.weight');
+        font-size: dt('listbox.option.group.font.size');
     }
 
     .p-listbox-empty-message {

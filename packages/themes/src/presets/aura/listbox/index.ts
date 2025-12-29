@@ -21,6 +21,8 @@ export const list: ListboxTokenSections.List = {
 };
 
 export const option: ListboxTokenSections.Option = {
+    fontWeight: '{list.option.font.weight}',
+    fontSize: '{list.option.font.size}',
     focusBackground: '{list.option.focus.background}',
     selectedBackground: '{list.option.selected.background}',
     selectedFocusBackground: '{list.option.selected.focus.background}',
@@ -35,14 +37,15 @@ export const option: ListboxTokenSections.Option = {
 export const optionGroup: ListboxTokenSections.OptionGroup = {
     background: '{list.option.group.background}',
     color: '{list.option.group.color}',
+    padding: '{list.option.group.padding}',
     fontWeight: '{list.option.group.font.weight}',
-    padding: '{list.option.group.padding}'
+    fontSize: '{list.option.group.font.size}'
 };
 
 export const checkmark: ListboxTokenSections.Checkmark = {
     color: '{list.option.color}',
-    gutterStart: '-0.375rem',
-    gutterEnd: '0.375rem'
+    gutterStart: '-0.25rem',
+    gutterEnd: '0.25rem'
 };
 
 export const emptyMessage: ListboxTokenSections.EmptyMessage = {

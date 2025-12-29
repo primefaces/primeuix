@@ -202,6 +202,18 @@ export declare namespace CascadeSelectTokenSections {
              */
             paddingY?: string;
         };
+        /**
+         * Font weight of current value
+         *
+         * @designToken cascadeselect.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of current value
+         *
+         * @designToken cascadeselect.font.size
+         */
+        fontSize?: string;
     }
 
     interface Dropdown {
@@ -351,6 +363,18 @@ export declare namespace CascadeSelectTokenSections {
              */
             size?: string;
         };
+        /**
+         * Font weight of option
+         *
+         * @designToken cascadeselect.option.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of option
+         *
+         * @designToken cascadeselect.option.font.size
+         */
+        fontSize?: string;
     }
 
     interface ClearIcon {
