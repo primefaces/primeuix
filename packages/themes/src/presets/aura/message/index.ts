@@ -7,40 +7,40 @@ export const root: MessageTokenSections.Root = {
 };
 
 export const content: MessageTokenSections.Content = {
-    padding: '0.5rem 0.75rem',
+    padding: '0.375rem 0.625rem',
     gap: '0.5rem',
     sm: {
-        padding: '0.375rem 0.625rem'
+        padding: '0.25rem 0.5rem'
     },
     lg: {
-        padding: '0.625rem 0.875rem'
+        padding: '0.5rem 0.75rem'
     }
 };
 
 export const text: MessageTokenSections.Text = {
-    fontSize: '1rem',
+    fontSize: '{typography.font.size}',
     fontWeight: '500',
     sm: {
-        fontSize: '0.875rem'
+        fontSize: '0.75rem'
     },
     lg: {
-        fontSize: '1.125rem'
+        fontSize: '1rem'
     }
 };
 
 export const icon: MessageTokenSections.Icon = {
-    size: '1.125rem',
+    size: '1rem',
     sm: {
-        size: '1rem'
+        size: '0.875rem'
     },
     lg: {
-        size: '1.25rem'
+        size: '1.125rem'
     }
 };
 
 export const closeButton: MessageTokenSections.CloseButton = {
-    width: '1.75rem',
-    height: '1.75rem',
+    width: '1.5rem',
+    height: '1.5rem',
     borderRadius: '50%',
     focusRing: {
         width: '{focus.ring.width}',
@@ -50,12 +50,12 @@ export const closeButton: MessageTokenSections.CloseButton = {
 };
 
 export const closeIcon: MessageTokenSections.CloseIcon = {
-    size: '1rem',
+    size: '0.875rem',
     sm: {
-        size: '0.875rem'
+        size: '0.75rem'
     },
     lg: {
-        size: '1.125rem'
+        size: '1rem'
     }
 };
 

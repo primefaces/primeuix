@@ -8,7 +8,7 @@ export const root: ToastTokenSections.Root = {
 };
 
 export const icon: ToastTokenSections.Icon = {
-    size: '1.125rem'
+    size: '1rem'
 };
 
 export const content: ToastTokenSections.Content = {
@@ -22,17 +22,17 @@ export const text: ToastTokenSections.Text = {
 
 export const summary: ToastTokenSections.Summary = {
     fontWeight: '500',
-    fontSize: '1rem'
+    fontSize: '{typography.font.size}'
 };
 
 export const detail: ToastTokenSections.Detail = {
     fontWeight: '500',
-    fontSize: '0.875rem'
+    fontSize: '0.75rem'
 };
 
 export const closeButton: ToastTokenSections.CloseButton = {
-    width: '1.75rem',
-    height: '1.75rem',
+    width: '1.5rem',
+    height: '1.5rem',
     borderRadius: '50%',
     focusRing: {
         width: '{focus.ring.width}',
@@ -42,7 +42,7 @@ export const closeButton: ToastTokenSections.CloseButton = {
 };
 
 export const closeIcon: ToastTokenSections.CloseIcon = {
-    size: '1rem'
+    size: '0.875rem'
 };
 
 export const colorScheme: ToastTokenSections.ColorScheme = {

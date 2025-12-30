@@ -38,11 +38,13 @@ export const style = /*css*/ `
     .p-toast-summary {
         font-weight: dt('toast.summary.font.weight');
         font-size: dt('toast.summary.font.size');
+        line-height: 1;
     }
 
     .p-toast-detail {
         font-weight: dt('toast.detail.font.weight');
         font-size: dt('toast.detail.font.size');
+        line-height: 1;
     }
 
     .p-toast-close-button {
