@@ -28,5 +28,7 @@ export const style = /*css*/ `
 
     .p-card-subtitle {
         color: dt('card.subtitle.color');
+        font-size: dt('card.subtitle.font.size');
+        font-weight: dt('card.subtitle.font.weight');
     }
 `;

@@ -85,6 +85,18 @@ export declare namespace CardTokenSections {
          * @designToken card.subtitle.color
          */
         color?: string;
+        /**
+         * Font size of subtitle
+         *
+         * @designToken card.subtitle.font.size
+         */
+        fontSize?: string;
+        /**
+         * Font weight of subtitle
+         *
+         * @designToken card.subtitle.font.weight
+         */
+        fontWeight?: string;
     }
 
     /* Static Sections */

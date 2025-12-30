@@ -60,6 +60,7 @@ export const style = /*css*/ `
         max-width: 100%;
         color: dt('stepper.step.title.color');
         font-weight: dt('stepper.step.title.font.weight');
+        font-size: dt('stepper.step.title.font.size');
         transition:
             background dt('stepper.transition.duration'),
             color dt('stepper.transition.duration'),

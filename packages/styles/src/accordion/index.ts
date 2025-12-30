@@ -20,6 +20,7 @@ export const style = /*css*/ `
         border-width: dt('accordion.header.border.width');
         border-color: dt('accordion.header.border.color');
         font-weight: dt('accordion.header.font.weight');
+        font-size: dt('accordion.header.font.size');
         border-radius: dt('accordion.header.border.radius');
         transition:
             background dt('accordion.transition.duration'),

@@ -10,26 +10,27 @@ export const root: PanelTokenSections.Root = {
 export const header: PanelTokenSections.Header = {
     background: 'transparent',
     color: '{text.color}',
-    padding: '1.125rem',
+    padding: '1rem',
     borderColor: '{content.border.color}',
     borderWidth: '0',
     borderRadius: '0'
 };
 
 export const toggleableHeader: PanelTokenSections.ToggleableHeader = {
-    padding: '0.375rem 1.125rem'
+    padding: '0.375rem 1rem'
 };
 
 export const title: PanelTokenSections.Title = {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '{typography.font.size}'
 };
 
 export const content: PanelTokenSections.Content = {
-    padding: '0 1.125rem 1.125rem 1.125rem'
+    padding: '0 1rem 1rem 1rem'
 };
 
 export const footer: PanelTokenSections.Footer = {
-    padding: '0 1.125rem 1.125rem 1.125rem'
+    padding: '0 1rem 1rem 1rem'
 };
 
 export default {

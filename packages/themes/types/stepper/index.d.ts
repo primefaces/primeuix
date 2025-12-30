@@ -138,6 +138,12 @@ export declare namespace StepperTokenSections {
          * @designToken stepper.step.title.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of step title
+         *
+         * @designToken stepper.step.title.font.size
+         */
+        fontSize?: string;
     }
 
     interface StepNumber {

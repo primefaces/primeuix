@@ -95,6 +95,7 @@ export const style = /*css*/ `
         color: dt('tabs.tab.color');
         padding: dt('tabs.tab.padding');
         font-weight: dt('tabs.tab.font.weight');
+        font-size: dt('tabs.tab.font.size');
         transition:
             background dt('tabs.transition.duration'),
             border-color dt('tabs.transition.duration'),

@@ -113,6 +113,12 @@ export declare namespace FieldsetTokenSections {
          */
         fontWeight?: string;
         /**
+         * Font size of legend
+         *
+         * @designToken fieldset.legend.font.size
+         */
+        fontSize?: string;
+        /**
          * Focus ring of legend
          */
         focusRing?: {

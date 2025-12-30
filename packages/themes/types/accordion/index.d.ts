@@ -74,6 +74,12 @@ export declare namespace AccordionTokenSections {
          */
         fontWeight?: string;
         /**
+         * Font size of header
+         *
+         * @designToken accordion.header.font.size
+         */
+        fontSize?: string;
+        /**
          * Border radius of header
          *
          * @designToken accordion.header.border.radius

@@ -25,8 +25,8 @@ export const style = /*css*/ `
     }
 
     .p-panel-title {
-        line-height: 1;
         font-weight: dt('panel.title.font.weight');
+        font-size: dt('panel.title.font.size');
     }
 
     .p-panel-content-container {

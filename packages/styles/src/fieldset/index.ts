@@ -50,6 +50,7 @@ export const style = /*css*/ `
 
     .p-fieldset-legend-label {
         font-weight: dt('fieldset.legend.font.weight');
+        font-size: dt('fieldset.legend.font.size');
     }
 
     .p-fieldset-toggle-button:focus-visible {

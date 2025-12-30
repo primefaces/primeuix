@@ -116,6 +116,12 @@ export declare namespace TabsTokenSections {
          */
         fontWeight?: string;
         /**
+         * Font size of tab
+         *
+         * @designToken tabs.tab.font.size
+         */
+        fontSize?: string;
+        /**
          * Margin of tab
          *
          * @designToken tabs.tab.margin

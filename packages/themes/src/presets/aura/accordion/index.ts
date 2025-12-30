@@ -14,8 +14,9 @@ export const header: AccordionTokenSections.Header = {
     hoverColor: '{text.color}',
     activeColor: '{text.color}',
     activeHoverColor: '{text.color}',
-    padding: '1.125rem',
+    padding: '1rem',
     fontWeight: '600',
+    fontSize: '{typography.font.size}',
     borderRadius: '0',
     borderWidth: '0',
     borderColor: '{content.border.color}',
@@ -51,7 +52,7 @@ export const content: AccordionTokenSections.Content = {
     borderColor: '{content.border.color}',
     background: '{content.background}',
     color: '{text.color}',
-    padding: '0 1.125rem 1.125rem 1.125rem'
+    padding: '0 1rem 1rem 1rem'
 };
 
 export default {

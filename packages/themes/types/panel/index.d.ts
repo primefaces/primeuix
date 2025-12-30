@@ -94,6 +94,12 @@ export declare namespace PanelTokenSections {
          * @designToken panel.title.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of title
+         *
+         * @designToken panel.title.font.size
+         */
+        fontSize?: string;
     }
 
     interface Content {
