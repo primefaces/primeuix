@@ -55,6 +55,18 @@ export declare namespace TooltipTokenSections {
          * @designToken tooltip.color
          */
         color?: string;
+        /**
+         * Font weight of root
+         *
+         * @designToken tooltip.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of root
+         *
+         * @designToken tooltip.font.size
+         */
+        fontSize?: string;
     }
 
     /* Static Sections */

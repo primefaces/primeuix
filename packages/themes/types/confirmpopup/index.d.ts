@@ -87,6 +87,27 @@ export declare namespace ConfirmPopupTokenSections {
         color?: string;
     }
 
+    interface Message {
+        /**
+         * Color of message
+         *
+         * @designToken confirmpopup.message.color
+         */
+        color?: string;
+        /**
+         * Font weight of message
+         *
+         * @designToken confirmpopup.message.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of message
+         *
+         * @designToken confirmpopup.message.font.size
+         */
+        fontSize?: string;
+    }
+
     interface Footer {
         /**
          * Gap of footer
@@ -139,6 +160,10 @@ export interface ConfirmPopupDesignTokens extends DesignTokens<ConfirmPopupDesig
      * Used to pass tokens of the icon section
      */
     icon?: ConfirmPopupTokenSections.Icon;
+    /**
+     * Used to pass tokens of the message section
+     */
+    message?: ConfirmPopupTokenSections.Message;
     /**
      * Used to pass tokens of the footer section
      */

@@ -36,6 +36,27 @@ export declare namespace ConfirmDialogTokenSections {
         gap?: string;
     }
 
+    interface Message {
+        /**
+         * Color of message
+         *
+         * @designToken confirmdialog.message.color
+         */
+        color?: string;
+        /**
+         * Font weight of message
+         *
+         * @designToken confirmdialog.message.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of message
+         *
+         * @designToken confirmdialog.message.font.size
+         */
+        fontSize?: string;
+    }
+
     /* Static Sections */
     type ColorScheme = CS<ConfirmDialogDesignTokens>;
     type CSS = ExtendedCSS;
@@ -69,4 +90,8 @@ export interface ConfirmDialogDesignTokens extends DesignTokens<ConfirmDialogDes
      * Used to pass tokens of the content section
      */
     content?: ConfirmDialogTokenSections.Content;
+    /**
+     * Used to pass tokens of the message section
+     */
+    message?: ConfirmDialogTokenSections.Message;
 }

@@ -23,6 +23,8 @@ export const style = /*css*/ `
         padding: dt('tooltip.padding');
         box-shadow: dt('tooltip.shadow');
         border-radius: dt('tooltip.border.radius');
+        font-weight: dt('tooltip.font.weight');
+        font-size: dt('tooltip.font.size');
     }
 
     .p-tooltip-arrow {

@@ -26,6 +26,12 @@ export const style = /*css*/ `
         color: dt('confirmpopup.icon.color');
     }
 
+    .p-confirmpopup-message {
+        color: dt('confirmpopup.message.color');
+        font-weight: dt('confirmpopup.message.font.weight');
+        font-size: dt('confirmpopup.message.font.size');
+    }
+
     .p-confirmpopup-footer {
         display: flex;
         justify-content: flex-end;

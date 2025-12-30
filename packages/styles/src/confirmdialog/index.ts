@@ -11,4 +11,10 @@ export const style = /*css*/ `
         width: dt('confirmdialog.icon.size');
         height: dt('confirmdialog.icon.size');
     }
+
+    .p-confirmdialog-message {
+        color: dt('confirmdialog.message.color');
+        font-weight: dt('confirmdialog.message.font.weight');
+        font-size: dt('confirmdialog.message.font.size');
+    }
 `;
