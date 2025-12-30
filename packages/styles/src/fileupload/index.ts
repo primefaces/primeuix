@@ -62,6 +62,18 @@ export const style = /*css*/ `
         gap: dt('fileupload.file.info.gap');
     }
 
+    .p-fileupload-file-name {
+        color: dt('fileupload.file.name.color');
+        font-weight: dt('fileupload.file.name.font.weight');
+        font-size: dt('fileupload.file.name.font.size');
+    }
+
+    .p-fileupload-file-size {
+        color: dt('fileupload.file.size.color');
+        font-weight: dt('fileupload.file.size.font.weight');
+        font-size: dt('fileupload.file.size.font.size');
+    }
+
     .p-fileupload-file-thumbnail {
         flex-shrink: 0;
     }

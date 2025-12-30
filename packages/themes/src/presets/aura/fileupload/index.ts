@@ -11,7 +11,7 @@ export const root: FileUploadTokenSections.Root = {
 export const header: FileUploadTokenSections.Header = {
     background: 'transparent',
     color: '{text.color}',
-    padding: '1.125rem',
+    padding: '1rem',
     borderColor: 'unset',
     borderWidth: '0',
     borderRadius: '0',
@@ -20,17 +20,29 @@ export const header: FileUploadTokenSections.Header = {
 
 export const content: FileUploadTokenSections.Content = {
     highlightBorderColor: '{primary.color}',
-    padding: '0 1.125rem 1.125rem 1.125rem',
-    gap: '1rem'
+    padding: '0 1rem 1rem 1rem',
+    gap: '0.875rem'
 };
 
 export const file: FileUploadTokenSections.File = {
-    padding: '1rem',
-    gap: '1rem',
+    padding: '0.875rem',
+    gap: '0.875rem',
     borderColor: '{content.border.color}',
     info: {
-        gap: '0.5rem'
+        gap: '0.125rem'
     }
+};
+
+export const fileName: FileUploadTokenSections.FileName = {
+    color: '{text.color}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}'
+};
+
+export const fileSize: FileUploadTokenSections.FileSize = {
+    color: '{text.muted.color}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '0.75rem'
 };
 
 export const fileList: FileUploadTokenSections.FileList = {
@@ -50,6 +62,8 @@ export default {
     header,
     content,
     file,
+    fileName,
+    fileSize,
     fileList,
     progressbar,
     basic

@@ -143,6 +143,48 @@ export declare namespace FileUploadTokenSections {
         };
     }
 
+    interface FileName {
+        /**
+         * Color of file name
+         *
+         * @designToken fileupload.file.name.color
+         */
+        color?: string;
+        /**
+         * Font weight of file name
+         *
+         * @designToken fileupload.file.name.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of file name
+         *
+         * @designToken fileupload.file.name.font.size
+         */
+        fontSize?: string;
+    }
+
+    interface FileSize {
+        /**
+         * Color of file size
+         *
+         * @designToken fileupload.file.size.color
+         */
+        color?: string;
+        /**
+         * Font weight of file size
+         *
+         * @designToken fileupload.file.size.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of file size
+         *
+         * @designToken fileupload.file.size.font.size
+         */
+        fontSize?: string;
+    }
+
     interface FileList {
         /**
          * Gap of file list
@@ -211,6 +253,14 @@ export interface FileUploadDesignTokens extends DesignTokens<FileUploadDesignTok
      * Used to pass tokens of the file section
      */
     file?: FileUploadTokenSections.File;
+    /**
+     * Used to pass tokens of the file name section
+     */
+    fileName?: FileUploadTokenSections.FileName;
+    /**
+     * Used to pass tokens of the file size section
+     */
+    fileSize?: FileUploadTokenSections.FileSize;
     /**
      * Used to pass tokens of the file list section
      */
