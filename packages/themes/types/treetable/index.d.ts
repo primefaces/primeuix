@@ -159,6 +159,12 @@ export declare namespace TreeTableTokenSections {
          * @designToken treetable.column.title.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of column title
+         *
+         * @designToken treetable.column.title.font.size
+         */
+        fontSize?: string;
     }
 
     interface Row {
@@ -260,6 +266,18 @@ export declare namespace TreeTableTokenSections {
          * @designToken treetable.body.cell.selected.border.color
          */
         selectedBorderColor?: string;
+        /**
+         * Font weight of body cell
+         *
+         * @designToken treetable.body.cell.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of body cell
+         *
+         * @designToken treetable.body.cell.font.size
+         */
+        fontSize?: string;
     }
 
     interface FooterCell {
@@ -296,6 +314,12 @@ export declare namespace TreeTableTokenSections {
          * @designToken treetable.column.footer.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of column footer
+         *
+         * @designToken treetable.column.footer.font.size
+         */
+        fontSize?: string;
     }
 
     interface Footer {

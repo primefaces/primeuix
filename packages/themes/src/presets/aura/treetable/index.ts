@@ -9,7 +9,7 @@ export const header: TreeTableTokenSections.Header = {
     borderColor: '{treetable.border.color}',
     color: '{content.color}',
     borderWidth: '0 0 1px 0',
-    padding: '0.75rem 1rem'
+    padding: '0.5rem 0.875rem'
 };
 
 export const headerCell: TreeTableTokenSections.HeaderCell = {
@@ -21,7 +21,7 @@ export const headerCell: TreeTableTokenSections.HeaderCell = {
     hoverColor: '{content.hover.color}',
     selectedColor: '{highlight.color}',
     gap: '0.5rem',
-    padding: '0.75rem 1rem',
+    padding: '0.5rem 0.875rem',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -32,7 +32,8 @@ export const headerCell: TreeTableTokenSections.HeaderCell = {
 };
 
 export const columnTitle: TreeTableTokenSections.ColumnTitle = {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '{typography.font.size}'
 };
 
 export const row: TreeTableTokenSections.Row = {
@@ -53,19 +54,22 @@ export const row: TreeTableTokenSections.Row = {
 
 export const bodyCell: TreeTableTokenSections.BodyCell = {
     borderColor: '{treetable.border.color}',
-    padding: '0.75rem 1rem',
-    gap: '0.5rem'
+    padding: '0.5rem 0.875rem',
+    gap: '0.5rem',
+    fontWeight: '{typography.font.size}',
+    fontSize: '{typography.font.size}'
 };
 
 export const footerCell: TreeTableTokenSections.FooterCell = {
     background: '{content.background}',
     borderColor: '{treetable.border.color}',
     color: '{content.color}',
-    padding: '0.75rem 1rem'
+    padding: '0.5rem 0.875rem'
 };
 
 export const columnFooter: TreeTableTokenSections.ColumnFooter = {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '{typography.font.size}'
 };
 
 export const footer: TreeTableTokenSections.Footer = {
@@ -73,7 +77,7 @@ export const footer: TreeTableTokenSections.Footer = {
     borderColor: '{treetable.border.color}',
     color: '{content.color}',
     borderWidth: '0 0 1px 0',
-    padding: '0.75rem 1rem'
+    padding: '0.5rem 0.875rem'
 };
 
 export const columnResizer: TreeTableTokenSections.ColumnResizer = {
@@ -88,11 +92,11 @@ export const resizeIndicator: TreeTableTokenSections.ResizeIndicator = {
 export const sortIcon: TreeTableTokenSections.SortIcon = {
     color: '{text.muted.color}',
     hoverColor: '{text.hover.muted.color}',
-    size: '0.875rem'
+    size: '0.75rem'
 };
 
 export const loadingIcon: TreeTableTokenSections.LoadingIcon = {
-    size: '2rem'
+    size: '1.75rem'
 };
 
 export const nodeToggleButton: TreeTableTokenSections.NodeToggleButton = {
@@ -101,7 +105,7 @@ export const nodeToggleButton: TreeTableTokenSections.NodeToggleButton = {
     color: '{text.muted.color}',
     hoverColor: '{text.color}',
     selectedHoverColor: '{primary.color}',
-    size: '1.75rem',
+    size: '1.5rem',
     borderRadius: '50%',
     focusRing: {
         width: '{focus.ring.width}',

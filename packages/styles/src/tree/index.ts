@@ -149,6 +149,11 @@ export const style = /*css*/ `
         transition: color dt('tree.transition.duration');
     }
 
+    .p-tree-node-label {
+        font-weight: dt('tree.node.label.font.weight');
+        font-size: dt('tree.node.label.font.size');
+    }
+
     .p-tree-node-content.p-tree-node-selected .p-tree-node-icon {
         color: dt('tree.node.icon.selected.color');
     }

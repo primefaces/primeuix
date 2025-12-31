@@ -158,6 +158,21 @@ export declare namespace TreeTokenSections {
         selectedColor?: string;
     }
 
+    interface NodeLabel {
+        /**
+         * Font weight of node label
+         *
+         * @designToken tree.node.label.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of node label
+         *
+         * @designToken tree.node.label.font.size
+         */
+        fontSize?: string;
+    }
+
     interface NodeToggleButton {
         /**
          * Border radius of node toggle button
@@ -293,6 +308,10 @@ export interface TreeDesignTokens extends DesignTokens<TreeDesignTokens> {
      * Used to pass tokens of the node icon section
      */
     nodeIcon?: TreeTokenSections.NodeIcon;
+    /**
+     * Used to pass tokens of the node label section
+     */
+    nodeLabel?: TreeTokenSections.NodeLabel;
     /**
      * Used to pass tokens of the node toggle button section
      */

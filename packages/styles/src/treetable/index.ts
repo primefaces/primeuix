@@ -163,6 +163,7 @@ export const style = /*css*/ `
 
     .p-treetable-column-title {
         font-weight: dt('treetable.column.title.font.weight');
+        font-size: dt('treetable.column.title.font.size');
     }
 
     .p-treetable-tbody > tr {
@@ -183,6 +184,8 @@ export const style = /*css*/ `
         border-style: solid;
         border-width: 0 0 1px 0;
         padding: dt('treetable.body.cell.padding');
+        font-weight: dt('treetable.body.cell.font.weight');
+        font-size: dt('treetable.body.cell.font.size');
     }
 
     .p-treetable-hoverable .p-treetable-tbody > tr:not(.p-treetable-row-selected):hover {
@@ -222,6 +225,7 @@ export const style = /*css*/ `
 
     .p-treetable-column-footer {
         font-weight: dt('treetable.column.footer.font.weight');
+        font-size: dt('treetable.column.footer.font.size');
     }
 
     .p-treetable-sortable-column {

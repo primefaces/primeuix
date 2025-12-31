@@ -9,12 +9,12 @@ export const header: DataTableTokenSections.Header = {
     borderColor: '{datatable.border.color}',
     color: '{content.color}',
     borderWidth: '0 0 1px 0',
-    padding: '0.75rem 1rem',
+    padding: '0.5rem 0.875rem',
     sm: {
-        padding: '0.375rem 0.5rem'
+        padding: '0.125rem 0.375rem'
     },
     lg: {
-        padding: '1rem 1.25rem'
+        padding: '0.75rem 1.125rem'
     }
 };
 
@@ -27,7 +27,7 @@ export const headerCell: DataTableTokenSections.HeaderCell = {
     hoverColor: '{content.hover.color}',
     selectedColor: '{highlight.color}',
     gap: '0.5rem',
-    padding: '0.75rem 1rem',
+    padding: '0.5rem 0.875rem',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -36,15 +36,16 @@ export const headerCell: DataTableTokenSections.HeaderCell = {
         shadow: '{focus.ring.shadow}'
     },
     sm: {
-        padding: '0.375rem 0.5rem'
+        padding: '0.125rem 0.375rem'
     },
     lg: {
-        padding: '1rem 1.25rem'
+        padding: '0.75rem 1.125rem'
     }
 };
 
 export const columnTitle: DataTableTokenSections.ColumnTitle = {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '{typography.font.size}'
 };
 
 export const row: DataTableTokenSections.Row = {
@@ -65,12 +66,14 @@ export const row: DataTableTokenSections.Row = {
 
 export const bodyCell: DataTableTokenSections.BodyCell = {
     borderColor: '{datatable.border.color}',
-    padding: '0.75rem 1rem',
+    padding: '0.5rem 0.875rem',
+    fontWeight: '{typography.font.size}',
+    fontSize: '{typography.font.size}',
     sm: {
-        padding: '0.375rem 0.5rem'
+        padding: '0.125rem 0.375rem'
     },
     lg: {
-        padding: '1rem 1.25rem'
+        padding: '0.75rem 1.125rem'
     }
 };
 
@@ -78,17 +81,18 @@ export const footerCell: DataTableTokenSections.FooterCell = {
     background: '{content.background}',
     borderColor: '{datatable.border.color}',
     color: '{content.color}',
-    padding: '0.75rem 1rem',
+    padding: '0.5rem 0.875rem',
     sm: {
-        padding: '0.375rem 0.5rem'
+        padding: '0.125rem 0.375rem'
     },
     lg: {
-        padding: '1rem 1.25rem'
+        padding: '0.75rem 1.125rem'
     }
 };
 
 export const columnFooter: DataTableTokenSections.ColumnFooter = {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '{typography.font.size}'
 };
 
 export const footer: DataTableTokenSections.Footer = {
@@ -96,12 +100,12 @@ export const footer: DataTableTokenSections.Footer = {
     borderColor: '{datatable.border.color}',
     color: '{content.color}',
     borderWidth: '0 0 1px 0',
-    padding: '0.75rem 1rem',
+    padding: '0.5rem 0.875rem',
     sm: {
-        padding: '0.375rem 0.5rem'
+        padding: '0.125rem 0.375rem'
     },
     lg: {
-        padding: '1rem 1.25rem'
+        padding: '0.75rem 1.125rem'
     }
 };
 
@@ -121,11 +125,11 @@ export const resizeIndicator: DataTableTokenSections.ResizeIndicator = {
 export const sortIcon: DataTableTokenSections.SortIcon = {
     color: '{text.muted.color}',
     hoverColor: '{text.hover.muted.color}',
-    size: '0.875rem'
+    size: '0.75rem'
 };
 
 export const loadingIcon: DataTableTokenSections.LoadingIcon = {
-    size: '2rem'
+    size: '1.75rem'
 };
 
 export const rowToggleButton: DataTableTokenSections.RowToggleButton = {
@@ -134,7 +138,7 @@ export const rowToggleButton: DataTableTokenSections.RowToggleButton = {
     color: '{text.muted.color}',
     hoverColor: '{text.color}',
     selectedHoverColor: '{primary.color}',
-    size: '1.75rem',
+    size: '1.5rem',
     borderRadius: '50%',
     focusRing: {
         width: '{focus.ring.width}',

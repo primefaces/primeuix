@@ -314,6 +314,7 @@ export const style = /*css*/ `
 
     .p-datatable-column-title {
         font-weight: dt('datatable.column.title.font.weight');
+        font-size: dt('datatable.column.title.font.size');
     }
 
     .p-datatable-tbody > tr {
@@ -334,6 +335,8 @@ export const style = /*css*/ `
         border-style: solid;
         border-width: 0 0 1px 0;
         padding: dt('datatable.body.cell.padding');
+        font-weight: dt('datatable.body.cell.font.weight');
+        font-size: dt('datatable.body.cell.font.size');
     }
 
     .p-datatable-hoverable .p-datatable-tbody > tr:not(.p-datatable-row-selected):hover {
@@ -373,6 +376,7 @@ export const style = /*css*/ `
 
     .p-datatable-column-footer {
         font-weight: dt('datatable.column.footer.font.weight');
+        font-size: dt('datatable.column.footer.font.size');
     }
 
     .p-datatable-sortable-column {

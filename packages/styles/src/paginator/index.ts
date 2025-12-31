@@ -36,7 +36,6 @@ export const style = /*css*/ `
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        line-height: 1;
         user-select: none;
         overflow: hidden;
         position: relative;
@@ -45,6 +44,8 @@ export const style = /*css*/ `
         color: dt('paginator.nav.button.color');
         min-width: dt('paginator.nav.button.width');
         height: dt('paginator.nav.button.height');
+        font-weight: dt('paginator.nav.button.font.weight');
+        font-size: dt('paginator.nav.button.font.size');
         transition:
             background dt('paginator.transition.duration'),
             color dt('paginator.transition.duration'),
@@ -81,6 +82,8 @@ export const style = /*css*/ `
 
     .p-paginator-current {
         color: dt('paginator.current.page.report.color');
+        font-weight: dt('paginator.current.page.report.font.weight');
+        font-size: dt('paginator.current.page.report.font.size');
     }
 
     .p-paginator-pages {

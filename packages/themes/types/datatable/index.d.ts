@@ -203,6 +203,12 @@ export declare namespace DataTableTokenSections {
          * @designToken datatable.column.title.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of column title
+         *
+         * @designToken datatable.column.title.font.size
+         */
+        fontSize?: string;
     }
 
     interface Row {
@@ -326,6 +332,18 @@ export declare namespace DataTableTokenSections {
          * @designToken datatable.body.cell.selected.border.color
          */
         selectedBorderColor?: string;
+        /**
+         * Font weight of body cell
+         *
+         * @designToken datatable.body.cell.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of body cell
+         *
+         * @designToken datatable.body.cell.font.size
+         */
+        fontSize?: string;
     }
 
     interface FooterCell {
@@ -384,6 +402,12 @@ export declare namespace DataTableTokenSections {
          * @designToken datatable.column.footer.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of column footer
+         *
+         * @designToken datatable.column.footer.font.size
+         */
+        fontSize?: string;
     }
 
     interface Footer {

@@ -107,6 +107,18 @@ export declare namespace PaginatorTokenSections {
          */
         borderRadius?: string;
         /**
+         * Font weight of nav button
+         *
+         * @designToken paginator.nav.button.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of nav button
+         *
+         * @designToken paginator.nav.button.font.size
+         */
+        fontSize?: string;
+        /**
          * Focus ring of nav button
          */
         focusRing?: {
@@ -150,6 +162,18 @@ export declare namespace PaginatorTokenSections {
          * @designToken paginator.current.page.report.color
          */
         color?: string;
+        /**
+         * Font weight of current page report
+         *
+         * @designToken paginator.current.page.report.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of current page report
+         *
+         * @designToken paginator.current.page.report.font.size
+         */
+        fontSize?: string;
     }
 
     interface JumpToPageInput {

@@ -12,7 +12,7 @@ export const header: DataViewTokenSections.Header = {
     color: '{content.color}',
     borderColor: '{content.border.color}',
     borderWidth: '0 0 1px 0',
-    padding: '0.75rem 1rem',
+    padding: '0.625rem 0.875rem',
     borderRadius: '0'
 };
 
@@ -30,7 +30,7 @@ export const footer: DataViewTokenSections.Footer = {
     color: '{content.color}',
     borderColor: '{content.border.color}',
     borderWidth: '1px 0 0 0',
-    padding: '0.75rem 1rem',
+    padding: '0.625rem 0.875rem',
     borderRadius: '0'
 };
 
