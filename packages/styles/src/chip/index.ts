@@ -12,7 +12,7 @@ export const style = /*css*/ `
 
     .p-chip-icon {
         color: dt('chip.icon.color');
-        font-size: dt('chip.icon.font.size');
+        font-size: dt('chip.icon.size');
         width: dt('chip.icon.size');
         height: dt('chip.icon.size');
     }
@@ -22,6 +22,11 @@ export const style = /*css*/ `
         width: dt('chip.image.width');
         height: dt('chip.image.height');
         margin-inline-start: calc(-1 * dt('chip.padding.y'));
+    }
+
+    .p-chip-label {
+        font-weight: dt('chip.label.font.weight');
+        font-size: dt('chip.label.font.size');
     }
 
     .p-chip:has(.p-chip-remove-icon) {

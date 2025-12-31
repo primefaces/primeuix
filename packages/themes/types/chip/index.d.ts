@@ -87,6 +87,21 @@ export declare namespace ChipTokenSections {
         color?: string;
     }
 
+    interface Label {
+        /**
+         * Font weight of label
+         *
+         * @designToken chip.label.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of label
+         *
+         * @designToken chip.label.font.size
+         */
+        fontSize?: string;
+    }
+
     interface RemoveIcon {
         /**
          * Size of remove icon
@@ -174,6 +189,10 @@ export interface ChipDesignTokens extends DesignTokens<ChipDesignTokens> {
      * Used to pass tokens of the icon section
      */
     icon?: ChipTokenSections.Icon;
+    /**
+     * Used to pass tokens of the label section
+     */
+    label?: ChipTokenSections.Label;
     /**
      * Used to pass tokens of the remove icon section
      */

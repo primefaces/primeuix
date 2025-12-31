@@ -5,6 +5,7 @@ export const style = /*css*/ `
         justify-content: center;
         width: dt('avatar.width');
         height: dt('avatar.height');
+        font-weight: dt('avatar.font.weight');
         font-size: dt('avatar.font.size');
         background: dt('avatar.background');
         color: dt('avatar.color');

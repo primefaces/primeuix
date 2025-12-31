@@ -8,6 +8,8 @@ export const style = /*css*/ `
         border: 1px solid dt('terminal.border.color');
         padding: dt('terminal.padding');
         border-radius: dt('terminal.border.radius');
+        font-weight: dt('terminal.font.weight');
+        font-size: dt('terminal.font.size');
     }
 
     .p-terminal-prompt {

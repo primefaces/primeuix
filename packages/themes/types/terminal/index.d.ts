@@ -49,6 +49,18 @@ export declare namespace TerminalTokenSections {
          * @designToken terminal.border.radius
          */
         borderRadius?: string;
+        /**
+         * Font weight of root
+         *
+         * @designToken terminal.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of root
+         *
+         * @designToken terminal.font.size
+         */
+        fontSize?: string;
     }
 
     interface Prompt {

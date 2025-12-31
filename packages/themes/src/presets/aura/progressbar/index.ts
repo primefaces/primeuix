@@ -3,7 +3,7 @@ import type { ProgressBarDesignTokens, ProgressBarTokenSections } from '@primeui
 export const root: ProgressBarTokenSections.Root = {
     background: '{content.border.color}',
     borderRadius: '{content.border.radius}',
-    height: '1.25rem'
+    height: '1.125rem'
 };
 
 export const value: ProgressBarTokenSections.Value = {
@@ -12,7 +12,7 @@ export const value: ProgressBarTokenSections.Value = {
 
 export const label: ProgressBarTokenSections.Label = {
     color: '{primary.contrast.color}',
-    fontSize: '0.75rem',
+    fontSize: '0.625rem',
     fontWeight: '600'
 };
 

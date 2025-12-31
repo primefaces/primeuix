@@ -60,6 +60,21 @@ export declare namespace MeterGroupTokenSections {
         size?: string;
     }
 
+    interface LabelText {
+        /**
+         * Font weight of label text
+         *
+         * @designToken metergroup.label.text.font.weight
+         */
+        fontWeight?: string;
+        /**
+         * Font size of label text
+         *
+         * @designToken metergroup.label.text.font.size
+         */
+        fontSize?: string;
+    }
+
     interface LabelIcon {
         /**
          * Size of label icon
@@ -125,6 +140,10 @@ export interface MeterGroupDesignTokens extends DesignTokens<MeterGroupDesignTok
      * Used to pass tokens of the label marker section
      */
     labelMarker?: MeterGroupTokenSections.LabelMarker;
+    /**
+     * Used to pass tokens of the label text section
+     */
+    labelText?: MeterGroupTokenSections.LabelText;
     /**
      * Used to pass tokens of the label icon section
      */

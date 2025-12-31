@@ -6,7 +6,9 @@ export const root: TerminalTokenSections.Root = {
     color: '{form.field.color}',
     height: '18rem',
     padding: '{form.field.padding.y} {form.field.padding.x}',
-    borderRadius: '{form.field.border.radius}'
+    borderRadius: '{form.field.border.radius}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}'
 };
 
 export const prompt: TerminalTokenSections.Prompt = {

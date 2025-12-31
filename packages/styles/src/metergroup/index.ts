@@ -31,6 +31,11 @@ export const style = /*css*/ `
         border-radius: 100%;
     }
 
+    .p-metergroup-label-text {
+        font-weight: dt('metergroup.label.text.font.weight');
+        font-size: dt('metergroup.label.text.font.size');
+    }
+
     .p-metergroup-label-icon {
         font-size: dt('metergroup.label.icon.size');
         width: dt('metergroup.label.icon.size');

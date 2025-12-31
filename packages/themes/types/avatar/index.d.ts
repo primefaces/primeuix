@@ -26,6 +26,12 @@ export declare namespace AvatarTokenSections {
          */
         height?: string;
         /**
+         * Font weight of root
+         *
+         * @designToken avatar.font.weight
+         */
+        fontWeight?: string;
+        /**
          * Font size of root
          *
          * @designToken avatar.font.size
