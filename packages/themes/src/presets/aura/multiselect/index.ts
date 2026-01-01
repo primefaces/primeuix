@@ -57,7 +57,7 @@ export const list: MultiSelectTokenSections.List = {
     padding: '{list.padding}',
     gap: '{list.gap}',
     header: {
-        padding: '{list.header.padding}'
+        padding: '0.5rem 0.5rem 0.125rem 0.875rem'
     }
 };
 

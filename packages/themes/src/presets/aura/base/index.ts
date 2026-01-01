@@ -100,7 +100,7 @@ export const semantic: BaseTokenSections.Semantic = {
         padding: '0.25rem 0.25rem',
         gap: '2px',
         header: {
-            padding: '0.375rem 0.375rem 0.125rem 0.375rem'
+            padding: '0.5rem 0.5rem 0.125rem 0.5rem'
         },
         option: {
             padding: '0.25rem 0.625rem',
