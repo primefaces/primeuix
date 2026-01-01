@@ -1,7 +1,7 @@
 import type { ToolbarDesignTokens, ToolbarTokenSections } from '@primeuix/themes/types/toolbar';
 
 export const root: ToolbarTokenSections.Root = {
-    background: '{content.background}',
+    background: 'light-dark({surface.50}, {surface.800})',
     borderColor: '{content.border.color}',
     borderRadius: '{content.border.radius}',
     color: '{content.color}',
@@ -9,22 +9,6 @@ export const root: ToolbarTokenSections.Root = {
     padding: '0.75rem'
 };
 
-export const colorScheme: ToolbarTokenSections.ColorScheme = {
-    light: {
-        root: {
-            background: '{surface.50}',
-            color: '{content.color}'
-        }
-    },
-    dark: {
-        root: {
-            background: '{surface.800}',
-            color: '{content.color}'
-        }
-    }
-};
-
 export default {
-    root,
-    colorScheme
+    root
 } satisfies ToolbarDesignTokens;

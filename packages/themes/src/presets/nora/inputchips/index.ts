@@ -27,26 +27,12 @@ export const root: InputChipsTokenSections.Root = {
 };
 
 export const chip: InputChipsTokenSections.Chip = {
-    borderRadius: '{border.radius.xs}'
-};
-
-export const colorScheme: InputChipsTokenSections.ColorScheme = {
-    light: {
-        chip: {
-            focusBackground: '{surface.300}',
-            color: '{surface.900}'
-        }
-    },
-    dark: {
-        chip: {
-            focusBackground: '{surface.600}',
-            color: '{surface.0}'
-        }
-    }
+    borderRadius: '{border.radius.xs}',
+    focusBackground: 'light-dark({surface.300}, {surface.600})',
+    color: 'light-dark({surface.900}, {surface.0})'
 };
 
 export default {
     root,
-    chip,
-    colorScheme
+    chip
 } satisfies InputChipsDesignTokens;

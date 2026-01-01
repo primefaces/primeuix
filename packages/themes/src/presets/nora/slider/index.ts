@@ -6,7 +6,8 @@ export const root: SliderTokenSections.Root = {
 
 export const track: SliderTokenSections.Track = {
     borderRadius: '{content.border.radius}',
-    size: '3px'
+    size: '3px',
+    background: 'light-dark({surface.300}, {surface.600})'
 };
 
 export const range: SliderTokenSections.Range = {
@@ -36,23 +37,9 @@ export const handle: SliderTokenSections.Handle = {
     }
 };
 
-export const colorScheme: SliderTokenSections.ColorScheme = {
-    light: {
-        track: {
-            background: '{surface.300}'
-        }
-    },
-    dark: {
-        track: {
-            background: '{surface.600}'
-        }
-    }
-};
-
 export default {
     root,
     track,
     range,
-    handle,
-    colorScheme
+    handle
 } satisfies SliderDesignTokens;

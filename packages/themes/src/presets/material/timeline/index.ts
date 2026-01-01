@@ -21,6 +21,7 @@ export const eventMarker: TimelineTokenSections.EventMarker = {
     borderRadius: '50%',
     borderWidth: '2px',
     background: '{primary.color}',
+    borderColor: 'light-dark({surface.0}, {surface.900})',
     content: {
         borderRadius: '50%',
         size: '0',
@@ -34,19 +35,6 @@ export const eventConnector: TimelineTokenSections.EventConnector = {
     size: '2px'
 };
 
-export const colorScheme: TimelineTokenSections.ColorScheme = {
-    light: {
-        eventMarker: {
-            borderColor: '{surface.0}'
-        }
-    },
-    dark: {
-        eventMarker: {
-            borderColor: '{surface.900}'
-        }
-    }
-};
-
 export const css: TimelineTokenSections.CSS = /*css*/ ``;
 
 export default {
@@ -55,6 +43,5 @@ export default {
     vertical,
     eventMarker,
     eventConnector,
-    colorScheme,
     css
 } satisfies TimelineDesignTokens;

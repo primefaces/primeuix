@@ -8,6 +8,8 @@ export const root: DataViewTokenSections.Root = {
 };
 
 export const header: DataViewTokenSections.Header = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    color: '{text.color}',
     borderColor: '{content.border.color}',
     borderWidth: '0 0 1px 0',
     padding: '0.875rem 1.125rem',
@@ -42,27 +44,11 @@ export const paginatorBottom: DataViewTokenSections.PaginatorBottom = {
     borderWidth: '1px 0 0 0'
 };
 
-export const colorScheme: DataViewTokenSections.ColorScheme = {
-    light: {
-        header: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        }
-    },
-    dark: {
-        header: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        }
-    }
-};
-
 export default {
     root,
     header,
     content,
     footer,
     paginatorTop,
-    paginatorBottom,
-    colorScheme
+    paginatorBottom
 } satisfies DataViewDesignTokens;

@@ -10,6 +10,10 @@ export const root: FieldsetTokenSections.Root = {
 };
 
 export const legend: FieldsetTokenSections.Legend = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    hoverBackground: 'light-dark({surface.100}, {surface.700})',
+    color: '{text.color}',
+    hoverColor: '{text.hover.color}',
     borderRadius: '{content.border.radius}',
     borderWidth: '1px',
     borderColor: '{content.border.color}',
@@ -34,29 +38,9 @@ export const content: FieldsetTokenSections.Content = {
     padding: '0'
 };
 
-export const colorScheme: FieldsetTokenSections.ColorScheme = {
-    light: {
-        legend: {
-            background: '{surface.50}',
-            hoverBackground: '{surface.100}',
-            color: '{text.color}',
-            hoverColor: '{text.hover.color}'
-        }
-    },
-    dark: {
-        legend: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            color: '{text.color}',
-            hoverColor: '{text.hover.color}'
-        }
-    }
-};
-
 export default {
     root,
     legend,
     toggleIcon,
-    content,
-    colorScheme
+    content
 } satisfies FieldsetDesignTokens;

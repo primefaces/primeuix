@@ -31,7 +31,8 @@ export const root: ToggleButtonTokenSections.Root = {
     lg: {
         fontSize: '{form.field.lg.font.size}',
         padding: '0.625rem 0.875rem'
-    }
+    },
+    hoverBackground: 'light-dark({surface.200}, {surface.700})'
 };
 
 export const icon: ToggleButtonTokenSections.Icon = {
@@ -54,22 +55,8 @@ export const content: ToggleButtonTokenSections.Content = {
     }
 };
 
-export const colorScheme: ToggleButtonTokenSections.ColorScheme = {
-    light: {
-        root: {
-            hoverBackground: '{surface.200}'
-        }
-    },
-    dark: {
-        root: {
-            hoverBackground: '{surface.700}'
-        }
-    }
-};
-
 export default {
     root,
     icon,
-    content,
-    colorScheme
+    content
 } satisfies ToggleButtonDesignTokens;

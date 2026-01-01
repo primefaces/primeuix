@@ -15,26 +15,17 @@ export const value: KnobTokenSections.Value = {
     background: '{primary.color}'
 };
 
-export const text: KnobTokenSections.Text = {
-    color: '{text.muted.color}'
+export const range: KnobTokenSections.Range = {
+    background: 'light-dark({surface.300}, {surface.600})'
 };
 
-export const colorScheme: KnobTokenSections.ColorScheme = {
-    light: {
-        range: {
-            background: '{surface.300}'
-        }
-    },
-    dark: {
-        range: {
-            background: '{surface.600}'
-        }
-    }
+export const text: KnobTokenSections.Text = {
+    color: '{text.muted.color}'
 };
 
 export default {
     root,
     value,
-    text,
-    colorScheme
+    range,
+    text
 } satisfies KnobDesignTokens;

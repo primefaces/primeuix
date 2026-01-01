@@ -39,7 +39,8 @@ export const semantic: BaseTokenSections.Semantic = {
         width: '0',
         style: 'none',
         color: 'transparent',
-        offset: '0'
+        offset: '0',
+        shadow: 'light-dark(0 0 0 0.2rem {primary.200}, 0 0 0 0.2rem color-mix(in srgb, {primary.color}, transparent 80%))'
     },
     disabledOpacity: '0.6',
     iconSize: '1rem',
@@ -55,7 +56,11 @@ export const semantic: BaseTokenSections.Semantic = {
         700: '{emerald.700}',
         800: '{emerald.800}',
         900: '{emerald.900}',
-        950: '{emerald.950}'
+        950: '{emerald.950}',
+        color: 'light-dark({primary.500}, {primary.400})',
+        contrastColor: 'light-dark(#ffffff, {surface.900})',
+        hoverColor: 'light-dark({primary.600}, {primary.300})',
+        activeColor: 'light-dark({primary.700}, {primary.200})'
     },
     formField: {
         paddingX: '0.75rem',
@@ -78,7 +83,26 @@ export const semantic: BaseTokenSections.Semantic = {
             offset: '{focus.ring.offset}',
             shadow: '{focus.ring.shadow}'
         },
-        transitionDuration: '{transition.duration}'
+        transitionDuration: '{transition.duration}',
+        background: 'light-dark({surface.0}, {surface.950})',
+        disabledBackground: 'light-dark({surface.200}, {surface.700})',
+        filledBackground: 'light-dark({surface.50}, {surface.800})',
+        filledHoverBackground: 'light-dark({surface.50}, {surface.800})',
+        filledFocusBackground: 'light-dark({surface.0}, {surface.950})',
+        borderColor: 'light-dark({surface.300}, {surface.600})',
+        hoverBorderColor: '{primary.color}',
+        focusBorderColor: '{primary.color}',
+        invalidBorderColor: 'light-dark({red.400}, {red.300})',
+        color: 'light-dark({surface.700}, {surface.0})',
+        disabledColor: 'light-dark({surface.500}, {surface.400})',
+        placeholderColor: 'light-dark({surface.500}, {surface.400})',
+        invalidPlaceholderColor: 'light-dark({red.600}, {red.400})',
+        floatLabelColor: 'light-dark({surface.500}, {surface.400})',
+        floatLabelFocusColor: 'light-dark({primary.600}, {primary.color})',
+        floatLabelActiveColor: 'light-dark({surface.500}, {surface.400})',
+        floatLabelInvalidColor: '{form.field.invalid.placeholder.color}',
+        iconColor: 'light-dark({surface.500}, {surface.400})',
+        shadow: 'none'
     },
     list: {
         padding: '0.5rem 0',
@@ -88,18 +112,38 @@ export const semantic: BaseTokenSections.Semantic = {
         },
         option: {
             padding: '0.625rem 1rem',
-            borderRadius: '0'
+            borderRadius: '0',
+            focusBackground: 'light-dark({surface.100}, {surface.800})',
+            selectedBackground: '{highlight.background}',
+            selectedFocusBackground: '{highlight.focus.background}',
+            color: '{text.color}',
+            focusColor: '{text.hover.color}',
+            selectedColor: '{highlight.color}',
+            selectedFocusColor: '{highlight.focus.color}',
+            icon: {
+                color: 'light-dark({surface.400}, {surface.500})',
+                focusColor: 'light-dark({surface.500}, {surface.400})'
+            }
         },
         optionGroup: {
             padding: '0.625rem 1rem',
-            fontWeight: '600'
+            fontWeight: '600',
+            background: 'transparent',
+            color: 'light-dark({text.color}, {text.color})'
         }
     },
     content: {
-        borderRadius: '{border.radius.md}'
+        borderRadius: '{border.radius.md}',
+        background: 'light-dark({surface.0}, {surface.900})',
+        hoverBackground: 'light-dark({surface.100}, {surface.800})',
+        borderColor: 'light-dark({surface.200}, {surface.700})',
+        color: '{text.color}',
+        hoverColor: '{text.hover.color}'
     },
     mask: {
-        transitionDuration: '0.3s'
+        transitionDuration: '0.3s',
+        background: 'light-dark(rgba(0,0,0,0.4), rgba(0,0,0,0.6))',
+        color: '{surface.200}'
     },
     navigation: {
         list: {
@@ -109,292 +153,84 @@ export const semantic: BaseTokenSections.Semantic = {
         item: {
             padding: '0.625rem 1rem',
             borderRadius: '0',
-            gap: '0.5rem'
+            gap: '0.5rem',
+            focusBackground: 'light-dark({surface.100}, {surface.800})',
+            activeBackground: 'light-dark({surface.100}, {surface.800})',
+            color: '{text.color}',
+            focusColor: '{text.hover.color}',
+            activeColor: '{text.hover.color}',
+            icon: {
+                color: 'light-dark({surface.400}, {surface.500})',
+                focusColor: 'light-dark({surface.500}, {surface.400})',
+                activeColor: 'light-dark({surface.500}, {surface.400})'
+            }
         },
         submenuLabel: {
             padding: '0.625rem 1rem',
-            fontWeight: '600'
+            fontWeight: '600',
+            background: 'transparent',
+            color: 'light-dark({text.color}, {text.color})'
         },
         submenuIcon: {
-            size: '0.875rem'
+            size: '0.875rem',
+            color: 'light-dark({surface.400}, {surface.500})',
+            focusColor: 'light-dark({surface.500}, {surface.400})',
+            activeColor: 'light-dark({surface.500}, {surface.400})'
         }
     },
     overlay: {
         select: {
             borderRadius: '{border.radius.md}',
-            shadow: '0 2px 12px 0 rgba(0, 0, 0, 0.1)'
+            shadow: '0 2px 12px 0 rgba(0, 0, 0, 0.1)',
+            background: 'light-dark({surface.0}, {surface.900})',
+            borderColor: 'light-dark({surface.200}, {surface.700})',
+            color: '{text.color}'
         },
         popover: {
             borderRadius: '{border.radius.md}',
             padding: '1rem',
-            shadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
+            shadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+            background: 'light-dark({surface.0}, {surface.900})',
+            borderColor: 'light-dark({surface.200}, {surface.700})',
+            color: '{text.color}'
         },
         modal: {
             borderRadius: '{border.radius.xl}',
             padding: '1.5rem',
-            shadow: '0 1px 3px rgba(0, 0, 0, 0.3)'
+            shadow: '0 1px 3px rgba(0, 0, 0, 0.3)',
+            background: 'light-dark({surface.0}, {surface.900})',
+            borderColor: 'light-dark({surface.200}, {surface.700})',
+            color: '{text.color}'
         },
         navigation: {
             shadow: '0 2px 12px 0 rgba(0, 0, 0, 0.1)'
         }
     },
-    colorScheme: {
-        light: {
-            surface: {
-                0: '#ffffff',
-                50: '{slate.50}',
-                100: '{slate.100}',
-                200: '{slate.200}',
-                300: '{slate.300}',
-                400: '{slate.400}',
-                500: '{slate.500}',
-                600: '{slate.600}',
-                700: '{slate.700}',
-                800: '{slate.800}',
-                900: '{slate.900}',
-                950: '{slate.950}'
-            },
-            primary: {
-                color: '{primary.500}',
-                contrastColor: '#ffffff',
-                hoverColor: '{primary.600}',
-                activeColor: '{primary.700}'
-            },
-            highlight: {
-                background: '{primary.50}',
-                focusBackground: '{primary.100}',
-                color: '{primary.700}',
-                focusColor: '{primary.800}'
-            },
-            focusRing: {
-                shadow: '0 0 0 0.2rem {primary.200}'
-            },
-            mask: {
-                background: 'rgba(0,0,0,0.4)',
-                color: '{surface.200}'
-            },
-            formField: {
-                background: '{surface.0}',
-                disabledBackground: '{surface.200}',
-                filledBackground: '{surface.50}',
-                filledHoverBackground: '{surface.50}',
-                filledFocusBackground: '{surface.0}',
-                borderColor: '{surface.300}',
-                hoverBorderColor: '{primary.color}',
-                focusBorderColor: '{primary.color}',
-                invalidBorderColor: '{red.400}',
-                color: '{surface.700}',
-                disabledColor: '{surface.500}',
-                placeholderColor: '{surface.500}',
-                invalidPlaceholderColor: '{red.600}',
-                floatLabelColor: '{surface.500}',
-                floatLabelFocusColor: '{primary.600}',
-                floatLabelActiveColor: '{surface.500}',
-                floatLabelInvalidColor: '{form.field.invalid.placeholder.color}',
-                iconColor: '{surface.500}',
-                shadow: 'none'
-            },
-            text: {
-                color: '{surface.700}',
-                hoverColor: '{surface.800}',
-                mutedColor: '{surface.500}',
-                hoverMutedColor: '{surface.600}'
-            },
-            content: {
-                background: '{surface.0}',
-                hoverBackground: '{surface.100}',
-                borderColor: '{surface.200}',
-                color: '{text.color}',
-                hoverColor: '{text.hover.color}'
-            },
-            overlay: {
-                select: {
-                    background: '{surface.0}',
-                    borderColor: '{surface.200}',
-                    color: '{text.color}'
-                },
-                popover: {
-                    background: '{surface.0}',
-                    borderColor: '{surface.200}',
-                    color: '{text.color}'
-                },
-                modal: {
-                    background: '{surface.0}',
-                    borderColor: '{surface.200}',
-                    color: '{text.color}'
-                }
-            },
-            list: {
-                option: {
-                    focusBackground: '{surface.100}',
-                    selectedBackground: '{highlight.background}',
-                    selectedFocusBackground: '{highlight.focus.background}',
-                    color: '{text.color}',
-                    focusColor: '{text.hover.color}',
-                    selectedColor: '{highlight.color}',
-                    selectedFocusColor: '{highlight.focus.color}',
-                    icon: {
-                        color: '{surface.400}',
-                        focusColor: '{surface.500}'
-                    }
-                },
-                optionGroup: {
-                    background: 'transparent',
-                    color: '{text.color}'
-                }
-            },
-            navigation: {
-                item: {
-                    focusBackground: '{surface.100}',
-                    activeBackground: '{surface.100}',
-                    color: '{text.color}',
-                    focusColor: '{text.hover.color}',
-                    activeColor: '{text.hover.color}',
-                    icon: {
-                        color: '{surface.400}',
-                        focusColor: '{surface.500}',
-                        activeColor: '{surface.500}'
-                    }
-                },
-                submenuLabel: {
-                    background: 'transparent',
-                    color: '{text.color}'
-                },
-                submenuIcon: {
-                    color: '{surface.400}',
-                    focusColor: '{surface.500}',
-                    activeColor: '{surface.500}'
-                }
-            }
-        },
-        dark: {
-            surface: {
-                0: '#ffffff',
-                50: '{zinc.50}',
-                100: '{zinc.100}',
-                200: '{zinc.200}',
-                300: '{zinc.300}',
-                400: '{zinc.400}',
-                500: '{zinc.500}',
-                600: '{zinc.600}',
-                700: '{zinc.700}',
-                800: '{zinc.800}',
-                900: '{zinc.900}',
-                950: '{zinc.950}'
-            },
-            primary: {
-                color: '{primary.400}',
-                contrastColor: '{surface.900}',
-                hoverColor: '{primary.300}',
-                activeColor: '{primary.200}'
-            },
-            highlight: {
-                background: 'color-mix(in srgb, {primary.400}, transparent 84%)',
-                focusBackground: 'color-mix(in srgb, {primary.400}, transparent 76%)',
-                color: 'rgba(255,255,255,.87)',
-                focusColor: 'rgba(255,255,255,.87)'
-            },
-            focusRing: {
-                shadow: '0 0 0 0.2rem color-mix(in srgb, {primary.color}, transparent 80%)'
-            },
-            mask: {
-                background: 'rgba(0,0,0,0.6)',
-                color: '{surface.200}'
-            },
-            formField: {
-                background: '{surface.950}',
-                disabledBackground: '{surface.700}',
-                filledBackground: '{surface.800}',
-                filledHoverBackground: '{surface.800}',
-                filledFocusBackground: '{surface.950}',
-                borderColor: '{surface.600}',
-                hoverBorderColor: '{primary.color}',
-                focusBorderColor: '{primary.color}',
-                invalidBorderColor: '{red.300}',
-                color: '{surface.0}',
-                disabledColor: '{surface.400}',
-                placeholderColor: '{surface.400}',
-                invalidPlaceholderColor: '{red.400}',
-                floatLabelColor: '{surface.400}',
-                floatLabelFocusColor: '{primary.color}',
-                floatLabelActiveColor: '{surface.400}',
-                floatLabelInvalidColor: '{form.field.invalid.placeholder.color}',
-                iconColor: '{surface.400}',
-                shadow: 'none'
-            },
-            text: {
-                color: '{surface.0}',
-                hoverColor: '{surface.0}',
-                mutedColor: '{surface.400}',
-                hoverMutedColor: '{surface.300}'
-            },
-            content: {
-                background: '{surface.900}',
-                hoverBackground: '{surface.800}',
-                borderColor: '{surface.700}',
-                color: '{text.color}',
-                hoverColor: '{text.hover.color}'
-            },
-            overlay: {
-                select: {
-                    background: '{surface.900}',
-                    borderColor: '{surface.700}',
-                    color: '{text.color}'
-                },
-                popover: {
-                    background: '{surface.900}',
-                    borderColor: '{surface.700}',
-                    color: '{text.color}'
-                },
-                modal: {
-                    background: '{surface.900}',
-                    borderColor: '{surface.700}',
-                    color: '{text.color}'
-                }
-            },
-            list: {
-                option: {
-                    focusBackground: '{surface.800}',
-                    selectedBackground: '{highlight.background}',
-                    selectedFocusBackground: '{highlight.focus.background}',
-                    color: '{text.color}',
-                    focusColor: '{text.hover.color}',
-                    selectedColor: '{highlight.color}',
-                    selectedFocusColor: '{highlight.focus.color}',
-                    icon: {
-                        color: '{surface.500}',
-                        focusColor: '{surface.400}'
-                    }
-                },
-                optionGroup: {
-                    background: 'transparent',
-                    color: '{text.color}'
-                }
-            },
-            navigation: {
-                item: {
-                    focusBackground: '{surface.800}',
-                    activeBackground: '{surface.800}',
-                    color: '{text.color}',
-                    focusColor: '{text.hover.color}',
-                    activeColor: '{text.hover.color}',
-                    icon: {
-                        color: '{surface.500}',
-                        focusColor: '{surface.400}',
-                        activeColor: '{surface.400}'
-                    }
-                },
-                submenuLabel: {
-                    background: 'transparent',
-                    color: '{text.color}'
-                },
-                submenuIcon: {
-                    color: '{surface.500}',
-                    focusColor: '{surface.400}',
-                    activeColor: '{surface.400}'
-                }
-            }
-        }
+    surface: {
+        0: '#ffffff',
+        50: 'light-dark({slate.50}, {zinc.50})',
+        100: 'light-dark({slate.100}, {zinc.100})',
+        200: 'light-dark({slate.200}, {zinc.200})',
+        300: 'light-dark({slate.300}, {zinc.300})',
+        400: 'light-dark({slate.400}, {zinc.400})',
+        500: 'light-dark({slate.500}, {zinc.500})',
+        600: 'light-dark({slate.600}, {zinc.600})',
+        700: 'light-dark({slate.700}, {zinc.700})',
+        800: 'light-dark({slate.800}, {zinc.800})',
+        900: 'light-dark({slate.900}, {zinc.900})',
+        950: 'light-dark({slate.950}, {zinc.950})'
+    },
+    highlight: {
+        background: 'light-dark({primary.50}, color-mix(in srgb, {primary.400}, transparent 84%))',
+        focusBackground: 'light-dark({primary.100}, color-mix(in srgb, {primary.400}, transparent 76%))',
+        color: 'light-dark({primary.700}, rgba(255,255,255,.87))',
+        focusColor: 'light-dark({primary.800}, rgba(255,255,255,.87))'
+    },
+    text: {
+        color: 'light-dark({surface.700}, {surface.0})',
+        hoverColor: 'light-dark({surface.800}, {surface.0})',
+        mutedColor: 'light-dark({surface.500}, {surface.400})',
+        hoverMutedColor: 'light-dark({surface.600}, {surface.300})'
     }
 };
 

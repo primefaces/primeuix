@@ -19,28 +19,13 @@ export const preview: ColorPickerTokenSections.Preview = {
 
 export const panel: ColorPickerTokenSections.Panel = {
     shadow: '{overlay.popover.shadow}',
-    borderRadius: '{overlay.popover.borderRadius}'
+    borderRadius: '{overlay.popover.borderRadius}',
+    background: 'light-dark({surface.800}, {surface.900})',
+    borderColor: 'light-dark({surface.900}, {surface.700})'
 };
 
-export const colorScheme: ColorPickerTokenSections.ColorScheme = {
-    light: {
-        panel: {
-            background: '{surface.800}',
-            borderColor: '{surface.900}'
-        },
-        handle: {
-            color: '{surface.0}'
-        }
-    },
-    dark: {
-        panel: {
-            background: '{surface.900}',
-            borderColor: '{surface.700}'
-        },
-        handle: {
-            color: '{surface.0}'
-        }
-    }
+export const handle: ColorPickerTokenSections.Handle = {
+    color: '{surface.0}'
 };
 
 export const css: ColorPickerTokenSections.CSS = /*css*/ ``;
@@ -49,6 +34,6 @@ export default {
     root,
     preview,
     panel,
-    colorScheme,
+    handle,
     css
 } satisfies ColorPickerDesignTokens;

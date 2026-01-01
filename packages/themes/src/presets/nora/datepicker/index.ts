@@ -47,7 +47,9 @@ export const dropdown: DatePickerTokenSections.Dropdown = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: '{focus.ring.shadow}'
-    }
+    },
+    hoverBackground: 'light-dark({surface.200}, {surface.700})',
+    activeBackground: 'light-dark({surface.300}, {surface.600})'
 };
 
 export const inputIcon: DatePickerTokenSections.InputIcon = {
@@ -136,27 +138,9 @@ export const timePicker: DatePickerTokenSections.TimePicker = {
     buttonGap: '0.25rem'
 };
 
-export const colorScheme: DatePickerTokenSections.ColorScheme = {
-    light: {
-        dropdown: {
-            hoverBackground: '{surface.200}',
-            activeBackground: '{surface.300}'
-        },
-        today: {
-            background: '{surface.200}',
-            color: '{surface.900}'
-        }
-    },
-    dark: {
-        dropdown: {
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.600}'
-        },
-        today: {
-            background: '{surface.700}',
-            color: '{surface.0}'
-        }
-    }
+export const today: DatePickerTokenSections.Today = {
+    background: 'light-dark({surface.200}, {surface.700})',
+    color: 'light-dark({surface.900}, {surface.0})'
 };
 
 export default {
@@ -178,5 +162,5 @@ export default {
     year,
     buttonbar,
     timePicker,
-    colorScheme
+    today
 } satisfies DatePickerDesignTokens;

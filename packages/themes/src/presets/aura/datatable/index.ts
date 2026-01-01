@@ -1,7 +1,8 @@
 import type { DataTableDesignTokens, DataTableTokenSections } from '@primeuix/themes/types/datatable';
 
 export const root: DataTableTokenSections.Root = {
-    transitionDuration: '0s'
+    transitionDuration: '0s',
+    borderColor: 'light-dark({content.border.color}, {surface.800})'
 };
 
 export const header: DataTableTokenSections.Header = {
@@ -55,6 +56,7 @@ export const row: DataTableTokenSections.Row = {
     color: '{content.color}',
     hoverColor: '{content.hover.color}',
     selectedColor: '{highlight.color}',
+    stripedBackground: 'light-dark({surface.50}, {surface.950})',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -69,6 +71,7 @@ export const bodyCell: DataTableTokenSections.BodyCell = {
     padding: '0.5rem 0.875rem',
     fontWeight: '{typography.font.size}',
     fontSize: '{typography.font.size}',
+    selectedBorderColor: 'light-dark({primary.100}, {primary.900})',
     sm: {
         padding: '0.125rem 0.375rem'
     },
@@ -200,31 +203,6 @@ export const paginatorBottom: DataTableTokenSections.PaginatorBottom = {
     borderWidth: '0 0 1px 0'
 };
 
-export const colorScheme: DataTableTokenSections.ColorScheme = {
-    light: {
-        root: {
-            borderColor: '{content.border.color}'
-        },
-        row: {
-            stripedBackground: '{surface.50}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.100}'
-        }
-    },
-    dark: {
-        root: {
-            borderColor: '{surface.800}'
-        },
-        row: {
-            stripedBackground: '{surface.950}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.900}'
-        }
-    }
-};
-
 export const css: DataTableTokenSections.CSS = /*css*/ `
     .p-datatable-mask.p-overlay-mask {
         --px-mask-background: light-dark(rgba(255,255,255,0.5),rgba(0,0,0,0.3));
@@ -250,6 +228,5 @@ export default {
     filter,
     paginatorTop,
     paginatorBottom,
-    colorScheme,
     css
 } satisfies DataTableDesignTokens;

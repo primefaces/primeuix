@@ -7,40 +7,19 @@ export const root: InputNumberTokenSections.Root = {
 export const button: InputNumberTokenSections.Button = {
     width: '2.5rem',
     borderRadius: '{form.field.border.radius}',
-    verticalPadding: '{form.field.padding.y}'
-};
-
-export const colorScheme: InputNumberTokenSections.ColorScheme = {
-    light: {
-        button: {
-            background: '{surface.100}',
-            hoverBackground: '{surface.200}',
-            activeBackground: '{surface.300}',
-            borderColor: '{form.field.border.color}',
-            hoverBorderColor: '{form.field.border.color}',
-            activeBorderColor: '{form.field.border.color}',
-            color: '{surface.600}',
-            hoverColor: '{surface.700}',
-            activeColor: '{surface.800}'
-        }
-    },
-    dark: {
-        button: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.500}',
-            borderColor: '{form.field.border.color}',
-            hoverBorderColor: '{form.field.border.color}',
-            activeBorderColor: '{form.field.border.color}',
-            color: '{surface.300}',
-            hoverColor: '{surface.200}',
-            activeColor: '{surface.100}'
-        }
-    }
+    verticalPadding: '{form.field.padding.y}',
+    background: 'light-dark({surface.100}, {surface.800})',
+    hoverBackground: 'light-dark({surface.200}, {surface.700})',
+    activeBackground: 'light-dark({surface.300}, {surface.500})',
+    borderColor: '{form.field.border.color}',
+    hoverBorderColor: '{form.field.border.color}',
+    activeBorderColor: '{form.field.border.color}',
+    color: 'light-dark({surface.600}, {surface.300})',
+    hoverColor: 'light-dark({surface.700}, {surface.200})',
+    activeColor: 'light-dark({surface.800}, {surface.100})'
 };
 
 export default {
     root,
-    button,
-    colorScheme
+    button
 } satisfies InputNumberDesignTokens;

@@ -13,24 +13,11 @@ export const bar: ScrollPanelTokenSections.Bar = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: '{focus.ring.shadow}'
-    }
-};
-
-export const colorScheme: ScrollPanelTokenSections.ColorScheme = {
-    light: {
-        bar: {
-            background: '{surface.200}'
-        }
     },
-    dark: {
-        bar: {
-            background: '{surface.700}'
-        }
-    }
+    background: 'light-dark({surface.200}, {surface.700})'
 };
 
 export default {
     root,
-    bar,
-    colorScheme
+    bar
 } satisfies ScrollPanelDesignTokens;

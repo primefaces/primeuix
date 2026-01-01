@@ -1,6 +1,7 @@
 import type { MenubarDesignTokens, MenubarTokenSections } from '@primeuix/themes/types/menubar';
 
 export const root: MenubarTokenSections.Root = {
+    background: 'light-dark({surface.50}, {surface.800})',
     borderColor: 'transparent',
     borderRadius: '{content.border.radius}',
     color: '{content.color}',
@@ -65,25 +66,11 @@ export const mobileButton: MenubarTokenSections.MobileButton = {
     }
 };
 
-export const colorScheme: MenubarTokenSections.ColorScheme = {
-    light: {
-        root: {
-            background: '{surface.50}'
-        }
-    },
-    dark: {
-        root: {
-            background: '{surface.800}'
-        }
-    }
-};
-
 export default {
     root,
     baseItem,
     item,
     submenu,
     separator,
-    mobileButton,
-    colorScheme
+    mobileButton
 } satisfies MenubarDesignTokens;

@@ -1,11 +1,14 @@
 import type { DataTableDesignTokens, DataTableTokenSections } from '@primeuix/themes/types/datatable';
 
 export const root: DataTableTokenSections.Root = {
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{transition.duration}',
+    borderColor: 'light-dark({content.border.color}, {surface.800})'
 };
 
 export const header: DataTableTokenSections.Header = {
+    background: 'light-dark({surface.50}, {surface.800})',
     borderColor: '{datatable.border.color}',
+    color: '{text.color}',
     borderWidth: '1px 0 1px 0',
     padding: '0.75rem 1rem',
     sm: {
@@ -17,8 +20,11 @@ export const header: DataTableTokenSections.Header = {
 };
 
 export const headerCell: DataTableTokenSections.HeaderCell = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    hoverBackground: 'light-dark({surface.100}, {surface.700})',
     selectedBackground: '{highlight.background}',
     borderColor: '{datatable.border.color}',
+    color: '{text.color}',
     hoverColor: '{content.hover.color}',
     selectedColor: '{highlight.color}',
     gap: '0.5rem',
@@ -55,7 +61,8 @@ export const row: DataTableTokenSections.Row = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: 'inset {focus.ring.shadow}'
-    }
+    },
+    stripedBackground: 'light-dark({surface.50}, {surface.950})'
 };
 
 export const bodyCell: DataTableTokenSections.BodyCell = {
@@ -66,11 +73,14 @@ export const bodyCell: DataTableTokenSections.BodyCell = {
     },
     lg: {
         padding: '1rem 1.25rem'
-    }
+    },
+    selectedBorderColor: 'light-dark({primary.100}, {primary.900})'
 };
 
 export const footerCell: DataTableTokenSections.FooterCell = {
+    background: 'light-dark({surface.50}, {surface.800})',
     borderColor: '{datatable.border.color}',
+    color: '{text.color}',
     padding: '0.75rem 1rem',
     sm: {
         padding: '0.375rem 0.5rem'
@@ -85,7 +95,9 @@ export const columnFooter: DataTableTokenSections.ColumnFooter = {
 };
 
 export const footer: DataTableTokenSections.Footer = {
+    background: 'light-dark({surface.50}, {surface.800})',
     borderColor: '{datatable.border.color}',
+    color: '{text.color}',
     borderWidth: '0 0 1px 0',
     padding: '0.75rem 1rem',
     sm: {
@@ -187,65 +199,6 @@ export const paginatorBottom: DataTableTokenSections.PaginatorBottom = {
     borderWidth: '0 0 1px 0'
 };
 
-export const colorScheme: DataTableTokenSections.ColorScheme = {
-    light: {
-        root: {
-            borderColor: '{content.border.color}'
-        },
-        header: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        },
-        headerCell: {
-            background: '{surface.50}',
-            hoverBackground: '{surface.100}',
-            color: '{text.color}'
-        },
-        footer: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        },
-        footerCell: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        },
-        row: {
-            stripedBackground: '{surface.50}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.100}'
-        }
-    },
-    dark: {
-        root: {
-            borderColor: '{surface.800}'
-        },
-        header: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        },
-        headerCell: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            color: '{text.color}'
-        },
-        footer: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        },
-        footerCell: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        },
-        row: {
-            stripedBackground: '{surface.950}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.900}'
-        }
-    }
-};
-
 export default {
     root,
     header,
@@ -264,6 +217,5 @@ export default {
     rowToggleButton,
     filter,
     paginatorTop,
-    paginatorBottom,
-    colorScheme
+    paginatorBottom
 } satisfies DataTableDesignTokens;

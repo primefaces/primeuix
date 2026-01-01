@@ -1,7 +1,8 @@
 import type { DataTableDesignTokens, DataTableTokenSections } from '@primeuix/themes/types/datatable';
 
 export const root: DataTableTokenSections.Root = {
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{transition.duration}',
+    borderColor: 'light-dark({content.border.color}, {surface.800})'
 };
 
 export const header: DataTableTokenSections.Header = {
@@ -60,7 +61,8 @@ export const row: DataTableTokenSections.Row = {
         color: '{focus.ring.color}',
         offset: '-1px',
         shadow: '{focus.ring.shadow}'
-    }
+    },
+    stripedBackground: 'light-dark({surface.50}, {surface.950})'
 };
 
 export const bodyCell: DataTableTokenSections.BodyCell = {
@@ -71,7 +73,8 @@ export const bodyCell: DataTableTokenSections.BodyCell = {
     },
     lg: {
         padding: '1rem 1.25rem'
-    }
+    },
+    selectedBorderColor: 'light-dark({primary.100}, {primary.900})'
 };
 
 export const footerCell: DataTableTokenSections.FooterCell = {
@@ -196,31 +199,6 @@ export const paginatorBottom: DataTableTokenSections.PaginatorBottom = {
     borderWidth: '0 0 1px 0'
 };
 
-export const colorScheme: DataTableTokenSections.ColorScheme = {
-    light: {
-        root: {
-            borderColor: '{content.border.color}'
-        },
-        row: {
-            stripedBackground: '{surface.50}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.100}'
-        }
-    },
-    dark: {
-        root: {
-            borderColor: '{surface.800}'
-        },
-        row: {
-            stripedBackground: '{surface.950}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.900}'
-        }
-    }
-};
-
 export const css: DataTableTokenSections.CSS = /*css*/ `
 .p-datatable-header-cell,
 .p-datatable-tbody > tr {
@@ -247,6 +225,5 @@ export default {
     filter,
     paginatorTop,
     paginatorBottom,
-    colorScheme,
     css
 } satisfies DataTableDesignTokens;

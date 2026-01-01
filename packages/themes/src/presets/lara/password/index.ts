@@ -23,21 +23,10 @@ export const content: PasswordTokenSections.Content = {
     gap: '0.75rem'
 };
 
-export const colorScheme: PasswordTokenSections.ColorScheme = {
-    light: {
-        strength: {
-            weakBackground: '{red.500}',
-            mediumBackground: '{amber.500}',
-            strongBackground: '{green.500}'
-        }
-    },
-    dark: {
-        strength: {
-            weakBackground: '{red.400}',
-            mediumBackground: '{amber.400}',
-            strongBackground: '{green.400}'
-        }
-    }
+export const strength: PasswordTokenSections.Strength = {
+    weakBackground: 'light-dark({red.500}, {red.400})',
+    mediumBackground: 'light-dark({amber.500}, {amber.400})',
+    strongBackground: 'light-dark({green.500}, {green.400})'
 };
 
 export default {
@@ -45,5 +34,5 @@ export default {
     icon,
     overlay,
     content,
-    colorScheme
+    strength
 } satisfies PasswordDesignTokens;

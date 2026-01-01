@@ -13,71 +13,49 @@ export const icon: TagTokenSections.Icon = {
     size: '0.75rem'
 };
 
-export const colorScheme: TagTokenSections.ColorScheme = {
-    light: {
-        primary: {
-            background: '{primary.color}',
-            color: '{primary.contrast.color}'
-        },
-        secondary: {
-            background: '{surface.100}',
-            color: '{surface.600}'
-        },
-        success: {
-            background: '{green.500}',
-            color: '{surface.0}'
-        },
-        info: {
-            background: '{sky.500}',
-            color: '{surface.0}'
-        },
-        warn: {
-            background: '{orange.500}',
-            color: '{surface.0}'
-        },
-        danger: {
-            background: '{red.500}',
-            color: '{surface.0}'
-        },
-        contrast: {
-            background: '{surface.950}',
-            color: '{surface.0}'
-        }
-    },
-    dark: {
-        primary: {
-            background: '{primary.color}',
-            color: '{primary.contrast.color}'
-        },
-        secondary: {
-            background: '{surface.800}',
-            color: '{surface.300}'
-        },
-        success: {
-            background: '{green.400}',
-            color: '{green.950}'
-        },
-        info: {
-            background: '{sky.400}',
-            color: '{sky.950}'
-        },
-        warn: {
-            background: '{orange.400}',
-            color: '{orange.950}'
-        },
-        danger: {
-            background: '{red.400}',
-            color: '{red.950}'
-        },
-        contrast: {
-            background: '{surface.0}',
-            color: '{surface.950}'
-        }
-    }
+export const primary: TagTokenSections.Primary = {
+    background: '{primary.color}',
+    color: '{primary.contrast.color}'
+};
+
+export const secondary: TagTokenSections.Secondary = {
+    background: 'light-dark({surface.100}, {surface.800})',
+    color: 'light-dark({surface.600}, {surface.300})'
+};
+
+export const success: TagTokenSections.Success = {
+    background: 'light-dark({green.500}, {green.400})',
+    color: 'light-dark({surface.0}, {green.950})'
+};
+
+export const info: TagTokenSections.Info = {
+    background: 'light-dark({sky.500}, {sky.400})',
+    color: 'light-dark({surface.0}, {sky.950})'
+};
+
+export const warn: TagTokenSections.Warn = {
+    background: 'light-dark({orange.500}, {orange.400})',
+    color: 'light-dark({surface.0}, {orange.950})'
+};
+
+export const danger: TagTokenSections.Danger = {
+    background: 'light-dark({red.500}, {red.400})',
+    color: 'light-dark({surface.0}, {red.950})'
+};
+
+export const contrast: TagTokenSections.Contrast = {
+    background: 'light-dark({surface.950}, {surface.0})',
+    color: 'light-dark({surface.0}, {surface.950})'
 };
 
 export default {
     root,
     icon,
-    colorScheme
+    primary,
+    secondary,
+    success,
+    info,
+    warn,
+    danger,
+    contrast
 } satisfies TagDesignTokens;

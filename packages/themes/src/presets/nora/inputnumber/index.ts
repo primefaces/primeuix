@@ -14,26 +14,12 @@ export const button: InputNumberTokenSections.Button = {
     activeColor: '{form.field.icon.color}',
     width: '2.5rem',
     borderRadius: '{form.field.border.radius}',
-    verticalPadding: '{form.field.padding.y}'
-};
-
-export const colorScheme: InputNumberTokenSections.ColorScheme = {
-    light: {
-        button: {
-            hoverBackground: '{surface.200}',
-            activeBackground: '{surface.300}'
-        }
-    },
-    dark: {
-        button: {
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.600}'
-        }
-    }
+    verticalPadding: '{form.field.padding.y}',
+    hoverBackground: 'light-dark({surface.200}, {surface.700})',
+    activeBackground: 'light-dark({surface.300}, {surface.600})'
 };
 
 export default {
     root,
-    button,
-    colorScheme
+    button
 } satisfies InputNumberDesignTokens;

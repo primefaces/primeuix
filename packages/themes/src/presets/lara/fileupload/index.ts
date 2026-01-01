@@ -9,6 +9,8 @@ export const root: FileUploadTokenSections.Root = {
 };
 
 export const header: FileUploadTokenSections.Header = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    color: '{text.color}',
     borderWidth: '0 0 1px 0',
     borderColor: '{content.border.color}',
     padding: '1.125rem',
@@ -43,21 +45,6 @@ export const basic: FileUploadTokenSections.Basic = {
     gap: '0.5rem'
 };
 
-export const colorScheme: FileUploadTokenSections.ColorScheme = {
-    light: {
-        header: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        }
-    },
-    dark: {
-        header: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        }
-    }
-};
-
 export default {
     root,
     header,
@@ -65,6 +52,5 @@ export default {
     file,
     fileList,
     progressbar,
-    basic,
-    colorScheme
+    basic
 } satisfies FileUploadDesignTokens;

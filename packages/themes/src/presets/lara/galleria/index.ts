@@ -34,6 +34,7 @@ export const navIcon: GalleriaTokenSections.NavIcon = {
 };
 
 export const thumbnailsContent: GalleriaTokenSections.ThumbnailsContent = {
+    background: 'light-dark({surface.50}, {surface.800})',
     padding: '1rem 0.25rem'
 };
 
@@ -47,7 +48,10 @@ export const thumbnailNavButton: GalleriaTokenSections.ThumbnailNavButton = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: '{focus.ring.shadow}'
-    }
+    },
+    hoverBackground: 'light-dark({surface.100}, {surface.700})',
+    color: 'light-dark({surface.600}, {surface.400})',
+    hoverColor: 'light-dark({surface.700}, {surface.0})'
 };
 
 export const thumbnailNavButtonIcon: GalleriaTokenSections.ThumbnailNavButtonIcon = {
@@ -76,7 +80,9 @@ export const indicatorButton: GalleriaTokenSections.IndicatorButton = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: '{focus.ring.shadow}'
-    }
+    },
+    background: 'light-dark({surface.200}, {surface.700})',
+    hoverBackground: 'light-dark({surface.300}, {surface.600})'
 };
 
 export const insetIndicatorList: GalleriaTokenSections.InsetIndicatorList = {
@@ -110,37 +116,6 @@ export const closeButtonIcon: GalleriaTokenSections.CloseButtonIcon = {
     size: '1.5rem'
 };
 
-export const colorScheme: GalleriaTokenSections.ColorScheme = {
-    light: {
-        thumbnailsContent: {
-            background: '{surface.50}'
-        },
-        thumbnailNavButton: {
-            hoverBackground: '{surface.100}',
-            color: '{surface.600}',
-            hoverColor: '{surface.700}'
-        },
-        indicatorButton: {
-            background: '{surface.200}',
-            hoverBackground: '{surface.300}'
-        }
-    },
-    dark: {
-        thumbnailsContent: {
-            background: '{surface.800}'
-        },
-        thumbnailNavButton: {
-            hoverBackground: '{surface.700}',
-            color: '{surface.400}',
-            hoverColor: '{surface.0}'
-        },
-        indicatorButton: {
-            background: '{surface.700}',
-            hoverBackground: '{surface.600}'
-        }
-    }
-};
-
 export default {
     root,
     navButton,
@@ -154,6 +129,5 @@ export default {
     insetIndicatorList,
     insetIndicatorButton,
     closeButton,
-    closeButtonIcon,
-    colorScheme
+    closeButtonIcon
 } satisfies GalleriaDesignTokens;

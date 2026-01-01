@@ -8,6 +8,8 @@ export const root: PanelTokenSections.Root = {
 };
 
 export const header: PanelTokenSections.Header = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    color: '{text.color}',
     borderWidth: '0 0 1px 0',
     borderColor: '{content.border.color}',
     padding: '1.125rem',
@@ -30,27 +32,11 @@ export const footer: PanelTokenSections.Footer = {
     padding: '1.125rem'
 };
 
-export const colorScheme: PanelTokenSections.ColorScheme = {
-    light: {
-        header: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        }
-    },
-    dark: {
-        header: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        }
-    }
-};
-
 export default {
     root,
     header,
     toggleableHeader,
     title,
     content,
-    footer,
-    colorScheme
+    footer
 } satisfies PanelDesignTokens;

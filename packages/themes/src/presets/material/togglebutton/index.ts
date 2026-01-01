@@ -30,7 +30,9 @@ export const root: ToggleButtonTokenSections.Root = {
     lg: {
         fontSize: '{form.field.lg.font.size}',
         padding: '0.875rem 1.25rem'
-    }
+    },
+    hoverBackground: 'light-dark({surface.100}, {surface.800})',
+    checkedBackground: 'light-dark({surface.200}, {surface.700})'
 };
 
 export const icon: ToggleButtonTokenSections.Icon = {
@@ -53,21 +55,6 @@ export const content: ToggleButtonTokenSections.Content = {
     }
 };
 
-export const colorScheme: ToggleButtonTokenSections.ColorScheme = {
-    light: {
-        root: {
-            hoverBackground: '{surface.100}',
-            checkedBackground: '{surface.200}'
-        }
-    },
-    dark: {
-        root: {
-            hoverBackground: '{surface.800}',
-            checkedBackground: '{surface.700}'
-        }
-    }
-};
-
 export const css: ToggleButtonTokenSections.CSS = /*css*/ `
 .p-togglebutton:focus-visible {
     background: dt('togglebutton.hover.background');
@@ -78,6 +65,5 @@ export default {
     root,
     icon,
     content,
-    colorScheme,
     css
 } satisfies ToggleButtonDesignTokens;

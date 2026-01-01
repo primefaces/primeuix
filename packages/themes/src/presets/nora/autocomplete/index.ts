@@ -82,38 +82,19 @@ export const dropdown: AutoCompleteTokenSections.Dropdown = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: '{focus.ring.shadow}'
-    }
+    },
+    hoverBackground: 'light-dark({surface.200}, {surface.700})',
+    activeBackground: 'light-dark({surface.300}, {surface.600})'
 };
 
 export const chip: AutoCompleteTokenSections.Chip = {
-    borderRadius: '{border.radius.xs}'
+    borderRadius: '{border.radius.xs}',
+    focusBackground: 'light-dark({surface.300}, {surface.600})',
+    focusColor: 'light-dark({surface.900}, {surface.0})'
 };
 
 export const emptyMessage: AutoCompleteTokenSections.EmptyMessage = {
     padding: '{list.option.padding}'
-};
-
-export const colorScheme: AutoCompleteTokenSections.ColorScheme = {
-    light: {
-        chip: {
-            focusBackground: '{surface.300}',
-            focusColor: '{surface.900}'
-        },
-        dropdown: {
-            hoverBackground: '{surface.200}',
-            activeBackground: '{surface.300}'
-        }
-    },
-    dark: {
-        chip: {
-            focusBackground: '{surface.600}',
-            focusColor: '{surface.0}'
-        },
-        dropdown: {
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.600}'
-        }
-    }
 };
 
 export default {
@@ -124,6 +105,5 @@ export default {
     optionGroup,
     dropdown,
     chip,
-    emptyMessage,
-    colorScheme
+    emptyMessage
 } satisfies AutoCompleteDesignTokens;

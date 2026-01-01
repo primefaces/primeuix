@@ -71,250 +71,129 @@ export const simple: MessageTokenSections.Simple = {
     }
 };
 
-export const colorScheme: MessageTokenSections.ColorScheme = {
-    light: {
-        info: {
-            background: '{blue.800}',
-            borderColor: '{blue.800}',
-            color: '{blue.50}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{blue.600}',
-                focusRing: {
-                    color: '{blue.50}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{blue.800}',
-                borderColor: '{blue.800}'
-            },
-            simple: {
-                color: '{blue.800}'
-            }
-        },
-        success: {
-            background: '{green.800}',
-            borderColor: '{green.800}',
-            color: '{green.50}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{green.600}',
-                focusRing: {
-                    color: '{green.50}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{green.800}',
-                borderColor: '{green.800}'
-            },
-            simple: {
-                color: '{green.800}'
-            }
-        },
-        warn: {
-            background: '{yellow.600}',
-            borderColor: '{yellow.600}',
-            color: '{yellow.50}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{yellow.400}',
-                focusRing: {
-                    color: '{yellow.50}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{yellow.600}',
-                borderColor: '{yellow.600}'
-            },
-            simple: {
-                color: '{yellow.600}'
-            }
-        },
-        error: {
-            background: '{red.800}',
-            borderColor: '{red.800}',
-            color: '{red.50}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{red.600}',
-                focusRing: {
-                    color: '{red.50}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{red.800}',
-                borderColor: '{red.800}'
-            },
-            simple: {
-                color: '{red.800}'
-            }
-        },
-        secondary: {
-            background: '{surface.200}',
-            borderColor: '{surface.200}',
-            color: '{surface.700}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{surface.50}',
-                focusRing: {
-                    color: '{surface.700}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{surface.600}',
-                borderColor: '{surface.600}'
-            },
-            simple: {
-                color: '{surface.600}'
-            }
-        },
-        contrast: {
-            background: '{surface.900}',
-            borderColor: '{surface.900}',
-            color: '{surface.50}',
-            shadow: '0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%)',
-            closeButton: {
-                hoverBackground: '{surface.700}',
-                focusRing: {
-                    color: '{surface.50}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{surface.900}',
-                borderColor: '{surface.900}'
-            },
-            simple: {
-                color: '{surface.900}'
-            }
+export const info: MessageTokenSections.Info = {
+    background: 'light-dark({blue.800}, {blue.200})',
+    borderColor: 'light-dark({blue.800}, {blue.200})',
+    color: 'light-dark({blue.50}, {blue.950})',
+    shadow: 'none',
+    closeButton: {
+        hoverBackground: 'light-dark({blue.600}, {blue.50})',
+        focusRing: {
+            color: 'light-dark({blue.50}, {blue.950})',
+            shadow: 'none'
         }
     },
-    dark: {
-        info: {
-            background: '{blue.200}',
-            borderColor: '{blue.200}',
-            color: '{blue.950}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{blue.50}',
-                focusRing: {
-                    color: '{blue.950}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{blue.200}',
-                borderColor: '{blue.200}'
-            },
-            simple: {
-                color: '{blue.200}'
-            }
-        },
-        success: {
-            background: '{green.200}',
-            borderColor: '{green.200}',
-            color: '{green.950}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{green.50}',
-                focusRing: {
-                    color: '{green.950}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{green.200}',
-                borderColor: '{green.200}'
-            },
-            simple: {
-                color: '{green.200}'
-            }
-        },
-        warn: {
-            background: '{yellow.200}',
-            borderColor: '{yellow.200}',
-            color: '{yellow.950}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{yellow.50}',
-                focusRing: {
-                    color: '{yellow.950}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{yellow.200}',
-                borderColor: '{yellow.200}'
-            },
-            simple: {
-                color: '{yellow.200}'
-            }
-        },
-        error: {
-            background: '{red.200}',
-            borderColor: '{red.200}',
-            color: '{red.950}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{red.50}',
-                focusRing: {
-                    color: '{red.950}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{red.200}',
-                borderColor: '{red.200}'
-            },
-            simple: {
-                color: '{red.200}'
-            }
-        },
-        secondary: {
-            background: '{surface.700}',
-            borderColor: '{surface.700}',
-            color: '{surface.200}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{surface.500}',
-                focusRing: {
-                    color: '{surface.200}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{surface.400}',
-                borderColor: '{surface.400}'
-            },
-            simple: {
-                color: '{surface.400}'
-            }
-        },
-        contrast: {
-            background: '{surface.0}',
-            borderColor: '{surface.0}',
-            color: '{surface.950}',
-            shadow: 'none',
-            closeButton: {
-                hoverBackground: '{surface.200}',
-                focusRing: {
-                    color: '{surface.950}',
-                    shadow: 'none'
-                }
-            },
-            outlined: {
-                color: '{surface.0}',
-                borderColor: '{surface.0}'
-            },
-            simple: {
-                color: '{surface.0}'
-            }
+    outlined: {
+        color: 'light-dark({blue.800}, {blue.200})',
+        borderColor: 'light-dark({blue.800}, {blue.200})'
+    },
+    simple: {
+        color: 'light-dark({blue.800}, {blue.200})'
+    }
+};
+
+export const success: MessageTokenSections.Success = {
+    background: 'light-dark({green.800}, {green.200})',
+    borderColor: 'light-dark({green.800}, {green.200})',
+    color: 'light-dark({green.50}, {green.950})',
+    shadow: 'none',
+    closeButton: {
+        hoverBackground: 'light-dark({green.600}, {green.50})',
+        focusRing: {
+            color: 'light-dark({green.50}, {green.950})',
+            shadow: 'none'
         }
+    },
+    outlined: {
+        color: 'light-dark({green.800}, {green.200})',
+        borderColor: 'light-dark({green.800}, {green.200})'
+    },
+    simple: {
+        color: 'light-dark({green.800}, {green.200})'
+    }
+};
+
+export const warn: MessageTokenSections.Warn = {
+    background: 'light-dark({yellow.600}, {yellow.200})',
+    borderColor: 'light-dark({yellow.600}, {yellow.200})',
+    color: 'light-dark({yellow.50}, {yellow.950})',
+    shadow: 'none',
+    closeButton: {
+        hoverBackground: 'light-dark({yellow.400}, {yellow.50})',
+        focusRing: {
+            color: 'light-dark({yellow.50}, {yellow.950})',
+            shadow: 'none'
+        }
+    },
+    outlined: {
+        color: 'light-dark({yellow.600}, {yellow.200})',
+        borderColor: 'light-dark({yellow.600}, {yellow.200})'
+    },
+    simple: {
+        color: 'light-dark({yellow.600}, {yellow.200})'
+    }
+};
+
+export const error: MessageTokenSections.Error = {
+    background: 'light-dark({red.800}, {red.200})',
+    borderColor: 'light-dark({red.800}, {red.200})',
+    color: 'light-dark({red.50}, {red.950})',
+    shadow: 'none',
+    closeButton: {
+        hoverBackground: 'light-dark({red.600}, {red.50})',
+        focusRing: {
+            color: 'light-dark({red.50}, {red.950})',
+            shadow: 'none'
+        }
+    },
+    outlined: {
+        color: 'light-dark({red.800}, {red.200})',
+        borderColor: 'light-dark({red.800}, {red.200})'
+    },
+    simple: {
+        color: 'light-dark({red.800}, {red.200})'
+    }
+};
+
+export const secondary: MessageTokenSections.Secondary = {
+    background: 'light-dark({surface.200}, {surface.700})',
+    borderColor: 'light-dark({surface.200}, {surface.700})',
+    color: 'light-dark({surface.700}, {surface.200})',
+    shadow: 'none',
+    closeButton: {
+        hoverBackground: 'light-dark({surface.50}, {surface.500})',
+        focusRing: {
+            color: 'light-dark({surface.700}, {surface.200})',
+            shadow: 'none'
+        }
+    },
+    outlined: {
+        color: 'light-dark({surface.600}, {surface.400})',
+        borderColor: 'light-dark({surface.600}, {surface.400})'
+    },
+    simple: {
+        color: 'light-dark({surface.600}, {surface.400})'
+    }
+};
+
+export const contrast: MessageTokenSections.Contrast = {
+    background: 'light-dark({surface.900}, {surface.0})',
+    borderColor: 'light-dark({surface.900}, {surface.0})',
+    color: 'light-dark({surface.50}, {surface.950})',
+    shadow: 'light-dark(0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%), none)',
+    closeButton: {
+        hoverBackground: 'light-dark({surface.700}, {surface.200})',
+        focusRing: {
+            color: 'light-dark({surface.50}, {surface.950})',
+            shadow: 'none'
+        }
+    },
+    outlined: {
+        color: 'light-dark({surface.900}, {surface.0})',
+        borderColor: 'light-dark({surface.900}, {surface.0})'
+    },
+    simple: {
+        color: 'light-dark({surface.900}, {surface.0})'
     }
 };
 
@@ -327,5 +206,10 @@ export default {
     closeIcon,
     outlined,
     simple,
-    colorScheme
+    info,
+    success,
+    warn,
+    error,
+    secondary,
+    contrast
 } satisfies MessageDesignTokens;

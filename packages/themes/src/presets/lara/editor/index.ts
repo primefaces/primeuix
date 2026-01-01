@@ -1,6 +1,7 @@
 import type { EditorDesignTokens, EditorTokenSections } from '@primeuix/themes/types/editor';
 
 export const toolbar: EditorTokenSections.Toolbar = {
+    background: 'light-dark({surface.50}, {surface.800})',
     borderColor: '{content.border.color}',
     borderRadius: '{content.border.radius}'
 };
@@ -35,24 +36,10 @@ export const content: EditorTokenSections.Content = {
     borderRadius: '{content.border.radius}'
 };
 
-export const colorScheme: EditorTokenSections.ColorScheme = {
-    light: {
-        toolbar: {
-            background: '{surface.50}'
-        }
-    },
-    dark: {
-        toolbar: {
-            background: '{surface.800}'
-        }
-    }
-};
-
 export default {
     toolbar,
     toolbarItem,
     overlay,
     overlayOption,
-    content,
-    colorScheme
+    content
 } satisfies EditorDesignTokens;

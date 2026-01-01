@@ -5,25 +5,11 @@ export const root: TooltipTokenSections.Root = {
     gutter: '0.25rem',
     shadow: '{overlay.popover.shadow}',
     padding: '0.625rem 0.75rem',
-    borderRadius: '{overlay.popover.border.radius}'
-};
-
-export const colorScheme: TooltipTokenSections.ColorScheme = {
-    light: {
-        root: {
-            background: '{surface.700}',
-            color: '{surface.0}'
-        }
-    },
-    dark: {
-        root: {
-            background: '{surface.700}',
-            color: '{surface.0}'
-        }
-    }
+    borderRadius: '{overlay.popover.border.radius}',
+    background: '{surface.700}',
+    color: '{surface.0}'
 };
 
 export default {
-    root,
-    colorScheme
+    root
 } satisfies TooltipDesignTokens;

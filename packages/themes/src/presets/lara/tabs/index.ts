@@ -11,6 +11,9 @@ export const tablist: TabsTokenSections.Tablist = {
 };
 
 export const tab: TabsTokenSections.Tab = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    hoverBackground: 'light-dark({surface.100}, {surface.700})',
+    activeBackground: 'light-dark({surface.0}, {surface.900})',
     borderWidth: '2px 0 0 0',
     borderColor: 'transparent',
     hoverBorderColor: 'transparent',
@@ -55,7 +58,8 @@ export const navButton: TabsTokenSections.NavButton = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: 'inset {focus.ring.shadow}'
-    }
+    },
+    shadow: 'light-dark(0px 0px 10px 50px rgba(255, 255, 255, 0.6), 0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%))'
 };
 
 export const activeBar: TabsTokenSections.ActiveBar = {
@@ -64,35 +68,11 @@ export const activeBar: TabsTokenSections.ActiveBar = {
     background: 'transparent'
 };
 
-export const colorScheme: TabsTokenSections.ColorScheme = {
-    light: {
-        navButton: {
-            shadow: '0px 0px 10px 50px rgba(255, 255, 255, 0.6)'
-        },
-        tab: {
-            background: '{surface.50}',
-            hoverBackground: '{surface.100}',
-            activeBackground: '{surface.0}'
-        }
-    },
-    dark: {
-        navButton: {
-            shadow: '0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)'
-        },
-        tab: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.900}'
-        }
-    }
-};
-
 export default {
     root,
     tablist,
     tab,
     tabpanel,
     navButton,
-    activeBar,
-    colorScheme
+    activeBar
 } satisfies TabsDesignTokens;

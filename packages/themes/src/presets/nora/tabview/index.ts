@@ -25,20 +25,8 @@ export const tabPanel: TabViewTokenSections.TabPanel = {
 export const navButton: TabViewTokenSections.NavButton = {
     background: '{content.background}',
     color: '{text.muted.color}',
-    hoverColor: '{text.color}'
-};
-
-export const colorScheme: TabViewTokenSections.ColorScheme = {
-    light: {
-        navButton: {
-            shadow: '0px 0px 10px 50px rgba(255, 255, 255, 0.6)'
-        }
-    },
-    dark: {
-        navButton: {
-            shadow: '0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)'
-        }
-    }
+    hoverColor: '{text.color}',
+    shadow: 'light-dark(0px 0px 10px 50px rgba(255, 255, 255, 0.6), 0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%))'
 };
 
 export default {
@@ -46,6 +34,5 @@ export default {
     tabList,
     tab,
     tabPanel,
-    navButton,
-    colorScheme
+    navButton
 } satisfies TabViewDesignTokens;

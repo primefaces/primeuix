@@ -7,6 +7,7 @@ export const root: ScrollPanelTokenSections.Root = {
 export const bar: ScrollPanelTokenSections.Bar = {
     size: '9px',
     borderRadius: '{border.radius.sm}',
+    background: 'light-dark({surface.100}, {surface.800})',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -16,21 +17,7 @@ export const bar: ScrollPanelTokenSections.Bar = {
     }
 };
 
-export const colorScheme: ScrollPanelTokenSections.ColorScheme = {
-    light: {
-        bar: {
-            background: '{surface.100}'
-        }
-    },
-    dark: {
-        bar: {
-            background: '{surface.800}'
-        }
-    }
-};
-
 export default {
     root,
-    bar,
-    colorScheme
+    bar
 } satisfies ScrollPanelDesignTokens;

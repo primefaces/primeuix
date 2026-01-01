@@ -78,46 +78,23 @@ export const dropdown: AutoCompleteTokenSections.Dropdown = {
         color: '{form.field.focus.ring.color}',
         offset: '{form.field.focus.ring.offset}',
         shadow: '{form.field.focus.ring.shadow}'
-    }
+    },
+    background: 'light-dark({surface.50}, {surface.800})',
+    hoverBackground: 'light-dark({surface.100}, {surface.700})',
+    activeBackground: 'light-dark({surface.200}, {surface.600})',
+    color: 'light-dark({surface.600}, {surface.300})',
+    hoverColor: 'light-dark({surface.700}, {surface.200})',
+    activeColor: 'light-dark({surface.800}, {surface.100})'
 };
 
 export const chip: AutoCompleteTokenSections.Chip = {
-    borderRadius: '{border.radius.sm}'
+    borderRadius: '{border.radius.sm}',
+    focusBackground: 'light-dark({surface.200}, {surface.700})',
+    focusColor: 'light-dark({surface.800}, {surface.0})'
 };
 
 export const emptyMessage: AutoCompleteTokenSections.EmptyMessage = {
     padding: '{list.option.padding}'
-};
-
-export const colorScheme: AutoCompleteTokenSections.ColorScheme = {
-    light: {
-        chip: {
-            focusBackground: '{surface.200}',
-            focusColor: '{surface.800}'
-        },
-        dropdown: {
-            background: '{surface.50}',
-            hoverBackground: '{surface.100}',
-            activeBackground: '{surface.200}',
-            color: '{surface.600}',
-            hoverColor: '{surface.700}',
-            activeColor: '{surface.800}'
-        }
-    },
-    dark: {
-        chip: {
-            focusBackground: '{surface.700}',
-            focusColor: '{surface.0}'
-        },
-        dropdown: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.600}',
-            color: '{surface.300}',
-            hoverColor: '{surface.200}',
-            activeColor: '{surface.100}'
-        }
-    }
 };
 
 export default {
@@ -128,6 +105,5 @@ export default {
     optionGroup,
     dropdown,
     chip,
-    emptyMessage,
-    colorScheme
+    emptyMessage
 } satisfies AutoCompleteDesignTokens;

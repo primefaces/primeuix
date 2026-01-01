@@ -29,7 +29,8 @@ export const option: ListboxTokenSections.Option = {
     selectedColor: '{list.option.selected.color}',
     selectedFocusColor: '{list.option.selected.focus.color}',
     padding: '{list.option.padding}',
-    borderRadius: '{list.option.border.radius}'
+    borderRadius: '{list.option.border.radius}',
+    stripedBackground: 'light-dark({surface.50}, {surface.900})'
 };
 
 export const optionGroup: ListboxTokenSections.OptionGroup = {
@@ -49,25 +50,11 @@ export const emptyMessage: ListboxTokenSections.EmptyMessage = {
     padding: '{list.option.padding}'
 };
 
-export const colorScheme: ListboxTokenSections.ColorScheme = {
-    light: {
-        option: {
-            stripedBackground: '{surface.50}'
-        }
-    },
-    dark: {
-        option: {
-            stripedBackground: '{surface.900}'
-        }
-    }
-};
-
 export default {
     root,
     list,
     option,
     optionGroup,
     checkmark,
-    emptyMessage,
-    colorScheme
+    emptyMessage
 } satisfies ListboxDesignTokens;

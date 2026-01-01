@@ -4,7 +4,8 @@ export const root: ToastTokenSections.Root = {
     width: '25rem',
     borderRadius: '{content.border.radius}',
     borderWidth: '0 0 0 6px',
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{transition.duration}',
+    blur: 'light-dark(1.5px, 10px)'
 };
 
 export const icon: ToastTokenSections.Icon = {
@@ -45,183 +46,92 @@ export const closeIcon: ToastTokenSections.CloseIcon = {
     size: '1rem'
 };
 
-export const colorScheme: ToastTokenSections.ColorScheme = {
-    light: {
-        root: {
-            blur: '1.5px'
-        },
-        info: {
-            background: 'color-mix(in srgb, {blue.50}, transparent 5%)',
-            borderColor: '{blue.500}',
-            color: '{blue.600}',
-            detailColor: '{surface.700}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: '{blue.100}',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem {blue.200}'
-                }
-            }
-        },
-        success: {
-            background: 'color-mix(in srgb, {green.50}, transparent 5%)',
-            borderColor: '{green.500}',
-            color: '{green.600}',
-            detailColor: '{surface.700}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: '{green.100}',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem {green.200}'
-                }
-            }
-        },
-        warn: {
-            background: 'color-mix(in srgb,{yellow.50}, transparent 5%)',
-            borderColor: '{yellow.500}',
-            color: '{yellow.600}',
-            detailColor: '{surface.700}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: '{yellow.100}',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem {yellow.200}'
-                }
-            }
-        },
-        error: {
-            background: 'color-mix(in srgb, {red.50}, transparent 5%)',
-            borderColor: '{red.500}',
-            color: '{red.600}',
-            detailColor: '{surface.700}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: '{red.100}',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem {red.200}'
-                }
-            }
-        },
-        secondary: {
-            background: '{surface.100}',
-            borderColor: '{surface.500}',
-            color: '{surface.600}',
-            detailColor: '{surface.700}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: '{surface.200}',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem {surface.200}'
-                }
-            }
-        },
-        contrast: {
-            background: '{surface.900}',
-            borderColor: '{primary.color}',
-            color: '{surface.50}',
-            detailColor: '{surface.0}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: '{surface.800}',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem {surface.400}'
-                }
-            }
+export const info: ToastTokenSections.Info = {
+    background: 'light-dark(color-mix(in srgb, {blue.50}, transparent 5%), color-mix(in srgb, {blue.500}, transparent 84%))',
+    borderColor: 'light-dark({blue.500}, color-mix(in srgb, {blue.700}, transparent 64%))',
+    color: 'light-dark({blue.600}, {blue.500})',
+    detailColor: 'light-dark({surface.700}, {surface.0})',
+    shadow: '{overlay.popover.shadow}',
+    closeButton: {
+        hoverBackground: 'light-dark({blue.100}, rgba(255, 255, 255, 0.05))',
+        focusRing: {
+            color: '{focus.ring.color}',
+            shadow: 'light-dark(0 0 0 0.2rem {blue.200}, 0 0 0 0.2rem color-mix(in srgb, {blue.500}, transparent 80%))'
         }
-    },
-    dark: {
-        root: {
-            blur: '10px'
-        },
-        info: {
-            background: 'color-mix(in srgb, {blue.500}, transparent 84%)',
-            borderColor: 'color-mix(in srgb, {blue.700}, transparent 64%)',
-            color: '{blue.500}',
-            detailColor: '{surface.0}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: 'rgba(255, 255, 255, 0.05)',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem color-mix(in srgb, {blue.500}, transparent 80%)'
-                }
-            }
-        },
-        success: {
-            background: 'color-mix(in srgb, {green.500}, transparent 84%)',
-            borderColor: 'color-mix(in srgb, {green.700}, transparent 64%)',
-            color: '{green.500}',
-            detailColor: '{surface.0}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: 'rgba(255, 255, 255, 0.05)',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem color-mix(in srgb, {green.500}, transparent 80%)'
-                }
-            }
-        },
-        warn: {
-            background: 'color-mix(in srgb, {yellow.500}, transparent 84%)',
-            borderColor: 'color-mix(in srgb, {yellow.700}, transparent 64%)',
-            color: '{yellow.500}',
-            detailColor: '{surface.0}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: 'rgba(255, 255, 255, 0.05)',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem color-mix(in srgb, {yellow.500}, transparent 80%)'
-                }
-            }
-        },
-        error: {
-            background: 'color-mix(in srgb, {red.500}, transparent 84%)',
-            borderColor: 'color-mix(in srgb, {red.700}, transparent 64%)',
-            color: '{red.500}',
-            detailColor: '{surface.0}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: 'rgba(255, 255, 255, 0.05)',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem color-mix(in srgb, {red.500}, transparent 80%)'
-                }
-            }
-        },
-        secondary: {
-            background: '{surface.800}',
-            borderColor: '{surface.700}',
-            color: '{surface.300}',
-            detailColor: '{surface.0}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: '{surface.700}',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem color-mix(in srgb, {surface.300}, transparent 80%)'
-                }
-            }
-        },
-        contrast: {
-            background: '{surface.0}',
-            borderColor: '{surface.100}',
-            color: '{surface.950}',
-            detailColor: '{surface.950}',
-            shadow: '{overlay.popover.shadow}',
-            closeButton: {
-                hoverBackground: '{surface.100}',
-                focusRing: {
-                    color: '{focus.ring.color}',
-                    shadow: '0 0 0 0.2rem color-mix(in srgb, {surface.950}, transparent 80%)'
-                }
-            }
+    }
+};
+
+export const success: ToastTokenSections.Success = {
+    background: 'light-dark(color-mix(in srgb, {green.50}, transparent 5%), color-mix(in srgb, {green.500}, transparent 84%))',
+    borderColor: 'light-dark({green.500}, color-mix(in srgb, {green.700}, transparent 64%))',
+    color: 'light-dark({green.600}, {green.500})',
+    detailColor: 'light-dark({surface.700}, {surface.0})',
+    shadow: '{overlay.popover.shadow}',
+    closeButton: {
+        hoverBackground: 'light-dark({green.100}, rgba(255, 255, 255, 0.05))',
+        focusRing: {
+            color: '{focus.ring.color}',
+            shadow: 'light-dark(0 0 0 0.2rem {green.200}, 0 0 0 0.2rem color-mix(in srgb, {green.500}, transparent 80%))'
+        }
+    }
+};
+
+export const warn: ToastTokenSections.Warn = {
+    background: 'light-dark(color-mix(in srgb,{yellow.50}, transparent 5%), color-mix(in srgb, {yellow.500}, transparent 84%))',
+    borderColor: 'light-dark({yellow.500}, color-mix(in srgb, {yellow.700}, transparent 64%))',
+    color: 'light-dark({yellow.600}, {yellow.500})',
+    detailColor: 'light-dark({surface.700}, {surface.0})',
+    shadow: '{overlay.popover.shadow}',
+    closeButton: {
+        hoverBackground: 'light-dark({yellow.100}, rgba(255, 255, 255, 0.05))',
+        focusRing: {
+            color: '{focus.ring.color}',
+            shadow: 'light-dark(0 0 0 0.2rem {yellow.200}, 0 0 0 0.2rem color-mix(in srgb, {yellow.500}, transparent 80%))'
+        }
+    }
+};
+
+export const error: ToastTokenSections.Error = {
+    background: 'light-dark(color-mix(in srgb, {red.50}, transparent 5%), color-mix(in srgb, {red.500}, transparent 84%))',
+    borderColor: 'light-dark({red.500}, color-mix(in srgb, {red.700}, transparent 64%))',
+    color: 'light-dark({red.600}, {red.500})',
+    detailColor: 'light-dark({surface.700}, {surface.0})',
+    shadow: '{overlay.popover.shadow}',
+    closeButton: {
+        hoverBackground: 'light-dark({red.100}, rgba(255, 255, 255, 0.05))',
+        focusRing: {
+            color: '{focus.ring.color}',
+            shadow: 'light-dark(0 0 0 0.2rem {red.200}, 0 0 0 0.2rem color-mix(in srgb, {red.500}, transparent 80%))'
+        }
+    }
+};
+
+export const secondary: ToastTokenSections.Secondary = {
+    background: 'light-dark({surface.100}, {surface.800})',
+    borderColor: 'light-dark({surface.500}, {surface.700})',
+    color: 'light-dark({surface.600}, {surface.300})',
+    detailColor: 'light-dark({surface.700}, {surface.0})',
+    shadow: '{overlay.popover.shadow}',
+    closeButton: {
+        hoverBackground: 'light-dark({surface.200}, {surface.700})',
+        focusRing: {
+            color: '{focus.ring.color}',
+            shadow: 'light-dark(0 0 0 0.2rem {surface.200}, 0 0 0 0.2rem color-mix(in srgb, {surface.300}, transparent 80%))'
+        }
+    }
+};
+
+export const contrast: ToastTokenSections.Contrast = {
+    background: 'light-dark({surface.900}, {surface.0})',
+    borderColor: 'light-dark({primary.color}, {surface.100})',
+    color: 'light-dark({surface.50}, {surface.950})',
+    detailColor: 'light-dark({surface.0}, {surface.950})',
+    shadow: '{overlay.popover.shadow}',
+    closeButton: {
+        hoverBackground: 'light-dark({surface.800}, {surface.100})',
+        focusRing: {
+            color: '{focus.ring.color}',
+            shadow: 'light-dark(0 0 0 0.2rem {surface.400}, 0 0 0 0.2rem color-mix(in srgb, {surface.950}, transparent 80%))'
         }
     }
 };
@@ -235,5 +145,10 @@ export default {
     detail,
     closeButton,
     closeIcon,
-    colorScheme
+    info,
+    success,
+    warn,
+    error,
+    secondary,
+    contrast
 } satisfies ToastDesignTokens;

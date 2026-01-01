@@ -1,7 +1,8 @@
 import type { TreeTableDesignTokens, TreeTableTokenSections } from '@primeuix/themes/types/treetable';
 
 export const root: TreeTableTokenSections.Root = {
-    transitionDuration: '0s'
+    transitionDuration: '0s',
+    borderColor: 'light-dark({content.border.color}, {surface.800})'
 };
 
 export const header: TreeTableTokenSections.Header = {
@@ -57,7 +58,8 @@ export const bodyCell: TreeTableTokenSections.BodyCell = {
     padding: '0.5rem 0.875rem',
     gap: '0.5rem',
     fontWeight: '{typography.font.size}',
-    fontSize: '{typography.font.size}'
+    fontSize: '{typography.font.size}',
+    selectedBorderColor: 'light-dark({primary.100}, {primary.900})'
 };
 
 export const footerCell: TreeTableTokenSections.FooterCell = {
@@ -126,25 +128,6 @@ export const paginatorBottom: TreeTableTokenSections.PaginatorBottom = {
     borderWidth: '0 0 1px 0'
 };
 
-export const colorScheme: TreeTableTokenSections.ColorScheme = {
-    light: {
-        root: {
-            borderColor: '{content.border.color}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.100}'
-        }
-    },
-    dark: {
-        root: {
-            borderColor: '{surface.800}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.900}'
-        }
-    }
-};
-
 export const css: TreeTableTokenSections.CSS = /*css*/ `
     .p-treetable-mask.p-overlay-mask {
         --px-mask-background: light-dark(rgba(255,255,255,0.5),rgba(0,0,0,0.3));
@@ -168,6 +151,5 @@ export default {
     nodeToggleButton,
     paginatorTop,
     paginatorBottom,
-    colorScheme,
     css
 } satisfies TreeTableDesignTokens;

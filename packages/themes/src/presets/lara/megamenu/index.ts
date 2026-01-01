@@ -1,6 +1,7 @@
 import type { MegaMenuDesignTokens, MegaMenuTokenSections } from '@primeuix/themes/types/megamenu';
 
 export const root: MegaMenuTokenSections.Root = {
+    background: 'light-dark({surface.50}, {surface.800})',
     borderColor: 'transparent',
     borderRadius: '{content.border.radius}',
     color: '{content.color}',
@@ -85,19 +86,6 @@ export const mobileButton: MegaMenuTokenSections.MobileButton = {
     }
 };
 
-export const colorScheme: MegaMenuTokenSections.ColorScheme = {
-    light: {
-        root: {
-            background: '{surface.50}'
-        }
-    },
-    dark: {
-        root: {
-            background: '{surface.800}'
-        }
-    }
-};
-
 export default {
     root,
     baseItem,
@@ -107,6 +95,5 @@ export default {
     submenuLabel,
     submenuIcon,
     separator,
-    mobileButton,
-    colorScheme
+    mobileButton
 } satisfies MegaMenuDesignTokens;

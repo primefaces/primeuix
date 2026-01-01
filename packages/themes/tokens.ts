@@ -161,6 +161,12 @@ export default {
                 description: 'Font weight of header'
             },
             {
+                name: 'accordion.header.fontSize',
+                token: 'accordion.header.font.size',
+                variable: '--p-accordion-header-font-size',
+                description: 'Font size of header'
+            },
+            {
                 name: 'accordion.header.borderRadius',
                 token: 'accordion.header.border.radius',
                 variable: '--p-accordion-header-border-radius',
@@ -550,6 +556,18 @@ export default {
                 description: 'Border radius of option'
             },
             {
+                name: 'autocomplete.option.fontWeight',
+                token: 'autocomplete.option.font.weight',
+                variable: '--p-autocomplete-option-font-weight',
+                description: 'Font weight of option'
+            },
+            {
+                name: 'autocomplete.option.fontSize',
+                token: 'autocomplete.option.font.size',
+                variable: '--p-autocomplete-option-font-size',
+                description: 'Font size of option'
+            },
+            {
                 name: 'autocomplete.optionGroup.background',
                 token: 'autocomplete.option.group.background',
                 variable: '--p-autocomplete-option-group-background',
@@ -566,6 +584,12 @@ export default {
                 token: 'autocomplete.option.group.font.weight',
                 variable: '--p-autocomplete-option-group-font-weight',
                 description: 'Font weight of option group'
+            },
+            {
+                name: 'autocomplete.optionGroup.fontSize',
+                token: 'autocomplete.option.group.font.size',
+                variable: '--p-autocomplete-option-group-font-size',
+                description: 'Font size of option group'
             },
             {
                 name: 'autocomplete.optionGroup.padding',
@@ -721,6 +745,12 @@ export default {
                 token: 'avatar.height',
                 variable: '--p-avatar-height',
                 description: 'Height of root'
+            },
+            {
+                name: 'avatar.root.fontWeight',
+                token: 'avatar.font.weight',
+                variable: '--p-avatar-font-weight',
+                description: 'Font weight of root'
             },
             {
                 name: 'avatar.root.fontSize',
@@ -1088,6 +1118,24 @@ export default {
                 token: 'breadcrumb.item.icon.hover.color',
                 variable: '--p-breadcrumb-item-icon-hover-color',
                 description: 'Icon hover color of item'
+            },
+            {
+                name: 'breadcrumb.item.icon.size',
+                token: 'breadcrumb.item.icon.size',
+                variable: '--p-breadcrumb-item-icon-size',
+                description: 'Icon size of item icon'
+            },
+            {
+                name: 'breadcrumb.item.label.fontWeight',
+                token: 'breadcrumb.item.label.font.weight',
+                variable: '--p-breadcrumb-item-label-font-weight',
+                description: 'Font weight of item label'
+            },
+            {
+                name: 'breadcrumb.item.label.fontSize',
+                token: 'breadcrumb.item.label.font.size',
+                variable: '--p-breadcrumb-item-label-font-size',
+                description: 'Font size of item label'
             },
             {
                 name: 'breadcrumb.item.focusRing.width',
@@ -2250,6 +2298,18 @@ export default {
                 token: 'card.subtitle.color',
                 variable: '--p-card-subtitle-color',
                 description: 'Color of subtitle'
+            },
+            {
+                name: 'card.subtitle.fontSize',
+                token: 'card.subtitle.font.size',
+                variable: '--p-card-subtitle-font-size',
+                description: 'Font size of subtitle'
+            },
+            {
+                name: 'card.subtitle.fontWeight',
+                token: 'card.subtitle.font.weight',
+                variable: '--p-card-subtitle-font-weight',
+                description: 'Font weight of subtitle'
             }
         ]
     },
@@ -2526,6 +2586,18 @@ export default {
                 description: 'Lg padding y of root'
             },
             {
+                name: 'cascadeselect.root.fontWeight',
+                token: 'cascadeselect.font.weight',
+                variable: '--p-cascadeselect-font-weight',
+                description: 'Font weight of current value'
+            },
+            {
+                name: 'cascadeselect.root.fontSize',
+                token: 'cascadeselect.font.size',
+                variable: '--p-cascadeselect-font-size',
+                description: 'Font size of current value'
+            },
+            {
                 name: 'cascadeselect.dropdown.width',
                 token: 'cascadeselect.dropdown.width',
                 variable: '--p-cascadeselect-dropdown-width',
@@ -2628,6 +2700,12 @@ export default {
                 description: 'Selected focus color of option'
             },
             {
+                name: 'cascadeselect.option.selectedFontWeight',
+                token: 'cascadeselect.option.selected.font.weight',
+                variable: '--p-cascadeselect-option-selected-font-weight',
+                description: 'Font weight of a selected option'
+            },
+            {
                 name: 'cascadeselect.option.padding',
                 token: 'cascadeselect.option.padding',
                 variable: '--p-cascadeselect-option-padding',
@@ -2656,6 +2734,18 @@ export default {
                 token: 'cascadeselect.option.icon.size',
                 variable: '--p-cascadeselect-option-icon-size',
                 description: 'Icon size of option'
+            },
+            {
+                name: 'cascadeselect.option.fontWeight',
+                token: 'cascadeselect.option.font.weight',
+                variable: '--p-cascadeselect-option-font-weight',
+                description: 'Font weight of option'
+            },
+            {
+                name: 'cascadeselect.option.fontSize',
+                token: 'cascadeselect.option.font.size',
+                variable: '--p-cascadeselect-option-font-size',
+                description: 'Font size of option'
             },
             {
                 name: 'cascadeselect.clearIcon.color',
@@ -2944,6 +3034,18 @@ export default {
                 description: 'Color of icon'
             },
             {
+                name: 'chip.label.fontWeight',
+                token: 'chip.label.font.weight',
+                variable: '--p-chip-label-font-weight',
+                description: 'Font weight of label'
+            },
+            {
+                name: 'chip.label.fontSize',
+                token: 'chip.label.font.size',
+                variable: '--p-chip-label-font-size',
+                description: 'Font size of label'
+            },
+            {
                 name: 'chip.removeIcon.size',
                 token: 'chip.remove.icon.size',
                 variable: '--p-chip-remove-icon-size',
@@ -3096,6 +3198,24 @@ export default {
                 token: 'confirmdialog.content.gap',
                 variable: '--p-confirmdialog-content-gap',
                 description: 'Gap of content'
+            },
+            {
+                name: 'confirmdialog.message.color',
+                token: 'confirmdialog.message.color',
+                variable: '--p-confirmdialog-message-color',
+                description: 'Color of message'
+            },
+            {
+                name: 'confirmdialog.message.fontWeight',
+                token: 'confirmdialog.message.font.weight',
+                variable: '--p-confirmdialog-message-font-weight',
+                description: 'Font weight of message'
+            },
+            {
+                name: 'confirmdialog.message.fontSize',
+                token: 'confirmdialog.message.font.size',
+                variable: '--p-confirmdialog-message-font-size',
+                description: 'Font size of message'
             }
         ]
     },
@@ -3167,6 +3287,24 @@ export default {
                 token: 'confirmpopup.icon.color',
                 variable: '--p-confirmpopup-icon-color',
                 description: 'Color of icon'
+            },
+            {
+                name: 'confirmpopup.message.color',
+                token: 'confirmpopup.message.color',
+                variable: '--p-confirmpopup-message-color',
+                description: 'Color of message'
+            },
+            {
+                name: 'confirmpopup.message.fontWeight',
+                token: 'confirmpopup.message.font.weight',
+                variable: '--p-confirmpopup-message-font-weight',
+                description: 'Font weight of message'
+            },
+            {
+                name: 'confirmpopup.message.fontSize',
+                token: 'confirmpopup.message.font.size',
+                variable: '--p-confirmpopup-message-font-size',
+                description: 'Font size of message'
             },
             {
                 name: 'confirmpopup.footer.gap',
@@ -3298,6 +3436,24 @@ export default {
                 token: 'contextmenu.item.icon.active.color',
                 variable: '--p-contextmenu-item-icon-active-color',
                 description: 'Icon active color of item'
+            },
+            {
+                name: 'contextmenu.item.icon.size',
+                token: 'contextmenu.item.icon.size',
+                variable: '--p-contextmenu-item-icon-size',
+                description: 'Icon size of item'
+            },
+            {
+                name: 'contextmenu.item.label.fontWeight',
+                token: 'contextmenu.item.label.font.weight',
+                variable: '--p-contextmenu-item-label-font-weight',
+                description: 'Font weight of item label'
+            },
+            {
+                name: 'contextmenu.item.label.fontSize',
+                token: 'contextmenu.item.label.font.size',
+                variable: '--p-contextmenu-item-label-font-size',
+                description: 'Font size of item label'
             },
             {
                 name: 'contextmenu.submenu.mobileIndent',
@@ -3497,6 +3653,12 @@ export default {
                 description: 'Font weight of column title'
             },
             {
+                name: 'datatable.columnTitle.fontSize',
+                token: 'datatable.column.title.font.size',
+                variable: '--p-datatable-column-title-font-size',
+                description: 'Font size of column title'
+            },
+            {
                 name: 'datatable.row.background',
                 token: 'datatable.row.background',
                 variable: '--p-datatable-row-background',
@@ -3599,6 +3761,18 @@ export default {
                 description: 'Selected border color of body cell'
             },
             {
+                name: 'datatable.bodyCell.fontWeight',
+                token: 'datatable.body.cell.font.weight',
+                variable: '--p-datatable-body-cell-font-weight',
+                description: 'Font weight of body cell'
+            },
+            {
+                name: 'datatable.bodyCell.fontSize',
+                token: 'datatable.body.cell.font.size',
+                variable: '--p-datatable-body-cell-font-size',
+                description: 'Font size of body cell'
+            },
+            {
                 name: 'datatable.footerCell.background',
                 token: 'datatable.footer.cell.background',
                 variable: '--p-datatable-footer-cell-background',
@@ -3639,6 +3813,12 @@ export default {
                 token: 'datatable.column.footer.font.weight',
                 variable: '--p-datatable-column-footer-font-weight',
                 description: 'Font weight of column footer'
+            },
+            {
+                name: 'datatable.columnFooter.fontSize',
+                token: 'datatable.column.footer.font.size',
+                variable: '--p-datatable-column-footer-font-size',
+                description: 'Font size of column footer'
             },
             {
                 name: 'datatable.footer.background',
@@ -4227,6 +4407,12 @@ export default {
                 description: 'Font weight of title'
             },
             {
+                name: 'datepicker.title.fontSize',
+                token: 'datepicker.title.font.size',
+                variable: '--p-datepicker-title-font-size',
+                description: 'Font size of title'
+            },
+            {
                 name: 'datepicker.dropdown.width',
                 token: 'datepicker.dropdown.width',
                 variable: '--p-datepicker-dropdown-width',
@@ -4371,6 +4557,18 @@ export default {
                 description: 'Border radius of select month'
             },
             {
+                name: 'datepicker.selectMonth.fontWeight',
+                token: 'datepicker.select.month.font.weight',
+                variable: '--p-datepicker-select-month-font-weight',
+                description: 'Font weight of select month'
+            },
+            {
+                name: 'datepicker.selectMonth.fontSize',
+                token: 'datepicker.select.month.font.size',
+                variable: '--p-datepicker-select-month-font-size',
+                description: 'Font size of select month'
+            },
+            {
                 name: 'datepicker.selectYear.hoverBackground',
                 token: 'datepicker.select.year.hover.background',
                 variable: '--p-datepicker-select-year-hover-background',
@@ -4401,6 +4599,18 @@ export default {
                 description: 'Border radius of select year'
             },
             {
+                name: 'datepicker.selectYear.fontWeight',
+                token: 'datepicker.select.year.font.weight',
+                variable: '--p-datepicker-select-year-font-weight',
+                description: 'Font weight of select year'
+            },
+            {
+                name: 'datepicker.selectYear.fontSize',
+                token: 'datepicker.select.year.font.size',
+                variable: '--p-datepicker-select-year-font-size',
+                description: 'Font size of select year'
+            },
+            {
                 name: 'datepicker.group.borderColor',
                 token: 'datepicker.group.border.color',
                 variable: '--p-datepicker-group-border-color',
@@ -4429,6 +4639,12 @@ export default {
                 token: 'datepicker.week.day.font.weight',
                 variable: '--p-datepicker-week-day-font-weight',
                 description: 'Font weight of week day'
+            },
+            {
+                name: 'datepicker.weekDay.fontSize',
+                token: 'datepicker.week.day.font.size',
+                variable: '--p-datepicker-week-day-font-size',
+                description: 'Font size of week day'
             },
             {
                 name: 'datepicker.weekDay.color',
@@ -4533,6 +4749,18 @@ export default {
                 description: 'Focus ring shadow of date'
             },
             {
+                name: 'datepicker.date.fontWeight',
+                token: 'datepicker.date.font.weight',
+                variable: '--p-datepicker-date-font-weight',
+                description: 'Font weight of date'
+            },
+            {
+                name: 'datepicker.date.fontSize',
+                token: 'datepicker.date.font.size',
+                variable: '--p-datepicker-date-font-size',
+                description: 'Font size of date'
+            },
+            {
                 name: 'datepicker.monthView.margin',
                 token: 'datepicker.month.view.margin',
                 variable: '--p-datepicker-month-view-margin',
@@ -4603,6 +4831,24 @@ export default {
                 token: 'datepicker.time.picker.button.gap',
                 variable: '--p-datepicker-time-picker-button-gap',
                 description: 'Button gap of time picker'
+            },
+            {
+                name: 'datepicker.timePicker.color',
+                token: 'datepicker.time.picker.color',
+                variable: '--p-datepicker-time-picker-color',
+                description: 'Color of time picker label'
+            },
+            {
+                name: 'datepicker.timePicker.fontWeight',
+                token: 'datepicker.time.picker.font.weight',
+                variable: '--p-datepicker-time-picker-font-weight',
+                description: 'Font weight of time picker label'
+            },
+            {
+                name: 'datepicker.timePicker.fontSize',
+                token: 'datepicker.time.picker.font.size',
+                variable: '--p-datepicker-time-picker-font-size',
+                description: 'Font size of time picker label'
             },
             {
                 name: 'datepicker.today.background',
@@ -5127,6 +5373,12 @@ export default {
                 description: 'Font weight of legend'
             },
             {
+                name: 'fieldset.legend.fontSize',
+                token: 'fieldset.legend.font.size',
+                variable: '--p-fieldset-legend-font-size',
+                description: 'Font size of legend'
+            },
+            {
                 name: 'fieldset.legend.focusRing.width',
                 token: 'fieldset.legend.focus.ring.width',
                 variable: '--p-fieldset-legend-focus-ring-width',
@@ -5292,6 +5544,42 @@ export default {
                 token: 'fileupload.file.info.gap',
                 variable: '--p-fileupload-file-info-gap',
                 description: 'Info gap of file'
+            },
+            {
+                name: 'fileupload.fileName.color',
+                token: 'fileupload.file.name.color',
+                variable: '--p-fileupload-file-name-color',
+                description: 'Color of file name'
+            },
+            {
+                name: 'fileupload.fileName.fontWeight',
+                token: 'fileupload.file.name.font.weight',
+                variable: '--p-fileupload-file-name-font-weight',
+                description: 'Font weight of file name'
+            },
+            {
+                name: 'fileupload.fileName.fontSize',
+                token: 'fileupload.file.name.font.size',
+                variable: '--p-fileupload-file-name-font-size',
+                description: 'Font size of file name'
+            },
+            {
+                name: 'fileupload.fileSize.color',
+                token: 'fileupload.file.size.color',
+                variable: '--p-fileupload-file-size-color',
+                description: 'Color of file size'
+            },
+            {
+                name: 'fileupload.fileSize.fontWeight',
+                token: 'fileupload.file.size.font.weight',
+                variable: '--p-fileupload-file-size-font-weight',
+                description: 'Font weight of file size'
+            },
+            {
+                name: 'fileupload.fileSize.fontSize',
+                token: 'fileupload.file.size.font.size',
+                variable: '--p-fileupload-file-size-font-size',
+                description: 'Font size of file size'
             },
             {
                 name: 'fileupload.fileList.gap',
@@ -6582,6 +6870,18 @@ export default {
                 token: 'inputgroup.addon.min.width',
                 variable: '--p-inputgroup-addon-min-width',
                 description: 'Min width of addon'
+            },
+            {
+                name: 'inputgroup.addon.fontWeight',
+                token: 'inputgroup.addon.font.weight',
+                variable: '--p-inputgroup-addon-font-weight',
+                description: 'Font weight of addon'
+            },
+            {
+                name: 'inputgroup.addon.fontSize',
+                token: 'inputgroup.addon.font.size',
+                variable: '--p-inputgroup-addon-font-size',
+                description: 'Font size of addon'
             }
         ]
     },
@@ -6873,6 +7173,18 @@ export default {
                 token: 'inputtext.lg.padding.y',
                 variable: '--p-inputtext-lg-padding-y',
                 description: 'Lg padding y of root'
+            },
+            {
+                name: 'inputtext.root.fontWeight',
+                token: 'inputtext.font.weight',
+                variable: '--p-inputtext-font-weight',
+                description: 'Font weight of root'
+            },
+            {
+                name: 'inputtext.root.fontSize',
+                token: 'inputtext.font.size',
+                variable: '--p-inputtext-font-size',
+                description: 'Font size of root'
             }
         ]
     },
@@ -7065,6 +7377,12 @@ export default {
                 description: 'Selected focus color of option'
             },
             {
+                name: 'listbox.option.selectedFontWeight',
+                token: 'listbox.option.selected.font.weight',
+                variable: '--p-listbox-option-selected-font-weight',
+                description: 'Font weight of a selected option'
+            },
+            {
                 name: 'listbox.option.padding',
                 token: 'listbox.option.padding',
                 variable: '--p-listbox-option-padding',
@@ -7083,6 +7401,18 @@ export default {
                 description: 'Striped background of option'
             },
             {
+                name: 'listbox.option.fontWeight',
+                token: 'listbox.option.font.weight',
+                variable: '--p-listbox-option-font-weight',
+                description: 'Font weight of option'
+            },
+            {
+                name: 'listbox.option.fontSize',
+                token: 'listbox.option.font.size',
+                variable: '--p-listbox-option-font-size',
+                description: 'Font size of option'
+            },
+            {
                 name: 'listbox.optionGroup.background',
                 token: 'listbox.option.group.background',
                 variable: '--p-listbox-option-group-background',
@@ -7099,6 +7429,12 @@ export default {
                 token: 'listbox.option.group.font.weight',
                 variable: '--p-listbox-option-group-font-weight',
                 description: 'Font weight of option group'
+            },
+            {
+                name: 'listbox.optionGroup.fontSize',
+                token: 'listbox.option.group.font.size',
+                variable: '--p-listbox-option-group-font-size',
+                description: 'Font size of option group'
             },
             {
                 name: 'listbox.optionGroup.padding',
@@ -7274,6 +7610,24 @@ export default {
                 description: 'Icon active color of item'
             },
             {
+                name: 'megamenu.item.icon.size',
+                token: 'megamenu.item.icon.size',
+                variable: '--p-megamenu-item-icon-size',
+                description: 'Icon size of item'
+            },
+            {
+                name: 'megamenu.item.label.fontWeight',
+                token: 'megamenu.item.label.font.weight',
+                variable: '--p-megamenu-item-label-font-weight',
+                description: 'Font weight of item label'
+            },
+            {
+                name: 'megamenu.item.label.fontSize',
+                token: 'megamenu.item.label.font.size',
+                variable: '--p-megamenu-item-label-font-size',
+                description: 'Font size of item label'
+            },
+            {
                 name: 'megamenu.overlay.padding',
                 token: 'megamenu.overlay.padding',
                 variable: '--p-megamenu-overlay-padding',
@@ -7338,6 +7692,12 @@ export default {
                 token: 'megamenu.submenu.label.font.weight',
                 variable: '--p-megamenu-submenu-label-font-weight',
                 description: 'Font weight of submenu label'
+            },
+            {
+                name: 'megamenu.submenuLabel.fontSize',
+                token: 'megamenu.submenu.label.font.size',
+                variable: '--p-megamenu-submenu-label-font-size',
+                description: 'Font size of submenu label'
             },
             {
                 name: 'megamenu.submenuLabel.background',
@@ -7543,6 +7903,24 @@ export default {
                 description: 'Icon focus color of item'
             },
             {
+                name: 'menu.item.icon.size',
+                token: 'menu.item.icon.size',
+                variable: '--p-menu-item-icon-size',
+                description: 'Icon size of item'
+            },
+            {
+                name: 'menu.item.label.fontWeight',
+                token: 'menu.item.label.font.weight',
+                variable: '--p-menu-item-label-font-weight',
+                description: 'Font weight of item label'
+            },
+            {
+                name: 'menu.item.label.fontSize',
+                token: 'menu.item.label.font.size',
+                variable: '--p-menu-item-label-font-size',
+                description: 'Font size of item label'
+            },
+            {
                 name: 'menu.submenuLabel.padding',
                 token: 'menu.submenu.label.padding',
                 variable: '--p-menu-submenu-label-padding',
@@ -7553,6 +7931,12 @@ export default {
                 token: 'menu.submenu.label.font.weight',
                 variable: '--p-menu-submenu-label-font-weight',
                 description: 'Font weight of submenu label'
+            },
+            {
+                name: 'menu.submenuLabel.fontSize',
+                token: 'menu.submenu.label.font.size',
+                variable: '--p-menu-submenu-label-font-size',
+                description: 'Font size of submenu label'
             },
             {
                 name: 'menu.submenuLabel.background',
@@ -7696,6 +8080,24 @@ export default {
                 token: 'menubar.item.icon.active.color',
                 variable: '--p-menubar-item-icon-active-color',
                 description: 'Icon active color of item'
+            },
+            {
+                name: 'menubar.item.icon.size',
+                token: 'menubar.item.icon.size',
+                variable: '--p-menubar-item-icon-size',
+                description: 'Icon size of item'
+            },
+            {
+                name: 'menubar.item.label.fontWeight',
+                token: 'menubar.item.label.font.weight',
+                variable: '--p-menubar-item-label-font-weight',
+                description: 'Font weight of item label'
+            },
+            {
+                name: 'menubar.item.label.fontSize',
+                token: 'menubar.item.label.font.size',
+                variable: '--p-menubar-item-label-font-size',
+                description: 'Font size of item label'
             },
             {
                 name: 'menubar.submenu.padding',
@@ -8386,6 +8788,18 @@ export default {
                 description: 'Size of label marker'
             },
             {
+                name: 'metergroup.labelText.fontWeight',
+                token: 'metergroup.label.text.font.weight',
+                variable: '--p-metergroup-label-text-font-weight',
+                description: 'Font weight of label text'
+            },
+            {
+                name: 'metergroup.labelText.fontSize',
+                token: 'metergroup.label.text.font.size',
+                variable: '--p-metergroup-label-text-font-size',
+                description: 'Font size of label text'
+            },
+            {
                 name: 'metergroup.labelIcon.size',
                 token: 'metergroup.label.icon.size',
                 variable: '--p-metergroup-label-icon-size',
@@ -8583,6 +8997,18 @@ export default {
                 description: 'Lg padding y of root'
             },
             {
+                name: 'multiselect.root.fontWeight',
+                token: 'multiselect.font.weight',
+                variable: '--p-multiselect-font-weight',
+                description: 'Font weight of root'
+            },
+            {
+                name: 'multiselect.root.fontSize',
+                token: 'multiselect.font.size',
+                variable: '--p-multiselect-font-size',
+                description: 'Font size of root'
+            },
+            {
                 name: 'multiselect.dropdown.width',
                 token: 'multiselect.dropdown.width',
                 variable: '--p-multiselect-dropdown-width',
@@ -8685,6 +9111,12 @@ export default {
                 description: 'Selected focus color of option'
             },
             {
+                name: 'multiselect.option.selectedFontWeight',
+                token: 'multiselect.option.selected.font.weight',
+                variable: '--p-multiselect-option-selected-font-weight',
+                description: 'Font weight of a selected option'
+            },
+            {
                 name: 'multiselect.option.padding',
                 token: 'multiselect.option.padding',
                 variable: '--p-multiselect-option-padding',
@@ -8703,6 +9135,18 @@ export default {
                 description: 'Gap of option'
             },
             {
+                name: 'multiselect.option.fontWeight',
+                token: 'multiselect.option.font.weight',
+                variable: '--p-multiselect-option-font-weight',
+                description: 'Font weight of option'
+            },
+            {
+                name: 'multiselect.option.fontSize',
+                token: 'multiselect.option.font.size',
+                variable: '--p-multiselect-option-font-size',
+                description: 'Font size of option'
+            },
+            {
                 name: 'multiselect.optionGroup.background',
                 token: 'multiselect.option.group.background',
                 variable: '--p-multiselect-option-group-background',
@@ -8719,6 +9163,12 @@ export default {
                 token: 'multiselect.option.group.font.weight',
                 variable: '--p-multiselect-option-group-font-weight',
                 description: 'Font weight of option group'
+            },
+            {
+                name: 'multiselect.optionGroup.fontSize',
+                token: 'multiselect.option.group.font.size',
+                variable: '--p-multiselect-option-group-font-size',
+                description: 'Font size of option group'
             },
             {
                 name: 'multiselect.optionGroup.padding',
@@ -9041,6 +9491,18 @@ export default {
                 description: 'Border radius of nav button'
             },
             {
+                name: 'paginator.navButton.fontWeight',
+                token: 'paginator.nav.button.font.weight',
+                variable: '--p-paginator-nav-button-font-weight',
+                description: 'Font weight of nav button'
+            },
+            {
+                name: 'paginator.navButton.fontSize',
+                token: 'paginator.nav.button.font.size',
+                variable: '--p-paginator-nav-button-font-size',
+                description: 'Font size of nav button'
+            },
+            {
                 name: 'paginator.navButton.focusRing.width',
                 token: 'paginator.nav.button.focus.ring.width',
                 variable: '--p-paginator-nav-button-focus-ring-width',
@@ -9075,6 +9537,18 @@ export default {
                 token: 'paginator.current.page.report.color',
                 variable: '--p-paginator-current-page-report-color',
                 description: 'Color of current page report'
+            },
+            {
+                name: 'paginator.currentPageReport.fontWeight',
+                token: 'paginator.current.page.report.font.weight',
+                variable: '--p-paginator-current-page-report-font-weight',
+                description: 'Font weight of current page report'
+            },
+            {
+                name: 'paginator.currentPageReport.fontSize',
+                token: 'paginator.current.page.report.font.size',
+                variable: '--p-paginator-current-page-report-font-size',
+                description: 'Font size of current page report'
             },
             {
                 name: 'paginator.jumpToPageInput.maxWidth',
@@ -9158,6 +9632,12 @@ export default {
                 token: 'panel.title.font.weight',
                 variable: '--p-panel-title-font-weight',
                 description: 'Font weight of title'
+            },
+            {
+                name: 'panel.title.fontSize',
+                token: 'panel.title.font.size',
+                variable: '--p-panel-title-font-size',
+                description: 'Font size of title'
             },
             {
                 name: 'panel.content.padding',
@@ -9297,6 +9777,24 @@ export default {
                 description: 'Icon focus color of item'
             },
             {
+                name: 'panelmenu.item.icon.size',
+                token: 'panelmenu.item.icon.size',
+                variable: '--p-panelmenu-item-icon-size',
+                description: 'Icon size of item'
+            },
+            {
+                name: 'panelmenu.item.label.fontWeight',
+                token: 'panelmenu.item.label.font.weight',
+                variable: '--p-panelmenu-item-label-font-weight',
+                description: 'Font weight of item label'
+            },
+            {
+                name: 'panelmenu.item.label.fontSize',
+                token: 'panelmenu.item.label.font.size',
+                variable: '--p-panelmenu-item-label-font-size',
+                description: 'Font size of item label'
+            },
+            {
                 name: 'panelmenu.submenu.indent',
                 token: 'panelmenu.submenu.indent',
                 variable: '--p-panelmenu-submenu-indent',
@@ -9386,16 +9884,16 @@ export default {
                 description: 'Gap of content'
             },
             {
-                name: 'password.meterText.fontSize',
-                token: 'password.meter.text.font.size',
-                variable: '--p-password-meter-text-font-size',
-                description: 'Font size of meter text'
-            },
-            {
                 name: 'password.meterText.fontWeight',
                 token: 'password.meter.text.font.weight',
                 variable: '--p-password-meter-text-font-weight',
                 description: 'Font weight of meter text'
+            },
+            {
+                name: 'password.meterText.fontSize',
+                token: 'password.meter.text.font.size',
+                variable: '--p-password-meter-text-font-size',
+                description: 'Font size of meter text'
             },
             {
                 name: 'password.strength.weakBackground',
@@ -10079,6 +10577,18 @@ export default {
                 description: 'Lg padding y of root'
             },
             {
+                name: 'select.root.fontWeight',
+                token: 'select.font.weight',
+                variable: '--p-select-font-weight',
+                description: 'Font weight of root'
+            },
+            {
+                name: 'select.root.fontSize',
+                token: 'select.font.size',
+                variable: '--p-select-font-size',
+                description: 'Font size of root'
+            },
+            {
                 name: 'select.dropdown.width',
                 token: 'select.dropdown.width',
                 variable: '--p-select-dropdown-width',
@@ -10181,6 +10691,12 @@ export default {
                 description: 'Selected focus color of option'
             },
             {
+                name: 'select.option.selectedFontWeight',
+                token: 'select.option.selected.font.weight',
+                variable: '--p-select-option-selected-font-weight',
+                description: 'Font weight of a selected option'
+            },
+            {
                 name: 'select.option.padding',
                 token: 'select.option.padding',
                 variable: '--p-select-option-padding',
@@ -10191,6 +10707,18 @@ export default {
                 token: 'select.option.border.radius',
                 variable: '--p-select-option-border-radius',
                 description: 'Border radius of option'
+            },
+            {
+                name: 'select.option.fontWeight',
+                token: 'select.option.font.weight',
+                variable: '--p-select-option-font-weight',
+                description: 'Font weight of option'
+            },
+            {
+                name: 'select.option.fontSize',
+                token: 'select.option.font.size',
+                variable: '--p-select-option-font-size',
+                description: 'Font size of option'
             },
             {
                 name: 'select.optionGroup.background',
@@ -10209,6 +10737,12 @@ export default {
                 token: 'select.option.group.font.weight',
                 variable: '--p-select-option-group-font-weight',
                 description: 'Font weight of option group'
+            },
+            {
+                name: 'select.optionGroup.fontSize',
+                token: 'select.option.group.font.size',
+                variable: '--p-select-option-group-font-size',
+                description: 'Font size of option group'
             },
             {
                 name: 'select.optionGroup.padding',
@@ -10652,6 +11186,12 @@ export default {
                 token: 'stepper.step.title.font.weight',
                 variable: '--p-stepper-step-title-font-weight',
                 description: 'Font weight of step title'
+            },
+            {
+                name: 'stepper.stepTitle.fontSize',
+                token: 'stepper.step.title.font.size',
+                variable: '--p-stepper-step-title-font-size',
+                description: 'Font size of step title'
             },
             {
                 name: 'stepper.stepNumber.background',
@@ -11173,6 +11713,12 @@ export default {
                 description: 'Font weight of tab'
             },
             {
+                name: 'tabs.tab.fontSize',
+                token: 'tabs.tab.font.size',
+                variable: '--p-tabs-tab-font-size',
+                description: 'Font size of tab'
+            },
+            {
                 name: 'tabs.tab.margin',
                 token: 'tabs.tab.margin',
                 variable: '--p-tabs-tab-margin',
@@ -11602,6 +12148,18 @@ export default {
                 description: 'Border radius of root'
             },
             {
+                name: 'terminal.root.fontWeight',
+                token: 'terminal.font.weight',
+                variable: '--p-terminal-font-weight',
+                description: 'Font weight of root'
+            },
+            {
+                name: 'terminal.root.fontSize',
+                token: 'terminal.font.size',
+                variable: '--p-terminal-font-size',
+                description: 'Font size of root'
+            },
+            {
                 name: 'terminal.prompt.gap',
                 token: 'terminal.prompt.gap',
                 variable: '--p-terminal-prompt-gap',
@@ -11791,6 +12349,18 @@ export default {
                 token: 'textarea.lg.padding.y',
                 variable: '--p-textarea-lg-padding-y',
                 description: 'Lg padding y of root'
+            },
+            {
+                name: 'textarea.root.fontWeight',
+                token: 'textarea.font.weight',
+                variable: '--p-textarea-font-weight',
+                description: 'Font weight of root'
+            },
+            {
+                name: 'textarea.root.fontSize',
+                token: 'textarea.font.size',
+                variable: '--p-textarea-font-size',
+                description: 'Font size of root'
             }
         ]
     },
@@ -11910,6 +12480,24 @@ export default {
                 token: 'tieredmenu.item.icon.active.color',
                 variable: '--p-tieredmenu-item-icon-active-color',
                 description: 'Icon active color of item'
+            },
+            {
+                name: 'tieredmenu.item.icon.size',
+                token: 'tieredmenu.item.icon.size',
+                variable: '--p-tieredmenu-item-icon-size',
+                description: 'Icon size of item'
+            },
+            {
+                name: 'tieredmenu.item.label.fontWeight',
+                token: 'tieredmenu.item.label.font.weight',
+                variable: '--p-tieredmenu-item-label-font-weight',
+                description: 'Font weight of item label'
+            },
+            {
+                name: 'tieredmenu.item.label.fontSize',
+                token: 'tieredmenu.item.label.font.size',
+                variable: '--p-tieredmenu-item-label-font-size',
+                description: 'Font size of item label'
             },
             {
                 name: 'tieredmenu.submenu.mobileIndent',
@@ -12473,6 +13061,12 @@ export default {
                 description: 'Gap of root'
             },
             {
+                name: 'togglebutton.root.fontSize',
+                token: 'togglebutton.font.size',
+                variable: '--p-togglebutton-font-size',
+                description: 'Font size of root'
+            },
+            {
                 name: 'togglebutton.root.fontWeight',
                 token: 'togglebutton.font.weight',
                 variable: '--p-togglebutton-font-weight',
@@ -12966,6 +13560,18 @@ export default {
                 token: 'tooltip.color',
                 variable: '--p-tooltip-color',
                 description: 'Color of root'
+            },
+            {
+                name: 'tooltip.root.fontWeight',
+                token: 'tooltip.font.weight',
+                variable: '--p-tooltip-font-weight',
+                description: 'Font weight of root'
+            },
+            {
+                name: 'tooltip.root.fontSize',
+                token: 'tooltip.font.size',
+                variable: '--p-tooltip-font-size',
+                description: 'Font size of root'
             }
         ]
     },
@@ -13103,6 +13709,24 @@ export default {
                 token: 'tree.node.icon.selected.color',
                 variable: '--p-tree-node-icon-selected-color',
                 description: 'Selected color of node icon'
+            },
+            {
+                name: 'tree.nodeLabel.fontWeight',
+                token: 'tree.node.label.font.weight',
+                variable: '--p-tree-node-label-font-weight',
+                description: 'Font weight of node label'
+            },
+            {
+                name: 'tree.nodeLabel.fontSize',
+                token: 'tree.node.label.font.size',
+                variable: '--p-tree-node-label-font-size',
+                description: 'Font size of node label'
+            },
+            {
+                name: 'tree.nodeLabel.selectedFontWeight',
+                token: 'tree.node.label.selected.font.weight',
+                variable: '--p-tree-node-label-selected-font-weight',
+                description: 'Font weight of a selected node label'
             },
             {
                 name: 'tree.nodeToggleButton.borderRadius',
@@ -13368,6 +13992,18 @@ export default {
                 description: 'Lg padding y of root'
             },
             {
+                name: 'treeselect.root.fontWeight',
+                token: 'treeselect.font.weight',
+                variable: '--p-treeselect-font-weight',
+                description: 'Font weight of root'
+            },
+            {
+                name: 'treeselect.root.fontSize',
+                token: 'treeselect.font.size',
+                variable: '--p-treeselect-font-size',
+                description: 'Font size of root'
+            },
+            {
                 name: 'treeselect.dropdown.width',
                 token: 'treeselect.dropdown.width',
                 variable: '--p-treeselect-dropdown-width',
@@ -13571,6 +14207,12 @@ export default {
                 description: 'Font weight of column title'
             },
             {
+                name: 'treetable.columnTitle.fontSize',
+                token: 'treetable.column.title.font.size',
+                variable: '--p-treetable-column-title-font-size',
+                description: 'Font size of column title'
+            },
+            {
                 name: 'treetable.row.background',
                 token: 'treetable.row.background',
                 variable: '--p-treetable-row-background',
@@ -13661,6 +14303,18 @@ export default {
                 description: 'Selected border color of body cell'
             },
             {
+                name: 'treetable.bodyCell.fontWeight',
+                token: 'treetable.body.cell.font.weight',
+                variable: '--p-treetable-body-cell-font-weight',
+                description: 'Font weight of body cell'
+            },
+            {
+                name: 'treetable.bodyCell.fontSize',
+                token: 'treetable.body.cell.font.size',
+                variable: '--p-treetable-body-cell-font-size',
+                description: 'Font size of body cell'
+            },
+            {
                 name: 'treetable.footerCell.background',
                 token: 'treetable.footer.cell.background',
                 variable: '--p-treetable-footer-cell-background',
@@ -13689,6 +14343,12 @@ export default {
                 token: 'treetable.column.footer.font.weight',
                 variable: '--p-treetable-column-footer-font-weight',
                 description: 'Font weight of column footer'
+            },
+            {
+                name: 'treetable.columnFooter.fontSize',
+                token: 'treetable.column.footer.font.size',
+                variable: '--p-treetable-column-footer-font-size',
+                description: 'Font size of column footer'
             },
             {
                 name: 'treetable.footer.background',

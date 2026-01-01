@@ -13,6 +13,7 @@ export const gutter: SplitterTokenSections.Gutter = {
 
 export const handle: SplitterTokenSections.Handle = {
     size: '24px',
+    background: 'light-dark({surface.400}, {surface.600})',
     borderRadius: '{content.border.radius}',
     focusRing: {
         width: '{focus.ring.width}',
@@ -23,22 +24,8 @@ export const handle: SplitterTokenSections.Handle = {
     }
 };
 
-export const colorScheme: SplitterTokenSections.ColorScheme = {
-    light: {
-        handle: {
-            background: '{surface.400}'
-        }
-    },
-    dark: {
-        handle: {
-            background: '{surface.600}'
-        }
-    }
-};
-
 export default {
     root,
     gutter,
-    handle,
-    colorScheme
+    handle
 } satisfies SplitterDesignTokens;

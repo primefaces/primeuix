@@ -11,6 +11,9 @@ export const tablist: TabmenuTokenSections.Tablist = {
 };
 
 export const item: TabmenuTokenSections.Item = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    hoverBackground: 'light-dark({surface.100}, {surface.700})',
+    activeBackground: 'light-dark({surface.0}, {surface.900})',
     borderWidth: '2px 0 0 0',
     borderColor: 'transparent',
     hoverBorderColor: 'transparent',
@@ -43,28 +46,10 @@ export const activeBar: TabmenuTokenSections.ActiveBar = {
     background: 'transparent'
 };
 
-export const colorScheme: TabmenuTokenSections.ColorScheme = {
-    light: {
-        item: {
-            background: '{surface.50}',
-            hoverBackground: '{surface.100}',
-            activeBackground: '{surface.0}'
-        }
-    },
-    dark: {
-        item: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.900}'
-        }
-    }
-};
-
 export default {
     root,
     tablist,
     item,
     itemIcon,
-    activeBar,
-    colorScheme
+    activeBar
 } satisfies TabmenuDesignTokens;

@@ -47,7 +47,7 @@ No new tokens
 
 ### Button
 
-- button.root.font.size
+- button.font.size
 
 ### Card
 
@@ -56,8 +56,8 @@ No new tokens
 
 ### CascadeSelect
 
-- cascadeselect.root.font.weight
-- cascadeselect.root.font.size
+- cascadeselect.font.weight
+- cascadeselect.font.size
 - cascadeselect.option.font.weight
 - cascadeselect.option.font.size
 - cascadeselect.option.selected.font.weight

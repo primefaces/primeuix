@@ -25,7 +25,8 @@ export const handle: SliderTokenSections.Handle = {
         hoverBackground: '{primary.color}',
         width: '12px',
         height: '12px',
-        shadow: 'none'
+        shadow: 'none',
+        background: 'light-dark({surface.0}, {surface.950})'
     },
     focusRing: {
         width: '{form.field.focus.ring.width}',
@@ -36,27 +37,9 @@ export const handle: SliderTokenSections.Handle = {
     }
 };
 
-export const colorScheme: SliderTokenSections.ColorScheme = {
-    light: {
-        handle: {
-            content: {
-                background: '{surface.0}'
-            }
-        }
-    },
-    dark: {
-        handle: {
-            content: {
-                background: '{surface.950}'
-            }
-        }
-    }
-};
-
 export default {
     root,
     track,
     range,
-    handle,
-    colorScheme
+    handle
 } satisfies SliderDesignTokens;

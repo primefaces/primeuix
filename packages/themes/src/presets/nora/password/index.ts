@@ -2,7 +2,8 @@ import type { PasswordDesignTokens, PasswordTokenSections } from '@primeuix/them
 
 export const meter: PasswordTokenSections.Meter = {
     borderRadius: '{content.border.radius}',
-    height: '.75rem'
+    height: '.75rem',
+    background: 'light-dark({surface.300}, {surface.600})'
 };
 
 export const icon: PasswordTokenSections.Icon = {
@@ -22,27 +23,10 @@ export const content: PasswordTokenSections.Content = {
     gap: '0.5rem'
 };
 
-export const colorScheme: PasswordTokenSections.ColorScheme = {
-    light: {
-        meter: {
-            background: '{surface.300}'
-        },
-        strength: {
-            weakBackground: '{red.600}',
-            mediumBackground: '{yellow.600}',
-            strongBackground: '{green.600}'
-        }
-    },
-    dark: {
-        meter: {
-            background: '{surface.600}'
-        },
-        strength: {
-            weakBackground: '{red.500}',
-            mediumBackground: '{yellow.500}',
-            strongBackground: '{green.500}'
-        }
-    }
+export const strength: PasswordTokenSections.Strength = {
+    weakBackground: 'light-dark({red.600}, {red.500})',
+    mediumBackground: 'light-dark({yellow.600}, {yellow.500})',
+    strongBackground: 'light-dark({green.600}, {green.500})'
 };
 
 export default {
@@ -50,5 +34,5 @@ export default {
     icon,
     overlay,
     content,
-    colorScheme
+    strength
 } satisfies PasswordDesignTokens;

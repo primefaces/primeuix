@@ -1,16 +1,22 @@
 import type { TreeTableDesignTokens, TreeTableTokenSections } from '@primeuix/themes/types/treetable';
 
 export const root: TreeTableTokenSections.Root = {
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{transition.duration}',
+    borderColor: 'light-dark({content.border.color}, {surface.800})'
 };
 
 export const header: TreeTableTokenSections.Header = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    color: '{text.color}',
     borderColor: '{treetable.border.color}',
     borderWidth: '1px 0 1px 0',
     padding: '0.75rem 1rem'
 };
 
 export const headerCell: TreeTableTokenSections.HeaderCell = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    hoverBackground: 'light-dark({surface.100}, {surface.700})',
+    color: '{text.color}',
     selectedBackground: '{highlight.background}',
     borderColor: '{treetable.border.color}',
     hoverColor: '{content.hover.color}',
@@ -49,10 +55,13 @@ export const row: TreeTableTokenSections.Row = {
 export const bodyCell: TreeTableTokenSections.BodyCell = {
     borderColor: '{treetable.border.color}',
     padding: '0.75rem 1rem',
-    gap: '0.5rem'
+    gap: '0.5rem',
+    selectedBorderColor: 'light-dark({primary.100}, {primary.900})'
 };
 
 export const footerCell: TreeTableTokenSections.FooterCell = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    color: '{text.color}',
     borderColor: '{treetable.border.color}',
     padding: '0.75rem 1rem'
 };
@@ -62,6 +71,8 @@ export const columnFooter: TreeTableTokenSections.ColumnFooter = {
 };
 
 export const footer: TreeTableTokenSections.Footer = {
+    background: 'light-dark({surface.50}, {surface.800})',
+    color: '{text.color}',
     borderColor: '{treetable.border.color}',
     borderWidth: '0 0 1px 0',
     padding: '0.75rem 1rem'
@@ -113,59 +124,6 @@ export const paginatorBottom: TreeTableTokenSections.PaginatorBottom = {
     borderWidth: '0 0 1px 0'
 };
 
-export const colorScheme: TreeTableTokenSections.ColorScheme = {
-    light: {
-        root: {
-            borderColor: '{content.border.color}'
-        },
-        header: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        },
-        headerCell: {
-            background: '{surface.50}',
-            hoverBackground: '{surface.100}',
-            color: '{text.color}'
-        },
-        footer: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        },
-        footerCell: {
-            background: '{surface.50}',
-            color: '{text.color}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.100}'
-        }
-    },
-    dark: {
-        root: {
-            borderColor: '{surface.800}'
-        },
-        header: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        },
-        headerCell: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            color: '{text.color}'
-        },
-        footer: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        },
-        footerCell: {
-            background: '{surface.800}',
-            color: '{text.color}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.900}'
-        }
-    }
-};
-
 export default {
     root,
     header,
@@ -182,6 +140,5 @@ export default {
     loadingIcon,
     nodeToggleButton,
     paginatorTop,
-    paginatorBottom,
-    colorScheme
+    paginatorBottom
 } satisfies TreeTableDesignTokens;

@@ -6,7 +6,8 @@ export const root: MeterGroupTokenSections.Root = {
 };
 
 export const meters: MeterGroupTokenSections.Meters = {
-    size: '0.5rem'
+    size: '0.5rem',
+    background: 'light-dark({surface.300}, {surface.600})'
 };
 
 export const label: MeterGroupTokenSections.Label = {
@@ -26,25 +27,11 @@ export const labelList: MeterGroupTokenSections.LabelList = {
     horizontalGap: '1rem'
 };
 
-export const colorScheme: MeterGroupTokenSections.ColorScheme = {
-    light: {
-        meters: {
-            background: '{surface.300}'
-        }
-    },
-    dark: {
-        meters: {
-            background: '{surface.600}'
-        }
-    }
-};
-
 export default {
     root,
     meters,
     label,
     labelMarker,
     labelIcon,
-    labelList,
-    colorScheme
+    labelList
 } satisfies MeterGroupDesignTokens;

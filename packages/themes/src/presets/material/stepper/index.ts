@@ -43,7 +43,10 @@ export const stepNumber: StepperTokenSections.StepNumber = {
     fontSize: '1.143rem',
     fontWeight: '500',
     borderRadius: '50%',
-    shadow: 'none'
+    shadow: 'none',
+    background: 'light-dark({surface.400}, {surface.200})',
+    borderColor: 'light-dark({surface.400}, {surface.200})',
+    color: 'light-dark({surface.0}, {surface.900})'
 };
 
 export const steppanels: StepperTokenSections.Steppanels = {
@@ -55,23 +58,6 @@ export const steppanel: StepperTokenSections.Steppanel = {
     color: '{content.color}',
     padding: '0',
     indent: '1rem'
-};
-
-export const colorScheme: StepperTokenSections.ColorScheme = {
-    light: {
-        stepNumber: {
-            background: '{surface.400}',
-            borderColor: '{surface.400}',
-            color: '{surface.0}'
-        }
-    },
-    dark: {
-        stepNumber: {
-            background: '{surface.200}',
-            borderColor: '{surface.200}',
-            color: '{surface.900}'
-        }
-    }
 };
 
 export const css: StepperTokenSections.CSS = /*css*/ `
@@ -89,6 +75,5 @@ export default {
     stepNumber,
     steppanels,
     steppanel,
-    colorScheme,
     css
 } satisfies StepperDesignTokens;

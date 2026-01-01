@@ -34,9 +34,15 @@ export const dropdown: DatePickerTokenSections.Dropdown = {
     lg: {
         width: '2.625rem'
     },
+    background: 'light-dark({surface.100}, {surface.800})',
+    hoverBackground: 'light-dark({surface.200}, {surface.700})',
+    activeBackground: 'light-dark({surface.300}, {surface.600})',
     borderColor: '{form.field.border.color}',
     hoverBorderColor: '{form.field.border.color}',
     activeBorderColor: '{form.field.border.color}',
+    color: 'light-dark({surface.600}, {surface.300})',
+    hoverColor: 'light-dark({surface.700}, {surface.200})',
+    activeColor: 'light-dark({surface.800}, {surface.100})',
     borderRadius: '{form.field.border.radius}',
     focusRing: {
         width: '{focus.ring.width}',
@@ -143,35 +149,9 @@ export const timePicker: DatePickerTokenSections.TimePicker = {
     fontSize: '{typography.font.size}'
 };
 
-export const colorScheme: DatePickerTokenSections.ColorScheme = {
-    light: {
-        dropdown: {
-            background: '{surface.100}',
-            hoverBackground: '{surface.200}',
-            activeBackground: '{surface.300}',
-            color: '{surface.600}',
-            hoverColor: '{surface.700}',
-            activeColor: '{surface.800}'
-        },
-        today: {
-            background: '{surface.200}',
-            color: '{surface.900}'
-        }
-    },
-    dark: {
-        dropdown: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.600}',
-            color: '{surface.300}',
-            hoverColor: '{surface.200}',
-            activeColor: '{surface.100}'
-        },
-        today: {
-            background: '{surface.700}',
-            color: '{surface.0}'
-        }
-    }
+export const today: DatePickerTokenSections.Today = {
+    background: 'light-dark({surface.200}, {surface.700})',
+    color: 'light-dark({surface.900}, {surface.0})'
 };
 
 export default {
@@ -193,5 +173,5 @@ export default {
     year,
     buttonbar,
     timePicker,
-    colorScheme
+    today
 } satisfies DatePickerDesignTokens;

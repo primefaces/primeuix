@@ -58,7 +58,8 @@ export const navButton: TabsTokenSections.NavButton = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: 'inset {focus.ring.shadow}'
-    }
+    },
+    shadow: 'light-dark(0px 0px 10px 50px rgba(255, 255, 255, 0.6), 0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%))'
 };
 
 export const activeBar: TabsTokenSections.ActiveBar = {
@@ -67,25 +68,11 @@ export const activeBar: TabsTokenSections.ActiveBar = {
     background: 'transparent'
 };
 
-export const colorScheme: TabsTokenSections.ColorScheme = {
-    light: {
-        navButton: {
-            shadow: '0px 0px 10px 50px rgba(255, 255, 255, 0.6)'
-        }
-    },
-    dark: {
-        navButton: {
-            shadow: '0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)'
-        }
-    }
-};
-
 export default {
     root,
     tablist,
     tab,
     tabpanel,
     navButton,
-    activeBar,
-    colorScheme
+    activeBar
 } satisfies TabsDesignTokens;

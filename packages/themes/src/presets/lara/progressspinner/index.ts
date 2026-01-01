@@ -1,24 +1,12 @@
 import type { ProgressSpinnerDesignTokens, ProgressSpinnerTokenSections } from '@primeuix/themes/types/progressspinner';
 
-export const colorScheme: ProgressSpinnerTokenSections.ColorScheme = {
-    light: {
-        root: {
-            colorOne: '{pink.500}',
-            colorTwo: '{sky.500}',
-            colorThree: '{emerald.500}',
-            colorFour: '{amber.500}'
-        }
-    },
-    dark: {
-        root: {
-            colorOne: '{pink.400}',
-            colorTwo: '{sky.400}',
-            colorThree: '{emerald.400}',
-            colorFour: '{amber.400}'
-        }
-    }
+export const root: ProgressSpinnerTokenSections.Root = {
+    colorOne: 'light-dark({pink.500}, {pink.400})',
+    colorTwo: 'light-dark({sky.500}, {sky.400})',
+    colorThree: 'light-dark({emerald.500}, {emerald.400})',
+    colorFour: 'light-dark({amber.500}, {amber.400})'
 };
 
 export default {
-    colorScheme
+    root
 } satisfies ProgressSpinnerDesignTokens;

@@ -20,55 +20,26 @@ export const root: ToggleSwitchTokenSections.Root = {
     checkedHoverBorderColor: 'transparent',
     invalidBorderColor: '{form.field.invalid.border.color}',
     transitionDuration: '{form.field.transition.duration}',
-    slideDuration: '0.2s'
+    slideDuration: '0.2s',
+    background: 'light-dark({surface.300}, {surface.700})',
+    disabledBackground: 'light-dark({surface.400}, {surface.600})',
+    hoverBackground: 'light-dark({surface.300}, {surface.700})',
+    checkedBackground: 'light-dark({primary.200}, {primary.color})',
+    checkedHoverBackground: 'light-dark({primary.200}, {primary.color})'
 };
 
 export const handle: ToggleSwitchTokenSections.Handle = {
     borderRadius: '50%',
-    size: '1.5rem'
-};
-
-export const colorScheme: ToggleSwitchTokenSections.ColorScheme = {
-    light: {
-        root: {
-            background: '{surface.300}',
-            disabledBackground: '{surface.400}',
-            hoverBackground: '{surface.300}',
-            checkedBackground: '{primary.200}',
-            checkedHoverBackground: '{primary.200}'
-        },
-        handle: {
-            background: '{surface.0}',
-            disabledBackground: '{surface.200}',
-            hoverBackground: '{surface.0}',
-            checkedBackground: '{primary.color}',
-            checkedHoverBackground: '{primary.color}',
-            color: '{text.muted.color}',
-            hoverColor: '{text.color}',
-            checkedColor: '{primary.contrast.color}',
-            checkedHoverColor: '{primary.contrast.color}'
-        }
-    },
-    dark: {
-        root: {
-            background: '{surface.700}',
-            disabledBackground: '{surface.600}',
-            hoverBackground: '{surface.700}',
-            checkedBackground: '{primary.color}',
-            checkedHoverBackground: '{primary.color}'
-        },
-        handle: {
-            background: '{surface.400}',
-            disabledBackground: '{surface.500}',
-            hoverBackground: '{surface.300}',
-            checkedBackground: '{primary.200}',
-            checkedHoverBackground: '{primary.200}',
-            color: '{surface.800}',
-            hoverColor: '{surface.900}',
-            checkedColor: '{primary.contrast.color}',
-            checkedHoverColor: '{primary.contrast.color}'
-        }
-    }
+    size: '1.5rem',
+    background: 'light-dark({surface.0}, {surface.400})',
+    disabledBackground: 'light-dark({surface.200}, {surface.500})',
+    hoverBackground: 'light-dark({surface.0}, {surface.300})',
+    checkedBackground: 'light-dark({primary.color}, {primary.200})',
+    checkedHoverBackground: 'light-dark({primary.color}, {primary.200})',
+    color: 'light-dark({text.muted.color}, {surface.800})',
+    hoverColor: 'light-dark({text.color}, {surface.900})',
+    checkedColor: '{primary.contrast.color}',
+    checkedHoverColor: '{primary.contrast.color}'
 };
 
 export const css: ToggleSwitchTokenSections.CSS = /*css*/ `
@@ -96,6 +67,5 @@ export const css: ToggleSwitchTokenSections.CSS = /*css*/ `
 export default {
     root,
     handle,
-    colorScheme,
     css
 } satisfies ToggleSwitchDesignTokens;

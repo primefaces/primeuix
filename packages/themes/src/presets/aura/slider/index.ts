@@ -22,6 +22,7 @@ export const handle: SliderTokenSections.Handle = {
     hoverBackground: '{content.border.color}',
     content: {
         borderRadius: '50%',
+        background: 'light-dark({surface.0}, {surface.950})',
         hoverBackground: '{content.background}',
         width: '16px',
         height: '16px',
@@ -36,27 +37,9 @@ export const handle: SliderTokenSections.Handle = {
     }
 };
 
-export const colorScheme: SliderTokenSections.ColorScheme = {
-    light: {
-        handle: {
-            content: {
-                background: '{surface.0}'
-            }
-        }
-    },
-    dark: {
-        handle: {
-            content: {
-                background: '{surface.950}'
-            }
-        }
-    }
-};
-
 export default {
     root,
     track,
     range,
-    handle,
-    colorScheme
+    handle
 } satisfies SliderDesignTokens;

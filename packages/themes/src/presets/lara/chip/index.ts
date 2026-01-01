@@ -5,7 +5,9 @@ export const root: ChipTokenSections.Root = {
     paddingX: '0.875rem',
     paddingY: '0.625rem',
     gap: '0.5rem',
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{transition.duration}',
+    background: 'light-dark({surface.100}, {surface.800})',
+    color: 'light-dark({surface.800}, {surface.0})'
 };
 
 export const image: ChipTokenSections.Image = {
@@ -14,11 +16,13 @@ export const image: ChipTokenSections.Image = {
 };
 
 export const icon: ChipTokenSections.Icon = {
-    size: '1rem'
+    size: '1rem',
+    color: 'light-dark({surface.800}, {surface.0})'
 };
 
 export const removeIcon: ChipTokenSections.RemoveIcon = {
     size: '1rem',
+    color: 'light-dark({surface.800}, {surface.0})',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -28,37 +32,9 @@ export const removeIcon: ChipTokenSections.RemoveIcon = {
     }
 };
 
-export const colorScheme: ChipTokenSections.ColorScheme = {
-    light: {
-        root: {
-            background: '{surface.100}',
-            color: '{surface.800}'
-        },
-        icon: {
-            color: '{surface.800}'
-        },
-        removeIcon: {
-            color: '{surface.800}'
-        }
-    },
-    dark: {
-        root: {
-            background: '{surface.800}',
-            color: '{surface.0}'
-        },
-        icon: {
-            color: '{surface.0}'
-        },
-        removeIcon: {
-            color: '{surface.0}'
-        }
-    }
-};
-
 export default {
     root,
     image,
     icon,
-    removeIcon,
-    colorScheme
+    removeIcon
 } satisfies ChipDesignTokens;

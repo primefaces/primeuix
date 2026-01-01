@@ -48,7 +48,10 @@ export const thumbnailNavButton: GalleriaTokenSections.ThumbnailNavButton = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: '{focus.ring.shadow}'
-    }
+    },
+    hoverBackground: 'light-dark({surface.200}, {surface.700})',
+    color: 'light-dark({text.color}, {surface.0})',
+    hoverColor: 'light-dark({text.hover.color}, {surface.0})'
 };
 
 export const thumbnailNavButtonIcon: GalleriaTokenSections.ThumbnailNavButtonIcon = {
@@ -77,7 +80,9 @@ export const indicatorButton: GalleriaTokenSections.IndicatorButton = {
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
         shadow: '{focus.ring.shadow}'
-    }
+    },
+    background: 'light-dark({surface.300}, {surface.600})',
+    hoverBackground: 'light-dark({surface.400}, {surface.500})'
 };
 
 export const insetIndicatorList: GalleriaTokenSections.InsetIndicatorList = {
@@ -111,31 +116,6 @@ export const closeButtonIcon: GalleriaTokenSections.CloseButtonIcon = {
     size: '1.5rem'
 };
 
-export const colorScheme: GalleriaTokenSections.ColorScheme = {
-    light: {
-        thumbnailNavButton: {
-            hoverBackground: '{surface.200}',
-            color: '{text.color}',
-            hoverColor: '{text.hover.color}'
-        },
-        indicatorButton: {
-            background: '{surface.300}',
-            hoverBackground: '{surface.400}'
-        }
-    },
-    dark: {
-        thumbnailNavButton: {
-            hoverBackground: '{surface.700}',
-            color: '{surface.0}',
-            hoverColor: '{surface.0}'
-        },
-        indicatorButton: {
-            background: '{surface.600}',
-            hoverBackground: '{surface.500}'
-        }
-    }
-};
-
 export default {
     root,
     navButton,
@@ -149,6 +129,5 @@ export default {
     insetIndicatorList,
     insetIndicatorButton,
     closeButton,
-    closeButtonIcon,
-    colorScheme
+    closeButtonIcon
 } satisfies GalleriaDesignTokens;

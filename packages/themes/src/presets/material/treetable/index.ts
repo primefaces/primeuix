@@ -1,7 +1,8 @@
 import type { TreeTableDesignTokens, TreeTableTokenSections } from '@primeuix/themes/types/treetable';
 
 export const root: TreeTableTokenSections.Root = {
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{transition.duration}',
+    borderColor: 'light-dark({content.border.color}, {surface.800})'
 };
 
 export const header: TreeTableTokenSections.Header = {
@@ -54,7 +55,8 @@ export const row: TreeTableTokenSections.Row = {
 export const bodyCell: TreeTableTokenSections.BodyCell = {
     borderColor: '{treetable.border.color}',
     padding: '0.75rem 1rem',
-    gap: '0.5rem'
+    gap: '0.5rem',
+    selectedBorderColor: 'light-dark({primary.100}, {primary.900})'
 };
 
 export const footerCell: TreeTableTokenSections.FooterCell = {
@@ -122,25 +124,6 @@ export const paginatorBottom: TreeTableTokenSections.PaginatorBottom = {
     borderWidth: '0 0 1px 0'
 };
 
-export const colorScheme: TreeTableTokenSections.ColorScheme = {
-    light: {
-        root: {
-            borderColor: '{content.border.color}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.100}'
-        }
-    },
-    dark: {
-        root: {
-            borderColor: '{surface.800}'
-        },
-        bodyCell: {
-            selectedBorderColor: '{primary.900}'
-        }
-    }
-};
-
 export const css: TreeTableTokenSections.CSS = /*css*/ `
 .p-treetable-header-cell,
 .p-treetable-tbody > tr {
@@ -165,5 +148,5 @@ export default {
     nodeToggleButton,
     paginatorTop,
     paginatorBottom,
-    colorScheme
+    css
 } satisfies TreeTableDesignTokens;

@@ -19,6 +19,10 @@ export const header: AccordionTokenSections.Header = {
     borderRadius: '0',
     borderWidth: '0 1px 1px 1px',
     borderColor: '{content.border.color}',
+    background: 'light-dark({surface.50}, {surface.800})',
+    hoverBackground: 'light-dark({surface.100}, {surface.700})',
+    activeBackground: 'light-dark({surface.50}, {surface.800})',
+    activeHoverBackground: 'light-dark({surface.100}, {surface.700})',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -50,29 +54,9 @@ export const content: AccordionTokenSections.Content = {
     padding: '1.125rem'
 };
 
-export const colorScheme: AccordionTokenSections.ColorScheme = {
-    light: {
-        header: {
-            background: '{surface.50}',
-            hoverBackground: '{surface.100}',
-            activeBackground: '{surface.50}',
-            activeHoverBackground: '{surface.100}'
-        }
-    },
-    dark: {
-        header: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.800}',
-            activeHoverBackground: '{surface.700}'
-        }
-    }
-};
-
 export default {
     root,
     panel,
     header,
-    content,
-    colorScheme
+    content
 } satisfies AccordionDesignTokens;

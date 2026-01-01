@@ -17,6 +17,9 @@ export const indicator: CarouselTokenSections.Indicator = {
     width: '1.75rem',
     height: '0.5rem',
     borderRadius: '{content.border.radius}',
+    background: 'light-dark({surface.200}, {surface.700})',
+    hoverBackground: 'light-dark({surface.300}, {surface.600})',
+    activeBackground: '{primary.color}',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -26,27 +29,9 @@ export const indicator: CarouselTokenSections.Indicator = {
     }
 };
 
-export const colorScheme: CarouselTokenSections.ColorScheme = {
-    light: {
-        indicator: {
-            background: '{surface.200}',
-            hoverBackground: '{surface.300}',
-            activeBackground: '{primary.color}'
-        }
-    },
-    dark: {
-        indicator: {
-            background: '{surface.700}',
-            hoverBackground: '{surface.600}',
-            activeBackground: '{primary.color}'
-        }
-    }
-};
-
 export default {
     root,
     content,
     indicatorList,
-    indicator,
-    colorScheme
+    indicator
 } satisfies CarouselDesignTokens;

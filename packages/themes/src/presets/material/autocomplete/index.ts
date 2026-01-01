@@ -77,46 +77,23 @@ export const dropdown: AutoCompleteTokenSections.Dropdown = {
         color: 'unset',
         offset: '0',
         shadow: 'none'
-    }
+    },
+    background: 'light-dark({surface.100}, {surface.800})',
+    hoverBackground: 'light-dark({surface.200}, {surface.700})',
+    activeBackground: 'light-dark({surface.300}, {surface.600})',
+    color: 'light-dark({surface.600}, {surface.300})',
+    hoverColor: 'light-dark({surface.700}, {surface.200})',
+    activeColor: 'light-dark({surface.800}, {surface.100})'
 };
 
 export const chip: AutoCompleteTokenSections.Chip = {
-    borderRadius: '{border.radius.sm}'
+    borderRadius: '{border.radius.sm}',
+    focusBackground: 'light-dark({surface.300}, {surface.600})',
+    focusColor: 'light-dark({surface.950}, {surface.0})'
 };
 
 export const emptyMessage: AutoCompleteTokenSections.EmptyMessage = {
     padding: '{list.option.padding}'
-};
-
-export const colorScheme: AutoCompleteTokenSections.ColorScheme = {
-    light: {
-        chip: {
-            focusBackground: '{surface.300}',
-            focusColor: '{surface.950}'
-        },
-        dropdown: {
-            background: '{surface.100}',
-            hoverBackground: '{surface.200}',
-            activeBackground: '{surface.300}',
-            color: '{surface.600}',
-            hoverColor: '{surface.700}',
-            activeColor: '{surface.800}'
-        }
-    },
-    dark: {
-        chip: {
-            focusBackground: '{surface.600}',
-            focusColor: '{surface.0}'
-        },
-        dropdown: {
-            background: '{surface.800}',
-            hoverBackground: '{surface.700}',
-            activeBackground: '{surface.600}',
-            color: '{surface.300}',
-            hoverColor: '{surface.200}',
-            activeColor: '{surface.100}'
-        }
-    }
 };
 
 export const css: AutoCompleteTokenSections.CSS = /*css*/ `
@@ -183,6 +160,5 @@ export default {
     dropdown,
     chip,
     emptyMessage,
-    colorScheme,
     css
 } satisfies AutoCompleteDesignTokens;
