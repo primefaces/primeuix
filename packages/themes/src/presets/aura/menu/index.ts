@@ -6,7 +6,7 @@ export const root: MenuTokenSections.Root = {
     color: '{content.color}',
     borderRadius: '{content.border.radius}',
     shadow: '{overlay.navigation.shadow}',
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{navigation.item.transition.duration}'
 };
 
 export const list: MenuTokenSections.List = {

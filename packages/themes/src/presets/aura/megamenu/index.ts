@@ -14,7 +14,7 @@ export const root: MegaMenuTokenSections.Root = {
         padding: '0.375rem 0.625rem',
         gap: '0.5rem'
     },
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{navigation.item.transition.duration}'
 };
 
 export const baseItem: MegaMenuTokenSections.BaseItem = {

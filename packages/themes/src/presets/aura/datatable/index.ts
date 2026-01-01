@@ -1,7 +1,7 @@
 import type { DataTableDesignTokens, DataTableTokenSections } from '@primeuix/themes/types/datatable';
 
 export const root: DataTableTokenSections.Root = {
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '0s'
 };
 
 export const header: DataTableTokenSections.Header = {

@@ -7,7 +7,7 @@ export const root: MenubarTokenSections.Root = {
     color: '{content.color}',
     gap: '0.5rem',
     padding: '0.375rem 0.625rem',
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{navigation.item.transition.duration}'
 };
 
 export const baseItem: MenubarTokenSections.BaseItem = {

@@ -106,7 +106,8 @@ export const semantic: BaseTokenSections.Semantic = {
             padding: '0.25rem 0.625rem',
             borderRadius: '{border.radius.sm}',
             fontWeight: 'normal',
-            fontSize: '{typography.font.size}'
+            fontSize: '{typography.font.size}',
+            transitionDuration: '0s'
         },
         optionGroup: {
             padding: '0.25rem 0.625rem',
@@ -135,7 +136,8 @@ export const semantic: BaseTokenSections.Semantic = {
             label: {
                 fontWeight: '{typography.font.weight}',
                 fontSize: '{typography.font.size}'
-            }
+            },
+            transitionDuration: '0s'
         },
         submenuLabel: {
             padding: '0.25rem 0.625rem',

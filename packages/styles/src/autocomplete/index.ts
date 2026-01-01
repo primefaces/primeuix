@@ -106,9 +106,9 @@ export const style = /*css*/ `
         color: dt('autocomplete.option.color');
         background: transparent;
         transition:
-            background dt('autocomplete.transition.duration'),
-            color dt('autocomplete.transition.duration'),
-            border-color dt('autocomplete.transition.duration');
+            background dt('list.option.transition.duration'),
+            color dt('list.option.transition.duration'),
+            border-color dt('list.option.transition.duration');
         border-radius: dt('autocomplete.option.border.radius');
     }
 

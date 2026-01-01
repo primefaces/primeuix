@@ -64,11 +64,11 @@ export const style = /*css*/ `
         font-weight: dt('listbox.option.font.weight');
         font-size: dt('listbox.option.font.size');
         transition:
-            background dt('listbox.transition.duration'),
-            color dt('listbox.transition.duration'),
-            border-color dt('listbox.transition.duration'),
-            box-shadow dt('listbox.transition.duration'),
-            outline-color dt('listbox.transition.duration');
+            background dt('list.option.transition.duration'),
+            color dt('list.option.transition.duration'),
+            border-color dt('list.option.transition.duration'),
+            box-shadow dt('list.option.transition.duration'),
+            outline-color dt('list.option.transition.duration');
     }
 
     .p-listbox-striped li:nth-child(even of .p-listbox-option) {

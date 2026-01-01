@@ -6,7 +6,7 @@ export const root: TreeTokenSections.Root = {
     padding: '0.875rem',
     gap: '2px',
     indent: '0.875rem',
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '0s'
 };
 
 export const node: TreeTokenSections.Node = {

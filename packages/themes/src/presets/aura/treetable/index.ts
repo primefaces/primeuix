@@ -1,7 +1,7 @@
 import type { TreeTableDesignTokens, TreeTableTokenSections } from '@primeuix/themes/types/treetable';
 
 export const root: TreeTableTokenSections.Root = {
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '0s'
 };
 
 export const header: TreeTableTokenSections.Header = {

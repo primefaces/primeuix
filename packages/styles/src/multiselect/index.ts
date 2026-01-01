@@ -167,11 +167,11 @@ export const style = /*css*/ `
         color: dt('multiselect.option.color');
         background: transparent;
         transition:
-            background dt('multiselect.transition.duration'),
-            color dt('multiselect.transition.duration'),
-            border-color dt('multiselect.transition.duration'),
-            box-shadow dt('multiselect.transition.duration'),
-            outline-color dt('multiselect.transition.duration');
+            background dt('list.option.transition.duration'),
+            color dt('list.option.transition.duration'),
+            border-color dt('list.option.transition.duration'),
+            box-shadow dt('list.option.transition.duration'),
+            outline-color dt('list.option.transition.duration');
         border-radius: dt('multiselect.option.border.radius');
     }
 

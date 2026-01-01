@@ -193,11 +193,11 @@ export const style = /*css*/ `
         padding: dt('cascadeselect.option.padding');
         border-radius: dt('cascadeselect.option.border.radius');
         transition:
-            background dt('cascadeselect.transition.duration'),
-            color dt('cascadeselect.transition.duration'),
-            border-color dt('cascadeselect.transition.duration'),
-            box-shadow dt('cascadeselect.transition.duration'),
-            outline-color dt('cascadeselect.transition.duration');
+            background dt('list.option.transition.duration'),
+            color dt('list.option.transition.duration'),
+            border-color dt('list.option.transition.duration'),
+            box-shadow dt('list.option.transition.duration'),
+            outline-color dt('list.option.transition.duration');
     }
 
     .p-cascadeselect-group-icon {

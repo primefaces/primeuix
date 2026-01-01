@@ -2,7 +2,7 @@ import type { PanelMenuDesignTokens, PanelMenuTokenSections } from '@primeuix/th
 
 export const root: PanelMenuTokenSections.Root = {
     gap: '0.5rem',
-    transitionDuration: '{transition.duration}'
+    transitionDuration: '{navigation.item.transition.duration}'
 };
 
 export const panel: PanelMenuTokenSections.Panel = {

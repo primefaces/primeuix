@@ -165,12 +165,12 @@ export const style = /*css*/ `
         color: dt('select.option.color');
         background: transparent;
         transition:
-            background dt('select.transition.duration'),
-            color dt('select.transition.duration'),
-            border-color dt('select.transition.duration'),
-            box-shadow dt('select.transition.duration'),
-            outline-color dt('select.transition.duration');
-        border-radius: dt('select.option.border.radius');
+            background dt('list.option.transition.duration'),
+            color dt('list.option.transition.duration'),
+            border-color dt('list.option.transition.duration'),
+            box-shadow dt('list.option.transition.duration'),
+            outline-color dt('list.option.transition.duration');
+        border-radius: dt('list.option.option.border.radius');
     }
 
     .p-select-option:not(.p-select-option-selected):not(.p-disabled).p-focus {

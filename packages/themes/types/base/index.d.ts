@@ -150,6 +150,7 @@ export declare namespace BaseTokenSections {
                     color?: string;
                     focusColor?: string;
                 };
+                transitionDuration?: string;
             };
             optionGroup?: {
                 fontWeight?: string;
@@ -197,6 +198,7 @@ export declare namespace BaseTokenSections {
                     fontWeight?: string;
                     fontSize?: string;
                 };
+                transitionDuration?: string;
             };
             submenuLabel?: {
                 padding?: string;
