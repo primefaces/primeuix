@@ -58,11 +58,15 @@ export const style = /*css*/ `
     }
 
     .p-contextmenu-item-label {
-        line-height: 1;
+        font-weight: dt('contextmenu.item.label.font.weight');
+        font-size: dt('contextmenu.item.label.font.size');
     }
 
     .p-contextmenu-item-icon {
         color: dt('contextmenu.item.icon.color');
+        font-size: dt('contextmenu.item.icon.size');
+        width: dt('contextmenu.item.icon.size');
+        height: dt('contextmenu.item.icon.size');
     }
 
     .p-contextmenu-submenu-icon {

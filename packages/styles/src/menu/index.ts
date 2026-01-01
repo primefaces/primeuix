@@ -41,11 +41,15 @@ export const style = /*css*/ `
     }
 
     .p-menu-item-label {
-        line-height: 1;
+        font-weight: dt('menu.item.label.font.weight');
+        font-size: dt('menu.item.label.font.size');
     }
 
     .p-menu-item-icon {
         color: dt('menu.item.icon.color');
+        font-size: dt('menu.item.icon.size');
+        width: dt('menu.item.icon.size');
+        height: dt('menu.item.icon.size');
     }
 
     .p-menu-item.p-focus .p-menu-item-content {
@@ -75,6 +79,7 @@ export const style = /*css*/ `
         padding: dt('menu.submenu.label.padding');
         color: dt('menu.submenu.label.color');
         font-weight: dt('menu.submenu.label.font.weight');
+        font-size: dt('menu.submenu.label.font.size');
     }
 
     .p-menu-separator {

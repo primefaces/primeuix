@@ -56,10 +56,15 @@ export const style = /*css*/ `
 
     .p-breadcrumb-item-label {
         transition: inherit;
+        font-weight: dt('breadcrumb.item.label.font.weight');
+        font-size: dt('breadcrumb.item.label.font.size');
     }
 
     .p-breadcrumb-item-icon {
         color: dt('breadcrumb.item.icon.color');
+        font-size: dt('breadcrumb.item.icon.size');
+        width: dt('breadcrumb.item.icon.size');
+        height: dt('breadcrumb.item.icon.size');
         transition: inherit;
     }
 

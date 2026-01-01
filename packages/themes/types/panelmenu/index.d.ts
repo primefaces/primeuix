@@ -153,6 +153,29 @@ export declare namespace PanelMenuTokenSections {
              * @designToken panelmenu.item.icon.focus.color
              */
             focusColor?: string;
+            /**
+             * Icon size of item
+             *
+             * @designToken panelmenu.item.icon.size
+             */
+            size?: string;
+        };
+        /**
+         * Label of item
+         */
+        label?: {
+            /**
+             * Font weight of item label
+             *
+             * @designToken panelmenu.item.label.font.weight
+             */
+            fontWeight?: string;
+            /**
+             * Font size of item label
+             *
+             * @designToken panelmenu.item.label.font.size
+             */
+            fontSize?: string;
         };
     }
 

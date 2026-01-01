@@ -62,11 +62,15 @@ export const style = /*css*/ `
     }
 
     .p-menubar-item-label {
-        line-height: 1;
+        font-weight: dt('menubar.item.label.font.weight');
+        font-size: dt('menubar.item.label.font.size');
     }
 
     .p-menubar-item-icon {
         color: dt('menubar.item.icon.color');
+        font-size: dt('menubar.item.icon.size');
+        width: dt('menubar.item.icon.size');
+        height: dt('menubar.item.icon.size');
     }
 
     .p-menubar-submenu-icon {

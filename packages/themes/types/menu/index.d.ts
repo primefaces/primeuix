@@ -119,6 +119,29 @@ export declare namespace MenuTokenSections {
              * @designToken menu.item.icon.focus.color
              */
             focusColor?: string;
+            /**
+             * Icon size of item
+             *
+             * @designToken menu.item.icon.size
+             */
+            size?: string;
+        };
+        /**
+         * Label of item
+         */
+        label?: {
+            /**
+             * Font weight of item label
+             *
+             * @designToken menu.item.label.font.weight
+             */
+            fontWeight?: string;
+            /**
+             * Font size of item label
+             *
+             * @designToken menu.item.label.font.size
+             */
+            fontSize?: string;
         };
     }
 
@@ -135,6 +158,12 @@ export declare namespace MenuTokenSections {
          * @designToken menu.submenu.label.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of submenu label
+         *
+         * @designToken menu.submenu.label.font.size
+         */
+        fontSize?: string;
         /**
          * Background of submenu label
          *

@@ -57,11 +57,15 @@ export const style = /*css*/ `
     }
 
     .p-tieredmenu-item-label {
-        line-height: 1;
+        font-weight: dt('tieredmenu.item.label.font.weight');
+        font-size: dt('tieredmenu.item.label.font.size');
     }
 
     .p-tieredmenu-item-icon {
         color: dt('tieredmenu.item.icon.color');
+        font-size: dt('tieredmenu.item.icon.size');
+        width: dt('tieredmenu.item.icon.size');
+        height: dt('tieredmenu.item.icon.size');
     }
 
     .p-tieredmenu-submenu-icon {

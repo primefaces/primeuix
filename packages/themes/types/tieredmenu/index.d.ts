@@ -137,6 +137,29 @@ export declare namespace TieredMenuTokenSections {
              * @designToken tieredmenu.item.icon.active.color
              */
             activeColor?: string;
+            /**
+             * Icon size of item
+             *
+             * @designToken tieredmenu.item.icon.size
+             */
+            size?: string;
+        };
+        /**
+         * Label of item
+         */
+        label?: {
+            /**
+             * Font weight of item label
+             *
+             * @designToken tieredmenu.item.label.font.weight
+             */
+            fontWeight?: string;
+            /**
+             * Font size of item label
+             *
+             * @designToken tieredmenu.item.label.font.size
+             */
+            fontSize?: string;
         };
     }
 

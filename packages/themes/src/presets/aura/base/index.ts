@@ -106,12 +106,12 @@ export const semantic: BaseTokenSections.Semantic = {
             padding: '0.25rem 0.625rem',
             borderRadius: '{border.radius.sm}',
             fontWeight: 'normal',
-            fontSize: '0.875rem'
+            fontSize: '{typography.font.size}'
         },
         optionGroup: {
             padding: '0.25rem 0.625rem',
             fontWeight: '600',
-            fontSize: '0.875rem'
+            fontSize: '{typography.font.size}'
         }
     },
     content: {
@@ -128,11 +128,19 @@ export const semantic: BaseTokenSections.Semantic = {
         item: {
             padding: '0.25rem 0.625rem',
             borderRadius: '{border.radius.sm}',
-            gap: '0.5rem'
+            gap: '0.5rem',
+            icon: {
+                size: '{icon.size}'
+            },
+            label: {
+                fontWeight: '{typography.font.weight}',
+                fontSize: '{typography.font.size}'
+            }
         },
         submenuLabel: {
             padding: '0.25rem 0.625rem',
-            fontWeight: '600'
+            fontWeight: '600',
+            fontSize: '{typography.font.size}'
         },
         submenuIcon: {
             size: '0.75rem'

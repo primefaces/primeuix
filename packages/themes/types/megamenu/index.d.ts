@@ -171,6 +171,29 @@ export declare namespace MegaMenuTokenSections {
              * @designToken megamenu.item.icon.active.color
              */
             activeColor?: string;
+            /**
+             * Icon size of item
+             *
+             * @designToken megamenu.item.icon.size
+             */
+            size?: string;
+        };
+        /**
+         * Label of item
+         */
+        label?: {
+            /**
+             * Font weight of item label
+             *
+             * @designToken megamenu.item.label.font.weight
+             */
+            fontWeight?: string;
+            /**
+             * Font size of item label
+             *
+             * @designToken megamenu.item.label.font.size
+             */
+            fontSize?: string;
         };
     }
 
@@ -247,6 +270,12 @@ export declare namespace MegaMenuTokenSections {
          * @designToken megamenu.submenu.label.font.weight
          */
         fontWeight?: string;
+        /**
+         * Font size of submenu label
+         *
+         * @designToken megamenu.submenu.label.font.size
+         */
+        fontSize?: string;
         /**
          * Background of submenu label
          *

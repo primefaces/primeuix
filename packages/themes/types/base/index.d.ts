@@ -190,11 +190,17 @@ export declare namespace BaseTokenSections {
                     color?: string;
                     focusColor?: string;
                     activeColor?: string;
+                    size?: string;
+                };
+                label?: {
+                    fontWeight?: string;
+                    fontSize?: string;
                 };
             };
             submenuLabel?: {
                 padding?: string;
                 fontWeight?: string;
+                fontSize?: string;
                 background?: string;
                 color?: string;
             };

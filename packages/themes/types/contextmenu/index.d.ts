@@ -137,6 +137,29 @@ export declare namespace ContextMenuTokenSections {
              * @designToken contextmenu.item.icon.active.color
              */
             activeColor?: string;
+            /**
+             * Icon size of item
+             *
+             * @designToken contextmenu.item.icon.size
+             */
+            size?: string;
+        };
+        /**
+         * Label of item
+         */
+        label?: {
+            /**
+             * Font weight of item label
+             *
+             * @designToken contextmenu.item.label.font.weight
+             */
+            fontWeight?: string;
+            /**
+             * Font size of item label
+             *
+             * @designToken contextmenu.item.label.font.size
+             */
+            fontSize?: string;
         };
     }
 

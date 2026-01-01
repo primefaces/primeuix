@@ -58,11 +58,15 @@ export const style = /*css*/ `
     }
 
     .p-megamenu-item-label {
-        line-height: 1;
+        font-weight: dt('megamenu.item.label.font.weight');
+        font-size: dt('megamenu.item.label.font.size');
     }
 
     .p-megamenu-item-icon {
         color: dt('megamenu.item.icon.color');
+        font-size: dt('megamenu.item.icon.size');
+        width: dt('megamenu.item.icon.size');
+        height: dt('megamenu.item.icon.size');
     }
 
     .p-megamenu-submenu-icon {
@@ -149,6 +153,7 @@ export const style = /*css*/ `
         padding: dt('megamenu.submenu.label.padding');
         color: dt('megamenu.submenu.label.color');
         font-weight: dt('megamenu.submenu.label.font.weight');
+        font-size: dt('megamenu.submenu.label.font.size');
         background: dt('megamenu.submenu.label.background');
     }
 

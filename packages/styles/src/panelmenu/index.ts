@@ -57,6 +57,9 @@ export const style = /*css*/ `
     .p-panelmenu-header-icon,
     .p-panelmenu-item-icon {
         color: dt('panelmenu.item.icon.color');
+        font-size: dt('panelmenu.item.icon.size');
+        width: dt('panelmenu.item.icon.size');
+        height: dt('panelmenu.item.icon.size');
     }
 
     .p-panelmenu-submenu-icon {
@@ -118,7 +121,8 @@ export const style = /*css*/ `
     }
 
     .p-panelmenu-item-label {
-        line-height: 1;
+        font-weight: dt('panelmenu.item.label.font.weight');
+        font-size: dt('panelmenu.item.label.font.size');
     }
 
     .p-panelmenu-item-content {

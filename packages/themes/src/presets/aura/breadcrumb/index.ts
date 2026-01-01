@@ -1,7 +1,7 @@
 import type { BreadcrumbDesignTokens, BreadcrumbTokenSections } from '@primeuix/themes/types/breadcrumb';
 
 export const root: BreadcrumbTokenSections.Root = {
-    padding: '1rem',
+    padding: '0.875rem',
     background: '{content.background}',
     gap: '0.5rem',
     transitionDuration: '{transition.duration}'
@@ -14,7 +14,12 @@ export const item: BreadcrumbTokenSections.Item = {
     gap: '{navigation.item.gap}',
     icon: {
         color: '{navigation.item.icon.color}',
-        hoverColor: '{navigation.item.icon.focus.color}'
+        hoverColor: '{navigation.item.icon.focus.color}',
+        size: '{navigation.item.icon.size}'
+    },
+    label: {
+        fontWeight: '{navigation.item.label.font.weight}',
+        fontSize: '{navigation.item.label.font.size}'
     },
     focusRing: {
         width: '{focus.ring.width}',

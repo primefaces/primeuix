@@ -80,6 +80,26 @@ export declare namespace BreadcrumbTokenSections {
              * @designToken breadcrumb.item.icon.hover.color
              */
             hoverColor?: string;
+            /**
+             * Icon size of item icon
+             *
+             * @designToken breadcrumb.item.icon.size
+             */
+            size?: string;
+        };
+        label?: {
+            /**
+             * Font weight of item label
+             *
+             * @designToken breadcrumb.item.label.font.weight
+             */
+            fontWeight?: string;
+            /**
+             * Font size of item label
+             *
+             * @designToken breadcrumb.item.label.font.size
+             */
+            fontSize?: string;
         };
         /**
          * Focus ring of item

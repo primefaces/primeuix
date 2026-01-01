@@ -143,6 +143,29 @@ export declare namespace MenubarTokenSections {
              * @designToken menubar.item.icon.active.color
              */
             activeColor?: string;
+            /**
+             * Icon size of item
+             *
+             * @designToken menubar.item.icon.size
+             */
+            size?: string;
+        };
+        /**
+         * Label of item
+         */
+        label?: {
+            /**
+             * Font weight of item label
+             *
+             * @designToken menubar.item.label.font.weight
+             */
+            fontWeight?: string;
+            /**
+             * Font size of item label
+             *
+             * @designToken menubar.item.label.font.size
+             */
+            fontSize?: string;
         };
     }
 
