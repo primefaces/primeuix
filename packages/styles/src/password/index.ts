@@ -79,7 +79,7 @@ export const style = /*css*/ `
     .p-password-clear-icon {
         position: absolute;
         top: 50%;
-        margin-top: -0.5rem;
+        margin-top: calc(-1 * dt('icon.size') / 2);
         cursor: pointer;
         inset-inline-end: dt('form.field.padding.x');
         color: dt('form.field.icon.color');

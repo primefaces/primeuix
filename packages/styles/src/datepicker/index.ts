@@ -438,7 +438,7 @@ export const style = /*css*/ `
     .p-datepicker-clear-icon {
         position: absolute;
         top: 50%;
-        margin-top: -0.5rem;
+        margin-top: calc(-1 * dt('icon.size') / 2);
         cursor: pointer;
         color: dt('form.field.icon.color');
         inset-inline-end: dt('form.field.padding.x');
