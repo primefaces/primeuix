@@ -115,4 +115,9 @@ export const style = /*css*/ `
     .p-togglebutton-fluid {
         width: 100%;
     }
+
+    .p-togglebutton-content .p-icon,
+    .p-togglebutton-content .pi {
+        line-height: dt('typography.line.height')
+    }
 `;
