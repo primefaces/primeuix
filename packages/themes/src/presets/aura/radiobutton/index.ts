@@ -41,7 +41,7 @@ export const icon: RadioButtonTokenSections.Icon = {
     checkedHoverColor: '{primary.contrast.color}',
     disabledColor: '{form.field.disabled.color}',
     sm: {
-        size: '0.375rem'
+        size: '0.5rem'
     },
     lg: {
         size: '0.75rem'
