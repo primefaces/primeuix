@@ -23,13 +23,6 @@ export declare namespace BaseTokenSections {
             lg?: string;
             xl?: string;
         };
-        fontSize: {
-            xs?: string;
-            sm?: string;
-            base?: string;
-            lg?: string;
-            xl?: string;
-        };
         emerald?: ColorScale;
         green?: ColorScale;
         lime?: ColorScale;
