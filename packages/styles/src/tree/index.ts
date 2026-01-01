@@ -158,6 +158,10 @@ export const style = /*css*/ `
         color: dt('tree.node.icon.selected.color');
     }
 
+    .p-tree-node-content.p-tree-node-selected .p-tree-node-label {
+        font-weight: dt('tree.node.label.selected.font.weight');
+    }
+
     .p-tree-filter {
         margin: dt('tree.filter.margin');
     }

@@ -186,6 +186,7 @@ export const style = /*css*/ `
     .p-select-option.p-select-option-selected {
         background: dt('select.option.selected.background');
         color: dt('select.option.selected.color');
+        font-weight: dt('select.option.selected.font.weight');
     }
 
     .p-select-option.p-select-option-selected.p-focus {

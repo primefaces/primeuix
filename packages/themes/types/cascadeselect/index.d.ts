@@ -329,6 +329,12 @@ export declare namespace CascadeSelectTokenSections {
          */
         selectedFocusColor?: string;
         /**
+         * Font weight of a selected option
+         *
+         * @designToken cascadeselect.option.selected.font.weight
+         */
+        selectedFontWeight?: string;
+        /**
          * Padding of option
          *
          * @designToken cascadeselect.option.padding

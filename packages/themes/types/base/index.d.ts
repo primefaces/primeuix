@@ -145,6 +145,7 @@ export declare namespace BaseTokenSections {
                 focusColor?: string;
                 selectedColor?: string;
                 selectedFocusColor?: string;
+                selectedFontWeight?: string;
                 icon?: {
                     color?: string;
                     focusColor?: string;

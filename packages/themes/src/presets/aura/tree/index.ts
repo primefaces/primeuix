@@ -35,6 +35,7 @@ export const nodeIcon: TreeTokenSections.NodeIcon = {
 
 export const nodeLabel: TreeTokenSections.NodeLabel = {
     fontWeight: '{typography.font.weight}',
+    selectedFontWeight: '{list.option.selected.font.weight}',
     fontSize: '{typography.font.size}'
 };
 

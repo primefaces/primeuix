@@ -257,6 +257,7 @@ export const semantic: BaseTokenSections.Semantic = {
                     focusColor: '{text.hover.color}',
                     selectedColor: '{highlight.color}',
                     selectedFocusColor: '{highlight.focus.color}',
+                    selectedFontWeight: 'bold',
                     icon: {
                         color: '{surface.400}',
                         focusColor: '{surface.500}'

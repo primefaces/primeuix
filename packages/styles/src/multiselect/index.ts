@@ -188,6 +188,7 @@ export const style = /*css*/ `
     .p-multiselect-option.p-multiselect-option-selected {
         background: dt('multiselect.option.selected.background');
         color: dt('multiselect.option.selected.color');
+        font-weight: dt('multiselect.option.selected.font.weight');
     }
 
     .p-multiselect-option.p-multiselect-option-selected.p-focus {

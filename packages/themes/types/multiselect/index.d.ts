@@ -334,6 +334,12 @@ export declare namespace MultiSelectTokenSections {
          */
         selectedFocusColor?: string;
         /**
+         * Font weight of a selected option
+         *
+         * @designToken multiselect.option.selected.font.weight
+         */
+        selectedFontWeight?: string;
+        /**
          * Padding of option
          *
          * @designToken multiselect.option.padding

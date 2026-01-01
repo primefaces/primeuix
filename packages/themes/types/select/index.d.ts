@@ -334,6 +334,12 @@ export declare namespace SelectTokenSections {
          */
         selectedFocusColor?: string;
         /**
+         * Font weight of a selected option
+         *
+         * @designToken select.option.selected.font.weight
+         */
+        selectedFontWeight?: string;
+        /**
          * Padding of option
          *
          * @designToken select.option.padding

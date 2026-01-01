@@ -30,6 +30,7 @@ export const option: ListboxTokenSections.Option = {
     focusColor: '{list.option.focus.color}',
     selectedColor: '{list.option.selected.color}',
     selectedFocusColor: '{list.option.selected.focus.color}',
+    selectedFontWeight: '{list.option.selected.font.weight}',
     padding: '{list.option.padding}',
     borderRadius: '{list.option.border.radius}'
 };

@@ -171,6 +171,12 @@ export declare namespace TreeTokenSections {
          * @designToken tree.node.label.font.size
          */
         fontSize?: string;
+        /**
+         * Font weight of a selected node label
+         *
+         * @designToken tree.node.label.selected.font.weight
+         */
+        selectedFontWeight?: string;
     }
 
     interface NodeToggleButton {

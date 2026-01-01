@@ -171,6 +171,7 @@ export const style = /*css*/ `
     .p-cascadeselect-option-selected > .p-cascadeselect-option-content {
         background: dt('cascadeselect.option.selected.background');
         color: dt('cascadeselect.option.selected.color');
+        font-weight: dt('cascadeselect.option.selected.font.weight');
     }
 
     .p-cascadeselect-option-selected.p-focus > .p-cascadeselect-option-content {

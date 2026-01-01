@@ -78,6 +78,7 @@ export const style = /*css*/ `
     .p-listbox .p-listbox-list .p-listbox-option.p-listbox-option-selected {
         background: dt('listbox.option.selected.background');
         color: dt('listbox.option.selected.color');
+        font-weight: dt('listbox.option.selected.font.weight');
     }
 
     .p-listbox:not(.p-disabled) .p-listbox-option.p-listbox-option-selected.p-focus {

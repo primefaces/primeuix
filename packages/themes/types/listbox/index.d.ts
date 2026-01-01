@@ -139,6 +139,12 @@ export declare namespace ListboxTokenSections {
          */
         selectedFocusColor?: string;
         /**
+         * Font weight of a selected option
+         *
+         * @designToken listbox.option.selected.font.weight
+         */
+        selectedFontWeight?: string;
+        /**
          * Padding of option
          *
          * @designToken listbox.option.padding
