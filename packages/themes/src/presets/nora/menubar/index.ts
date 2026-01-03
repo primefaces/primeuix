@@ -27,7 +27,12 @@ export const item: MenubarTokenSections.Item = {
     icon: {
         color: '{navigation.item.icon.color}',
         focusColor: '{navigation.item.icon.focus.color}',
-        activeColor: '{navigation.item.icon.active.color}'
+        activeColor: '{navigation.item.icon.active.color}',
+        size: '{navigation.item.icon.size}'
+    },
+    label: {
+        fontWeight: '{navigation.item.label.font.weight}',
+        fontSize: '{navigation.item.label.font.size}'
     }
 };
 

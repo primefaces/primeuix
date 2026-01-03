@@ -1,6 +1,8 @@
 import type { MultiSelectDesignTokens, MultiSelectTokenSections } from '@primeuix/themes/types/multiselect';
 
 export const root: MultiSelectTokenSections.Root = {
+    fontSize: '{form.field.font.size}',
+    fontWeight: '{form.field.font.weight}',
     background: '{form.field.background}',
     disabledBackground: '{form.field.disabled.background}',
     filledBackground: '{form.field.filled.background}',
@@ -60,6 +62,8 @@ export const list: MultiSelectTokenSections.List = {
 };
 
 export const option: MultiSelectTokenSections.Option = {
+    fontSize: '{list.option.font.size}',
+    fontWeight: '{list.option.font.weight}',
     focusBackground: '{list.option.focus.background}',
     selectedBackground: '{list.option.selected.background}',
     selectedFocusBackground: '{list.option.selected.focus.background}',
@@ -67,6 +71,7 @@ export const option: MultiSelectTokenSections.Option = {
     focusColor: '{list.option.focus.color}',
     selectedColor: '{list.option.selected.color}',
     selectedFocusColor: '{list.option.selected.focus.color}',
+    selectedFontWeight: '{list.option.selected.font.weight}',
     padding: '{list.option.padding}',
     borderRadius: '{list.option.border.radius}',
     gap: '0.75rem'
@@ -76,6 +81,7 @@ export const optionGroup: MultiSelectTokenSections.OptionGroup = {
     background: '{list.option.group.background}',
     color: '{list.option.group.color}',
     fontWeight: '{list.option.group.font.weight}',
+    fontSize: '{list.option.group.font.size}',
     padding: '{list.option.group.padding}'
 };
 

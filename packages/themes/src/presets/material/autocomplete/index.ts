@@ -49,13 +49,16 @@ export const option: AutoCompleteTokenSections.Option = {
     selectedColor: '{list.option.selected.color}',
     selectedFocusColor: '{list.option.selected.focus.color}',
     padding: '{list.option.padding}',
-    borderRadius: '{list.option.border.radius}'
+    borderRadius: '{list.option.border.radius}',
+    fontWeight: '{list.option.font.weight}',
+    fontSize: '{list.option.font.size}'
 };
 
 export const optionGroup: AutoCompleteTokenSections.OptionGroup = {
     background: '{list.option.group.background}',
     color: '{list.option.group.color}',
     fontWeight: '{list.option.group.font.weight}',
+    fontSize: '{list.option.group.font.size}',
     padding: '{list.option.group.padding}'
 };
 

@@ -80,8 +80,8 @@ export const option: MultiSelectTokenSections.Option = {
 export const optionGroup: MultiSelectTokenSections.OptionGroup = {
     background: '{list.option.group.background}',
     color: '{list.option.group.color}',
-    fontSize: '{list.option.group.font.size}',
     fontWeight: '{list.option.group.font.weight}',
+    fontSize: '{list.option.group.font.size}',
     padding: '{list.option.group.padding}'
 };
 

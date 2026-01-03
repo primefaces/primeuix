@@ -20,6 +20,7 @@ export const legend: FieldsetTokenSections.Legend = {
     padding: '0.5rem 0.75rem',
     gap: '0.5rem',
     fontWeight: '700',
+    fontSize: '{typography.font.size}',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',

@@ -22,7 +22,8 @@ export const header: DatePickerTokenSections.Header = {
 
 export const title: DatePickerTokenSections.Title = {
     gap: '0.5rem',
-    fontWeight: '700'
+    fontWeight: '700',
+    fontSize: '{typography.font.size}'
 };
 
 export const dropdown: DatePickerTokenSections.Dropdown = {
@@ -61,7 +62,9 @@ export const selectMonth: DatePickerTokenSections.SelectMonth = {
     color: '{content.color}',
     hoverColor: '{content.hover.color}',
     padding: '0.375rem 0.625rem',
-    borderRadius: '{content.border.radius}'
+    borderRadius: '{content.border.radius}',
+    fontWeight: '500',
+    fontSize: '{typography.font.size}'
 };
 
 export const selectYear: DatePickerTokenSections.SelectYear = {
@@ -69,7 +72,9 @@ export const selectYear: DatePickerTokenSections.SelectYear = {
     color: '{content.color}',
     hoverColor: '{content.hover.color}',
     padding: '0.375rem 0.625rem',
-    borderRadius: '{content.border.radius}'
+    borderRadius: '{content.border.radius}',
+    fontWeight: '500',
+    fontSize: '{typography.font.size}'
 };
 
 export const group: DatePickerTokenSections.Group = {
@@ -84,10 +89,13 @@ export const dayView: DatePickerTokenSections.DayView = {
 export const weekDay: DatePickerTokenSections.WeekDay = {
     padding: '0.375rem',
     fontWeight: '700',
+    fontSize: '{typography.font.size}',
     color: '{content.color}'
 };
 
 export const date: DatePickerTokenSections.Date = {
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}',
     hoverBackground: '{content.hover.background}',
     selectedBackground: '{primary.color}',
     rangeSelectedBackground: '{highlight.background}',
@@ -135,7 +143,10 @@ export const timePicker: DatePickerTokenSections.TimePicker = {
     padding: '0.75rem 0 0 0',
     borderColor: '{content.border.color}',
     gap: '0.5rem',
-    buttonGap: '0.25rem'
+    buttonGap: '0.25rem',
+    color: '{content.color}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}'
 };
 
 export const today: DatePickerTokenSections.Today = {

@@ -1,6 +1,8 @@
 import type { TreeSelectDesignTokens, TreeSelectTokenSections } from '@primeuix/themes/types/treeselect';
 
 export const root: TreeSelectTokenSections.Root = {
+    fontSize: '{form.field.font.size}',
+    fontWeight: '{form.field.font.weight}',
     background: '{form.field.background}',
     disabledBackground: '{form.field.disabled.background}',
     filledBackground: '{form.field.filled.background}',

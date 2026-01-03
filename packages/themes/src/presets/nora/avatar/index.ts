@@ -3,6 +3,7 @@ import type { AvatarDesignTokens, AvatarTokenSections } from '@primeuix/themes/t
 export const root: AvatarTokenSections.Root = {
     width: '2rem',
     height: '2rem',
+    fontWeight: '{typography.font.weight}',
     fontSize: '1rem',
     background: '{content.hover.background}',
     color: '{content.color}',

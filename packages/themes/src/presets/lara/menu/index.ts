@@ -23,13 +23,19 @@ export const item: MenuTokenSections.Item = {
     gap: '{navigation.item.gap}',
     icon: {
         color: '{navigation.item.icon.color}',
-        focusColor: '{navigation.item.icon.focus.color}'
+        focusColor: '{navigation.item.icon.focus.color}',
+        size: '{navigation.item.icon.size}'
+    },
+    label: {
+        fontWeight: '{navigation.item.label.font.weight}',
+        fontSize: '{navigation.item.label.font.size}'
     }
 };
 
 export const submenuLabel: MenuTokenSections.SubmenuLabel = {
     padding: '{navigation.submenu.label.padding}',
     fontWeight: '{navigation.submenu.label.font.weight}',
+    fontSize: '{navigation.submenu.label.font.size}',
     background: '{navigation.submenu.label.background}',
     color: '{navigation.submenu.label.color}'
 };

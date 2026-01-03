@@ -9,6 +9,7 @@ export const root: FloatLabelTokenSections.Root = {
     positionX: '{form.field.padding.x}',
     positionY: '{form.field.padding.y}',
     fontWeight: '500',
+    fontSize: '{form.field.font.size}',
     active: {
         fontSize: '0.75rem',
         fontWeight: '400'

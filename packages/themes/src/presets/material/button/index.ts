@@ -7,6 +7,7 @@ export const root: ButtonTokenSections.Root = {
     paddingX: '1rem',
     paddingY: '0.625rem',
     iconOnlyWidth: '3rem',
+    fontSize: '{form.field.font.size}',
     sm: {
         fontSize: '{form.field.sm.font.size}',
         paddingX: '{form.field.sm.padding.x}',

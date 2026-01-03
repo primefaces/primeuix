@@ -20,6 +20,12 @@ export const icon: ConfirmPopupTokenSections.Icon = {
     color: '{overlay.popover.color}'
 };
 
+export const message: ConfirmPopupTokenSections.Message = {
+    color: '{content.color}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}'
+};
+
 export const footer: ConfirmPopupTokenSections.Footer = {
     gap: '0.5rem',
     padding: '0 {overlay.popover.padding} {overlay.popover.padding} {overlay.popover.padding}'
@@ -31,6 +37,7 @@ export default {
     root,
     content,
     icon,
+    message,
     footer,
     css
 } satisfies ConfirmPopupDesignTokens;

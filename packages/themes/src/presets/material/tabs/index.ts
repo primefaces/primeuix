@@ -23,6 +23,7 @@ export const tab: TabsTokenSections.Tab = {
     activeColor: '{primary.color}',
     padding: '1rem 1.25rem',
     fontWeight: '600',
+    fontSize: '{typography.font.size}',
     margin: '0 0 -1px 0',
     gap: '0.5rem',
     focusRing: {

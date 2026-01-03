@@ -33,6 +33,12 @@ export const nodeIcon: TreeTokenSections.NodeIcon = {
     selectedColor: '{highlight.color}'
 };
 
+export const nodeLabel: TreeTokenSections.NodeLabel = {
+    fontWeight: '{typography.font.weight}',
+    selectedFontWeight: '{list.option.selected.font.weight}',
+    fontSize: '{typography.font.size}'
+};
+
 export const nodeToggleButton: TreeTokenSections.NodeToggleButton = {
     borderRadius: '50%',
     size: '2rem',
@@ -68,6 +74,7 @@ export default {
     root,
     node,
     nodeIcon,
+    nodeLabel,
     nodeToggleButton,
     loadingIcon,
     filter,

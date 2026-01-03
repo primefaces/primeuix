@@ -34,7 +34,12 @@ export const item: MegaMenuTokenSections.Item = {
     icon: {
         color: '{navigation.item.icon.color}',
         focusColor: '{navigation.item.icon.focus.color}',
-        activeColor: '{navigation.item.icon.active.color}'
+        activeColor: '{navigation.item.icon.active.color}',
+        size: '{navigation.item.icon.size}'
+    },
+    label: {
+        fontWeight: '{navigation.item.label.font.weight}',
+        fontSize: '{navigation.item.label.font.size}'
     }
 };
 
@@ -56,6 +61,7 @@ export const submenu: MegaMenuTokenSections.Submenu = {
 export const submenuLabel: MegaMenuTokenSections.SubmenuLabel = {
     padding: '{navigation.submenu.label.padding}',
     fontWeight: '{navigation.submenu.label.font.weight}',
+    fontSize: '{navigation.submenu.label.font.size}',
     background: '{navigation.submenu.label.background}',
     color: '{navigation.submenu.label.color}'
 };

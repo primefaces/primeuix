@@ -45,7 +45,8 @@ export const headerCell: DataTableTokenSections.HeaderCell = {
 };
 
 export const columnTitle: DataTableTokenSections.ColumnTitle = {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '{typography.font.size}'
 };
 
 export const row: DataTableTokenSections.Row = {
@@ -68,6 +69,8 @@ export const row: DataTableTokenSections.Row = {
 export const bodyCell: DataTableTokenSections.BodyCell = {
     borderColor: '{datatable.border.color}',
     padding: '0.75rem 1rem',
+    fontWeight: '{typography.font.size}',
+    fontSize: '{typography.font.size}',
     sm: {
         padding: '0.375rem 0.5rem'
     },
@@ -91,7 +94,8 @@ export const footerCell: DataTableTokenSections.FooterCell = {
 };
 
 export const columnFooter: DataTableTokenSections.ColumnFooter = {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '{typography.font.size}'
 };
 
 export const footer: DataTableTokenSections.Footer = {

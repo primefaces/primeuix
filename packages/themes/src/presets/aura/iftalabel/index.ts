@@ -7,8 +7,8 @@ export const root: IftaLabelTokenSections.Root = {
     transitionDuration: '0.2s',
     positionX: '{form.field.padding.x}',
     top: '{form.field.padding.y}',
-    fontSize: '0.625rem',
-    fontWeight: '{form.field.font.weight}'
+    fontWeight: '{form.field.font.weight}',
+    fontSize: '0.625rem'
 };
 
 export const input: IftaLabelTokenSections.Input = {

@@ -6,7 +6,9 @@ export const addon: InputGroupTokenSections.Addon = {
     color: '{form.field.icon.color}',
     borderRadius: '{form.field.border.radius}',
     padding: '0.5rem',
-    minWidth: '2.5rem'
+    minWidth: '2.5rem',
+    fontWeight: '{form.field.font.weight}',
+    fontSize: '{form.field.font.size}'
 };
 
 export default {

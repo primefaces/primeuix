@@ -22,7 +22,9 @@ export const title: CardTokenSections.Title = {
 };
 
 export const subtitle: CardTokenSections.Subtitle = {
-    color: '{text.muted.color}'
+    color: '{text.muted.color}',
+    fontSize: '1rem',
+    fontWeight: '{typography.font.weight}'
 };
 
 export default {

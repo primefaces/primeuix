@@ -16,6 +16,7 @@ export const header: AccordionTokenSections.Header = {
     activeHoverColor: '{text.color}',
     padding: '1.25rem',
     fontWeight: '600',
+    fontSize: '{typography.font.size}',
     borderRadius: '0',
     borderWidth: '0',
     borderColor: '{content.border.color}',

@@ -121,7 +121,7 @@ export const semantic: BaseTokenSections.Semantic = {
         option: {
             padding: '0.25rem 0.625rem',
             borderRadius: '{border.radius.sm}',
-            fontWeight: 'normal',
+            fontWeight: '{typography.font.weight}',
             fontSize: '{typography.font.size}',
             transitionDuration: '0s',
             focusBackground: 'light-dark({surface.100}, {surface.800})',
@@ -167,6 +167,11 @@ export const semantic: BaseTokenSections.Semantic = {
             padding: '0.25rem 0.625rem',
             borderRadius: '{border.radius.sm}',
             gap: '0.5rem',
+            focusBackground: 'light-dark({surface.100}, {surface.800})',
+            activeBackground: 'light-dark({surface.100}, {surface.800})',
+            color: '{text.color}',
+            focusColor: '{text.hover.color}',
+            activeColor: '{text.hover.color}',
             icon: {
                 size: '{icon.size}',
                 color: 'light-dark({surface.400}, {surface.500})',
@@ -177,12 +182,7 @@ export const semantic: BaseTokenSections.Semantic = {
                 fontWeight: '{typography.font.weight}',
                 fontSize: '{typography.font.size}'
             },
-            transitionDuration: '0s',
-            focusBackground: 'light-dark({surface.100}, {surface.800})',
-            activeBackground: 'light-dark({surface.100}, {surface.800})',
-            color: '{text.color}',
-            focusColor: '{text.hover.color}',
-            activeColor: '{text.hover.color}'
+            transitionDuration: '0s'
         },
         submenuLabel: {
             padding: '0.25rem 0.625rem',

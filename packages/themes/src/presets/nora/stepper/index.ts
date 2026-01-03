@@ -32,7 +32,8 @@ export const stepHeader: StepperTokenSections.StepHeader = {
 export const stepTitle: StepperTokenSections.StepTitle = {
     color: '{text.muted.color}',
     activeColor: '{primary.color}',
-    fontWeight: '700'
+    fontWeight: '700',
+    fontSize: '{typography.font.size}'
 };
 
 export const stepNumber: StepperTokenSections.StepNumber = {

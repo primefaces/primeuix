@@ -19,6 +19,8 @@ export const navButton: PaginatorTokenSections.NavButton = {
     width: '2.5rem',
     height: '2.5rem',
     borderRadius: '50%',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -29,7 +31,9 @@ export const navButton: PaginatorTokenSections.NavButton = {
 };
 
 export const currentPageReport: PaginatorTokenSections.CurrentPageReport = {
-    color: '{text.muted.color}'
+    color: '{text.muted.color}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}'
 };
 
 export const jumpToPageInput: PaginatorTokenSections.JumpToPageInput = {

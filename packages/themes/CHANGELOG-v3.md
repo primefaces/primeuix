@@ -10,13 +10,16 @@ No new tokens
 - typography.font.family
 - typography.font.weight
 - typography.font.size
+
 - form.field.font.weight
 - form.field.font.size
+
 - list.option.font.weight
 - list.option.font.size
 - list.option.selected.font.weight
 - list.option.transition.duration
 - list.option.group.font.size
+
 - navigation.item.icon.size
 - navigation.item.label.font.weight
 - navigation.item.label.font.size
@@ -123,10 +126,6 @@ No new tokens
 
 - floatlabel.font.size
 
-### IftaLabel
-
-- iftalabel.label.font.size
-
 ### InputGroup
 
 - inputgroup.addon.font.weight
@@ -154,7 +153,6 @@ No new tokens
 - megamenu.item.icon.size
 - megamenu.item.label.font.weight
 - megamenu.item.label.font.size
-- megamenu.submenu.label.font.weight
 - megamenu.submenu.label.font.size
 
 ### Menu

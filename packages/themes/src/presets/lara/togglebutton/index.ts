@@ -5,6 +5,7 @@ export const root: ToggleButtonTokenSections.Root = {
     borderRadius: '{content.border.radius}',
     gap: '0.5rem',
     fontWeight: '500',
+    fontSize: '{form.field.font.size}',
     background: '{form.field.background}',
     hoverBackground: 'light-dark({surface.100}, {surface.800})',
     borderColor: '{form.field.border.color}',

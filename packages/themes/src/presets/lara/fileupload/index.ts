@@ -33,6 +33,18 @@ export const file: FileUploadTokenSections.File = {
     }
 };
 
+export const fileName: FileUploadTokenSections.FileName = {
+    color: '{text.color}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}'
+};
+
+export const fileSize: FileUploadTokenSections.FileSize = {
+    color: '{text.muted.color}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '0.75rem'
+};
+
 export const fileList: FileUploadTokenSections.FileList = {
     gap: '0.5rem'
 };
@@ -50,6 +62,8 @@ export default {
     header,
     content,
     file,
+    fileName,
+    fileSize,
     fileList,
     progressbar,
     basic

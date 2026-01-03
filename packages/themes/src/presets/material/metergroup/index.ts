@@ -18,6 +18,11 @@ export const labelMarker: MeterGroupTokenSections.LabelMarker = {
     size: '0.5rem'
 };
 
+export const labelText: MeterGroupTokenSections.LabelText = {
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}'
+};
+
 export const labelIcon: MeterGroupTokenSections.LabelIcon = {
     size: '1rem'
 };
@@ -34,6 +39,7 @@ export default {
     meters,
     label,
     labelMarker,
+    labelText,
     labelIcon,
     labelList,
     css

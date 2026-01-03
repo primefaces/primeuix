@@ -6,6 +6,8 @@ export const root: TooltipTokenSections.Root = {
     shadow: '{overlay.popover.shadow}',
     padding: '0.5rem 0.75rem',
     borderRadius: '{overlay.popover.border.radius}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '0.75rem',
     background: 'light-dark({surface.900}, {surface.0})',
     color: 'light-dark({surface.0}, {surface.900})'
 };

@@ -21,7 +21,8 @@ export const toggleableHeader: PanelTokenSections.ToggleableHeader = {
 };
 
 export const title: PanelTokenSections.Title = {
-    fontWeight: '600'
+    fontWeight: '600',
+    fontSize: '{typography.font.size}'
 };
 
 export const content: PanelTokenSections.Content = {

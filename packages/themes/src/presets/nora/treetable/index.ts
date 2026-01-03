@@ -33,7 +33,8 @@ export const headerCell: TreeTableTokenSections.HeaderCell = {
 };
 
 export const columnTitle: TreeTableTokenSections.ColumnTitle = {
-    fontWeight: '700'
+    fontWeight: '700',
+    fontSize: '{typography.font.size}'
 };
 
 export const row: TreeTableTokenSections.Row = {
@@ -56,6 +57,8 @@ export const bodyCell: TreeTableTokenSections.BodyCell = {
     borderColor: '{treetable.border.color}',
     padding: '0.75rem 1rem',
     gap: '0.5rem',
+    fontWeight: '{typography.font.size}',
+    fontSize: '{typography.font.size}',
     selectedBorderColor: 'light-dark({primary.100}, {primary.900})'
 };
 
@@ -67,7 +70,8 @@ export const footerCell: TreeTableTokenSections.FooterCell = {
 };
 
 export const columnFooter: TreeTableTokenSections.ColumnFooter = {
-    fontWeight: '700'
+    fontWeight: '700',
+    fontSize: '{typography.font.size}'
 };
 
 export const footer: TreeTableTokenSections.Footer = {

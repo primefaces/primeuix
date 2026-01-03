@@ -9,7 +9,14 @@ export const content: ConfirmDialogTokenSections.Content = {
     gap: '1rem'
 };
 
+export const message: ConfirmDialogTokenSections.Message = {
+    color: '{content.color}',
+    fontWeight: '{typography.font.weight}',
+    fontSize: '{typography.font.size}'
+};
+
 export default {
     icon,
+    message,
     content
 } satisfies ConfirmDialogDesignTokens;

@@ -14,7 +14,12 @@ export const item: BreadcrumbTokenSections.Item = {
     gap: '{navigation.item.gap}',
     icon: {
         color: '{text.muted.color}',
-        hoverColor: '{text.color}'
+        hoverColor: '{text.color}',
+        size: '{navigation.item.icon.size}'
+    },
+    label: {
+        fontWeight: '{navigation.item.label.font.weight}',
+        fontSize: '{navigation.item.label.font.size}'
     },
     focusRing: {
         width: '{focus.ring.width}',

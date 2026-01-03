@@ -34,6 +34,12 @@ export const primitive: BaseTokenSections.Primitive = {
 };
 
 export const semantic: BaseTokenSections.Semantic = {
+    typography: {
+        lineHeight: '1.5',
+        fontFamily: 'inherit',
+        fontWeight: 'normal',
+        fontSize: '0.875rem'
+    },
     transitionDuration: '0s',
     focusRing: {
         width: '2px',
@@ -63,6 +69,8 @@ export const semantic: BaseTokenSections.Semantic = {
         activeColor: 'light-dark({primary.800}, {primary.300})'
     },
     formField: {
+        fontWeight: '{typography.font.weight}',
+        fontSize: '{typography.font.size}',
         paddingX: '0.75rem',
         paddingY: '0.5rem',
         sm: {
@@ -113,6 +121,9 @@ export const semantic: BaseTokenSections.Semantic = {
         option: {
             padding: '0.5rem 0.75rem',
             borderRadius: '0',
+            fontWeight: '{typography.font.weight}',
+            fontSize: '{typography.font.size}',
+            transitionDuration: '0s',
             focusBackground: 'light-dark({surface.200}, {surface.700})',
             selectedBackground: '{highlight.background}',
             selectedFocusBackground: '{highlight.focus.background}',
@@ -120,6 +131,7 @@ export const semantic: BaseTokenSections.Semantic = {
             focusColor: '{text.hover.color}',
             selectedColor: '{highlight.color}',
             selectedFocusColor: '{highlight.focus.color}',
+            selectedFontWeight: '{typography.font.weight}',
             icon: {
                 color: 'light-dark({text.muted.color}, {text.muted.color})',
                 focusColor: 'light-dark({text.hover.muted.color}, {text.hover.muted.color})'
@@ -128,6 +140,7 @@ export const semantic: BaseTokenSections.Semantic = {
         optionGroup: {
             padding: '0.5rem 0.75rem',
             fontWeight: '700',
+            fontSize: '{typography.font.size}',
             background: 'transparent',
             color: '{text.color}'
         }
@@ -160,14 +173,21 @@ export const semantic: BaseTokenSections.Semantic = {
             focusColor: '{primary.contrast.color}',
             activeColor: 'light-dark({text.hover.color}, {text.color})',
             icon: {
+                size: '{icon.size}',
                 color: '{text.muted.color}',
                 focusColor: '{primary.contrast.color}',
                 activeColor: '{text.hover.muted.color}'
-            }
+            },
+            label: {
+                fontWeight: '{typography.font.weight}',
+                fontSize: '{typography.font.size}'
+            },
+            transitionDuration: '0s'
         },
         submenuLabel: {
             padding: '0.5rem 0.75rem',
             fontWeight: '700',
+            fontSize: '{typography.font.size}',
             background: 'transparent',
             color: '{text.color}'
         },

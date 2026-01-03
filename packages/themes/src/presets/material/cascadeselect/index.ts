@@ -35,7 +35,9 @@ export const root: CascadeSelectTokenSections.Root = {
         fontSize: '{form.field.lg.font.size}',
         paddingX: '{form.field.lg.padding.x}',
         paddingY: '{form.field.lg.padding.y}'
-    }
+    },
+    fontWeight: '{form.field.font.weight}',
+    fontSize: '{form.field.font.size}'
 };
 
 export const dropdown: CascadeSelectTokenSections.Dropdown = {
@@ -65,13 +67,16 @@ export const option: CascadeSelectTokenSections.Option = {
     focusColor: '{list.option.focus.color}',
     selectedColor: '{list.option.selected.color}',
     selectedFocusColor: '{list.option.selected.focus.color}',
+    selectedFontWeight: '{list.option.selected.font.weight}',
     padding: '{list.option.padding}',
     borderRadius: '{list.option.border.radius}',
     icon: {
         color: '{list.option.icon.color}',
         focusColor: '{list.option.icon.focus.color}',
         size: '0.875rem'
-    }
+    },
+    fontWeight: '{list.option.font.weight}',
+    fontSize: '{list.option.font.size}'
 };
 
 export const clearIcon: CascadeSelectTokenSections.ClearIcon = {

@@ -23,6 +23,11 @@ export const content: PasswordTokenSections.Content = {
     gap: '0.75rem'
 };
 
+export const meterText: PasswordTokenSections.MeterText = {
+    fontSize: '{typography.font.size}',
+    fontWeight: '{typography.font.weight}'
+};
+
 export const strength: PasswordTokenSections.Strength = {
     weakBackground: 'light-dark({red.500}, {red.400})',
     mediumBackground: 'light-dark({amber.500}, {amber.400})',
@@ -34,5 +39,6 @@ export default {
     icon,
     overlay,
     content,
+    meterText,
     strength
 } satisfies PasswordDesignTokens;
