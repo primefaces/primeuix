@@ -26,7 +26,7 @@ export const navButton: TabViewTokenSections.NavButton = {
     background: '{content.background}',
     color: '{text.muted.color}',
     hoverColor: '{text.color}',
-    shadow: 'light-dark(0px 0px 10px 50px rgba(255, 255, 255, 0.6), 0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%))'
+    shadow: '0px 0px 10px 50px light-dark(rgba(255, 255, 255, 0.6), color-mix(in srgb, {content.background}, transparent 50%))'
 };
 
 export default {

@@ -180,7 +180,7 @@ export const contrast: MessageTokenSections.Contrast = {
     background: 'light-dark({surface.900}, {surface.0})',
     borderColor: 'light-dark({surface.900}, {surface.0})',
     color: 'light-dark({surface.50}, {surface.950})',
-    shadow: 'light-dark(0px 4px 8px 0px color-mix(in srgb, {surface.950}, transparent 96%), none)',
+    shadow: 'none',
     closeButton: {
         hoverBackground: 'light-dark({surface.700}, {surface.200})',
         focusRing: {
