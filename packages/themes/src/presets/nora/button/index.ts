@@ -6,19 +6,19 @@ export const root: ButtonTokenSections.Root = {
     gap: '0.5rem',
     paddingX: '{form.field.padding.x}',
     paddingY: '{form.field.padding.y}',
-    iconOnlyWidth: '2.5rem',
+    iconOnlyWidth: '2.25rem',
     fontSize: '{form.field.font.size}',
     sm: {
         fontSize: '{form.field.sm.font.size}',
         paddingX: '{form.field.sm.padding.x}',
         paddingY: '{form.field.sm.padding.y}',
-        iconOnlyWidth: '2rem'
+        iconOnlyWidth: '1.75rem'
     },
     lg: {
         fontSize: '{form.field.lg.font.size}',
         paddingX: '{form.field.lg.padding.x}',
         paddingY: '{form.field.lg.padding.y}',
-        iconOnlyWidth: '3rem'
+        iconOnlyWidth: '2.625rem'
     },
     label: {
         fontWeight: '700'

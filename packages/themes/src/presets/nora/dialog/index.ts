@@ -14,7 +14,7 @@ export const header: DialogTokenSections.Header = {
 };
 
 export const title: DialogTokenSections.Title = {
-    fontSize: '1.25rem',
+    fontSize: '1.125rem',
     fontWeight: '700'
 };
 
@@ -24,7 +24,7 @@ export const content: DialogTokenSections.Content = {
 
 export const footer: DialogTokenSections.Footer = {
     padding: '0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}',
-    gap: '0.5rem'
+    gap: '0.375rem'
 };
 
 export default {

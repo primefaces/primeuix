@@ -46,8 +46,8 @@ export const optionGroup: ListboxTokenSections.OptionGroup = {
 
 export const checkmark: ListboxTokenSections.Checkmark = {
     color: '{list.option.color}',
-    gutterStart: '-0.375rem',
-    gutterEnd: '0.375rem'
+    gutterStart: '-0.25rem',
+    gutterEnd: '0.25rem'
 };
 
 export const emptyMessage: ListboxTokenSections.EmptyMessage = {

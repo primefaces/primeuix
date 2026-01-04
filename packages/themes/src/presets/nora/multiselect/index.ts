@@ -41,7 +41,7 @@ export const root: MultiSelectTokenSections.Root = {
 };
 
 export const dropdown: MultiSelectTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     color: '{form.field.icon.color}'
 };
 
@@ -57,7 +57,7 @@ export const list: MultiSelectTokenSections.List = {
     padding: '{list.padding}',
     gap: '{list.gap}',
     header: {
-        padding: '{list.header.padding}'
+        padding: '0.5rem 0.5rem 0.125rem 0.875rem'
     }
 };
 

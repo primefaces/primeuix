@@ -12,7 +12,7 @@ export const navButton: GalleriaTokenSections.NavButton = {
     hoverBackground: 'rgba(255, 255, 255, 0.2)',
     color: '{surface.100}',
     hoverColor: '{surface.0}',
-    size: '3rem',
+    size: '2.625rem',
     gutter: '0.5rem',
     prev: {
         borderRadius: '50%'
@@ -30,16 +30,16 @@ export const navButton: GalleriaTokenSections.NavButton = {
 };
 
 export const navIcon: GalleriaTokenSections.NavIcon = {
-    size: '1.5rem'
+    size: '1.25rem'
 };
 
 export const thumbnailsContent: GalleriaTokenSections.ThumbnailsContent = {
     background: '{content.background}',
-    padding: '1rem 0.25rem'
+    padding: '0.875rem 0.25rem'
 };
 
 export const thumbnailNavButton: GalleriaTokenSections.ThumbnailNavButton = {
-    size: '2rem',
+    size: '1.75rem',
     borderRadius: '{content.border.radius}',
     gutter: '0.5rem',
     focusRing: {
@@ -55,23 +55,23 @@ export const thumbnailNavButton: GalleriaTokenSections.ThumbnailNavButton = {
 };
 
 export const thumbnailNavButtonIcon: GalleriaTokenSections.ThumbnailNavButtonIcon = {
-    size: '1rem'
+    size: '0.875rem'
 };
 
 export const caption: GalleriaTokenSections.Caption = {
     background: 'rgba(0, 0, 0, 0.5)',
     color: '{surface.100}',
-    padding: '1rem'
+    padding: '0.875rem'
 };
 
 export const indicatorList: GalleriaTokenSections.IndicatorList = {
     gap: '0.5rem',
-    padding: '1rem'
+    padding: '0.875rem'
 };
 
 export const indicatorButton: GalleriaTokenSections.IndicatorButton = {
-    width: '1rem',
-    height: '1rem',
+    width: '0.875rem',
+    height: '0.875rem',
     activeBackground: '{primary.color}',
     borderRadius: '50%',
     focusRing: {
@@ -96,7 +96,7 @@ export const insetIndicatorButton: GalleriaTokenSections.InsetIndicatorButton = 
 };
 
 export const closeButton: GalleriaTokenSections.CloseButton = {
-    size: '3rem',
+    size: '2.625rem',
     gutter: '0.5rem',
     background: 'rgba(255, 255, 255, 0.1)',
     hoverBackground: 'rgba(255, 255, 255, 0.2)',
@@ -113,7 +113,7 @@ export const closeButton: GalleriaTokenSections.CloseButton = {
 };
 
 export const closeButtonIcon: GalleriaTokenSections.CloseButtonIcon = {
-    size: '1.5rem'
+    size: '1.25rem'
 };
 
 export default {

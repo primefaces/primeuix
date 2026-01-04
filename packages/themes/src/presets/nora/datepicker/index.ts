@@ -27,12 +27,12 @@ export const title: DatePickerTokenSections.Title = {
 };
 
 export const dropdown: DatePickerTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     sm: {
-        width: '2rem'
+        width: '1.75rem'
     },
     lg: {
-        width: '3rem'
+        width: '2.625rem'
     },
     background: '{form.field.background}',
     color: '{form.field.icon.color}',
@@ -103,8 +103,8 @@ export const date: DatePickerTokenSections.Date = {
     hoverColor: '{content.hover.color}',
     selectedColor: '{primary.contrast.color}',
     rangeSelectedColor: '{highlight.color}',
-    width: '2rem',
-    height: '2rem',
+    width: '1.75rem',
+    height: '1.75rem',
     borderRadius: '50%',
     padding: '0.25rem',
     focusRing: {
@@ -121,7 +121,7 @@ export const monthView: DatePickerTokenSections.MonthView = {
 };
 
 export const month: DatePickerTokenSections.Month = {
-    padding: '0.375rem',
+    padding: '0.25rem',
     borderRadius: '{content.border.radius}'
 };
 
@@ -130,7 +130,7 @@ export const yearView: DatePickerTokenSections.YearView = {
 };
 
 export const year: DatePickerTokenSections.Year = {
-    padding: '0.375rem',
+    padding: '0.25rem',
     borderRadius: '{content.border.radius}'
 };
 
@@ -143,7 +143,7 @@ export const timePicker: DatePickerTokenSections.TimePicker = {
     padding: '0.5rem 0 0 0',
     borderColor: '{content.border.color}',
     gap: '0.5rem',
-    buttonGap: '0.25rem',
+    buttonGap: '0.125rem',
     color: '{content.color}',
     fontWeight: '{typography.font.weight}',
     fontSize: '{typography.font.size}'

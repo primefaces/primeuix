@@ -1,8 +1,8 @@
 import type { RadioButtonDesignTokens, RadioButtonTokenSections } from '@primeuix/themes/types/radiobutton';
 
 export const root: RadioButtonTokenSections.Root = {
-    width: '1.25rem',
-    height: '1.25rem',
+    width: '1.125rem',
+    height: '1.125rem',
     background: '{form.field.background}',
     checkedBackground: '{form.field.background}',
     checkedHoverBackground: '{form.field.background}',
@@ -26,17 +26,17 @@ export const root: RadioButtonTokenSections.Root = {
     },
     transitionDuration: '{form.field.transition.duration}',
     sm: {
-        width: '1rem',
-        height: '1rem'
+        width: '0.875rem',
+        height: '0.875rem'
     },
     lg: {
-        width: '1.5rem',
-        height: '1.5rem'
+        width: '1.25rem',
+        height: '1.25rem'
     }
 };
 
 export const icon: RadioButtonTokenSections.Icon = {
-    size: '0.75rem',
+    size: '0.625rem',
     checkedColor: '{primary.color}',
     checkedHoverColor: '{primary.color}',
     disabledColor: '{form.field.disabled.color}',
@@ -44,7 +44,7 @@ export const icon: RadioButtonTokenSections.Icon = {
         size: '0.5rem'
     },
     lg: {
-        size: '1rem'
+        size: '0.75rem'
     }
 };
 

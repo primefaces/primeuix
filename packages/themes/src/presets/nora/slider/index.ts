@@ -5,9 +5,9 @@ export const root: SliderTokenSections.Root = {
 };
 
 export const track: SliderTokenSections.Track = {
+    background: 'light-dark({surface.300}, {surface.600})',
     borderRadius: '{content.border.radius}',
-    size: '3px',
-    background: 'light-dark({surface.300}, {surface.600})'
+    size: '3px'
 };
 
 export const range: SliderTokenSections.Range = {

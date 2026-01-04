@@ -2,8 +2,8 @@ import type { PasswordDesignTokens, PasswordTokenSections } from '@primeuix/them
 
 export const meter: PasswordTokenSections.Meter = {
     borderRadius: '{content.border.radius}',
-    height: '.75rem',
-    background: 'light-dark({surface.300}, {surface.600})'
+    background: 'light-dark({surface.300}, {surface.600})',
+    height: '0.625rem'
 };
 
 export const icon: PasswordTokenSections.Icon = {

@@ -49,7 +49,7 @@ export const semantic: BaseTokenSections.Semantic = {
         shadow: 'none'
     },
     disabledOpacity: '0.6',
-    iconSize: '1rem',
+    iconSize: '0.875rem',
     anchorGutter: '0',
     primary: {
         50: '{emerald.50}',
@@ -71,17 +71,17 @@ export const semantic: BaseTokenSections.Semantic = {
     formField: {
         fontWeight: '{typography.font.weight}',
         fontSize: '{typography.font.size}',
-        paddingX: '0.75rem',
-        paddingY: '0.5rem',
+        paddingX: '0.625rem',
+        paddingY: '0.375rem',
         sm: {
-            fontSize: '0.875rem',
-            paddingX: '0.625rem',
-            paddingY: '0.375rem'
+            fontSize: '0.75rem',
+            paddingX: '0.5rem',
+            paddingY: '0.25rem'
         },
         lg: {
-            fontSize: '1.125rem',
-            paddingX: '0.875rem',
-            paddingY: '0.625rem'
+            fontSize: '1rem',
+            paddingX: '0.75rem',
+            paddingY: '0.5rem'
         },
         borderRadius: '{border.radius.xs}',
         focusRing: {
@@ -116,10 +116,10 @@ export const semantic: BaseTokenSections.Semantic = {
         padding: '0.125rem 0',
         gap: '0',
         header: {
-            padding: '0.5rem 0.75rem 0.375rem 0.75rem'
+            padding: '0.5rem 0.5rem 0.125rem 0.5rem'
         },
         option: {
-            padding: '0.5rem 0.75rem',
+            padding: '0.25rem 0.625rem',
             borderRadius: '0',
             fontWeight: '{typography.font.weight}',
             fontSize: '{typography.font.size}',
@@ -138,7 +138,7 @@ export const semantic: BaseTokenSections.Semantic = {
             }
         },
         optionGroup: {
-            padding: '0.5rem 0.75rem',
+            padding: '0.25rem 0.625rem',
             fontWeight: '700',
             fontSize: '{typography.font.size}',
             background: 'transparent',
@@ -164,7 +164,7 @@ export const semantic: BaseTokenSections.Semantic = {
             gap: '0'
         },
         item: {
-            padding: '0.5rem 0.75rem',
+            padding: '0.25rem 0.625rem',
             borderRadius: '0',
             gap: '0.5rem',
             focusBackground: '{primary.color}',
@@ -185,14 +185,14 @@ export const semantic: BaseTokenSections.Semantic = {
             transitionDuration: '0s'
         },
         submenuLabel: {
-            padding: '0.5rem 0.75rem',
+            padding: '0.25rem 0.625rem',
             fontWeight: '700',
             fontSize: '{typography.font.size}',
             background: 'transparent',
             color: '{text.color}'
         },
         submenuIcon: {
-            size: '0.875rem',
+            size: '0.75rem',
             color: '{text.muted.color}',
             focusColor: '{primary.contrast.color}',
             activeColor: '{text.hover.muted.color}'
@@ -208,7 +208,7 @@ export const semantic: BaseTokenSections.Semantic = {
         },
         popover: {
             borderRadius: '{border.radius.xs}',
-            padding: '0.75rem',
+            padding: '0.625rem',
             shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)',
             background: 'light-dark({surface.0}, {surface.900})',
             borderColor: 'light-dark(transparent, {surface.700})',
@@ -216,7 +216,7 @@ export const semantic: BaseTokenSections.Semantic = {
         },
         modal: {
             borderRadius: '{border.radius.xs}',
-            padding: '1.25rem',
+            padding: '1.125rem',
             shadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
             background: 'light-dark({surface.0}, {surface.900})',
             borderColor: 'light-dark(transparent, {surface.700})',

@@ -41,7 +41,7 @@ export const root: SelectTokenSections.Root = {
 };
 
 export const dropdown: SelectTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     color: '{form.field.icon.color}'
 };
 
@@ -90,8 +90,8 @@ export const clearIcon: SelectTokenSections.ClearIcon = {
 
 export const checkmark: SelectTokenSections.Checkmark = {
     color: '{list.option.color}',
-    gutterStart: '-0.375rem',
-    gutterEnd: '0.375rem'
+    gutterStart: '-0.25rem',
+    gutterEnd: '0.25rem'
 };
 
 export const emptyMessage: SelectTokenSections.EmptyMessage = {

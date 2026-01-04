@@ -7,7 +7,7 @@ export const root: PopoverTokenSections.Root = {
     borderRadius: '{overlay.popover.border.radius}',
     shadow: '{overlay.popover.shadow}',
     gutter: '10px',
-    arrowOffset: '1.25rem'
+    arrowOffset: '1.125rem'
 };
 
 export const content: PopoverTokenSections.Content = {

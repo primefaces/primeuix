@@ -1,7 +1,7 @@
 import type { ToastDesignTokens, ToastTokenSections } from '@primeuix/themes/types/toast';
 
 export const root: ToastTokenSections.Root = {
-    width: '25rem',
+    width: '22rem',
     borderRadius: '{content.border.radius}',
     borderWidth: '1px',
     transitionDuration: '{transition.duration}',

@@ -4,7 +4,7 @@ export const root: TooltipTokenSections.Root = {
     maxWidth: '12.5rem',
     gutter: '0.25rem',
     shadow: '{overlay.popover.shadow}',
-    padding: '0.5rem 0.75rem',
+    padding: '0.375rem 0.625rem',
     borderRadius: '{overlay.popover.border.radius}',
     fontWeight: '{typography.font.weight}',
     fontSize: '0.75rem',

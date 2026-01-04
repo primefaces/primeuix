@@ -6,7 +6,7 @@ export const loader: VirtualScrollerTokenSections.Loader = {
         color: '{text.muted.color}'
     },
     icon: {
-        size: '2rem'
+        size: '1.75rem'
     }
 };
 

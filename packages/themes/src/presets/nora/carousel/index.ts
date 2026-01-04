@@ -14,7 +14,7 @@ export const indicatorList: CarouselTokenSections.IndicatorList = {
 };
 
 export const indicator: CarouselTokenSections.Indicator = {
-    width: '2rem',
+    width: '1.75rem',
     height: '0.5rem',
     borderRadius: '{content.border.radius}',
     focusRing: {

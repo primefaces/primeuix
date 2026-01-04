@@ -2,20 +2,20 @@ import type { MeterGroupDesignTokens, MeterGroupTokenSections } from '@primeuix/
 
 export const root: MeterGroupTokenSections.Root = {
     borderRadius: '{content.border.radius}',
-    gap: '1rem'
+    gap: '0.875rem'
 };
 
 export const meters: MeterGroupTokenSections.Meters = {
-    size: '0.5rem',
-    background: 'light-dark({surface.300}, {surface.600})'
+    background: 'light-dark({surface.300}, {surface.600})',
+    size: '0.375rem'
 };
 
 export const label: MeterGroupTokenSections.Label = {
-    gap: '0.5rem'
+    gap: '0.375rem'
 };
 
 export const labelMarker: MeterGroupTokenSections.LabelMarker = {
-    size: '0.5rem'
+    size: '0.375rem'
 };
 
 export const labelText: MeterGroupTokenSections.LabelText = {
@@ -24,12 +24,12 @@ export const labelText: MeterGroupTokenSections.LabelText = {
 };
 
 export const labelIcon: MeterGroupTokenSections.LabelIcon = {
-    size: '1rem'
+    size: '0.875rem'
 };
 
 export const labelList: MeterGroupTokenSections.LabelList = {
-    verticalGap: '0.5rem',
-    horizontalGap: '1rem'
+    verticalGap: '0.375rem',
+    horizontalGap: '0.875rem'
 };
 
 export default {

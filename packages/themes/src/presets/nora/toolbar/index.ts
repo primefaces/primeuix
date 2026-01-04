@@ -6,7 +6,7 @@ export const root: ToolbarTokenSections.Root = {
     borderRadius: '{content.border.radius}',
     color: '{content.color}',
     gap: '0.5rem',
-    padding: '0.75rem'
+    padding: '0.625rem'
 };
 
 export default {
