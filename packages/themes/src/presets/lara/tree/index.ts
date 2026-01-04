@@ -3,14 +3,14 @@ import type { TreeDesignTokens, TreeTokenSections } from '@primeuix/themes/types
 export const root: TreeTokenSections.Root = {
     background: '{content.background}',
     color: '{content.color}',
-    padding: '1rem',
+    padding: '0.875rem',
     gap: '2px',
-    indent: '1rem',
+    indent: '0.875rem',
     transitionDuration: '{transition.duration}'
 };
 
 export const node: TreeTokenSections.Node = {
-    padding: '0.375rem 0.625rem',
+    padding: '0.375rem 0.5rem',
     borderRadius: '{content.border.radius}',
     hoverBackground: '{content.hover.background}',
     selectedBackground: '{highlight.background}',
@@ -41,7 +41,7 @@ export const nodeLabel: TreeTokenSections.NodeLabel = {
 
 export const nodeToggleButton: TreeTokenSections.NodeToggleButton = {
     borderRadius: '50%',
-    size: '1.75rem',
+    size: '1.5rem',
     hoverBackground: '{content.hover.background}',
     selectedHoverBackground: '{content.background}',
     color: '{text.muted.color}',
@@ -57,7 +57,7 @@ export const nodeToggleButton: TreeTokenSections.NodeToggleButton = {
 };
 
 export const loadingIcon: TreeTokenSections.LoadingIcon = {
-    size: '2rem'
+    size: '1.75rem'
 };
 
 export const filter: TreeTokenSections.Filter = {

@@ -2,23 +2,23 @@ import type { ButtonDesignTokens, ButtonTokenSections } from '@primeuix/themes/t
 
 export const root: ButtonTokenSections.Root = {
     borderRadius: '{form.field.border.radius}',
-    roundedBorderRadius: '2rem',
+    roundedBorderRadius: '1.75rem',
     gap: '0.5rem',
-    paddingX: '1rem',
+    paddingX: '0.875rem',
     paddingY: '{form.field.padding.y}',
-    iconOnlyWidth: '2.75rem',
+    iconOnlyWidth: '2.375rem',
     fontSize: '{form.field.font.size}',
     sm: {
         fontSize: '{form.field.sm.font.size}',
         paddingX: '{form.field.sm.padding.x}',
         paddingY: '{form.field.sm.padding.y}',
-        iconOnlyWidth: '2.25rem'
+        iconOnlyWidth: '2rem'
     },
     lg: {
         fontSize: '{form.field.lg.font.size}',
         paddingX: '{form.field.lg.padding.x}',
         paddingY: '{form.field.lg.padding.y}',
-        iconOnlyWidth: '3.25rem'
+        iconOnlyWidth: '2.875rem'
     },
     label: {
         fontWeight: '600'
@@ -29,7 +29,7 @@ export const root: ButtonTokenSections.Root = {
         style: '{form.field.focus.ring.style}',
         offset: '{form.field.focus.ring.offset}'
     },
-    badgeSize: '1rem',
+    badgeSize: '0.875rem',
     transitionDuration: '{form.field.transition.duration}',
     primary: {
         background: '{primary.color}',

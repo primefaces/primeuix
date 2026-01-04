@@ -3,30 +3,30 @@ import type { BadgeDesignTokens, BadgeTokenSections } from '@primeuix/themes/typ
 export const root: BadgeTokenSections.Root = {
     borderRadius: '{border.radius.md}',
     padding: '0 0.5rem',
-    fontSize: '0.75rem',
+    fontSize: '0.625rem',
     fontWeight: '700',
-    minWidth: '1.5rem',
-    height: '1.5rem'
+    minWidth: '1.25rem',
+    height: '1.25rem'
 };
 export const dot: BadgeTokenSections.Dot = {
     size: '0.5rem'
 };
 export const sm: BadgeTokenSections.Sm = {
-    fontSize: '0.625rem',
-    minWidth: '1.25rem',
-    height: '1.25rem'
+    fontSize: '0.5rem',
+    minWidth: '1.125rem',
+    height: '1.125rem'
 };
 
 export const lg: BadgeTokenSections.Lg = {
-    fontSize: '0.875rem',
-    minWidth: '1.75rem',
-    height: '1.75rem'
+    fontSize: '0.75rem',
+    minWidth: '1.5rem',
+    height: '1.5rem'
 };
 
 export const xl: BadgeTokenSections.Xl = {
-    fontSize: '1rem',
-    minWidth: '2rem',
-    height: '2rem'
+    fontSize: '0.875rem',
+    minWidth: '1.75rem',
+    height: '1.75rem'
 };
 
 export const primary: BadgeTokenSections.Primary = {

@@ -5,8 +5,8 @@ export const root: ColorPickerTokenSections.Root = {
 };
 
 export const preview: ColorPickerTokenSections.Preview = {
-    width: '1.75rem',
-    height: '1.75rem',
+    width: '1.5rem',
+    height: '1.5rem',
     borderRadius: '{form.field.border.radius}',
     focusRing: {
         width: '{form.field.focus.ring.width}',

@@ -12,12 +12,12 @@ export const header: PanelTokenSections.Header = {
     color: '{text.color}',
     borderWidth: '0 0 1px 0',
     borderColor: '{content.border.color}',
-    padding: '1.125rem',
+    padding: '1rem',
     borderRadius: '5px 5px 0 0'
 };
 
 export const toggleableHeader: PanelTokenSections.ToggleableHeader = {
-    padding: '0.25rem 1.125rem'
+    padding: '0.25rem 1rem'
 };
 
 export const title: PanelTokenSections.Title = {
@@ -26,11 +26,11 @@ export const title: PanelTokenSections.Title = {
 };
 
 export const content: PanelTokenSections.Content = {
-    padding: '1.125rem'
+    padding: '1rem'
 };
 
 export const footer: PanelTokenSections.Footer = {
-    padding: '1.125rem'
+    padding: '1rem'
 };
 
 export default {

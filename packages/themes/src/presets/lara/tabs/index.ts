@@ -21,7 +21,7 @@ export const tab: TabsTokenSections.Tab = {
     color: '{text.muted.color}',
     hoverColor: '{text.color}',
     activeColor: '{primary.color}',
-    padding: '1rem 1.25rem',
+    padding: '0.875rem 1.125rem',
     fontWeight: '700',
     fontSize: '{typography.font.size}',
     margin: '0',
@@ -38,7 +38,7 @@ export const tab: TabsTokenSections.Tab = {
 export const tabpanel: TabsTokenSections.Tabpanel = {
     background: '{content.background}',
     color: '{content.color}',
-    padding: '0.875rem 1.125rem 1.125rem 1.125rem',
+    padding: '0.75rem 1rem 1rem 1rem',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',
@@ -52,7 +52,7 @@ export const navButton: TabsTokenSections.NavButton = {
     background: '{content.background}',
     color: '{text.muted.color}',
     hoverColor: '{text.color}',
-    width: '2.5rem',
+    width: '2.25rem',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',

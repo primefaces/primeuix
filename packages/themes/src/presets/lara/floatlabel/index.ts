@@ -11,20 +11,20 @@ export const root: FloatLabelTokenSections.Root = {
     fontWeight: '500',
     fontSize: '{form.field.font.size}',
     active: {
-        fontSize: '0.75rem',
+        fontSize: '0.625rem',
         fontWeight: '400'
     }
 };
 
 export const over: FloatLabelTokenSections.Over = {
     active: {
-        top: '-1.375rem'
+        top: '-1.25rem'
     }
 };
 
 export const inside: FloatLabelTokenSections.In = {
     input: {
-        paddingTop: '1.875rem',
+        paddingTop: '1.625rem',
         paddingBottom: '{form.field.padding.y}'
     },
     active: {

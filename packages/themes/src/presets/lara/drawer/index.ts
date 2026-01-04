@@ -12,7 +12,7 @@ export const header: DrawerTokenSections.Header = {
 };
 
 export const title: DrawerTokenSections.Title = {
-    fontSize: '1.5rem',
+    fontSize: '1.25rem',
     fontWeight: '600'
 };
 

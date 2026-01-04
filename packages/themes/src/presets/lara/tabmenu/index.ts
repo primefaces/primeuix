@@ -21,7 +21,7 @@ export const item: TabmenuTokenSections.Item = {
     color: '{text.muted.color}',
     hoverColor: '{text.color}',
     activeColor: '{primary.color}',
-    padding: '1rem 1.25rem',
+    padding: '0.875rem 1.125rem',
     fontWeight: '600',
     margin: '0',
     gap: '0.5rem',

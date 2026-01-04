@@ -36,7 +36,7 @@ export const item: ContextMenuTokenSections.Item = {
 };
 
 export const submenu: ContextMenuTokenSections.Submenu = {
-    mobileIndent: '1.25rem'
+    mobileIndent: '1.125rem'
 };
 
 export const submenuIcon: ContextMenuTokenSections.SubmenuIcon = {

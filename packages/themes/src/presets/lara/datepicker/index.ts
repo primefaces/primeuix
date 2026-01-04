@@ -17,7 +17,7 @@ export const header: DatePickerTokenSections.Header = {
     background: '{content.background}',
     borderColor: '{content.border.color}',
     color: '{content.color}',
-    padding: '0 0 0.75rem 0'
+    padding: '0 0 0.625rem 0'
 };
 
 export const title: DatePickerTokenSections.Title = {
@@ -27,12 +27,12 @@ export const title: DatePickerTokenSections.Title = {
 };
 
 export const dropdown: DatePickerTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     sm: {
-        width: '2rem'
+        width: '1.75rem'
     },
     lg: {
-        width: '3rem'
+        width: '2.625rem'
     },
     borderColor: '{form.field.border.color}',
     hoverBorderColor: '{form.field.border.color}',
@@ -61,7 +61,7 @@ export const selectMonth: DatePickerTokenSections.SelectMonth = {
     hoverBackground: '{content.hover.background}',
     color: '{content.color}',
     hoverColor: '{content.hover.color}',
-    padding: '0.375rem 0.625rem',
+    padding: '0.375rem 0.5rem',
     borderRadius: '{content.border.radius}',
     fontWeight: '500',
     fontSize: '{typography.font.size}'
@@ -71,7 +71,7 @@ export const selectYear: DatePickerTokenSections.SelectYear = {
     hoverBackground: '{content.hover.background}',
     color: '{content.color}',
     hoverColor: '{content.hover.color}',
-    padding: '0.375rem 0.625rem',
+    padding: '0.375rem 0.5rem',
     borderRadius: '{content.border.radius}',
     fontWeight: '500',
     fontSize: '{typography.font.size}'
@@ -83,7 +83,7 @@ export const group: DatePickerTokenSections.Group = {
 };
 
 export const dayView: DatePickerTokenSections.DayView = {
-    margin: '0.75rem 0 0 0'
+    margin: '0.625rem 0 0 0'
 };
 
 export const weekDay: DatePickerTokenSections.WeekDay = {
@@ -103,8 +103,8 @@ export const date: DatePickerTokenSections.Date = {
     hoverColor: '{content.hover.color}',
     selectedColor: '{primary.contrast.color}',
     rangeSelectedColor: '{highlight.color}',
-    width: '2.5rem',
-    height: '2.5rem',
+    width: '2.25rem',
+    height: '2.25rem',
     borderRadius: '50%',
     padding: '0.375rem',
     focusRing: {
@@ -117,7 +117,7 @@ export const date: DatePickerTokenSections.Date = {
 };
 
 export const monthView: DatePickerTokenSections.MonthView = {
-    margin: '0.75rem 0 0 0'
+    margin: '0.625rem 0 0 0'
 };
 
 export const month: DatePickerTokenSections.Month = {
@@ -126,7 +126,7 @@ export const month: DatePickerTokenSections.Month = {
 };
 
 export const yearView: DatePickerTokenSections.YearView = {
-    margin: '0.75rem 0 0 0'
+    margin: '0.625rem 0 0 0'
 };
 
 export const year: DatePickerTokenSections.Year = {
@@ -135,12 +135,12 @@ export const year: DatePickerTokenSections.Year = {
 };
 
 export const buttonbar: DatePickerTokenSections.Buttonbar = {
-    padding: '0.75rem 0 0 0',
+    padding: '0.625rem 0 0 0',
     borderColor: '{content.border.color}'
 };
 
 export const timePicker: DatePickerTokenSections.TimePicker = {
-    padding: '0.75rem 0 0 0',
+    padding: '0.625rem 0 0 0',
     borderColor: '{content.border.color}',
     gap: '0.5rem',
     buttonGap: '0.25rem',

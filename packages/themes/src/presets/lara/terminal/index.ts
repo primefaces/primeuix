@@ -4,7 +4,7 @@ export const root: TerminalTokenSections.Root = {
     background: '{form.field.background}',
     borderColor: '{form.field.border.color}',
     color: '{form.field.color}',
-    height: '18rem',
+    height: '15.75rem',
     padding: '{form.field.padding.y} {form.field.padding.x}',
     borderRadius: '{form.field.border.radius}',
     fontWeight: '{typography.font.weight}',

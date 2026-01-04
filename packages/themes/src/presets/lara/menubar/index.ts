@@ -6,13 +6,13 @@ export const root: MenubarTokenSections.Root = {
     borderRadius: '{content.border.radius}',
     color: '{content.color}',
     gap: '0.5rem',
-    padding: '0.75rem 1rem',
+    padding: '0.625rem 0.875rem',
     transitionDuration: '{transition.duration}'
 };
 
 export const baseItem: MenubarTokenSections.BaseItem = {
     borderRadius: '{content.border.radius}',
-    padding: '0.75rem 1rem'
+    padding: '0.625rem 0.875rem'
 };
 
 export const item: MenubarTokenSections.Item = {
@@ -43,7 +43,7 @@ export const submenu: MenubarTokenSections.Submenu = {
     borderColor: '{content.border.color}',
     borderRadius: '{content.border.radius}',
     shadow: '{overlay.navigation.shadow}',
-    mobileIndent: '1.25rem',
+    mobileIndent: '1.125rem',
     icon: {
         size: '{navigation.submenu.icon.size}',
         color: '{navigation.submenu.icon.color}',
@@ -58,7 +58,7 @@ export const separator: MenubarTokenSections.Separator = {
 
 export const mobileButton: MenubarTokenSections.MobileButton = {
     borderRadius: '50%',
-    size: '2rem',
+    size: '1.75rem',
     color: '{text.muted.color}',
     hoverColor: '{text.hover.muted.color}',
     hoverBackground: '{content.hover.background}',

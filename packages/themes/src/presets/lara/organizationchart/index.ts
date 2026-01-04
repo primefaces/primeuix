@@ -1,7 +1,7 @@
 import type { OrganizationChartDesignTokens, OrganizationChartTokenSections } from '@primeuix/themes/types/organizationchart';
 
 export const root: OrganizationChartTokenSections.Root = {
-    gutter: '0.75rem',
+    gutter: '0.625rem',
     transitionDuration: '{transition.duration}'
 };
 
@@ -13,8 +13,8 @@ export const node: OrganizationChartTokenSections.Node = {
     color: '{content.color}',
     selectedColor: '{highlight.color}',
     hoverColor: '{content.hover.color}',
-    padding: '1rem 1.25rem',
-    toggleablePadding: '1rem 1.25rem 1.5rem 1.25rem',
+    padding: '0.875rem 1.125rem',
+    toggleablePadding: '0.875rem 1.125rem 1.25rem 1.125rem',
     borderRadius: '{content.border.radius}'
 };
 
@@ -24,7 +24,7 @@ export const nodeToggleButton: OrganizationChartTokenSections.NodeToggleButton =
     borderColor: '{content.border.color}',
     color: '{text.muted.color}',
     hoverColor: '{text.color}',
-    size: '1.75rem',
+    size: '1.5rem',
     borderRadius: '50%',
     focusRing: {
         width: '{focus.ring.width}',

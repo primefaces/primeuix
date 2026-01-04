@@ -13,20 +13,20 @@ export const header: FileUploadTokenSections.Header = {
     color: '{text.color}',
     borderWidth: '0 0 1px 0',
     borderColor: '{content.border.color}',
-    padding: '1.125rem',
+    padding: '1rem',
     borderRadius: '5px 5px 0 0',
     gap: '0.5rem'
 };
 
 export const content: FileUploadTokenSections.Content = {
     highlightBorderColor: '{primary.color}',
-    padding: '1.125rem',
+    padding: '1rem',
     gap: '1rem'
 };
 
 export const file: FileUploadTokenSections.File = {
-    padding: '1rem',
-    gap: '1rem',
+    padding: '0.875rem',
+    gap: '0.875rem',
     borderColor: '{content.border.color}',
     info: {
         gap: '0.5rem'
@@ -42,7 +42,7 @@ export const fileName: FileUploadTokenSections.FileName = {
 export const fileSize: FileUploadTokenSections.FileSize = {
     color: '{text.muted.color}',
     fontWeight: '{typography.font.weight}',
-    fontSize: '0.75rem'
+    fontSize: '0.625rem'
 };
 
 export const fileList: FileUploadTokenSections.FileList = {

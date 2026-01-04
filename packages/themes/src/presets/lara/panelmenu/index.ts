@@ -41,7 +41,7 @@ export const item: PanelMenuTokenSections.Item = {
 };
 
 export const submenu: PanelMenuTokenSections.Submenu = {
-    indent: '1rem'
+    indent: '0.875rem'
 };
 
 export const submenuIcon: PanelMenuTokenSections.SubmenuIcon = {

@@ -6,7 +6,7 @@ export const root: ImageTokenSections.Root = {
 
 export const preview: ImageTokenSections.Preview = {
     icon: {
-        size: '1.5rem'
+        size: '1.25rem'
     },
     mask: {
         background: '{mask.background}',
@@ -17,8 +17,8 @@ export const preview: ImageTokenSections.Preview = {
 export const toolbar: ImageTokenSections.Toolbar = {
     position: {
         left: 'auto',
-        right: '1rem',
-        top: '1rem',
+        right: '0.875rem',
+        top: '0.875rem',
         bottom: 'auto'
     },
     blur: '8px',
@@ -34,8 +34,8 @@ export const action: ImageTokenSections.Action = {
     hoverBackground: 'rgba(255,255,255,0.1)',
     color: '{surface.50}',
     hoverColor: '{surface.0}',
-    size: '3rem',
-    iconSize: '1.5rem',
+    size: '2.625rem',
+    iconSize: '1.25rem',
     borderRadius: '{content.border.radius}',
     focusRing: {
         width: '{focus.ring.width}',

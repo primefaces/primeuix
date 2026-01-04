@@ -1,7 +1,7 @@
 import type { BreadcrumbDesignTokens, BreadcrumbTokenSections } from '@primeuix/themes/types/breadcrumb';
 
 export const root: BreadcrumbTokenSections.Root = {
-    padding: '1.25rem',
+    padding: '1.125rem',
     background: '{content.background}',
     gap: '0.5rem',
     transitionDuration: '{transition.duration}'

@@ -36,7 +36,7 @@ export const item: TieredMenuTokenSections.Item = {
 };
 
 export const submenu: TieredMenuTokenSections.Submenu = {
-    mobileIndent: '1.25rem'
+    mobileIndent: '1.125rem'
 };
 
 export const submenuIcon: TieredMenuTokenSections.SubmenuIcon = {

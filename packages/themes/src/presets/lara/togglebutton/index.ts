@@ -1,7 +1,7 @@
 import type { ToggleButtonDesignTokens, ToggleButtonTokenSections } from '@primeuix/themes/types/togglebutton';
 
 export const root: ToggleButtonTokenSections.Root = {
-    padding: '0.625rem 1rem',
+    padding: '0.5rem 0.875rem',
     borderRadius: '{content.border.radius}',
     gap: '0.5rem',
     fontWeight: '500',
@@ -28,11 +28,11 @@ export const root: ToggleButtonTokenSections.Root = {
     transitionDuration: '{form.field.transition.duration}',
     sm: {
         fontSize: '{form.field.sm.font.size}',
-        padding: '0.5rem 0.75rem'
+        padding: '0.5rem 0.625rem'
     },
     lg: {
         fontSize: '{form.field.lg.font.size}',
-        padding: '0.75rem 1.25rem'
+        padding: '0.625rem 1.125rem'
     }
 };
 
