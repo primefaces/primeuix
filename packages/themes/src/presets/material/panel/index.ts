@@ -10,14 +10,14 @@ export const root: PanelTokenSections.Root = {
 export const header: PanelTokenSections.Header = {
     background: 'transparent',
     color: '{text.color}',
-    padding: '1.25rem',
+    padding: '1.125rem',
     borderColor: '{content.border.color}',
     borderWidth: '0',
     borderRadius: '0'
 };
 
 export const toggleableHeader: PanelTokenSections.ToggleableHeader = {
-    padding: '0.5rem 1.25rem'
+    padding: '0.5rem 1.125rem'
 };
 
 export const title: PanelTokenSections.Title = {
@@ -26,11 +26,11 @@ export const title: PanelTokenSections.Title = {
 };
 
 export const content: PanelTokenSections.Content = {
-    padding: '0 1.25rem 1.25rem 1.25rem'
+    padding: '0 1.125rem 1.125rem 1.125rem'
 };
 
 export const footer: PanelTokenSections.Footer = {
-    padding: '0 1.25rem 1.25rem 1.25rem'
+    padding: '0 1.125rem 1.125rem 1.125rem'
 };
 
 export const css: PanelTokenSections.CSS = /*css*/ ``;

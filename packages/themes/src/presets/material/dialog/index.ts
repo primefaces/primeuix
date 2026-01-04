@@ -14,7 +14,7 @@ export const header: DialogTokenSections.Header = {
 };
 
 export const title: DialogTokenSections.Title = {
-    fontSize: '1.25rem',
+    fontSize: '1.125rem',
     fontWeight: '600'
 };
 

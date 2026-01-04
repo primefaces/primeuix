@@ -7,17 +7,17 @@ export const root: StepperTokenSections.Root = {
 export const separator: StepperTokenSections.Separator = {
     background: '{content.border.color}',
     activeBackground: '{primary.color}',
-    margin: '0 0 0 1.625rem',
+    margin: '0 0 0 1.375rem',
     size: '2px'
 };
 
 export const step: StepperTokenSections.Step = {
     padding: '0.5rem',
-    gap: '1rem'
+    gap: '0.875rem'
 };
 
 export const stepHeader: StepperTokenSections.StepHeader = {
-    padding: '0.75rem 1rem',
+    padding: '0.625rem 0.875rem',
     borderRadius: '{content.border.radius}',
     focusRing: {
         width: '0',
@@ -40,8 +40,8 @@ export const stepNumber: StepperTokenSections.StepNumber = {
     activeBackground: '{primary.color}',
     activeBorderColor: '{primary.color}',
     activeColor: '{primary.contrast.color}',
-    size: '2rem',
-    fontSize: '1.143rem',
+    size: '1.75rem',
+    fontSize: '1rem',
     fontWeight: '500',
     borderRadius: '50%',
     shadow: 'none',
@@ -51,14 +51,14 @@ export const stepNumber: StepperTokenSections.StepNumber = {
 };
 
 export const steppanels: StepperTokenSections.Steppanels = {
-    padding: '0.875rem 0.5rem 1.125rem 0.5rem'
+    padding: '0.75rem 0.5rem 1rem 0.5rem'
 };
 
 export const steppanel: StepperTokenSections.Steppanel = {
     background: '{content.background}',
     color: '{content.color}',
     padding: '0',
-    indent: '1rem'
+    indent: '0.875rem'
 };
 
 export const css: StepperTokenSections.CSS = /*css*/ `

@@ -27,12 +27,12 @@ export const title: DatePickerTokenSections.Title = {
 };
 
 export const dropdown: DatePickerTokenSections.Dropdown = {
-    width: '3rem',
+    width: '2.625rem',
     sm: {
-        width: '2.5rem'
+        width: '2.25rem'
     },
     lg: {
-        width: '3.5rem'
+        width: '3rem'
     },
     borderColor: '{form.field.border.color}',
     hoverBorderColor: '{form.field.border.color}',
@@ -61,7 +61,7 @@ export const selectMonth: DatePickerTokenSections.SelectMonth = {
     hoverBackground: '{content.hover.background}',
     color: '{content.color}',
     hoverColor: '{content.hover.color}',
-    padding: '0.5rem 0.75rem',
+    padding: '0.5rem 0.625rem',
     borderRadius: '{content.border.radius}',
     fontWeight: '500',
     fontSize: '{typography.font.size}'
@@ -71,7 +71,7 @@ export const selectYear: DatePickerTokenSections.SelectYear = {
     hoverBackground: '{content.hover.background}',
     color: '{content.color}',
     hoverColor: '{content.hover.color}',
-    padding: '0.5rem 0.75rem',
+    padding: '0.5rem 0.625rem',
     borderRadius: '{content.border.radius}',
     fontWeight: '500',
     fontSize: '{typography.font.size}'
@@ -103,8 +103,8 @@ export const date: DatePickerTokenSections.Date = {
     hoverColor: '{content.hover.color}',
     selectedColor: '{primary.contrast.color}',
     rangeSelectedColor: '{highlight.color}',
-    width: '2.5rem',
-    height: '2.5rem',
+    width: '2.25rem',
+    height: '2.25rem',
     borderRadius: '50%',
     padding: '0.125rem',
     focusRing: {
@@ -121,7 +121,7 @@ export const monthView: DatePickerTokenSections.MonthView = {
 };
 
 export const month: DatePickerTokenSections.Month = {
-    padding: '0.625rem',
+    padding: '0.5rem',
     borderRadius: '{content.border.radius}'
 };
 
@@ -130,7 +130,7 @@ export const yearView: DatePickerTokenSections.YearView = {
 };
 
 export const year: DatePickerTokenSections.Year = {
-    padding: '0.625rem',
+    padding: '0.5rem',
     borderRadius: '{content.border.radius}'
 };
 

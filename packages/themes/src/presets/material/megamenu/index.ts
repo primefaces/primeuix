@@ -11,7 +11,7 @@ export const root: MegaMenuTokenSections.Root = {
         gap: '{navigation.list.gap}'
     },
     horizontalOrientation: {
-        padding: '0.5rem 0.75rem',
+        padding: '0.5rem 0.625rem',
         gap: '0.5rem'
     },
     transitionDuration: '{transition.duration}'
@@ -79,7 +79,7 @@ export const separator: MegaMenuTokenSections.Separator = {
 
 export const mobileButton: MegaMenuTokenSections.MobileButton = {
     borderRadius: '50%',
-    size: '2.5rem',
+    size: '2.25rem',
     color: '{text.muted.color}',
     hoverColor: '{text.hover.muted.color}',
     hoverBackground: '{content.hover.background}',

@@ -5,7 +5,7 @@ export const root: FieldsetTokenSections.Root = {
     borderColor: '{content.border.color}',
     borderRadius: '{content.border.radius}',
     color: '{content.color}',
-    padding: '0 1.25rem 1.25rem 1.25rem',
+    padding: '0 1.125rem 1.125rem 1.125rem',
     transitionDuration: '{transition.duration}'
 };
 
@@ -17,7 +17,7 @@ export const legend: FieldsetTokenSections.Legend = {
     borderRadius: '{content.border.radius}',
     borderWidth: '1px',
     borderColor: 'transparent',
-    padding: '0.75rem 1rem',
+    padding: '0.625rem 0.875rem',
     gap: '0.5rem',
     fontWeight: '600',
     fontSize: '{typography.font.size}',

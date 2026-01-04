@@ -14,7 +14,7 @@ export const header: AccordionTokenSections.Header = {
     hoverColor: '{text.color}',
     activeColor: '{text.color}',
     activeHoverColor: '{text.color}',
-    padding: '1.25rem',
+    padding: '1.125rem',
     fontWeight: '600',
     fontSize: '{typography.font.size}',
     borderRadius: '0',
@@ -52,7 +52,7 @@ export const content: AccordionTokenSections.Content = {
     borderColor: '{content.border.color}',
     background: '{content.background}',
     color: '{text.color}',
-    padding: '0 1.25rem 1.25rem 1.25rem'
+    padding: '0 1.125rem 1.125rem 1.125rem'
 };
 
 export const css: AccordionTokenSections.CSS = /*css*/ `
@@ -62,7 +62,7 @@ export const css: AccordionTokenSections.CSS = /*css*/ `
 }
 
 .p-accordionpanel-active {
-    margin: 1rem 0;
+    margin: 0.875rem 0;
 }
 
 .p-accordionpanel:first-child {

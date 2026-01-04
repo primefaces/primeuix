@@ -41,7 +41,7 @@ export const root: SelectTokenSections.Root = {
 };
 
 export const dropdown: SelectTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     color: '{form.field.icon.color}'
 };
 

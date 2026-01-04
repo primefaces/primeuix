@@ -11,7 +11,7 @@ export const text: InlineMessageTokenSections.Text = {
 };
 
 export const icon: InlineMessageTokenSections.Icon = {
-    size: '1rem'
+    size: '0.875rem'
 };
 
 export const info: InlineMessageTokenSections.Info = {

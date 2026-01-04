@@ -41,7 +41,7 @@ export const root: CascadeSelectTokenSections.Root = {
 };
 
 export const dropdown: CascadeSelectTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     color: '{form.field.icon.color}'
 };
 
@@ -56,7 +56,7 @@ export const overlay: CascadeSelectTokenSections.Overlay = {
 export const list: CascadeSelectTokenSections.List = {
     padding: '{list.padding}',
     gap: '{list.gap}',
-    mobileIndent: '1rem'
+    mobileIndent: '0.875rem'
 };
 
 export const option: CascadeSelectTokenSections.Option = {
@@ -73,7 +73,7 @@ export const option: CascadeSelectTokenSections.Option = {
     icon: {
         color: '{list.option.icon.color}',
         focusColor: '{list.option.icon.focus.color}',
-        size: '0.875rem'
+        size: '0.75rem'
     },
     fontWeight: '{list.option.font.weight}',
     fontSize: '{list.option.font.size}'

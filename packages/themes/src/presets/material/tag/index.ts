@@ -1,7 +1,7 @@
 import type { TagDesignTokens, TagTokenSections } from '@primeuix/themes/types/tag';
 
 export const root: TagTokenSections.Root = {
-    fontSize: '0.875rem',
+    fontSize: '0.75rem',
     fontWeight: '700',
     padding: '0.25rem 0.5rem',
     gap: '0.25rem',
@@ -10,7 +10,7 @@ export const root: TagTokenSections.Root = {
 };
 
 export const icon: TagTokenSections.Icon = {
-    size: '0.75rem'
+    size: '0.625rem'
 };
 
 export const primary: TagTokenSections.Primary = {

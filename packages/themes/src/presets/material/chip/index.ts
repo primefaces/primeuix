@@ -1,9 +1,9 @@
 import type { ChipDesignTokens, ChipTokenSections } from '@primeuix/themes/types/chip';
 
 export const root: ChipTokenSections.Root = {
-    borderRadius: '2rem',
-    paddingX: '0.75rem',
-    paddingY: '0.75rem',
+    borderRadius: '1.75rem',
+    paddingX: '0.625rem',
+    paddingY: '0.625rem',
     gap: '0.5rem',
     transitionDuration: '{transition.duration}',
     background: 'light-dark({surface.200}, {surface.700})',
@@ -11,12 +11,12 @@ export const root: ChipTokenSections.Root = {
 };
 
 export const image: ChipTokenSections.Image = {
-    width: '2.25rem',
-    height: '2.25rem'
+    width: '2rem',
+    height: '2rem'
 };
 
 export const icon: ChipTokenSections.Icon = {
-    size: '1rem',
+    size: '0.875rem',
     color: 'light-dark({surface.600}, {surface.0})'
 };
 
@@ -26,7 +26,7 @@ export const label: ChipTokenSections.Label = {
 };
 
 export const removeIcon: ChipTokenSections.RemoveIcon = {
-    size: '1rem',
+    size: '0.875rem',
     color: 'light-dark({surface.600}, {surface.0})',
     focusRing: {
         width: '{focus.ring.width}',

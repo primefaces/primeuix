@@ -21,7 +21,7 @@ export const range: KnobTokenSections.Range = {
 
 export const text: KnobTokenSections.Text = {
     color: '{text.muted.color}',
-    fontSize: '1.125rem',
+    fontSize: '1rem',
     fontWeight: 'normal'
 };
 

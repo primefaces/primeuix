@@ -63,12 +63,12 @@ export const optionGroup: AutoCompleteTokenSections.OptionGroup = {
 };
 
 export const dropdown: AutoCompleteTokenSections.Dropdown = {
-    width: '3rem',
+    width: '2.625rem',
     sm: {
-        width: '2.5rem'
+        width: '2.25rem'
     },
     lg: {
-        width: '3.5rem'
+        width: '3rem'
     },
     borderColor: '{form.field.border.color}',
     hoverBorderColor: '{form.field.border.color}',

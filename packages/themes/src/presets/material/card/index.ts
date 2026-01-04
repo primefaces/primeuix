@@ -8,8 +8,8 @@ export const root: CardTokenSections.Root = {
 };
 
 export const body: CardTokenSections.Body = {
-    padding: '1.5rem',
-    gap: '0.75rem'
+    padding: '1.25rem',
+    gap: '0.625rem'
 };
 
 export const caption: CardTokenSections.Caption = {
@@ -17,13 +17,13 @@ export const caption: CardTokenSections.Caption = {
 };
 
 export const title: CardTokenSections.Title = {
-    fontSize: '1.25rem',
+    fontSize: '1.125rem',
     fontWeight: '500'
 };
 
 export const subtitle: CardTokenSections.Subtitle = {
     color: '{text.muted.color}',
-    fontSize: '1rem',
+    fontSize: '0.875rem',
     fontWeight: '{typography.font.weight}'
 };
 

@@ -41,7 +41,7 @@ export const root: TreeSelectTokenSections.Root = {
 };
 
 export const dropdown: TreeSelectTokenSections.Dropdown = {
-    width: '2.5rem',
+    width: '2.25rem',
     color: '{form.field.icon.color}'
 };
 

@@ -10,7 +10,7 @@ export const root: DockTokenSections.Root = {
 export const item: DockTokenSections.Item = {
     borderRadius: '{content.border.radius}',
     padding: '0.5rem',
-    size: '3rem',
+    size: '2.625rem',
     focusRing: {
         width: '{focus.ring.width}',
         style: '{focus.ring.style}',

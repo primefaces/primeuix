@@ -5,7 +5,7 @@ export const root: InputNumberTokenSections.Root = {
 };
 
 export const button: InputNumberTokenSections.Button = {
-    width: '3rem',
+    width: '2.625rem',
     borderRadius: '{form.field.border.radius}',
     verticalPadding: '{form.field.padding.y}',
     background: 'transparent',

@@ -8,11 +8,11 @@ export const root: IftaLabelTokenSections.Root = {
     positionX: '{form.field.padding.x}',
     top: '0.5rem',
     fontWeight: '400',
-    fontSize: '0.75rem'
+    fontSize: '0.625rem'
 };
 
 export const input: IftaLabelTokenSections.Input = {
-    paddingTop: '1.5rem',
+    paddingTop: '1.25rem',
     paddingBottom: '0.5rem'
 };
 

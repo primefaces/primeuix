@@ -41,7 +41,7 @@ export const item: PanelMenuTokenSections.Item = {
 };
 
 export const submenu: PanelMenuTokenSections.Submenu = {
-    indent: '1rem'
+    indent: '0.875rem'
 };
 
 export const submenuIcon: PanelMenuTokenSections.SubmenuIcon = {
@@ -56,7 +56,7 @@ export const css: PanelMenuTokenSections.CSS = /*css*/ `
 }
 
 .p-panelmenu-panel:has(.p-panelmenu-header-active) {
-    margin: 1rem 0;
+    margin: 0.875rem 0;
 }
 
 .p-panelmenu-panel:first-child {

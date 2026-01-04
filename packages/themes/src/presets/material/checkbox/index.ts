@@ -37,16 +37,16 @@ export const root: CheckboxTokenSections.Root = {
 };
 
 export const icon: CheckboxTokenSections.Icon = {
-    size: '0.875rem',
+    size: '0.75rem',
     color: '{form.field.color}',
     checkedColor: '{primary.contrast.color}',
     checkedHoverColor: '{primary.contrast.color}',
     disabledColor: '{form.field.disabled.color}',
     sm: {
-        size: '0.75rem'
+        size: '0.625rem'
     },
     lg: {
-        size: '1rem'
+        size: '0.875rem'
     }
 };
 

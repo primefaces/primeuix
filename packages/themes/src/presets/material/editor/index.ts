@@ -38,7 +38,7 @@ export const content: EditorTokenSections.Content = {
 
 export const css: EditorTokenSections.CSS = /*css*/ `
 .p-editor .p-editor-toolbar {
-    padding: 0.75rem
+    padding: 0.625rem
 }
 `;
 

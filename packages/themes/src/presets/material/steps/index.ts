@@ -33,8 +33,8 @@ export const itemNumber: StepsTokenSections.ItemNumber = {
     activeBorderColor: '{content.border.color}',
     color: '{text.muted.color}',
     activeColor: '{primary.color}',
-    size: '2rem',
-    fontSize: '1.143rem',
+    size: '1.75rem',
+    fontSize: '1rem',
     fontWeight: '500',
     borderRadius: '50%',
     shadow: '0px 0.5px 0px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12)'

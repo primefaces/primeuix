@@ -5,12 +5,12 @@ export const root: InputOtpTokenSections.Root = {
 };
 
 export const input: InputOtpTokenSections.Input = {
-    width: '3rem',
+    width: '2.625rem',
     sm: {
-        width: '2.5rem'
+        width: '2.25rem'
     },
     lg: {
-        width: '3.5rem'
+        width: '3rem'
     }
 };
 

@@ -7,16 +7,16 @@ export const root: ConfirmPopupTokenSections.Root = {
     borderRadius: '{overlay.popover.border.radius}',
     shadow: '{overlay.popover.shadow}',
     gutter: '10px',
-    arrowOffset: '1.25rem'
+    arrowOffset: '1.125rem'
 };
 
 export const content: ConfirmPopupTokenSections.Content = {
     padding: '{overlay.popover.padding}',
-    gap: '1rem'
+    gap: '0.875rem'
 };
 
 export const icon: ConfirmPopupTokenSections.Icon = {
-    size: '1.5rem',
+    size: '1.25rem',
     color: '{overlay.popover.color}'
 };
 

@@ -9,13 +9,13 @@ export const content: CarouselTokenSections.Content = {
 };
 
 export const indicatorList: CarouselTokenSections.IndicatorList = {
-    padding: '1rem',
-    gap: '1rem'
+    padding: '0.875rem',
+    gap: '0.875rem'
 };
 
 export const indicator: CarouselTokenSections.Indicator = {
-    width: '1.25rem',
-    height: '1.25rem',
+    width: '1.125rem',
+    height: '1.125rem',
     borderRadius: '50%',
     focusRing: {
         width: '0',
