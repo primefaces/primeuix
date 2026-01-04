@@ -5,7 +5,7 @@ export const root: ToastTokenSections.Root = {
     borderRadius: '{content.border.radius}',
     borderWidth: '0',
     transitionDuration: '{transition.duration}',
-    blur: 'light-dark(0, 10px)'
+    blur: '10px'
 };
 
 export const icon: ToastTokenSections.Icon = {

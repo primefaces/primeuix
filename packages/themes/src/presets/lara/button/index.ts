@@ -43,7 +43,7 @@ export const root: ButtonTokenSections.Root = {
         activeColor: '{primary.contrast.color}',
         focusRing: {
             color: 'transparent',
-            shadow: 'light-dark(0 0 0 0.2rem {primary.200}, 0 0 0 0.2rem color-mix(in srgb, {primary.color}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({primary.200}, color-mix(in srgb, {primary.color}, transparent 80%))'
         }
     },
     secondary: {
@@ -58,7 +58,7 @@ export const root: ButtonTokenSections.Root = {
         activeColor: 'light-dark({surface.800}, {surface.100})',
         focusRing: {
             color: 'transparent',
-            shadow: 'light-dark(0 0 0 0.2rem {surface.200}, 0 0 0 0.2rem color-mix(in srgb, {surface.300}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark{surface.200}, color-mix(in srgb, {surface.300}, transparent 80%))'
         }
     },
     info: {
@@ -73,7 +73,7 @@ export const root: ButtonTokenSections.Root = {
         activeColor: 'light-dark(#ffffff, {sky.950})',
         focusRing: {
             color: 'transparent',
-            shadow: 'light-dark(0 0 0 0.2rem {sky.200}, 0 0 0 0.2rem color-mix(in srgb, {sky.400}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({sky.200}, color-mix(in srgb, {sky.400}, transparent 80%))'
         }
     },
     success: {
@@ -88,7 +88,7 @@ export const root: ButtonTokenSections.Root = {
         activeColor: 'light-dark(#ffffff, {green.950})',
         focusRing: {
             color: 'transparent',
-            shadow: 'light-dark(0 0 0 0.2rem {green.200}, 0 0 0 0.2rem color-mix(in srgb, {green.400}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({green.200}, color-mix(in srgb, {green.400}, transparent 80%))'
         }
     },
     warn: {
@@ -103,7 +103,7 @@ export const root: ButtonTokenSections.Root = {
         activeColor: 'light-dark(#ffffff, {orange.950})',
         focusRing: {
             color: 'transparent',
-            shadow: 'light-dark(0 0 0 0.2rem {orange.200}, 0 0 0 0.2rem color-mix(in srgb, {orange.400}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({orange.200}, color-mix(in srgb, {orange.400}, transparent 80%))'
         }
     },
     help: {
@@ -118,7 +118,7 @@ export const root: ButtonTokenSections.Root = {
         activeColor: 'light-dark(#ffffff, {purple.950})',
         focusRing: {
             color: 'transparent',
-            shadow: 'light-dark(0 0 0 0.2rem {purple.200}, 0 0 0 0.2rem color-mix(in srgb, {purple.400}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({purple.200}, color-mix(in srgb, {purple.400}, transparent 80%))'
         }
     },
     danger: {
@@ -133,7 +133,7 @@ export const root: ButtonTokenSections.Root = {
         activeColor: 'light-dark(#ffffff, {red.950})',
         focusRing: {
             color: 'transparent',
-            shadow: 'light-dark(0 0 0 0.2rem {red.200}, 0 0 0 0.2rem color-mix(in srgb, {red.400}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({red.200}, color-mix(in srgb, {red.400}, transparent 80%))'
         }
     },
     contrast: {
@@ -148,7 +148,7 @@ export const root: ButtonTokenSections.Root = {
         activeColor: 'light-dark({surface.0}, {surface.950})',
         focusRing: {
             color: 'transparent',
-            shadow: 'light-dark(0 0 0 0.2rem {surface.400}, 0 0 0 0.2rem color-mix(in srgb, {surface.0}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({surface.400}, color-mix(in srgb, {surface.0}, transparent 80%))'
         }
     }
 };

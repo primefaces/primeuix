@@ -46,7 +46,7 @@ export const semantic: BaseTokenSections.Semantic = {
         style: 'none',
         color: 'unset',
         offset: '0',
-        shadow: 'light-dark(0 0 1px 4px {surface.200}, 0 0 1px 4px {surface.700})'
+        shadow: '0 0 1px 4px light-dark({surface.200}, {surface.700})'
     },
     disabledOpacity: '0.38',
     iconSize: '0.875rem',

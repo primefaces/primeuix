@@ -33,7 +33,7 @@ export const removeIcon: ChipTokenSections.RemoveIcon = {
         style: '{focus.ring.style}',
         color: '{focus.ring.color}',
         offset: '{focus.ring.offset}',
-        shadow: 'light-dark(0 0 1px 4px {surface.300}, 0 0 1px 4px {surface.600})'
+        shadow: '0 0 1px 4px light-dark({surface.300}, {surface.600})'
     }
 };
 

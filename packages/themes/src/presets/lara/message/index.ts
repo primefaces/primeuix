@@ -80,7 +80,7 @@ export const info: MessageTokenSections.Info = {
         hoverBackground: 'light-dark({blue.100}, rgba(255, 255, 255, 0.05))',
         focusRing: {
             color: '{focus.ring.color}',
-            shadow: 'light-dark(0 0 0 0.2rem {blue.200}, 0 0 0 0.2rem color-mix(in srgb, {blue.500}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({blue.200}, color-mix(in srgb, {blue.500}, transparent 80%))'
         }
     },
     outlined: {
@@ -101,7 +101,7 @@ export const success: MessageTokenSections.Success = {
         hoverBackground: 'light-dark({green.100}, rgba(255, 255, 255, 0.05))',
         focusRing: {
             color: '{focus.ring.color}',
-            shadow: 'light-dark(0 0 0 0.2rem {green.200}, 0 0 0 0.2rem color-mix(in srgb, {green.500}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({green.200}, color-mix(in srgb, {green.500}, transparent 80%))'
         }
     },
     outlined: {
@@ -122,7 +122,7 @@ export const warn: MessageTokenSections.Warn = {
         hoverBackground: 'light-dark({yellow.100}, rgba(255, 255, 255, 0.05))',
         focusRing: {
             color: '{focus.ring.color}',
-            shadow: 'light-dark(0 0 0 0.2rem {yellow.200}, 0 0 0 0.2rem color-mix(in srgb, {yellow.500}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({yellow.200}, color-mix(in srgb, {yellow.500}, transparent 80%))'
         }
     },
     outlined: {
@@ -143,7 +143,7 @@ export const error: MessageTokenSections.Error = {
         hoverBackground: 'light-dark({red.100}, rgba(255, 255, 255, 0.05))',
         focusRing: {
             color: '{focus.ring.color}',
-            shadow: 'light-dark(0 0 0 0.2rem {red.200}, 0 0 0 0.2rem color-mix(in srgb, {red.500}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({red.200}, color-mix(in srgb, {red.500}, transparent 80%))'
         }
     },
     outlined: {
@@ -164,7 +164,7 @@ export const secondary: MessageTokenSections.Secondary = {
         hoverBackground: 'light-dark({surface.200}, {surface.700})',
         focusRing: {
             color: '{focus.ring.color}',
-            shadow: 'light-dark(0 0 0 0.2rem {surface.200}, 0 0 0 0.2rem color-mix(in srgb, {surface.300}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({surface.200}, color-mix(in srgb, {surface.300}, transparent 80%))'
         }
     },
     outlined: {
@@ -185,7 +185,7 @@ export const contrast: MessageTokenSections.Contrast = {
         hoverBackground: 'light-dark({surface.800}, {surface.100})',
         focusRing: {
             color: '{focus.ring.color}',
-            shadow: 'light-dark(0 0 0 0.2rem {surface.400}, 0 0 0 0.2rem color-mix(in srgb, {surface.950}, transparent 80%))'
+            shadow: '0 0 0 0.2rem light-dark({surface.400}, color-mix(in srgb, {surface.950}, transparent 80%))'
         }
     },
     outlined: {
