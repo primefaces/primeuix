@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/styles",
-    "version": "2.0.2",
+    "version": "3.0.0-alpha.1",
     "author": "PrimeTek Informatics",
     "description": "Styles utilities for PrimeUI Libraries",
     "keywords": ["styles", "css", "style utilities", "primeng", "primereact", "primevue", "primeuix"],
