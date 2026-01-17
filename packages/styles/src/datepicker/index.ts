@@ -9,6 +9,11 @@ export const style = /*css*/ `
         border-end-end-radius: 0;
     }
 
+    .p-datepicker-input {
+        flex: 1 1 auto;
+        width: 1%;
+    }
+
     .p-datepicker-dropdown {
         cursor: pointer;
         display: inline-flex;
@@ -75,11 +80,6 @@ export const style = /*css*/ `
 
     .p-datepicker-fluid {
         display: flex;
-    }
-
-    .p-datepicker-fluid:has(.p-datepicker-dropdown) .p-datepicker-input {
-        flex: 1 1 auto;
-        width: 1%;
     }
 
     .p-datepicker .p-datepicker-panel {
