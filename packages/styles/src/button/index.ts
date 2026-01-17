@@ -63,7 +63,7 @@ export const style = /*css*/ `
     }
 
     .p-button-icon-only::after {
-        content: "\00A0";
+        content: "\u00A0";
         visibility: hidden;
         width: 0;
     }
