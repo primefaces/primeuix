@@ -64,10 +64,6 @@ export const style = /*css*/ `
         border-radius: 0;
     }
 
-    .p-dialog-maximized .p-dialog-content {
-        flex-grow: 1;
-    }
-
     .p-dialog .p-resizable-handle {
         position: absolute;
         font-size: 0.1px;
