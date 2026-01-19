@@ -1,6 +1,6 @@
 import { addClass, removeClass } from '@primeuix/utils';
 import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionInstance, MotionOptions, MotionPhase, MotionType } from '../../types';
-import { getMotionHooks, getMotionMetadata, mergeOptions, resolveClassNames, resolveDuration, setAutoDimensionVariables, shouldSkipMotion } from '../utils';
+import { getMotionHooks, getMotionMetadata, mergeOptions, removeMotionPhase, removeMotionState, resolveClassNames, resolveDuration, setAutoDimensionVariables, setMotionPhase, setMotionState, shouldSkipMotion } from '../utils';
 
 export const DEFAULT_MOTION_OPTIONS: MotionOptions = {
     name: 'p',
@@ -43,10 +43,14 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
         const { onBefore, onStart, onAfter, onCancelled } = hooks[phase] || {};
         const event = { element };
 
+        setMotionPhase(element as HTMLElement, phase);
+
         if (skipMotion) {
             onBefore?.(event);
             onStart?.(event);
             onAfter?.(event);
+
+            removeMotionPhase(element as HTMLElement);
 
             return;
         }
@@ -58,12 +62,14 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
         onBefore?.(event);
         addClass(element, fromClass);
         addClass(element, activeClass);
+        setMotionState(element as HTMLElement, phase, 'from');
 
         //await nextFrame();
         void (element as HTMLElement).offsetHeight; // force reflow
 
         removeClass(element, fromClass);
         addClass(element, toClass);
+        setMotionState(element as HTMLElement, phase, 'to');
         onStart?.(event);
 
         return new Promise((resolve) => {
@@ -72,6 +78,8 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
             const cleanup = () => {
                 removeClass(element, [toClass, activeClass]);
                 cancelCurrent = null;
+                removeMotionState(element as HTMLElement);
+                removeMotionPhase(element as HTMLElement);
             };
 
             const onDone = () => {

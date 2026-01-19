@@ -18,25 +18,25 @@ export declare namespace DataViewTokenSections {
          *
          * @designToken dataview.border.color
          */
-        borderColor: string;
+        borderColor?: string;
         /**
          * Border width of root
          *
          * @designToken dataview.border.width
          */
-        borderWidth: string;
+        borderWidth?: string;
         /**
          * Border radius of root
          *
          * @designToken dataview.border.radius
          */
-        borderRadius: string;
+        borderRadius?: string;
         /**
          * Padding of root
          *
          * @designToken dataview.padding
          */
-        padding: string;
+        padding?: string;
     }
 
     interface Header {

@@ -77,5 +77,6 @@ export const css: RadioButtonTokenSections.CSS = /*css*/ `
 
 export default {
     root,
-    icon
+    icon,
+    css
 } satisfies RadioButtonDesignTokens;

@@ -13,6 +13,7 @@ export const style = /*css*/ `
     .p-dialog-content {
         overflow-y: auto;
         padding: dt('dialog.content.padding');
+        flex-grow: 1;
     }
 
     .p-dialog-header {
@@ -61,10 +62,6 @@ export const style = /*css*/ `
         max-height: 100%;
         height: 100%;
         border-radius: 0;
-    }
-
-    .p-dialog-maximized .p-dialog-content {
-        flex-grow: 1;
     }
 
     .p-dialog .p-resizable-handle {

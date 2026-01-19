@@ -1,6 +1,7 @@
 export const style = /*css*/ `
     .p-dataview {
         position: relative;
+        display: block;
         border-color: dt('dataview.border.color');
         border-width: dt('dataview.border.width');
         border-style: solid;

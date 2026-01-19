@@ -8,6 +8,11 @@ export const style = /*css*/ `
         width: 100%;
     }
 
+    .p-inputgroup .p-floatlabel .p-inputwrapper,
+    .p-inputgroup .p-iftalabel .p-inputwrapper {
+        display: inline-flex;
+    }
+
     .p-inputgroup .p-inputtext,
     .p-inputgroup .p-inputwrapper {
         flex: 1 1 auto;
@@ -86,7 +91,9 @@ export const style = /*css*/ `
     .p-inputgroup .p-inputwrapper-focus,
     .p-inputgroup .p-component:focus ~ label,
     .p-inputgroup .p-component.p-focus ~ label,
-    .p-inputgroup .p-inputwrapper-focus ~ label {
+    .p-inputgroup .p-inputwrapper-focus ~ label,
+    .p-inputgroup .p-floatlabel .p-inputwrapper ~ label,
+    .p-inputgroup .p-iftalabel .p-inputwrapper ~ label {
         z-index: 1;
     }
 

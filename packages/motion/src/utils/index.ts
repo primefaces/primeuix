@@ -1,5 +1,5 @@
 import { getHiddenElementDimensions, isPrefersReducedMotion, setCSSProperty, toMs } from '@primeuix/utils';
-import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionMetadata, MotionOptions, MotionPhase, MotionType } from '../../types';
+import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionMetadata, MotionOptions, MotionPhase, MotionState, MotionType } from '../../types';
 
 export const ANIMATION = 'animation';
 export const TRANSITION = 'transition';
@@ -162,10 +162,49 @@ export function setAutoDimensionVariables(element: HTMLElement, autoHeight: bool
     const dimensions = getHiddenElementDimensions(element);
 
     if (autoHeight) {
-        setCSSProperty(element, '--pui-motion-height', dimensions.height + 'px');
+        setCSSProperty(element, '--height', dimensions.height + 'px');
     }
 
     if (autoWidth) {
-        setCSSProperty(element, '--pui-motion-width', dimensions.width + 'px');
+        setCSSProperty(element, '--width', dimensions.width + 'px');
     }
+}
+
+/**
+ * Sets the current motion phase on the given element.
+ * @param element - The target HTML element.
+ * @param phase - The current motion phase.
+ */
+export function setMotionPhase(element: HTMLElement, phase: MotionPhase): void {
+    element.setAttribute('data-phase', phase);
+}
+
+/**
+ * Sets the current motion state on the given element.
+ * @param element - The target HTML element.
+ * @param phase - The current motion phase.
+ * @param state - The current motion state.
+ */
+export function setMotionState(element: HTMLElement, phase: MotionPhase, state: MotionState): void {
+    element.removeAttribute('data-enter');
+    element.removeAttribute('data-leave');
+
+    element.setAttribute(`data-${phase}`, state);
+}
+
+/**
+ * Removes the motion phase attribute from the given element.
+ * @param element - The target HTML element.
+ */
+export function removeMotionPhase(element: HTMLElement): void {
+    element.removeAttribute('data-phase');
+}
+
+/**
+ * Removes the motion state attributes from the given element.
+ * @param element - The target HTML element.
+ */
+export function removeMotionState(element: HTMLElement): void {
+    element.removeAttribute('data-enter');
+    element.removeAttribute('data-leave');
 }
