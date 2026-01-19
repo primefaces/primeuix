@@ -1,5 +1,6 @@
 export type MotionType = 'transition' | 'animation';
 export type MotionPhase = 'enter' | 'leave';
+export type MotionState = 'from' | 'to';
 export type MotionStage = 'Before' | 'Start' | 'After' | 'Cancelled';
 
 /**
