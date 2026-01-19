@@ -1,10 +1,12 @@
 import { cn } from '../classnames';
 import { isFunction } from '../object';
 
-export function mergeProps(...props: any[]): object | undefined {
+function _mergeProps({ skipUndefined = false }, ...props: any[]): object | undefined {
     return props?.reduce((merged, ps = {}) => {
         for (const key in ps) {
             const value = ps[key];
+
+            if (skipUndefined && value === undefined) continue;
 
             if (key === 'style') {
                 merged['style'] = { ...merged['style'], ...ps['style'] };
@@ -26,4 +28,12 @@ export function mergeProps(...props: any[]): object | undefined {
 
         return merged;
     }, {});
+}
+
+export function mergeProps(...props: any[]): object | undefined {
+    return _mergeProps({ skipUndefined: false }, ...props);
+}
+
+export function mergeDefaultProps(...props: any[]): object | undefined {
+    return _mergeProps({ skipUndefined: true }, ...props);
 }
