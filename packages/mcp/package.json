@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/mcp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "PrimeTek Informatics",
     "description": "Model Context Protocol (MCP) server for PrimeUI Libraries",
     "keywords": ["mcp", "model-context-protocol", "claude", "ai", "llm", "primeng", "primereact", "primevue", "primeuix"],
@@ -37,7 +37,7 @@
         "dev:link": "pnpm link --global && npm link"
     },
     "dependencies": {
-        "@modelcontextprotocol/sdk": "^1.24.3",
+        "@modelcontextprotocol/sdk": "^1.25.2",
         "zod": "^3.25.76"
     },
     "engines": {
