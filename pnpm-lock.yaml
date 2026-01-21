@@ -121,8 +121,8 @@ importers:
         version: link:../utils
     devDependencies:
       '@regle/core':
-        specifier: 1.11.0
-        version: 1.11.0(vue@3.5.25(typescript@5.9.3))
+        specifier: 1.17.0
+        version: 1.17.0(vue@3.5.25(typescript@5.9.3))
       joi:
         specifier: ^17.13.3
         version: 17.13.3
@@ -1429,8 +1429,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@regle/core@1.11.0':
-    resolution: {integrity: sha512-2E5ONk7eTmAELZUff9F/G8Yklu6Cm/SIYut6/MOZnJgAf+piUKSRHEOWnMyuOkOiw13xF6G1qabOEWiYeasvWA==}
+  '@regle/core@1.17.0':
+    resolution: {integrity: sha512-WfU4yuGllIpq7570emoh07nRqBPkXNHu8BtyEboA6rLlissBxkiB1LXz4sosJcDXfalCSfiGFL5SAh1FjcTavw==}
     peerDependencies:
       pinia: '>=2.2.5'
       vue: '>=3.3.0'
@@ -1590,8 +1590,8 @@ packages:
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
 
-  '@standard-schema/spec@1.0.0':
-    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
+  '@standard-schema/spec@1.1.0':
+    resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
   '@tsconfig/node10@1.0.12':
     resolution: {integrity: sha512-UCYBaeFvM11aU2y3YPZ//O5Rhj+xKyzy7mvcIoAjASbigy8mHMryP5cK7dgjlz2hWxh1g5pLw084E0a/wlUSFQ==}
@@ -3857,8 +3857,8 @@ packages:
     resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
-  type-fest@5.2.0:
-    resolution: {integrity: sha512-xxCJm+Bckc6kQBknN7i9fnP/xobQRsRQxR01CztFkp/h++yfVxUUcmMgfR2HttJx/dpWjS9ubVuyspJv24Q9DA==}
+  type-fest@5.3.1:
+    resolution: {integrity: sha512-VCn+LMHbd4t6sF3wfU/+HKT63C9OoyrSIf4b+vtWHpt2U7/4InZG467YDNMFMR70DdHjAdpPWmw2lzRdg0Xqqg==}
     engines: {node: '>=20'}
 
   type-is@2.0.1:
@@ -5588,11 +5588,11 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@regle/core@1.11.0(vue@3.5.25(typescript@5.9.3))':
+  '@regle/core@1.17.0(vue@3.5.25(typescript@5.9.3))':
     dependencies:
-      '@standard-schema/spec': 1.0.0
+      '@standard-schema/spec': 1.1.0
       '@vue/devtools-api': 7.7.9
-      type-fest: 5.2.0
+      type-fest: 5.3.1
       vue: 3.5.25(typescript@5.9.3)
 
   '@rollup/rollup-android-arm-eabi@4.55.1':
@@ -5700,7 +5700,7 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@standard-schema/spec@1.0.0': {}
+  '@standard-schema/spec@1.1.0': {}
 
   '@tsconfig/node10@1.0.12': {}
 
@@ -8235,7 +8235,7 @@ snapshots:
 
   type-fest@4.41.0: {}
 
-  type-fest@5.2.0:
+  type-fest@5.3.1:
     dependencies:
       tagged-tag: 1.0.0
 
