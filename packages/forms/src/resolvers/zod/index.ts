@@ -1,10 +1,10 @@
 import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils';
-import type { ParseParams, Schema } from 'zod';
+import type { Schema } from 'zod';
 import type { ResolverOptions, ResolverResult } from '..';
 
 export const zodResolver =
-    <T extends Schema<any, any>>(schema: T, schemaOptions?: ParseParams, resolverOptions?: ResolverOptions) =>
+    <T extends Schema<any, any>>(schema: T, schemaOptions?: Parameters<T['parse']>[1], resolverOptions?: ResolverOptions) =>
     async ({ values, name }: any): Promise<ResolverResult<T>> => {
         const { sync = false, raw = false } = resolverOptions || {};
 
