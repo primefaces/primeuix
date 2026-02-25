@@ -1,6 +1,6 @@
 {
     "name": "@primeuix/motion",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "PrimeTek Informatics",
     "description": "Motion utilities for PrimeUI Libraries",
     "keywords": ["motion", "animation", "transition", "composition utilities", "primeng", "primereact", "primevue", "primeuix"],

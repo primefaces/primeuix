@@ -156,7 +156,7 @@ export function resolveDuration(duration: MotionOptions['duration'], phase: Moti
  * @param name - The base name of the CSS variable.
  * @returns The resolved CSS variable name in the format '--prefix-name' or '--name' if no prefix is provided.
  */
-function resolveCSSVarName(prefix: string | undefined, name: string): string {
+export function resolveCSSVarName(prefix: string | undefined, name: string): string {
     return prefix ? `--${prefix}-${name}` : `--${name}`;
 }
 
