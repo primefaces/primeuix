@@ -184,12 +184,20 @@ export interface MotionOptions extends MotionClassNames, MotionHooks {
     duration?: MotionDuration | undefined;
     /**
      * Indicates whether to automatically adjust height during the motion.
+     * @default true
      */
     autoHeight?: boolean | undefined;
     /**
      * Indicates whether to automatically adjust width during the motion.
+     * @default true
      */
     autoWidth?: boolean | undefined;
+    /**
+     * A prefix for CSS variables used in motion effects.
+     * This allows for namespacing CSS variables to avoid conflicts.
+     * @default ''
+     */
+    cssVarPrefix?: string | undefined;
 }
 
 /**

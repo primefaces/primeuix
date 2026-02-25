@@ -1,26 +1,59 @@
+import { resolve } from '@primeuix/utils/object';
 import isElement from './isElement';
 
-type ReactElement = { current: Element | null | undefined };
-type VueElement = { el: Element | null | undefined };
-type AngularElement = { el: { nativeElement: Element | undefined } };
+/**
+ * Converts various framework-specific element references to a DOM HTMLElement
+ * Supports:
+ * - React refs: { current: HTMLElement }
+ * - Vue refs: { value: HTMLElement }
+ * - Lit refs: { value: HTMLElement }
+ * - Angular ViewChild: { nativeElement: HTMLElement }
+ * - Vue template ref: { el: HTMLElement }
+ * - Direct HTMLElement
+ *
+ * @param ref - Framework-specific element reference
+ * @returns The resolved HTMLElement or undefined if not found
+ */
+export function toElement(ref: unknown): HTMLElement | undefined {
+    // Direct Element
+    if (isElement(ref)) {
+        return ref as HTMLElement;
+    }
 
-export default function toElement(element: unknown): Element | null | undefined {
-    let target = element;
+    if (!ref || typeof ref !== 'object') {
+        return undefined;
+    }
 
-    if (element && typeof element === 'object') {
-        if (Object.hasOwn(element, 'current')) {
-            // For React
-            target = (element as ReactElement).current;
-        } else if (Object.hasOwn(element, 'el')) {
-            if (Object.hasOwn((element as AngularElement).el, 'nativeElement')) {
-                // For Angular
-                target = (element as AngularElement).el.nativeElement;
-            } else {
-                // For Vue
-                target = (element as VueElement).el;
-            }
+    let target: unknown = ref;
+
+    // React ref pattern: { current: HTMLElement }
+    if ('current' in ref) {
+        target = (ref as { current: unknown }).current;
+        target = (target as { elementRef?: { current: unknown } })?.elementRef?.current ?? target; // Handle potential nested ref (e.g., when using withComponent)
+    }
+    // Vue ref / Lit pattern: { value: HTMLElement }
+    // Note: Vue 3 refs use getters/setters, so we need 'in' operator instead of hasOwn
+    else if ('value' in ref) {
+        target = (ref as { value: unknown }).value;
+    }
+    // Angular ViewChild pattern: { nativeElement: HTMLElement }
+    else if ('nativeElement' in ref) {
+        target = (ref as { nativeElement: unknown }).nativeElement;
+    }
+    // Vue 3 template ref: { el: Element }
+    else if ('el' in ref) {
+        const el = (ref as { el: unknown }).el;
+
+        // Nested element check (could be another ref)
+        if (el && typeof el === 'object' && 'nativeElement' in el) {
+            target = (el as { nativeElement: unknown }).nativeElement;
+        } else {
+            target = el;
         }
     }
 
-    return isElement(target) ? target : undefined;
+    // function pattern: resolve the element if it's a function that returns an element
+    target = resolve(target);
+
+    return isElement(target) ? (target as HTMLElement) : undefined;
 }

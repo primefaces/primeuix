@@ -52,6 +52,6 @@ next-env.d.ts
 .contentlayer
 
 # Ignore build directories
-packages/forms/umd/*
-packages/themes/umd/*
-packages/themes/tokens/*
+packages/forms/umd
+packages/themes/umd
+packages/themes/tokens

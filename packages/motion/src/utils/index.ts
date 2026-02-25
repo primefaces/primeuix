@@ -3,6 +3,7 @@ import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionMetadata, M
 
 export const ANIMATION = 'animation';
 export const TRANSITION = 'transition';
+export const DATA_ATTRS = ['data-enter-phase', 'data-enter-from', 'data-enter-to', 'data-enter-active', 'data-leave-phase', 'data-leave-from', 'data-leave-to', 'data-leave-active'] as const;
 
 /**
  * Determines whether motion effects should be skipped based on the provided options.
@@ -150,24 +151,48 @@ export function resolveDuration(duration: MotionOptions['duration'], phase: Moti
 }
 
 /**
- * Sets CSS custom properties for auto height and/or width on the given element.
- * @param element - The target HTML element.
- * @param autoHeight - Whether to set the auto height CSS variable.
- * @param autoWidth - Whether to set the auto width CSS variable.
- * @returns
+ * Resolves the CSS variable name based on the provided prefix and variable name.
+ * @param prefix - An optional prefix for the CSS variable.
+ * @param name - The base name of the CSS variable.
+ * @returns The resolved CSS variable name in the format '--prefix-name' or '--name' if no prefix is provided.
  */
-export function setAutoDimensionVariables(element: HTMLElement, autoHeight: boolean = true, autoWidth: boolean = false): void {
-    if (!autoHeight && !autoWidth) return;
+function resolveCSSVarName(prefix: string | undefined, name: string): string {
+    return prefix ? `--${prefix}-${name}` : `--${name}`;
+}
 
-    const dimensions = getHiddenElementDimensions(element);
+/**
+ * Sets CSS custom properties for height and/or width on the given element based on the motion options.
+ * @param element - The target HTML element.
+ * @param options - The motion options.
+ * @param value - The value to set for the CSS variables. Can be a string for both or an object with `height` and `width` properties.
+ */
+export function setDimensionVariables(element: HTMLElement, options: MotionOptions, value: string | { height: string; width: string }): void {
+    const { autoHeight, autoWidth, cssVarPrefix } = options;
+    const isObject = typeof value === 'object';
 
     if (autoHeight) {
-        setCSSProperty(element, '--height', dimensions.height + 'px');
+        setCSSProperty(element, resolveCSSVarName(cssVarPrefix, 'height'), isObject ? value.height : value);
     }
 
     if (autoWidth) {
-        setCSSProperty(element, '--width', dimensions.width + 'px');
+        setCSSProperty(element, resolveCSSVarName(cssVarPrefix, 'width'), isObject ? value.width : value);
     }
+}
+
+/**
+ * Sets CSS custom properties for auto height and/or width on the given element using the element's scroll dimensions.
+ * @param element - The target HTML element.
+ * @param options - The motion options.
+ */
+export function setAutoDimensionVariables(element: HTMLElement, options: MotionOptions): void {
+    if (!options.autoHeight && !options.autoWidth) return;
+
+    const dimensions = getHiddenElementDimensions(element);
+
+    setDimensionVariables(element, options, {
+        height: (element.scrollHeight || dimensions.height) + 'px',
+        width: (element.scrollWidth || dimensions.width) + 'px'
+    });
 }
 
 /**
@@ -176,7 +201,7 @@ export function setAutoDimensionVariables(element: HTMLElement, autoHeight: bool
  * @param phase - The current motion phase.
  */
 export function setMotionPhase(element: HTMLElement, phase: MotionPhase): void {
-    element.setAttribute('data-phase', phase);
+    element.setAttribute(`data-${phase}-phase`, '');
 }
 
 /**
@@ -186,10 +211,13 @@ export function setMotionPhase(element: HTMLElement, phase: MotionPhase): void {
  * @param state - The current motion state.
  */
 export function setMotionState(element: HTMLElement, phase: MotionPhase, state: MotionState): void {
-    element.removeAttribute('data-enter');
-    element.removeAttribute('data-leave');
+    element.removeAttribute('data-enter-from');
+    element.removeAttribute('data-enter-to');
+    element.removeAttribute('data-leave-from');
+    element.removeAttribute('data-leave-to');
 
-    element.setAttribute(`data-${phase}`, state);
+    element.setAttribute(`data-${phase}-${state}`, '');
+    element.setAttribute(`data-${phase}-active`, '');
 }
 
 /**
@@ -197,7 +225,8 @@ export function setMotionState(element: HTMLElement, phase: MotionPhase, state: 
  * @param element - The target HTML element.
  */
 export function removeMotionPhase(element: HTMLElement): void {
-    element.removeAttribute('data-phase');
+    element.removeAttribute('data-enter-phase');
+    element.removeAttribute('data-leave-phase');
 }
 
 /**
@@ -205,6 +234,5 @@ export function removeMotionPhase(element: HTMLElement): void {
  * @param element - The target HTML element.
  */
 export function removeMotionState(element: HTMLElement): void {
-    element.removeAttribute('data-enter');
-    element.removeAttribute('data-leave');
+    DATA_ATTRS.forEach((attr) => element.removeAttribute(attr));
 }

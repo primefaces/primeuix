@@ -1,19 +1,23 @@
 import resolve from './resolve';
 
-type ReactRef = { current: unknown };
-type VueRef = { value: unknown };
-
+/**
+ * Resolves the underlying value from various wrapper patterns
+ * Supports React refs, Vue refs, Lit directives, Angular signals, and direct values/functions
+ * @param value - The value to resolve
+ */
 export default function toValue(value: unknown): unknown {
     if (value && typeof value === 'object') {
-        if (Object.hasOwn(value, 'current')) {
-            // For React
-            return (value as ReactRef).current;
-        } else if (Object.hasOwn(value, 'value')) {
-            // For Vue
-            return (value as VueRef).value;
+        // React ref pattern: { current: unknown }
+        if ('current' in value) {
+            return (value as { current: unknown }).current;
+        }
+        // Vue ref / Lit pattern: { value: unknown }
+        // Note: Vue 3 refs use getters/setters, so we need 'in' operator instead of hasOwn
+        else if ('value' in value) {
+            return (value as { value: unknown }).value;
         }
     }
 
-    // For Angular signals and functions usage
+    // Angular signals or fallback to direct value/function
     return resolve(value);
 }

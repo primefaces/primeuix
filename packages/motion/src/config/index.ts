@@ -1,6 +1,6 @@
 import { addClass, removeClass } from '@primeuix/utils';
 import type { MotionClassNamesWithPhase, MotionHooksWithPhase, MotionInstance, MotionOptions, MotionPhase, MotionType } from '../../types';
-import { getMotionHooks, getMotionMetadata, mergeOptions, removeMotionPhase, removeMotionState, resolveClassNames, resolveDuration, setAutoDimensionVariables, setMotionPhase, setMotionState, shouldSkipMotion } from '../utils';
+import { getMotionHooks, getMotionMetadata, mergeOptions, removeMotionPhase, removeMotionState, resolveClassNames, resolveDuration, setAutoDimensionVariables, setDimensionVariables, setMotionPhase, setMotionState, shouldSkipMotion } from '../utils';
 
 export const DEFAULT_MOTION_OPTIONS: MotionOptions = {
     name: 'p',
@@ -9,7 +9,8 @@ export const DEFAULT_MOTION_OPTIONS: MotionOptions = {
     enter: true,
     leave: true,
     autoHeight: true,
-    autoWidth: false
+    autoWidth: true,
+    cssVarPrefix: ''
 };
 
 /**
@@ -40,52 +41,71 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
     const run = async (phase: MotionPhase): Promise<void> => {
         cancelCurrent?.();
 
+        const el = element as HTMLElement;
         const { onBefore, onStart, onAfter, onCancelled } = hooks[phase] || {};
         const event = { element };
 
-        setMotionPhase(element as HTMLElement, phase);
+        setMotionPhase(el, phase);
 
         if (skipMotion) {
             onBefore?.(event);
             onStart?.(event);
             onAfter?.(event);
 
-            removeMotionPhase(element as HTMLElement);
+            removeMotionPhase(el);
 
             return;
         }
 
         const { from: fromClass, active: activeClass, to: toClass } = classNames[phase] || {};
 
-        setAutoDimensionVariables(element as HTMLElement, opts.autoHeight, opts.autoWidth);
-
         onBefore?.(event);
-        addClass(element, fromClass);
-        addClass(element, activeClass);
-        setMotionState(element as HTMLElement, phase, 'from');
 
-        //await nextFrame();
-        void (element as HTMLElement).offsetHeight; // force reflow
+        // "from" state
+        if (phase === 'enter') {
+            setDimensionVariables(el, opts, '0px');
+        } else if (phase === 'leave') {
+            setAutoDimensionVariables(el, opts);
+        }
 
-        removeClass(element, fromClass);
-        addClass(element, toClass);
-        setMotionState(element as HTMLElement, phase, 'to');
+        addClass(el, fromClass);
+        addClass(el, activeClass);
+        setMotionState(el, phase, 'from');
+
+        void el.offsetHeight; // force reflow
+
+        // "to" state
+        if (phase === 'enter') {
+            setAutoDimensionVariables(el, opts);
+        } else if (phase === 'leave') {
+            setDimensionVariables(el, opts, '0px');
+        }
+
+        removeClass(el, fromClass);
+        addClass(el, toClass);
+        setMotionState(el, phase, 'to');
         onStart?.(event);
 
         return new Promise((resolve) => {
             const duration = resolveDuration(opts.duration, phase);
 
             const cleanup = () => {
-                removeClass(element, [toClass, activeClass]);
+                removeClass(el, [toClass, activeClass]);
                 cancelCurrent = null;
-                removeMotionState(element as HTMLElement);
-                removeMotionPhase(element as HTMLElement);
+                removeMotionState(el);
+                removeMotionPhase(el);
             };
 
             const onDone = () => {
                 cleanup();
                 onAfter?.(event);
                 resolve();
+
+                if (phase === 'enter') {
+                    setDimensionVariables(el, opts, 'auto');
+                } else if (phase === 'leave') {
+                    setDimensionVariables(el, opts, '0px');
+                }
             };
 
             cancelCurrent = () => {
@@ -94,11 +114,12 @@ export function createMotion(element: Element, options?: MotionOptions): MotionI
                 resolve();
             };
 
-            whenEnd(element, opts.type, duration, onDone);
+            whenEnd(el, opts.type, duration, onDone);
         });
     };
 
     init(options);
+    setDimensionVariables(element as HTMLElement, opts, '0px');
 
     const instance: MotionInstance = {
         enter: () => {

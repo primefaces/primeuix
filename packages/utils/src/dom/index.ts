@@ -62,6 +62,7 @@ export { default as isAttributeEquals } from './methods/isAttributeEquals';
 export { default as isAttributeNotEquals } from './methods/isAttributeNotEquals';
 export { default as isClickable } from './methods/isClickable';
 export { default as isClient } from './methods/isClient';
+export { default as isCssSupported } from './methods/isCssSupported';
 export { default as isElement } from './methods/isElement';
 export { default as isExist } from './methods/isExist';
 export { default as isFocusableElement } from './methods/isFocusableElement';
