@@ -14,7 +14,7 @@ import isElement from './isElement';
  * @param ref - Framework-specific element reference
  * @returns The resolved HTMLElement or undefined if not found
  */
-export function toElement(ref: unknown): HTMLElement | undefined {
+export default function toElement(ref: unknown): HTMLElement | undefined {
     // Direct Element
     if (isElement(ref)) {
         return ref as HTMLElement;
