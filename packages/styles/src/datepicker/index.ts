@@ -390,6 +390,22 @@ export const style = /*css*/ `
         font-size: 1rem;
     }
 
+    .p-datepicker-time-picker .p-datepicker-time-input {
+        height: 25px;
+        text-align: center;
+        width: 30px;
+    }
+
+    .p-datepicker-time-picker .p-datepicker-time-input::-webkit-outer-spin-button,
+    .p-datepicker-time-picker .p-datepicker-time-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .p-datepicker-time-picker .p-datepicker-time-input[type=number] {
+        -moz-appearance: textfield
+    }
+
     .p-datepicker-timeonly .p-datepicker-time-picker {
         border-block-start: 0 none;
     }
