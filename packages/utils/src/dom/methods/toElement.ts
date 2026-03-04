@@ -29,7 +29,7 @@ export default function toElement(ref: unknown): HTMLElement | undefined {
     // React ref pattern: { current: HTMLElement }
     if ('current' in ref) {
         target = (ref as { current: unknown }).current;
-        target = (target as { elementRef?: { current: unknown } })?.elementRef?.current ?? target; // Handle potential nested ref (e.g., when using withComponent)
+        target = toElement((target as { elementRef?: { current: unknown } })?.elementRef) ?? target; // Handle potential nested ref (e.g., when using withComponent)
     }
     // Vue ref / Lit pattern: { value: HTMLElement }
     // Note: Vue 3 refs use getters/setters, so we need 'in' operator instead of hasOwn
@@ -50,6 +50,10 @@ export default function toElement(ref: unknown): HTMLElement | undefined {
         } else {
             target = el;
         }
+    }
+    // PrimeReact component instance: { elementRef: { current: HTMLElement } }
+    else if ('elementRef' in ref) {
+        return toElement((ref as { elementRef: unknown }).elementRef);
     }
 
     // function pattern: resolve the element if it's a function that returns an element
