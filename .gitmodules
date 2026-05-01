@@ -1,10 +1,9 @@
-[submodule "submodules/primevue"]
-	path = submodules/primevue
-	url = https://github.com/primefaces/primevue.git
-[submodule "submodules/primeng"]
-	path = submodules/primeng
-	url = https://github.com/primefaces/primeng.git
-[submodule "submodules/primereact"]
-	path = submodules/primereact
-	url = https://github.com/primefaces/primereact.git
-	branch = v11
+[submodule "submodules/primevue-nextchapter"]
+	path = submodules/primevue-nextchapter
+	url = https://github.com/primefaces/primevue-nextchapter.git
+[submodule "submodules/primeng-nextchapter"]
+	path = submodules/primeng-nextchapter
+	url = https://github.com/primefaces/primeng-nextchapter.git
+[submodule "submodules/primereact-nextchapter"]
+	path = submodules/primereact-nextchapter
+	url = https://github.com/primefaces/primereact-nextchapter.git

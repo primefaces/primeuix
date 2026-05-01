@@ -42,21 +42,21 @@ sleep 2
 # Start the appropriate frontend dev server based on argument
 case $1 in
     ng)
-        cd submodules/primeng
+        cd submodules/primeng-nextchapter
         pnpm run dev &
         pids+=($!)
         sleep 2
         open_url "http://localhost:4200"
         ;;
     vue)
-        cd submodules/primevue
+        cd submodules/primevue-nextchapter
         pnpm run hot:dev &
         pids+=($!)
         sleep 2
         open_url "http://localhost:3000"
         ;;
     react)
-        cd submodules/primereact
+        cd submodules/primereact-nextchapter
         pnpm run dev2 &
         pids+=($!)
         sleep 2
