@@ -115,7 +115,10 @@ export interface CustomToolDefinition {
     parameters: Record<
         string,
         {
-            type: string;
+            // Only 'string' is supported for now, as all current custom tool parameters across
+            // PrimeNG and PrimeVue use string values. If a new type is needed, extend this union
+            // and add the corresponding Zod mapping in the registerCustomTools function in index.ts.
+            type: 'string';
             description: string;
             required?: boolean;
             default?: unknown;
