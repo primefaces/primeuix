@@ -23,10 +23,14 @@
             "default": "./dist/index.mjs"
         },
         "./types": {
-            "types": "./types/index.d.ts"
+            "types": "./types/index.d.ts",
+            "import": "./types/index.mjs",
+            "default": "./types/index.mjs"
         },
         "./types/*": {
-            "types": "./types/*/index.d.ts"
+            "types": "./types/*/index.d.ts",
+            "import": "./types/index.mjs",
+            "default": "./types/index.mjs"
         },
         "./tokens": {
             "types": "./tokens/index.d.ts",
