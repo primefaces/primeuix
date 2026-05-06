@@ -170,8 +170,8 @@ No new tokens
 
 ### MeterGroup
 
-- metergroup.label.font.weight
-- metergroup.label.font.size
+- metergroup.label.text.font.weight
+- metergroup.label.text.font.size
 
 ### MultiSelect
 
@@ -223,8 +223,8 @@ No new tokens
 
 ### Terminal
 
-- terminal.content.font.weight
-- terminal.content.font.size
+- terminal.font.weight
+- terminal.font.size
 
 ### Textarea
 

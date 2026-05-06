@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(pnpm run type:check:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(xargs ls -la)",
+      "Bash(cat)",
+      "Bash(bash /tmp/check_tokens.sh)",
+      "Bash(bash /tmp/check_components.sh)",
+      "Bash(bash /tmp/final_check.sh)",
+      "Bash(bash /tmp/verify_all.sh)",
+      "Bash(bash /tmp/token_verification.sh)",
+      "Bash(grep -rh \"dt\\\\\\(['\\\\\"]\" /Users/jagatai/Development/projects/primeuix/packages/styles/src --include=\"*.ts\" | grep -oE \"dt\\\\\\(['\\\\\"][^'\\\\\"]+['\\\\\"]\" | sort -u > /tmp/used_tokens.txt && wc -l /tmp/used_tokens.txt)",
+      "Read(//tmp/**)",
+      "Bash(grep -E \"^- \" /Users/jagatai/Development/projects/primeuix/packages/themes/CHANGELOG-v3.md | sed 's/^- //' | sort > /tmp/changelog_tokens.txt && wc -l /tmp/changelog_tokens.txt)",
+      "Bash(bash /tmp/check_indirect.sh)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   }
 }
