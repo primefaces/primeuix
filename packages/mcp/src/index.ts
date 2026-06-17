@@ -26,6 +26,7 @@
 
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import { z } from 'zod';
 
 import { registerComponentTools, registerExampleTools, registerGuideTools, registerSearchTools } from './tools/index.js';
 import type { ComponentsData, CustomToolDefinition, PrimeMcpConfig, ToolResult } from './types.js';
@@ -78,21 +79,59 @@ export async function createPrimeMcpServer(config: PrimeMcpConfig): Promise<McpS
 }
 
 /**
+ * Map a custom-tool parameter type string to a Zod schema.
+ */
+function customParameterSchema(type: string): z.ZodTypeAny {
+    switch (type.toLowerCase()) {
+        case 'number':
+        case 'integer':
+        case 'float':
+            return z.number();
+        case 'boolean':
+            return z.boolean();
+        case 'array':
+            return z.array(z.unknown());
+        case 'object':
+            return z.record(z.unknown());
+        case 'string':
+        default:
+            return z.string();
+    }
+}
+
+/**
  * Register custom/framework-specific tools
  */
 function registerCustomTools(server: McpServer, data: ComponentsData, customTools: CustomToolDefinition[]): void {
     for (const tool of customTools) {
-        // Convert our parameter format to MCP's expected format
-        const params: Record<string, { type: string; description: string }> = {};
+        // Build a Zod raw shape from our lightweight parameter format. The MCP SDK
+        // (>= 1.26) validates that a tool's input schema is a Zod shape and rejects a
+        // plain `{ type, description }` object ("expected a Zod schema or
+        // ToolAnnotations, but received an unrecognized object"), so we translate it
+        // here and register through `registerTool`, matching the rest of this package.
+        const inputSchema: z.ZodRawShape = {};
 
         for (const [key, value] of Object.entries(tool.parameters)) {
-            params[key] = {
-                type: value.type,
-                description: value.description
-            };
+            let schema = customParameterSchema(value.type).describe(value.description);
+
+            if (value.default !== undefined) {
+                schema = schema.default(value.default);
+            } else if (value.required !== true) {
+                schema = schema.optional();
+            }
+
+            inputSchema[key] = schema;
         }
 
-        server.tool(tool.name, tool.description, params, async (args) => {
+        const toolConfig: { description: string; inputSchema?: z.ZodRawShape } = {
+            description: tool.description
+        };
+
+        if (Object.keys(inputSchema).length > 0) {
+            toolConfig.inputSchema = inputSchema;
+        }
+
+        server.registerTool(tool.name, toolConfig, async (args) => {
             const result = await tool.handler(data, args as Record<string, unknown>);
 
             return result as ToolResult & { [x: string]: unknown };
