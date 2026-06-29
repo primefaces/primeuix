@@ -26,6 +26,7 @@
 
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
+import { z } from 'zod';
 
 import { registerComponentTools, registerExampleTools, registerGuideTools, registerSearchTools } from './tools/index.js';
 import type { ComponentsData, CustomToolDefinition, PrimeMcpConfig, ToolResult } from './types.js';
@@ -82,17 +83,14 @@ export async function createPrimeMcpServer(config: PrimeMcpConfig): Promise<McpS
  */
 function registerCustomTools(server: McpServer, data: ComponentsData, customTools: CustomToolDefinition[]): void {
     for (const tool of customTools) {
-        // Convert our parameter format to MCP's expected format
-        const params: Record<string, { type: string; description: string }> = {};
+        const fields: Record<string, z.ZodTypeAny> = {};
 
         for (const [key, value] of Object.entries(tool.parameters)) {
-            params[key] = {
-                type: value.type,
-                description: value.description
-            };
+            const baseType = z.string().describe(value.description);
+            fields[key] = value.required ? baseType : baseType.optional();
         }
 
-        server.tool(tool.name, tool.description, params, async (args) => {
+        server.tool(tool.name, tool.description, fields, async (args) => {
             const result = await tool.handler(data, args as Record<string, unknown>);
 
             return result as ToolResult & { [x: string]: unknown };
