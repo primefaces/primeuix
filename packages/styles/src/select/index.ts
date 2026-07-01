@@ -139,6 +139,10 @@ export const style = /*css*/ `
         font-weight: dt('select.option.group.font.weight');
     }
 
+    .p-select-option-group-label {
+        white-space: nowrap;
+    }
+
     .p-select-list {
         margin: 0;
         padding: 0;
