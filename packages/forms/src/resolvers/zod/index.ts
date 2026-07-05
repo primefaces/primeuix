@@ -1,6 +1,7 @@
 import { toValues } from '@primeuix/forms/utils';
 import { isNotEmpty } from '@primeuix/utils';
 import type { ParseParams, Schema } from 'zod';
+import { z } from 'zod/v4';
 import type { ResolverOptions, ResolverResult } from '..';
 
 export const zodResolver =
@@ -20,7 +21,7 @@ export const zodResolver =
                 return {
                     values: toValues(raw ? values : undefined, name),
                     errors: (e.issues || e.errors).reduce((acc: Record<string, any[]>, error: any) => {
-                        const pathKey = isNotEmpty(error.path) ? error.path.join('.') : name;
+                        const pathKey = isNotEmpty(error.path) ? z.core.toDotPath(error.path) : name;
 
                         if (pathKey) {
                             acc[pathKey] ||= [];

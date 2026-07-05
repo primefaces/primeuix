@@ -37,7 +37,7 @@
     },
     "devDependencies": {
         "yup": "^1.4.0",
-        "zod": "^3.23.8",
+        "zod": "^3.25.0",
         "joi": "^17.13.3",
         "valibot": "^0.42.1",
         "superstruct": "^2.0.2"
