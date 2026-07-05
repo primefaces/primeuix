@@ -37,6 +37,7 @@ function handler(): ZIndexOptions {
         get: getZIndex,
         set: (key: string, element?: HTMLElement, baseZIndex?: number) => {
             if (element) {
+                revertZIndex(getZIndex(element));
                 element.style.zIndex = String(generateZIndex(key, true, baseZIndex));
             }
         },
