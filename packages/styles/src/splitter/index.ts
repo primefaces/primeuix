@@ -37,12 +37,14 @@ export const style = /*css*/ `
         outline-offset: dt('splitter.handle.focus.ring.offset');
     }
 
-    .p-splitter-horizontal.p-splitter-resizing {
+    .p-splitter-horizontal.p-splitter-resizing,
+    .p-splitter-horizontal[data-p-resizing='true'] {
         cursor: col-resize;
         user-select: none;
     }
 
-    .p-splitter-vertical.p-splitter-resizing {
+    .p-splitter-vertical.p-splitter-resizing,
+    .p-splitter-vertical[data-p-resizing='true'] {
         cursor: row-resize;
         user-select: none;
     }
