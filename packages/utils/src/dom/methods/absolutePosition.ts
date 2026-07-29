@@ -20,19 +20,33 @@ export default function absolutePosition(element: HTMLElement, target: HTMLEleme
             left,
             origin = 'top';
 
+        const targetTopInPage = targetOffset.top + windowScrollTop;
+        const targetLeftInPage = targetOffset.left + windowScrollLeft;
+
         if (targetOffset.top + targetOuterHeight + elementOuterHeight > viewport.height) {
-            top = targetOffset.top + windowScrollTop - elementOuterHeight;
+            top = targetTopInPage - elementOuterHeight;
             origin = 'bottom';
 
             if (top < 0) {
                 top = windowScrollTop;
             }
         } else {
-            top = targetOuterHeight + targetOffset.top + windowScrollTop;
+            top = targetOuterHeight + targetTopInPage;
         }
 
-        if (targetOffset.left + elementOuterWidth > viewport.width) left = Math.max(0, targetOffset.left + windowScrollLeft + targetOuterWidth - elementOuterWidth);
-        else left = targetOffset.left + windowScrollLeft;
+        if (targetOffset.left + elementOuterWidth > viewport.width) left = Math.max(0, targetLeftInPage + targetOuterWidth - elementOuterWidth);
+        else left = targetLeftInPage;
+
+        const offsetParent = element.offsetParent as HTMLElement | null;
+
+        if (offsetParent && offsetParent !== document.body && offsetParent !== document.documentElement) {
+            const parentOffset = offsetParent.getBoundingClientRect();
+            const parentTopInPage = parentOffset.top + windowScrollTop;
+            const parentLeftInPage = parentOffset.left + windowScrollLeft;
+
+            top = top - parentTopInPage + offsetParent.scrollTop;
+            left = left - parentLeftInPage + offsetParent.scrollLeft;
+        }
 
         if (isRTL(element)) {
             element.style.insetInlineEnd = left + 'px';
